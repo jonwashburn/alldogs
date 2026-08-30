@@ -1403,7 +1403,7 @@ function trimToDog(cv) {
   cv.width = cw; cv.height = ch;
   cv.getContext('2d').putImageData(img, 0, 0);
 }
-function stray(sectionSel, seed, state, label, css, size) {
+function stray(sectionSel, seed, state, label, css, size, noGround) {
   const sec = document.querySelector(sectionSel);
   if (!sec) return;
   const w = document.createElement('div');
@@ -1413,9 +1413,11 @@ function stray(sectionSel, seed, state, label, css, size) {
   cutout(cv, seed, state, size || 500);
   trimToDog(cv);
   w.append(cv);
-  const gnd = document.createElement('div');
-  gnd.className = 'sground';
-  w.append(gnd);
+  if (!noGround) {
+    const gnd = document.createElement('div');
+    gnd.className = 'sground';
+    w.append(gnd);
+  }
   if (label) {
     const l = document.createElement('div');
     l.className = 'slbl';
@@ -1425,27 +1427,34 @@ function stray(sectionSel, seed, state, label, css, size) {
   sec.append(w);
 }
 
-/* Perch: every stray stands on the top border of its section, feet on
-   the line, alternating sides down the page. One ground line, one walk. */
-function perch(sectionSel, seed, state, label, side, width) {
+/* Perch: every stray stands at the dry end of its section's painted
+   divider stroke. Same spot, every section: the system IS the cohesion.
+   The divider canvas sits at the section's 84px top padding and the
+   stroke rides at ~y7 of its 14px, so feet land at 91px. */
+function perch(sectionSel, seed, state, label, width) {
   stray(sectionSel, seed, state, label,
-    'width:' + width + 'px; bottom:100%; margin-bottom:-6px; '
-    + side + ':4%;', width > 100 ? 640 : 500);
+    'width:' + width + 'px; top:91px; transform:translateY(-100%); '
+    + 'right:max(32px, calc((100% - 1196px) / 2));',
+    width > 100 ? 640 : 500);
 }
-perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   'left',  92);
-perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  'right', 116);
-perch('.fatesec', 990001, 'angel',    'angel',                     'left',  92);
-perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        'right', 92);
-perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1','left',  72);
-perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   'right', 92);
-perch('.rules',   950003, 'zombie',   'zombie',                    'left',  92);
-perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   'right', 92);
-perch('.cannon',  940002, 'ghost',    'ghost',                     'left',  92);
+perch('.confess', 100027, 'faithful', 'red balloon \u00b7 2.0%',    92);
+perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  116);
+perch('.fatesec', 950003, 'zombie',   'zombie',                     92);
+perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',         92);
+perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1', 72);
+perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',    92);
+perch('.rules',   100035, 'faithful', 'skateboard \u00b7 0.6%',      92);
+perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',    92);
 
-/* The one exception to the walk: the artist's adversary, giant,
-   hanging off the edge of the confession. */
+/* Two exceptions, both earned: the artist's adversary hangs giant off
+   the confession's edge (no dog perches on the boundary it owns), and
+   the ghost floats in the cannon's night, because ghosts do not stand
+   on lines. */
 stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
-  'width:54vh; right:-15vh; bottom:-16px;', 1100);
+  'width:54vh; right:-15vh; bottom:-64px;', 1100);
+stray('.cannon', 940002, 'ghost', 'ghost',
+  'width:96px; top:96px; right:max(60px, calc((100% - 1196px) / 2));',
+  500, true);
 
 /* footer parade */
 const PARADE = [
