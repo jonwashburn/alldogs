@@ -363,7 +363,7 @@
     right: -30px; text-align: center; margin-top: 9px; font-size: 9px;
     letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
     opacity: 0.5; text-align: center; }
-  @media (max-width: 900px) { .straywrap { display: none; } }
+  @media (max-width: 1160px) { .straywrap { display: none; } }
 
   /* bred, not drawn */
   .bredgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
@@ -1430,17 +1430,17 @@ function stray(sectionSel, seed, state, label, css, size) {
 function perch(sectionSel, seed, state, label, side, width) {
   stray(sectionSel, seed, state, label,
     'width:' + width + 'px; bottom:100%; margin-bottom:-6px; '
-    + side + ':7%;', width > 100 ? 640 : 500);
+    + side + ':4%;', width > 100 ? 640 : 500);
 }
-perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   'right', 92);
-perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  'left', 116);
-perch('.fatesec', 990001, 'angel',    'angel',                     'right', 92);
-perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        'left',  92);
-perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1','right', 72);
-perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   'left',  92);
-perch('.rules',   950003, 'zombie',   'zombie',                    'right', 92);
-perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   'left',  92);
-perch('.cannon',  940002, 'ghost',    'ghost',                     'right', 92);
+perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   'left',  92);
+perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  'right', 116);
+perch('.fatesec', 990001, 'angel',    'angel',                     'left',  92);
+perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        'right', 92);
+perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1','left',  72);
+perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   'right', 92);
+perch('.rules',   950003, 'zombie',   'zombie',                    'left',  92);
+perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   'right', 92);
+perch('.cannon',  940002, 'ghost',    'ghost',                     'left',  92);
 
 /* The one exception to the walk: the artist's adversary, giant,
    hanging off the edge of the confession. */
