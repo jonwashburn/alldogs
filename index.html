@@ -1101,7 +1101,7 @@ function cutout(targetCv, seed, state) {
     }
   }
   r /= n; gg /= n; b /= n;
-  const T = 62 * 62 * 3;
+  const T = 74 * 74 * 3;
   const near = o => {
     const dr = d[o] - r, dg = d[o + 1] - gg, db = d[o + 2] - b;
     return dr * dr + dg * dg + db * db < T;
@@ -1135,7 +1135,7 @@ cutout(document.getElementById('cr_love'), 910008, 'faithful');
 cutout(document.getElementById('cr_flip'), 920001, 'zombie');
 cutout(document.getElementById('cr_win'), 930001, 'angel');
 cutout(document.getElementById('cr_lose'), 940001, 'ghost');
-cutout(document.getElementById('stray1'), 555001, 'faithful');
+cutout(document.getElementById('stray1'), 940002, 'ghost');
 cutout(document.getElementById('stray2'), 920002, 'zombie');
 
 /* footer parade */
