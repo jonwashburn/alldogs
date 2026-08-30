@@ -977,26 +977,66 @@ document.getElementById('litter').addEventListener('click', () => {
 });
 
 (function freshHero() {
-  function groundLum(seed) {
+  // probe a seed at 64px: ground luminance plus the dog's bounding box
+  function probe(seed) {
+    const P = 64;
     const c = document.createElement('canvas');
-    c.width = 64; c.height = 64;
+    c.width = P; c.height = P;
     draw(c, seed, 'faithful');
-    const d = c.getContext('2d').getImageData(0, 0, 64, 12).data;
+    const d = c.getContext('2d').getImageData(0, 0, P, P).data;
     let l = 0, n = 0;
-    for (let i = 0; i < d.length; i += 4) {
+    for (let i = 0; i < P * 12 * 4; i += 4) {
       l += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2]; n++;
     }
-    return l / n;
+    const lum = l / n;
+    // border-average ground color, then bbox of non-ground pixels
+    let r = 0, g = 0, b = 0, m = 0;
+    for (let i = 0; i < P; i++) {
+      for (const [x, y] of [[i, 0], [i, P - 1], [0, i], [P - 1, i]]) {
+        const o = (y * P + x) * 4;
+        r += d[o]; g += d[o + 1]; b += d[o + 2]; m++;
+      }
+    }
+    r /= m; g /= m; b /= m;
+    let x0 = P, x1 = 0, y0 = P, y1 = 0;
+    for (let y = 0; y < P; y++) for (let x = 0; x < P; x++) {
+      const o = (y * P + x) * 4;
+      const dr = d[o] - r, dg = d[o + 1] - g, db = d[o + 2] - b;
+      if (dr * dr + dg * dg + db * db > 74 * 74 * 3) {
+        if (x < x0) x0 = x; if (x > x1) x1 = x;
+        if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+    }
+    return { lum: lum, x0: x0 / P, x1: x1 / P, y0: y0 / P, y1: y1 / P,
+             ok: x1 > x0 };
   }
-  let seed = null, first = null;
-  for (let k = 0; k < 14; k++) {
+  // want: dark ground, dog mostly right of center (wordmark zone is the
+  // left 45%), head (bbox top) inside the crop window
+  let seed = null, info = null, fallback = null, fallbackInfo = null;
+  for (let k = 0; k < 22; k++) {
     const cand = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
-    if (first === null) first = cand;
-    if (groundLum(cand) < 118) { seed = cand; break; }
+    const pi = probe(cand);
+    if (!pi.ok) continue;
+    if (fallback === null && pi.lum < 118) { fallback = cand; fallbackInfo = pi; }
+    if (pi.lum < 118 && pi.x0 > 0.34) { seed = cand; info = pi; break; }
   }
+  if (seed === null && fallback !== null) { seed = fallback; info = fallbackInfo; }
   const banner = document.querySelector('.herobanner');
-  if (seed === null) { seed = first; banner.classList.add('light'); }
-  draw(document.getElementById('heroDog'), seed, 'faithful');
+  if (seed === null) {
+    seed = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+    info = probe(seed);
+    banner.classList.add('light');
+  }
+  const heroCv = document.getElementById('heroDog');
+  draw(heroCv, seed, 'faithful');
+  // center the crop window on the head: banner shows a band of the square;
+  // put the bbox top third at the window's upper third.
+  const bh = banner.clientHeight;
+  const cw = heroCv.clientWidth || banner.clientWidth;
+  const headY = (info.y0 + (info.y1 - info.y0) * 0.22) * cw;
+  let top = Math.max(0, Math.min(cw - bh, headY - bh * 0.34));
+  heroCv.style.top = '0';
+  heroCv.style.transform = 'translateY(' + (-top) + 'px)';
   const handle = '@' + HA[seed % HA.length] + '_' + HB[(seed >> 4) % HB.length];
   document.getElementById('heroHandle').textContent = handle;
   document.getElementById('heroMeta').textContent =
@@ -1022,24 +1062,29 @@ function brushDivider(sec, gold) {
   for (const ch of (sec.id || sec.className)) t = (t * 31 + ch.charCodeAt(0)) >>> 0;
   const rnd = () => (t = (t * 1664525 + 1013904223) >>> 0) / 4294967296;
   const base = gold ? [240, 180, 41] : [17, 17, 17];
-  for (let pass = 0; pass < 2; pass++) {
-    let y = 7 + (rnd() - 0.5) * 4;
-    for (let x = 8 + rnd() * 24; x < 1180; ) {
-      const len = 4 + rnd() * 26;
-      if (rnd() > 0.16 + pass * 0.22) {
-        g.fillStyle = 'rgba(' + base[0] + ',' + base[1] + ',' + base[2] + ','
-          + (0.25 + rnd() * 0.5).toFixed(2) + ')';
-        g.fillRect(x, y - (0.5 + rnd() * 1.6), len, 1 + rnd() * 2.6);
-      }
-      x += len * (0.72 + rnd() * 0.5);
-      y += (rnd() - 0.5) * 1.6;
-      y = Math.max(2, Math.min(11, y));
+  // one stroke: loaded at the left, drying out along its length
+  const y0 = 7 + (rnd() - 0.5) * 2;
+  let y = y0;
+  for (let x = 4; x < 1196; x += 2) {
+    const p = (x - 4) / 1192;                    // 0 loaded -> 1 dry
+    const cover = 1 - p * 0.75;                  // coverage decays
+    if (rnd() > cover) { y += (rnd() - 0.5) * 0.8; continue; }
+    const h = (2.6 - p * 1.5) * (0.7 + rnd() * 0.6);
+    const a = (0.75 - p * 0.45) * (0.7 + rnd() * 0.4);
+    g.fillStyle = 'rgba(' + base[0] + ',' + base[1] + ',' + base[2] + ','
+      + a.toFixed(2) + ')';
+    g.fillRect(x, y - h / 2, 2.4, h);
+    // bristle flecks near the dry tail
+    if (p > 0.5 && rnd() < 0.12) {
+      g.fillRect(x + rnd() * 3, y - h / 2 + (rnd() - 0.5) * 5, 1.4, 1.1);
     }
+    y += (rnd() - 0.5) * 0.7;
+    y = Math.max(3.5, Math.min(10.5, y));
   }
   sec.insertBefore(cv, sec.firstChild);
 }
-document.querySelectorAll('section:not(.hero)').forEach(sec => {
-  brushDivider(sec, sec.classList.contains('cannon'));
+document.querySelectorAll('section:not(.hero):not(.cannon)').forEach(sec => {
+  brushDivider(sec, false);
 });
 
 /* your dog: painted for this visitor, and the button is real */
@@ -1123,6 +1168,48 @@ function cutout(targetCv, seed, state) {
       const qx = q % S;
       if (Math.abs(qx - x) > 1) continue;
       if (near(q * 4)) { seen[q] = 1; stack.push(q); }
+    }
+  }
+  // cleanup: erode one pixel, drop small floating crumbs, soften the edge
+  const alpha = i => d[i * 4 + 3];
+  const erode = [];
+  for (let p = 0; p < S * S; p++) {
+    if (!alpha(p)) continue;
+    const x = p % S, y = (p / S) | 0;
+    if (x === 0 || y === 0 || x === S - 1 || y === S - 1 ||
+        !alpha(p - 1) || !alpha(p + 1) || !alpha(p - S) || !alpha(p + S)) {
+      erode.push(p);
+    }
+  }
+  erode.forEach(p => { d[p * 4 + 3] = 0; });
+  // connected components: keep only the biggest opaque region
+  const comp = new Int32Array(S * S).fill(-1);
+  let best = -1, bestSize = 0, nc = 0;
+  for (let p0 = 0; p0 < S * S; p0++) {
+    if (!alpha(p0) || comp[p0] !== -1) continue;
+    const q = [p0]; comp[p0] = nc; let size = 0;
+    while (q.length) {
+      const p = q.pop(); size++;
+      const x = p % S;
+      for (const nb of [p - 1, p + 1, p - S, p + S]) {
+        if (nb < 0 || nb >= S * S || comp[nb] !== -1 || !alpha(nb)) continue;
+        if (Math.abs((nb % S) - x) > 1) continue;
+        comp[nb] = nc; q.push(nb);
+      }
+    }
+    if (size > bestSize) { bestSize = size; best = nc; }
+    nc++;
+  }
+  for (let p = 0; p < S * S; p++) {
+    if (alpha(p) && comp[p] !== best) d[p * 4 + 3] = 0;
+  }
+  // soft half-step on the boundary
+  for (let p = 0; p < S * S; p++) {
+    if (!alpha(p)) continue;
+    const x = p % S, y = (p / S) | 0;
+    if (x === 0 || y === 0 || x === S - 1 || y === S - 1) continue;
+    if (!alpha(p - 1) || !alpha(p + 1) || !alpha(p - S) || !alpha(p + S)) {
+      d[p * 4 + 3] = 150;
     }
   }
   const tg = targetCv.getContext('2d');
