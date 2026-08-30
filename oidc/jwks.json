@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "alldogs-2026-08",
+      "n": "1fzBFsp_08zP2Tmox0di0XI-YVE3Pn2TjpWsxg2lL_Lz7LUZmG4ZogS5kKbeX6zD8NX-qEM6OM4DifnaSV_GkkS3Uht00bhSNZwIlc7OH4DkO64dHKQieti5A-xw-HgRvmF-0S9iH_-bUUZOui2RE7xuJGPzmpMghFkicLGppNYLmuTAuYh8RtKsqggr9nM9qmJRSLSQNwKxzfYcUuYL_CkV1gViYs2fYkGsVO08ePG-OY2LrIsNF7z5COl1mrjtxVNwOUz5XSmLosc4jKmL9jG0WwDqZfgCglPQ9q6wt6E_djvedWWBx-bO2biLngECtId1TSsIkP3aZ3qSqUIGWw",
+      "e": "AQAB"
+    }
+  ]
+}
