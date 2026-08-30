@@ -1129,7 +1129,7 @@ const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
 
 function renderYours() {
-  draw(yourCv, yseed, ystate);
+  cutout(yourCv, yseed, ystate);
   draw(chooseCv, yseed, ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourState').textContent =
@@ -1228,6 +1228,16 @@ function cutout(targetCv, seed, state) {
   for (let p = 0; p < S * S; p++) {
     if (alpha(p) && comp[p] !== best) d[p * 4 + 3] = 0;
   }
+  // sanity: a dog should be 6% to 85% of the frame; otherwise the ground
+  // matched the coat and the cutout is wrong, so keep the painting
+  let opq = 0;
+  for (let p = 0; p < S * S; p++) if (alpha(p)) opq++;
+  const frac = opq / (S * S);
+  if (frac < 0.06 || frac > 0.85) {
+    targetCv.width = S; targetCv.height = S;
+    draw(targetCv, seed, state);
+    return false;
+  }
   // soft half-step on the boundary
   for (let p = 0; p < S * S; p++) {
     if (!alpha(p)) continue;
@@ -1240,6 +1250,7 @@ function cutout(targetCv, seed, state) {
   const tg = targetCv.getContext('2d');
   targetCv.width = S; targetCv.height = S;
   tg.putImageData(img, 0, 0);
+  return true;
 }
 
 cutout(document.getElementById('cr_adopt'), 66771, 'faithful');
@@ -1261,9 +1272,38 @@ const parade = document.getElementById('parade');
 PARADE.forEach(([seed, state]) => {
   const cv = document.createElement('canvas');
   cv.width = 220; cv.height = 220;
-  draw(cv, seed, state);
+  cutout(cv, seed, state);
   parade.append(cv);
 });
+
+/* mobile: the odds fold */
+if (matchMedia('(max-width: 700px)').matches) {
+  document.querySelectorAll('.chipgroup .chips').forEach(ch => {
+    if (ch.scrollHeight < 130) return;
+    ch.classList.add('collapsed');
+    const btn = document.createElement('button');
+    btn.className = 'chipmore';
+    const n = ch.children.length;
+    btn.textContent = 'Show all ' + n;
+    btn.addEventListener('click', () => {
+      const folded = ch.classList.toggle('collapsed');
+      btn.textContent = folded ? 'Show all ' + n : 'Fold';
+    });
+    ch.parentElement.append(btn);
+  });
+}
+
+/* ribbon: step aside while reading down, return on the way up */
+(function () {
+  const ribbon = document.querySelector('.ribbon');
+  let lastY = window.scrollY;
+  addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastY + 6 && y > 400) ribbon.classList.add('hide');
+    else if (y < lastY - 6) ribbon.classList.remove('hide');
+    lastY = y;
+  }, { passive: true });
+})();
 
 /* scroll reveal */
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
