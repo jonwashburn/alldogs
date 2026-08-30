@@ -62,12 +62,17 @@
     height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
   .herobanner canvas { position: absolute; left: 0; top: 50%; width: 100%;
     height: auto; transform: translateY(-45%); display: block; }
-  .herobanner.light h1 { color: var(--ink); text-shadow: none; }
-  .herobanner h1 { position: absolute; left: 6vw; top: 50%;
-    transform: translateY(-50%); text-align: left; color: #fff;
-    font-size: clamp(52px, 9vw, 150px); line-height: 0.94;
-    letter-spacing: -0.01em; text-shadow: 0 2px 60px rgba(0,0,0,0.2); }
-  .hero h1 .tm { font-size: 0.26em; vertical-align: super; letter-spacing: 0; }
+  /* the title is a small tag pinned to the painting, like a collar tag */
+  .herobanner h1 { position: absolute; left: 20px; top: 20px;
+    color: var(--ink); background: var(--paper);
+    font-size: 15px; line-height: 1; letter-spacing: 1.5px;
+    padding: 10px 14px 9px; border: 1.5px solid var(--ink);
+    border-radius: 3px; box-shadow: 2px 3px 0 rgba(0,0,0,0.28);
+    transform: rotate(-1.2deg); }
+  .hero h1 .tm { font-size: 0.6em; vertical-align: super; letter-spacing: 0; }
+  @media (max-width: 700px) {
+    .herobanner h1 { left: 12px; top: 12px; font-size: 13px;
+      padding: 8px 11px 7px; } }
   .herocap { display: flex; justify-content: space-between;
     margin-top: 14px; font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
