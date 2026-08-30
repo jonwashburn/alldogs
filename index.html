@@ -344,10 +344,13 @@
     .chipmore { display: inline-block; }
   }
 
-  /* stray dogs living on the page */
-  canvas.stray { position: absolute; width: 120px; height: 120px;
-    pointer-events: none; }
-  @media (max-width: 900px) { canvas.stray { display: none; } }
+  /* stray dogs living on the page, tagged, at every scale */
+  .straywrap { position: absolute; pointer-events: none; z-index: 2; }
+  .straywrap canvas { display: block; width: 100%; height: auto; }
+  .straywrap .slbl { margin-top: 7px; font-size: 9px;
+    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+    opacity: 0.5; text-align: center; }
+  @media (max-width: 900px) { .straywrap { display: none; } }
 
   /* bred, not drawn */
   .bredgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
@@ -502,7 +505,6 @@
     <a class="btn" href="design/">The live design feed</a>
   </div>
 </div>
-<canvas class="stray" id="stray2" width="500" height="500" style="right: 7%; bottom: 70px;"></canvas>
 </section>
 
 <section class="why" id="why"><div class="wrap">
@@ -684,7 +686,7 @@
       published before the first dog exists. Every item carries its own
       accent color, and the held items are interactions: the dog reads the
       book, hugs the balloon, holds the drawing up for you. <b>The crown is
-      a 0.09% roll.</b> Twelve dogs are one of ones whose costumes ignore
+      a 0.09% roll.</b> Twenty dogs are one of ones whose costumes ignore
       the first two slots, but even they roll the held one. A crowned
       zombie with a pocket knife is a story nobody can plan.</p>
     </div>
@@ -761,7 +763,7 @@
   </div>
   <div class="oddsfoot">
   <div class="chipgroup">
-    <div class="glbl">The one of ones &middot; 12 dogs, once each</div>
+    <div class="glbl">The one of ones &middot; 20 dogs, once each</div>
     <div class="chips">
       <span class="chip grail">The Carpenter <b>1</b></span>
       <span class="chip grail">The Cross <b>1</b></span>
@@ -775,6 +777,14 @@
       <span class="chip grail">The Astronaut <b>1</b></span>
       <span class="chip grail">The Pope <b>1</b></span>
       <span class="chip grail">The Shepherd <b>1</b></span>
+      <span class="chip grail">The Devil <b>1</b></span>
+      <span class="chip grail">The Bride <b>1</b></span>
+      <span class="chip grail">The Clown <b>1</b></span>
+      <span class="chip grail">The Cowboy <b>1</b></span>
+      <span class="chip grail">The Sailor <b>1</b></span>
+      <span class="chip grail">The Magician <b>1</b></span>
+      <span class="chip grail">The Beekeeper <b>1</b></span>
+      <span class="chip grail">The Samurai <b>1</b></span>
     </div>
   </div>
   <p class="fatenote">These are odds, not quotas. Every dog rolls each slot
@@ -848,7 +858,6 @@
 </div></section>
 
 <section class="drop sheet" id="drop">
-  <canvas class="stray" id="stray1" width="500" height="500" style="right: 4%; top: 90px;"></canvas>
   <div class="wrap">
   <p class="kicker">The drop</p>
   <h2>Adopting works like a gallery,<br>not a gas war.</h2>
@@ -1321,8 +1330,43 @@ cutout(document.getElementById('cr_love'), 910008, 'faithful');
 cutout(document.getElementById('cr_flip'), 920001, 'zombie');
 cutout(document.getElementById('cr_win'), 930001, 'angel');
 cutout(document.getElementById('cr_lose'), 940001, 'ghost');
-cutout(document.getElementById('stray1'), 940002, 'ghost');
-cutout(document.getElementById('stray2'), 920002, 'zombie');
+/* stray dogs: scattered at every scale, live from the champion painter,
+   tagged with the attribute their seed forces */
+function stray(sectionSel, seed, state, label, css, size) {
+  const sec = document.querySelector(sectionSel);
+  if (!sec) return;
+  const w = document.createElement('div');
+  w.className = 'straywrap';
+  w.style.cssText = css;
+  const cv = document.createElement('canvas');
+  cutout(cv, seed, state, size || 500);
+  w.append(cv);
+  if (label) {
+    const l = document.createElement('div');
+    l.className = 'slbl';
+    l.textContent = label;
+    w.append(l);
+  }
+  sec.append(w);
+}
+stray('.why', 100027, 'faithful', 'red balloon \u00b7 2.0%',
+  'width:110px; top:70px; right:-26px;');
+stray('.bred', 9, 'faithful', 'The Painter \u00b7 1 of 1',
+  'width:150px; bottom:140px; right:-40px;');
+stray('.fatesec', 100039, 'faithful', 'toy airplane \u00b7 0.4%',
+  'width:120px; top:44px; right:-30px;');
+stray('#dogs', 100037, 'faithful', 'boombox \u00b7 0.5%',
+  'width:56px; top:150px; right:6%;');
+stray('.medium', 10, 'faithful', 'The Astronaut \u00b7 1 of 1',
+  'width:64px; top:120px; right:7%;');
+stray('.drop', 940002, 'ghost', 'ghost',
+  'width:120px; top:90px; right:4%;');
+stray('.rules', 100035, 'faithful', 'skateboard \u00b7 0.6%',
+  'width:130px; bottom:70px; right:-40px;');
+stray('.choice', 100046, 'faithful', 'pocket knife \u00b7 0.1%',
+  'width:96px; top:80px; right:5%;');
+stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
+  'width:74vh; right:-22vh; bottom:-20px;', 1100);
 
 /* footer parade */
 const PARADE = [
