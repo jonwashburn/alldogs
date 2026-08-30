@@ -323,6 +323,8 @@
   .lrow b { font-weight: 700; }
   .lrow b.blue { color: var(--blue); }
   .lrow b.red { color: var(--red); }
+  .lrow .lsub { display: block; font-size: 14px; opacity: 0.62;
+    margin-top: 5px; font-weight: 400; }
   canvas.cutout { width: 92px; height: 92px; flex: none; display: block; }
   .cpair { display: flex; gap: 4px; flex: none; }
   .cpair canvas.cutout { width: 78px; height: 78px; }
@@ -439,7 +441,9 @@
         <canvas class="cutout" id="cr_love" width="500" height="500"></canvas>
         <canvas class="cutout" id="cr_flip" width="500" height="500"></canvas>
       </div>
-      <p>Then decide: <b class="blue">love it</b>, or <b class="red">flip it</b>.</p>
+      <p>Then decide: <b class="blue">love it</b>, or <b class="red">flip it</b>.
+      <span class="lsub">(To flip it, you have to put it down first and make
+      it a zombie. Only zombies sell.)</span></p>
     </div>
     <div class="lrow">
       <canvas class="cutout" id="cr_win" width="500" height="500"></canvas>
