@@ -360,7 +360,22 @@
   /* stray dogs living on the page, tagged, at every scale */
   .straywrap { position: absolute; pointer-events: none; z-index: 2; }
   .straywrap canvas { display: block; width: 100%; height: auto;
-    position: relative; z-index: 1; }
+    position: relative; z-index: 1; pointer-events: auto; cursor: zoom-in;
+    transition: transform 0.22s ease; transform-origin: 50% 100%; }
+  .straywrap canvas:hover { transform: scale(1.12); }
+  #strayview { position: fixed; inset: 0; z-index: 60; display: none;
+    align-items: center; justify-content: center; cursor: zoom-out;
+    background: rgba(24,19,14,0.55); }
+  #strayview.on { display: flex; }
+  #strayview .card { background: var(--paper); padding: 16px 16px 12px;
+    border: 1.5px solid var(--ink); border-radius: 4px;
+    box-shadow: 6px 8px 0 rgba(0,0,0,0.3); transform: rotate(-0.6deg); }
+  #strayview canvas { display: block; width: min(68vh, 84vw, 640px);
+    height: auto; }
+  #strayview .cap { margin-top: 10px; display: flex;
+    justify-content: space-between; gap: 24px; font-size: 10px;
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    opacity: 0.6; }
   .straywrap .sground { position: absolute; bottom: -3px; left: 8%;
     right: 8%; height: 12px; border-radius: 50%;
     background: radial-gradient(ellipse at center, rgba(20,16,12,.16), rgba(20,16,12,0) 70%); }
@@ -1433,6 +1448,9 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
   const cv = document.createElement('canvas');
   cutout(cv, seed, state, size || 500);
   trimToDog(cv);
+  cv.addEventListener('click', e => {
+    e.stopPropagation(); openStray(seed, state, label);
+  });
   w.append(cv);
   if (!noGround) {
     const gnd = document.createElement('div');
@@ -1455,26 +1473,46 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
 function perch(sectionSel, seed, state, label, width) {
   stray(sectionSel, seed, state, label,
     'width:' + width + 'px; top:59px; transform:translateY(-100%); '
-    + 'right:max(32px, calc((100% - 1196px) / 2));',
-    width > 100 ? 640 : 500);
+    + 'right:max(32px, calc((100% - 1196px) / 2));', 800);
 }
-perch('.confess', 100027, 'faithful', 'red balloon \u00b7 2.0%',    92);
-perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  116);
-perch('.fatesec', 950003, 'zombie',   'zombie',                     92);
-perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',         92);
-perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1', 72);
-perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',    92);
-perch('.rules',   100035, 'faithful', 'skateboard \u00b7 0.6%',      92);
-perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',    92);
+
+/* the expanded view: click a stray, see the whole painting */
+const sview = document.createElement('div');
+sview.id = 'strayview';
+sview.innerHTML = '<div class="card"><canvas width="1100" height="1100">'
+  + '</canvas><div class="cap"><span id="svlbl"></span>'
+  + '<span id="svmeta"></span></div></div>';
+document.body.append(sview);
+sview.addEventListener('click', () => sview.classList.remove('on'));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') sview.classList.remove('on');
+});
+function openStray(seed, state, label) {
+  const cv = sview.querySelector('canvas');
+  cv.width = 1100; cv.height = 1100;
+  draw(cv, seed, state);
+  document.getElementById('svlbl').textContent = label || '';
+  document.getElementById('svmeta').textContent =
+    state + ' \u00b7 seed ' + seed;
+  sview.classList.add('on');
+}
+perch('.confess', 100027, 'faithful', 'red balloon \u00b7 2.0%',   150);
+perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  195);
+perch('.fatesec', 950003, 'zombie',   'zombie',                    150);
+perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        150);
+perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1',120);
+perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   150);
+perch('.rules',   100035, 'faithful', 'skateboard \u00b7 0.6%',     150);
+perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   150);
 
 /* Two exceptions, both earned: the artist's adversary hangs giant off
    the confession's edge (no dog perches on the boundary it owns), and
    the ghost floats in the cannon's night, because ghosts do not stand
    on lines. */
 stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
-  'width:54vh; right:-15vh; bottom:-52px;', 1100);
+  'width:54vh; right:-7vh; bottom:-52px;', 1100);
 stray('.cannon', 940002, 'ghost', 'ghost',
-  'width:96px; top:64px; right:max(60px, calc((100% - 1196px) / 2));',
+  'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));',
   500, true);
 
 /* footer parade */
