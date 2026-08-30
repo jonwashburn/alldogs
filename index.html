@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS — 10,000 dogs. One year. One zombie apocalypse.</title>
+<meta name="description" content="Adopt a dog you can never sell. Turn it into a zombie any night for cash. If a third of the dogs turn, the apocalypse takes the rest. 10,000 generative dogs on Ethereum, real names on the collars, one year to hold the line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
+<meta property="og:title" content="ALL DOGS — 10,000 dogs. One year. One zombie apocalypse.">
+<meta property="og:description" content="A year-long performance played with real money. Adopt a dog you can never sell, or turn it for cash. At one third, the apocalypse.">
+<meta property="og:image" content="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_og_20260830_41be44aaeaaa/alldogs_og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #fdfdfb; --ink: #111111; --hair: #dddad0;
+    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; --ghost: #8b95a3;
+  }
+  html { scroll-behavior: smooth; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif; line-height: 1.5; font-weight: 400;
+    overflow-x: hidden; }
+  .disp, h1, h2, h3, h4 { font-family: "Shantell Sans", "Instrument Sans",
+    sans-serif; }
+  ::selection { background: var(--gold); color: var(--ink); }
+  .wrap { max-width: 1260px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 96px 0 110px; position: relative; }
+  canvas.brush { display: block; width: min(1196px, calc(100% - 64px));
+    margin: 0 auto; height: 14px; }
+  h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0; }
+  h2 { font-size: clamp(28px, 4vw, 50px); line-height: 1.04;
+    margin-bottom: 22px; }
+  .kicker { font-size: 10px; letter-spacing: 3px; font-weight: 700;
+    margin-bottom: 26px; text-transform: uppercase; opacity: 0.45; }
+  .lede { font-size: 17.5px; max-width: 56ch; opacity: 0.78; }
+
+  /* scroll reveal */
+  .rv { opacity: 0; transform: translateY(16px); }
+  .rv.on { opacity: 1; transform: translateY(0);
+    transition: opacity 0.55s ease, transform 0.55s ease; }
+
+  /* ribbon */
+  .ribbon { background: var(--ink); color: var(--paper); overflow: hidden;
+    white-space: nowrap; padding: 10px 0; position: sticky; top: 0;
+    z-index: 60; }
+  .ribbon span { display: inline-block; animation: tick 36s linear infinite;
+    font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+    font-weight: 700; }
+  .ribbon b.r { color: #ff8a80; } .ribbon b.g { color: var(--gold); }
+  @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* hero: the painting is the page */
+  .hero { padding: 0 0 120px; border-top: none; text-align: center; }
+  .herobanner { position: relative; width: 100%;
+    height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
+  .herobanner canvas { position: absolute; left: 0; top: 50%; width: 100%;
+    height: auto; transform: translateY(-45%); display: block; }
+  .herobanner.light h1 { color: var(--ink); text-shadow: none; }
+  .herobanner h1 { position: absolute; left: 6vw; top: 50%;
+    transform: translateY(-50%); text-align: left; color: #fff;
+    font-size: clamp(52px, 9vw, 150px); line-height: 0.94;
+    letter-spacing: -0.01em; text-shadow: 0 2px 60px rgba(0,0,0,0.2); }
+  .hero h1 .tm { font-size: 0.26em; vertical-align: super; letter-spacing: 0; }
+  .herocap { display: flex; justify-content: space-between;
+    margin-top: 14px; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
+  .hero .tagline { margin-top: 56px; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.85; }
+  .hero .tagline em { font-style: normal; color: var(--red); }
+  .hero .sub { margin: 20px auto 0; font-size: 17.5px; opacity: 0.78;
+    max-width: 54ch; }
+  @media (max-width: 700px) {
+    .herobanner { height: 46vh; }
+    .herobanner canvas { width: 160%; left: -30%; }
+  }
+  .cta { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap;
+    justify-content: center; }
+  .btn { display: inline-block; padding: 13px 22px;
+    border: 1px solid var(--ink); color: var(--ink); text-decoration: none;
+    font-size: 11px; font-weight: 700; background: transparent;
+    cursor: pointer; font-family: inherit; letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.15s ease, color 0.15s ease; }
+  .btn:hover { background: var(--ink); color: var(--paper); }
+  .btn:focus-visible { outline: 2px dashed var(--red); outline-offset: 3px; }
+  .btn.hot { background: var(--red); border-color: var(--red); color: #fff; }
+  .btn.hot:hover { background: var(--ink); border-color: var(--ink); }
+  .maplbl { margin: 96px 0 26px; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.45; }
+  .map { display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px;
+    text-align: left; }
+  a.mapitem { display: block; border-top: 1px solid var(--ink);
+    padding: 16px 0 0; text-decoration: none; color: var(--ink); }
+  a.mapitem:hover h4 { color: var(--red); }
+  .mapitem .mn { font-weight: 700; color: var(--red); font-size: 10px;
+    letter-spacing: 2px; }
+  .mapitem h4 { font-size: 13px; margin: 8px 0 8px; letter-spacing: 1px;
+    transition: color 0.15s ease; }
+  .mapitem p { font-size: 13px; opacity: 0.68; line-height: 1.55; }
+  @media (max-width: 900px) { .map { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+  @media (max-width: 560px) { .map { grid-template-columns: 1fr; } }
+
+  /* your dog */
+  .yours { text-align: center; }
+  .yours h2 { margin-bottom: 44px; }
+  .yourswrap { max-width: 480px; margin: 0 auto; }
+  .yourswrap canvas { width: 100%; height: auto; display: block; }
+  .yourscap { display: flex; justify-content: space-between;
+    margin-top: 12px; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; }
+  .yours .lede { margin-left: auto; margin-right: auto; }
+
+  /* fates: four plates */
+  .fates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px;
+    margin-top: 64px; }
+  .fate { display: flex; flex-direction: column; }
+  .fate canvas { width: 100%; height: auto; display: block; }
+  .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink);
+    margin-top: 14px; flex: 1; }
+  .fate h3 { font-size: 12px; letter-spacing: 2px; }
+  .fate p { font-size: 14.5px; margin-top: 9px; opacity: 0.72;
+    line-height: 1.58; }
+  .fate .tag { font-size: 8.5px; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 700; padding: 4px 9px;
+    color: #fff; display: inline-block; margin-top: 12px; }
+  @media (max-width: 900px) { .fates { grid-template-columns: repeat(2, 1fr); } }
+
+  .stack { margin-top: 88px; display: grid;
+    grid-template-columns: repeat(2, 1fr); gap: 44px; }
+  .stackcard { border-top: 1px solid var(--ink); padding: 16px 0 0; }
+  .stackcard .lbl { font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; color: var(--red);
+    margin-bottom: 10px; }
+  .stackcard p { font-size: 16px; opacity: 0.75; line-height: 1.62; }
+  .stackcard b { font-weight: 700; }
+  @media (max-width: 860px) { .stack { grid-template-columns: 1fr; gap: 28px; } }
+
+  .chipgroup { margin-top: 44px; }
+  .chipgroup .glbl { font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.45;
+    margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: 1px solid var(--ink); padding: 7px 11px;
+    font-size: 10px; font-weight: 700; background: transparent;
+    letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease; }
+  .chip:hover { background: var(--ink); color: var(--paper); }
+  .chip:hover b { color: var(--gold); }
+  .chip b { color: var(--red); margin-left: 6px; }
+  .chip.grail { background: var(--gold); border-color: var(--gold); }
+  .fatenote { margin-top: 44px; font-size: 15.5px; max-width: 62ch;
+    opacity: 0.72; border-left: 1px solid var(--ink); padding-left: 20px;
+    line-height: 1.62; }
+
+  /* kennel: the wall */
+  .kennel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+    margin-top: 64px; }
+  .pen canvas { width: 100%; height: auto; display: block; }
+  .pen .cap { border-top: 1px solid var(--ink); margin-top: 10px;
+    padding: 9px 0 0; }
+  .pen .h { font-size: 11px; font-weight: 700; word-break: break-all; }
+  .pen .t { font-size: 8.5px; opacity: 0.5; margin-top: 3px;
+    text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .kennelrow { margin-top: 44px; display: flex; gap: 22px;
+    align-items: center; flex-wrap: wrap; }
+  .kennelrow .note { font-size: 14.5px; opacity: 0.65; max-width: 46ch; }
+  .kennelrow .note a { color: var(--ink); font-weight: 700; }
+  @media (max-width: 900px) { .kennel { grid-template-columns: repeat(2, 1fr); } }
+
+  /* the medium */
+  .fourlives { margin-top: 64px; display: grid;
+    grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .fl canvas { width: 100%; height: auto; display: block; }
+  .fl .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
+    margin-top: 12px; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; }
+  .flnote { margin-top: 28px; font-size: 15.5px; max-width: 62ch;
+    opacity: 0.72; line-height: 1.62; }
+  .specs { margin-top: 72px; display: grid;
+    grid-template-columns: repeat(3, 1fr); gap: 44px; }
+  .spec { border-top: 1px solid var(--ink); padding: 16px 0 0; }
+  .spec span { display: block; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; color: var(--red);
+    margin-bottom: 10px; }
+  .spec p { font-size: 15px; opacity: 0.74; line-height: 1.62; }
+  @media (max-width: 900px) {
+    .fourlives { grid-template-columns: repeat(2, 1fr); }
+    .specs { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* the drop */
+  .phases { margin-top: 64px; display: grid;
+    grid-template-columns: repeat(3, 1fr); gap: 44px; }
+  .dropnote { margin-top: 44px; font-size: 15.5px; max-width: 62ch;
+    opacity: 0.72; border-left: 1px solid var(--ink); padding-left: 20px;
+    line-height: 1.62; }
+  @media (max-width: 900px) { .phases { grid-template-columns: 1fr; gap: 28px; } }
+
+  /* rules */
+  .steps { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 44px; }
+  .step { border-top: 1px solid var(--ink); padding: 16px 0 0;
+    position: relative; }
+  .step .n { position: absolute; top: 18px; right: 0; font-size: 10px;
+    font-weight: 700; letter-spacing: 2px; opacity: 0.4; }
+  .rules .step .n::after { content: "/06"; }
+  .drop .step .n::after { content: "/03"; }
+  .step h3 { font-size: 15.5px; letter-spacing: 1px; line-height: 1.4;
+    padding-right: 60px; }
+  .step p { margin-top: 10px; font-size: 15.5px; opacity: 0.74;
+    line-height: 1.62; }
+  @media (max-width: 860px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
+
+  /* the choice */
+  .samecash { font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(18px, 2.4vw, 26px); font-weight: 700;
+    max-width: 38ch; margin-bottom: 52px; text-transform: uppercase;
+    letter-spacing: 0; line-height: 1.3; }
+  .samecash em { font-style: normal; color: var(--red); }
+  .chooseyours { margin: 0 0 36px; }
+  .chooseyours canvas { width: 200px; height: 200px; display: block; }
+  .chooseyours p { margin-top: 10px; font-size: 11px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; }
+  .buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .bpanel { padding: 52px 44px 54px; color: #fff; cursor: pointer;
+    user-select: none; transition: transform 0.15s ease; }
+  .bpanel.red { background: var(--red); }
+  .bpanel.blue { background: var(--blue); }
+  .bpanel:hover { transform: translateY(-3px); }
+  .bpanel:active { transform: translateY(2px); }
+  .bpanel h3 { font-size: clamp(20px, 2.6vw, 30px); letter-spacing: 1px; }
+  .bpanel .big { font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(56px, 7vw, 104px); font-weight: 800;
+    margin: 14px 0 8px; letter-spacing: -0.01em; line-height: 1; }
+  .bpanel p { font-weight: 700; font-size: 15.5px; margin-top: 10px; }
+  .bpanel p.f { font-weight: 400; opacity: 0.92; font-size: 14.5px;
+    margin-top: 14px; line-height: 1.58; }
+  @media (max-width: 700px) { .buttons { grid-template-columns: 1fr; } }
+  .ethnote { margin-top: 40px; font-size: 14.5px; max-width: 60ch;
+    opacity: 0.68; border-left: 1px solid var(--ink); padding-left: 20px;
+    line-height: 1.62; }
+
+  /* divider line */
+  .squig { display: none; }
+  .squig svg { display: none; }
+
+  /* cannon: the night */
+  .cannon { text-align: center; background: var(--ink); color: var(--paper);
+    overflow: hidden; border-top: none; padding: 130px 0;
+    background-image:
+      radial-gradient(rgba(255,255,255,0.35) 1px, transparent 1.6px),
+      radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1.5px);
+    background-size: 210px 180px, 130px 110px;
+    background-position: 40px 30px, 95px 85px; }
+  .cannon .squig { display: block; width: 48px; height: 2px;
+    background: var(--gold); margin: 0 auto 32px; }
+  .cannon .moon { position: absolute; top: 72px; right: 10%;
+    width: 64px; height: 64px; background: var(--gold);
+    border-radius: 50%; }
+  .cannon h2 .boom { color: var(--gold); }
+  .cannon p { font-size: clamp(14px, 1.8vw, 17px); max-width: 52ch;
+    margin: 0 auto 12px; opacity: 0.8; }
+  .blink { animation: blink 1.2s steps(2, start) infinite; }
+  @keyframes blink { to { visibility: hidden; } }
+  @media (max-width: 700px) { .cannon .moon { width: 44px; height: 44px;
+    top: 44px; right: 8%; } }
+
+  /* confess: giant figures on white */
+  .confess .row { display: flex; gap: 80px; flex-wrap: wrap;
+    margin: 56px 0 60px; }
+  .confess .money b { display: block;
+    font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(52px, 7.4vw, 108px); line-height: 0.98;
+    font-weight: 800; letter-spacing: -0.01em; color: var(--red); }
+  .confess .money span { display: block; margin-top: 12px; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    opacity: 0.5; }
+  .confess p.line { font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(20px, 2.8vw, 34px); font-weight: 700;
+    max-width: 30ch; text-transform: uppercase; letter-spacing: 0;
+    line-height: 1.28; }
+  .confess p.fine { font-size: 15px; margin-top: 28px; max-width: 60ch;
+    opacity: 0.7; line-height: 1.62; }
+  .confess .sig { font-family: "Shantell Sans", sans-serif;
+    font-weight: 700; font-size: 17px; margin-top: 30px; }
+
+  /* the creed */
+  .creed { text-align: center; padding: 120px 0; }
+  .creed .t { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    text-transform: uppercase; font-size: clamp(52px, 9vw, 128px);
+    line-height: 0.92; color: var(--red); margin-bottom: 48px; }
+  .creed .s { font-family: "Shantell Sans", sans-serif; font-weight: 700;
+    text-transform: uppercase; font-size: clamp(20px, 3vw, 36px);
+    line-height: 1.25; margin-top: 26px; }
+  .creed .s.out { margin-top: 44px; }
+  .creed .s b.blue { color: var(--blue); }
+  .creed .s b.red { color: var(--red); }
+
+  /* why */
+  .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    margin-top: 56px; }
+  .reason h3 { font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 16px; }
+  .reason p { font-size: 16.5px; opacity: 0.78; line-height: 1.65;
+    margin-bottom: 14px; }
+  .reason a { color: var(--ink); font-weight: 700; }
+  .stamp { display: inline-block; border: 3px solid var(--red);
+    color: var(--red); padding: 10px 20px;
+    font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    font-size: 19px; text-transform: uppercase; letter-spacing: 1px;
+    transform: rotate(-5deg); margin-top: 10px; }
+  .pollq { font-family: "Shantell Sans", sans-serif; font-weight: 500;
+    font-size: 17px; line-height: 1.6; border-left: 2px solid var(--ink);
+    padding-left: 20px; margin: 18px 0 22px; opacity: 0.9; }
+  .poll { margin: 0 0 22px; }
+  .pbar { display: flex; height: 46px; }
+  .pbar .pr, .pbar .pb { display: flex; align-items: center;
+    padding-left: 14px; color: #fff; font-weight: 700; font-size: 12px;
+    letter-spacing: 1.5px; white-space: nowrap; overflow: hidden; }
+  .pbar .pr { background: var(--red); }
+  .pbar .pb { background: var(--blue); }
+  .pmeta { margin-top: 10px; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.5; }
+  @media (max-width: 860px) { .whygrid { grid-template-columns: 1fr;
+    gap: 44px; } }
+
+  /* receipts */
+  .receipts p { font-size: 16.5px; max-width: 62ch; margin-bottom: 16px;
+    opacity: 0.75; line-height: 1.65; }
+  .receipts a { color: var(--ink); font-weight: 700; }
+  .receipts .cta { margin-top: 32px; justify-content: flex-start; }
+
+  footer { padding: 72px 0 110px; border-top: 1px solid var(--hair);
+    text-align: center; }
+  footer p { font-size: 10px; letter-spacing: 1.5px; opacity: 0.45;
+    line-height: 2.2; font-weight: 500; text-transform: uppercase; }
+  .parade { display: flex; gap: 12px; justify-content: center;
+    flex-wrap: wrap; margin-bottom: 44px; }
+  .parade canvas { width: 56px; height: 56px; display: block;
+    animation: pup 3.4s ease-in-out infinite; }
+  .parade canvas:nth-child(2n) { animation-delay: 0.6s; }
+  .parade canvas:nth-child(3n) { animation-delay: 1.3s; }
+  .parade canvas:nth-child(5n) { animation-delay: 2.1s; }
+  @keyframes pup {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .parade canvas, .ribbon span, .blink { animation: none !important; }
+    .rv { opacity: 1 !important; transform: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><span>
+  NIGHT 214 &nbsp;&middot;&nbsp; POT: PUBLIC &nbsp;&middot;&nbsp; HORDE COUNT: <b class="r">SEALED</b> &nbsp;&middot;&nbsp; <b class="g">38 ANGELS</b> &nbsp;&middot;&nbsp; AT ONE THIRD, THE APOCALYPSE &nbsp;&middot;&nbsp; THE CANNON FIRES AT MIDNIGHT &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  NIGHT 214 &nbsp;&middot;&nbsp; POT: PUBLIC &nbsp;&middot;&nbsp; HORDE COUNT: <b class="r">SEALED</b> &nbsp;&middot;&nbsp; <b class="g">38 ANGELS</b> &nbsp;&middot;&nbsp; AT ONE THIRD, THE APOCALYPSE &nbsp;&middot;&nbsp; THE CANNON FIRES AT MIDNIGHT &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+</span></div>
+
+<section class="hero">
+  <div class="herobanner">
+    <canvas id="heroDog" width="1600" height="1600"></canvas>
+    <h1>ALL <span class="d">DOGS</span><span class="tm">&trade;</span></h1>
+  </div>
+  <div class="wrap">
+  <div class="herocap"><span id="heroHandle">&nbsp;</span><span id="heroMeta">&nbsp;</span></div>
+  <p class="tagline">10,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $25</p>
+  <p class="sub">ALL DOGS is a year-long performance played with real
+  money by up to 10,000 strangers, and the artwork is whatever is left
+  when the year ends. Every dog is a one-of-one drawing that lives on
+  Ethereum. The artist draws the dogs. The owners write the story.</p>
+  <div class="cta">
+    <a class="btn hot" href="#deal">How the year works</a>
+    <a class="btn" href="#fates">Meet the four fates</a>
+    <a class="btn" href="design/">Watch the machine draw</a>
+  </div>
+</div>
+</div></section>
+
+<section class="creed"><div class="wrap">
+  <h2 class="t">Zombie<br>apocalypse</h2>
+  <p class="s">Start by: <b class="blue">adopting your dog</b></p>
+  <p class="s">Then decide: <b class="blue">love it</b> or <b class="red">flip it</b></p>
+  <p class="s out">If 2/3 of dog owners <b class="blue">love their dogs</b>,<br>everyone wins.</p>
+  <p class="s out">If more than 1/3 put their dogs down for the money,<br><b class="red">everyone else loses.</b></p>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <p class="kicker">Why this performance</p>
+  <h2>Two reasons.</h2>
+  <div class="whygrid">
+    <div class="reason">
+      <h3>Fuck flippers.</h3>
+      <p>I just launched a collection called HOLY, and I got to watch people
+      flip the work: in and out in a day, never once looking at it. So I
+      built something a flipper cannot touch. Here, a living dog can never
+      be sold. There is no floor to sweep and no exit to time. The only way
+      to cash out is to turn your own dog, with your name on the collar, in
+      public, forever. You can still flip. But the piece will make you sign
+      it, and it counts your flip toward the apocalypse hanging over every
+      dog that stayed.</p>
+      <span class="stamp">Fuck flippers</span>
+    </div>
+    <div class="reason">
+      <h3>The red button.</h3>
+      <p>In April 2026, <a href="https://x.com/waitbutwhy/status/2047710215265730755">Tim
+      Urban asked the internet a question</a>:</p>
+      <blockquote class="pollq">Everyone in the world has to take a private
+      vote by pressing a red or blue button. If more than 50% of people
+      press the blue button, everyone survives. If less than 50% of people
+      press the blue button, only people who pressed the red button
+      survive. Which button would you press?</blockquote>
+      <div class="poll">
+        <div class="pbar">
+          <div class="pr" style="width:42.1%">RED 42.1%</div>
+          <div class="pb" style="width:57.9%">BLUE 57.9%</div>
+        </div>
+        <p class="pmeta">98,539 votes &middot; 27.2 million views &middot;
+        final results</p>
+      </div>
+      <p>Blue won by a thread, and pressing was free. Forty-two percent
+      chose red anyway. I couldn't stop thinking about what those numbers
+      become when the vote costs something: real money, your name on the
+      button, a year to change your mind, and a count nobody can see.
+      ALL DOGS is that question, played for keeps. Turn is the red button.
+      Hold is the blue one. The one mercy I added: here, red needs a
+      third.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="yours" id="yours"><div class="wrap">
+  <p class="kicker">Yours</p>
+  <h2>While you're here,<br>this one is yours.</h2>
+  <div class="yourswrap">
+    <canvas id="yourDog" width="700" height="700"></canvas>
+    <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; night 1</span></div>
+  </div>
+  <p class="lede" style="margin-top:28px">It was painted the moment you
+  arrived and it exists nowhere else. It can't be sold. It can't be traded.
+  But you already know what you can do to it. The button is further down
+  the page.</p>
+</div></section>
+
+<section class="fatesec sheet" id="fates"><div class="wrap">
+  <p class="kicker">The attributes</p>
+  <h2>Four fates.<br>One collar.</h2>
+  <p class="lede">Every dog starts alive. What it becomes isn't decided at
+  mint and isn't decided by the artist. It's decided by 10,000 owners, one
+  midnight at a time.</p>
+  <div class="fates">
+    <div class="fate">
+      <canvas id="f_faithful" width="500" height="500"></canvas>
+      <div class="body">
+      <h3>Faithful</h3>
+      <p>Still alive, still yours. A faithful dog is one whose owner said no
+      to the horde every single night. If the dogs win the year, the faithful
+      get refunded and trade free.</p>
+      <span class="tag" style="background:var(--blue)">alive &middot; holding the line</span>
+      </div>
+    </div>
+    <div class="fate">
+      <canvas id="f_zombie" width="500" height="500"></canvas>
+      <div class="body">
+      <h3>Zombie</h3>
+      <p>Turned by its own owner. The owner took the money, the horde took
+      the dog, and the turn is signed on the collar forever. Zombies trade
+      from the night they turn.</p>
+      <span class="tag" style="background:var(--red)">turned &middot; paid</span>
+      </div>
+    </div>
+    <div class="fate">
+      <canvas id="f_angel" width="500" height="500"></canvas>
+      <div class="body">
+      <h3>Angel</h3>
+      <p>Died of natural causes, a few every week, chosen by chance and
+      nobody else. Wings included, the nights it lived stamped on the collar.
+      Angels never count toward the third. They trade right away, and if the
+      dogs win the year they get refunded too.</p>
+      <span class="tag" style="background:#c28d13">at peace &middot; tradable</span>
+      </div>
+    </div>
+    <div class="fate">
+      <canvas id="f_ghost" width="500" height="500"></canvas>
+      <div class="body">
+      <h3>Ghost</h3>
+      <p>A dog the apocalypse took. If the horde ever reaches a third, every
+      living dog is taken that same night and comes back under a sheet.
+      Ghosts trade, but no refund ever comes.</p>
+      <span class="tag" style="background:var(--ghost)">taken &middot; never paid</span>
+      </div>
+    </div>
+  </div>
+  <div class="stack">
+    <div class="stackcard">
+      <div class="lbl">Fate</div>
+      <p>The primary attribute. A zombie exists because someone chose the
+      money. A ghost exists because the world fell. An angel exists because
+      nature took the dog. And faithful is the one fate that doesn't last:
+      the death clock never stops, not even after the year, so someday
+      every faithful dog becomes an angel. The collection ends in wings.</p>
+    </div>
+    <div class="stackcard">
+      <div class="lbl">Lived</div>
+      <p>Every collar carries a number: how many nights the dog lived. A
+      zombie is stamped the night it turned. An angel is stamped the night it
+      passed. Ghosts all share one terrible date. The faithful just keep
+      counting, long after the year ends. <b>Night 3</b> (turned before its
+      first walk) and <b>night 3,650</b> (ten years old) are both rare; the
+      middle belongs to everyone.</p>
+    </div>
+    <div class="stackcard">
+      <div class="lbl">Wardrobe</div>
+      <p>The one thing decided at mint. Each dog's seed draws its wardrobe
+      from the census printed below, and the counts are fixed before the
+      first dog exists. Every item carries its own accent color: gold for
+      the crown, cadmium red for the beret and the cardigan, grass green
+      for the booties. <b>Nine dogs in the whole world wear the crown</b>,
+      and twelve dogs are one of ones that ignore the census entirely.
+      A crowned zombie is a story nobody can plan.</p>
+    </div>
+    <div class="stackcard">
+      <div class="lbl">On the piece</div>
+      <p>Your handle on the collar, inscribed if you reserved. The fate. The
+      nights lived. The wardrobe. The drawing itself, one of one from its
+      seed.</p>
+    </div>
+  </div>
+  <div class="chipgroup">
+    <div class="glbl">Wardrobe census &middot; headwear</div>
+    <div class="chips">
+      <span class="chip grail">Crown <b>9</b></span>
+      <span class="chip">Papal mitre <b>21</b></span>
+      <span class="chip">Beanie <b>44</b></span>
+      <span class="chip">Pilot helmet <b>54</b></span>
+      <span class="chip">Tiara <b>55</b></span>
+      <span class="chip">Welding goggles <b>86</b></span>
+      <span class="chip">Red beret <b>88</b></span>
+      <span class="chip">Party hat <b>101</b></span>
+      <span class="chip">Ear muffs <b>144</b></span>
+      <span class="chip">Cone of shame <b>199</b></span>
+      <span class="chip">Hoodie <b>259</b></span>
+      <span class="chip">Headphones <b>275</b></span>
+      <span class="chip">3D glasses <b>286</b></span>
+      <span class="chip">VR visor <b>332</b></span>
+      <span class="chip">Baseball cap <b>401</b></span>
+      <span class="chip">Bare head <b>7,646</b></span>
+    </div>
+  </div>
+  <div class="chipgroup">
+    <div class="glbl">Wardrobe census &middot; worn</div>
+    <div class="chips">
+      <span class="chip">Hero cape <b>77</b></span>
+      <span class="chip">Buck teeth <b>78</b></span>
+      <span class="chip">Booties <b>121</b></span>
+      <span class="chip">Rosary <b>123</b></span>
+      <span class="chip">Red cardigan <b>143</b></span>
+      <span class="chip">Pipe <b>317</b></span>
+      <span class="chip">Spiked choker <b>348</b></span>
+      <span class="chip">Tennis ball <b>444</b></span>
+      <span class="chip">Bone <b>555</b></span>
+      <span class="chip">Bandana <b>640</b></span>
+      <span class="chip">Cigarette <b>961</b></span>
+      <span class="chip">Nothing <b>6,193</b></span>
+    </div>
+  </div>
+  <div class="chipgroup">
+    <div class="glbl">The one of ones &middot; 12 dogs, once each</div>
+    <div class="chips">
+      <span class="chip grail">The Carpenter <b>1</b></span>
+      <span class="chip grail">The Cross <b>1</b></span>
+      <span class="chip grail">The Neighbor <b>1</b></span>
+      <span class="chip grail">The Spider <b>1</b></span>
+      <span class="chip grail">The Green One <b>1</b></span>
+      <span class="chip grail">The Thunder God <b>1</b></span>
+      <span class="chip grail">The Star-Spangled One <b>1</b></span>
+      <span class="chip grail">The King <b>1</b></span>
+      <span class="chip grail">The Painter <b>1</b></span>
+      <span class="chip grail">The Astronaut <b>1</b></span>
+      <span class="chip grail">The Pope <b>1</b></span>
+      <span class="chip grail">The Shepherd <b>1</b></span>
+    </div>
+  </div>
+  <p class="fatenote">The wardrobe census is printed at mint, the way the
+  great collections always did it. The fate and lived tables are the
+  opposite: nobody knows those until the year, and the years after it,
+  write them. Half the rarity is bought. The other half is earned.</p>
+</div></section>
+
+<section id="dogs"><div class="wrap">
+  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <p class="kicker">The collection</p>
+  <h2>10,000 drawings.<br>No two alike.</h2>
+  <div class="kennel" id="kennel"></div>
+  <div class="kennelrow">
+    <button class="btn" id="litter">Draw a new litter</button>
+    <span class="note">Every dog on this page is generated live in your
+    browser from its seed. And until adoption opens, the drawing style
+    itself is still being fought over:
+    <a href="design/">two AIs are redrawing and judging the collection right
+    now, in public &rarr;</a></span>
+  </div>
+</div></section>
+
+<section class="medium" id="medium"><div class="wrap">
+  <p class="kicker">The medium</p>
+  <h2>The paint is code.</h2>
+  <p class="lede">There is no image file. Every dog is painted in your
+  browser, right now, by a JavaScript painter working from a single number.
+  The whole painter is about a hundred kilobytes: smaller than one
+  photograph of the painting it makes.</p>
+  <div class="fourlives">
+    <div class="fl"><canvas id="fl_faithful" width="500" height="500"></canvas><div class="flcap">faithful</div></div>
+    <div class="fl"><canvas id="fl_zombie" width="500" height="500"></canvas><div class="flcap">zombie</div></div>
+    <div class="fl"><canvas id="fl_angel" width="500" height="500"></canvas><div class="flcap">angel</div></div>
+    <div class="fl"><canvas id="fl_ghost" width="500" height="500"></canvas><div class="flcap">ghost</div></div>
+  </div>
+  <p class="flnote">One seed, four lives. This is the same dog, seed
+  910007, painted by the same code through each fate the year could hand
+  it. The game never swaps an image. It repaints the soul.</p>
+  <div class="specs">
+    <div class="spec"><span>Deterministic</span>
+      <p>The same seed paints the same dog, stroke for stroke, on any
+      machine, in any decade. Your dog can be repainted from scratch a
+      century from now and not one bristle moves.</p></div>
+    <div class="spec"><span>Painterly by arithmetic</span>
+      <p>Thousands of layered strokes with seeded jitter in hue, pressure
+      and dryness. Pigment behavior, computed. Zoom in: the edges break
+      like a dry brush because the code says they should.</p></div>
+    <div class="spec"><span>Bred, not drawn</span>
+      <p>The painter itself was evolved in public: one AI repaints the
+      collection, a second judges it blind against a gallery bar, and only
+      the better painter survives the round.
+      <a href="design/">Watch it happening live &rarr;</a></p></div>
+    <div class="spec"><span>Infinite resolution</span>
+      <p>Code doesn't pixelate. The identical instructions paint a postage
+      stamp or a two-meter gallery print, and the print is not a blowup,
+      it's a fresh painting at that scale.</p></div>
+    <div class="spec"><span>The chain finishes it</span>
+      <p>The seed decides the dog and its wardrobe. The year decides its
+      fate. The night it dies stamps its collar. The blockchain doesn't
+      store this art, it completes it.</p></div>
+    <div class="spec"><span>No servers, no files</span>
+      <p>Nothing to host, nothing to pin, nothing to rot. A number and a
+      painter, and the painting exists wherever somebody runs them.</p></div>
+  </div>
+</div></section>
+
+<section class="drop sheet" id="drop"><div class="wrap">
+  <p class="kicker">The drop</p>
+  <h2>Adopting works like a gallery,<br>not a gas war.</h2>
+  <p class="lede">No bots, no gas auctions, no refreshing at midnight. One
+  reservation day, one honest allocation, then a public day for whatever's
+  left.</p>
+  <div class="phases">
+    <div class="step"><div class="n">01</div>
+      <h3>Reservation day.</h3>
+      <p>One day, announced ahead of time. Verify your Twitter handle and
+      reserve up to 100 dogs, adoption fee $25 each. A hold goes on your card and
+      nothing is charged yet. Nobody races anybody: everyone who shows up
+      that day stands in the same line.</p></div>
+    <div class="step"><div class="n">02</div>
+      <h3>The allocation.</h3>
+      <p>Orders are read, not raced. Reservations get filled by wallet
+      history: art held for years counts for you, quick flips count against
+      you. The dogs go home with people who keep them. If your order fills,
+      your handle is inscribed on every collar, forever.</p></div>
+    <div class="step"><div class="n">03</div>
+      <h3>Public adoption day.</h3>
+      <p>Whatever's left opens to everyone, first come, first served, no
+      handle needed. Launch-day dogs play the same year and live the same
+      lives; their collars just don't carry a name.</p></div>
+  </div>
+  <p class="dropnote">The pack is however many dogs find homes that week. If
+  that's short of 10,000, the year plays exactly the same and the
+  apocalypse still comes at one third of the pack. Dogs nobody adopts are
+  never born at all.</p>
+</div></section>
+
+<section class="rules sheet" id="deal"><div class="wrap">
+  <p class="kicker">The year</p>
+  <h2>How the year works</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div>
+      <h3>Adopt dogs. The adoption fee is $25. Up to 100 per verified Twitter account.</h3>
+      <p>Adoption runs in three steps, printed above: reservation day, the
+      allocation, then a public day for whatever's left. Every dollar the
+      year collects sits in the contract where anyone can look at it, and
+      every count in the game scales to the pack that actually got
+      adopted.</p></div>
+    <div class="step"><div class="n">02</div>
+      <h3>A living dog can never be sold.</h3>
+      <p>Not to a friend, not to a museum, not for any price. If you want to
+      sell your dog, there is exactly one way: put it down. Turn it into a
+      zombie, take the $20, and your zombie trades that same night, free to
+      flip. But understand what you bought with that: the turn is signed on
+      the collar forever, and you've joined the zombies' side of the count,
+      one dog closer to the apocalypse for every dog still holding. Selling
+      out and betraying the pack are the same button here. That's the
+      piece.</p></div>
+    <div class="step"><div class="n">03</div>
+      <h3>Turning your dog pays $20,* tonight.</h3>
+      <p>Any night from the day you adopt, you can hand your dog to the
+      horde and take back the $20 of ethereum that was locked for your dog
+      on adoption day. It pays on the spot. Your new zombie trades
+      immediately, your handle still on its collar. The turn is signed.</p></div>
+    <div class="step"><div class="n">04</div>
+      <h3>Hold the line for a year and everybody gets paid.</h3>
+      <p>The same $20 the killers take is waiting for every living dog. If
+      the last midnight passes and the horde never reached a third, every
+      living dog collects it, trades free, and is marked faithful forever.
+      The artist loses his bet. That's the good ending.</p></div>
+    <div class="step"><div class="n">05</div>
+      <h3>At one third, the apocalypse.</h3>
+      <p>If a third of the dogs are ever turned, the horde takes every living
+      dog that same night. They come back as ghosts: still yours, tradable,
+      never refunded. The $20 that was waiting for each of them goes to the
+      artist instead. Natural deaths never count toward the third.</p></div>
+    <div class="step"><div class="n">06</div>
+      <h3>The horde count updates once a night.</h3>
+      <p>You never see turns in real time. They're sealed as they happen,
+      and once every midnight the new count is published in a single batch,
+      like the cannon in the Hunger Games. Some nights it's silence. Some
+      nights it's forty dogs. Between cannons, nobody on earth knows how
+      close the third is.</p></div>
+  </div>
+</div></section>
+
+<section class="choice sheet" id="choice"><div class="wrap">
+  <p class="kicker">The choice</p>
+  <h2>Press one.<br>In public.<br>For a year.</h2>
+  <p class="samecash">The money is the same either way: $20.*
+  <em>The only question is which world you want to live in.</em></p>
+  <div class="chooseyours">
+    <canvas id="chooseDog" width="500" height="500"></canvas>
+    <p id="chooseLine">This is the dog you'd be doing it to.</p>
+  </div>
+  <div class="buttons">
+    <div class="bpanel red">
+      <h3 id="turnTitle">Turn</h3>
+      <div class="big">$20</div>
+      <p>Tonight. Guaranteed.</p>
+      <p>Your zombie sells immediately.</p>
+      <p class="f">And the horde gets one dog closer to everything. The turn
+      is signed. Forever.</p>
+    </div>
+    <div class="bpanel blue">
+      <h3>Hold</h3>
+      <div class="big">$20</div>
+      <p>In a year. If the dogs make it.</p>
+      <p>Your dog lives, trades, marked faithful.</p>
+      <p class="f">If the horde reaches a third first, your dog is taken with
+      all the rest, and no refund ever comes. That's what holding costs.</p>
+    </div>
+  </div>
+  <p class="ethnote">*The adoption fee is paid in dollars: $25 on your card. The moment your
+  adoption clears, $20 of the fee is converted to ethereum and locked in the
+  contract with your dog's name on it. That exact amount of ethereum is
+  what comes back, whenever it comes back: if ethereum doubles against the
+  dollar, your refund doubled too. If it halves, it halved. The contract
+  owes ethereum, not dollars.</p>
+</div></section>
+
+<section class="cannon sheet"><div class="moon"></div><div class="wrap">
+  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
+  <p>All the night's turns, read out at once. Some nights, silence. Some
+  nights, a massacre.</p>
+  <p>You'll never know if the third is one cannon away. You can't time an
+  apocalypse. You can only pick a side before it.</p>
+</div></section>
+
+<section class="confess sheet"><div class="wrap">
+  <p class="kicker">The confession</p>
+  <h2>Beat the artist</h2>
+  <div class="row">
+    <div class="money"><b>$133,000</b><span>up to this at stake &middot; only an apocalypse pays it to me</span></div>
+    <div class="money"><b>$5</b><span>of every adoption fee &middot; mine win or lose</span></div>
+  </div>
+  <p class="line">I am betting 10,000 strangers can't hold the line for a year.</p>
+  <p class="line" style="margin-top:14px">Prove me wrong and the money comes home.</p>
+  <p class="fine">The stake scales with the pack, however many dogs find
+  homes. A $20 refund is escrowed for every dog; the zombies take theirs on
+  the way out. If the apocalypse comes, the two thirds that wasn't already
+  paid out to the zombies comes to me instead of back to you: at most,
+  $20 &times; 10,000 &times; &#8532; &asymp; $133,000. The $5 of every
+  adoption fee pays for the drawings, the fees, and the year of running it,
+  and I keep that no matter how the year ends. My position is printed at
+  the gate on purpose: every turned dog is a donation to the person telling
+  you not to. The only way to beat me is together.</p>
+  <p class="sig">&mdash; Jonathan Washburn, 2026</p>
+</div></section>
+
+<section class="receipts"><div class="wrap">
+  <p class="kicker">Receipts</p>
+  <h2>The math is public</h2>
+  <p>Every rule on this page gets run through an agent-based economy
+  simulator for thousands of runs before any contract is written. Two
+  findings so far: hiding the count doesn't stop a panic, it makes the panic
+  preemptive, which is why the cannon exists. And ordinary greed never
+  reaches the third on its own; only an organized army does. Buying in is
+  the first vote.</p>
+  <div class="cta">
+    <a class="btn" href="design/">The live design feed</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="parade" id="parade"></div>
+  <p>ALL DOGS &middot; Jonathan Washburn &middot; 2026<br>
+  Each work is generated live in the browser from a deterministic seed.<br>
+  This page is a proposal shown to galleries and friends. No contract is
+  deployed. Nothing is mintable. Every number is illustrative and no payout,
+  refund, or market outcome is guaranteed. The ribbon is a simulation.<br>
+  Adoption day: TBA</p>
+</div></footer>
+
+<script src="dogs.js"></script>
+<!-- newest promoted design from the live gauntlet; overrides the baked-in
+     renderer when reachable, harmless 404 otherwise -->
+<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
+<script>
+const draw = window.ALLDOGS.drawDog;
+
+const FIRST_LITTER = [
+  [910001, 'faithful', '@satoshis_widow'],
+  [910002, 'faithful', '@gm_gm_gm'],
+  [910003, 'faithful', '@exit_liquidity'],
+  [910004, 'faithful', '@wagmi_4ever'],
+  [910005, 'faithful', '@old_money'],
+  [910006, 'faithful', '@memento_mori'],
+  [910007, 'faithful', '@mile_high_club'],
+  [910008, 'faithful', '@yeehaw_capital'],
+  [910009, 'faithful', '@princess_maxi'],
+  [910010, 'faithful', '@metaverse_larry'],
+  [920001, 'zombie', '@first_blood'],
+  [920002, 'zombie', '@dust_and_bones'],
+  [930001, 'angel', '@good_girl_luna'],
+  [930002, 'angel', '@sweet_old_bean'],
+  [940001, 'ghost', '@too_late_now'],
+  [940002, 'ghost', '@sold_the_world'],
+];
+
+const HA = ['gm', 'wagmi', 'diamond', 'paper', 'moon', 'chain', 'block',
+  'pixel', 'crypto', 'meta', 'degen', 'honest', 'faith', 'panic', 'zero',
+  'ledger', 'proof', 'gwei'];
+const HB = ['hands', 'heart', 'maxi', 'wolf', 'saint', 'monk', 'baron',
+  'girl', 'boy', 'uncle', 'widow', 'enjoyer', 'believer', 'flipper',
+  'holder', 'dreamer'];
+
+function fateLabel(s) {
+  if (s === 'zombie') return 'turned night ' + (1 + Math.floor(Math.random() * 300));
+  if (s === 'angel') return 'wings, night ' + (1 + Math.floor(Math.random() * 300));
+  if (s === 'ghost') return 'taken by the horde';
+  return 'faithful';
+}
+
+function penFor(seed, state, handle) {
+  const pen = document.createElement('div');
+  pen.className = 'pen';
+  const cv = document.createElement('canvas');
+  cv.width = 500; cv.height = 500;
+  draw(cv, seed, state);
+  const cap = document.createElement('div');
+  cap.className = 'cap';
+  const h = document.createElement('div');
+  h.className = 'h'; h.textContent = handle;
+  const t = document.createElement('div');
+  t.className = 't'; t.textContent = fateLabel(state);
+  cap.append(h, t);
+  pen.append(cv, cap);
+  return pen;
+}
+
+const kennel = document.getElementById('kennel');
+function firstLitter() {
+  kennel.innerHTML = '';
+  FIRST_LITTER.forEach(([seed, state, handle]) => {
+    kennel.append(penFor(seed, state, handle));
+  });
+}
+firstLitter();
+
+document.getElementById('litter').addEventListener('click', () => {
+  kennel.innerHTML = '';
+  for (let i = 0; i < 16; i++) {
+    const seed = Math.floor(Math.random() * 0xffffffff) >>> 0;
+    const sroll = Math.random();
+    const state = sroll < 0.82 ? 'faithful' : sroll < 0.92 ? 'zombie'
+      : sroll < 0.97 ? 'angel' : 'ghost';
+    const handle = '@' + HA[Math.floor(Math.random() * HA.length)] + '_'
+      + HB[Math.floor(Math.random() * HB.length)]
+      + (Math.random() < 0.4 ? Math.floor(Math.random() * 99) : '');
+    kennel.append(penFor(seed, state, handle));
+  }
+});
+
+(function freshHero() {
+  function groundLum(seed) {
+    const c = document.createElement('canvas');
+    c.width = 64; c.height = 64;
+    draw(c, seed, 'faithful');
+    const d = c.getContext('2d').getImageData(0, 0, 64, 12).data;
+    let l = 0, n = 0;
+    for (let i = 0; i < d.length; i += 4) {
+      l += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2]; n++;
+    }
+    return l / n;
+  }
+  let seed = null, first = null;
+  for (let k = 0; k < 14; k++) {
+    const cand = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+    if (first === null) first = cand;
+    if (groundLum(cand) < 118) { seed = cand; break; }
+  }
+  const banner = document.querySelector('.herobanner');
+  if (seed === null) { seed = first; banner.classList.add('light'); }
+  draw(document.getElementById('heroDog'), seed, 'faithful');
+  const handle = '@' + HA[seed % HA.length] + '_' + HB[(seed >> 4) % HB.length];
+  document.getElementById('heroHandle').textContent = handle;
+  document.getElementById('heroMeta').textContent =
+    'faithful \u00b7 night ' + (seed % 364 + 1) + ' \u00b7 seed ' + seed;
+})();
+draw(document.getElementById('f_faithful'), 4101, 'faithful');
+draw(document.getElementById('f_zombie'), 4102, 'zombie');
+draw(document.getElementById('f_angel'), 4103, 'angel');
+draw(document.getElementById('f_ghost'), 4104, 'ghost');
+
+/* one seed, four lives */
+['faithful', 'zombie', 'angel', 'ghost'].forEach(st => {
+  draw(document.getElementById('fl_' + st), 910007, st);
+});
+
+/* painted dividers: the page is drawn, not ruled */
+function brushDivider(sec, gold) {
+  const cv = document.createElement('canvas');
+  cv.className = 'brush';
+  cv.width = 1200; cv.height = 14;
+  const g = cv.getContext('2d');
+  let t = 0;
+  for (const ch of (sec.id || sec.className)) t = (t * 31 + ch.charCodeAt(0)) >>> 0;
+  const rnd = () => (t = (t * 1664525 + 1013904223) >>> 0) / 4294967296;
+  const base = gold ? [240, 180, 41] : [17, 17, 17];
+  for (let pass = 0; pass < 2; pass++) {
+    let y = 7 + (rnd() - 0.5) * 4;
+    for (let x = 8 + rnd() * 24; x < 1180; ) {
+      const len = 4 + rnd() * 26;
+      if (rnd() > 0.16 + pass * 0.22) {
+        g.fillStyle = 'rgba(' + base[0] + ',' + base[1] + ',' + base[2] + ','
+          + (0.25 + rnd() * 0.5).toFixed(2) + ')';
+        g.fillRect(x, y - (0.5 + rnd() * 1.6), len, 1 + rnd() * 2.6);
+      }
+      x += len * (0.72 + rnd() * 0.5);
+      y += (rnd() - 0.5) * 1.6;
+      y = Math.max(2, Math.min(11, y));
+    }
+  }
+  sec.insertBefore(cv, sec.firstChild);
+}
+document.querySelectorAll('section:not(.hero)').forEach(sec => {
+  brushDivider(sec, sec.classList.contains('cannon'));
+});
+
+/* your dog: painted for this visitor, and the button is real */
+const DOGNAMES = ['Biscuit', 'Waffles', 'Clementine', 'Pepper', 'Moon',
+  'Olive', 'Banjo', 'Maple', 'Pickles', 'Ivy', 'Comet', 'Bean', 'Poppy',
+  'Tater', 'Juniper', 'Scout', 'Noodle', 'Birdie', 'Huckle', 'Fig'];
+let yseed = parseInt(localStorage.getItem('alldogs_seed'), 10);
+if (!yseed) {
+  yseed = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+  localStorage.setItem('alldogs_seed', String(yseed));
+}
+let ystate = localStorage.getItem('alldogs_state') === 'zombie'
+  ? 'zombie' : 'faithful';
+const yname = DOGNAMES[yseed % DOGNAMES.length];
+const yourCv = document.getElementById('yourDog');
+const chooseCv = document.getElementById('chooseDog');
+const chooseLine = document.getElementById('chooseLine');
+
+function renderYours() {
+  draw(yourCv, yseed, ystate);
+  draw(chooseCv, yseed, ystate);
+  document.getElementById('yourName').textContent = yname;
+  document.getElementById('yourState').textContent =
+    ystate === 'faithful' ? 'alive · yours' : 'zombie · you did this';
+  chooseLine.textContent = ystate === 'faithful'
+    ? 'This is ' + yname + '. This is the dog you\u2019d be doing it to.'
+    : 'It\u2019s done. It stays done. ' + yname + ' remembers nothing. You will.';
+}
+renderYours();
+
+document.querySelector('.bpanel.red').addEventListener('click', () => {
+  if (ystate === 'zombie') { chooseLine.textContent =
+    'You already did. It\u2019s still $20 you\u2019re not getting twice.'; return; }
+  ystate = 'zombie';
+  localStorage.setItem('alldogs_state', 'zombie');
+  renderYours();
+});
+document.querySelector('.bpanel.blue').addEventListener('click', () => {
+  chooseLine.textContent = ystate === 'faithful'
+    ? 'Good. ' + yname + ' sleeps by the door tonight. 364 nights to go.'
+    : 'Too late for that.';
+});
+
+/* footer parade */
+const PARADE = [
+  [777001, 'faithful'], [777002, 'faithful'], [777003, 'zombie'],
+  [777004, 'faithful'], [777005, 'angel'], [777006, 'faithful'],
+  [777007, 'ghost'], [777008, 'faithful'], [777009, 'faithful'],
+  [777010, 'zombie'], [777011, 'faithful'], [777012, 'angel'],
+];
+const parade = document.getElementById('parade');
+PARADE.forEach(([seed, state]) => {
+  const cv = document.createElement('canvas');
+  cv.width = 220; cv.height = 220;
+  draw(cv, seed, state);
+  parade.append(cv);
+});
+
+/* scroll reveal */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const targets = document.querySelectorAll(
+    '.fate, .stackcard, .step, .spec, .fl, .chipgroup, section h2, section .lede, .samecash, .receipts p');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  targets.forEach(el => {
+    el.classList.add('rv');
+    const sibs = Array.from(el.parentElement.children);
+    el.style.transitionDelay = (sibs.indexOf(el) % 4) * 75 + 'ms';
+    io.observe(el);
+  });
+}
+</script>
+
+</body>
+</html>

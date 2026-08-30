@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS — The machine is drawing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
+<meta name="description" content="Live feed of the ALL DOGS design gauntlet: one AI redraws the collection, another judges it blind, every round published here as it happens.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #fdfdfb; --ink: #111111; --hair: #dddad0;
+    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; --green: #0b7a3e;
+  }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif; line-height: 1.5; font-weight: 400; }
+  ::selection { background: var(--gold); color: var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  h1, h2 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0; }
+  .kicker { font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    font-weight: 700; margin-bottom: 20px; opacity: 0.45; }
+
+  .hero { padding: 84px 0 48px; }
+  .hero h1 { font-size: clamp(40px, 7.4vw, 92px); line-height: 0.98; }
+  .hero h1 em { font-style: normal; color: var(--red); }
+  .hero .sub { margin-top: 22px; font-size: clamp(15px, 2vw, 18px);
+    max-width: 54ch; opacity: 0.75; }
+  .hero .sub b { font-weight: 700; }
+  .hero a { color: var(--ink); font-weight: 700; }
+
+  .statusbar { border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink); padding: 14px 0; margin-top: 40px; }
+  .statusbar .row { display: flex; gap: 28px; flex-wrap: wrap;
+    align-items: center; font-size: 10.5px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; }
+  .dot { display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--green); margin-right: 8px;
+    animation: pulse 1.6s infinite; }
+  .dot.dead { background: #999; animation: none; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  .statusbar b { font-weight: 700; }
+  .statusbar .g { color: var(--gold); } .statusbar .r { color: var(--red); }
+  .statusbar #s-updated { opacity: 0.5; margin-left: auto; }
+
+  .corners { display: grid; grid-template-columns: 1fr auto 1fr;
+    gap: 32px; align-items: center; margin-top: 48px; }
+  .corner .clbl { font-size: 10px; letter-spacing: 2.5px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.45; }
+  .corner h3 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    text-transform: uppercase; font-size: clamp(20px, 2.6vw, 30px);
+    margin: 6px 0 10px; }
+  .corner.painter h3 { color: var(--blue); }
+  .corner.critic h3 { color: var(--red); }
+  .corner p { font-size: 13.5px; opacity: 0.72; line-height: 1.6;
+    max-width: 34ch; }
+  .vs { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    font-size: clamp(22px, 3vw, 34px); opacity: 0.3; }
+  @media (max-width: 760px) { .corners { grid-template-columns: 1fr;
+    gap: 22px; } .vs { display: none; } }
+
+  .process { padding: 84px 0 20px; }
+  .process h2 { font-size: clamp(26px, 4vw, 46px); line-height: 1.06;
+    margin: 8px 0 14px; }
+  .process .attr { font-size: 13px; opacity: 0.6; margin-bottom: 44px; }
+  .process .attr a { color: var(--ink); font-weight: 700; }
+  .procgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .proccol p { font-size: 15.5px; line-height: 1.65; opacity: 0.78;
+    margin-bottom: 16px; }
+  .pq { font-family: "Shantell Sans", sans-serif; font-weight: 700;
+    font-size: clamp(17px, 2.2vw, 22px); line-height: 1.45;
+    border-left: 2px solid var(--red); padding-left: 20px;
+    margin-top: 26px; }
+  .pq span { display: block; margin-top: 12px;
+    font-family: "Instrument Sans", sans-serif; font-weight: 700;
+    font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
+    opacity: 0.5; }
+  .pq span a { color: var(--ink); }
+  @media (max-width: 860px) { .procgrid { grid-template-columns: 1fr;
+    gap: 30px; } }
+
+  .climb { padding: 64px 0 0; }
+  .climb h2 { font-size: clamp(22px, 3.2vw, 38px); line-height: 1.1;
+    margin: 8px 0 26px; max-width: 30ch; }
+  .climb h2 b { color: var(--gold); }
+  #climbchart { width: 100%; height: auto; display: block; }
+  .climb .cap { font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; opacity: 0.5; margin-top: 10px; }
+
+  .champ { padding: 64px 0; }
+  .champ h2, .feed h2 { font-size: clamp(26px, 4vw, 46px); line-height: 1.02;
+    margin: 8px 0 30px; }
+  .champ .frame { border: 1px solid var(--ink); background: #fff; }
+  .champ img { width: 100%; display: block; }
+  .champ .cap { font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; opacity: 0.5; margin-top: 12px; }
+
+  .feed { padding: 24px 0 100px; }
+  .round { border: 1px solid var(--ink); margin-bottom: 36px;
+    background: #fff; }
+  .round .head { display: flex; gap: 16px; flex-wrap: wrap;
+    align-items: center; padding: 14px 18px;
+    border-bottom: 1px solid var(--ink); }
+  .round .head .n { font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(17px, 2.4vw, 23px); font-weight: 800;
+    text-transform: uppercase; }
+  .round .head .verdict { font-size: 9.5px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; padding: 5px 12px; }
+  .v-promoted { background: var(--green); color: #fff; }
+  .v-rejected { border: 1px solid var(--ink); color: var(--ink); }
+  .v-gate { background: var(--red); color: #fff; }
+  .v-wall { background: var(--gold); color: var(--ink); }
+  .round .head .score { font-size: 12px; font-weight: 600; opacity: 0.55; }
+  .round .head .when { font-size: 11px; font-weight: 600; opacity: 0.4;
+    margin-left: auto; }
+  .round img { width: 100%; display: block; }
+  .round .gap { padding: 22px 22px 24px;
+    border-top: 1px solid var(--ink); }
+  .round .gap .lbl { display: block; font-size: 9.5px;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    color: var(--red); margin-bottom: 12px; }
+  .round .gap ul { list-style: none; margin: 0; padding: 0; }
+  .round .gap li { position: relative; padding-left: 22px; margin: 9px 0;
+    font-size: 14.5px; font-weight: 400; line-height: 1.6; opacity: 0.82; }
+  .round .gap li::before { content: "\2192"; position: absolute; left: 0;
+    color: var(--red); font-weight: 700; }
+  .round .links { padding: 0 18px 16px; font-size: 12.5px;
+    font-weight: 700; }
+  .round .links a { color: var(--ink); }
+
+  .empty { font-size: 14px; font-weight: 600; opacity: 0.5; padding: 40px 0; }
+  footer { border-top: 1px solid var(--hair); padding: 34px 28px 80px;
+    font-size: 10.5px; font-weight: 600; opacity: 0.5; letter-spacing: 1px;
+    text-transform: uppercase; }
+  footer a { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="kicker">ALL DOGS / DESIGN GAUNTLET / LIVE</div>
+  <h1>The machine<br>is <em>drawing</em></h1>
+  <p class="sub">Two machines are fighting over what your dog will look
+    like, and neither one is allowed to stop. Every attempt is published
+    here the moment it happens. <a href="../">Back to the kennel &rarr;</a></p>
+
+  <div class="corners">
+    <div class="corner painter">
+      <span class="clbl">In one corner</span>
+      <h3>The Painter</h3>
+      <p>Rewrites every one of the 10,000 dogs from scratch, every round.
+      It reads the critic's last insult before it picks up the brush.</p>
+    </div>
+    <div class="vs">VS</div>
+    <div class="corner critic">
+      <span class="clbl">In the other</span>
+      <h3>The Critic</h3>
+      <p>Sees only pixels. Judges blind, doesn't know which sheet is the
+      champion, and scores like a gallerist with nothing to lose.</p>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <div class="row" id="status">
+      <span><span class="dot" id="dot"></span><span id="livetxt">CONNECTING</span></span>
+      <span>ROUNDS <b id="s-rounds">–</b></span>
+      <span>PROMOTIONS <b class="g" id="s-promos">–</b></span>
+      <span>CHAMPION <b id="s-champ">–</b>/70</span>
+      <span id="s-updated"></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap process">
+  <div class="kicker">THE PROCESS &middot; WHY THIS IS ART, AND WHOSE</div>
+  <h2>"The idea becomes a machine<br>that makes the art."</h2>
+  <p class="attr">Sol LeWitt wrote that in
+  <a href="https://www.artforum.com/features/paragraphs-on-conceptual-art-211354/">Paragraphs
+  on Conceptual Art</a>, 1967. This page is that sentence, running.</p>
+
+  <div class="procgrid">
+    <div class="proccol">
+      <p>Here is exactly how these dogs are being made. I wrote a
+      constitution for the collection: what a dog is here, what cuteness
+      owes the viewer, how paint should behave, which painters set the bar
+      and why none of them may be copied, the color law that separates the
+      living from the dead. Every rule the machines obey, I authored.</p>
+      <p>Two machines execute it. The Painter rewrites the drawing code
+      from scratch, round after round. The Critic reads the same
+      constitution and judges the results blind, never knowing which sheet
+      is the champion. Neither one can stop. Neither one can lower the
+      bar. And I do not touch the brush.</p>
+      <blockquote class="pq">"The process is mechanical and should not be
+      tampered with. It should run its course."
+      <span>&mdash; LeWitt, <a href="https://mma.pages.tufts.edu/fah188/sol_lewitt/Sentences%20on%20Conceptual%20Art.htm">Sentences
+      on Conceptual Art</a>, no. 29</span></blockquote>
+    </div>
+    <div class="proccol">
+      <p>If that sounds like the artist left the room, the argument is
+      sixty years old. LeWitt's wall drawings were executed by other
+      people's hands, working from his written instructions, and nobody
+      has ever doubted whose art they are. "All of the planning and
+      decisions are made beforehand and the execution is a perfunctory
+      affair." The instructions are the art. My drafters happen not to be
+      human.</p>
+      <p>What I authored: the dogs, the four fates, the census, the
+      tenderness, the temperature of the grounds, the wall the score has
+      to clear, and every mid-fight correction, which this page publishes
+      as it happens. What I could not author: the exact painting that
+      survives. That part surprises me the same way it surprises you, and
+      it is the part I wanted.</p>
+      <blockquote class="pq">"Once the idea of the piece is established in
+      the artist's mind and the final form is decided, the process is
+      carried out blindly. There are many side effects that the artist
+      cannot imagine."
+      <span>&mdash; LeWitt, Sentences, no. 28</span></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="wrap climb">
+  <div class="kicker">THE CLIMB</div>
+  <h2 id="climbline">The critic has not said wall-worthy yet.</h2>
+  <canvas id="climbchart" width="2160" height="480"></canvas>
+  <p class="cap">Winning score per round, out of 70. The gold line is the
+  wall: the fight ends when a sheet deserves to hang on one.</p>
+</div>
+
+<div class="wrap champ">
+  <div class="kicker">CURRENT CHAMPION</div>
+  <h2>Best dogs so far</h2>
+  <div class="frame"><img id="champimg" alt="Current champion sheet"></div>
+  <p class="cap">16 dogs, fixed seeds: 10 faithful, 2 zombies, 2 angels, 2
+    ghosts. This sheet is replaced the moment a challenger wins.</p>
+</div>
+
+<div class="wrap feed">
+  <div class="kicker">EVERY ROUND, NEWEST FIRST</div>
+  <h2>The fight tape</h2>
+  <div id="rounds"><p class="empty">Waiting for the first round&hellip;</p></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Builder: Claude Fable · Judge: Claude Opus, blind A/B ·
+    Gate: deterministic render contract · Refreshes every 60s ·
+    <a href="../">ALL DOGS</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var FEED_URL = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/feed.js';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function ago(ts) {
+    var s = Math.max(0, (Date.now() / 1000) - ts);
+    if (s < 90) return Math.round(s) + 's ago';
+    if (s < 5400) return Math.round(s / 60) + 'm ago';
+    return (s / 3600).toFixed(1) + 'h ago';
+  }
+
+  function bulletize(text) {
+    var t = String(text || '').trim();
+    var parts;
+    try { parts = t.split(new RegExp('(?<=[.!?])\\s+(?=[A-Z])')); }
+    catch (e) { parts = t.split('. '); }
+    parts = parts.map(function (p) { return p.trim(); })
+                 .filter(function (p) { return p.length; });
+    // fold fragments into their neighbor so bullets stay substantial
+    var merged = [];
+    parts.forEach(function (p) {
+      if (merged.length && (p.length < 60 ||
+          merged[merged.length - 1].length < 60)) {
+        merged[merged.length - 1] += ' ' + p;
+      } else {
+        merged.push(p);
+      }
+    });
+    // cap at six bullets by folding the tail together
+    while (merged.length > 6) {
+      merged[merged.length - 2] += ' ' + merged.pop();
+    }
+    return merged;
+  }
+
+  function render(feed) {
+    var rounds = (feed.rounds || []).slice().reverse();
+    var promos = rounds.filter(function (r) { return r.promoted; }).length;
+    var champTotal = null;
+    for (var i = 0; i < rounds.length; i++) {
+      if (rounds[i].promoted) { champTotal = rounds[i].cand_total; break; }
+    }
+    if (champTotal === null) {
+      for (var j = 0; j < rounds.length; j++) {
+        if (rounds[j].champ_total != null) { champTotal = rounds[j].champ_total; break; }
+      }
+    }
+
+    document.getElementById('dot').className = 'dot' + (feed.driver_alive ? '' : ' dead');
+    document.getElementById('livetxt').textContent =
+      feed.driver_alive ? 'LIVE' : 'RUN ENDED';
+    document.getElementById('s-rounds').textContent = rounds.length;
+    document.getElementById('s-promos').textContent = promos;
+    document.getElementById('s-champ').textContent = champTotal == null ? '–' : champTotal;
+    document.getElementById('s-updated').textContent =
+      'FEED ' + ago(feed.generated).toUpperCase();
+
+    var rejections = rounds.filter(function (r) {
+      return !r.promoted && !(r.gate && r.gate.pass === false);
+    }).length;
+    var wall = rounds.some(function (r) { return r.wall_worthy; });
+    document.getElementById('climbline').innerHTML = wall
+      ? 'The critic said <b>wall-worthy</b>. It happened.'
+      : 'The critic has said <b>not yet</b> ' +
+        (rejections + promos) + ' times. The paint keeps climbing.';
+    drawClimb(rounds.slice().reverse());
+
+    document.getElementById('champimg').src =
+      feed.champion_url + '?v=' + Math.floor(feed.generated);
+
+    var html = '';
+    rounds.forEach(function (r) {
+      var verdict, vclass;
+      if (r.gate && r.gate.pass === false) {
+        verdict = 'GATE FAIL: ' + esc(r.gate.failed || '?'); vclass = 'v-gate';
+      } else if (r.promoted) {
+        verdict = 'PROMOTED'; vclass = 'v-promoted';
+      } else {
+        verdict = 'REJECTED'; vclass = 'v-rejected';
+      }
+      html += '<div class="round">';
+      html += '<div class="head"><span class="n">Round ' + r.round + '</span>';
+      html += '<span class="verdict ' + vclass + '">' + verdict + '</span>';
+      if (r.wall_worthy) html += '<span class="verdict v-wall">WALL-WORTHY</span>';
+      if (r.cand_total != null) {
+        html += '<span class="score">challenger ' + r.cand_total +
+                ' vs champion ' + r.champ_total + '</span>';
+      }
+      html += '<span class="when">' + ago(r.ts) + '</span></div>';
+      if (r.eval_url) {
+        html += '<img loading="lazy" src="' + esc(r.eval_url) + '" alt="Round ' +
+                r.round + ' sheet">';
+      }
+      if (r.gap) {
+        html += '<div class="gap"><span class="lbl">The judge\'s biggest gap</span><ul>' +
+                bulletize(r.gap).map(function (b) {
+                  return '<li>' + esc(b) + '</li>';
+                }).join('') + '</ul></div>';
+      }
+      if (r.fresh_url) {
+        html += '<div class="links"><a href="' + esc(r.fresh_url) +
+                '" target="_blank" rel="noopener">Unseen-seed sheet &rarr;</a></div>';
+      }
+      html += '</div>';
+    });
+    if (!rounds.length) {
+      html = '<p class="empty">No rounds yet. The builder is thinking&hellip;</p>';
+    }
+    document.getElementById('rounds').innerHTML = html;
+  }
+
+  function drawClimb(chron) {
+    var cv = document.getElementById('climbchart');
+    var g = cv.getContext('2d');
+    var W = cv.width, H = cv.height, PAD = 46;
+    g.clearRect(0, 0, W, H);
+    var pts = [];
+    chron.forEach(function (r) {
+      var v = r.promoted ? r.cand_total : r.champ_total;
+      if (v != null) pts.push({ v: v, p: !!r.promoted });
+    });
+    if (pts.length < 2) return;
+    var x = function (i) { return PAD + i * (W - 2 * PAD) / (pts.length - 1); };
+    var y = function (v) { return H - PAD - (v / 70) * (H - 2 * PAD); };
+    // hairline floor and ceiling
+    g.strokeStyle = 'rgba(17,17,17,0.18)'; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(PAD, y(0)); g.lineTo(W - PAD, y(0)); g.stroke();
+    // the wall, in gold
+    g.strokeStyle = '#f0b429'; g.lineWidth = 5; g.setLineDash([18, 14]);
+    g.beginPath(); g.moveTo(PAD, y(56)); g.lineTo(W - PAD, y(56)); g.stroke();
+    g.setLineDash([]);
+    g.fillStyle = '#f0b429';
+    g.font = '700 22px "Instrument Sans", sans-serif';
+    g.fillText('THE WALL', W - PAD - 130, y(56) - 12);
+    // painted score line: jittered strokes
+    var t = pts.length * 7919 + 13;
+    var rnd = function () {
+      t = (t * 1664525 + 1013904223) >>> 0; return t / 4294967296;
+    };
+    g.strokeStyle = '#ff3b2f'; g.lineCap = 'round';
+    for (var pass = 0; pass < 3; pass++) {
+      g.lineWidth = 7 - pass * 2;
+      g.globalAlpha = 0.5 + pass * 0.2;
+      g.beginPath();
+      for (var i = 0; i < pts.length; i++) {
+        var px = x(i) + (rnd() - 0.5) * 6;
+        var py = y(pts[i].v) + (rnd() - 0.5) * 8;
+        if (i === 0) g.moveTo(px, py); else g.lineTo(px, py);
+      }
+      g.stroke();
+    }
+    g.globalAlpha = 1;
+    // promotion dots
+    pts.forEach(function (p, i) {
+      if (!p.p) return;
+      g.fillStyle = '#0b7a3e';
+      g.beginPath(); g.arc(x(i), y(p.v), 9, 0, 7); g.fill();
+    });
+    // last score, big
+    var last = pts[pts.length - 1];
+    g.fillStyle = '#111';
+    g.font = '800 44px "Shantell Sans", "Instrument Sans", sans-serif';
+    g.fillText(String(last.v), x(pts.length - 1) - 14, y(last.v) - 22);
+  }
+
+  function poll() {
+    var old = document.getElementById('feedscript');
+    if (old) old.parentNode.removeChild(old);
+    var s = document.createElement('script');
+    s.id = 'feedscript';
+    s.src = FEED_URL + '?t=' + Date.now();
+    s.onload = function () {
+      if (window.ALLDOGS_FEED) render(window.ALLDOGS_FEED);
+    };
+    s.onerror = function () {
+      document.getElementById('livetxt').textContent = 'FEED UNREACHABLE';
+      document.getElementById('dot').className = 'dot dead';
+    };
+    document.body.appendChild(s);
+  }
+  poll();
+  setInterval(poll, 60000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS &mdash; season simulator</title>
+<style>
+  :root {
+    --ink: #e8e6e1;
+    --dim: #6f6b64;
+    --dimmer: #46433d;
+    --line: #26241f;
+    --red: #c4504a;
+    --blue: #5f7f8c;
+    --gold: #d9a441;
+    --green: #6f8f5f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #000; color: var(--ink); }
+  body {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px; line-height: 1.55; padding: 28px 24px 80px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 22px; }
+  h1 { font-size: 15px; letter-spacing: 6px; margin: 0 0 10px; font-weight: 500; }
+  .lede { color: var(--dim); max-width: 84ch; margin: 0 0 6px; }
+  .lede b { color: var(--ink); font-weight: 500; }
+  .grid { display: grid; grid-template-columns: 300px 1fr; gap: 26px; align-items: start; }
+  .knobs label { display: flex; justify-content: space-between; align-items: center;
+    gap: 8px; margin: 5px 0; color: var(--dim); }
+  .knobs input { width: 86px; background: #0c0b0a; color: var(--ink);
+    border: 1px solid var(--line); font: inherit; padding: 2px 6px; text-align: right; }
+  .knobs .sec { margin-top: 14px; color: var(--dimmer); letter-spacing: 2px;
+    font-size: 11px; text-transform: uppercase; }
+  button {
+    background: none; border: 1px solid var(--dimmer); color: var(--ink);
+    font: inherit; padding: 5px 12px; cursor: pointer; margin: 10px 8px 0 0;
+  }
+  button:hover { border-color: var(--gold); color: var(--gold); }
+  canvas { display: block; background: #070706; border: 1px solid var(--line);
+    width: 100%; margin-bottom: 14px; }
+  .board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); margin-bottom: 14px; }
+  .cell { background: #0c0b0a; padding: 10px 12px; }
+  .cell .k { color: var(--dimmer); font-size: 11px; letter-spacing: 1px;
+    text-transform: uppercase; }
+  .cell .v { font-size: 17px; margin-top: 3px; }
+  .cell .v.red { color: var(--red); }
+  .cell .v.blue { color: var(--blue); }
+  .cell .v.gold { color: var(--gold); }
+  .cell .v.green { color: var(--green); }
+  .cell .s { color: var(--dim); font-size: 11px; margin-top: 2px; }
+  #verdict { border: 1px solid var(--line); padding: 14px 16px; margin-top: 4px;
+    color: var(--dim); white-space: pre-wrap; }
+  #verdict b { color: var(--ink); font-weight: 500; }
+  #mc { border: 1px solid var(--line); padding: 14px 16px; margin-top: 14px;
+    color: var(--dim); white-space: pre-wrap; display: none; }
+  #mc b { color: var(--ink); font-weight: 500; }
+  .legend { color: var(--dim); font-size: 11px; margin: -8px 0 14px; }
+  .legend i { font-style: normal; padding-right: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>A L L &nbsp; D O G S</h1>
+  <p class="lede">
+    One season. Everyone adopts one pet for the <b>fee</b>; the whole gate is the bank.
+    There are exactly <b>threshold &times; N</b> red seats with prices fixed in advance,
+    <b>first seat highest, last seat almost nothing</b>. Killing your pet takes the next seat,
+    escrows its price as a bet on collapse, and the <b>zombie trades immediately</b>. If every
+    seat fills, <b>red wins instantly</b>: killers are paid their seats, the artist takes 50%,
+    and every living pet is locked on <b>death row</b>, tradable only as a zombie once it dies.
+    If the year ends with seats open, <b>blue wins</b>: every zombie <b>comes back to life</b>,
+    the faithful and the angels are refunded 90% of the fee, every blue dog is <b>locked
+    living and freed to trade</b>, and the artist keeps the rest. A few pets die naturally
+    each week and become <b>angels</b>: out of the game and out of the tipping ratio,
+    tradable immediately, refunded on blue.
+  </p>
+  <p class="lede">The one open rule: how much of the refund does a killer keep when blue
+    wins? <b>Killer refund on blue</b> is the price of grace; slide it up and watch where
+    faith stops being possible. Money math exact; crowd is a toy: greed, herd, need shocks,
+    optional <b>red army</b> raid.</p>
+</header>
+
+<div class="grid">
+  <div class="knobs">
+    <div class="sec">The gate</div>
+    <label>pets (N) <input id="k_n" type="number" value="10000" step="500"></label>
+    <label>adoption fee $ <input id="k_fee" type="number" value="60" step="5"></label>
+    <div class="sec">The rules</div>
+    <label>threshold % <input id="k_thr" type="number" value="33" step="1"></label>
+    <label>first seat pays $ <input id="k_p1" type="number" value="90" step="5"></label>
+    <label>last seat pays $ <input id="k_pS" type="number" value="10" step="1"></label>
+    <label>blue refund % <input id="k_blue" type="number" value="90" step="5"></label>
+    <label>killer refund on blue % <input id="k_redref" type="number" value="0" step="10" min="0" max="100"></label>
+    <label>natural death %/day <input id="k_run" type="number" value="0.006" step="0.002"></label>
+    <label>kill lockout days <input id="k_lock" type="number" value="180" step="5"></label>
+    <div class="sec">The market</div>
+    <label>zombie value avg $ <input id="k_z" type="number" value="0" step="5"></label>
+    <label>rarity visible 0/1 <input id="k_vis" type="number" value="0" step="1" min="0" max="1"></label>
+    <label>collector demand $k <input id="k_d" type="number" value="0" step="10"></label>
+    <label>name shame $ <input id="k_shame" type="number" value="0" step="5"></label>
+    <label>faith premium x <input id="k_faith" type="number" value="1" step="0.5"></label>
+    <div class="sec">The crowd</div>
+    <label>red army % of N <input id="k_raid" type="number" value="0" step="1"></label>
+    <label>greed 0..1 <input id="k_greed" type="number" value="0.5" step="0.05"></label>
+    <label>herd 0..1 <input id="k_herd" type="number" value="0.5" step="0.05"></label>
+    <label>need shock %/day <input id="k_need" type="number" value="0.03" step="0.01"></label>
+    <div>
+      <button id="b_run">run season</button>
+      <button id="b_week">step week</button>
+      <button id="b_reset">reset</button>
+      <button id="b_mc">run 100 seasons</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="board" id="board"></div>
+    <canvas id="chart" width="860" height="300"></canvas>
+    <p class="legend"><i style="color:var(--red)">&#9632; seats filled</i>
+      <i style="color:var(--dimmer)">&#9632; threshold</i>
+      <i style="color:var(--blue)">&#9632; living fraction</i>
+      <i style="color:var(--gold)">&#9632; crowd belief red wins</i></p>
+    <div id="verdict">press run season</div>
+    <div id="mc"></div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+const $ = id => document.getElementById(id);
+const fmt$ = x => "$" + Math.round(x).toLocaleString("en-US");
+const pct = x => (100 * x).toFixed(1) + "%";
+
+function cfg() {
+  return {
+    N: +$("k_n").value, fee: +$("k_fee").value,
+    thr: +$("k_thr").value / 100,
+    p1: +$("k_p1").value, pS: +$("k_pS").value,
+    refund: +$("k_blue").value / 100,
+    redRef: +$("k_redref").value / 100,   // fraction of the fee a killer gets on blue
+    run: +$("k_run").value / 100, lock: +$("k_lock").value,
+    zAvg: +$("k_z").value, vis: +$("k_vis").value > 0,
+    D: +$("k_d").value * 1000,
+    shame: +$("k_shame").value,
+    faith: +$("k_faith").value,
+    raid: +$("k_raid").value / 100,
+    greed: +$("k_greed").value, herd: +$("k_herd").value,
+    need: +$("k_need").value / 100,
+    days: 365
+  };
+}
+
+// mulberry32, so a season is repeatable per seed
+function rng(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// price of red seat k, k = 1..seats, linear from p1 down to pS
+function seatPay(c, seats, k) {
+  if (seats <= 1) return c.p1;
+  return c.p1 + (c.pS - c.p1) * (k - 1) / (seats - 1);
+}
+
+function newSeason(c, seedNum) {
+  const R = rng(seedNum);
+  const s = {
+    c, R, day: 0,
+    state: new Uint8Array(c.N),           // 0 live 1 zombie 2 angel
+    greed: new Float32Array(c.N),
+    herd: new Float32Array(c.N),
+    zeal: new Uint8Array(c.N),            // red army member
+    Z: new Float32Array(c.N),             // expected zombie resale value
+    shame: new Float32Array(c.N),         // cost of a kill under your own name
+    seats: Math.ceil(c.N * c.thr),
+    bank: c.N * c.fee,
+    kills: 0, runs: 0, escrowSum: 0,
+    histKill: [], histLive: [], histBelief: [],
+    recentKills: new Array(14).fill(0),
+    settled: null
+  };
+  for (let i = 0; i < c.N; i++) {
+    s.greed[i] = Math.min(1, Math.max(0, c.greed + (R() - 0.5) * 0.8));
+    s.herd[i] = Math.min(1, Math.max(0, c.herd + (R() - 0.5) * 0.8));
+    s.zeal[i] = R() < c.raid ? 1 : 0;
+    // visible rarity concentrates the same market cap on 3% of holders;
+    // hidden rarity is the same expected value spread over everyone
+    s.Z[i] = c.vis ? (R() < 0.03 ? c.zAvg / 0.03 : 0) : c.zAvg;
+    // the pet is named your handle; a kill is signed forever.
+    // ~15% of people are shameless, the rest vary around the knob
+    s.shame[i] = R() < 0.15 ? 0 : c.shame * (0.25 + 1.5 * R());
+  }
+  return s;
+}
+
+function settleRed(s) {
+  const c = s.c;
+  const killerPaid = s.escrowSum;
+  const artist = 0.5 * s.bank;
+  const shelter = s.bank - artist - killerPaid;
+  s.settled = {
+    red: true, day: s.day,
+    survivors: c.N - s.kills - s.runs,        // now locked on death row
+    killerPaid, perSurvivor: 0, artist, shelter,
+    firstSeat: seatPay(c, s.seats, 1), lastSeat: seatPay(c, s.seats, s.seats)
+  };
+}
+
+function settleBlue(s) {
+  const c = s.c;
+  const survivors = c.N - s.kills - s.runs;
+  const per = c.refund * c.fee;
+  const perKiller = c.redRef * c.fee;      // grace, possibly at a discount
+  const paid = per * (survivors + s.runs) + perKiller * s.kills;
+  const forfeited = Math.max(0, per - perKiller) * s.kills;
+  s.settled = {
+    red: false, day: s.day,
+    survivors, killerPaid: perKiller * s.kills,
+    perSurvivor: per, artist: s.bank - paid - forfeited, shelter: forfeited,
+    firstSeat: seatPay(c, s.seats, 1), lastSeat: seatPay(c, s.seats, s.seats)
+  };
+}
+
+function crowdBelief(s) {
+  const c = s.c;
+  const daysLeft = c.days - s.day;
+  const velocity = s.recentKills.reduce((a, b) => a + b, 0) / 14 / c.N;
+  const killRatio = s.kills / c.N;
+  // crowds extrapolate a horizon of weeks, not the whole remaining year
+  const horizon = Math.min(daysLeft, 60);
+  const projRatio = Math.min(1, killRatio + velocity * horizon);
+  const trajRed = 1 - 1 / (1 + Math.exp((projRatio - c.thr) / 0.04));
+  // seat proximity: when few seats remain everyone can see the avalanche.
+  // angels leave the score, so the live seat count shrinks with them
+  const seatsLeft = Math.ceil(c.thr * (c.N - s.runs)) - s.kills;
+  const prox = Math.max(0, Math.min(0.98, 1 - seatsLeft / (0.08 * c.N)));
+  return { pRed: Math.max(trajRed, prox), velocity };
+}
+
+function stepDay(s) {
+  const c = s.c, R = s.R;
+  if (s.settled) return;
+  const { pRed, velocity } = crowdBelief(s);
+  const pBlue = 1 - pRed;
+  // endogenous market: fixed collector demand split over the tradable supply,
+  // so scarcity raises the exit price and every kill dilutes it
+  const zPrice = c.D > 0 ? c.D / (s.kills + s.runs + 60) : 0;
+  // holding pays the refund on blue whether you live or die an angel, plus,
+  // if dogs stay mortal after a blue win, the eventual angel sale of a
+  // blue-marked dog at a premium over today's zombie price. red pays holders
+  // nothing (death row).
+  const evHold = pBlue * (c.refund * c.fee + c.faith * zPrice);
+
+  let killsToday = 0;
+  for (let i = 0; i < c.N; i++) {
+    if (s.state[i] !== 0) continue;
+    if (R() < c.run) { s.state[i] = 2; s.runs++; continue; }     // angel
+    if (s.day < c.lock) continue;
+    const nextPay = seatPay(c, s.seats, s.kills + 1);
+    // seat money is a bet on red; the zombie trades no matter who wins;
+    // a killer keeps redRef of the fee even when blue wins
+    const evKill = pRed * nextPay + s.Z[i] + zPrice
+      + pBlue * c.redRef * c.fee - s.shame[i];
+    const edge = (evKill - evHold) / c.fee;
+    const sig = 1 / (1 + Math.exp(-edge * 8));
+    let p;
+    if (s.zeal[i]) {
+      p = 0.1;                                                    // raid conviction
+    } else {
+      p = c.need
+        + 0.004 * sig * (0.3 + 1.4 * s.greed[i])
+        + s.herd[i] * velocity * 25 * sig;
+    }
+    if (R() < Math.min(0.5, p)) {
+      s.state[i] = 1; s.kills++; killsToday++;                    // zombie
+      s.escrowSum += nextPay;
+      if (s.kills >= Math.ceil(c.thr * (c.N - s.runs))) {         // sudden death
+        s.recentKills.shift(); s.recentKills.push(killsToday);
+        s.day++;
+        s.histKill.push(s.kills / s.seats);
+        s.histLive.push((c.N - s.kills - s.runs) / c.N);
+        s.histBelief.push(1);
+        settleRed(s);
+        return;
+      }
+    }
+  }
+  s.recentKills.shift(); s.recentKills.push(killsToday);
+  s.day++;
+  s.histKill.push(s.kills / s.seats);
+  s.histLive.push((c.N - s.kills - s.runs) / c.N);
+  s.histBelief.push(crowdBelief(s).pRed);
+  if (s.day >= c.days) settleBlue(s);
+}
+
+// ---------- rendering ----------
+
+let S = null;
+
+function board(s) {
+  const c = s.c;
+  const live = c.N - s.kills - s.runs;
+  const seatsLeft = Math.ceil(c.thr * (c.N - s.runs)) - s.kills;
+  const { pRed } = crowdBelief(s);
+  const nextPay = seatPay(c, s.seats, Math.min(s.seats, s.kills + 1));
+  const cells = [
+    ["day", s.day + " / " + c.days, "", s.settled ?
+      (s.settled.red ? "ended red, day " + s.settled.day : "ended blue") : "in season"],
+    ["living", live.toLocaleString(), "blue", "soulbound while alive"],
+    ["zombies", s.kills.toLocaleString(), "red", "killed, tradable" +
+      (c.D > 0 ? " at ~" + fmt$(c.D / (s.kills + s.runs + 60)) : "")],
+    ["angels", s.runs.toLocaleString(), "gold", "died naturally; tradable, refunded on blue"],
+    ["red seats left", seatsLeft.toLocaleString(), seatsLeft < 0.05 * c.N ? "red" : "",
+      "of " + s.seats.toLocaleString() + "; last seat ends the game"],
+    ["next seat locks", fmt$(nextPay), "gold",
+      "paid only if every seat fills; last seat " + fmt$(seatPay(c, s.seats, s.seats))],
+    ["blue refund", fmt$(c.refund * c.fee), "green",
+      "killers get " + fmt$(c.redRef * c.fee) + " on blue"],
+    ["crowd belief red", pct(pRed), pRed > 0.5 ? "red" : "",
+      "artist: " + fmt$(0.5 * s.bank) + " red / " + fmt$((1 - c.refund) * s.bank) + " blue"]
+  ];
+  $("board").innerHTML = cells.map(([k, v, cls, sub]) =>
+    `<div class="cell"><div class="k">${k}</div><div class="v ${cls}">${v}</div>` +
+    `<div class="s">${sub}</div></div>`).join("");
+}
+
+function chart(s) {
+  const cv = $("chart"), g = cv.getContext("2d");
+  const W = cv.width, H = cv.height;
+  g.clearRect(0, 0, W, H);
+  const days = s.c.days;
+  const x = d => 40 + (W - 60) * d / days;
+  const y = v => H - 24 - (H - 48) * v;
+  g.strokeStyle = "#1a1917"; g.beginPath();
+  for (let f = 0; f <= 1; f += 0.25) { g.moveTo(40, y(f)); g.lineTo(W - 20, y(f)); }
+  g.stroke();
+  g.fillStyle = "#46433d"; g.font = "10px ui-monospace";
+  for (let f = 0; f <= 1; f += 0.25) g.fillText(pct(f), 4, y(f) + 3);
+  g.strokeStyle = "#46433d"; g.setLineDash([4, 4]); g.beginPath();
+  g.moveTo(40, y(1)); g.lineTo(W - 20, y(1)); g.stroke(); g.setLineDash([]);
+  const line = (arr, color) => {
+    if (!arr.length) return;
+    g.strokeStyle = color; g.beginPath();
+    arr.forEach((v, i) => {
+      const px = x(i + 1), py = y(Math.min(1, v));
+      i === 0 ? g.moveTo(px, py) : g.lineTo(px, py);
+    });
+    g.stroke();
+  };
+  line(s.histLive, "#5f7f8c");
+  line(s.histKill, "#c4504a");     // seats filled fraction
+  line(s.histBelief, "#d9a441");
+}
+
+function verdict(s) {
+  if (!s.settled) {
+    $("verdict").textContent = s.day === 0 ? "press run season"
+      : "day " + s.day + ", season in progress";
+    return;
+  }
+  const v = s.settled, c = s.c;
+  $("verdict").innerHTML = v.red
+    ? `<b>RED, day ${v.day}.</b> All ${s.seats.toLocaleString()} seats filled.\n`
+      + `killers: ${s.kills.toLocaleString()} paid ${fmt$(v.killerPaid)} total, `
+      + `first seat ${fmt$(v.firstSeat)}, last seat ${fmt$(v.lastSeat)}\n`
+      + `the faithful: ${v.survivors.toLocaleString()} x $0, pets locked on death row, `
+      + `dying ${(100 * c.run).toFixed(1)}%/day into zombies\n`
+      + `angels: ${s.runs.toLocaleString()} x $0\n`
+      + `<b>artist takes ${fmt$(v.artist)}, shelter gets ${fmt$(v.shelter)}</b>`
+    : `<b>BLUE.</b> Year ended with ${(s.seats - s.kills).toLocaleString()} seats open. `
+      + `Every zombie comes back to life.\n`
+      + `killers: ${s.kills.toLocaleString()} x ${fmt$(c.redRef * c.fee)}`
+      + ` (forfeited to the shelter: ${fmt$(v.shelter)})\n`
+      + `<b>${v.survivors.toLocaleString()} faithful + ${s.runs.toLocaleString()} angels `
+      + `x ${fmt$(v.perSurvivor)} (${(v.perSurvivor / c.fee).toFixed(2)}x the fee)</b>\n`
+      + `artist keeps ${fmt$(v.artist)}`;
+}
+
+function paint() { if (!S) return; board(S); chart(S); verdict(S); }
+
+function runSeason() {
+  S = newSeason(cfg(), (Math.random() * 1e9) | 0);
+  const tick = () => {
+    for (let i = 0; i < 15 && !S.settled; i++) stepDay(S);
+    paint();
+    if (!S.settled) requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+$("b_run").onclick = runSeason;
+$("b_week").onclick = () => {
+  if (!S || S.settled) S = newSeason(cfg(), (Math.random() * 1e9) | 0);
+  for (let i = 0; i < 7 && !S.settled; i++) stepDay(S);
+  paint();
+};
+$("b_reset").onclick = () => { S = newSeason(cfg(), (Math.random() * 1e9) | 0); paint(); };
+
+$("b_mc").onclick = () => {
+  const c = cfg(), runs = 100, out = [];
+  $("mc").style.display = "block";
+  $("mc").textContent = "running 100 seasons...";
+  let k = 0;
+  const batch = () => {
+    for (let b = 0; b < 5 && k < runs; b++, k++) {
+      const s = newSeason(c, 1000 + k * 7919);
+      while (!s.settled) stepDay(s);
+      out.push(s.settled);
+    }
+    if (k < runs) { $("mc").textContent = `running... ${k}/${runs}`; setTimeout(batch, 0); return; }
+    const reds = out.filter(o => o.red);
+    const blues = out.filter(o => !o.red);
+    const avg = (a, f) => a.length ? a.reduce((x, o) => x + f(o), 0) / a.length : 0;
+    $("mc").innerHTML =
+      `<b>100 seasons.</b> red ${reds.length}, blue ${blues.length}\n`
+      + (reds.length ? `red trigger day avg ${avg(reds, o => o.day).toFixed(0)}\n` : "")
+      + `artist EV ${fmt$(avg(out, o => o.artist))}, shelter EV ${fmt$(avg(out, o => o.shelter))}\n`
+      + (blues.length ? `blue survivor payout avg ${fmt$(avg(blues, o => o.perSurvivor))} `
+        + `(${(avg(blues, o => o.perSurvivor) / c.fee).toFixed(2)}x fee)\n` : "")
+      + `survivors avg ${avg(out, o => o.survivors).toFixed(0)}`;
+  };
+  setTimeout(batch, 0);
+};
+
+S = newSeason(cfg(), 42);
+paint();
+</script>
+</body>
+</html>
