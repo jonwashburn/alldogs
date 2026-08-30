@@ -349,6 +349,22 @@
     pointer-events: none; }
   @media (max-width: 900px) { canvas.stray { display: none; } }
 
+  /* bred, not drawn */
+  .bredgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    margin-top: 56px; }
+  .bredgrid p { font-size: 16.5px; opacity: 0.78; line-height: 1.65;
+    margin-bottom: 14px; }
+  .pq { font-family: "Shantell Sans", sans-serif; font-weight: 500;
+    font-size: 17px; line-height: 1.6; border-left: 2px solid var(--ink);
+    padding-left: 20px; margin-top: 24px; opacity: 0.9; }
+  .pq span { display: block; margin-top: 10px;
+    font-family: "Instrument Sans", sans-serif; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    opacity: 0.55; }
+  .bred .cta { margin-top: 48px; justify-content: flex-start; }
+  @media (max-width: 860px) { .bredgrid { grid-template-columns: 1fr;
+    gap: 36px; } }
+
   /* why */
   .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
     margin-top: 56px; }
@@ -530,6 +546,54 @@
       Hold is the blue one. The one mercy I added: here, red needs a
       third.</p>
     </div>
+  </div>
+</div></section>
+
+<section class="bred sheet" id="bred"><div class="wrap">
+  <p class="kicker">The method &middot; whose art this is</p>
+  <h2>Bred, not drawn.</h2>
+  <p class="lede">"The idea becomes a machine that makes the art." Sol
+  LeWitt wrote that in Paragraphs on Conceptual Art, 1967. This collection
+  is that sentence, running.</p>
+  <div class="bredgrid">
+    <div class="bcol">
+      <p>I wrote a constitution for this collection: what a dog is here,
+      what cuteness owes the viewer, how paint should behave, which
+      painters set the bar and why none of them may be copied, the color
+      law that separates the living from the dead. Every rule the machines
+      obey, I authored.</p>
+      <p>Two machines execute it. The Painter rewrites the drawing code
+      from scratch, round after round. The Critic reads the same
+      constitution and judges the sheets blind against a gallery bar,
+      never knowing which one is the champion. Only the better painter
+      survives the round. Neither one can stop. Neither one can lower the
+      bar. And I do not touch the brush.</p>
+      <blockquote class="pq">"The process is mechanical and should not be
+      tampered with. It should run its course."
+      <span>&mdash; LeWitt, Sentences on Conceptual Art, no. 29</span></blockquote>
+    </div>
+    <div class="bcol">
+      <p>If that sounds like the artist left the room, the argument is
+      sixty years old. LeWitt's wall drawings were executed by other
+      people's hands, working from his written instructions, and nobody
+      has ever doubted whose art they are. "All of the planning and
+      decisions are made beforehand and the execution is a perfunctory
+      affair." The instructions are the art. My drafters happen not to be
+      human.</p>
+      <p>What I authored: the dogs, the four fates, the census, the
+      tenderness, the temperature of the grounds, the wall the score has
+      to clear, and every mid-fight correction, published as it happens.
+      What I could not author: the exact painting that survives. That part
+      surprises me the same way it surprises you, and it is the part I
+      wanted.</p>
+      <blockquote class="pq">"The process is carried out blindly. There
+      are many side effects that the artist cannot imagine."
+      <span>&mdash; LeWitt, Sentences, no. 28</span></blockquote>
+    </div>
+  </div>
+  <div class="cta">
+    <a class="btn hot" href="design/">Watch the fight live</a>
+    <a class="btn" href="#medium">How the paint works</a>
   </div>
 </div></section>
 
@@ -769,11 +833,6 @@
       <p>Thousands of layered strokes with seeded jitter in hue, pressure
       and dryness. Pigment behavior, computed. Zoom in: the edges break
       like a dry brush because the code says they should.</p></div>
-    <div class="spec"><span>Bred, not drawn</span>
-      <p>The painter itself was evolved in public: one AI repaints the
-      collection, a second judges it blind against a gallery bar, and only
-      the better painter survives the round.</p>
-      <a class="btn" href="design/" style="margin-top:16px">Watch it live</a></div>
     <div class="spec"><span>Infinite resolution</span>
       <p>Code doesn't pixelate. The identical instructions paint a postage
       stamp or a two-meter gallery print, and the print is not a blowup,
