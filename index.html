@@ -618,7 +618,7 @@
   midnight at a time.</p>
   <div class="fates">
     <div class="fate">
-      <canvas id="f_faithful" width="500" height="500"></canvas>
+      <canvas id="f_faithful" width="800" height="800"></canvas>
       <div class="body">
       <h3>Faithful</h3>
       <p>Still alive, still yours. A faithful dog is one whose owner said no
@@ -628,7 +628,7 @@
       </div>
     </div>
     <div class="fate">
-      <canvas id="f_zombie" width="500" height="500"></canvas>
+      <canvas id="f_zombie" width="800" height="800"></canvas>
       <div class="body">
       <h3>Zombie</h3>
       <p>Turned by its own owner. The owner took the money, the horde took
@@ -638,7 +638,7 @@
       </div>
     </div>
     <div class="fate">
-      <canvas id="f_angel" width="500" height="500"></canvas>
+      <canvas id="f_angel" width="800" height="800"></canvas>
       <div class="body">
       <h3>Angel</h3>
       <p>Died of natural causes, a few every week, chosen by chance and
@@ -649,7 +649,7 @@
       </div>
     </div>
     <div class="fate">
-      <canvas id="f_ghost" width="500" height="500"></canvas>
+      <canvas id="f_ghost" width="800" height="800"></canvas>
       <div class="body">
       <h3>Ghost</h3>
       <p>A dog the apocalypse took. If the horde ever reaches a third, every
@@ -814,11 +814,11 @@
   The whole painter is about a hundred kilobytes: smaller than one
   photograph of the painting it makes.</p>
   <div class="fourlives">
-    <div class="fl"><canvas id="fl_faithful" width="900" height="900"></canvas><div class="flcap">faithful &middot; seed 910007</div></div>
+    <div class="fl"><canvas id="fl_faithful" width="1400" height="1400"></canvas><div class="flcap">faithful &middot; seed 910007</div></div>
     <div class="flgrid">
-      <div class="fl"><canvas id="fl_zombie" width="500" height="500"></canvas><div class="flcap">zombie</div></div>
-      <div class="fl"><canvas id="fl_angel" width="500" height="500"></canvas><div class="flcap">angel</div></div>
-      <div class="fl"><canvas id="fl_ghost" width="500" height="500"></canvas><div class="flcap">ghost</div></div>
+      <div class="fl"><canvas id="fl_zombie" width="700" height="700"></canvas><div class="flcap">zombie</div></div>
+      <div class="fl"><canvas id="fl_angel" width="700" height="700"></canvas><div class="flcap">angel</div></div>
+      <div class="fl"><canvas id="fl_ghost" width="700" height="700"></canvas><div class="flcap">ghost</div></div>
       <p class="flnote">One seed, four lives. The same dog, seed 910007,
       painted by the same code through each fate the year could hand it.
       The game never swaps an image. It repaints the soul.</p>
@@ -935,7 +935,7 @@
   <p class="samecash">The money is the same either way: $20.*
   <em>The only question is which world you want to live in.</em></p>
   <div class="chooseyours">
-    <canvas id="chooseDog" width="500" height="500"></canvas>
+    <canvas id="chooseDog" width="800" height="800"></canvas>
     <p id="chooseLine">This is the dog you'd be doing it to.</p>
   </div>
   <div class="buttons">
@@ -1028,7 +1028,7 @@ function penFor(seed, state, handle) {
   const pen = document.createElement('div');
   pen.className = 'pen';
   const cv = document.createElement('canvas');
-  cv.width = 500; cv.height = 500;
+  cv.width = 800; cv.height = 800;
   draw(cv, seed, state);
   const cap = document.createElement('div');
   cap.className = 'cap';
@@ -1192,7 +1192,7 @@ const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
 
 function renderYours() {
-  cutout(yourCv, yseed, ystate);
+  cutout(yourCv, yseed, ystate, 800);
   draw(chooseCv, yseed, ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourState').textContent =
@@ -1217,8 +1217,8 @@ document.querySelector('.bpanel.blue').addEventListener('click', () => {
 });
 
 /* cutout dogs: remove the painted ground so the dog lives on the page */
-function cutout(targetCv, seed, state) {
-  const S = 500;
+function cutout(targetCv, seed, state, size) {
+  const S = size || 500;
   const src = document.createElement('canvas');
   src.width = S; src.height = S;
   draw(src, seed, state);
