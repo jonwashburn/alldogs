@@ -354,8 +354,13 @@
 
   /* stray dogs living on the page, tagged, at every scale */
   .straywrap { position: absolute; pointer-events: none; z-index: 2; }
-  .straywrap canvas { display: block; width: 100%; height: auto; }
-  .straywrap .slbl { margin-top: 7px; font-size: 9px;
+  .straywrap canvas { display: block; width: 100%; height: auto;
+    position: relative; z-index: 1; }
+  .straywrap .sground { position: absolute; bottom: -3px; left: 8%;
+    right: 8%; height: 12px; border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(20,16,12,.16), rgba(20,16,12,0) 70%); }
+  .straywrap .slbl { position: absolute; top: 100%; left: -30px;
+    right: -30px; text-align: center; margin-top: 9px; font-size: 9px;
     letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
     opacity: 0.5; text-align: center; }
   @media (max-width: 900px) { .straywrap { display: none; } }
@@ -1408,31 +1413,37 @@ function stray(sectionSel, seed, state, label, css, size) {
   cutout(cv, seed, state, size || 500);
   trimToDog(cv);
   w.append(cv);
+  const gnd = document.createElement('div');
+  gnd.className = 'sground';
+  w.append(gnd);
   if (label) {
     const l = document.createElement('div');
     l.className = 'slbl';
     l.textContent = label;
-    if (/right:\s*-/.test(css)) l.style.textAlign = 'left';
     w.append(l);
   }
   sec.append(w);
 }
-stray('.why', 100027, 'faithful', 'red balloon \u00b7 2.0%',
-  'width:88px; top:70px; right:-24px;');
-stray('.bred', 9, 'faithful', 'The Painter \u00b7 1 of 1',
-  'width:120px; bottom:150px; right:-34px;');
-stray('.fatesec', 100039, 'faithful', 'toy airplane \u00b7 0.4%',
-  'width:96px; top:44px; right:-26px;');
-stray('#dogs', 100037, 'faithful', 'boombox \u00b7 0.5%',
-  'width:46px; top:150px; right:6%;');
-stray('.medium', 10, 'faithful', 'The Astronaut \u00b7 1 of 1',
-  'width:52px; top:120px; right:7%;');
-stray('.drop', 940002, 'ghost', 'ghost',
-  'width:96px; top:90px; right:4%;');
-stray('.rules', 100035, 'faithful', 'skateboard \u00b7 0.6%',
-  'width:104px; bottom:70px; right:-30px;');
-stray('.choice', 100046, 'faithful', 'pocket knife \u00b7 0.1%',
-  'width:76px; top:80px; right:5%;');
+
+/* Perch: every stray stands on the top border of its section, feet on
+   the line, alternating sides down the page. One ground line, one walk. */
+function perch(sectionSel, seed, state, label, side, width) {
+  stray(sectionSel, seed, state, label,
+    'width:' + width + 'px; bottom:100%; margin-bottom:-6px; '
+    + side + ':7%;', width > 100 ? 640 : 500);
+}
+perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   'right', 92);
+perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  'left', 116);
+perch('.fatesec', 990001, 'angel',    'angel',                     'right', 92);
+perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        'left',  92);
+perch('.medium',  10,     'faithful', 'The Astronaut \u00b7 1 of 1','right', 72);
+perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   'left',  92);
+perch('.rules',   950003, 'zombie',   'zombie',                    'right', 92);
+perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   'left',  92);
+perch('.cannon',  940002, 'ghost',    'ghost',                     'right', 92);
+
+/* The one exception to the walk: the artist's adversary, giant,
+   hanging off the edge of the confession. */
 stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
   'width:54vh; right:-15vh; bottom:-16px;', 1100);
 
