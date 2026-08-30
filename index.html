@@ -29,7 +29,7 @@
     sans-serif; }
   ::selection { background: var(--gold); color: var(--ink); }
   .wrap { max-width: 1260px; margin: 0 auto; padding: 0 32px; }
-  section { padding: 96px 0 110px; position: relative; }
+  section { padding: 84px 0 92px; position: relative; }
   canvas.brush { display: block; width: min(1196px, calc(100% - 64px));
     margin: 0 auto; height: 14px; }
   h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase;
@@ -111,10 +111,13 @@
   /* your dog */
   .yours { text-align: center; }
   .yours h2 { margin-bottom: 44px; }
-  .yourswrap { max-width: 480px; margin: 0 auto; }
+  .yourswrap { max-width: 480px; margin: 0 auto; background: #fff;
+    border: 1px solid rgba(20,20,19,0.16); padding: 26px 26px 15px; }
   .yourswrap canvas { width: 100%; height: auto; display: block; }
   .yourscap { display: flex; justify-content: space-between;
-    margin-top: 12px; font-size: 10px; font-weight: 700;
+    margin-top: 18px; padding-top: 13px;
+    border-top: 1px solid rgba(20,20,19,0.16);
+    font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; }
   .yours .lede { margin-left: auto; margin-right: auto; }
 
@@ -308,6 +311,11 @@
     opacity: 0.7; line-height: 1.62; }
   .confess .sig { font-family: "Shantell Sans", sans-serif;
     font-weight: 700; font-size: 17px; margin-top: 30px; }
+  .confess .pull { position: absolute; right: 5%; top: 200px; width: 300px;
+    font-family: "Shantell Sans", sans-serif; font-weight: 700;
+    font-size: 30px; line-height: 1.32; transform: rotate(-2deg);
+    color: var(--red); display: none; }
+  @media (min-width: 1150px) { .confess .pull { display: block; } }
 
   /* the creed */
   .creed { text-align: center; padding: 110px 0; }
@@ -436,9 +444,9 @@
   <div class="herocap"><span id="heroHandle">&nbsp;</span><span id="heroMeta">&nbsp;</span></div>
   <p class="tagline">10,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $25</p>
   <p class="sub">ALL DOGS is a year-long performance played with real
-  money by up to 10,000 strangers, and the artwork is whatever is left
-  when the year ends. Every dog is its own drawing that lives on
-  Ethereum. The artist draws the dogs. The owners write the story.</p>
+  money by up to 10,000 strangers. The artwork is whatever is left when
+  the year ends. Every dog is its own drawing living on Ethereum: the
+  artist draws the dogs, the owners write the story.</p>
   <div class="cta">
     <a class="btn hot" href="#deal">How the year works</a>
     <a class="btn" href="#fates">Meet the four fates</a>
@@ -484,6 +492,7 @@
   <div class="row">
     <div class="money"><b>$133,000</b><span>up to this at stake &middot; only an apocalypse pays it to me</span></div>
   </div>
+  <div class="pull">The only way to beat me is together.</div>
   <p class="line">I am betting 10,000 strangers can't hold the line for a year.</p>
   <p class="line" style="margin-top:14px">Prove me wrong and the money comes home.</p>
   <p class="fine">The stake scales with the pack, however many dogs find
@@ -607,8 +616,8 @@
     <canvas id="yourDog" width="700" height="700"></canvas>
     <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; night 1</span></div>
   </div>
-  <p class="lede" style="margin-top:28px">It was painted the moment you
-  arrived and it exists nowhere else. It can't be sold. It can't be traded.
+  <p class="lede" style="margin-top:28px"><b id="yourIntro">It</b> was
+  painted the moment you arrived and it exists nowhere else. It can't be sold. It can't be traded.
   But you already know what you can do to it. The button is further down
   the page.</p>
 </div></section>
@@ -1207,6 +1216,7 @@ function renderYours() {
   cutout(yourCv, yseed, ystate, 800, 10);
   draw(chooseCv, yseed, ystate);
   document.getElementById('yourName').textContent = yname;
+  document.getElementById('yourIntro').textContent = yname;
   document.getElementById('yourState').textContent =
     ystate === 'faithful' ? 'alive · yours' : 'zombie · you did this';
   chooseLine.textContent = ystate === 'faithful'
@@ -1366,6 +1376,28 @@ cutout(document.getElementById('cr_win'), 930001, 'angel', 500, 16);
 cutout(document.getElementById('cr_lose'), 940001, 'ghost', 500, 16);
 /* stray dogs: scattered at every scale, live from the champion painter,
    tagged with the attribute their seed forces */
+function trimToDog(cv) {
+  /* crop a cutout canvas to its silhouette so the label hugs the dog */
+  const W = cv.width, H = cv.height, g = cv.getContext('2d');
+  const d = g.getImageData(0, 0, W, H).data;
+  let minX = W, maxX = -1, minY = H, maxY = -1;
+  for (let y = 0; y < H; y++)
+    for (let x = 0; x < W; x++)
+      if (d[(y * W + x) * 4 + 3]) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+  if (maxX < 0 || (maxX - minX + 1) >= W - 2) return;
+  const pad = Math.round(W * 0.02);
+  minX = Math.max(0, minX - pad); minY = Math.max(0, minY - pad);
+  maxX = Math.min(W - 1, maxX + pad); maxY = Math.min(H - 1, maxY + pad);
+  const cw = maxX - minX + 1, ch = maxY - minY + 1;
+  const img = g.getImageData(minX, minY, cw, ch);
+  cv.width = cw; cv.height = ch;
+  cv.getContext('2d').putImageData(img, 0, 0);
+}
 function stray(sectionSel, seed, state, label, css, size) {
   const sec = document.querySelector(sectionSel);
   if (!sec) return;
@@ -1374,33 +1406,35 @@ function stray(sectionSel, seed, state, label, css, size) {
   w.style.cssText = css;
   const cv = document.createElement('canvas');
   cutout(cv, seed, state, size || 500);
+  trimToDog(cv);
   w.append(cv);
   if (label) {
     const l = document.createElement('div');
     l.className = 'slbl';
     l.textContent = label;
+    if (/right:\s*-/.test(css)) l.style.textAlign = 'left';
     w.append(l);
   }
   sec.append(w);
 }
 stray('.why', 100027, 'faithful', 'red balloon \u00b7 2.0%',
-  'width:110px; top:70px; right:-26px;');
+  'width:88px; top:70px; right:-24px;');
 stray('.bred', 9, 'faithful', 'The Painter \u00b7 1 of 1',
-  'width:150px; bottom:140px; right:-40px;');
+  'width:120px; bottom:150px; right:-34px;');
 stray('.fatesec', 100039, 'faithful', 'toy airplane \u00b7 0.4%',
-  'width:120px; top:44px; right:-30px;');
+  'width:96px; top:44px; right:-26px;');
 stray('#dogs', 100037, 'faithful', 'boombox \u00b7 0.5%',
-  'width:56px; top:150px; right:6%;');
+  'width:46px; top:150px; right:6%;');
 stray('.medium', 10, 'faithful', 'The Astronaut \u00b7 1 of 1',
-  'width:64px; top:120px; right:7%;');
+  'width:52px; top:120px; right:7%;');
 stray('.drop', 940002, 'ghost', 'ghost',
-  'width:120px; top:90px; right:4%;');
+  'width:96px; top:90px; right:4%;');
 stray('.rules', 100035, 'faithful', 'skateboard \u00b7 0.6%',
-  'width:130px; bottom:70px; right:-40px;');
+  'width:104px; bottom:70px; right:-30px;');
 stray('.choice', 100046, 'faithful', 'pocket knife \u00b7 0.1%',
-  'width:96px; top:80px; right:5%;');
+  'width:76px; top:80px; right:5%;');
 stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
-  'width:74vh; right:-22vh; bottom:-20px;', 1100);
+  'width:54vh; right:-15vh; bottom:-16px;', 1100);
 
 /* footer parade */
 const PARADE = [
