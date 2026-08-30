@@ -437,7 +437,7 @@
   <p class="tagline">10,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $25</p>
   <p class="sub">ALL DOGS is a year-long performance played with real
   money by up to 10,000 strangers, and the artwork is whatever is left
-  when the year ends. Every dog is a one-of-one drawing that lives on
+  when the year ends. Every dog is its own drawing that lives on
   Ethereum. The artist draws the dogs. The owners write the story.</p>
   <div class="cta">
     <a class="btn hot" href="#deal">How the year works</a>
@@ -462,7 +462,8 @@
       </div>
       <p>Then decide: <b class="blue">love it</b>, or <b class="red">flip it</b>.
       <span class="lsub">(To flip it, you have to put it down first and make
-      it a zombie. Only zombies sell.)</span></p>
+      it a zombie. Putting it down pays you $20 back, tonight. Only zombies
+      sell.)</span></p>
     </div>
     <div class="lrow">
       <canvas class="cutout" id="cr_win" width="500" height="500"></canvas>
@@ -486,8 +487,8 @@
   <p class="line">I am betting 10,000 strangers can't hold the line for a year.</p>
   <p class="line" style="margin-top:14px">Prove me wrong and the money comes home.</p>
   <p class="fine">The stake scales with the pack, however many dogs find
-  homes. A $20 refund is escrowed for every dog; the zombies take theirs on
-  the way out. If the apocalypse comes, the two thirds that wasn't already
+  homes. The adoption fee is $25: a $20 refund is escrowed for every dog,
+  and the zombies take theirs on the way out. If the apocalypse comes, the two thirds that wasn't already
   paid out to the zombies comes to me instead of back to you: at most,
   $20 &times; 10,000 &times; &#8532; &asymp; $133,000. The $5 of every
   adoption fee pays for the drawings, the fees, and the year of running it,
@@ -499,7 +500,7 @@
   this page gets run through an agent-based economy simulator for thousands
   of runs before any contract is written. Two findings so far: hiding the
   count doesn't stop a panic, it makes the panic preemptive, which is why
-  the cannon exists. And ordinary greed never reaches the third on its own;
+  turns are sealed and read out once a night, in one batch: the cannon. And ordinary greed never reaches the third on its own;
   only an organized army does. Buying in is the first vote.</p>
   <div class="cta" style="justify-content:flex-start; margin-top:26px">
     <a class="btn" href="design/">The live design feed</a>
@@ -617,14 +618,15 @@
   <h2>Four fates.<br>One collar.</h2>
   <p class="lede">Every dog starts alive. What it becomes isn't decided at
   mint and isn't decided by the artist. It's decided by 10,000 owners, one
-  midnight at a time.</p>
+  midnight at a time. The horde is every dog that has been turned; its count
+  is the number hanging over the year.</p>
   <div class="fates">
     <div class="fate">
       <canvas id="f_faithful" width="800" height="800"></canvas>
       <div class="body">
       <h3>Faithful</h3>
       <p>Still alive, still yours. A faithful dog is one whose owner said no
-      to the horde every single night. If the dogs win the year, the faithful
+      to the $20 every single night. If the dogs win the year, the faithful
       get refunded and trade free.</p>
       <span class="tag" style="color:var(--blue)">alive &middot; holding the line</span>
       </div>
@@ -643,7 +645,8 @@
       <canvas id="f_angel" width="800" height="800"></canvas>
       <div class="body">
       <h3>Angel</h3>
-      <p>Died of natural causes, a few every week, chosen by chance and
+      <p>Died of natural causes: every dog carries the same tiny nightly
+      chance, a few deaths a week across the pack, chosen by chance and
       nobody else. Wings included, the nights it lived stamped on the collar.
       Angels never count toward the third. They trade right away, and if the
       dogs win the year they get refunded too.</p>
@@ -873,9 +876,9 @@
       that day stands in the same line.</p></div>
     <div class="step"><div class="n">02</div>
       <h3>The allocation.</h3>
-      <p>Orders are read, not raced. Reservations get filled by wallet
-      history: art held for years counts for you, quick flips count against
-      you. The dogs go home with people who keep them. If your order fills,
+      <p>Orders are read, not raced. Reservations get filled by the
+      history of the wallet you reserve with: art held for years counts for
+      you, quick flips count against you. The dogs go home with people who keep them. If your order fills,
       your handle is inscribed on every collar, forever.</p></div>
     <div class="step"><div class="n">03</div>
       <h3>Public adoption day.</h3>
