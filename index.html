@@ -387,6 +387,14 @@
   .ysflash.fire { animation: cannonfire 900ms ease-out; }
   @keyframes cannonfire {
     0% { opacity: 0; } 8% { opacity: 0.72; } 100% { opacity: 0; } }
+  .yskey { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 14px;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; opacity: 0.55; }
+  .yskey span { display: flex; align-items: center; gap: 7px; }
+  .yskey i { width: 10px; height: 10px; display: block; }
+  .k-live { background: rgba(253,253,251,0.80); }
+  .k-zom { background: var(--red); }
+  .k-ang { background: var(--gold); }
   .ysboard { display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 18px; margin-top: 22px; }
   .ysstat { border-top: 1px solid rgba(253,253,251,0.22); padding-top: 10px; }
@@ -670,6 +678,46 @@
         same night.</p>
       </div>
     </div>
+  </div>
+</div></section>
+
+<section class="cannon sheet" id="map"><div class="moon"></div><div class="wrap">
+  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
+  <p>The whole pack, one dog to a mark. The count is public all day and
+  the world can only end at midnight, so you get to watch it climb and
+  you still never know which cannon is the one.</p>
+
+  <div class="yearsim">
+    <div class="ysfield">
+      <canvas id="ysPack" width="1640" height="1040"></canvas>
+      <div class="ysflash" id="ysFlash"></div>
+    </div>
+    <div class="yskey">
+      <span><i class="k-live"></i>living</span>
+      <span><i class="k-zom"></i>sold, turned</span>
+      <span><i class="k-ang"></i>died of old age</span>
+    </div>
+    <div class="ysboard">
+      <div class="ysstat"><span class="k">Day</span><b id="ysDay">0</b><span class="s">of 365</span></div>
+      <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">1000</b></div>
+      <div class="ysstat"><span class="k">Zombies</span><b id="ysZom" class="c-zom">0</b><span class="s">of 210</span></div>
+      <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
+    </div>
+    <div class="ysbar"><i id="ysProg"></i><u id="ysMark"></u></div>
+    <div class="ysctl">
+      <button class="btn hot" id="ysRun">Pause</button>
+      <label for="ysRate">How often the pack sells
+        <output id="ysRateOut">one every 42 hours</output></label>
+      <input id="ysRate" type="range" min="10" max="150" value="57">
+    </div>
+    <p class="ysverdict" id="ysVerdict">This map runs a year, then starts
+    another one, for as long as you watch it. Nothing in it is scripted:
+    every night, every living dog rolls the same small chance of dying
+    that the rules give it, and somebody sells at the rate on the slider.
+    It is set where a real pack would sit, one sale every 42 hours, which
+    is close enough to the line that some years end in a graveyard and
+    some end in a cannon. Move it and see how little it takes.</p>
   </div>
 </div></section>
 
@@ -1281,41 +1329,6 @@
   and does not try, so your dog lives in the wallet that adopted it or it
   does not live. Dogs that are already zombies, angels, vampires or
   immortals move freely and never change again.</p>
-</div></section>
-
-<section class="cannon sheet"><div class="moon"></div><div class="wrap">
-  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
-  <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
-  <p>All the day's dead, read out at once. Some nights, silence. Some
-  nights, a massacre.</p>
-  <p>The count is public all day and the world can only end at midnight.
-  So you'll watch it climb, and you still won't know which cannon is the
-  one. You can't time an apocalypse. You can only pick a side before
-  it.</p>
-
-  <div class="yearsim">
-    <div class="ysfield">
-      <canvas id="ysPack" width="1640" height="1040"></canvas>
-      <div class="ysflash" id="ysFlash"></div>
-    </div>
-    <div class="ysboard">
-      <div class="ysstat"><span class="k">Day</span><b id="ysDay">0</b><span class="s">of 365</span></div>
-      <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">1000</b></div>
-      <div class="ysstat"><span class="k">Zombies</span><b id="ysZom" class="c-zom">0</b><span class="s">of 210</span></div>
-      <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
-    </div>
-    <div class="ysbar"><i id="ysProg"></i><u id="ysMark"></u></div>
-    <div class="ysctl">
-      <button class="btn hot" id="ysRun">Run the year</button>
-      <label for="ysRate">How often the pack sells
-        <output id="ysRateOut">one every 42 hours</output></label>
-      <input id="ysRate" type="range" min="10" max="150" value="58">
-    </div>
-    <p class="ysverdict" id="ysVerdict">A thousand dogs, one to a mark.
-    Pick how often somebody sells and watch the year run. Nothing here is
-    scripted: the deaths and the sales are rolled night by night, and the
-    cannon fires when it fires.</p>
-  </div>
 </div></section>
 
 
@@ -2247,9 +2260,11 @@ paintWhenNear(document.querySelector('footer'), () => {
 
   function rate() { return el('ysRate').value / 100; }
 
+  /* the page talks about this line in hours ("one sale every 42 hours"),
+     so the slider does too until hours stop being readable */
   function gap(perDay) {
     const h = 24 / perDay;
-    return h < 24 ? 'one every ' + h.toFixed(0) + ' hours'
+    return h < 72 ? 'one every ' + h.toFixed(0) + ' hours'
       : 'one every ' + (h / 24).toFixed(1) + ' days';
   }
 
@@ -2295,7 +2310,6 @@ paintWhenNear(document.querySelector('footer'), () => {
 
   function finish(how) {
     running = false;
-    el('ysRun').textContent = 'Run it again';
     if (how === 'apocalypse') {
       const taken = fireTheCannon();
       el('ysVerdict').innerHTML = '<b>The cannon fired on day ' + day
@@ -2312,6 +2326,7 @@ paintWhenNear(document.querySelector('footer'), () => {
         + 'an immortal.';
     }
     board(); paint();
+    nextYear();
   }
 
   function reset() {
@@ -2333,28 +2348,57 @@ paintWhenNear(document.querySelector('footer'), () => {
     raf = requestAnimationFrame(tick);
   }
 
-  el('ysRun').addEventListener('click', () => {
-    if (running) {
-      running = false; cancelAnimationFrame(raf);
-      el('ysRun').textContent = 'Keep going';
-      return;
-    }
+  /* The map is meant to be alive, so a finished year is not an ending, it
+     is a pause long enough to read the verdict before the next thousand
+     dogs walk in. It only ever animates while it is on screen. */
+  const CALM = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let paused = !CALM, visible = false, hold = 0;
+
+  function start() {
+    if (running || paused || !visible || hold) return;
     if (over || day >= DAYS) reset();
-    if (day === 0) {
-      el('ysVerdict').textContent = 'The year is running. Every mark is a '
-        + 'dog, and the gold line is how much of the year has gone.';
-    }
     running = true; last = 0;
-    el('ysRun').textContent = 'Stop';
     raf = requestAnimationFrame(tick);
+  }
+  function halt() {
+    running = false; cancelAnimationFrame(raf); last = 0;
+  }
+  function label() {
+    el('ysRun').textContent = paused ? 'Run it' : 'Pause';
+  }
+
+  function nextYear() {
+    hold = setTimeout(() => {
+      hold = 0; reset();
+      el('ysVerdict').textContent = 'A new thousand. Same rules, same '
+        + 'rolls, and no promise it goes the same way.';
+      start();
+    }, 5200);
+  }
+
+  el('ysRun').addEventListener('click', () => {
+    paused = !paused;
+    label();
+    if (paused) { clearTimeout(hold); hold = 0; halt(); }
+    else start();
   });
 
   const out = el('ysRateOut');
   function showRate() { out.textContent = gap(rate()); }
   el('ysRate').addEventListener('input', showRate);
   showRate();
+  label();
 
-  paintWhenNear(document.querySelector('.cannon'), () => { board(); paint(); });
+  /* off screen it stops entirely: a map nobody is looking at should not
+     be spending anybody's battery */
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      visible = e.isIntersecting;
+      if (visible) start(); else halt();
+    });
+  }, { threshold: 0.12 }).observe(document.getElementById('map'));
+
+  board(); paint();
 })();
 
 /* mobile: the odds fold */
