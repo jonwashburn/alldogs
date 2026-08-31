@@ -152,6 +152,45 @@
     letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; }
   .yours .lede { margin-left: auto; margin-right: auto; }
 
+  /* live the dog's whole life, and sign it */
+  .lifebox { max-width: 540px; margin: 34px auto 0; border-top: 2px solid var(--ink);
+    padding-top: 22px; text-align: left; }
+  .lifelbl { display: block; font-size: 9px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.55; }
+  .liferow { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+  .liferow input { flex: 1; min-width: 170px; border: 2px solid var(--ink);
+    background: transparent; padding: 12px 14px; font: 700 14px/1
+      "Instrument Sans", sans-serif; letter-spacing: 1px; color: var(--ink); }
+  .liferow input:focus { outline: none; box-shadow: inset 0 -4px 0 var(--gold); }
+  .liferow .btn { white-space: nowrap; }
+  .lifeticks { display: flex; gap: 30px; margin-top: 18px;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; opacity: 0.55; }
+  .lifeticks b { font-family: "Shantell Sans", sans-serif; font-size: 21px;
+    letter-spacing: 0; opacity: 1; margin-right: 5px; }
+  .lifenote { font-size: 14.5px; line-height: 1.62; opacity: 0.72;
+    margin-top: 16px; min-height: 4.6em; }
+  .lifenote b { opacity: 1; }
+  @media (max-width: 560px) { .liferow .btn { width: 100%; } }
+
+  /* the whole pack, painted in front of you */
+  .packwall { margin-top: 46px; border-top: 2px solid var(--ink);
+    padding-top: 24px; }
+  .pwhead { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .pwcount { font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; opacity: 0.55; }
+  .pwcount b { font-family: "Shantell Sans", sans-serif; font-size: 22px;
+    letter-spacing: 0; opacity: 1; }
+  .pwcount em { font-style: normal; margin-left: 14px; }
+  .pwbar { height: 5px; margin-top: 16px; background: var(--hair); }
+  .pwbar i { display: block; height: 100%; width: 0; background: var(--ink); }
+  .pwfield { margin-top: 18px; border: 2px solid var(--ink);
+    background: var(--hair); padding: 10px; }
+  .pwfield canvas { width: 100%; height: auto; display: block; }
+  .pwnote { font-size: 14.5px; line-height: 1.62; opacity: 0.72;
+    margin-top: 16px; max-width: 68ch; }
+  .pwnote b { opacity: 1; }
+
   /* fates: three that the year can reach, two that only the ending can */
   .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
     margin-top: 18px; }
@@ -337,6 +376,53 @@
     margin: 0 auto 12px; opacity: 0.8; }
   .blink { animation: blink 1.2s steps(2, start) infinite; }
   @keyframes blink { to { visibility: hidden; } }
+
+  /* the year, run in front of you: one mark per dog, 1000 of them */
+  .yearsim { max-width: 1000px; margin: 46px auto 0; text-align: left; }
+  .ysfield { position: relative; border: 2px solid rgba(253,253,251,0.18);
+    padding: 12px; background: rgba(0,0,0,0.22); }
+  .ysfield canvas { width: 100%; height: auto; display: block; }
+  .ysflash { position: absolute; inset: 0; background: var(--red);
+    opacity: 0; pointer-events: none; }
+  .ysflash.fire { animation: cannonfire 900ms ease-out; }
+  @keyframes cannonfire {
+    0% { opacity: 0; } 8% { opacity: 0.72; } 100% { opacity: 0; } }
+  .ysboard { display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 18px; margin-top: 22px; }
+  .ysstat { border-top: 1px solid rgba(253,253,251,0.22); padding-top: 10px; }
+  .ysstat .k { display: block; font-size: 9px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.55; }
+  .ysstat b { display: block; font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(26px, 3.4vw, 40px); font-weight: 800; line-height: 1.1;
+    margin-top: 4px; }
+  .ysstat .s { font-size: 10px; letter-spacing: 1.5px; opacity: 0.5;
+    text-transform: uppercase; font-weight: 700; }
+  .c-live { color: var(--paper); }
+  .c-zom { color: var(--red); }
+  .c-ang { color: var(--gold); }
+  .ysbar { position: relative; height: 6px; margin-top: 20px;
+    background: rgba(253,253,251,0.16); }
+  /* the race, read in one glance: red is how much of the 210 the pack has
+     spent, gold is how much of the year it has spent doing it. Red ahead
+     of gold is a pack that ends the year early. */
+  .ysbar i { position: absolute; inset: 0 auto 0 0; width: 0;
+    background: var(--red); }
+  .ysbar u { position: absolute; top: -4px; bottom: -4px; left: 0;
+    width: 2px; background: var(--gold); }
+  .ysctl { display: flex; flex-wrap: wrap; align-items: center; gap: 18px;
+    margin-top: 24px; }
+  .ysctl label { font-size: 9px; letter-spacing: 2px; font-weight: 700;
+    text-transform: uppercase; opacity: 0.55; display: block; }
+  .ysctl output { display: block; margin-top: 5px; font-size: 13px;
+    letter-spacing: 0; text-transform: none; opacity: 1; font-weight: 500; }
+  .ysctl input { flex: 1; min-width: 190px; accent-color: var(--red); }
+  .ysverdict { max-width: none !important; margin: 22px 0 0 !important;
+    font-size: 14.5px; opacity: 0.72; text-align: left; min-height: 3.2em; }
+  .ysverdict b { opacity: 1; }
+  @media (max-width: 700px) {
+    .ysboard { grid-template-columns: repeat(2, 1fr); }
+    .ysctl { flex-direction: column; align-items: stretch; }
+  }
   @media (max-width: 700px) { .cannon .moon { width: 44px; height: 44px;
     top: 44px; right: 8%; } }
 
@@ -694,6 +780,24 @@
   painted the moment you arrived and it exists nowhere else. It isn't on
   any chain and nobody can buy it. But you already know what you could do
   to it. The button is further down the page.</p>
+
+  <div class="lifebox">
+    <label class="lifelbl" for="yourHandle">Put your name on the collar</label>
+    <div class="liferow">
+      <input id="yourHandle" type="text" placeholder="@yourhandle"
+        maxlength="18" autocomplete="off" spellcheck="false">
+      <button class="btn hot" id="lifeRun">Live its whole life</button>
+    </div>
+    <div class="lifeticks">
+      <span><b id="lifeDay">1</b> days lived</span>
+      <span><b id="lifeTraits">0</b> traits earned</span>
+    </div>
+    <p class="lifenote" id="lifeNote">The death clock never stops, so a dog
+    nobody sells becomes an angel eventually. Run its life and watch: the
+    weekly drop lands when it lands, old age comes when it comes, and the
+    plaque at the end carries the days and the name of whoever was still
+    holding.</p>
+  </div>
 </div></section>
 
 <section class="fatesec sheet" id="fates"><div class="wrap">
@@ -960,6 +1064,23 @@
     <a href="design/">two AIs are redrawing and judging the collection right
     now, in public &rarr;</a></span>
   </div>
+
+  <div class="packwall">
+    <div class="pwhead">
+      <button class="btn hot" id="pwRun">Paint the whole pack</button>
+      <div class="pwcount"><b id="pwDone">0</b> of <span id="pwTotal">1,000</span>
+        painted<em id="pwElapsed"></em></div>
+    </div>
+    <div class="pwbar"><i id="pwProg"></i></div>
+    <div class="pwfield" id="pwField" hidden>
+      <canvas id="pwCanvas"></canvas>
+    </div>
+    <p class="pwnote" id="pwNote">There is no folder of pictures behind this
+    page, so there is nothing to load: press the button and a thousand dogs
+    get painted from their seeds, one at a time, in front of you. It takes
+    about a minute on a laptop, and the minute is the proof. This is the
+    wall on adoption day, when every dog is still alive.</p>
+  </div>
 </div></section>
 
 <section class="medium" id="medium"><div class="wrap">
@@ -1171,6 +1292,30 @@
   So you'll watch it climb, and you still won't know which cannon is the
   one. You can't time an apocalypse. You can only pick a side before
   it.</p>
+
+  <div class="yearsim">
+    <div class="ysfield">
+      <canvas id="ysPack" width="1640" height="1040"></canvas>
+      <div class="ysflash" id="ysFlash"></div>
+    </div>
+    <div class="ysboard">
+      <div class="ysstat"><span class="k">Day</span><b id="ysDay">0</b><span class="s">of 365</span></div>
+      <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">1000</b></div>
+      <div class="ysstat"><span class="k">Zombies</span><b id="ysZom" class="c-zom">0</b><span class="s">of 210</span></div>
+      <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
+    </div>
+    <div class="ysbar"><i id="ysProg"></i><u id="ysMark"></u></div>
+    <div class="ysctl">
+      <button class="btn hot" id="ysRun">Run the year</button>
+      <label for="ysRate">How often the pack sells
+        <output id="ysRateOut">one every 42 hours</output></label>
+      <input id="ysRate" type="range" min="10" max="150" value="58">
+    </div>
+    <p class="ysverdict" id="ysVerdict">A thousand dogs, one to a mark.
+    Pick how often somebody sells and watch the year run. Nothing here is
+    scripted: the deaths and the sales are rolled night by night, and the
+    cannon fires when it fires.</p>
+  </div>
 </div></section>
 
 
@@ -1448,19 +1593,148 @@ const yourCv = document.getElementById('yourDog');
 const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
 
+/* The plaque an angel carries: the days it lived and the handle of
+   whoever was still holding when it went. Painted over the finished dog,
+   because that is where it lives on the piece. */
+function plaque(cv, days, handle) {
+  const g = cv.getContext('2d'), W = cv.width;
+  const h = Math.round(W * 0.115), pad = Math.round(W * 0.055);
+  const w = W - pad * 2, x = pad, y = Math.round(W * 0.045);
+  g.save();
+  g.translate(x + w / 2, y + h / 2);
+  g.rotate(-0.007);
+  g.translate(-w / 2, -h / 2);
+  g.fillStyle = 'rgba(20,16,12,0.30)';
+  g.fillRect(5, 6, w, h);
+  const grad = g.createLinearGradient(0, 0, 0, h);
+  grad.addColorStop(0, '#f6cf6a');
+  grad.addColorStop(0.52, '#e0ae3a');
+  grad.addColorStop(1, '#c8901f');
+  g.fillStyle = grad;
+  g.fillRect(0, 0, w, h);
+  g.strokeStyle = 'rgba(30,22,10,0.72)';
+  g.lineWidth = Math.max(2, W * 0.004);
+  g.strokeRect(0, 0, w, h);
+  g.fillStyle = '#2a1f0c';
+  g.textBaseline = 'middle';
+  g.font = '700 ' + Math.round(h * 0.34) + 'px "Instrument Sans", sans-serif';
+  g.textAlign = 'left';
+  g.fillText(handle, h * 0.36, h * 0.5);
+  g.textAlign = 'right';
+  g.fillText(days.toLocaleString() + ' DAYS', w - h * 0.36, h * 0.5);
+  g.restore();
+}
+
+let ydays = 1, ytraits = 0;
+
 function renderYours() {
   yourCv.width = 800; yourCv.height = 800;
-  draw(yourCv, yseed, ystate);
+  draw(yourCv, yseed, ystate === 'angel' ? 'angel' : ystate);
+  if (ystate === 'angel') plaque(yourCv, ydays, yhandle());
   yourCv.classList.add('framedpick');
-  draw(chooseCv, yseed, ystate);
+  draw(chooseCv, yseed, ystate === 'angel' ? 'angel' : ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourIntro').textContent = yname;
   document.getElementById('yourState').textContent =
-    ystate === 'faithful' ? 'alive · yours' : 'zombie · you did this';
+    ystate === 'faithful' ? 'alive \u00b7 yours'
+      : ystate === 'angel' ? 'angel \u00b7 ' + ydays.toLocaleString() + ' days'
+      : 'zombie \u00b7 you did this';
   chooseLine.textContent = ystate === 'faithful'
     ? 'This is ' + yname + '. This is the dog you\u2019d be doing it to.'
+    : ystate === 'angel'
+    ? yname + ' went of old age, with your name on the plaque.'
     : 'It\u2019s done. It stays done. ' + yname + ' remembers nothing. You will.';
 }
+
+/* Your dog's whole life.
+
+   The same two clocks the rules give a living dog, run fast: a 0.03%
+   chance of dying every night, and a 0.2% chance every week of being
+   handed one more rare trait. Nothing is scripted, so the day it goes
+   and the traits it collects are different every time. It always ends
+   the same way, because the death clock never stops. */
+(function () {
+  const hIn = document.getElementById('yourHandle');
+  const btn = document.getElementById('lifeRun');
+  if (!hIn || !btn) return;
+  const dayEl = document.getElementById('lifeDay');
+  const trEl = document.getElementById('lifeTraits');
+  const note = document.getElementById('lifeNote');
+  const DEATH = 0.0003, TRAIT = 0.002, PER_SEC = 420;
+  let running = false, raf = 0, last = 0, acc = 0, lastTrait = 0;
+
+  hIn.value = localStorage.getItem('alldogs_handle') || '';
+  hIn.addEventListener('input', () => {
+    localStorage.setItem('alldogs_handle', hIn.value);
+    if (ystate === 'angel') renderYours();
+  });
+
+  function stop(msg) {
+    running = false; cancelAnimationFrame(raf);
+    btn.textContent = 'Live another life';
+    note.innerHTML = msg;
+  }
+
+  function step(now) {
+    if (!running) return;
+    if (!last) last = now;
+    acc += (now - last) / 1000 * PER_SEC;
+    last = now;
+    while (acc >= 1) {
+      acc -= 1; ydays++;
+      if (ydays % 7 === 0 && Math.random() < TRAIT) {
+        ytraits++; lastTrait = ydays;
+      }
+      if (Math.random() < DEATH) {
+        ystate = 'angel';
+        renderYours();
+        dayEl.textContent = ydays.toLocaleString();
+        trEl.textContent = ytraits;
+        stop('<b>' + yname + ' died of old age on day '
+          + ydays.toLocaleString() + '.</b> That is '
+          + (ydays / 365).toFixed(1) + ' years of being nobody\u2019s trade, '
+          + 'and the plaque across the top says so, with your name on it. '
+          + (ytraits === 0
+            ? 'The weekly drop never landed on this one; most dogs it never does.'
+            : ytraits === 1
+            ? 'The weekly drop found it once along the way.'
+            : 'The weekly drop found it ' + ytraits + ' times along the way.'));
+        return;
+      }
+    }
+    dayEl.textContent = ydays.toLocaleString();
+    trEl.textContent = ytraits;
+    note.innerHTML = lastTrait && ydays - lastTrait < 400
+      ? '<b>A trait landed on day ' + lastTrait.toLocaleString() + '.</b> '
+        + 'Nothing you did earned it and nothing could have made it likelier. '
+        + 'It came because the dog was still here.'
+      : yname + ' is ' + (ydays / 365).toFixed(1) + ' years old and still '
+        + 'nobody\u2019s trade.';
+    raf = requestAnimationFrame(step);
+  }
+
+  btn.addEventListener('click', () => {
+    if (running) { stop('Stopped at day ' + ydays.toLocaleString() + '.'); return; }
+    if (ystate === 'zombie') {
+      note.innerHTML = '<b>This one is a zombie.</b> Its clock stopped the '
+        + 'day it was sold: no more days, no more traits, and no plaque is '
+        + 'ever coming. Only a dog nobody sold gets to grow old.';
+      return;
+    }
+    if (ystate === 'angel') { ydays = 1; ytraits = 0; lastTrait = 0;
+      ystate = 'faithful'; renderYours(); }
+    running = true; last = 0; acc = 0;
+    btn.textContent = 'Stop';
+    raf = requestAnimationFrame(step);
+  });
+})();
+
+function yhandle() {
+  const raw = (document.getElementById('yourHandle') || {}).value || '';
+  const clean = raw.trim().replace(/^@+/, '').replace(/[^A-Za-z0-9_]/g, '');
+  return '@' + (clean || 'nobody').toUpperCase();
+}
+
 renderYours();
 
 document.querySelector('.bpanel.red').addEventListener('click', () => {
@@ -1844,6 +2118,244 @@ paintWhenNear(document.querySelector('footer'), () => {
     parade.append(cv);
   });
 });
+
+/* The whole pack, painted in front of you.
+
+   The claim the rest of the page makes about the medium is that there is
+   no image file anywhere: a dog is code and a number. This is that claim
+   with the receipts. Every tile is a real call into the same painter that
+   draws every other dog here, and it is slow for the honest reason, which
+   is that a thousand paintings are being made while you watch. Painted in
+   scattered order so the wall resolves rather than wipes, one dog per
+   frame so the page stays usable, and stoppable, because nobody should be
+   trapped in a minute they did not want. */
+(function () {
+  const btn = document.getElementById('pwRun');
+  if (!btn) return;
+  const cv = document.getElementById('pwCanvas');
+  const field = document.getElementById('pwField');
+  const doneEl = document.getElementById('pwDone');
+  const progEl = document.getElementById('pwProg');
+  const elapsedEl = document.getElementById('pwElapsed');
+  const note = document.getElementById('pwNote');
+  const narrow = matchMedia('(max-width: 700px)').matches;
+  /* a phone paints the same dog several times slower, so it gets a pack it
+     can finish rather than one it has to be rescued from */
+  const TOTAL = narrow ? 240 : 1000;
+  const COLS = narrow ? 12 : 40;
+  const ROWS = Math.ceil(TOTAL / COLS);
+  const TILE = 46;
+  let order = [], seeds = [], i = 0, running = false, raf = 0, t0 = 0;
+  let ctx = null, scratch = null;
+
+  document.getElementById('pwTotal').textContent = TOTAL.toLocaleString();
+
+  function setup() {
+    cv.width = COLS * TILE; cv.height = ROWS * TILE;
+    ctx = cv.getContext('2d');
+    ctx.fillStyle = '#ddd8cc';
+    ctx.fillRect(0, 0, cv.width, cv.height);
+    scratch = document.createElement('canvas');
+    scratch.width = TILE; scratch.height = TILE;
+    order = Array.from({ length: TOTAL }, (_, k) => k);
+    shuffle(order);
+    seeds = Array.from({ length: TOTAL }, () => rollSeed());
+    i = 0;
+  }
+
+  function tick() {
+    if (!running) return;
+    if (i >= TOTAL) return finish();
+    const slot = order[i];
+    draw(scratch, seeds[i], 'faithful');
+    ctx.drawImage(scratch, (slot % COLS) * TILE, ((slot / COLS) | 0) * TILE);
+    i++;
+    doneEl.textContent = i.toLocaleString();
+    progEl.style.width = (i / TOTAL * 100) + '%';
+    const secs = (performance.now() - t0) / 1000;
+    elapsedEl.textContent = secs.toFixed(0) + 's';
+    raf = requestAnimationFrame(tick);
+  }
+
+  function finish() {
+    running = false;
+    btn.textContent = 'Paint a different pack';
+    const secs = ((performance.now() - t0) / 1000).toFixed(0);
+    note.innerHTML = '<b>' + TOTAL.toLocaleString() + ' dogs, painted in '
+      + secs + ' seconds, none of which existed when you opened this page.</b> '
+      + 'Every one came out of a number and the same few hundred lines of '
+      + 'drawing code. Press it again and you get a different thousand, '
+      + 'because the seeds are rolled fresh each time. On adoption day this '
+      + 'is the wall: all of them alive, and the year not started.';
+  }
+
+  btn.addEventListener('click', () => {
+    if (running) {
+      running = false; cancelAnimationFrame(raf);
+      btn.textContent = 'Keep painting';
+      note.innerHTML = '<b>Stopped at ' + i.toLocaleString() + '.</b> The '
+        + 'blank squares are dogs that have not been painted yet, not dogs '
+        + 'that failed to load. There is nothing to load.';
+      return;
+    }
+    if (i === 0 || i >= TOTAL) { setup(); t0 = performance.now(); }
+    else { t0 = performance.now() - 0; }
+    field.hidden = false;
+    running = true;
+    btn.textContent = 'Stop';
+    note.innerHTML = 'Painting. Each square is one call into the painter, '
+      + 'so the wall fills at the speed a machine can actually make a '
+      + 'thousand paintings.';
+    raf = requestAnimationFrame(tick);
+  });
+})();
+
+/* The year, run in front of you.
+
+   One mark per dog, a thousand of them. Every night each living dog
+   rolls the same 0.03% chance of dying that the rules give it, and the
+   pack sells at whatever rate you set, so nothing here is scripted and
+   two runs of the same slider do not match. The apocalypse fires the
+   night the count reaches 210, which is the only scripted thing in it,
+   because that is the rule. */
+(function () {
+  const cv = document.getElementById('ysPack');
+  if (!cv) return;
+  const g = cv.getContext('2d');
+  const N = 1000, COLS = 40, ROWS = 25, DAYS = 365, TARGET = 210;
+  const DEATH = 0.0003;
+  const LIVING = 0, ZOMBIE = 1, ANGEL = 2;
+  const INK = { 0: 'rgba(253,253,251,0.80)', 1: '#ff3b2f', 2: '#f0b429' };
+
+  const el = id => document.getElementById(id);
+  const field = new Uint8Array(N);
+  let day = 0, zombies = 0, angels = 0, living = N;
+  let running = false, raf = 0, acc = 0, last = 0, over = null;
+
+  const cw = cv.width / COLS, ch = cv.height / ROWS;
+  const mk = Math.min(cw, ch) * 0.62;
+
+  function paint() {
+    g.clearRect(0, 0, cv.width, cv.height);
+    for (let i = 0; i < N; i++) {
+      const x = (i % COLS) * cw + (cw - mk) / 2;
+      const y = ((i / COLS) | 0) * ch + (ch - mk) / 2;
+      g.fillStyle = INK[field[i]];
+      g.fillRect(x, y, mk, mk);
+    }
+  }
+
+  function rate() { return el('ysRate').value / 100; }
+
+  function gap(perDay) {
+    const h = 24 / perDay;
+    return h < 24 ? 'one every ' + h.toFixed(0) + ' hours'
+      : 'one every ' + (h / 24).toFixed(1) + ' days';
+  }
+
+  function board() {
+    el('ysDay').textContent = day;
+    el('ysLiving').textContent = living;
+    el('ysZom').textContent = zombies;
+    el('ysAng').textContent = angels;
+    el('ysProg').style.width = Math.min(100, zombies / TARGET * 100) + '%';
+    el('ysMark').style.left = (day / DAYS * 100) + '%';
+  }
+
+  /* one night: the reaper first, then whoever decided to sell */
+  function night() {
+    day++;
+    const perDay = rate();
+    for (let i = 0; i < N; i++) {
+      if (field[i] !== LIVING) continue;
+      if (Math.random() < DEATH) { field[i] = ANGEL; angels++; living--; }
+    }
+    const pSell = living > 0 ? perDay / living : 0;
+    for (let i = 0; i < N; i++) {
+      if (field[i] !== LIVING) continue;
+      if (Math.random() < pSell) { field[i] = ZOMBIE; zombies++; living--; }
+    }
+    if (zombies >= TARGET) return 'apocalypse';
+    if (day >= DAYS) return 'survived';
+    return null;
+  }
+
+  function fireTheCannon() {
+    const flash = el('ysFlash');
+    flash.classList.remove('fire');
+    void flash.offsetWidth;
+    flash.classList.add('fire');
+    let taken = 0;
+    for (let i = 0; i < N; i++) {
+      if (field[i] === LIVING) { field[i] = ZOMBIE; taken++; }
+    }
+    zombies += taken; living = 0;
+    return taken;
+  }
+
+  function finish(how) {
+    running = false;
+    el('ysRun').textContent = 'Run it again';
+    if (how === 'apocalypse') {
+      const taken = fireTheCannon();
+      el('ysVerdict').innerHTML = '<b>The cannon fired on day ' + day
+        + '.</b> The count reached two hundred and ten, and the horde took '
+        + 'the ' + taken + ' dogs that were still alive, all at the same '
+        + 'midnight. ' + angels + ' angels were already out of reach. '
+        + 'Nobody who held got anything for holding.';
+    } else {
+      el('ysVerdict').innerHTML = '<b>The zombies lost.</b> The year ended '
+        + (TARGET - zombies) + ' short of the line. ' + living + ' dogs are '
+        + 'still alive and can never be turned by a sale again, ' + angels
+        + ' died of old age with a name on the plaque, and from here a '
+        + 'living dog that is traded becomes a vampire, or one time in ten '
+        + 'an immortal.';
+    }
+    board(); paint();
+  }
+
+  function reset() {
+    field.fill(LIVING);
+    day = 0; zombies = 0; angels = 0; living = N; over = null;
+    board(); paint();
+  }
+
+  /* about twenty seconds for the year, so a night is a heartbeat */
+  const NIGHTS_PER_SEC = 18;
+  function tick(now) {
+    if (!running) return;
+    if (!last) last = now;
+    acc += (now - last) / 1000 * NIGHTS_PER_SEC;
+    last = now;
+    while (acc >= 1 && !over) { acc -= 1; over = night(); }
+    board(); paint();
+    if (over) { finish(over); return; }
+    raf = requestAnimationFrame(tick);
+  }
+
+  el('ysRun').addEventListener('click', () => {
+    if (running) {
+      running = false; cancelAnimationFrame(raf);
+      el('ysRun').textContent = 'Keep going';
+      return;
+    }
+    if (over || day >= DAYS) reset();
+    if (day === 0) {
+      el('ysVerdict').textContent = 'The year is running. Every mark is a '
+        + 'dog, and the gold line is how much of the year has gone.';
+    }
+    running = true; last = 0;
+    el('ysRun').textContent = 'Stop';
+    raf = requestAnimationFrame(tick);
+  });
+
+  const out = el('ysRateOut');
+  function showRate() { out.textContent = gap(rate()); }
+  el('ysRate').addEventListener('input', showRate);
+  showRate();
+
+  paintWhenNear(document.querySelector('.cannon'), () => { board(); paint(); });
+})();
 
 /* mobile: the odds fold */
 if (matchMedia('(max-width: 700px)').matches) {
