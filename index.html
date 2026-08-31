@@ -62,17 +62,34 @@
     height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
   .herobanner canvas { position: absolute; left: 0; top: 50%; width: 100%;
     height: auto; transform: translateY(-45%); display: block; }
-  /* the title is a small tag pinned to the painting, like a collar tag */
-  .herobanner h1 { position: absolute; left: 20px; top: 20px;
+  /* the title is a collar tag hung on the painting, swinging on its string */
+  .herobanner h1 { position: absolute; left: 34px; top: 34px;
     color: var(--ink); background: var(--paper);
-    font-size: 15px; line-height: 1; letter-spacing: 1.5px;
-    padding: 10px 14px 9px; border: 1.5px solid var(--ink);
-    border-radius: 3px; box-shadow: 2px 3px 0 rgba(0,0,0,0.28);
-    transform: rotate(-1.2deg); }
-  .hero h1 .tm { font-size: 0.6em; vertical-align: super; letter-spacing: 0; }
+    font-size: 30px; line-height: 1; letter-spacing: 2px;
+    padding: 24px 26px 18px; border: 2px solid var(--ink);
+    border-radius: 12px; box-shadow: 3px 5px 0 rgba(0,0,0,0.3);
+    transform-origin: 50% -34px;
+    animation: tagsway 6.5s ease-in-out infinite alternate; }
+  @keyframes tagsway {
+    from { transform: rotate(-2.4deg); } to { transform: rotate(1.6deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .herobanner h1 { animation: none; transform: rotate(-1.4deg); } }
+  /* the string it hangs from */
+  .herobanner h1::before { content: ""; position: absolute;
+    left: calc(50% - 1px); top: -34px; width: 2px; height: 46px;
+    background: rgba(20,16,12,0.55); }
+  /* the punched rivet hole */
+  .herobanner h1::after { content: ""; position: absolute;
+    left: calc(50% - 5px); top: 6px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--paper);
+    border: 2px solid var(--ink); box-sizing: border-box; }
+  .hero h1 .tm { font-size: 0.5em; vertical-align: super; letter-spacing: 0; }
   @media (max-width: 700px) {
-    .herobanner h1 { left: 12px; top: 12px; font-size: 13px;
-      padding: 8px 11px 7px; } }
+    .herobanner h1 { left: 16px; top: 24px; font-size: 19px;
+      padding: 16px 16px 12px; border-radius: 9px;
+      transform-origin: 50% -24px; }
+    .herobanner h1::before { top: -24px; height: 34px; }
+    .herobanner h1::after { top: 4px; width: 8px; height: 8px; } }
   .herocap { display: flex; justify-content: space-between;
     margin-top: 14px; font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
@@ -231,7 +248,7 @@
     position: relative; }
   .step .n { position: absolute; top: 18px; right: 0; font-size: 10px;
     font-weight: 700; letter-spacing: 2px; opacity: 0.4; }
-  .rules .step .n::after { content: "/07"; }
+  .rules .step .n::after { content: "/06"; }
   .drop .step .n::after { content: "/03"; }
   .step h3 { font-family: "Instrument Sans", sans-serif;
     font-size: 13px; letter-spacing: 1.5px; line-height: 1.5;
@@ -477,7 +494,7 @@
     <a class="btn" href="#fates">Meet the four fates</a>
     <a class="btn" href="design/">Watch the machine draw</a>
   </div>
-</div>
+  </div>
 </div></section>
 
 <section class="creed"><div class="wrap">
@@ -487,12 +504,12 @@
     <div class="lrow">
       <canvas class="cutout" id="cr_adopt" width="500" height="500"></canvas>
       <p>Start by <b class="blue">adopting your dog</b>.</p>
-    </div>
+  </div>
     <div class="lrow">
       <div class="cpair">
         <canvas class="cutout" id="cr_love" width="500" height="500"></canvas>
         <canvas class="cutout" id="cr_flip" width="500" height="500"></canvas>
-      </div>
+  </div>
       <p>Then decide: <b class="blue">love it</b>, or <b class="red">flip it</b>.
       <span class="lsub">(To flip it, you have to put it down first and make
       it a zombie. Only zombies can be sold.)</span></p>
@@ -709,12 +726,9 @@
       <div class="lbl">Fate</div>
       <p>The primary attribute. A zombie exists because someone chose the
       money. A ghost exists because the world fell. An angel exists because
-      nature took the dog. Faithful doesn't last: the death clock never
-      stops, not even after the year, so a faithful dog someday earns its
-      wings, unless its owner refuses the win money at the door and makes
-      it a <b>vampire</b> or an <b>immortal</b>: the two fates that never
-      die, only offered at the year's end, never before. The collection
-      ends in wings, fangs, and light.</p>
+      nature took the dog. And faithful is the one fate that doesn't last:
+      the death clock never stops, not even after the year, so someday
+      every faithful dog becomes an angel. The collection ends in wings.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">Lived</div>
@@ -727,20 +741,14 @@
     </div>
     <div class="stackcard">
       <div class="lbl">Wardrobe</div>
-      <p>Decided at mint, and then every midnight after. At mint each
-      dog's seed rolls three independent slots (headwear, worn, held) at a
-      third of the odds printed below, so dogs are born nearly bare. From
-      then on, every living dog rolls again each midnight at the printed
-      odds &times; 0.003: one full wardrobe's worth of chances for every
-      year lived. Old dogs get rich; that is what living is worth here.
-      Every item carries its own accent color, and the held items are
-      interactions: the dog reads the book, hugs the balloon, holds the
-      drawing up for you. <b>The crown is a 0.09% roll.</b> Twenty dogs
-      are one of ones whose costumes ignore the first two slots, but even
-      they roll the held one. Zombies that traded their refund at the turn
-      carry the zombie scarcities, a second wardrobe no living dog can
-      wear. Vampires and immortals stop the clock: their wardrobe is
-      whatever the dog wore the night it chose eternity.</p>
+      <p>The one thing decided at mint. Each dog's seed rolls three
+      independent slots (headwear, worn, held) at the odds printed below,
+      published before the first dog exists. Every item carries its own
+      accent color, and the held items are interactions: the dog reads the
+      book, hugs the balloon, holds the drawing up for you. <b>The crown is
+      a 0.09% roll.</b> Twenty dogs are one of ones whose costumes ignore
+      the first two slots, but even they roll the held one. A crowned
+      zombie with a pocket knife is a story nobody can plan.</p>
     </div>
     <div class="stackcard wide">
       <div class="lbl">On the piece</div>
@@ -750,7 +758,7 @@
     </div>
   </div>
   <div class="chipgroup">
-    <div class="glbl">The odds &middot; headwear (a third at mint, then nightly at &times;0.003)</div>
+    <div class="glbl">The odds &middot; headwear (each dog rolls once)</div>
     <div class="chips">
       <span class="chip grail">Crown <b>0.09%</b></span>
       <span class="chip">Papal mitre <b>0.21%</b></span>
@@ -920,11 +928,9 @@
     <div class="step"><div class="n">01</div>
       <h3>Reservation day.</h3>
       <p>One day, announced ahead of time. Verify your Twitter handle and
-      reserve dogs in blocks of 1, 10, or 100, adoption fee $25 each. A
-      block is a kennel: it lives together and, if it ever turns, it turns
-      together. A hold goes on your card and nothing is charged yet. Nobody
-      races anybody: everyone who shows up that day stands in the same
-      line.</p></div>
+      reserve up to 100 dogs, adoption fee $25 each. A hold goes on your card and
+      nothing is charged yet. Nobody races anybody: everyone who shows up
+      that day stands in the same line.</p></div>
     <div class="step"><div class="n">02</div>
       <h3>The allocation.</h3>
       <p>Orders are read, not raced. Reservations get filled by the
@@ -975,14 +981,8 @@
       new zombie can be listed and sold on top of the $20, your handle
       still on its collar. And zombies are the only supply there is, so the
       better the pack holds the line, the scarcer and pricier zombies get,
-      and the louder the market whispers at everyone still holding. Two
-      more things the night you turn. First, turning is a kennel decision:
-      a block of ten turns all ten or none, and a hundred turns a hundred.
-      Second, each kennel is offered one trade at the door: hand back the
-      refund, and the zombies roll the <b>zombie scarcities</b> instead, a
-      second wardrobe that exists on no living dog and can never be bought
-      later. Cash or curse, sealed with the turn. The turn is
-      signed.</p></div>
+      and the louder the market whispers at everyone still holding. The
+      turn is signed.</p></div>
     <div class="step"><div class="n">04</div>
       <h3>Hold the line for a year and everybody gets paid.</h3>
       <p>The same $20 the killers take is waiting for every living dog. If
@@ -992,23 +992,12 @@
       take: the $5 from every adoption, up to $50,000. He makes nothing.
       That's the good ending.</p></div>
     <div class="step"><div class="n">05</div>
-      <h3>Win, and every survivor picks a door.</h3>
-      <p>If the dogs win the year, each surviving dog cashes out through
-      one of three doors. Take the money, and the dog stays mortal: the
-      death clock keeps running, the wardrobe keeps growing, and someday
-      it earns its wings. Or refuse the money and convert: <b>vampire</b>
-      or <b>immortal</b>, the two fates that never die and never age.
-      Their wardrobe freezes the night they choose eternity. Money left
-      unclaimed 100 days after the year ends is forfeited. Eternity is
-      bought with your whole payout; wings only ever come to the
-      mortal.</p></div>
-    <div class="step"><div class="n">06</div>
       <h3>At one third, the apocalypse.</h3>
       <p>If a third of the dogs are ever turned, the horde takes every living
       dog that same night. They come back as ghosts: still yours, tradable,
       never refunded. The $20 that was waiting for each of them goes to the
       artist instead. Natural deaths never count toward the third.</p></div>
-    <div class="step"><div class="n">07</div>
+    <div class="step"><div class="n">06</div>
       <h3>The horde count updates once a night.</h3>
       <p>You never see turns in real time. They're sealed as they happen,
       and once every midnight the new count is published in a single batch,
@@ -1041,7 +1030,6 @@
       <div class="big">$20&hairsp;+</div>
       <p>In a year, plus your share of the artist's entire take. If the
       dogs make it.</p>
-      <p>Win, and you pick a door: the money, or eternity.</p>
       <p>Your dog lives, trades, marked faithful.</p>
       <p class="f">If the horde reaches a third first, your dog is taken with
       all the rest, and no refund ever comes. That's what holding costs.</p>
