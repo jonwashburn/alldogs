@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ALL DOGS — 10,000 dogs. One year. One zombie apocalypse.</title>
-<meta name="description" content="Adopt a dog you can never sell. Turn it into a zombie any night for cash. If a third of the dogs turn, the apocalypse takes the rest. 10,000 generative dogs on Ethereum, real names on the collars, one year to hold the line.">
+<title>ALL DOGS — 1,000 dogs. One year. One zombie apocalypse.</title>
+<meta name="description" content="Adopt a dog, one per person. Selling it inside the first year turns it into a zombie. If 210 of the thousand turn, the apocalypse takes the rest. 1,000 generative dogs on Ethereum, real names on the collars, one year to hold the line.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
-<meta property="og:title" content="ALL DOGS — 10,000 dogs. One year. One zombie apocalypse.">
-<meta property="og:description" content="A year-long performance played with real money. Adopt a dog you can never sell, or turn it for cash. At one third, the apocalypse.">
+<meta property="og:title" content="ALL DOGS — 1,000 dogs. One year. One zombie apocalypse.">
+<meta property="og:description" content="A year-long performance. Adopt a dog you can never sell alive. At 210 zombies, the apocalypse.">
 <meta property="og:image" content="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_og_20260830_41be44aaeaaa/alldogs_og.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --paper: #fdfdfb; --ink: #111111; --hair: #dddad0;
-    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; --ghost: #8b95a3;
+    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429;
   }
   html { scroll-behavior: smooth; }
   html, body { background: var(--paper); color: var(--ink); }
@@ -30,6 +30,12 @@
   ::selection { background: var(--gold); color: var(--ink); }
   .wrap { max-width: 1260px; margin: 0 auto; padding: 0 32px; }
   section { padding: 52px 0 56px; position: relative; }
+  /* A dog perched on the next section's line hangs back over this one.
+     Most sections stop well above it; these two run their long column
+     right into the dog, so they leave it the room it needs. */
+  .why { padding-bottom: 140px; }
+  .rules { padding-bottom: 120px; }
+  .fatesec { padding-bottom: 74px; }
   canvas.brush { display: block; width: min(1196px, calc(100% - 64px));
     margin: 0 auto; height: 14px; }
   h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase;
@@ -143,10 +149,27 @@
     letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; }
   .yours .lede { margin-left: auto; margin-right: auto; }
 
-  /* fates: four plates */
-  .fates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px;
-    margin-top: 42px; }
-  .fate { display: flex; flex-direction: column; }
+  /* fates: three that the year can reach, two that only the ending can */
+  .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+    margin-top: 18px; }
+  /* the two unpainted fates sit two-up with the explanation filling the
+     third column, so the row reads complete instead of cut off */
+  .pendnote { margin: 0; font-size: 14.5px; line-height: 1.62;
+    opacity: 0.72; align-self: center; }
+  .pendnote a { color: inherit; }
+  .faterow { font-family: "Instrument Sans", sans-serif; font-size: 10.5px;
+    letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
+    opacity: 0.5; margin-top: 46px; padding-bottom: 7px;
+    border-bottom: 2px solid var(--ink); }
+  .fate { display: flex; flex-direction: column; position: relative; }
+  /* the vampire and the immortal are written but not yet painted: the
+     canvas shows the living dog they were, dimmed, so nobody mistakes it
+     for the finished look */
+  .fate.pending canvas { opacity: 0.42; filter: saturate(0.35); }
+  .fate .soon { position: absolute; top: 10px; left: 10px; z-index: 2;
+    font-family: "Instrument Sans", sans-serif; font-size: 9px;
+    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+    background: var(--ink); color: var(--paper); padding: 5px 9px; }
   .fate canvas { width: 100%; height: auto; display: block; }
   .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink);
     margin-top: 14px; flex: 1; }
@@ -158,7 +181,8 @@
     text-transform: uppercase; font-weight: 700; padding: 5px 10px;
     border: 1px solid currentColor; display: inline-block;
     margin-top: 12px; }
-  @media (max-width: 900px) { .fates { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) { .fates, .fates.after {
+    grid-template-columns: repeat(2, 1fr); max-width: none; } }
 
   .stack { margin-top: 52px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -220,7 +244,7 @@
     margin-top: 12px; font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; }
   .flnote { margin: 0; font-size: 14.5px; align-self: center;
-    opacity: 0.72; line-height: 1.62; }
+    opacity: 0.72; line-height: 1.62; grid-column: 1 / -1; }
   .specs { margin-top: 46px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
   .spec { border-top: 1px solid var(--ink); padding: 16px 0 0; }
@@ -248,7 +272,7 @@
     position: relative; }
   .step .n { position: absolute; top: 18px; right: 0; font-size: 10px;
     font-weight: 700; letter-spacing: 2px; opacity: 0.4; }
-  .rules .step .n::after { content: "/06"; }
+  .rules .step .n::after { content: "/09"; }
   .drop .step .n::after { content: "/03"; }
   .step h3 { font-family: "Instrument Sans", sans-serif;
     font-size: 13px; letter-spacing: 1.5px; line-height: 1.5;
@@ -258,11 +282,11 @@
   @media (max-width: 860px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
 
   /* the choice */
-  .samecash { font-family: "Instrument Sans", sans-serif;
+  .choiceline { font-family: "Instrument Sans", sans-serif;
     font-size: clamp(14px, 1.8vw, 18px); font-weight: 700;
     max-width: 48ch; margin-bottom: 36px; text-transform: uppercase;
     letter-spacing: 1.5px; line-height: 1.6; }
-  .samecash em { font-style: normal; color: var(--red); }
+  .choiceline em { font-style: normal; color: var(--red); }
   .chooseyours { max-width: 340px; margin: 0 auto 44px; }
   .chooseyours canvas { width: 100%; height: auto; display: block; }
   .chooseyours p { border-top: 1px solid var(--ink); margin-top: 12px;
@@ -313,27 +337,16 @@
   @media (max-width: 700px) { .cannon .moon { width: 44px; height: 44px;
     top: 44px; right: 8%; } }
 
-  /* confess: giant figures on white */
-  .confess .row { display: flex; gap: 80px; flex-wrap: wrap;
-    margin: 36px 0 40px; }
-  .confess .money { border-top: 1px solid var(--ink);
-    padding-top: 20px; min-width: 210px; }
-  .confess .money b { display: block;
-    font-family: "Shantell Sans", sans-serif;
-    font-size: clamp(52px, 7.4vw, 108px); line-height: 0.98;
-    font-weight: 800; letter-spacing: -0.01em; color: var(--red); }
-  .confess .money span { display: block; margin-top: 12px; font-size: 10px;
-    letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
-    opacity: 0.5; }
+  /* confess */
   .confess p.line { font-family: "Shantell Sans", sans-serif;
     font-size: clamp(20px, 2.8vw, 34px); font-weight: 700;
     max-width: 30ch; text-transform: uppercase; letter-spacing: 0;
-    line-height: 1.28; }
+    line-height: 1.28; margin-top: 36px; }
   .confess p.fine { font-size: 15px; margin-top: 28px; max-width: 60ch;
     opacity: 0.7; line-height: 1.62; }
   .confess .sig { font-family: "Shantell Sans", sans-serif;
     font-weight: 700; font-size: 17px; margin-top: 30px; }
-  .confess .pull { position: absolute; right: 4%; top: 388px; width: 280px;
+  .confess .pull { position: absolute; right: 4%; top: 220px; width: 280px;
     font-family: "Shantell Sans", sans-serif; font-weight: 700;
     font-size: 30px; line-height: 1.32; transform: rotate(-2deg);
     color: var(--red); display: none; }
@@ -435,7 +448,13 @@
     right: -30px; text-align: center; margin-top: 9px; font-size: 9px;
     letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
     opacity: 0.5; text-align: center; }
+  /* a dog standing in the margin has no room for a label that spills
+     30px each way, so its tag hugs it */
+  .straywrap.tightlbl .slbl { left: 0; right: 0; }
   @media (max-width: 1160px) { .straywrap { display: none; } }
+  /* below this the margin is too thin to hold a dog worth looking at, so
+     the pack steps out rather than shrinking to a smudge */
+  @media (max-width: 1399px) { .straywrap.packdog { display: none; } }
 
   /* bred, not drawn */
   .bredgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
@@ -508,8 +527,8 @@
 <body>
 
 <div class="ribbon"><span>
-  NIGHT 214 &nbsp;&middot;&nbsp; POT: PUBLIC &nbsp;&middot;&nbsp; HORDE COUNT: <b class="r">SEALED</b> &nbsp;&middot;&nbsp; <b class="g">38 ANGELS</b> &nbsp;&middot;&nbsp; AT ONE THIRD, THE APOCALYPSE &nbsp;&middot;&nbsp; THE CANNON FIRES AT MIDNIGHT &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
-  NIGHT 214 &nbsp;&middot;&nbsp; POT: PUBLIC &nbsp;&middot;&nbsp; HORDE COUNT: <b class="r">SEALED</b> &nbsp;&middot;&nbsp; <b class="g">38 ANGELS</b> &nbsp;&middot;&nbsp; AT ONE THIRD, THE APOCALYPSE &nbsp;&middot;&nbsp; THE CANNON FIRES AT MIDNIGHT &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  DAY 214 OF 365 &nbsp;&middot;&nbsp; 1,000 DOGS &nbsp;&middot;&nbsp; ZOMBIES: <b class="r">147 OF 210</b> &nbsp;&middot;&nbsp; <b class="g">58 ANGELS</b> &nbsp;&middot;&nbsp; 795 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS ONE SALE EVERY 42 HOURS &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 35 &nbsp;&middot;&nbsp; <b class="r">210 LANDS ON DAY 306</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  DAY 214 OF 365 &nbsp;&middot;&nbsp; 1,000 DOGS &nbsp;&middot;&nbsp; ZOMBIES: <b class="r">147 OF 210</b> &nbsp;&middot;&nbsp; <b class="g">58 ANGELS</b> &nbsp;&middot;&nbsp; 795 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS ONE SALE EVERY 42 HOURS &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 35 &nbsp;&middot;&nbsp; <b class="r">210 LANDS ON DAY 306</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
 </span></div>
 
 <section class="hero">
@@ -519,14 +538,14 @@
   </div>
   <div class="wrap">
   <div class="herocap"><span id="heroHandle">&nbsp;</span><span id="heroMeta">&nbsp;</span></div>
-  <p class="tagline">10,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $25</p>
-  <p class="sub">ALL DOGS is a year-long performance played with real
-  money by up to 10,000 strangers. The artwork is whatever is left when
-  the year ends. Every dog is its own drawing living on Ethereum: the
-  artist draws the dogs, the owners write the story.</p>
+  <p class="tagline">1,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $50 &middot; one per person</p>
+  <p class="sub">ALL DOGS is a year-long performance played by a
+  thousand strangers holding one dog each. The artwork is whatever is
+  left when the year ends. Every dog is its own drawing living on
+  Ethereum: the artist draws the dogs, the owners write the story.</p>
   <div class="cta">
     <a class="btn hot" href="#deal">How the year works</a>
-    <a class="btn" href="#fates">Meet the four fates</a>
+    <a class="btn" href="#fates">Meet the five fates</a>
     <a class="btn" href="design/">Watch the machine draw</a>
   </div>
   </div>
@@ -535,17 +554,19 @@
 <section class="creed"><div class="wrap">
   <p class="kicker">The game</p>
   <h2 class="t">Zombie apocalypse</h2>
-  <p class="glead">Ten thousand people each adopt a dog and keep it for a
-  year. The contest is whether they can hold the line together. If more
-  than a third kill their dog for the money, the apocalypse comes and
-  every living dog turns. If two thirds stay, everyone wins.</p>
+  <p class="glead">A thousand people each adopt one dog and keep it for a
+  year. A dog you keep grows older every day and rarer every week. Selling
+  it kills it: for that whole year, the moment a living dog changes hands
+  the contract turns it into a zombie. If 210 dogs are sold inside the
+  year, the apocalypse comes and every dog still living turns with
+  them.</p>
   <div class="gameplan">
     <div class="gstep">
       <span class="gnum">1</span>
       <div class="gart"><canvas class="cutout" id="cr_adopt" width="500" height="500"></canvas></div>
       <p>Start by <b class="blue">adopting your dog</b>.
-      <span class="lsub">$25 at the gate. Your handle goes on the
-      collar.</span></p>
+      <span class="lsub">$50 at the gate, one dog per confirmed handle.
+      Your handle goes on the collar.</span></p>
     </div>
     <div class="gstep">
       <span class="gnum">2</span>
@@ -553,26 +574,26 @@
         <canvas class="cutout" id="cr_love" width="500" height="500"></canvas>
         <canvas class="cutout" id="cr_flip" width="500" height="500"></canvas>
       </div>
-      <p>Then decide: <b class="blue">love it</b>, or <b class="red">kill it</b>.
-      <span class="lsub">A living dog cannot be sold. The only way to cash
-      out, or put the piece on the market, is to put your dog down. You
-      get $20 back, no strings, and the zombie can be traded. Your kill
-      counts toward the third that ends the year for everyone else.</span></p>
+      <p>Then decide: <b class="blue">keep it</b>, or <b class="red">sell it</b>.
+      <span class="lsub">Selling is the kill. A living dog that changes
+      hands turns in the same transaction, so the buyer receives a corpse
+      and nobody can ever buy a living dog. Your sale is one of the 210
+      that ends the year for everyone else.</span></p>
     </div>
     <div class="gfork">
       <div class="gend win">
-        <span class="gtag">If we hold the line</span>
+        <span class="gtag">If under 210 are sold</span>
         <div class="gart"><canvas class="cutout" id="cr_win" width="500" height="500"></canvas></div>
-        <p>If 2/3 love their dogs, <b class="blue">everyone wins</b>: every
-        dog refunds, and the faithful split the artist's entire
-        paycheck.</p>
+        <p>The zombies lose, permanently, and <b class="blue">the dogs
+        live</b>: the only living dogs that will ever exist are the ones
+        nobody sold.</p>
       </div>
       <div class="gend lose">
-        <span class="gtag">If a third kill</span>
+        <span class="gtag">If 210 are sold</span>
         <div class="gart"><canvas class="cutout" id="cr_lose" width="500" height="500"></canvas></div>
-        <p>If more than 1/3 kill their dogs for the money,
-        <b class="red">everyone else loses</b>: the apocalypse takes every
-        living dog.</p>
+        <p>Two hundred and ten was enough. <b class="red">Everyone else
+        loses</b>: the apocalypse turns every living dog into a zombie the
+        same night.</p>
       </div>
     </div>
   </div>
@@ -580,34 +601,33 @@
 
 <section class="confess sheet"><div class="wrap">
   <p class="kicker">The confession</p>
-  <h2>Beat the artist</h2>
-  <div class="row">
-    <div class="money"><b>$133,000</b><span>the abandoned refunds &middot; mine only if the apocalypse comes</span></div>
-  </div>
-  <div class="pull">The only way to beat me is together.</div>
-  <p class="line">I am offering my profit on this collection if 10,000
-  strangers can hold the line for a year.</p>
-  <p class="line" style="margin-top:14px">Prove that we can build together
-  and I'll happily give away my money.</p>
-  <p class="fine">Both stakes scale with the pack, however many dogs find
-  homes. The adoption fee is $25. A $20 refund is escrowed for every dog,
-  and the zombies take theirs on the way out. The other $5 of every
-  adoption is my take, and it sits locked in the same contract for the
-  whole year: my side of the table, up to $50,000. If the last midnight
-  passes and the horde never reached a third, the faithful don't just
-  collect their refunds. They split my entire take on top. I make nothing.
-  If the apocalypse comes, I keep my take, and the refunds the taken dogs
-  left behind come to me instead of back to you: at most, $20 &times;
-  10,000 &times; &#8532; &asymp; $133,000. My position is printed at the
-  gate on purpose: every turned dog is a donation to the person telling
-  you not to. The only way to beat me is together.</p>
+  <h2>Nothing is waiting at the end</h2>
+  <div class="pull">Staying on purpose is the piece.</div>
+  <p class="line">I take no side in the ending.</p>
+  <p class="line" style="margin-top:14px">The dog is the whole of what
+  you get, forever, on purpose.</p>
+  <p class="fine">There is an easy way to build this: reward people for
+  staying, and the year becomes a calculation. So I take no side. I get
+  the same whether every dog lives or every dog is sold, and I gain
+  nothing from a single dog dying. What you get for keeping your dog is
+  the dog: alive, a day older every day, now and then handed something
+  rare, and signed with your name if it dies of old age while it is
+  still yours. What you get for selling is a corpse, and one more toward
+  the 210. A thousand people, one dog each, one year, nobody rewarded
+  for being good.</p>
   <p class="sig">&mdash; Jonathan Washburn, 2026</p>
-  <p class="fine" style="margin-top:30px">The math is public. Every rule on
-  this page gets run through an agent-based economy simulator for thousands
-  of runs before any contract is written. Two findings so far: hiding the
-  count doesn't stop a panic, it makes the panic preemptive, which is why
-  turns are sealed and read out once a night, in one batch: the cannon. And ordinary greed never reaches the third on its own;
-  only an organized army does. Buying in is the first vote.</p>
+  <p class="fine" style="margin-top:30px">The math is public. One
+  finding held across every version of this year I tried: a pack that
+  can panic will panic early. Nothing about the count fixes that, so
+  the year gives it one clock instead. The apocalypse is checked at
+  midnight and only at midnight, in a single batch: the cannon. The
+  rule also carries a danger I would rather print at the gate than
+  discover in public. Anyone who can talk two hundred and ten people
+  into selling can end the year for everyone else, because every sale
+  turns the dog it just moved. The only defense is a pack that will
+  not list, and one dog per person means an attacker has to persuade
+  two hundred and ten separate people instead of finding one wallet
+  that holds a hundred. Adopting is the first vote.</p>
   <div class="cta" style="justify-content:flex-start; margin-top:26px">
     <a class="btn" href="design/">The live design feed</a>
   </div>
@@ -624,12 +644,13 @@
       flip the work: in and out in a day, never once looking at it. And
       that's fine. Flipping is how this market breathes; this game even
       needs its zombies. But I wanted to make holding mean something too.
-      Here, a living dog can never be sold, so staying is a real choice,
-      made in public, with your name on the collar. Every dog that stays
-      makes every other dog safer, scarcer, and worth more. You can still
-      flip. The piece just asks you to sign it first, and it counts toward
-      the apocalypse hanging over every dog that stayed. Ten thousand
-      strangers, one year, one line to hold: that's the artwork.</p>
+      Here, selling a dog kills it, so staying is a real choice, made in
+      public, with your name on the collar. Every dog that stays makes
+      every other dog safer and scarcer. You can still flip.
+      The piece just charges you the dog for it, and your sale counts
+      toward the apocalypse hanging over everyone who stayed. A thousand
+      strangers, one dog each, one year, one line to hold: that's the
+      artwork.</p>
       <span class="stamp">Build together</span>
     </div>
     <div class="reason">
@@ -651,11 +672,12 @@
       </div>
       <p>Blue won by a thread, and pressing was free. Forty-two percent
       chose red anyway. I couldn't stop thinking about what those numbers
-      become when the vote costs something: real money, your name on the
+      become when the vote costs something: your name on the
       button, a year to change your mind, and a count nobody can see.
-      ALL DOGS is that question, played for keeps. Turn is the red button.
-      Hold is the blue one. The one mercy I added: here, red needs a
-      third.</p>
+      ALL DOGS is that question, played for keeps. Selling is the red
+      button. Keeping is the blue one. The difference: red does not need
+      half here. One dog in five, found any time inside a year, and it
+      ends for everyone who held.</p>
     </div>
   </div>
 </div></section>
@@ -691,7 +713,7 @@
       decisions are made beforehand and the execution is a perfunctory
       affair." The instructions are the art. My drafters happen not to be
       human.</p>
-      <p>What I authored: the dogs, the four fates, the census, the
+      <p>What I authored: the dogs, the fates, the census, the
       tenderness, the temperature of the grounds, the wall the score has
       to clear, and every mid-fight correction, published as it happens.
       What I could not author: the exact painting that survives. That part
@@ -713,98 +735,155 @@
   <h2>While you're here,<br>this one is yours.</h2>
   <div class="yourswrap">
     <canvas id="yourDog" width="700" height="700"></canvas>
-    <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; night 1</span></div>
+    <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; day 1</span></div>
   </div>
   <p class="lede" style="margin-top:28px"><b id="yourIntro">It</b> was
-  painted the moment you arrived and it exists nowhere else. It can't be sold. It can't be traded.
-  But you already know what you can do to it. The button is further down
-  the page.</p>
+  painted the moment you arrived and it exists nowhere else. It isn't on
+  any chain and nobody can buy it. But you already know what you could do
+  to it. The button is further down the page.</p>
 </div></section>
 
 <section class="fatesec sheet" id="fates"><div class="wrap">
   <p class="kicker">The attributes</p>
-  <h2>Four fates.<br>One collar.</h2>
+  <h2>Five fates.<br>One collar.</h2>
   <p class="lede">Every dog starts alive. What it becomes isn't decided at
-  mint and isn't decided by the artist. It's decided by 10,000 owners, one
-  midnight at a time. The horde is every dog that has been turned; its count
-  is the number hanging over the year.</p>
+  adoption and isn't decided by the artist. It's decided by a thousand
+  owners, one midnight at a time. Three fates are reachable while the year
+  is running. The last two only exist if the zombies lose.</p>
+  <p class="faterow">While the year runs</p>
   <div class="fates">
     <div class="fate">
       <canvas id="f_faithful" width="800" height="800"></canvas>
       <div class="body">
       <h3>Faithful</h3>
-      <p>Still alive, still yours. A faithful dog is one whose owner said no
-      to the $20 every single night. If the dogs win the year, the faithful
-      get refunded and trade free.</p>
-      <span class="tag" style="color:var(--blue)">alive &middot; holding the line</span>
+      <p>Still alive, still yours. A faithful dog is one that has never
+      moved: not sold, not gifted, not shuffled to another wallet. It is
+      also the only fate that keeps changing. Every week a few living dogs
+      are handed one more rare trait. Every day, three in every ten
+      thousand of them die of old age, which is about one dog every three
+      days at this size. Keeping is not standing still.</p>
+      <span class="tag" style="color:var(--blue)">alive &middot; still aging</span>
       </div>
     </div>
     <div class="fate">
       <canvas id="f_zombie" width="800" height="800"></canvas>
       <div class="body">
       <h3>Zombie</h3>
-      <p>Turned by its own owner. The owner took the money, the horde took
-      the dog, and the turn is signed on the collar forever. Zombies trade
-      from the night they turn.</p>
-      <span class="tag" style="color:var(--red)">turned &middot; paid</span>
+      <p>Sold, while the year was still running. Its owner listed it,
+      the sale turned it in the same transaction, and that is signed on the
+      collar forever. Zombies trade freely from then on and never change
+      again. Every dog that has been turned is the horde, and its count is
+      the number hanging over the year: two hundred and ten of them ends
+      the world for everyone else.</p>
+      <span class="tag" style="color:var(--red)">turned &middot; sold</span>
       </div>
     </div>
     <div class="fate">
       <canvas id="f_angel" width="800" height="800"></canvas>
       <div class="body">
       <h3>Angel</h3>
-      <p>Died of natural causes: every dog carries the same tiny nightly
-      chance, a few deaths a week across the pack, chosen by chance and
-      nobody else. Wings included, the nights it lived stamped on the collar.
-      Angels never count toward the third. They trade right away, and if the
-      dogs win the year they get refunded too.</p>
-      <span class="tag" style="color:#c28d13">at peace &middot; tradable</span>
+      <p>Died of old age: every living dog carries the same tiny daily
+      chance, about a hundred deaths across the pack in a year, chosen by
+      nobody. A plaque is etched across the top of the piece with the
+      number of days it lived and the handle of the owner who cared for it
+      the whole way. Only one kind of owner can be on that plaque, because
+      selling ends the life. Angels never count toward the 210, and the
+      apocalypse cannot touch them.</p>
+      <span class="tag" style="color:#c28d13">at peace &middot; signed</span>
       </div>
     </div>
-    <div class="fate">
-      <canvas id="f_ghost" width="800" height="800"></canvas>
+  </div>
+  <p class="faterow">Only if the zombies lose</p>
+  <div class="fates after">
+    <div class="fate pending">
+      <span class="soon">Being painted now</span>
+      <canvas id="f_vampire" width="800" height="800"></canvas>
       <div class="body">
-      <h3>Ghost</h3>
-      <p>A dog the apocalypse took. If the horde ever reaches a third, every
-      living dog is taken that same night and comes back under a sheet.
-      Ghosts trade, but no refund ever comes.</p>
-      <span class="tag" style="color:var(--ghost)">taken &middot; never paid</span>
+      <h3>Vampire</h3>
+      <p>If the year ends under 210, no dog is ever turned into a zombie
+      by a sale again and everything trades freely. But a living dog still
+      cannot be traded and stay living. Most become vampires: black eyes, fangs, one
+      drop of blood, the same dog wearing the dark version of itself. It
+      stops aging and stops collecting traits, so it can never become an
+      angel and can never grow again.</p>
+      <span class="tag" style="color:var(--red)">stopped &middot; after the war</span>
       </div>
     </div>
+    <div class="fate pending">
+      <span class="soon">Being painted now</span>
+      <canvas id="f_immortal" width="800" height="800"></canvas>
+      <div class="body">
+      <h3>Immortal</h3>
+      <p>The rare side of that same roll, one trade in ten. Instead of the
+      fangs the dog is given a superpower, the only trait in the
+      collection that cannot be rolled at adoption or handed out by the
+      weekly drop. An immortal is a dog that was held through the entire
+      war and then let go on purpose, which is the only way one can
+      exist.</p>
+      <span class="tag" style="color:var(--blue)">stopped &middot; superpowered</span>
+      </div>
+    </div>
+    <p class="pendnote">Both are written into the rules and neither is
+    drawn yet, so those plates show the living dog the piece would have
+    been, dimmed, until the painter has them.
+    <a href="design/">The look is being fought over in public right now
+    &rarr;</a></p>
   </div>
   <div class="stack">
     <div class="stackcard">
       <div class="lbl">Fate</div>
-      <p>The primary attribute. A zombie exists because someone chose the
-      money. A ghost exists because the world fell. An angel exists because
-      nature took the dog. And faithful is the one fate that doesn't last:
-      the death clock never stops, not even after the year, so someday
-      every faithful dog becomes an angel. The collection ends in wings.</p>
+      <p>The primary attribute. A zombie exists because someone sold.
+      An angel exists because time took the dog. A vampire or an
+      immortal exists because someone let go after the war was already
+      won. And faithful is the one fate that doesn't last: the death clock
+      never stops, not even after the year, so a dog kept long enough
+      becomes an angel. Only a dog that is traded gets to stop.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">Lived</div>
-      <p>Every collar carries a number: how many nights the dog lived. A
-      zombie is stamped the night it turned. An angel is stamped the night it
-      passed. Ghosts all share one terrible date. The faithful just keep
-      counting, long after the year ends. <b>Night 3</b> (turned before its
-      first walk) and <b>night 3,650</b> (ten years old) are both rare; the
+      <p>Every collar carries a number: how many days the dog lived. A
+      zombie is stamped the day it turned. An angel is stamped the day it
+      passed, and that number goes up on the plaque too. Vampires and
+      immortals stop on the day they were traded. The faithful just keep
+      counting, long after the year ends. <b>Day 3</b> (turned before its
+      first walk) and <b>day 3,650</b> (ten years old) are both rare; the
       middle belongs to everyone.</p>
     </div>
     <div class="stackcard">
+      <div class="lbl">Traits</div>
+      <p>Once a week, a handful of living dogs are handed one more trait,
+      and only rare ones: roughly a hundred dogs a year across the whole
+      pack. You cannot buy into the drop, you cannot improve your odds, and
+      the only way to end it yourself is to sell. It is the one thing in the
+      collection that rewards you for doing nothing at all, and a dog that
+      has been held a long time looks like it.</p>
+    </div>
+    <div class="stackcard">
       <div class="lbl">Wardrobe</div>
-      <p>The one thing decided at mint. Each dog's seed rolls three
+      <p>The part decided at adoption. Each dog's seed rolls three
       independent slots (headwear, worn, held) at the odds printed below,
       published before the first dog exists. Every item carries its own
       accent color, and the held items are interactions: the dog reads the
       book, hugs the balloon, holds the drawing up for you. <b>The crown is
-      a 0.09% roll.</b> Twenty dogs are one of ones whose costumes ignore
-      the first two slots, but even they roll the held one. A crowned
-      zombie with a pocket knife is a story nobody can plan.</p>
+      a 0.09% roll</b>, which across a thousand dogs most likely means one
+      or none. Twenty dogs are one of ones whose costumes ignore the first
+      two slots, but even they roll the held one. A crowned zombie with a
+      pocket knife is a story nobody can plan.</p>
     </div>
-    <div class="stackcard wide">
+    <div class="stackcard">
+      <div class="lbl">The plaque</div>
+      <p>Only angels get one, etched across the top of the piece: the days
+      the dog lived, and the Twitter handle of the owner who cared for it
+      its whole natural life. It is the only mark on any dog that names a
+      person for what they did rather than what they own, and it cannot
+      be forged or added later, because a dog that was ever sold is a
+      zombie and a zombie never dies of old age.</p>
+    </div>
+    <div class="stackcard">
       <div class="lbl">On the piece</div>
-      <p>Your handle on the collar, inscribed if you reserved. The fate. The
-      nights lived. The wardrobe. The drawing itself, one of one from its
+      <p>Your handle on the collar. The fate. The days lived. The wardrobe
+      it was born with and whatever the weekly drop added to it. The
+      plaque, if it earned one. The drawing itself, one of one from its
       seed.</p>
     </div>
   </div>
@@ -898,24 +977,27 @@
       <span class="chip grail">The Samurai <b>1</b></span>
     </div>
   </div>
-  <p class="fatenote">These are odds, not quotas. Every dog rolls each slot
-  on its own, so the crown is a 0.09% roll: expect about nine at a full
-  house, but the dice don't owe anybody nine. And the slots multiply. A
-  crowned dog holding a pocket knife is 0.09% &times; 0.1%: roughly one dog
-  in a million, which almost certainly means zero and might mean one. Even
-  the one of ones roll the held slot. The Carpenter holding a pocket knife
-  is one specific dog times 0.1%, a piece that will probably never exist,
-  and everyone will know the odds it beat if it does. The fate and lived
-  tables are the opposite of all this: nobody knows those until the year,
-  and the years after it, write them. Half the rarity is rolled. The other
-  half is earned.</p>
+  <p class="fatenote">These are odds, not quotas, and a thousand dogs is a
+  small enough pack that the rarest ones may simply never be dealt. Every
+  dog rolls each slot on its own, so the crown is a 0.09% roll: across a
+  full house that is most likely a single crown, and perfectly possibly
+  none at all. Nobody finds out until the last dog is adopted. And the
+  slots multiply. A crowned dog holding a pocket knife is 0.09%
+  &times; 0.1%, about one in a million, which in a pack this size means it
+  is almost certainly not coming. Even the one of ones roll the held slot,
+  so The Carpenter holding a pocket knife is one specific dog times 0.1%,
+  a piece that will probably never exist, and everyone will know the odds
+  it beat if it does. Everything above is rolled the day you adopt. The
+  weekly drop, the fate and the days lived are the opposite: nobody knows
+  those until the year, and the years after it, write them. Half the
+  rarity is dealt. The other half is earned by staying.</p>
   </div>
 </div></section>
 
 <section id="dogs"><div class="wrap">
   <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
   <p class="kicker">The collection</p>
-  <h2>10,000 drawings.<br>No two alike.</h2>
+  <h2>1,000 drawings.<br>No two alike.</h2>
   <div class="kennel" id="kennel"></div>
   <div class="kennelrow">
     <button class="btn" id="litter">Draw a new litter</button>
@@ -940,9 +1022,8 @@
     <div class="flgrid">
       <div class="fl"><canvas id="fl_zombie" width="700" height="700"></canvas><div class="flcap">zombie</div></div>
       <div class="fl"><canvas id="fl_angel" width="700" height="700"></canvas><div class="flcap">angel</div></div>
-      <div class="fl"><canvas id="fl_ghost" width="700" height="700"></canvas><div class="flcap">ghost</div></div>
-      <p class="flnote">One seed, four lives. The same dog, seed 910007,
-      painted by the same code through each fate the year could hand it.
+      <p class="flnote">One seed, three lives. The same dog, seed 910007,
+      painted by the same code through each fate the year can hand it.
       The game never swaps an image. It repaints the soul.</p>
     </div>
   </div>
@@ -960,8 +1041,9 @@
       stamp or a two-meter gallery print, and the print is not a blowup,
       it's a fresh painting at that scale.</p></div>
     <div class="spec"><span>The chain finishes it</span>
-      <p>The seed decides the dog and its wardrobe. The year decides its
-      fate. The night it dies stamps its collar. The blockchain doesn't
+      <p>The seed decides the dog and its first wardrobe. The weeks add to
+      it. The year decides its fate, and the day it dies is etched on the
+      plaque with the name of whoever kept it. The blockchain doesn't
       store this art, it completes it.</p></div>
     <div class="spec"><span>No servers, no files</span>
       <p>Nothing to host, nothing to pin, nothing to rot. A number and a
@@ -974,31 +1056,34 @@
   <p class="kicker">The drop</p>
   <h2>Adopting works like a gallery,<br>not a gas war.</h2>
   <p class="lede">No bots, no gas auctions, no refreshing at midnight. One
-  reservation day, one honest allocation, then a public day for whatever's
-  left.</p>
+  verified handle, one dog, one honest reading of the list.</p>
   <div class="phases">
     <div class="step"><div class="n">01</div>
-      <h3>Reservation day.</h3>
-      <p>One day, announced ahead of time. Verify your Twitter handle and
-      reserve up to 100 dogs, adoption fee $25 each. A hold goes on your card and
-      nothing is charged yet. Nobody races anybody: everyone who shows up
-      that day stands in the same line.</p></div>
+      <h3>Verify your handle.</h3>
+      <p>Adoption is one dog per confirmed Twitter user, with no
+      exceptions and no second wallets. That is the rule the whole year
+      rests on: a thousand dogs means a thousand different people, not a
+      hundred people holding ten each. Your handle goes on the collar and
+      stays there forever.</p></div>
     <div class="step"><div class="n">02</div>
-      <h3>The allocation.</h3>
-      <p>Orders are read, not raced. Reservations get filled by the
-      history of the wallet you reserve with: art held for years counts for
-      you, quick flips count against you. The dogs go home with people who keep them. If your order fills,
-      your handle is inscribed on every collar, forever.</p></div>
+      <h3>Adoption day.</h3>
+      <p>One day, announced ahead of time. The adoption fee is $50. A hold
+      goes on your card and nothing is charged yet. Nobody races anybody:
+      everyone who shows up that day stands in the same line, because
+      there is nothing to race for when everybody is asking for exactly
+      one dog.</p></div>
     <div class="step"><div class="n">03</div>
-      <h3>Public adoption day.</h3>
-      <p>Whatever's left opens to everyone, first come, first served, no
-      handle needed. Launch-day dogs play the same year and live the same
-      lives; their collars just don't carry a name.</p></div>
+      <h3>If more than a thousand ask.</h3>
+      <p>The list is read, not raced. Places get filled by the history of
+      the wallet you come with: art held for years counts for you, quick
+      flips count against you. The dogs go home with people who keep
+      things, because a year of this game is entirely about who keeps
+      things.</p></div>
   </div>
-  <p class="dropnote">The pack is however many dogs find homes that week. If
-  that's short of 10,000, the year plays exactly the same and the
-  apocalypse still comes at one third of the pack. Dogs nobody adopts are
-  never born at all.</p>
+  <p class="dropnote">The pack is however many dogs find homes that day. If
+  that's short of 1,000, the year plays exactly the same and the
+  apocalypse still comes at 21% of the dogs that were actually adopted.
+  Dogs nobody adopts are never born at all.</p>
 </div></section>
 
 <section class="rules sheet" id="deal"><div class="wrap">
@@ -1006,102 +1091,133 @@
   <h2>How the year works</h2>
   <div class="steps">
     <div class="step"><div class="n">01</div>
-      <h3>Adopt dogs. The adoption fee is $25. Up to 100 per verified Twitter account.</h3>
-      <p>Adoption runs in three steps, printed above: reservation day, the
-      allocation, then a public day for whatever's left. Every dollar the
-      year collects sits in the contract where anyone can look at it, and
-      every count in the game scales to the pack that actually got
-      adopted.</p></div>
+      <h3>Adopt a dog. The adoption fee is $50. One per confirmed Twitter account.</h3>
+      <p>One handle, one dog, no second wallets. The fee is taken once, on
+      the day you adopt, and every count in the game scales to the pack
+      that actually got adopted. A thousand dogs means a thousand
+      different people, which is the only reason the rest of this is a
+      game rather than an auction.</p></div>
     <div class="step"><div class="n">02</div>
-      <h3>A living dog can never be sold.</h3>
-      <p>Not to a friend, not to a museum, not for any price. If you want to
-      sell your dog, there is exactly one way: put it down. The put-down pays
-      you the $20 refund on the spot, and it unlocks the market: your new
-      zombie can be listed that same night and sold for whatever a buyer
-      will pay, on top of the $20. But understand what you bought with that: the turn is signed on
-      the collar forever, and you've joined the zombies' side of the count,
-      one dog closer to the apocalypse for every dog still holding. Selling
-      out and betraying the pack are the same button here. That's the
-      piece.</p></div>
+      <h3>A dog you keep does not sit still.</h3>
+      <p>Two clocks run on every living dog. Once a week a handful of them
+      are handed one more trait, and only rare ones, roughly a hundred
+      dogs a year across the pack. Every day, three in every ten thousand
+      living dogs die of old age and become angels, which is about a
+      hundred a year as well. Nobody chooses either one and nothing you do
+      changes your odds. Holding is not a waiting room: it is the only way your
+      dog gets rarer, and it is also the only way it dies with your name
+      on it.</p></div>
     <div class="step"><div class="n">03</div>
-      <h3>Turning your dog pays $20,* tonight.</h3>
-      <p>Any night from the day you adopt, you can hand your dog to the
-      horde and take back the $20 of ethereum that was locked for your dog
-      on adoption day. It pays on the spot, no strings. It is not a sale:
-      it is the same escrowed refund the faithful collect if the dogs win
-      the year, taken early. The market is a second, separate prize. Your
-      new zombie can be listed and sold on top of the $20, your handle
-      still on its collar. And zombies are the only supply there is, so the
-      better the pack holds the line, the scarcer and pricier zombies get,
-      and the louder the market whispers at everyone still holding. The
-      turn is signed.</p></div>
+      <h3>An angel is signed with the name of whoever kept it.</h3>
+      <p>When a dog dies of old age, a plaque is etched across the top of
+      the piece carrying the number of days it lived and the Twitter
+      handle of the owner who cared for it its whole natural life. Only
+      one kind of owner can ever appear there, because selling ends the
+      life before it can end naturally. The plaque is the proof you never
+      sold, and it is the only thing in the collection that cannot be
+      added later.</p></div>
     <div class="step"><div class="n">04</div>
-      <h3>Hold the line for a year and everybody gets paid.</h3>
-      <p>The same $20 the killers take is waiting for every living dog. If
-      the last midnight passes and the horde never reached a third, every
-      living dog collects it, trades free, and is marked faithful forever.
-      And on top of the refund, the faithful split the artist's entire
-      take: the $5 from every adoption, up to $50,000. He makes nothing.
-      That's the good ending.</p></div>
+      <h3>Selling your dog kills it.</h3>
+      <p>Not as a penalty. As the mechanism. For the whole of the first
+      year, the moment a living dog leaves your wallet the contract turns
+      it into a zombie in the same transaction, and the buyer receives the
+      corpse. There is no button,
+      no confirmation and no way to sell a dog and keep it alive. The turn
+      is signed on the collar forever, your handle still on it, and you
+      have joined the horde's side of the count: one of the two hundred
+      and ten that ends the year for everyone still holding. Selling out
+      and betraying the pack are the same act here. That's the piece.</p></div>
     <div class="step"><div class="n">05</div>
-      <h3>At one third, the apocalypse.</h3>
-      <p>If a third of the dogs are ever turned, the horde takes every living
-      dog that same night. They come back as ghosts: still yours, tradable,
-      never refunded. The $20 that was waiting for each of them goes to the
-      artist instead. Natural deaths never count toward the third.</p></div>
+      <h3>Nobody can buy a living dog.</h3>
+      <p>Not from anyone, not on any day of the year. Every dog that
+      changes hands is already dead or dies on delivery, so the only
+      living dogs in existence are the ones sitting in the wallets that
+      adopted them. That makes holding the one thing a listing cannot
+      give you, and it makes the listing honest: a listed dog is a
+      public announcement that its owner is about to kill it. Zombies
+      are the whole supply, so the better the pack holds, the scarcer
+      the dead get, and the louder every listing whispers at everyone
+      still holding.</p></div>
     <div class="step"><div class="n">06</div>
-      <h3>The horde count updates once a night.</h3>
-      <p>You never see turns in real time. They're sealed as they happen,
-      and once every midnight the new count is published in a single batch,
-      like the cannon in the Hunger Games. Some nights it's silence. Some
-      nights it's forty dogs. Between cannons, nobody on earth knows how
-      close the third is.</p></div>
+      <h3>At 210 zombies, the apocalypse.</h3>
+      <p>If 21% of the pack has been sold at any point inside the year,
+      the horde takes every living dog on the next midnight and they come
+      back as zombies: still yours, tradable, never alive again. Two
+      hundred and ten sales in three hundred and sixty five days works out
+      to one sale every 42 hours, sustained all year, which is an
+      ordinary amount of churn and is exactly why the line is set there.
+      Angels are already gone and cannot be taken.</p></div>
+    <div class="step"><div class="n">07</div>
+      <h3>Survive the year and the zombies lose forever.</h3>
+      <p>If the last midnight passes with the count under 210, no dog is
+      ever turned into a zombie by a sale again, and every dog still in
+      its adopting wallet is a living animal that nobody could have
+      bought on any day of that year. That is all that happens, and it
+      is the good ending.</p></div>
+    <div class="step"><div class="n">08</div>
+      <h3>After that, letting go costs the life instead of ending it.</h3>
+      <p>Once the zombies have lost, everything trades freely, but a
+      living dog still cannot be traded and stay living. It stops aging,
+      stops collecting traits, and becomes one of two things: a vampire,
+      which is the same dog with black eyes, fangs and a drop of blood, or
+      one time in ten an immortal, which is handed a superpower no other
+      dog can roll. Either way the clock stops, so it will never be an
+      angel and will never carry a plaque. The choice never actually goes
+      away. It just changes what it costs.</p></div>
+    <div class="step"><div class="n">09</div>
+      <h3>The world can only end at midnight.</h3>
+      <p>Every sale is public the second it happens, so anyone can watch
+      the count climb all day. What no one can do is end the year early.
+      The contract checks the count once every midnight and fires in a
+      single batch, like the cannon in the Hunger Games. Some nights it's
+      silence. Some nights it's forty dogs. You can see the axe. You never
+      know which midnight it falls.</p></div>
   </div>
 </div></section>
 
 <section class="choice sheet" id="choice"><div class="wrap">
   <p class="kicker">The choice</p>
   <h2>Press one.<br>In public.<br>For a year.</h2>
-  <p class="samecash">The refund is the same either way: $20.*
-  <em>But only one button splits the artist's paycheck.</em></p>
+  <p class="choiceline">One of these kills the dog.*
+  <em>The other one is the only way your dog is alive next year.</em></p>
   <div class="chooseyours">
     <canvas id="chooseDog" width="800" height="800"></canvas>
     <p id="chooseLine">This is the dog you'd be doing it to.</p>
   </div>
   <div class="buttons">
     <div class="bpanel red">
-      <h3 id="turnTitle">Turn</h3>
-      <div class="big">$20</div>
-      <p>Tonight. Guaranteed.</p>
-      <p>Plus your zombie can be listed and sold on top.</p>
-      <p class="f">And the horde gets one dog closer to everything. The turn
-      is signed. Forever.</p>
+      <h3 id="turnTitle">Sell</h3>
+      <div class="big">Zombie</div>
+      <p>The sale turns it. The buyer gets the corpse.</p>
+      <p>Your dog dies in the same transaction.</p>
+      <p class="f">And the count goes up by one, out of the two hundred
+      and ten that end it for everybody. The sale is signed. Forever.</p>
     </div>
     <div class="bpanel blue">
-      <h3>Hold</h3>
-      <div class="big">$20&hairsp;+</div>
-      <p>In a year, plus your share of the artist's entire take. If the
-      dogs make it.</p>
-      <p>Your dog lives, trades, marked faithful.</p>
-      <p class="f">If the horde reaches a third first, your dog is taken with
-      all the rest, and no refund ever comes. That's what holding costs.</p>
+      <h3>Keep</h3>
+      <div class="big">Alive</div>
+      <p>Your dog stays yours.</p>
+      <p>It keeps getting older and rarer the whole time it does.</p>
+      <p class="f">If the count reaches 210 first, your dog turns with all
+      the rest. That's what holding costs.</p>
     </div>
   </div>
-  <p class="ethnote">*The adoption fee is paid in dollars: $25 on your card. The moment your
-  adoption clears, $20 of the fee is converted to ethereum and locked in the
-  contract with your dog's name on it. That exact amount of ethereum is
-  what comes back, whenever it comes back: if ethereum doubles against the
-  dollar, your refund doubled too. If it halves, it halved. The contract
-  owes ethereum, not dollars.</p>
+  <p class="ethnote">*Any transfer of a living dog turns it: a sale, a gift,
+  or a move to your own second wallet. The contract cannot tell those apart
+  and does not try, so your dog lives in the wallet that adopted it or it
+  does not live. Dogs that are already zombies, angels, vampires or
+  immortals move freely and never change again.</p>
 </div></section>
 
 <section class="cannon sheet"><div class="moon"></div><div class="wrap">
   <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
   <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
-  <p>All the night's turns, read out at once. Some nights, silence. Some
+  <p>All the day's dead, read out at once. Some nights, silence. Some
   nights, a massacre.</p>
-  <p>You'll never know if the third is one cannon away. You can't time an
-  apocalypse. You can only pick a side before it.</p>
+  <p>The count is public all day and the world can only end at midnight.
+  So you'll watch it climb, and you still won't know which cannon is the
+  one. You can't time an apocalypse. You can only pick a side before
+  it.</p>
 </div></section>
 
 
@@ -1110,8 +1226,8 @@
   <p>ALL DOGS &middot; Jonathan Washburn &middot; 2026<br>
   Each work is generated live in the browser from a deterministic seed.<br>
   This page is a proposal shown to galleries and friends. No contract is
-  deployed. Nothing is mintable. Every number is illustrative and no payout,
-  refund, or market outcome is guaranteed. The ribbon is a simulation.<br>
+  deployed. Nothing is mintable. Every number is illustrative. The
+  ribbon is a simulation.<br>
   Adoption day: TBA</p>
 </div></footer>
 
@@ -1121,6 +1237,59 @@
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
 <script>
 const draw = window.ALLDOGS.drawDog;
+
+/* Painting a dog is real work and most of them are below the fold, so a
+   canvas waits until the reader is nearly at it. Where there is no
+   observer, everything paints at once the way it always did. */
+function paintWhenNear(el, paint) {
+  if (!('IntersectionObserver' in window)) { paint(); return; }
+  const io = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (e.isIntersecting) { io.disconnect(); paint(); return; }
+    }
+  }, { rootMargin: '700px 0px' });
+  io.observe(el);
+}
+
+function rollSeed() {
+  return (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+}
+/* Roughly the shape of a year that ends badly: most dogs still living,
+   about one in five turned, about one in ten gone to old age. */
+function rollState() {
+  const r = Math.random();
+  return r < 0.70 ? 'faithful' : r < 0.90 ? 'zombie' : 'angel';
+}
+/* Deal the fates instead of rolling them one at a time. A page that
+   happened to roll no angels would be telling the visitor something false
+   about the collection, so every fate is dealt in first and the rest of
+   the hand fills at the pack's own odds. */
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+/* The three fates the year can actually hand out. The vampire and the
+   immortal only exist after the zombies lose, and the painter has not
+   drawn them yet, so no dog on this page is dealt one. */
+const FATES = ['faithful', 'zombie', 'angel'];
+/* The kennel is a sample of the collection, so it rolls the real odds and
+   only guarantees that all three fates turn up: a litter that showed no
+   angels would be lying about what the year does. */
+function dealFates(n) {
+  const out = FATES.slice();
+  while (out.length < n) out.push(rollState());
+  return shuffle(out);
+}
+/* The dogs living in the margins are not a sample of anything. They are
+   there to show the range, so they run the fates evenly. */
+function spreadFates(n) {
+  const out = [];
+  while (out.length < n) out.push(FATES[out.length % FATES.length]);
+  return shuffle(out);
+}
 
 const FIRST_LITTER = [
   [910001, 'faithful', '@satoshis_widow'],
@@ -1137,8 +1306,8 @@ const FIRST_LITTER = [
   [920002, 'zombie', '@dust_and_bones'],
   [930001, 'angel', '@good_girl_luna'],
   [930002, 'angel', '@sweet_old_bean'],
-  [940001, 'ghost', '@too_late_now'],
-  [940002, 'ghost', '@sold_the_world'],
+  [940001, 'zombie', '@too_late_now'],
+  [940002, 'angel', '@never_sold_a_thing'],
 ];
 
 const HA = ['gm', 'wagmi', 'diamond', 'paper', 'moon', 'chain', 'block',
@@ -1149,9 +1318,8 @@ const HB = ['hands', 'heart', 'maxi', 'wolf', 'saint', 'monk', 'baron',
   'holder', 'dreamer'];
 
 function fateLabel(s) {
-  if (s === 'zombie') return 'turned night ' + (1 + Math.floor(Math.random() * 300));
-  if (s === 'angel') return 'wings, night ' + (1 + Math.floor(Math.random() * 300));
-  if (s === 'ghost') return 'taken by the horde';
+  if (s === 'zombie') return 'turned day ' + (1 + Math.floor(Math.random() * 300));
+  if (s === 'angel') return 'lived ' + (1 + Math.floor(Math.random() * 300)) + ' days';
   return 'faithful';
 }
 
@@ -1179,19 +1347,17 @@ function firstLitter() {
     kennel.append(penFor(seed, state, handle));
   });
 }
-firstLitter();
+paintWhenNear(document.getElementById('dogs'), firstLitter);
 
 document.getElementById('litter').addEventListener('click', () => {
   kennel.innerHTML = '';
-  for (let i = 0; i < 16; i++) {
-    const seed = Math.floor(Math.random() * 0xffffffff) >>> 0;
-    const sroll = Math.random();
-    const state = sroll < 0.82 ? 'faithful' : sroll < 0.92 ? 'zombie'
-      : sroll < 0.97 ? 'angel' : 'ghost';
+  const N = 24;
+  const fates = dealFates(N);
+  for (let i = 0; i < N; i++) {
     const handle = '@' + HA[Math.floor(Math.random() * HA.length)] + '_'
       + HB[Math.floor(Math.random() * HB.length)]
       + (Math.random() < 0.4 ? Math.floor(Math.random() * 99) : '');
-    kennel.append(penFor(seed, state, handle));
+    kennel.append(penFor(rollSeed(), fates[i], handle));
   }
 });
 
@@ -1259,16 +1425,23 @@ document.getElementById('litter').addEventListener('click', () => {
   const handle = '@' + HA[seed % HA.length] + '_' + HB[(seed >> 4) % HB.length];
   document.getElementById('heroHandle').textContent = handle;
   document.getElementById('heroMeta').textContent =
-    'faithful \u00b7 night ' + (seed % 364 + 1) + ' \u00b7 seed ' + seed;
+    'faithful \u00b7 day ' + (seed % 365 + 1) + ' \u00b7 seed ' + seed;
 })();
-draw(document.getElementById('f_faithful'), 4101, 'faithful');
-draw(document.getElementById('f_zombie'), 4102, 'zombie');
-draw(document.getElementById('f_angel'), 4103, 'angel');
-draw(document.getElementById('f_ghost'), 4104, 'ghost');
+paintWhenNear(document.querySelector('.fatesec'), () => {
+  draw(document.getElementById('f_faithful'), 4101, 'faithful');
+  draw(document.getElementById('f_zombie'), 4102, 'zombie');
+  draw(document.getElementById('f_angel'), 4103, 'angel');
+  /* the vampire and the immortal show the living dog they were, dimmed by
+     CSS and badged, until the painter has the finished looks */
+  draw(document.getElementById('f_vampire'), 4104, 'faithful');
+  draw(document.getElementById('f_immortal'), 4105, 'faithful');
+});
 
-/* one seed, four lives */
-['faithful', 'zombie', 'angel', 'ghost'].forEach(st => {
-  draw(document.getElementById('fl_' + st), 910007, st);
+/* one seed, three lives */
+paintWhenNear(document.querySelector('.fourlives'), () => {
+  ['faithful', 'zombie', 'angel'].forEach(st => {
+    draw(document.getElementById('fl_' + st), 910007, st);
+  });
 });
 
 /* painted dividers: the page is drawn, not ruled */
@@ -1339,14 +1512,14 @@ renderYours();
 
 document.querySelector('.bpanel.red').addEventListener('click', () => {
   if (ystate === 'zombie') { chooseLine.textContent =
-    'You already did. It\u2019s still $20 you\u2019re not getting twice.'; return; }
+    'You already did. It only dies the once.'; return; }
   ystate = 'zombie';
   localStorage.setItem('alldogs_state', 'zombie');
   renderYours();
 });
 document.querySelector('.bpanel.blue').addEventListener('click', () => {
   chooseLine.textContent = ystate === 'faithful'
-    ? 'Good. ' + yname + ' sleeps by the door tonight. 364 nights to go.'
+    ? 'Good. ' + yname + ' sleeps by the door tonight. 364 days to go.'
     : 'Too late for that.';
 });
 
@@ -1502,12 +1675,11 @@ function cutout(targetCv, seed, state, size, tries) {
   return false;
 }
 
-/* angels never cut out: their gold wings share the heaven-light ground,
-   so the flood always eats one or the other. An angel stays in heaven,
-   framed. */
+/* the good ending shows a living dog, because that is what the good
+   ending is */
 [['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
- ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel'],
- ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st]) => {
+ ['cr_flip', 920001, 'zombie'], ['cr_win', 910005, 'faithful'],
+ ['cr_lose', 940001, 'zombie']].forEach(([id, seed, st]) => {
   const cv = document.getElementById(id);
   cv.width = 500; cv.height = 500;
   draw(cv, seed, st);
@@ -1549,7 +1721,7 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
      sticker is worse than a small painting, so every stray hangs framed. */
   const S = size || 500;
   cv.width = S; cv.height = S;
-  draw(cv, seed, state);
+  paintWhenNear(w, () => draw(cv, seed, state));
   w.classList.add('framed');
   cv.addEventListener('click', e => {
     e.stopPropagation(); openStray(seed, state, label);
@@ -1577,6 +1749,35 @@ function perch(sectionSel, seed, state, label, width) {
   stray(sectionSel, seed, state, label,
     'width:' + width + 'px; top:59px; transform:translateY(-100%); '
     + 'right:max(32px, calc((100% - 1196px) / 2));', 800);
+}
+
+/* The other end of the same stroke. The right perch is the established
+   spot; this one lets a section carry a pair without either dog crowding
+   the copy. */
+function markLast(sectionSel, cls) {
+  const sec = document.querySelector(sectionSel);
+  if (!sec) return null;
+  const wraps = sec.querySelectorAll('.straywrap');
+  const w = wraps[wraps.length - 1];
+  if (w) w.classList.add(cls);
+  return w;
+}
+
+/* The pack lives in the margins.
+   A perched dog stands on its section's stroke, and that stroke is the
+   text column's own width, so a second dog at the other end of it lands
+   on whatever the section above closed with. These stand outside the
+   column entirely, in the white the words never use. The width is
+   whatever margin the window actually has, up to 150px, so the dogs grow
+   on a wide screen and quietly shrink away on a narrow one instead of
+   crowding the reading. The offset keeps the dog's outer edge clear of
+   the column at every width the strays are visible at. */
+function marginDog(sectionSel, seed, state, label, side, topPct) {
+  stray(sectionSel, seed, state, label,
+    'width:min(150px, calc((100% - 1212px) / 2)); top:' + topPct + '%; '
+    + side + ':max(4px, calc((100% - 1196px) / 2 - 158px));', 800);
+  markLast(sectionSel, 'tightlbl');
+  markLast(sectionSel, 'packdog');
 }
 
 /* the expanded view: click a stray, see the whole painting */
@@ -1609,30 +1810,87 @@ perch('.rules',   100035, 'faithful', 'skateboard \u00b7 0.6%',     150);
 perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   150);
 
 /* Two exceptions, both earned: the artist's adversary hangs giant off
-   the confession's edge (no dog perches on the boundary it owns), and
-   the ghost floats in the cannon's night, because ghosts do not stand
-   on lines. */
+   the confession's edge (no dog perches on the boundary it owns), and an
+   angel floats in the cannon's night rather than standing on a line,
+   because the cannon is the one thing that cannot touch her. */
+/* its label spills 30px past the dog, so the dog stands at least that far
+   in or the page grows a sideways scrollbar */
 stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
-  'width:min(42vh, 380px); right:max(16px, 2vw); bottom:-18px;', 1100);
-stray('.cannon', 940002, 'ghost', 'ghost',
+  'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-18px;', 1100);
+stray('.cannon', 940002, 'angel', 'angel \u00b7 out of reach',
   'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));',
   500, true);
 
-/* footer parade */
-const PARADE = [
-  [777001, 'faithful'], [777002, 'faithful'], [777003, 'zombie'],
-  [777004, 'faithful'], [777005, 'angel'], [777006, 'faithful'],
-  [777007, 'ghost'], [777008, 'faithful'], [777009, 'faithful'],
-  [777010, 'zombie'], [777011, 'faithful'], [777012, 'faithful'],
+/* The pack. Every section now carries a dog at both ends of its stroke,
+   and the left one is rolled fresh on every visit: new seed, new wardrobe,
+   new fate, so no two readings of this page show the same dogs. The
+   perches above keep their fixed seeds because those seeds ARE the
+   attribute they are labelled with; these have no attribute to protect.
+   Every fate is dealt into the pack, so a reader always meets all three. */
+/* Where the pack stands: section, side, and how far down it. Every
+   section carries at least one, the tall ones carry two at different
+   heights so the page never reads as a column of dogs, and each is
+   rolled fresh on load. The creed is left out because its five cutouts
+   already fill it. */
+const PACK = [
+  ['.confess', 'left',  20], ['.confess', 'right', 62],
+  ['.why',     'left',  24], ['.why',     'right', 58],
+  ['.bred',    'left',  30], ['.bred',    'right', 68],
+  ['.yours',   'right', 26],
+  ['.fatesec', 'left',  16], ['.fatesec', 'right', 52],
+  ['#dogs',    'left',  22], ['#dogs',    'right', 60],
+  ['.medium',  'left',  18], ['.medium',  'right', 56],
+  ['.drop',    'right', 30],
+  ['.rules',   'left',  24], ['.rules',   'right', 64],
+  ['.choice',  'left',  28],
+  ['.cannon',  'left',  30],
 ];
+const packFates = spreadFates(PACK.length);
+PACK.forEach(([sel, side, top], i) => {
+  const fate = packFates[i];
+  marginDog(sel, rollSeed(), fate, fate, side, top);
+});
+
+/* The margin is wide enough at every width these dogs are visible at, so
+   nothing above should collide. That is an argument, not a measurement,
+   and the copy will keep changing after it was made. So each dog in the
+   pack measures itself against the page's words and against the dogs that
+   were placed by hand, once the layout has settled, and any that landed
+   on something leaves rather than sitting on the reading. */
+function clearPackDogs() {
+  const copy = document.querySelectorAll('p, h1, h2, h3, h4, .kicker, .btn,'
+    + ' button, blockquote, li, .note, .cap, .flcap, .chip, .squig, .bar,'
+    + ' .straywrap');
+  document.querySelectorAll('.straywrap.packdog').forEach(w => {
+    const r = w.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    for (const el of copy) {
+      if (el === w || w.contains(el) || el.contains(w)) continue;
+      const q = el.getBoundingClientRect();
+      if (!q.width || !q.height) continue;
+      if (r.left < q.right - 4 && r.right > q.left + 4
+          && r.top < q.bottom - 4 && r.bottom > q.top + 4) {
+        w.remove();
+        return;
+      }
+    }
+  });
+}
+addEventListener('load', () => requestAnimationFrame(clearPackDogs));
+
+/* footer parade: a fresh dozen every visit, all three fates among them.
+   Observed on the footer rather than the strip itself, because an empty
+   strip has no height for an observer to catch. */
 const parade = document.getElementById('parade');
-PARADE.forEach(([seed, state]) => {
-  const cv = document.createElement('canvas');
-  cv.width = 220; cv.height = 220;
-  cv.width = 500; cv.height = 500;
-  draw(cv, seed, state);
-  cv.classList.add('framedpick');
-  parade.append(cv);
+paintWhenNear(document.querySelector('footer'), () => {
+  const fates = spreadFates(12);
+  fates.forEach(state => {
+    const cv = document.createElement('canvas');
+    cv.width = 500; cv.height = 500;
+    draw(cv, rollSeed(), state);
+    cv.classList.add('framedpick');
+    parade.append(cv);
+  });
 });
 
 /* mobile: the odds fold */
@@ -1667,7 +1925,7 @@ if (matchMedia('(max-width: 700px)').matches) {
 /* scroll reveal */
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const targets = document.querySelectorAll(
-    '.fate, .stackcard, .step, .spec, .fl, .chipgroup, section h2, section .lede, .samecash');
+    '.fate, .stackcard, .step, .spec, .fl, .chipgroup, section h2, section .lede, .choiceline');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
