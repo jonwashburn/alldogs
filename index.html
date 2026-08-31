@@ -1438,10 +1438,19 @@ function cutout(targetCv, seed, state, size, tries) {
   return false;
 }
 
+/* angels never cut out: their gold wings share the heaven-light ground,
+   so the flood always eats one or the other. An angel stays in heaven,
+   framed. */
 [['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
- ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel'],
- ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st]) => {
+ ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel', true],
+ ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st, frame]) => {
   const cv = document.getElementById(id);
+  if (frame) {
+    cv.width = 500; cv.height = 500;
+    draw(cv, seed, st);
+    cv.classList.add('framedpick');
+    return;
+  }
   cv.classList.toggle('framedpick', !cutout(cv, seed, st, 500, 24));
 });
 /* stray dogs: scattered at every scale, live from the champion painter,
