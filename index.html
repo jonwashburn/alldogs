@@ -36,6 +36,9 @@
   .why { padding-bottom: 140px; }
   .rules { padding-bottom: 120px; }
   .fatesec { padding-bottom: 74px; }
+  /* The King hangs off this section's bottom corner and half of him lands
+     inside it, so the second column stops above him rather than under. */
+  .bred { padding-bottom: 200px; }
   canvas.brush { display: block; width: min(1196px, calc(100% - 64px));
     margin: 0 auto; height: 14px; }
   h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase;
@@ -337,21 +340,6 @@
   @media (max-width: 700px) { .cannon .moon { width: 44px; height: 44px;
     top: 44px; right: 8%; } }
 
-  /* confess */
-  .confess p.line { font-family: "Shantell Sans", sans-serif;
-    font-size: clamp(20px, 2.8vw, 34px); font-weight: 700;
-    max-width: 30ch; text-transform: uppercase; letter-spacing: 0;
-    line-height: 1.28; margin-top: 36px; }
-  .confess p.fine { font-size: 15px; margin-top: 28px; max-width: 60ch;
-    opacity: 0.7; line-height: 1.62; }
-  .confess .sig { font-family: "Shantell Sans", sans-serif;
-    font-weight: 700; font-size: 17px; margin-top: 30px; }
-  .confess .pull { position: absolute; right: 4%; top: 220px; width: 280px;
-    font-family: "Shantell Sans", sans-serif; font-weight: 700;
-    font-size: 30px; line-height: 1.32; transform: rotate(-2deg);
-    color: var(--red); display: none; }
-  @media (min-width: 1150px) { .confess .pull { display: block; } }
-
   /* the creed */
   .creed { text-align: center; padding: 62px 0; }
   .creed .t { font-family: "Shantell Sans", sans-serif; font-weight: 800;
@@ -598,41 +586,6 @@
     </div>
   </div>
 </div></section>
-
-<section class="confess sheet"><div class="wrap">
-  <p class="kicker">The confession</p>
-  <h2>Nothing is waiting at the end</h2>
-  <div class="pull">Staying on purpose is the piece.</div>
-  <p class="line">I take no side in the ending.</p>
-  <p class="line" style="margin-top:14px">The dog is the whole of what
-  you get, forever, on purpose.</p>
-  <p class="fine">There is an easy way to build this: reward people for
-  staying, and the year becomes a calculation. So I take no side. I get
-  the same whether every dog lives or every dog is sold, and I gain
-  nothing from a single dog dying. What you get for keeping your dog is
-  the dog: alive, a day older every day, now and then handed something
-  rare, and signed with your name if it dies of old age while it is
-  still yours. What you get for selling is a corpse, and one more toward
-  the 210. A thousand people, one dog each, one year, nobody rewarded
-  for being good.</p>
-  <p class="sig">&mdash; Jonathan Washburn, 2026</p>
-  <p class="fine" style="margin-top:30px">The math is public. One
-  finding held across every version of this year I tried: a pack that
-  can panic will panic early. Nothing about the count fixes that, so
-  the year gives it one clock instead. The apocalypse is checked at
-  midnight and only at midnight, in a single batch: the cannon. The
-  rule also carries a danger I would rather print at the gate than
-  discover in public. Anyone who can talk two hundred and ten people
-  into selling can end the year for everyone else, because every sale
-  turns the dog it just moved. The only defense is a pack that will
-  not list, and one dog per person means an attacker has to persuade
-  two hundred and ten separate people instead of finding one wallet
-  that holds a hundred. Adopting is the first vote.</p>
-  <div class="cta" style="justify-content:flex-start; margin-top:26px">
-    <a class="btn" href="design/">The live design feed</a>
-  </div>
-</div>
-</section>
 
 <section class="why" id="why"><div class="wrap">
   <p class="kicker">Why this performance</p>
@@ -1800,7 +1753,7 @@ function openStray(seed, state, label) {
     state + ' \u00b7 seed ' + seed;
   sview.classList.add('on');
 }
-perch('.confess', 100027, 'faithful', 'red balloon \u00b7 2.0%',   150);
+perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   150);
 perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  195);
 perch('.fatesec', 950003, 'zombie',   'zombie',                    150);
 perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        150);
@@ -1809,14 +1762,14 @@ perch('.drop',    100039, 'faithful', 'toy airplane \u00b7 0.4%',   150);
 perch('.rules',   100035, 'faithful', 'skateboard \u00b7 0.6%',     150);
 perch('.choice',  100046, 'faithful', 'pocket knife \u00b7 0.1%',   150);
 
-/* Two exceptions, both earned: the artist's adversary hangs giant off
-   the confession's edge (no dog perches on the boundary it owns), and an
-   angel floats in the cannon's night rather than standing on a line,
-   because the cannon is the one thing that cannot touch her. */
+/* Two exceptions, both earned: The King hangs giant off the edge of the
+   section about who made this, where nothing perches on the boundary he
+   owns, and an angel floats in the cannon's night rather than standing on
+   a line, because the cannon is the one thing that cannot touch her. */
 /* its label spills 30px past the dog, so the dog stands at least that far
    in or the page grows a sideways scrollbar */
-stray('.confess', 8, 'faithful', 'The King \u00b7 1 of 1',
-  'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-18px;', 1100);
+stray('.bred', 8, 'faithful', 'The King \u00b7 1 of 1',
+  'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-200px;', 1100);
 stray('.cannon', 940002, 'angel', 'angel \u00b7 out of reach',
   'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));',
   500, true);
@@ -1833,7 +1786,6 @@ stray('.cannon', 940002, 'angel', 'angel \u00b7 out of reach',
    rolled fresh on load. The creed is left out because its five cutouts
    already fill it. */
 const PACK = [
-  ['.confess', 'left',  20], ['.confess', 'right', 62],
   ['.why',     'left',  24], ['.why',     'right', 58],
   ['.bred',    'left',  30], ['.bred',    'right', 68],
   ['.yours',   'right', 26],
