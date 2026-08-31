@@ -1323,7 +1323,9 @@ const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
 
 function renderYours() {
-  yourCv.classList.toggle('framedpick', !cutout(yourCv, yseed, ystate, 800, 24));
+  yourCv.width = 800; yourCv.height = 800;
+  draw(yourCv, yseed, ystate);
+  yourCv.classList.add('framedpick');
   draw(chooseCv, yseed, ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourIntro').textContent = yname;
@@ -1504,16 +1506,12 @@ function cutout(targetCv, seed, state, size, tries) {
    so the flood always eats one or the other. An angel stays in heaven,
    framed. */
 [['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
- ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel', true],
- ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st, frame]) => {
+ ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel'],
+ ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st]) => {
   const cv = document.getElementById(id);
-  if (frame) {
-    cv.width = 500; cv.height = 500;
-    draw(cv, seed, st);
-    cv.classList.add('framedpick');
-    return;
-  }
-  cv.classList.toggle('framedpick', !cutout(cv, seed, st, 500, 24));
+  cv.width = 500; cv.height = 500;
+  draw(cv, seed, st);
+  cv.classList.add('framedpick');
 });
 /* stray dogs: scattered at every scale, live from the champion painter,
    tagged with the attribute their seed forces */
@@ -1546,9 +1544,13 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
   w.className = 'straywrap';
   w.style.cssText = css;
   const cv = document.createElement('canvas');
-  const cut = cutout(cv, seed, state, size || 500);
-  if (cut) trimToDog(cv);
-  else w.classList.add('framed');
+  /* The champion painter now works in crayon and cardboard: coats share
+     the ground color and the flood eats through the gaps. A half-eaten
+     sticker is worse than a small painting, so every stray hangs framed. */
+  const S = size || 500;
+  cv.width = S; cv.height = S;
+  draw(cv, seed, state);
+  w.classList.add('framed');
   cv.addEventListener('click', e => {
     e.stopPropagation(); openStray(seed, state, label);
   });
@@ -1627,7 +1629,9 @@ const parade = document.getElementById('parade');
 PARADE.forEach(([seed, state]) => {
   const cv = document.createElement('canvas');
   cv.width = 220; cv.height = 220;
-  cv.classList.toggle('framedpick', !cutout(cv, seed, state, 500, 16));
+  cv.width = 500; cv.height = 500;
+  draw(cv, seed, state);
+  cv.classList.add('framedpick');
   parade.append(cv);
 });
 
