@@ -377,7 +377,8 @@
   .gend.win .gtag { color: var(--blue); }
   .gend.lose .gtag { color: var(--red); }
   .gend .gart { justify-content: center; margin: 16px 0 14px; }
-  .gend .gart canvas { width: 118px; height: 118px; }
+  .gend .gart canvas { width: 128px; height: 128px; }
+  .gend.lose .gart canvas.framedpick { transform: rotate(1.3deg); }
   .gend p { font-size: 15.5px; line-height: 1.55; font-weight: 500;
     margin: 0; max-width: 34ch; margin-inline: auto; }
   canvas.cutout { flex: none; display: block; }
@@ -1478,7 +1479,7 @@ function cutout(targetCv, seed, state, size, tries) {
    framed. */
 [['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
  ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel', true],
- ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st, frame]) => {
+ ['cr_lose', 940001, 'ghost', true]].forEach(([id, seed, st, frame]) => {
   const cv = document.getElementById(id);
   if (frame) {
     cv.width = 500; cv.height = 500;
