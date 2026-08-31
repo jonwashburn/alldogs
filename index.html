@@ -344,7 +344,10 @@
   .creed .t { font-family: "Shantell Sans", sans-serif; font-weight: 800;
     text-transform: uppercase; font-size: clamp(34px, 5vw, 64px);
     line-height: 1; margin-bottom: 30px; }
-  .gameplan { max-width: 720px; margin: 36px auto 0; text-align: left; }
+  .glead { max-width: 38em; margin: 0 auto 28px; font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.55; font-weight: 500; text-align: center; }
+  .glead em { font-style: italic; }
+  .gameplan { max-width: 720px; margin: 8px auto 0; text-align: left; }
   .gameplan b { font-weight: 700; }
   .gameplan b.blue { color: var(--blue); }
   .gameplan b.red { color: var(--red); }
@@ -377,8 +380,7 @@
   .gend.win .gtag { color: var(--blue); }
   .gend.lose .gtag { color: var(--red); }
   .gend .gart { justify-content: center; margin: 16px 0 14px; }
-  .gend .gart canvas { width: 128px; height: 128px; }
-  .gend.lose .gart canvas.framedpick { transform: rotate(1.3deg); }
+  .gend .gart canvas { width: 118px; height: 118px; }
   .gend p { font-size: 15.5px; line-height: 1.55; font-weight: 500;
     margin: 0; max-width: 34ch; margin-inline: auto; }
   canvas.cutout { flex: none; display: block; }
@@ -533,6 +535,10 @@
 <section class="creed"><div class="wrap">
   <p class="kicker">The game</p>
   <h2 class="t">Zombie apocalypse</h2>
+  <p class="glead">Ten thousand people each adopt a dog and keep it for a
+  year. The contest is whether they can hold the line together. If more
+  than a third kill their dog for the money, the apocalypse comes and
+  every living dog turns. If two thirds stay, everyone wins.</p>
   <div class="gameplan">
     <div class="gstep">
       <span class="gnum">1</span>
@@ -547,9 +553,11 @@
         <canvas class="cutout" id="cr_love" width="500" height="500"></canvas>
         <canvas class="cutout" id="cr_flip" width="500" height="500"></canvas>
       </div>
-      <p>Then decide: <b class="blue">love it</b>, or <b class="red">flip it</b>.
-      <span class="lsub">To flip it, you have to put it down first and make
-      it a zombie. Only zombies can be sold.</span></p>
+      <p>Then decide: <b class="blue">love it</b>, or <b class="red">kill it</b>.
+      <span class="lsub">A living dog cannot be sold. The only way to cash
+      out, or put the piece on the market, is to put your dog down. You
+      get $20 back, no strings, and the zombie can be traded. Your kill
+      counts toward the third that ends the year for everyone else.</span></p>
     </div>
     <div class="gfork">
       <div class="gend win">
@@ -560,9 +568,9 @@
         paycheck.</p>
       </div>
       <div class="gend lose">
-        <span class="gtag">If a third fold</span>
+        <span class="gtag">If a third kill</span>
         <div class="gart"><canvas class="cutout" id="cr_lose" width="500" height="500"></canvas></div>
-        <p>If more than 1/3 put their dogs down for the money,
+        <p>If more than 1/3 kill their dogs for the money,
         <b class="red">everyone else loses</b>: the apocalypse takes every
         living dog.</p>
       </div>
@@ -1479,7 +1487,7 @@ function cutout(targetCv, seed, state, size, tries) {
    framed. */
 [['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
  ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel', true],
- ['cr_lose', 940001, 'ghost', true]].forEach(([id, seed, st, frame]) => {
+ ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st, frame]) => {
   const cv = document.getElementById(id);
   if (frame) {
     cv.width = 500; cv.height = 500;
