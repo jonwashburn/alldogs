@@ -356,6 +356,14 @@
   .lrow .lsub { display: block; font-size: 14px; opacity: 0.62;
     margin-top: 5px; font-weight: 400; }
   canvas.cutout { width: 92px; height: 92px; flex: none; display: block; }
+  /* when a clean cutout is impossible, the dog hangs as a small painting */
+  canvas.framedpick { border: 2px solid var(--ink); border-radius: 4px;
+    background: var(--paper); padding: 4px; box-sizing: border-box;
+    box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); transform: rotate(-1.3deg); }
+  .straywrap.framed canvas { border: 2px solid var(--ink); border-radius: 4px;
+    background: var(--paper); padding: 4%; box-sizing: border-box;
+    box-shadow: 3px 4px 0 rgba(0,0,0,0.22); transform: rotate(-1.6deg); }
+  .straywrap.framed .sground { display: none; }
   .cpair { display: flex; gap: 4px; flex: none; }
   .cpair canvas.cutout { width: 78px; height: 78px; }
   @media (max-width: 560px) {
@@ -1271,7 +1279,7 @@ const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
 
 function renderYours() {
-  cutout(yourCv, yseed, ystate, 800, 10);
+  yourCv.classList.toggle('framedpick', !cutout(yourCv, yseed, ystate, 800, 24));
   draw(chooseCv, yseed, ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourIntro').textContent = yname;
@@ -1371,17 +1379,11 @@ function cutoutOnce(targetCv, seed, state, size) {
   for (let p = 0; p < S * S; p++) {
     if (alpha(p) && comp[p] !== best) d[p * 4 + 3] = 0;
   }
-  // sanity: a dog should be 6% to 85% of the frame; otherwise the ground
-  // matched the coat and the cutout is wrong, so keep the painting
+  // sanity: a dog should be 6% to 85% of the frame, and reasonably solid;
+  // otherwise the ground matched the coat and the cutout is a fragment
   let opq = 0;
   for (let p = 0; p < S * S; p++) if (alpha(p)) opq++;
   const frac = opq / (S * S);
-  if (frac < 0.06 || frac > 0.85) {
-    targetCv.width = S; targetCv.height = S;
-    draw(targetCv, seed, state);
-    return 0;
-  }
-  // a dog sliced by the frame edge reads as broken once the ground is gone
   let minX = S, maxX = -1, minY = S, maxY = -1;
   for (let p = 0; p < S * S; p++) {
     if (!alpha(p)) continue;
@@ -1390,6 +1392,13 @@ function cutoutOnce(targetCv, seed, state, size) {
     if (x > maxX) maxX = x;
     if (y < minY) minY = y;
     if (y > maxY) maxY = y;
+  }
+  const bboxA = maxX >= 0 ? (maxX - minX + 1) * (maxY - minY + 1) : 0;
+  const solidity = bboxA > 0 ? opq / bboxA : 0;
+  if (frac < 0.06 || frac > 0.85 || solidity < 0.3) {
+    targetCv.width = S; targetCv.height = S;
+    draw(targetCv, seed, state);
+    return 0;
   }
   const M = Math.max(6, Math.round(S * 0.014));
   const clear = minX >= M && minY >= M &&
@@ -1412,26 +1421,26 @@ function cutoutOnce(targetCv, seed, state, size) {
 /* cutout with seed-walking: if the dog's silhouette touches the frame edge
    (a sliced dog reads as broken), try the next seeds until one sits fully
    inside. Only for generic seeds; forced showcase and one-of-one seeds must
-   never walk, their seed IS the attribute. */
+   never walk, their seed IS the attribute. A cutout ships ONLY when it is
+   clean and fully contained (status 2): the champion painter keeps evolving,
+   and a half-eaten sticker is worse than no sticker. Anything less renders
+   as the full painting; the caller frames it. */
 function cutout(targetCv, seed, state, size, tries) {
-  let fallback = -1;
   for (let k = 0; k <= (tries || 0); k++) {
-    const st = cutoutOnce(targetCv, seed + k, state, size);
-    if (st === 2) return true;
-    if (st === 1 && fallback < 0) fallback = seed + k;
+    if (cutoutOnce(targetCv, seed + k, state, size) === 2) return true;
   }
-  if (fallback >= 0) { cutoutOnce(targetCv, fallback, state, size); return true; }
   const S = size || 500;
   targetCv.width = S; targetCv.height = S;
   draw(targetCv, seed, state);
   return false;
 }
 
-cutout(document.getElementById('cr_adopt'), 66771, 'faithful', 500, 16);
-cutout(document.getElementById('cr_love'), 910008, 'faithful', 500, 16);
-cutout(document.getElementById('cr_flip'), 920001, 'zombie', 500, 16);
-cutout(document.getElementById('cr_win'), 930001, 'angel', 500, 16);
-cutout(document.getElementById('cr_lose'), 940001, 'ghost', 500, 16);
+[['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
+ ['cr_flip', 920001, 'zombie'], ['cr_win', 930001, 'angel'],
+ ['cr_lose', 940001, 'ghost']].forEach(([id, seed, st]) => {
+  const cv = document.getElementById(id);
+  cv.classList.toggle('framedpick', !cutout(cv, seed, st, 500, 24));
+});
 /* stray dogs: scattered at every scale, live from the champion painter,
    tagged with the attribute their seed forces */
 function trimToDog(cv) {
@@ -1463,8 +1472,9 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
   w.className = 'straywrap';
   w.style.cssText = css;
   const cv = document.createElement('canvas');
-  cutout(cv, seed, state, size || 500);
-  trimToDog(cv);
+  const cut = cutout(cv, seed, state, size || 500);
+  if (cut) trimToDog(cv);
+  else w.classList.add('framed');
   cv.addEventListener('click', e => {
     e.stopPropagation(); openStray(seed, state, label);
   });
@@ -1543,7 +1553,7 @@ const parade = document.getElementById('parade');
 PARADE.forEach(([seed, state]) => {
   const cv = document.createElement('canvas');
   cv.width = 220; cv.height = 220;
-  cutout(cv, seed, state, 500, 8);
+  cv.classList.toggle('framedpick', !cutout(cv, seed, state, 500, 16));
   parade.append(cv);
 });
 
