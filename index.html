@@ -1401,8 +1401,11 @@ function cutoutOnce(targetCv, seed, state, size) {
     return 0;
   }
   const M = Math.max(6, Math.round(S * 0.014));
+  // an extreme pancake or tower silhouette reads as a smear at icon size
+  const aspect = (maxX - minX + 1) / Math.max(1, maxY - minY + 1);
   const clear = minX >= M && minY >= M &&
-    (S - 1 - maxX) >= M && (S - 1 - maxY) >= M;
+    (S - 1 - maxX) >= M && (S - 1 - maxY) >= M &&
+    aspect < 2.05 && aspect > 0.5;
   // soft half-step on the boundary
   for (let p = 0; p < S * S; p++) {
     if (!alpha(p)) continue;
