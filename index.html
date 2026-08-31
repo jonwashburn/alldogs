@@ -173,6 +173,30 @@
   .lifenote b { opacity: 1; }
   @media (max-width: 560px) { .liferow .btn { width: 100%; } }
 
+  /* the composite: one face made of many dogs */
+  .galton { margin-top: 52px; border-top: 2px solid var(--ink);
+    padding-top: 28px; display: grid; grid-template-columns: 340px 1fr;
+    gap: 44px; align-items: start; }
+  .gtplate { border: 2px solid var(--ink); padding: 10px;
+    background: var(--hair); box-shadow: 5px 5px 0 var(--ink); }
+  .gtplate canvas { width: 100%; height: auto; display: block;
+    image-rendering: auto; }
+  .gtcap { display: flex; justify-content: space-between; gap: 10px;
+    padding-top: 9px; margin-top: 9px; border-top: 1px solid var(--ink);
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; opacity: 0.6; }
+  .gtside h3 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    font-size: clamp(22px, 3vw, 32px); margin: 6px 0 14px; }
+  .gtside p { font-size: 15px; line-height: 1.62; opacity: 0.74;
+    margin-bottom: 12px; max-width: 56ch; }
+  .gtbtns { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 4px; }
+  .gtnote { font-size: 14.5px; }
+  .gtnote b { opacity: 1; }
+  @media (max-width: 860px) {
+    .galton { grid-template-columns: 1fr; gap: 26px; }
+    .gtplate { max-width: 340px; box-shadow: none; }
+  }
+
   /* the whole pack, painted in front of you */
   .packwall { margin-top: 46px; border-top: 2px solid var(--ink);
     padding-top: 24px; }
@@ -1170,9 +1194,45 @@
       it. The year decides its fate, and the day it dies is etched on the
       plaque with the name of whoever kept it. The blockchain doesn't
       store this art, it completes it.</p></div>
+    <div class="spec"><span>Averageable</span>
+      <p>A thousand paintings that can be computed can also be added
+      together. No collection made of picture files can be averaged into
+      one face, because there are only ever as many pictures as somebody
+      made. Here there is no such limit.</p></div>
     <div class="spec"><span>No servers, no files</span>
       <p>Nothing to host, nothing to pin, nothing to rot. A number and a
       painter, and the painting exists wherever somebody runs them.</p></div>
+  </div>
+
+  <div class="galton">
+    <div class="gtplate">
+      <canvas id="gtCanvas" width="300" height="300"></canvas>
+      <div class="gtcap"><span id="gtWhich">the living</span><span id="gtN">0 dogs</span></div>
+    </div>
+    <div class="gtside">
+      <p class="kicker">The composite</p>
+      <h3>The face of the pack.</h3>
+      <p>In 1877 Francis Galton stacked portrait photographs on a single
+      plate, giving each one a fraction of the exposure, to find the face
+      behind a group of faces. He called it composite portraiture. He
+      thought he was photographing a type. What he had actually invented
+      was a way to photograph a population.</p>
+      <p>He was limited by how many photographs existed. This collection
+      is not, because these dogs are not pictures, they are arithmetic,
+      and you can always make one more. So the average here is not
+      approximated. It is computed, live, out of dogs that are being
+      painted while you watch.</p>
+      <div class="gtbtns">
+        <button class="btn hot" data-st="faithful">The living</button>
+        <button class="btn" data-st="zombie">The horde</button>
+        <button class="btn" data-st="angel">The dead</button>
+      </div>
+      <p class="gtnote" id="gtNote">Pick a fate. The first dog is just a
+      dog. Somewhere around thirty a type starts coming through the noise,
+      and by a hundred you are looking at a face nobody drew and nobody
+      owns: everyone who ended the year that way, at once. This is the one
+      picture in the collection that is made of other people.</p>
+    </div>
   </div>
 </div></section>
 
@@ -2140,6 +2200,95 @@ paintWhenNear(document.querySelector('footer'), () => {
     parade.append(cv);
   });
 });
+
+/* The composite: Galton's plate, computed.
+
+   Every dog is added into a running sum and the sum is rescaled to the
+   full range before it is shown, because a straight average of a hundred
+   paintings collapses toward mid grey and throws away the very structure
+   it is accumulating. Stretching it back is not a filter over the truth,
+   it is how you see an average at all: the shape is really in there, at
+   about a tenth of the contrast a single dog has. One dog per frame, so
+   you watch a face arrive rather than being handed one. */
+(function () {
+  const cv = document.getElementById('gtCanvas');
+  if (!cv) return;
+  const S = cv.width, PX = S * S;
+  const g = cv.getContext('2d');
+  const scratch = document.createElement('canvas');
+  scratch.width = S; scratch.height = S;
+  const sg = scratch.getContext('2d');
+  const acc = new Float64Array(PX * 3);
+  const img = g.createImageData(S, S);
+  const NAME = { faithful: 'the living', zombie: 'the horde', angel: 'the dead' };
+  let state = 'faithful', n = 0, raf = 0, running = false;
+
+  function show() {
+    let lo = 255, hi = 0;
+    for (let j = 0; j < PX * 3; j++) {
+      const v = acc[j] / n;
+      if (v < lo) lo = v;
+      if (v > hi) hi = v;
+    }
+    const sc = 255 / Math.max(1, hi - lo);
+    for (let q = 0, j = 0; q < PX; q++, j += 3) {
+      img.data[q * 4] = (acc[j] / n - lo) * sc;
+      img.data[q * 4 + 1] = (acc[j + 1] / n - lo) * sc;
+      img.data[q * 4 + 2] = (acc[j + 2] / n - lo) * sc;
+      img.data[q * 4 + 3] = 255;
+    }
+    g.putImageData(img, 0, 0);
+    document.getElementById('gtN').textContent =
+      n + (n === 1 ? ' dog' : ' dogs');
+  }
+
+  function say() {
+    const note = document.getElementById('gtNote');
+    if (n === 1) note.innerHTML = '<b>One dog.</b> Which is just a dog, and '
+      + 'the only frame of this that looks like anything you could own.';
+    else if (n < 12) note.innerHTML = '<b>' + n + ' dogs.</b> Still mostly '
+      + 'the last one, arguing with the one before it.';
+    else if (n < 45) note.innerHTML = '<b>' + n + ' dogs.</b> Ears. That is '
+      + 'the type starting to come through: the things every dog has are '
+      + 'reinforcing, and everything else is cancelling out.';
+    else if (n < 110) note.innerHTML = '<b>' + n + ' dogs.</b> The face is '
+      + 'the part they agree on. The haze around it is every way they '
+      + 'differ, averaged into weather.';
+    else note.innerHTML = '<b>' + n + ' dogs.</b> This is what ' + NAME[state]
+      + ' look like as one thing. Nobody drew it, nobody can own it, and it '
+      + 'would be a different picture if different people had chosen '
+      + 'differently.';
+  }
+
+  function tick() {
+    if (!running) return;
+    window.ALLDOGS.drawDog(scratch, rollSeed(), state);
+    const d = sg.getImageData(0, 0, S, S).data;
+    for (let q = 0, j = 0; q < PX; q++, j += 3) {
+      acc[j] += d[q * 4];
+      acc[j + 1] += d[q * 4 + 1];
+      acc[j + 2] += d[q * 4 + 2];
+    }
+    n++;
+    show(); say();
+    if (n >= 160) { running = false; return; }
+    raf = requestAnimationFrame(tick);
+  }
+
+  document.querySelectorAll('.gtbtns .btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      cancelAnimationFrame(raf);
+      document.querySelectorAll('.gtbtns .btn').forEach(o => o.classList.remove('hot'));
+      btn.classList.add('hot');
+      state = btn.dataset.st;
+      acc.fill(0); n = 0;
+      document.getElementById('gtWhich').textContent = NAME[state];
+      g.clearRect(0, 0, S, S);
+      running = true;
+      raf = requestAnimationFrame(tick);
+    });
+  });
+})();
 
 /* The whole pack, painted in front of you.
 
