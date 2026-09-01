@@ -1647,8 +1647,13 @@ function paintsFate(state) {
   const scoreEl = document.getElementById('stripScore');
   const scrub = document.getElementById('stripScrub');
   const play = document.getElementById('stripPlay');
+  /* Loaded as a script rather than fetched, because the bucket sends no
+     Access-Control-Allow-Origin and a fetch from this origin is refused.
+     A script tag is not subject to CORS, which is why the design feed has
+     always been feed.js. The sprite itself is a background image, so it
+     was never affected. */
   const MANIFEST = 'https://recognitionphysics-public.t3.tigrisfiles.io'
-    + '/share/alldogs_design_live/filmstrip.json';
+    + '/share/alldogs_design_live/filmstrip.js';
 
   let m = null, i = 0, timer = 0, paused = false, visible = false;
   const CALM = !matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1701,23 +1706,31 @@ function paintsFate(state) {
   });
   addEventListener('resize', layout);
 
-  fetch(MANIFEST, { cache: 'no-store' })
-    .then(r => r.json())
-    .then(data => {
-      m = data;
-      if (!m.count) throw new Error('empty filmstrip');
-      scrub.max = m.count - 1;
-      img.style.backgroundImage = 'url("' + m.url + '")';
-      paused = !CALM; label();
-      layout();
-      new IntersectionObserver(es => {
-        es.forEach(e => {
-          visible = e.isIntersecting;
-          if (visible) start(); else halt();
-        });
-      }, { threshold: 0.25 }).observe(box);
-    })
-    .catch(() => { box.remove(); });
+  function ready() {
+    m = window.ALLDOGS_STRIP;
+    if (!m || !m.count) { box.remove(); return; }
+    scrub.max = m.count - 1;
+    img.style.backgroundImage = 'url("' + m.url + '")';
+    paused = !CALM; label();
+    layout();
+    /* the sprite arrives after the manifest, and the frame is sized off
+       the rendered box, so re-place it once the image is actually there */
+    const pre = new Image();
+    pre.onload = layout;
+    pre.src = m.url;
+    new IntersectionObserver(es => {
+      es.forEach(e => {
+        visible = e.isIntersecting;
+        if (visible) start(); else halt();
+      });
+    }, { threshold: 0.25 }).observe(box);
+  }
+
+  const tag = document.createElement('script');
+  tag.src = MANIFEST + '?v=' + Math.floor(Date.now() / 60000);
+  tag.onload = ready;
+  tag.onerror = () => { box.remove(); };
+  document.head.append(tag);
 })();
 
 /* one seed, three lives */
