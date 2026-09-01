@@ -206,15 +206,6 @@
   }
   @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
 
-  /* the painter's progress, inside the map */
-  .yspaint { margin-top: 16px; }
-  .ysbar.plain u { display: none; }
-  .pwcount { font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; opacity: 0.55; margin-top: 10px; }
-  .pwcount b { font-family: "Shantell Sans", sans-serif; font-size: 22px;
-    letter-spacing: 0; opacity: 1; }
-  .pwcount em { font-style: normal; margin-left: 14px; }
-
   /* fates: three the ninety days can reach, two that only the ending can */
   .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
     margin-top: 18px; }
@@ -631,7 +622,7 @@
   <div class="herocap"><span id="heroHandle">&nbsp;</span><span id="heroMeta">&nbsp;</span></div>
   <p class="tagline">1,000 dogs &middot; one <em>zombie apocalypse</em> &middot; adoption fee $50 &middot; one per person</p>
   <p class="sub">ALL DOGS is a ninety-day performance played by a
-  thousand strangers holding one dog each. The artwork is whatever is
+  thousand friends of friends, one dog each. The artwork is whatever is
   left when the ninety days end. Every dog is its own drawing living on
   Ethereum: the artist draws the dogs, the owners write the story.</p>
   <div class="cta">
@@ -645,8 +636,8 @@
 <section class="creed"><div class="wrap">
   <p class="kicker">The game</p>
   <h2 class="t">Zombie apocalypse</h2>
-  <p class="glead">A thousand people each adopt one dog and keep it for
-  ninety days. A dog you keep grows older every day and rarer every week.
+  <p class="glead">A thousand dog people, each let in by somebody
+  already here, adopt one dog each and keep it for ninety days. A dog you keep grows older every day and rarer every week.
   Selling it kills it: for those whole ninety days, the moment a living
   dog changes hands the contract turns it into a zombie. If 150 dogs are
   sold inside them, the apocalypse comes and every dog still living turns
@@ -716,27 +707,16 @@
     <div class="ysbar"><i id="ysRace"></i><u id="ysMark"></u></div>
     <div class="ysctl">
       <button class="btn hot" id="ysRun">Pause</button>
-      <button class="btn" id="ysPaint">Paint all 1,000</button>
       <label for="ysRate">How often the pack sells
         <output id="ysRateOut">one every 14 hours</output></label>
       <input id="ysRate" type="range" min="20" max="500" step="1" value="167">
-    </div>
-    <div class="yspaint" id="ysPaintRow" hidden>
-      <div class="ysbar plain"><i id="pwProg"></i></div>
-      <div class="pwcount"><b id="pwDone">0</b> of 1,000 painted<em
-        id="pwElapsed"></em></div>
     </div>
     <p class="ysverdict" id="ysVerdict">A thousand marks, one dog to
     each, running the ninety days over and over for as long as you watch.
     Nothing in it is scripted: every night, every living dog rolls the
     same small chance of dying the rules give it, and somebody sells at
-    the rate on the slider, which sits on the line itself. Press <b>paint
-    all 1,000</b> and the marks stop being marks. There is no folder of
-    pictures behind this page, so each one gets painted from its seed in
-    front of you, which takes about a minute and the minute is the proof.
-    After that the same grid keeps running, and a dog that turns is
-    repainted as the zombie it became. Click any of them to see it
-    large.</p>
+    the rate on the slider, which sits on the line itself. Every mark is a
+    real dog rather than a counter, so click one and it opens.</p>
   </div>
 </div></section>
 
@@ -768,10 +748,11 @@
       move here that goes unwritten.</p>
       <p>Which turns owning a thing into doing a thing. Holding stops
       being a position and becomes something you are doing to an animal,
-      in public, beside nine hundred and ninety-nine people deciding the
-      same, with the count of who stopped visible all day. Whether a
-      thousand strangers can hold together is an old question. It is just
-      usually asked with nothing on the table.</p>
+      in public, beside nine hundred and ninety-nine people who were
+      vouched for the same way you were, with the count of who stopped
+      visible all day. Whether a crowd of strangers will hold together is
+      an old question, and a dull one, because the answer is usually no.
+      Whether a tribe will is the question worth paying for.</p>
       <p>One collection is what I could not keep. This one is a thousand
       people finding out what they can.</p>
     </div>
@@ -1165,7 +1146,7 @@
       particular owners did not sell, and it would be a different face if
       they had.</p>
       <p>Which is the only way to see this artwork at all. It is not any
-      one dog. It is what a thousand strangers did over ninety days, every dog
+      one dog. It is what a thousand dog people did over ninety days, every dog
       a brushstroke in it, and there has never been a way to look at that
       directly. This is the picture of the whole painting.</p>
       <div class="gtbtns">
@@ -1215,9 +1196,10 @@
   somebody already in it, so the thousand are a chain and not a crowd.
   That matters more here than it would anywhere else. The ninety days are
   a test of whether a thousand people can hold together, so how the
-  thousand were assembled is part of the experiment, and a gas war would
-  have assembled strangers. In a chain, every choice has somebody standing
-  one link away who made it possible.<br><br>
+  thousand were assembled is part of the experiment. A gas war buys a
+  crowd of strangers. This buys a tribe: dog people, friends of friends,
+  every one of them standing one link from somebody who vouched for
+  them.<br><br>
   If the pack never fills, the ninety days play exactly the same and the
   apocalypse still comes at 15% of the dogs that were actually adopted.
   Dogs nobody adopts are never born at all.</p>
@@ -1924,7 +1906,7 @@ function cutout(targetCv, seed, state, size, tries) {
 
 /* the good ending shows a living dog, because that is what the good
    ending is */
-[['cr_adopt', 66771, 'faithful'], ['cr_love', 910008, 'faithful'],
+[['cr_adopt', 318, 'faithful'], ['cr_love', 910008, 'faithful'],
  ['cr_flip', 920001, 'zombie'], ['cr_win', 910005, 'faithful'],
  ['cr_lose', 940001, 'zombie']].forEach(([id, seed, st]) => {
   const cv = document.getElementById(id);
@@ -2250,17 +2232,11 @@ paintWhenNear(document.querySelector('footer'), () => {
 
 /* The ninety days, run over a thousand dogs.
 
-   One grid does both jobs. Every square is a dog: a flat colour while it
-   is only a state, and a real painting once the painter has reached it.
-   Press paint and it works through all thousand from their seeds, which
-   takes about a minute because a thousand paintings take about a minute,
-   and the counter is the whole argument: there is no folder of pictures
-   behind this page.
-
-   After that the two halves feed each other. The night rolls change a
-   dog's state, the painter repaints that square as what it became, and a
-   massacre queues more repaints than the painter can serve, which is why
-   the field flashes and the dogs catch up afterwards. */
+   One mark per dog, a thousand of them, and every night each living one
+   rolls the same 0.03% the rules give it while the pack sells at whatever
+   rate the slider says. Nothing here is scripted; the only fixed thing is
+   that the cannon fires the night the count reaches 150. Each mark is a
+   real seed, so clicking one opens that dog. */
 (function () {
   const cv = document.getElementById('ysPack');
   if (!cv) return;
@@ -2275,45 +2251,18 @@ paintWhenNear(document.querySelector('footer'), () => {
   const el = id => document.getElementById(id);
   const field = new Uint8Array(N);       // the truth
   const seeds = new Uint32Array(N);
-  /* every square keeps a painting per state it has actually been in, so
-     a dog that turns back at the start of the next run is instant and
-     the brush is only ever spent on something it has not made yet */
-  const tiles = Array.from({ length: N }, () => [null, null, null]);
-  const scratch = document.createElement('canvas');
-  scratch.width = scratch.height = Math.round(TILE);
   let day = 0, zombies = 0, angels = 0, living = N;
   let running = false, raf = 0, acc = 0, last = 0, over = null;
-  let painting = false, queue = [], painted = 0, t0 = 0;
 
   for (let i = 0; i < N; i++) seeds[i] = rollSeed();
 
   function cellX(i) { return (i % COLS) * TILE; }
   function cellY(i) { return ((i / COLS) | 0) * TILE; }
 
-  /* A square is a mark until it has been painted, and a painting after.
-     When a painted dog changes state the brush cannot keep up with the
-     night, so the old painting stays and takes a wash of the new state
-     until the repaint lands. That is why a massacre reddens instantly and
-     then resolves into actual zombies a few at a time. Reverting to
-     living needs no wash: the counters already say the run restarted. */
-  const WASH = [null, 'rgba(255,59,47,0.66)', 'rgba(240,180,41,0.62)'];
-  function anyTile(i) {
-    return tiles[i][0] || tiles[i][1] || tiles[i][2];
-  }
+  /* one mark per dog, and nothing else is ever drawn in the grid */
   function cell(i) {
     const x = cellX(i), y = cellY(i);
     g.clearRect(x, y, TILE, TILE);
-    const want = tiles[i][field[i]];
-    if (want) { g.drawImage(want, x, y); return; }
-    const stale = anyTile(i);
-    if (stale) {
-      g.drawImage(stale, x, y);
-      if (WASH[field[i]]) {
-        g.fillStyle = WASH[field[i]];
-        g.fillRect(x, y, TILE, TILE);
-      }
-      return;
-    }
     const mk = TILE * 0.62, o = (TILE - mk) / 2;
     g.fillStyle = INK[field[i]];
     g.fillRect(x + o, y + o, mk, mk);
@@ -2321,39 +2270,6 @@ paintWhenNear(document.querySelector('footer'), () => {
 
   function paintAll() {
     for (let i = 0; i < N; i++) cell(i);
-  }
-
-  /* one square, painted for real at whatever it currently is */
-  function paintOne(i) {
-    const st = field[i];
-    if (tiles[i][st]) { cell(i); return false; }
-    const fresh = anyTile(i) === null;
-    draw(scratch, seeds[i], NAME[st]);
-    const b = document.createElement('canvas');
-    b.width = b.height = scratch.width;
-    b.getContext('2d').drawImage(scratch, 0, 0);
-    tiles[i][st] = b;
-    cell(i);
-    return fresh;
-  }
-
-  /* only worth queueing a square that has been painted before and needs a
-     state it has not been painted in yet */
-  function enqueue(i) {
-    if (anyTile(i) && !tiles[i][field[i]]) queue.push(i);
-  }
-
-  function painterTick() {
-    if (!painting) return;
-    if (queue.length) {
-      const i = queue.shift();
-      if (paintOne(i)) painted++;
-      el('pwDone').textContent = painted.toLocaleString();
-      el('pwProg').style.width = (painted / N * 100) + '%';
-      el('pwElapsed').textContent =
-        ((performance.now() - t0) / 1000).toFixed(0) + 's';
-    }
-    requestAnimationFrame(painterTick);
   }
 
   function rate() { return el('ysRate').value / 100; }
@@ -2380,14 +2296,14 @@ paintWhenNear(document.querySelector('footer'), () => {
     for (let i = 0; i < N; i++) {
       if (field[i] !== LIVING) continue;
       if (Math.random() < DEATH) {
-        field[i] = ANGEL; angels++; living--; cell(i); enqueue(i);
+        field[i] = ANGEL; angels++; living--; cell(i);
       }
     }
     const pSell = living > 0 ? perDay / living : 0;
     for (let i = 0; i < N; i++) {
       if (field[i] !== LIVING) continue;
       if (Math.random() < pSell) {
-        field[i] = ZOMBIE; zombies++; living--; cell(i); enqueue(i);
+        field[i] = ZOMBIE; zombies++; living--; cell(i);
       }
     }
     if (zombies >= TARGET) return 'apocalypse';
@@ -2403,7 +2319,7 @@ paintWhenNear(document.querySelector('footer'), () => {
     let taken = 0;
     for (let i = 0; i < N; i++) {
       if (field[i] === LIVING) {
-        field[i] = ZOMBIE; taken++; cell(i); enqueue(i);
+        field[i] = ZOMBIE; taken++; cell(i);
       }
     }
     zombies += taken; living = 0;
@@ -2417,9 +2333,7 @@ paintWhenNear(document.querySelector('footer'), () => {
       el('ysVerdict').innerHTML = '<b>The cannon fired on day ' + day
         + '.</b> The count reached a hundred and fifty, and the horde took '
         + 'the ' + taken + ' dogs that were still alive, all at the same '
-        + 'midnight. ' + angels + ' angels were already out of reach.'
-        + (painted ? ' The painter is repainting them as what they became, '
-          + 'one at a time, because a massacre outruns a brush.' : '');
+        + 'midnight. ' + angels + ' angels were already out of reach.';
     } else {
       el('ysVerdict').innerHTML = '<b>The zombies lost.</b> The ninety '
         + 'days ended ' + (TARGET - zombies) + ' short of the line. '
@@ -2432,13 +2346,11 @@ paintWhenNear(document.querySelector('footer'), () => {
     nextRun();
   }
 
-  /* the same thousand dogs, run again: only the states reset, so the
-     painter keeps everything it already made and the second run shows
-     what changed rather than a different pack */
+  /* the same thousand dogs, run again: the seeds stay, so a second run
+     shows what changed rather than a different pack */
   function reset() {
     field.fill(LIVING);
     day = 0; zombies = 0; angels = 0; living = N; over = null;
-    for (let i = 0; i < N; i++) enqueue(i);
     board(); paintAll();
   }
 
@@ -2479,18 +2391,6 @@ paintWhenNear(document.querySelector('footer'), () => {
   el('ysRun').addEventListener('click', () => {
     paused = !paused; label();
     if (paused) { clearTimeout(hold); hold = 0; halt(); } else start();
-  });
-
-  el('ysPaint').addEventListener('click', () => {
-    if (painting) return;
-    painting = true; t0 = performance.now();
-    el('ysPaintRow').hidden = false;
-    el('ysPaint').textContent = 'Painting';
-    el('ysPaint').disabled = true;
-    const order = Array.from({ length: N }, (_, k) => k);
-    shuffle(order);
-    queue = order;
-    requestAnimationFrame(painterTick);
   });
 
   /* the grid is one canvas, so a click has to be measured against the
