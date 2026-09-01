@@ -326,7 +326,12 @@
   }
 
   function render(feed) {
-    var rounds = (feed.rounds || []).filter(drew).slice().reverse();
+    // Highest round first, not file order. Workers finish out of order
+    // now that each painter runs its own loop, so a fast seat's 913
+    // lands before a slow seat's 911 and the list reads as though
+    // rounds are missing when they are only still being painted.
+    var rounds = (feed.rounds || []).filter(drew).slice()
+      .sort(function (a, b) { return b.round - a.round; });
     var promos = rounds.filter(function (r) { return r.promoted; }).length;
     var champTotal = null;
     for (var i = 0; i < rounds.length; i++) {
