@@ -70,7 +70,7 @@
   .herobanner { position: relative; width: 100%;
     height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
   .herobanner canvas { position: absolute; left: 0; top: 50%; width: 100%;
-    height: auto; transform: translateY(-45%); display: block; }
+    height: auto; transform: translateY(-50%); display: block; }
   /* the title is a collar tag hung on the painting, swinging on its string */
   .herobanner h1 { position: absolute; left: 34px; top: 34px;
     color: var(--ink); background: var(--paper);
@@ -1519,22 +1519,45 @@ function spreadFates(n) {
   return shuffle(out);
 }
 
+/* The twenty-one. Seeds 1 through 21 are the one-of-ones, and the painter
+   builds each of them a costume no other dog can draw. They are never
+   named anywhere on this page. A caption would do the looking for you,
+   and the whole point of a one of one is that you either recognise it or
+   you do not. The only tell we leave is the one an interested reader can
+   find for themselves: click any dog and the seed is in the caption. */
+const ONES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+              12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+
+/* They are dealt through the litter rather than gathered into a row of
+   their own, because they are not a bonus set: they are twenty-one dogs
+   in the same pack, adopted by somebody, aging on the same clock. Two of
+   the eight below are already gone, one turned and one to old age, which
+   is the honest thing to show. A rarity that cannot die is a trophy, and
+   nothing in this collection is a trophy. */
 const FIRST_LITTER = [
   [910001, 'faithful', '@satoshis_widow'],
+  [3,      'faithful', '@block_baron'],
   [910002, 'faithful', '@gm_gm_gm'],
   [910003, 'faithful', '@exit_liquidity'],
   [910004, 'faithful', '@wagmi_4ever'],
   [910005, 'faithful', '@old_money'],
+  [12,     'faithful', '@front_row'],
   [910006, 'faithful', '@memento_mori'],
+  [19,     'faithful', '@paper_hands'],
   [910007, 'faithful', '@mile_high_club'],
   [910008, 'faithful', '@yeehaw_capital'],
-  [910009, 'faithful', '@princess_maxi'],
-  [910010, 'faithful', '@metaverse_larry'],
   [920001, 'zombie', '@first_blood'],
-  [920002, 'zombie', '@dust_and_bones'],
+  [910009, 'faithful', '@princess_maxi'],
+  [5,      'faithful', '@velvet_rope'],
   [930001, 'angel', '@good_girl_luna'],
+  [910010, 'faithful', '@metaverse_larry'],
+  [920002, 'zombie', '@dust_and_bones'],
+  [20,     'faithful', '@night_shift'],
   [930002, 'angel', '@sweet_old_bean'],
+  [21,     'zombie', '@house_money'],
+  [15,     'faithful', '@zero_chill'],
   [940001, 'zombie', '@too_late_now'],
+  [18,     'angel', '@no_refunds'],
   [940002, 'angel', '@never_sold_a_thing'],
 ];
 
@@ -1554,6 +1577,8 @@ function fateLabel(s) {
 function penFor(seed, state, handle) {
   const pen = document.createElement('div');
   pen.className = 'pen';
+  pen.dataset.seed = seed;
+  pen.dataset.state = state;
   const cv = document.createElement('canvas');
   cv.width = 800; cv.height = 800;
   draw(cv, seed, state);
@@ -1577,15 +1602,24 @@ function firstLitter() {
 }
 paintWhenNear(document.getElementById('dogs'), firstLitter);
 
+/* Every fresh litter deals three of the twenty-one, drawn without
+   replacement so a reader who keeps pressing the button keeps meeting
+   ones they have not seen. Nothing marks them out. They wear the same
+   caption as the dog beside them and they take whatever fate the deal
+   hands them, so finding one is on the reader. */
 document.getElementById('litter').addEventListener('click', () => {
   kennel.innerHTML = '';
   const N = 24;
   const fates = dealFates(N);
+  const ones = shuffle(ONES.slice()).slice(0, 3);
+  const onesAt = shuffle([...Array(N).keys()]).slice(0, 3);
   for (let i = 0; i < N; i++) {
     const handle = '@' + HA[Math.floor(Math.random() * HA.length)] + '_'
       + HB[Math.floor(Math.random() * HB.length)]
       + (Math.random() < 0.4 ? Math.floor(Math.random() * 99) : '');
-    kennel.append(penFor(rollSeed(), fates[i], handle));
+    const slot = onesAt.indexOf(i);
+    const seed = slot >= 0 ? ones[slot] : rollSeed();
+    kennel.append(penFor(seed, fates[i], handle));
   }
 });
 
@@ -1624,32 +1658,24 @@ document.getElementById('litter').addEventListener('click', () => {
              ok: x1 > x0 };
   }
   // want: dark ground, dog mostly right of center (wordmark zone is the
-  // left 45%), head (bbox top) inside the crop window
-  let seed = null, info = null, fallback = null, fallbackInfo = null;
+  // left 45%). Vertical crop is CSS: the square stays centered, so a
+  // wider window trims the same amount from the top and the bottom.
+  let seed = null, fallback = null;
   for (let k = 0; k < 22; k++) {
     const cand = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
     const pi = probe(cand);
     if (!pi.ok) continue;
-    if (fallback === null && pi.lum < 118) { fallback = cand; fallbackInfo = pi; }
-    if (pi.lum < 118 && pi.x0 > 0.34) { seed = cand; info = pi; break; }
+    if (fallback === null && pi.lum < 118) fallback = cand;
+    if (pi.lum < 118 && pi.x0 > 0.34) { seed = cand; break; }
   }
-  if (seed === null && fallback !== null) { seed = fallback; info = fallbackInfo; }
+  if (seed === null && fallback !== null) seed = fallback;
   const banner = document.querySelector('.herobanner');
   if (seed === null) {
     seed = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
-    info = probe(seed);
     banner.classList.add('light');
   }
   const heroCv = document.getElementById('heroDog');
   draw(heroCv, seed, 'faithful');
-  // center the crop window on the head: banner shows a band of the square;
-  // put the bbox top third at the window's upper third.
-  const bh = banner.clientHeight;
-  const cw = heroCv.clientWidth || banner.clientWidth;
-  const headY = (info.y0 + (info.y1 - info.y0) * 0.22) * cw;
-  let top = Math.max(0, Math.min(cw - bh, headY - bh * 0.34));
-  heroCv.style.top = '0';
-  heroCv.style.transform = 'translateY(' + (-top) + 'px)';
   const handle = '@' + HA[seed % HA.length] + '_' + HB[(seed >> 4) % HB.length];
   document.getElementById('heroHandle').textContent = handle;
   document.getElementById('heroMeta').textContent =
@@ -2343,6 +2369,10 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
   const w = document.createElement('div');
   w.className = 'straywrap';
   w.style.cssText = css;
+  /* the seed is already in the caption when you open a dog, so putting it
+     on the element hides nothing and lets the page be read from source */
+  w.dataset.seed = seed;
+  w.dataset.state = state;
   const cv = document.createElement('canvas');
   /* The champion painter now works in crayon and cardboard: coats share
      the ground color and the flood eats through the gaps. A half-eaten
@@ -2479,6 +2509,31 @@ const packFates = spreadFates(PACK.length);
 PACK.forEach(([sel, side, top], i) => {
   const fate = packFates[i];
   marginDog(sel, rollSeed(), fate, fate, side, top);
+});
+
+/* The rest of the twenty-one stand in the margins too, at the far end of
+   whichever section had room, and they stand there on the same terms as
+   the rolled dogs beside them: same size, same fate label, no border and
+   no badge. Eight more are dealt into the litter above and three keep
+   their perches, so the whole set is somewhere on this page for a reader
+   who wants to go looking. The seeds are fixed here, unlike the rolled
+   pack, because there is only ever one of each. */
+const ONES_MARGIN = [
+  ['.cannon',  'right', 30, 1],
+  ['.why',     'right', 88, 2],
+  ['.bred',    'left',  62, 4],
+  ['.yours',   'left',  26, 6],
+  ['.fatesec', 'left',  82, 7],
+  ['#dogs',    'left',  86, 11],
+  ['.medium',  'right', 86, 13],
+  ['.drop',    'left',  30, 14],
+  ['.rules',   'right', 88, 16],
+  ['.choice',  'right', 28, 17],
+];
+const onesFates = spreadFates(ONES_MARGIN.length);
+ONES_MARGIN.forEach(([sel, side, top, seed], i) => {
+  const fate = onesFates[i];
+  marginDog(sel, seed, fate, fate, side, top);
 });
 
 /* The margin is wide enough at every width these dogs are visible at, so
