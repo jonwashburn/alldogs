@@ -347,7 +347,7 @@
     position: relative; }
   .step .n { position: absolute; top: 18px; right: 0; font-size: 10px;
     font-weight: 700; letter-spacing: 2px; opacity: 0.4; }
-  .rules .step .n::after { content: "/09"; }
+  .rules .step .n::after { content: "/04"; }
   .drop .step .n::after { content: "/03"; }
   .step h3 { font-family: "Instrument Sans", sans-serif;
     font-size: 13px; letter-spacing: 1.5px; line-height: 1.5;
@@ -527,15 +527,18 @@
     .gpair canvas { width: 66px; height: 66px; }
     .gfork { grid-template-columns: 1fr; }
   }
-  .chipmore { display: none; margin-top: 12px; font-size: 10px;
+  /* The odds are a reference table sitting in the middle of an argument.
+     Folded at every width, they stop being a wall to read past and go
+     back to being something you look up. */
+  .chipmore { display: inline-block; margin-top: 12px; font-size: 10px;
     letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
     background: none; border: none; border-bottom: 1px solid var(--ink);
     padding: 0 0 2px; cursor: pointer; font-family: inherit;
     color: var(--ink); }
-  @media (max-width: 700px) {
-    .chips.collapsed { max-height: 88px; overflow: hidden; }
-    .chipmore { display: inline-block; }
-  }
+  /* one clean row: a chip is 31px and the row gap is 8, so anything past
+     31 shows a sliver of the next row and reads as a rendering fault */
+  .chips.collapsed { max-height: 31px; overflow: hidden; }
+  @media (max-width: 700px) { .chips.collapsed { max-height: 70px; } }
 
   /* stray dogs living on the page, tagged, at every scale */
   .straywrap { position: absolute; pointer-events: none; z-index: 2; }
@@ -690,10 +693,9 @@
         <canvas class="cutout" id="cr_flip" width="500" height="500"></canvas>
       </div>
       <p>Then decide: <b class="blue">keep it</b>, or <b class="red">sell it</b>.
-      <span class="lsub">Selling is the kill. A living dog that changes
-      hands turns in the same transaction, so the buyer receives a corpse
-      and nobody can ever buy a living dog. Your sale is one of the 150
-      that ends the year for everyone else.</span></p>
+      <span class="lsub">The buyer receives a corpse, so nobody can ever
+      buy a living dog at any price. And your sale is one of the 150 that
+      ends the year for everyone else.</span></p>
     </div>
     <div class="gfork">
       <div class="gend win">
@@ -972,15 +974,6 @@
   </div>
   <div class="stack">
     <div class="stackcard">
-      <div class="lbl">Fate</div>
-      <p>The primary attribute. A zombie exists because someone sold.
-      An angel exists because time took the dog. A vampire or an
-      immortal exists because someone let go after the war was already
-      won. And faithful is the one fate that doesn't last: the death clock
-      never stops, not even after the year, so a dog kept long enough
-      becomes an angel. Only a dog that is traded gets to stop.</p>
-    </div>
-    <div class="stackcard">
       <div class="lbl">Lived</div>
       <p>Every collar carries a number: how many days the dog lived. A
       zombie is stamped the day it turned. An angel is stamped the day it
@@ -989,15 +982,6 @@
       counting, long after the year ends. <b>Day 3</b> (turned before its
       first walk) and <b>day 3,650</b> (ten years old) are both rare; the
       middle belongs to everyone.</p>
-    </div>
-    <div class="stackcard">
-      <div class="lbl">Traits</div>
-      <p>Once a week, a handful of living dogs are handed one more trait,
-      and only rare ones: roughly a hundred dogs a year across the whole
-      pack. You cannot buy into the drop, you cannot improve your odds, and
-      the only way to end it yourself is to sell. It is the one thing in the
-      collection that rewards you for doing nothing at all, and a dog that
-      has been held a long time looks like it.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">Wardrobe</div>
@@ -1010,15 +994,6 @@
       or none. Twenty dogs are one of ones whose costumes ignore the first
       two slots, but even they roll the held one. A crowned zombie with a
       pocket knife is a story nobody can plan.</p>
-    </div>
-    <div class="stackcard">
-      <div class="lbl">The plaque</div>
-      <p>Only angels get one, etched across the top of the piece: the days
-      the dog lived, and the Twitter handle of the owner who cared for it
-      its whole natural life. It is the only mark on any dog that names a
-      person for what they did rather than what they own, and it cannot
-      be forged or added later, because a dog that was ever sold is a
-      zombie and a zombie never dies of old age.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">On the piece</div>
@@ -1194,10 +1169,6 @@
       <p>Thousands of layered strokes with seeded jitter in hue, pressure
       and dryness. Pigment behavior, computed. Zoom in: the edges break
       like a dry brush because the code says they should.</p></div>
-    <div class="spec"><span>Infinite resolution</span>
-      <p>Code doesn't pixelate. The identical instructions paint a postage
-      stamp or a two-meter gallery print, and the print is not a blowup,
-      it's a fresh painting at that scale.</p></div>
     <div class="spec"><span>The chain finishes it</span>
       <p>The seed decides the dog and its first wardrobe. The weeks add to
       it. The year decides its fate, and the day it dies is etched on the
@@ -1278,7 +1249,8 @@
     <div class="step"><div class="n">02</div>
       <h3>Adoption day.</h3>
       <p>One day, announced ahead of time. The adoption fee is $50. A hold
-      goes on your card and nothing is charged yet. Nobody races anybody:
+      goes on your card and nothing is charged yet, and the fee is taken
+      once, on the day you adopt. Nobody races anybody:
       everyone who shows up that day stands in the same line, because
       there is nothing to race for when everybody is asking for exactly
       one dog.</p></div>
@@ -1301,13 +1273,6 @@
   <h2>How the year works</h2>
   <div class="steps">
     <div class="step"><div class="n">01</div>
-      <h3>Adopt a dog. The adoption fee is $50. One per confirmed Twitter account.</h3>
-      <p>One handle, one dog, no second wallets. The fee is taken once, on
-      the day you adopt, and every count in the game scales to the pack
-      that actually got adopted. A thousand dogs means a thousand
-      different people, which is the only reason the rest of this is a
-      game rather than an auction.</p></div>
-    <div class="step"><div class="n">02</div>
       <h3>A dog you keep does not sit still.</h3>
       <p>Two clocks run on every living dog. Once a week a handful of them
       are handed one more trait, and only rare ones, roughly a hundred
@@ -1317,16 +1282,7 @@
       changes your odds. Holding is not a waiting room: it is the only way your
       dog gets rarer, and it is also the only way it dies with your name
       on it.</p></div>
-    <div class="step"><div class="n">03</div>
-      <h3>An angel is signed with the name of whoever kept it.</h3>
-      <p>When a dog dies of old age, a plaque is etched across the top of
-      the piece carrying the number of days it lived and the Twitter
-      handle of the owner who cared for it its whole natural life. Only
-      one kind of owner can ever appear there, because selling ends the
-      life before it can end naturally. The plaque is the proof you never
-      sold, and it is the only thing in the collection that cannot be
-      added later.</p></div>
-    <div class="step"><div class="n">04</div>
+    <div class="step"><div class="n">02</div>
       <h3>Selling your dog kills it.</h3>
       <p>Not as a penalty. As the mechanism. For the whole of the first
       year, the moment a living dog leaves your wallet the contract turns
@@ -1336,19 +1292,10 @@
       is signed on the collar forever, your handle still on it, and you
       have joined the horde's side of the count: one of the hundred and
       fifty that ends the year for everyone still holding. Selling out
-      and betraying the pack are the same act here. That's the piece.</p></div>
-    <div class="step"><div class="n">05</div>
-      <h3>Nobody can buy a living dog.</h3>
-      <p>Not from anyone, not on any day of the year. Every dog that
-      changes hands is already dead or dies on delivery, so the only
-      living dogs in existence are the ones sitting in the wallets that
-      adopted them. That makes holding the one thing a listing cannot
-      give you, and it makes the listing honest: a listed dog is a
-      public announcement that its owner is about to kill it. Zombies
-      are the whole supply, so the better the pack holds, the scarcer
-      the dead get, and the louder every listing whispers at everyone
-      still holding.</p></div>
-    <div class="step"><div class="n">06</div>
+      and betraying the pack are the same act here. That's the piece, and
+      it is what makes a listing honest: a listed dog is a public
+      announcement that its owner is about to kill it.</p></div>
+    <div class="step"><div class="n">03</div>
       <h3>At 150 first sales, the apocalypse.</h3>
       <p>The count is <b>first sales only</b>. A dog can turn once and
       only once, on the day it first leaves the wallet that adopted it,
@@ -1363,31 +1310,15 @@
       works out to one sale every 58 hours, sustained all year, which is
       an ordinary amount of churn and is exactly why the line is set
       there. Angels are already gone and cannot be taken.</p></div>
-    <div class="step"><div class="n">07</div>
+    <div class="step"><div class="n">04</div>
       <h3>Survive the year and the zombies lose forever.</h3>
       <p>If the last midnight passes with the count under 150, no dog is
       ever turned into a zombie by a sale again, and every dog still in
       its adopting wallet is a living animal that nobody could have
-      bought on any day of that year. That is all that happens, and it
-      is the good ending.</p></div>
-    <div class="step"><div class="n">08</div>
-      <h3>After that, letting go costs the life instead of ending it.</h3>
-      <p>Once the zombies have lost, everything trades freely, but a
-      living dog still cannot be traded and stay living. It stops aging,
-      stops collecting traits, and becomes one of two things: a vampire,
-      which is the same dog with black eyes, fangs and a drop of blood, or
-      one time in ten an immortal, which is handed a superpower no other
-      dog can roll. Either way the clock stops, so it will never be an
-      angel and will never carry a plaque. The choice never actually goes
-      away. It just changes what it costs.</p></div>
-    <div class="step"><div class="n">09</div>
-      <h3>The world can only end at midnight.</h3>
-      <p>Every sale is public the second it happens, so anyone can watch
-      the count climb all day. What no one can do is end the year early.
-      The contract checks the count once every midnight and fires in a
-      single batch, like the cannon in the Hunger Games. Some nights it's
-      silence. Some nights it's forty dogs. You can see the axe. You never
-      know which midnight it falls.</p></div>
+      bought on any day of that year. A living dog still cannot be traded
+      and stay living, so from here letting go makes a vampire, or one
+      time in ten an immortal. That is all that happens, and it is the
+      good ending.</p></div>
   </div>
 </div></section>
 
@@ -2604,10 +2535,10 @@ paintWhenNear(document.querySelector('footer'), () => {
   board(); paint();
 })();
 
-/* mobile: the odds fold */
-if (matchMedia('(max-width: 700px)').matches) {
+/* the odds fold, at every width */
+{
   document.querySelectorAll('.chipgroup .chips').forEach(ch => {
-    if (ch.scrollHeight < 130) return;
+    if (ch.scrollHeight < 60) return;
     ch.classList.add('collapsed');
     const btn = document.createElement('button');
     btn.className = 'chipmore';
