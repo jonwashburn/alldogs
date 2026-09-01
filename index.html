@@ -65,16 +65,41 @@
   .ribbon b.r { color: #ff8a80; } .ribbon b.g { color: var(--gold); }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* hero: the painting is the page */
+  /* hero: the pack, hung edge to edge in a row with no first dog and no
+     last one. The row is cut off at both sides of the screen on purpose:
+     the collection has no edition size, so the picture of it has no edge.
+     Every portrait is the square painting itself, painted here by the
+     current painter as the reader reaches it, so the top of the page can
+     never show yesterday's dogs. */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
-    height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
-  .herobanner img { position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: 50% 50%; display: block;
-    opacity: 0; transition: opacity .5s ease; }
-  .herobanner img.on { opacity: 1; }
+    --tile: clamp(300px, 58vh, 620px); --gap: 4px;
+    height: var(--tile); background: var(--paper); overflow: hidden; }
+  .herorow { position: absolute; inset: 0; overflow-x: auto;
+    overflow-y: hidden; scrollbar-width: none; cursor: grab;
+    -webkit-overflow-scrolling: touch; }
+  .herorow::-webkit-scrollbar { display: none; }
+  .herorow.dragging { cursor: grabbing; user-select: none; }
+  .herotrack { position: relative; height: 100%; }
+  .tile { position: absolute; top: 0; width: var(--tile);
+    height: var(--tile); background: #eeebe3; overflow: hidden;
+    cursor: pointer; }
+  .tile canvas { display: block; width: 100%; height: 100%; opacity: 0;
+    transition: opacity .7s ease; }
+  .tile.on canvas { opacity: 1; }
+  /* every dog wears its collar: the handle, and how the ninety days have
+     treated it so far */
+  .tile .collar { position: absolute; left: 14px; bottom: 14px;
+    display: flex; gap: 10px; align-items: baseline;
+    background: var(--paper); border: 1.5px solid var(--ink);
+    border-radius: 6px; padding: 6px 9px 5px; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    line-height: 1; white-space: nowrap; pointer-events: none; }
+  .tile .collar i { font-style: normal; font-weight: 500; opacity: 0.6; }
+  .tile:focus-visible { outline: 3px dashed var(--red); outline-offset: -3px; }
   /* the title is a collar tag hung on the painting, swinging on its string */
-  .herobanner h1 { position: absolute; left: 34px; top: 34px;
+  .herobanner h1 { position: absolute; left: 34px; top: 34px; z-index: 2;
+    pointer-events: none;
     color: var(--ink); background: var(--paper);
     font-size: 30px; line-height: 1; letter-spacing: 2px;
     padding: 24px 26px 18px; border: 2px solid var(--ink);
@@ -110,8 +135,9 @@
   .hero .sub { margin: 20px auto 0; font-size: 17.5px; opacity: 0.78;
     max-width: 54ch; }
   @media (max-width: 700px) {
-    .herobanner { height: 46vh; }
-    .herobanner img { object-position: 62% 50%; }
+    .herobanner { --tile: min(82vw, 52vh); --gap: 3px; }
+    .tile .collar { left: 10px; bottom: 10px; font-size: 9px;
+      letter-spacing: 1.5px; padding: 5px 7px 4px; }
   }
   .cta { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap;
     justify-content: center; }
@@ -699,11 +725,14 @@
 
 <section class="hero">
   <div class="herobanner">
-    <img id="heroDog" alt="One of the dogs, painted wide">
+    <div class="herorow" id="heroRow" role="region"
+      aria-label="The pack, one painted dog after another, with no end in either direction">
+      <div class="herotrack" id="heroTrack"></div>
+    </div>
     <h1>ALL <span class="d">DOGS</span><span class="tm">&trade;</span></h1>
   </div>
   <div class="wrap">
-  <div class="herocap"><span id="heroHandle">&nbsp;</span><span id="heroMeta">&nbsp;</span></div>
+  <div class="herocap"><span>The pack &middot; no first dog, no last</span><span>Drag the row &middot; open any dog</span></div>
   <p class="tagline">Seven days to adopt &middot; one <em>zombie apocalypse</em> &middot; adoption fee $50 &middot; one per person</p>
   <p class="sub">ALL DOGS is a ninety-day performance played by friends of
   friends, one dog each. There is no edition size. The door is open for
@@ -1655,95 +1684,296 @@ document.getElementById('litter').addEventListener('click', () => {
   }
 });
 
-(function freshHero() {
-  /* The hero is a WIDE painting of an ordinary dog. Two hundred of them
-     sit in a published catalog, forty of each fate. If a pick list has
-     been saved, that list is the rotation. If not, all two hundred turn. */
-  var HERO_BASE =
-    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
-  var HERO_FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
-  var FALLBACK = [
-    { state: 'faithful', seed: 4101 }, { state: 'faithful', seed: 777001 },
-    { state: 'faithful', seed: 910007 }, { state: 'faithful', seed: 318 },
-    { state: 'zombie', seed: 4102 }, { state: 'zombie', seed: 920001 },
-    { state: 'zombie', seed: 777002 }, { state: 'zombie', seed: 555012 },
-    { state: 'angel', seed: 4103 }, { state: 'angel', seed: 930001 },
-    { state: 'angel', seed: 777003 }, { state: 'angel', seed: 555013 },
-    { state: 'vampire', seed: 940001 }, { state: 'vampire', seed: 777004 },
-    { state: 'vampire', seed: 555014 }, { state: 'vampire', seed: 880001 },
-    { state: 'immortal', seed: 950001 }, { state: 'immortal', seed: 777005 },
-    { state: 'immortal', seed: 555015 }, { state: 'immortal', seed: 880002 }
-  ];
-  function heroKey(h) { return h.state + ':' + h.seed; }
-  function heroFile(h) { return 'hero_' + h.state + '_' + h.seed + '.png'; }
-  function heroCaption(h) {
-    var day = (h.seed * 17) % 90 + 1;
-    if (h.state === 'zombie') return 'zombie \u00b7 turned day ' + day;
-    if (h.state === 'angel') return 'angel \u00b7 lived ' + day + ' days';
-    if (h.state === 'vampire') return 'vampire \u00b7 after the war';
-    if (h.state === 'immortal') return 'immortal \u00b7 after the war';
-    return 'faithful \u00b7 day ' + day;
+(function packRow() {
+  /* The pack, hung in a row. There is no first dog and no last one: the
+     row runs past both sides of the screen and keeps going as far as
+     anyone cares to walk it, because the collection has no edition size
+     and the picture of it should not have an edge either. Every portrait
+     is the square painting itself, made here by the current painter as
+     the reader reaches it, so the top of the page is always the dogs as
+     they are drawn today.
+
+     The dogs are fixed for a visit: slot i always shows the same dog, so
+     walking back finds what you passed. Fates are dealt at the pack's own
+     odds. One slot in eleven is one of the twenty-one, unnamed, on the
+     same terms as the dog beside it. */
+  const row = document.getElementById('heroRow');
+  const track = document.getElementById('heroTrack');
+  if (!row || !track) return;
+  const CHAMPION =
+    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js';
+  const SLOTS = 600, START = 300;
+  const DRIFT = 14;            /* px per second, when nobody is touching it */
+  const REST = 5000;           /* how long a touch stops the drift */
+
+  let salt = 0;
+  try { salt = +sessionStorage.getItem('alldogs_row') || 0; } catch (e) {}
+  if (!salt) {
+    salt = ((Math.random() * 0x7fffffff) | 0) || 1;
+    try { sessionStorage.setItem('alldogs_row', salt); } catch (e) {}
   }
-  function applyHero(list) {
-    if (!list || !list.length) list = FALLBACK;
-    var recent = [];
-    try { recent = JSON.parse(sessionStorage.getItem('alldogs_hero') || '[]'); }
-    catch (e) { recent = []; }
-    if (recent.some(function (k) { return String(k).indexOf(':') < 0; })) recent = [];
-    var lastFates = recent.map(function (k) { return String(k).split(':')[0]; }).slice(-2);
-    var fatePool = HERO_FATES.filter(function (f) { return lastFates.indexOf(f) < 0; });
-    if (!fatePool.length) fatePool = HERO_FATES;
-    var present = {};
-    list.forEach(function (h) { present[h.state] = true; });
-    fatePool = fatePool.filter(function (f) { return present[f]; });
-    if (!fatePool.length) fatePool = HERO_FATES.filter(function (f) { return present[f]; });
-    if (!fatePool.length) fatePool = HERO_FATES;
-    var fate = fatePool[Math.floor(Math.random() * fatePool.length)];
-    var ofFate = list.filter(function (h) { return h.state === fate; });
-    if (!ofFate.length) ofFate = list;
-    var fresh = ofFate.filter(function (h) { return recent.indexOf(heroKey(h)) < 0; });
-    var pool = fresh.length ? fresh : ofFate;
-    var pick = pool[Math.floor(Math.random() * pool.length)];
-    recent.push(heroKey(pick));
-    while (recent.length > 12) recent.shift();
-    try { sessionStorage.setItem('alldogs_hero', JSON.stringify(recent)); }
-    catch (e) {}
-
-    var img = document.getElementById('heroDog');
-    var banner = document.querySelector('.herobanner');
-    img.addEventListener('load', function () { img.classList.add('on'); });
-    img.addEventListener('error', function () {
-      try {
-        var cv = document.createElement('canvas');
-        cv.width = 1600; cv.height = 1600;
-        var liveFate = (typeof paintsFate === 'function' && paintsFate(pick.state))
-          ? pick.state : 'faithful';
-        var seed = (Math.floor(Math.random() * 0xfffffff0) + 22) >>> 0;
-        draw(cv, seed, liveFate);
-        img.src = cv.toDataURL('image/png');
-      } catch (e) { banner.classList.add('light'); }
-    }, { once: true });
-    img.src = HERO_BASE + heroFile(pick) + '?v=' + Math.floor(Date.now() / 6e4);
-
-    var handle = '@' + HA[pick.seed % HA.length] + '_' + HB[(pick.seed >> 4) % HB.length];
-    document.getElementById('heroHandle').textContent = handle;
-    document.getElementById('heroMeta').textContent = heroCaption(pick);
+  function h32(a, b) {
+    let x = (a ^ 0x9e3779b9) >>> 0;
+    x = Math.imul(x ^ (x >>> 16), 0x85ebca6b) >>> 0;
+    x = (x ^ b) >>> 0;
+    x = Math.imul(x ^ (x >>> 13), 0xc2b2ae35) >>> 0;
+    return (x ^ (x >>> 16)) >>> 0;
+  }
+  function dogAt(i) {
+    const r = h32(salt, i);
+    const one = i % 11 === 5;
+    const seed = one
+      ? ONES[(((i - 5) / 11) | 0) % ONES.length]
+      : (h32(r, 1) % 0xfffffff0) + 22;
+    const state = dealt(i);
+    const handle = '@' + HA[h32(r, 3) % HA.length] + '_'
+      + HB[h32(r, 4) % HB.length]
+      + (h32(r, 5) % 10 < 4 ? h32(r, 6) % 99 : '');
+    const day = h32(r, 7) % 90 + 1;
+    const meta = state === 'zombie' ? 'turned day ' + day
+      : state === 'angel' ? 'lived ' + day + ' days'
+      : 'day ' + day;
+    return { seed, state, handle, meta };
+  }
+  /* Fates are dealt in hands of six rather than rolled one dog at a time,
+     so a screenful always meets all three: a first screen that happened
+     to show no zombie would be telling the visitor something false about
+     the game. Four living, one turned, one gone to old age, shuffled by
+     the hand's own number. */
+  const HAND = ['faithful', 'faithful', 'faithful', 'faithful', 'zombie', 'angel'];
+  function dealt(i) {
+    const hand = Math.floor(i / HAND.length), k = i % HAND.length;
+    const a = HAND.slice();
+    for (let j = a.length - 1; j > 0; j--) {
+      const m = h32(h32(salt, 7777 + hand), j) % (j + 1);
+      const t = a[j]; a[j] = a[m]; a[m] = t;
+    }
+    return a[k];
   }
 
-  var done = false;
-  function go() {
-    if (done) return;
-    done = true;
-    var cat = window.ALLDOGS_HERO || {};
-    var list = (cat.picks && cat.picks.length) ? cat.picks : (cat.catalog || FALLBACK);
-    applyHero(list);
+  /* geometry: the tile is the banner's height, read back from the CSS */
+  let tile = 0, gap = 4, pitch = 0;
+  const tiles = new Map();   /* slot -> element */
+  function measure() {
+    const cs = getComputedStyle(row.parentNode);
+    gap = parseFloat(cs.getPropertyValue('--gap')) || 4;
+    tile = row.clientHeight;
+    pitch = tile + gap;
+    track.style.width = (SLOTS * pitch) + 'px';
+    tiles.forEach((t, i) => { t.style.left = (i * pitch) + 'px'; });
   }
-  var s = document.createElement('script');
-  s.src = HERO_BASE + 'hero_catalog.js?v=' + Math.floor(Date.now() / 6e4);
-  s.onload = go;
-  s.onerror = go;
-  document.head.appendChild(s);
-  setTimeout(go, 2500);
+  function paintSize() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    return Math.min(1000, Math.round(tile * dpr));
+  }
+
+  /* the painter runs off the main thread when the browser allows it, so
+     a heavy champion never freezes the page; otherwise one dog per frame */
+  let worker = null, workerDead = false, nextId = 1;
+  const pending = new Map();
+  function getWorker() {
+    if (worker || workerDead) return worker;
+    if (typeof OffscreenCanvas === 'undefined' || typeof Worker === 'undefined'
+        || typeof window.ALLDOGS === 'undefined') { workerDead = true; return null; }
+    const src = 'self.window = self;\n'
+      + 'try { importScripts(' + JSON.stringify(CHAMPION) + '); } catch (e) {}\n'
+      + 'self.onmessage = function (ev) { var m = ev.data;'
+      + ' try { var c = new OffscreenCanvas(m.size, m.size);'
+      + ' self.ALLDOGS.drawDog(c, m.seed, m.state);'
+      + ' var b = c.transferToImageBitmap();'
+      + ' postMessage({ id: m.id, bmp: b }, [b]); }'
+      + ' catch (e) { postMessage({ id: m.id, err: String(e) }); } };';
+    try {
+      worker = new Worker(URL.createObjectURL(
+        new Blob([src], { type: 'text/javascript' })));
+    } catch (e) { workerDead = true; return null; }
+    worker.onmessage = ev => {
+      const p = pending.get(ev.data.id);
+      pending.delete(ev.data.id);
+      if (!p) return;
+      if (ev.data.bmp) p.ok(ev.data.bmp); else p.fail();
+    };
+    worker.onerror = () => {
+      const all = Array.from(pending.values());
+      pending.clear();
+      killWorker();
+      all.forEach(p => p.fail());
+    };
+    return worker;
+  }
+  function killWorker() {
+    if (worker) { try { worker.terminate(); } catch (e) {} }
+    worker = null; workerDead = true;
+  }
+
+  let inflight = null;
+  function finish(t) {
+    t.classList.add('on');
+    t.dataset.painted = '1';
+    inflight = null;
+    pump();
+  }
+  function paintMain(t) {
+    const cv = t.querySelector('canvas');
+    requestAnimationFrame(() => {
+      if (!t.isConnected) { inflight = null; pump(); return; }
+      const S = +cv.dataset.s;
+      cv.width = S; cv.height = S;
+      try { draw(cv, t._dog.seed, t._dog.state); }
+      catch (e) { draw(cv, t._dog.seed, 'faithful'); }
+      finish(t);
+    });
+  }
+  function paint(t) {
+    inflight = t;
+    const cv = t.querySelector('canvas');
+    const S = +cv.dataset.s;
+    const w = getWorker();
+    if (!w) { paintMain(t); return; }
+    const id = nextId++;
+    pending.set(id, {
+      ok: bmp => {
+        if (!t.isConnected) { bmp.close && bmp.close(); inflight = null; pump(); return; }
+        cv.width = S; cv.height = S;
+        const br = cv.getContext('bitmaprenderer');
+        if (br) br.transferFromImageBitmap(bmp);
+        else { cv.getContext('2d').drawImage(bmp, 0, 0); bmp.close && bmp.close(); }
+        finish(t);
+      },
+      fail: () => { killWorker(); paintMain(t); }
+    });
+    w.postMessage({ id, seed: t._dog.seed, state: t._dog.state, size: S });
+  }
+  /* paint the unpainted tile nearest the middle of the screen first */
+  function pump() {
+    if (inflight || !visible) return;
+    const mid = row.scrollLeft + row.clientWidth / 2;
+    let best = null, bd = Infinity;
+    tiles.forEach((t, i) => {
+      if (t.dataset.painted) return;
+      const d = Math.abs((i + 0.5) * pitch - mid);
+      if (d < bd) { bd = d; best = t; }
+    });
+    if (best) paint(best);
+  }
+
+  function mount(i) {
+    if (tiles.has(i)) return;
+    const dog = dogAt(i);
+    const t = document.createElement('div');
+    t.className = 'tile';
+    t.style.left = (i * pitch) + 'px';
+    t.tabIndex = 0;
+    t.setAttribute('role', 'button');
+    t.setAttribute('aria-label', dog.handle + ', ' + dog.state + ', ' + dog.meta);
+    t._dog = dog;
+    t.dataset.seed = dog.seed;
+    t.dataset.state = dog.state;
+    const cv = document.createElement('canvas');
+    cv.dataset.s = paintSize();
+    const collar = document.createElement('div');
+    collar.className = 'collar';
+    const h = document.createElement('b'); h.textContent = dog.handle;
+    const m = document.createElement('i');
+    m.textContent = dog.state === 'faithful' ? 'faithful \u00b7 ' + dog.meta : dog.meta;
+    collar.append(h, m);
+    t.append(cv, collar);
+    track.append(t);
+    tiles.set(i, t);
+  }
+  function unmount(i) {
+    const t = tiles.get(i);
+    if (!t) return;
+    if (inflight === t) return;
+    t.remove();
+    tiles.delete(i);
+  }
+  function sync() {
+    const first = Math.floor(row.scrollLeft / pitch);
+    const last = Math.floor((row.scrollLeft + row.clientWidth) / pitch);
+    for (let i = Math.max(0, first - 2); i <= Math.min(SLOTS - 1, last + 2); i++) mount(i);
+    Array.from(tiles.keys()).forEach(i => {
+      if (i < first - 6 || i > last + 6) unmount(i);
+    });
+    pump();
+  }
+
+  /* opening a dog: the same card the strays use */
+  let moved = 0;
+  track.addEventListener('click', e => {
+    if (moved > 6) return;
+    const t = e.target.closest('.tile');
+    if (t && t._dog) openStray(t._dog.seed, t._dog.state, t._dog.handle);
+  });
+  track.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const t = e.target.closest('.tile');
+    if (t && t._dog) { e.preventDefault(); openStray(t._dog.seed, t._dog.state, t._dog.handle); }
+  });
+
+  /* drift: the row walks by itself, slowly, until someone reaches for it */
+  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let visible = true, restUntil = 0, pos = 0, lastTs = 0, down = false;
+  function rest() { restUntil = performance.now() + REST; }
+  row.addEventListener('wheel', rest, { passive: true });
+  row.addEventListener('touchstart', rest, { passive: true });
+  row.addEventListener('keydown', rest);
+  row.addEventListener('scroll', () => {
+    if (Math.abs(row.scrollLeft - pos) > 2) { pos = row.scrollLeft; rest(); }
+    scheduleSync();
+  }, { passive: true });
+  function tick(ts) {
+    const dt = Math.min(64, ts - lastTs); lastTs = ts;
+    if (calm && visible && !down && !document.hidden && ts > restUntil) {
+      pos += DRIFT * dt / 1000;
+      if (Math.abs(pos - row.scrollLeft) >= 1) row.scrollLeft = pos;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* drag with a mouse; touch already scrolls natively */
+  let dragX = 0, dragStart = 0;
+  row.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    down = true; moved = 0; dragX = e.clientX; dragStart = row.scrollLeft;
+    row.classList.add('dragging');
+    rest();
+  });
+  window.addEventListener('pointermove', e => {
+    if (!down) return;
+    const dx = e.clientX - dragX;
+    moved = Math.max(moved, Math.abs(dx));
+    row.scrollLeft = dragStart - dx;
+    pos = row.scrollLeft;
+  });
+  function up() { if (!down) return; down = false; row.classList.remove('dragging'); rest(); }
+  window.addEventListener('pointerup', up);
+  window.addEventListener('pointercancel', up);
+
+  let syncing = 0;
+  function scheduleSync() {
+    if (syncing) return;
+    syncing = requestAnimationFrame(() => { syncing = 0; sync(); });
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => {
+      es.forEach(e => { visible = e.isIntersecting; if (visible) pump(); });
+    }, { rootMargin: '200px 0px' }).observe(row);
+  }
+  window.addEventListener('resize', () => {
+    const centre = (row.scrollLeft + row.clientWidth / 2) / pitch;
+    measure();
+    pos = centre * pitch - row.clientWidth / 2;
+    row.scrollLeft = pos;
+    sync();
+  });
+
+  measure();
+  /* start mid-row, mid-dog, so both edges of the screen cut a dog */
+  pos = START * pitch - tile * 0.38;
+  row.scrollLeft = pos;
+  sync();
+  requestAnimationFrame(ts => { lastTs = ts; requestAnimationFrame(tick); });
 })();
 paintWhenNear(document.querySelector('.fatesec'), () => {
   draw(document.getElementById('f_faithful'), 4101, 'faithful');
