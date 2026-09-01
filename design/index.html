@@ -124,6 +124,13 @@
   .round .head .when { font-size: 11px; font-weight: 600; opacity: 0.4;
     margin-left: auto; }
   .round img { width: 100%; display: block; }
+  .views { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--ink); }
+  .viewbtn { font: inherit; font-size: 9.5px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; padding: 9px 16px;
+    background: none; border: 0; border-right: 1px solid var(--ink);
+    color: var(--ink); cursor: pointer; opacity: 0.5; }
+  .viewbtn:hover { opacity: 1; }
+  .viewbtn.on { background: var(--ink); color: var(--paper); opacity: 1; }
   .round .gap { padding: 22px 22px 24px;
     border-top: 1px solid var(--ink); }
   .round .gap .lbl { display: block; font-size: 9.5px;
@@ -373,9 +380,23 @@
                 ' vs champion ' + r.champ_total + '</span>';
       }
       html += '<span class="when">' + ago(r.ts) + '</span></div>';
-      if (r.eval_url) {
-        html += '<img loading="lazy" src="' + esc(r.eval_url) + '" alt="Round ' +
-                r.round + ' sheet">';
+      // Sheet switcher. Every round renders five sheets and the page only
+      // ever showed one of them, so the twenty-one one-of-ones were being
+      // painted and judged every round with nowhere to look at them. These
+      // swap the image in place rather than opening anything.
+      var views = [['eval_url', 'The sheet'], ['ones_url', 'One of ones'],
+                   ['detail_url', 'Close range'], ['fresh_url', 'Unseen seeds'],
+                   ['wardrobe_url', 'Wardrobe']]
+                  .filter(function (v) { return r[v[0]]; });
+      if (views.length) {
+        html += '<div class="views" data-round="' + r.round + '">' +
+          views.map(function (v, i) {
+            return '<button class="viewbtn' + (i ? '' : ' on') + '" data-src="' +
+                   esc(r[v[0]]) + '">' + v[1] + '</button>';
+          }).join('') + '</div>';
+        html += '<img loading="lazy" id="sheet-' + r.round + '" src="' +
+                esc(views[0][0] === 'eval_url' ? r.eval_url : r[views[0][0]]) +
+                '" alt="Round ' + r.round + ' sheet">';
       }
       if (r.gap) {
         html += '<div class="gap"><span class="lbl">The judge\'s biggest gap</span><ul>' +
@@ -383,10 +404,7 @@
                   return '<li>' + esc(b) + '</li>';
                 }).join('') + '</ul></div>';
       }
-      if (r.fresh_url) {
-        html += '<div class="links"><a href="' + esc(r.fresh_url) +
-                '" target="_blank" rel="noopener">Unseen-seed sheet &rarr;</a></div>';
-      }
+
       html += '</div>';
     });
     if (!rounds.length) {
@@ -394,6 +412,19 @@
     }
     document.getElementById('rounds').innerHTML = html;
   }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.viewbtn') : null;
+    if (!b) return;
+    var wrap = b.parentNode;
+    var img = wrap.parentNode.querySelector('img');
+    if (!img) return;
+    img.src = b.dataset.src;
+    Array.prototype.forEach.call(wrap.querySelectorAll('.viewbtn'), function (o) {
+      o.className = 'viewbtn';
+    });
+    b.className = 'viewbtn on';
+  });
 
   function drawClimb(chron) {
     var cv = document.getElementById('climbchart');
