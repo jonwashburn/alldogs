@@ -1851,8 +1851,15 @@ function paintsFate(state) {
     return n < 8 ? 620 : n < 20 ? 380 : 260;
   }
 
+  function atEnd() { return !!m && i >= m.count - 1; }
+
+  /* It runs once and stops on the newest round rather than looping. The
+     last frame is the argument the strip exists to make, so it should be
+     the thing left on the wall, and a loop would quietly carry the eye
+     back to the tidy early portrait and undo it. */
   function tick() {
     if (paused || !visible) return;
+    if (atEnd()) { paused = true; label(); halt(); return; }
     show(i + 1);
     timer = setTimeout(tick, gap(i));
   }
@@ -1861,14 +1868,19 @@ function paintsFate(state) {
     timer = setTimeout(tick, gap(i));
   }
   function halt() { clearTimeout(timer); timer = 0; }
-  function label() { play.textContent = paused ? 'Play' : 'Pause'; }
+  function label() {
+    play.textContent = paused ? (atEnd() ? 'Play again' : 'Play') : 'Pause';
+  }
 
   play.addEventListener('click', () => {
+    if (paused && atEnd()) {        // finished: run it from the top
+      show(0); paused = false; label(); start(); return;
+    }
     paused = !paused; label();
     if (paused) halt(); else start();
   });
   scrub.addEventListener('input', () => {
-    paused = true; label(); halt(); show(+scrub.value);
+    paused = true; halt(); show(+scrub.value); label();
   });
   addEventListener('resize', layout);
 
