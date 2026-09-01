@@ -1132,8 +1132,9 @@
     <p class="pwnote" id="pwNote">There is no folder of pictures behind this
     page, so there is nothing to load: press the button and a thousand dogs
     get painted from their seeds, one at a time, in front of you. It takes
-    about a minute on a laptop, and the minute is the proof. This is the
-    wall on the day the pack fills, when every dog is still alive.</p>
+    about a minute on a laptop, and the minute is the proof. Click any
+    square to see that dog at full size. This is the wall on the day the
+    pack fills, when every dog is still alive.</p>
   </div>
 </div></section>
 
@@ -2292,6 +2293,10 @@ paintWhenNear(document.querySelector('footer'), () => {
   const TILE = 46;
   let order = [], seeds = [], i = 0, running = false, raf = 0, t0 = 0;
   let ctx = null, scratch = null;
+  /* which dog ended up in which square, so a click can find it again. The
+     wall is one canvas rather than a thousand elements, so this map is the
+     only way back from a pixel to a dog. */
+  let slotSeed = [];
 
   document.getElementById('pwTotal').textContent = TOTAL.toLocaleString();
 
@@ -2305,6 +2310,7 @@ paintWhenNear(document.querySelector('footer'), () => {
     order = Array.from({ length: TOTAL }, (_, k) => k);
     shuffle(order);
     seeds = Array.from({ length: TOTAL }, () => rollSeed());
+    slotSeed = new Array(COLS * ROWS).fill(0);
     i = 0;
   }
 
@@ -2314,6 +2320,7 @@ paintWhenNear(document.querySelector('footer'), () => {
     const slot = order[i];
     draw(scratch, seeds[i], 'faithful');
     ctx.drawImage(scratch, (slot % COLS) * TILE, ((slot / COLS) | 0) * TILE);
+    slotSeed[slot] = seeds[i];
     i++;
     doneEl.textContent = i.toLocaleString();
     progEl.style.width = (i / TOTAL * 100) + '%';
@@ -2333,6 +2340,26 @@ paintWhenNear(document.querySelector('footer'), () => {
       + 'because the seeds are rolled fresh each time. The day the pack fills, this '
       + 'is the wall: all of them alive, and the clock not started.';
   }
+
+  /* The canvas is drawn at 46px a tile and displayed at whatever width
+     the column gives it, so a click has to be measured against the
+     rendered box rather than the bitmap. */
+  function squareAt(ev) {
+    const r = cv.getBoundingClientRect();
+    const col = Math.floor((ev.clientX - r.left) / r.width * COLS);
+    const row = Math.floor((ev.clientY - r.top) / r.height * ROWS);
+    if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return -1;
+    return row * COLS + col;
+  }
+  cv.addEventListener('click', ev => {
+    const slot = squareAt(ev);
+    if (slot < 0 || !slotSeed[slot]) return;
+    openStray(slotSeed[slot], 'faithful', 'one of the pack');
+  });
+  cv.addEventListener('mousemove', ev => {
+    const slot = squareAt(ev);
+    cv.style.cursor = slot >= 0 && slotSeed[slot] ? 'zoom-in' : 'default';
+  });
 
   btn.addEventListener('click', () => {
     if (running) {
