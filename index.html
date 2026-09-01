@@ -913,7 +913,7 @@
           <p class="livelead"><b>Put your own dog through it.</b> Every
           round's painter is still on disk, so the strip above does not
           have to be a recording. Give it a seed and it will run that
-          number through all sixty renderers, drawing each frame in your
+          number through every round's painter, drawing each frame in your
           browser the moment it loads. It is slower, because it fetches a
           whole painter per step, and it is the same machinery the
           collection itself uses.</p>
@@ -1626,15 +1626,13 @@ document.getElementById('litter').addEventListener('click', () => {
 });
 
 (function freshHero() {
-  /* The hero is a WIDE painting of an ordinary dog, rendered by the
-     gauntlet from the current champion and republished every time a painter
-     wins, so the header improves on its own. The one-of-ones stay in the
-     pack. Up here the rotation is the five fates: living, zombie, angel,
-     vampire, immortal. A random one on every load. No default. */
+  /* The hero is a WIDE painting of an ordinary dog. Two hundred of them
+     sit in a published catalog, forty of each fate. If a pick list has
+     been saved, that list is the rotation. If not, all two hundred turn. */
   var HERO_BASE =
     'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
   var HERO_FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
-  var HEROES = [
+  var FALLBACK = [
     { state: 'faithful', seed: 4101 }, { state: 'faithful', seed: 777001 },
     { state: 'faithful', seed: 910007 }, { state: 'faithful', seed: 318 },
     { state: 'zombie', seed: 4102 }, { state: 'zombie', seed: 920001 },
@@ -1656,47 +1654,66 @@ document.getElementById('litter').addEventListener('click', () => {
     if (h.state === 'immortal') return 'immortal \u00b7 after the war';
     return 'faithful \u00b7 day ' + day;
   }
+  function applyHero(list) {
+    if (!list || !list.length) list = FALLBACK;
+    var recent = [];
+    try { recent = JSON.parse(sessionStorage.getItem('alldogs_hero') || '[]'); }
+    catch (e) { recent = []; }
+    if (recent.some(function (k) { return String(k).indexOf(':') < 0; })) recent = [];
+    var lastFates = recent.map(function (k) { return String(k).split(':')[0]; }).slice(-2);
+    var fatePool = HERO_FATES.filter(function (f) { return lastFates.indexOf(f) < 0; });
+    if (!fatePool.length) fatePool = HERO_FATES;
+    var present = {};
+    list.forEach(function (h) { present[h.state] = true; });
+    fatePool = fatePool.filter(function (f) { return present[f]; });
+    if (!fatePool.length) fatePool = HERO_FATES.filter(function (f) { return present[f]; });
+    if (!fatePool.length) fatePool = HERO_FATES;
+    var fate = fatePool[Math.floor(Math.random() * fatePool.length)];
+    var ofFate = list.filter(function (h) { return h.state === fate; });
+    if (!ofFate.length) ofFate = list;
+    var fresh = ofFate.filter(function (h) { return recent.indexOf(heroKey(h)) < 0; });
+    var pool = fresh.length ? fresh : ofFate;
+    var pick = pool[Math.floor(Math.random() * pool.length)];
+    recent.push(heroKey(pick));
+    while (recent.length > 12) recent.shift();
+    try { sessionStorage.setItem('alldogs_hero', JSON.stringify(recent)); }
+    catch (e) {}
 
-  var recent = [];
-  try { recent = JSON.parse(sessionStorage.getItem('alldogs_hero') || '[]'); }
-  catch (e) { recent = []; }
-  if (recent.some(function (k) { return String(k).indexOf(':') < 0; })) recent = [];
-  var lastFates = recent.map(function (k) { return String(k).split(':')[0]; }).slice(-2);
-  var fatePool = HERO_FATES.filter(function (f) { return lastFates.indexOf(f) < 0; });
-  if (!fatePool.length) fatePool = HERO_FATES;
-  var fate = fatePool[Math.floor(Math.random() * fatePool.length)];
-  var ofFate = HEROES.filter(function (h) { return h.state === fate; });
-  var fresh = ofFate.filter(function (h) { return recent.indexOf(heroKey(h)) < 0; });
-  var pool = fresh.length ? fresh : ofFate;
-  var pick = pool[Math.floor(Math.random() * pool.length)];
-  recent.push(heroKey(pick));
-  while (recent.length > 8) recent.shift();
-  try { sessionStorage.setItem('alldogs_hero', JSON.stringify(recent)); }
-  catch (e) {}
+    var img = document.getElementById('heroDog');
+    var banner = document.querySelector('.herobanner');
+    img.addEventListener('load', function () { img.classList.add('on'); });
+    img.addEventListener('error', function () {
+      try {
+        var cv = document.createElement('canvas');
+        cv.width = 1600; cv.height = 1600;
+        var liveFate = (typeof paintsFate === 'function' && paintsFate(pick.state))
+          ? pick.state : 'faithful';
+        var seed = (Math.floor(Math.random() * 0xfffffff0) + 22) >>> 0;
+        draw(cv, seed, liveFate);
+        img.src = cv.toDataURL('image/png');
+      } catch (e) { banner.classList.add('light'); }
+    }, { once: true });
+    img.src = HERO_BASE + heroFile(pick) + '?v=' + Math.floor(Date.now() / 6e4);
 
-  var img = document.getElementById('heroDog');
-  var banner = document.querySelector('.herobanner');
-  img.addEventListener('load', function () { img.classList.add('on'); });
-  img.addEventListener('error', function () {
-    /* If the published hero cannot be reached, paint a live one rather than
-       leave a hole: the baked painter is here even when the network is not. */
-    try {
-      var cv = document.createElement('canvas');
-      cv.width = 1600; cv.height = 1600;
-      var liveFate = (typeof paintsFate === 'function' && paintsFate(pick.state))
-        ? pick.state : 'faithful';
-      var seed = (Math.floor(Math.random() * 0xfffffff0) + 22) >>> 0;
-      draw(cv, seed, liveFate);
-      img.src = cv.toDataURL('image/png');
-    } catch (e) { banner.classList.add('light'); }
-  }, { once: true });
-  /* Cached for ten minutes, so a new champion reaches the header quickly
-     without every visitor re-downloading a 2400px image on each view. */
-  img.src = HERO_BASE + heroFile(pick) + '?v=' + Math.floor(Date.now() / 6e5);
+    var handle = '@' + HA[pick.seed % HA.length] + '_' + HB[(pick.seed >> 4) % HB.length];
+    document.getElementById('heroHandle').textContent = handle;
+    document.getElementById('heroMeta').textContent = heroCaption(pick);
+  }
 
-  var handle = '@' + HA[pick.seed % HA.length] + '_' + HB[(pick.seed >> 4) % HB.length];
-  document.getElementById('heroHandle').textContent = handle;
-  document.getElementById('heroMeta').textContent = heroCaption(pick);
+  var done = false;
+  function go() {
+    if (done) return;
+    done = true;
+    var cat = window.ALLDOGS_HERO || {};
+    var list = (cat.picks && cat.picks.length) ? cat.picks : (cat.catalog || FALLBACK);
+    applyHero(list);
+  }
+  var s = document.createElement('script');
+  s.src = HERO_BASE + 'hero_catalog.js?v=' + Math.floor(Date.now() / 6e4);
+  s.onload = go;
+  s.onerror = go;
+  document.head.appendChild(s);
+  setTimeout(go, 2500);
 })();
 paintWhenNear(document.querySelector('.fatesec'), () => {
   draw(document.getElementById('f_faithful'), 4101, 'faithful');
@@ -1733,10 +1750,11 @@ function paintsFate(state) {
 }
 
 /* The filmstrip: one seed, redrawn by every round of the gauntlet that
-   drew anything. The sprite and its manifest are built on the gauntlet
-   box (filmstrip.py) and republished when the fight moves, so this is the
-   real record rather than a cut of it. Rounds where the painter arm died
-   and the driver kept turning are already gone from both.
+   drew anything. The sprite and its manifest are rebuilt on the box
+   whenever a new unique sheet lands, and this page pulls them again
+   once a minute, so the last frame is the current fight rather than
+   whatever was current the last time someone published by hand.
+   Rounds that drew nothing are already gone from both.
 
    The frame steps by background-position rather than by swapping images,
    so the whole animation is one request and scrubbing costs nothing. */
@@ -1774,7 +1792,7 @@ function paintsFate(state) {
      machinery, run against whatever number you hand it.
 
      They are loaded one per frame rather than up front, because the
-     sixty of them come to 24 MB. */
+     whole history of them comes to tens of megabytes. */
   let live = false, liveSeed = 0;
   const painters = new Map();     // round -> drawDog, once it has loaded
   let loading = null;             // round currently being fetched
@@ -1945,38 +1963,79 @@ function paintsFate(state) {
     if (e.key === 'Enter') { e.preventDefault(); goBtn.click(); }
   });
 
-  function ready() {
-    m = window.ALLDOGS_STRIP;
-    if (!m || !m.count) { box.remove(); return; }
-    scrub.max = m.count - 1;
-    img.style.backgroundImage = 'url("' + m.url + '")';
-    seedIn.value = m.seed || 910001;
-    seedIn.placeholder = String(m.seed || 910001);
-    if (!m.frames.some(f => f.js)) {
-      /* an older manifest has no renderers on it; offering a button that
-         cannot work is worse than not offering one */
-      box.querySelector('.striplive').remove();
-    }
-    paused = !CALM; label();
-    layout();
-    /* the sprite arrives after the manifest, and the frame is sized off
-       the rendered box, so re-place it once the image is actually there */
-    const pre = new Image();
-    pre.onload = layout;
-    pre.src = m.url;
-    new IntersectionObserver(es => {
-      es.forEach(e => {
-        visible = e.isIntersecting;
-        if (visible) start(); else halt();
-      });
-    }, { threshold: 0.25 }).observe(box);
+  function spriteUrl(next) {
+    /* the PNG is the same path every time, so a cache-bust is what
+       makes a longer strip actually appear instead of the old sheet */
+    return next.url + (next.url.indexOf('?') >= 0 ? '&' : '?')
+      + 'v=' + Math.floor(next.generated || Date.now() / 1000);
   }
 
-  const tag = document.createElement('script');
-  tag.src = MANIFEST + '?v=' + Math.floor(Date.now() / 60000);
-  tag.onload = ready;
-  tag.onerror = () => { box.remove(); };
-  document.head.append(tag);
+  function apply(next, first) {
+    const oldLast = m && m.count
+      ? m.frames[m.count - 1].round : null;
+    const wasAtEnd = !first && !!m && atEnd();
+    m = next;
+    scrub.max = m.count - 1;
+    img.style.backgroundImage = 'url("' + spriteUrl(m) + '")';
+    if (first) {
+      seedIn.value = m.seed || 910001;
+      seedIn.placeholder = String(m.seed || 910001);
+      if (!m.frames.some(f => f.js)) {
+        /* an older manifest has no renderers on it; offering a button
+           that cannot work is worse than not offering one */
+        const liveBox = box.querySelector('.striplive');
+        if (liveBox) liveBox.remove();
+      }
+      paused = !CALM; label();
+    }
+    layout();
+    if (first && visible) start();
+    const pre = new Image();
+    pre.onload = layout;
+    pre.src = spriteUrl(m);
+    const newLast = m.frames[m.count - 1].round;
+    if (wasAtEnd && newLast !== oldLast) {
+      /* sitting on yesterday's last frame: put the new last one on
+         the wall, which is the whole reason this strip exists */
+      show(m.count - 1);
+      label();
+    }
+  }
+
+  function pull(first) {
+    const tag = document.createElement('script');
+    tag.src = MANIFEST + '?v=' + Date.now();
+    tag.onload = () => {
+      const next = window.ALLDOGS_STRIP;
+      tag.remove();
+      if (!next || !next.count) {
+        if (first) box.remove();
+        return;
+      }
+      if (first || !m || next.generated !== m.generated
+          || next.count !== m.count
+          || next.frames[next.count - 1].round !== m.frames[m.count - 1].round) {
+        apply(next, first);
+      }
+    };
+    tag.onerror = () => {
+      tag.remove();
+      if (first) box.remove();
+    };
+    document.head.append(tag);
+  }
+
+  pull(true);
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      visible = e.isIntersecting;
+      if (visible) start(); else halt();
+    });
+  }, { threshold: 0.25 }).observe(box);
+  setInterval(() => { if (!document.hidden) pull(false); }, 60000);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) pull(false);
+  });
 })();
 
 /* one seed, three lives */

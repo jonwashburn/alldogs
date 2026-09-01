@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS — pick the header dogs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #fdfdfb; --ink: #111111; --hair: #dddad0;
+    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429;
+  }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.45; padding-bottom: 120px; }
+  h1, h2, button { font-family: "Shantell Sans", "Instrument Sans", sans-serif; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 36px 0 18px; }
+  h1 { font-size: clamp(28px, 5vw, 52px); line-height: 0.98; font-weight: 800;
+    text-transform: uppercase; }
+  h1 em { font-style: normal; color: var(--red); }
+  .sub { margin-top: 12px; font-size: 16px; max-width: 62ch; opacity: 0.78; }
+  .bar { margin: 22px 0 16px; display: flex; gap: 10px; flex-wrap: wrap;
+    align-items: center; }
+  .bar button, .tabs button {
+    font: inherit; font-size: 12px; letter-spacing: 1.1px; text-transform: uppercase;
+    font-weight: 700; padding: 9px 16px; border: 2px solid var(--ink);
+    background: #fff; color: var(--ink); cursor: pointer; }
+  .bar button.hot, .tabs button.on { background: var(--ink); color: var(--paper); }
+  .count { font-size: 13px; letter-spacing: 0.4px; opacity: 0.7; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 22px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px; }
+  .card { border: 3px solid var(--hair); background: #fff; cursor: pointer;
+    position: relative; overflow: hidden; }
+  .card.on { border-color: var(--ink); }
+  .card img { display: block; width: 100%; height: 110px; object-fit: cover;
+    object-position: 50% 50%; background: #2c4a52; }
+  .card .cap { padding: 8px 10px 10px; font-size: 11px; letter-spacing: 1.1px;
+    text-transform: uppercase; font-weight: 700; display: flex;
+    justify-content: space-between; gap: 8px; }
+  .card .mark { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px;
+    border: 2px solid var(--ink); background: #fff; color: var(--ink);
+    font-size: 14px; line-height: 18px; text-align: center; font-weight: 800; }
+  .card.on .mark { background: var(--gold); }
+  #toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--paper); padding: 10px 18px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.6px; display: none;
+    z-index: 9; }
+  .sticky { position: sticky; top: 0; z-index: 5; background: var(--paper);
+    padding: 10px 0 6px; border-bottom: 2px solid var(--hair); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Pick the <em>header</em> dogs</h1>
+    <p class="sub">Two hundred ordinary dogs, forty of each fate. Click one to
+    put it in the rotation or take it out. Save writes the set the site uses.
+    Until you save, the header uses all of them.</p>
+  </header>
+  <div class="sticky">
+    <div class="bar">
+      <button class="hot" id="save">Save the rotation</button>
+      <button id="all">Select all</button>
+      <button id="none">Select none</button>
+      <button id="alltab">All on this tab</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="tabs" id="tabs"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+<div id="toast"></div>
+<script>
+var API = location.port === '8787' ? '' : 'http://192.222.59.241:8787';
+var FEED = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_catalog.js';
+var BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
+var FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
+var LABELS = { faithful: 'living', zombie: 'zombie', angel: 'angel',
+               vampire: 'vampire', immortal: 'immortal' };
+var tab = 'all';
+var catalog = [];
+var selected = {};
+var dirty = false;
+
+function token() {
+  var t = localStorage.getItem('alldogs_token');
+  if (!t) {
+    t = prompt('Paste the vote token (it is in ~/.config/alldogs/vote_token):');
+    if (t) localStorage.setItem('alldogs_token', t.trim());
+  }
+  return t && t.trim();
+}
+
+function toast(msg, bad) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.style.background = bad ? '#ff3b2f' : '#111';
+  el.style.display = 'block';
+  clearTimeout(el._t);
+  el._t = setTimeout(function () { el.style.display = 'none'; }, 2400);
+}
+
+function key(h) { return h.state + ':' + h.seed; }
+function file(h) { return 'hero_' + h.state + '_' + h.seed + '.png'; }
+
+function shown() {
+  return catalog.filter(function (h) { return tab === 'all' || h.state === tab; });
+}
+
+function renderTabs() {
+  var html = '<button data-t="all"' + (tab === 'all' ? ' class="on"' : '') +
+             '>all ' + catalog.length + '</button>';
+  FATES.forEach(function (f) {
+    var n = catalog.filter(function (h) { return h.state === f; }).length;
+    var on = catalog.filter(function (h) { return h.state === f && selected[key(h)]; }).length;
+    html += '<button data-t="' + f + '"' + (tab === f ? ' class="on"' : '') + '>' +
+            LABELS[f] + ' ' + on + '/' + n + '</button>';
+  });
+  document.getElementById('tabs').innerHTML = html;
+}
+
+function renderGrid() {
+  var rows = shown();
+  document.getElementById('grid').innerHTML = rows.map(function (h) {
+    var k = key(h);
+    var on = !!selected[k];
+    return '<div class="card' + (on ? ' on' : '') + '" data-k="' + k + '">' +
+      '<span class="mark">' + (on ? '✓' : '') + '</span>' +
+      '<img loading="lazy" src="' + BASE + file(h) + '" alt="' + LABELS[h.state] + '">' +
+      '<div class="cap"><span>' + LABELS[h.state] + '</span><span>' + h.seed + '</span></div>' +
+    '</div>';
+  }).join('');
+  var n = Object.keys(selected).length;
+  document.getElementById('count').textContent =
+    n + ' in the rotation' + (dirty ? ' · not saved' : '');
+  renderTabs();
+}
+
+function setAll(on, onlyTab) {
+  (onlyTab ? shown() : catalog).forEach(function (h) {
+    var k = key(h);
+    if (on) selected[k] = true;
+    else delete selected[k];
+  });
+  dirty = true;
+  renderGrid();
+}
+
+function save() {
+  var t = token();
+  if (!t) return toast('no token, nothing sent', true);
+  var picks = Object.keys(selected);
+  fetch(API + '/hero-picks?token=' + encodeURIComponent(t), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ picks: picks })
+  }).then(function (r) { return r.json().then(function (j) { return [r.ok, j]; }); })
+    .then(function (p) {
+      if (!p[0]) return toast(p[1].error || 'refused', true);
+      dirty = false;
+      renderGrid();
+      toast((p[1].count || 0) + ' dogs will rotate. The site picks them up within a minute.');
+    })
+    .catch(function () { toast('cannot reach the box', true); });
+}
+
+function boot(cat, picks) {
+  catalog = cat || [];
+  selected = {};
+  if (picks && picks.length) {
+    picks.forEach(function (k) { selected[typeof k === 'string' ? k : key(k)] = true; });
+  } else {
+    catalog.forEach(function (h) { selected[key(h)] = true; });
+  }
+  dirty = false;
+  renderGrid();
+}
+
+document.getElementById('tabs').addEventListener('click', function (e) {
+  var t = e.target.getAttribute('data-t');
+  if (!t) return;
+  tab = t;
+  renderGrid();
+});
+document.getElementById('grid').addEventListener('click', function (e) {
+  var card = e.target.closest('.card');
+  if (!card) return;
+  var k = card.getAttribute('data-k');
+  if (selected[k]) delete selected[k];
+  else selected[k] = true;
+  dirty = true;
+  renderGrid();
+});
+document.getElementById('save').onclick = save;
+document.getElementById('all').onclick = function () { setAll(true, false); };
+document.getElementById('none').onclick = function () { setAll(false, false); };
+document.getElementById('alltab').onclick = function () { setAll(true, true); };
+
+var s = document.createElement('script');
+s.src = FEED + '?v=' + Date.now();
+s.onload = function () {
+  var cat = (window.ALLDOGS_HERO || {}).catalog || [];
+  var published = (window.ALLDOGS_HERO || {}).picks || [];
+  var t = localStorage.getItem('alldogs_token');
+  if (!t) return boot(cat, published);
+  fetch(API + '/hero-picks?token=' + encodeURIComponent(t.trim()))
+    .then(function (r) { return r.json(); })
+    .then(function (j) { boot(cat, (j.picks && j.picks.length) ? j.picks : published); })
+    .catch(function () { boot(cat, published); });
+};
+s.onerror = function () { toast('catalog is still rendering', true); };
+document.head.appendChild(s);
+</script>
+</body>
+</html>
