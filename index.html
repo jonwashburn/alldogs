@@ -177,6 +177,14 @@
   .galton { margin-top: 52px; border-top: 2px solid var(--ink);
     padding-top: 28px; display: grid; grid-template-columns: 340px 1fr;
     gap: 44px; align-items: start; }
+  .gtleft { display: flex; flex-direction: column; gap: 18px; }
+  /* the dog currently going into the plate, so the mechanism is visible
+     rather than asserted */
+  .gtadding { display: flex; align-items: center; gap: 14px; }
+  .gtadding canvas { width: 84px; height: 84px; display: block;
+    border: 2px solid var(--ink); background: var(--hair); flex: none; }
+  .gtadding span { font-size: 9px; letter-spacing: 2px; font-weight: 700;
+    text-transform: uppercase; opacity: 0.5; line-height: 1.7; }
   .gtplate { border: 2px solid var(--ink); padding: 10px;
     background: var(--hair); box-shadow: 5px 5px 0 var(--ink); }
   .gtplate canvas { width: 100%; height: auto; display: block;
@@ -196,6 +204,7 @@
     .galton { grid-template-columns: 1fr; gap: 26px; }
     .gtplate { max-width: 340px; box-shadow: none; }
   }
+  @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
 
   /* the whole pack, painted in front of you */
   .packwall { margin-top: 46px; border-top: 2px solid var(--ink);
@@ -1205,33 +1214,49 @@
   </div>
 
   <div class="galton">
-    <div class="gtplate">
-      <canvas id="gtCanvas" width="300" height="300"></canvas>
-      <div class="gtcap"><span id="gtWhich">the living</span><span id="gtN">0 dogs</span></div>
+    <div class="gtleft">
+      <div class="gtplate">
+        <canvas id="gtCanvas" width="300" height="300"></canvas>
+        <div class="gtcap"><span id="gtWhich">the living</span><span id="gtN">0 dogs</span></div>
+      </div>
+      <div class="gtadding">
+        <canvas id="gtOne" width="150" height="150"></canvas>
+        <span>the dog<br>going in</span>
+      </div>
     </div>
     <div class="gtside">
       <p class="kicker">The composite</p>
       <h3>The face of the pack.</h3>
-      <p>In 1877 Francis Galton stacked portrait photographs on a single
-      plate, giving each one a fraction of the exposure, to find the face
-      behind a group of faces. He called it composite portraiture. He
-      thought he was photographing a type. What he had actually invented
-      was a way to photograph a population.</p>
-      <p>He was limited by how many photographs existed. This collection
-      is not, because these dogs are not pictures, they are arithmetic,
-      and you can always make one more. So the average here is not
-      approximated. It is computed, live, out of dogs that are being
-      painted while you watch.</p>
+      <p>In 1877 Francis Galton stacked portrait photographs on one plate,
+      giving each a fraction of the exposure, to find the face behind a
+      group of faces. He was hunting for a criminal type and he never
+      found one, because there isn't one. What he had actually built was
+      the first way to photograph a population instead of a person, and
+      the lesson underneath it outlived everything he wanted it for: a
+      composite tells you about the group and nothing whatsoever about
+      anyone in it.</p>
+      <p>That is exactly the problem this collection has. The artwork here
+      is not any one dog. It is what a thousand strangers did over a year,
+      and there has never been a way to look at that directly. Every dog
+      is a brushstroke in it. This is the only picture of the whole
+      painting.</p>
+      <p>Galton was capped by how many photographs happened to exist.
+      This is not, because a dog here is arithmetic rather than a
+      picture and you can always make one more, so the average is
+      computed rather than approximated. And it is a portrait of a
+      decision: the face of the living exists because those people did
+      not sell. Move the count and you move the face.</p>
       <div class="gtbtns">
         <button class="btn hot" data-st="faithful">The living</button>
         <button class="btn" data-st="zombie">The horde</button>
         <button class="btn" data-st="angel">The dead</button>
       </div>
-      <p class="gtnote" id="gtNote">Pick a fate. The first dog is just a
-      dog. Somewhere around thirty a type starts coming through the noise,
-      and by a hundred you are looking at a face nobody drew and nobody
-      owns: everyone who ended the year that way, at once. This is the one
-      picture in the collection that is made of other people.</p>
+      <p class="gtnote" id="gtNote">Pick a fate and watch it build. The
+      dogs go in one at a time to start with, slowly enough to see each
+      one arrive and lose itself, then faster as it stops mattering which
+      one is which. Every dog on this page belongs to somebody. This one
+      cannot: an average has no owner, which makes it the only thing here
+      that belongs to all of them at once.</p>
     </div>
   </div>
 </div></section>
@@ -2220,8 +2245,10 @@ paintWhenNear(document.querySelector('footer'), () => {
   const sg = scratch.getContext('2d');
   const acc = new Float64Array(PX * 3);
   const img = g.createImageData(S, S);
+  const oneCv = document.getElementById('gtOne');
+  const one = oneCv.getContext('2d');
   const NAME = { faithful: 'the living', zombie: 'the horde', angel: 'the dead' };
-  let state = 'faithful', n = 0, raf = 0, running = false;
+  let state = 'faithful', n = 0, raf = 0, running = false, nextAt = 0;
 
   function show() {
     let lo = 255, hi = 0;
@@ -2260,9 +2287,18 @@ paintWhenNear(document.querySelector('footer'), () => {
       + 'differently.';
   }
 
-  function tick() {
-    if (!running) return;
+  /* The interesting part of a composite is the beginning, where you can
+     still tell one dog from the next and watch a face take them. So the
+     first dozen arrive about a second apart and the wait decays away:
+     by thirty it no longer matters which dog is which, and the rest go
+     in as fast as they can be painted. */
+  function waitAfter(k) {
+    return Math.max(0, 1500 * Math.exp(-k / 7) - 40);
+  }
+
+  function addOne() {
     window.ALLDOGS.drawDog(scratch, rollSeed(), state);
+    one.drawImage(scratch, 0, 0, oneCv.width, oneCv.height);
     const d = sg.getImageData(0, 0, S, S).data;
     for (let q = 0, j = 0; q < PX; q++, j += 3) {
       acc[j] += d[q * 4];
@@ -2271,7 +2307,15 @@ paintWhenNear(document.querySelector('footer'), () => {
     }
     n++;
     show(); say();
-    if (n >= 160) { running = false; return; }
+  }
+
+  function tick(now) {
+    if (!running) return;
+    if (now >= nextAt) {
+      addOne();
+      if (n >= 160) { running = false; return; }
+      nextAt = now + waitAfter(n);
+    }
     raf = requestAnimationFrame(tick);
   }
 
@@ -2281,9 +2325,10 @@ paintWhenNear(document.querySelector('footer'), () => {
       document.querySelectorAll('.gtbtns .btn').forEach(o => o.classList.remove('hot'));
       btn.classList.add('hot');
       state = btn.dataset.st;
-      acc.fill(0); n = 0;
+      acc.fill(0); n = 0; nextAt = 0;
       document.getElementById('gtWhich').textContent = NAME[state];
       g.clearRect(0, 0, S, S);
+      one.clearRect(0, 0, oneCv.width, oneCv.height);
       running = true;
       raf = requestAnimationFrame(tick);
     });
