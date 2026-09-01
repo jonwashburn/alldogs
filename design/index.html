@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ALL DOGS — The machine is drawing</title>
+<title>ALL DOGS: The machine is drawing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
@@ -157,24 +157,26 @@
 <div class="wrap hero">
   <div class="kicker">ALL DOGS / DESIGN GAUNTLET / LIVE</div>
   <h1>The machine<br>is <em>drawing</em></h1>
-  <p class="sub">Two machines are fighting over what your dog will look
-    like, and neither one is allowed to stop. Every attempt is published
-    here the moment it happens. <a href="../">Back to the kennel &rarr;</a></p>
+  <p class="sub">Six machines are fighting over what your dog will look
+    like, and none of them is allowed to stop. Every attempt is published
+    here, including the ones that lose. <a href="../">Back to the kennel &rarr;</a></p>
 
   <div class="corners">
     <div class="corner painter">
       <span class="clbl">In one corner</span>
-      <h3>The Painter</h3>
-      <p>Rewrites the code that draws every dog in the collection, from
-      scratch, every round. It reads the critic's last insult before it
-      picks up the brush.</p>
+      <h3>The Painters</h3>
+      <p>Five of them, from four different labs, each rewriting the code
+      that draws every dog in the collection. They do not take turns. They
+      all paint at once, against the same champion, and each one reads the
+      critic's last insult before it picks up the brush.</p>
     </div>
     <div class="vs">VS</div>
     <div class="corner critic">
       <span class="clbl">In the other</span>
       <h3>The Critic</h3>
-      <p>Sees only pixels. Judges blind, doesn't know which sheet is the
-      champion, and scores like a gallerist with nothing to lose.</p>
+      <p>Sees only pixels. It is never told which sheet is the reigning
+      champion, so it cannot flatter one, and it has thrown out work I
+      liked.</p>
     </div>
   </div>
 
@@ -183,7 +185,7 @@
       <span><span class="dot" id="dot"></span><span id="livetxt">CONNECTING</span></span>
       <span>ROUNDS <b id="s-rounds">–</b></span>
       <span>PROMOTIONS <b class="g" id="s-promos">–</b></span>
-      <span>CHAMPION <b id="s-champ">–</b>/70</span>
+      <span>CHAMPION <b id="s-champ">–</b>/80</span>
       <span id="s-updated"></span>
     </div>
   </div>
@@ -198,19 +200,18 @@
 
   <div class="procgrid">
     <div class="proccol">
-      <p>Here is exactly how these dogs are being made. I wrote a
-      constitution for the collection: what a dog is here, what cuteness
+      <p>I wrote a constitution for the collection: what a dog is here, what cuteness
       owes the viewer, how paint should behave, which painters set the bar
       and why none of them may be copied, the color law that separates the
       living from the dead. Every rule the machines obey, I authored.</p>
-      <p>Two machines execute it. The Painter rewrites the drawing code
-      from scratch, round after round. The Critic reads the same
-      constitution and judges the results blind, never knowing which sheet
-      is the champion. Neither one can stop. Neither one can lower the
-      bar. And I do not touch the brush.</p>
+      <p>Six machines execute it. Five painters rewrite the drawing code
+      from scratch, all at once, each against the same champion. One critic
+      reads the same constitution and judges what comes back blind, never
+      knowing which sheet is the reigning one. None of them can stop. None
+      of them can lower the bar. And I do not touch the brush.</p>
       <blockquote class="pq">"The process is mechanical and should not be
       tampered with. It should run its course."
-      <span>&mdash; LeWitt, <a href="https://mma.pages.tufts.edu/fah188/sol_lewitt/Sentences%20on%20Conceptual%20Art.htm">Sentences
+      <span>LeWitt, <a href="https://mma.pages.tufts.edu/fah188/sol_lewitt/Sentences%20on%20Conceptual%20Art.htm">Sentences
       on Conceptual Art</a>, no. 29</span></blockquote>
     </div>
     <div class="proccol">
@@ -222,16 +223,16 @@
       affair." The instructions are the art. My drafters happen not to be
       human.</p>
       <p>What I authored: the dogs, the fates, the census, the
-      tenderness, the temperature of the grounds, the wall the score has
-      to clear, and every mid-fight correction, which this page publishes
-      as it happens. What I could not author: the exact painting that
+      tenderness, the temperature of the grounds, the score a sheet has to
+      beat, and every mid-fight correction, which this page publishes as it
+      happens. What I could not author: the exact painting that
       survives. That part surprises me the same way it surprises you, and
       it is the part I wanted.</p>
       <blockquote class="pq">"Once the idea of the piece is established in
       the artist's mind and the final form is decided, the process is
       carried out blindly. There are many side effects that the artist
       cannot imagine."
-      <span>&mdash; LeWitt, Sentences, no. 28</span></blockquote>
+      <span>LeWitt, Sentences, no. 28</span></blockquote>
     </div>
   </div>
 </div>
@@ -240,8 +241,8 @@
   <div class="kicker">THE CLIMB</div>
   <h2 id="climbline">The critic has not said wall-worthy yet.</h2>
   <canvas id="climbchart" width="2160" height="480"></canvas>
-  <p class="cap">Winning score per round, out of 70. The gold line is the
-  wall: the fight ends when a sheet deserves to hang on one.</p>
+  <p class="cap">Winning score per round, out of 80. The gold line is the
+  wall. The fight ends when a sheet earns one.</p>
 </div>
 
 <div class="wrap champ">
@@ -261,8 +262,9 @@
 
 <footer>
   <div class="wrap">
-    Painters rotate · Judge: Claude Opus, blind A/B ·
-    Gate: deterministic render contract · Refreshes every 60s ·
+    Five painters at once · One critic, judging blind ·
+    Every candidate passes a mechanical check before it is scored ·
+    This page refreshes itself ·
     <a href="../">ALL DOGS</a>
   </div>
 </footer>
@@ -443,7 +445,7 @@
     });
     if (pts.length < 2) return;
     var x = function (i) { return PAD + i * (W - 2 * PAD) / (pts.length - 1); };
-    var y = function (v) { return H - PAD - (v / 70) * (H - 2 * PAD); };
+    var y = function (v) { return H - PAD - (v / 80) * (H - 2 * PAD); };
     // hairline floor and ceiling
     g.strokeStyle = 'rgba(17,17,17,0.18)'; g.lineWidth = 2;
     g.beginPath(); g.moveTo(PAD, y(0)); g.lineTo(W - PAD, y(0)); g.stroke();
