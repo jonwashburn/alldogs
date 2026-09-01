@@ -580,7 +580,17 @@
   .stripframe { position: relative; }
   .stripimg { width: 100%; aspect-ratio: 1; background-repeat: no-repeat;
     background-color: #14140f; image-rendering: auto;
-    border: 2px solid var(--ink); }
+    border: 2px solid var(--ink); position: relative; }
+  /* live mode draws over the sprite rather than replacing it, so a round
+     whose painter is still downloading keeps showing the frame it had
+     instead of flashing empty */
+  #stripCv { position: absolute; inset: 0; width: 100%; height: 100%;
+    display: none; }
+  .stripimg.live #stripCv { display: block; }
+  .stripimg.loading::after { content: ''; position: absolute; inset: auto 0 0 0;
+    height: 2px; background: var(--gold); animation: striploading 1s linear infinite; }
+  @keyframes striploading { 0% { opacity: 0.25; } 50% { opacity: 1; }
+    100% { opacity: 0.25; } }
   .stripcap { display: flex; justify-content: space-between;
     align-items: baseline; margin-top: 10px;
     font-family: "Instrument Sans", sans-serif; }
@@ -601,6 +611,17 @@
   .stripctl { display: flex; align-items: center; gap: 16px;
     margin-top: 22px; }
   .stripctl input { flex: 1; min-width: 0; }
+  .striplive { margin-top: 26px; border-top: 1px solid var(--hair);
+    padding-top: 20px; }
+  .livelead { font-size: 14.5px; opacity: 0.7; }
+  .liverow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .liverow input { flex: 1; min-width: 130px; border: 2px solid var(--ink);
+    background: transparent; color: var(--ink); padding: 9px 12px;
+    font-family: "Instrument Sans", sans-serif; font-size: 14px;
+    font-variant-numeric: tabular-nums; }
+  .liverow input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .livestate { margin-top: 12px; font-size: 12.5px; opacity: 0.5;
+    font-family: "Instrument Sans", sans-serif; }
   @media (max-width: 860px) {
     .stripbody { grid-template-columns: 1fr; gap: 26px; }
     .stripframe { max-width: 300px; }
@@ -844,7 +865,9 @@
     </div>
     <div class="stripbody">
       <div class="stripframe">
-        <div class="stripimg" id="stripImg"></div>
+        <div class="stripimg" id="stripImg">
+          <canvas id="stripCv" width="800" height="800"></canvas>
+        </div>
         <div class="stripcap">
           <span class="sround">Round <b id="stripRound">1</b></span>
           <span class="sscore" id="stripScore">28<i>/70</i></span>
@@ -871,6 +894,24 @@
           <button class="btn hot" id="stripPlay">Pause</button>
           <input id="stripScrub" type="range" min="0" max="0" step="1" value="0"
             aria-label="Scrub through the rounds">
+        </div>
+        <div class="striplive">
+          <p class="livelead"><b>Put your own dog through it.</b> Every
+          round's painter is still on disk, so the strip above does not
+          have to be a recording. Give it a seed and it will run that
+          number through all sixty renderers, drawing each frame in your
+          browser the moment it loads. It is slower, because it fetches a
+          whole painter per step, and it is the same machinery the
+          collection itself uses.</p>
+          <div class="liverow">
+            <input id="stripSeed" type="text" inputmode="numeric"
+              maxlength="10" spellcheck="false" autocomplete="off"
+              aria-label="Seed to draw">
+            <button class="btn" id="stripRoll">Roll one</button>
+            <button class="btn hot" id="stripGo">Draw it live</button>
+          </div>
+          <p class="livestate" id="stripState">Showing the strip that was
+          rendered on the box, seed 910001.</p>
         </div>
       </div>
     </div>
@@ -1655,8 +1696,83 @@ function paintsFate(state) {
   const MANIFEST = 'https://recognitionphysics-public.t3.tigrisfiles.io'
     + '/share/alldogs_design_live/filmstrip.js';
 
+  const cv = document.getElementById('stripCv');
+  const seedIn = document.getElementById('stripSeed');
+  const rollBtn = document.getElementById('stripRoll');
+  const goBtn = document.getElementById('stripGo');
+  const stateEl = document.getElementById('stripState');
+
   let m = null, i = 0, timer = 0, paused = false, visible = false;
   const CALM = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Live mode. Each round's own painter is on the bucket, and every one
+     of them is a self-contained IIFE that assigns window.ALLDOGS and
+     declares nothing else, so they can be loaded one after another
+     without colliding. That is what makes this possible at all: the
+     strip stops being a recording and becomes the collection's real
+     machinery, run against whatever number you hand it.
+
+     They are loaded one per frame rather than up front, because the
+     sixty of them come to 24 MB. */
+  let live = false, liveSeed = 0;
+  const painters = new Map();     // round -> drawDog, once it has loaded
+  let loading = null;             // round currently being fetched
+
+  function loadPainter(round, url) {
+    if (painters.has(round)) return Promise.resolve(painters.get(round));
+    if (!url) return Promise.resolve(null);
+    return new Promise(resolve => {
+      const s = document.createElement('script');
+      s.src = url;
+      s.onload = () => {
+        /* read it immediately: the next painter to load overwrites the
+           same global, so the window between load and capture is the
+           only moment this function is reachable */
+        const api = window.ALLDOGS;
+        const fn = api && api.drawDog;
+        if (fn) painters.set(round, fn);
+        s.remove();
+        resolve(fn || null);
+      };
+      s.onerror = () => { s.remove(); resolve(null); };
+      document.head.append(s);
+    });
+  }
+
+  function paintLive(round, fn) {
+    if (!fn) return false;
+    try {
+      cv.width = cv.height = 800;
+      fn(cv, liveSeed, 'faithful');
+      return true;
+    } catch (e) {
+      return false;                 // an old painter that cannot take it
+    }
+  }
+
+  function say(msg) { stateEl.textContent = msg; }
+
+  function rollSeedValue() {
+    return (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+  }
+
+  function enterLive(seed) {
+    liveSeed = seed >>> 0;
+    live = true;
+    img.classList.add('live');
+    painters.clear();
+    say('Drawing seed ' + liveSeed + ' live. Each step loads that round\u2019s '
+      + 'painter first, so it moves at the speed of the network.');
+    show(0);
+  }
+
+  function leaveLive() {
+    live = false;
+    img.classList.remove('live', 'loading');
+    say('Showing the strip that was rendered on the box, seed '
+      + (m && m.seed ? m.seed : 910001) + '.');
+    show(i);
+  }
 
   function layout() {
     /* the sprite is drawn at whatever width the column gives us, so every
@@ -1678,12 +1794,44 @@ function paintsFate(state) {
     scoreEl.innerHTML = (f.score == null ? '&ndash;' : f.score) + '<i>/70</i>';
     frameEl.classList.toggle('won', !!f.promoted);
     scrub.value = i;
+    if (!live) return;
+
+    /* Hold the frame that is already up while the next painter arrives.
+       A blank canvas mid-animation reads as the machine having broken,
+       and the old frame is at least a true picture of a real round. */
+    const want = f.round;
+    const cached = painters.get(want);
+    if (cached) { paintLive(want, cached); prefetch(); return; }
+    img.classList.add('loading');
+    loading = want;
+    loadPainter(want, f.js).then(fn => {
+      img.classList.remove('loading');
+      if (loading !== want || !live) return;   // the viewer moved on
+      if (!paintLive(want, fn)) {
+        say('Round ' + want + ' would not draw that seed, so the frame '
+          + 'above is the one the box rendered.');
+      }
+      prefetch();
+    });
+  }
+
+  /* fetch the next round's painter while the current one is on screen,
+     so a steady play only waits for the network once */
+  function prefetch() {
+    if (!live || !m) return;
+    const nx = m.frames[(i + 1) % m.count];
+    if (nx && nx.js && !painters.has(nx.round)) loadPainter(nx.round, nx.js);
   }
 
   /* Slow at the start, because the first rounds are where the change is
      largest and a viewer needs to see the machine finding the animal at
      all. Then it settles, the way the fight itself did. */
-  function gap(n) { return n < 8 ? 620 : n < 20 ? 380 : 260; }
+  function gap(n) {
+    /* live mode has already paid a network round trip per frame, so it
+       does not need the sprite's deliberate slow open */
+    if (live) return 420;
+    return n < 8 ? 620 : n < 20 ? 380 : 260;
+  }
 
   function tick() {
     if (paused || !visible) return;
@@ -1706,11 +1854,36 @@ function paintsFate(state) {
   });
   addEventListener('resize', layout);
 
+  rollBtn.addEventListener('click', () => {
+    seedIn.value = rollSeedValue();
+    goBtn.click();
+  });
+  goBtn.addEventListener('click', () => {
+    const raw = (seedIn.value || '').trim();
+    const seed = /^\d+$/.test(raw) ? Number(raw) : rollSeedValue();
+    seedIn.value = seed;
+    if (!m) return;
+    halt();
+    enterLive(seed);
+    paused = false; label();
+    start();
+  });
+  seedIn.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); goBtn.click(); }
+  });
+
   function ready() {
     m = window.ALLDOGS_STRIP;
     if (!m || !m.count) { box.remove(); return; }
     scrub.max = m.count - 1;
     img.style.backgroundImage = 'url("' + m.url + '")';
+    seedIn.value = m.seed || 910001;
+    seedIn.placeholder = String(m.seed || 910001);
+    if (!m.frames.some(f => f.js)) {
+      /* an older manifest has no renderers on it; offering a button that
+         cannot work is worse than not offering one */
+      box.querySelector('.striplive').remove();
+    }
     paused = !CALM; label();
     layout();
     /* the sprite arrives after the manifest, and the frame is sized off

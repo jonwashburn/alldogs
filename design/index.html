@@ -301,20 +301,21 @@
     return merged;
   }
 
-  /* A round that names no author and receives no verdict never happened.
-     When a painter arm dies mid-run the driver keeps turning: it logs a
-     round, records no painter, gets no score back, and the sheet sitting
-     in that round's folder is the last one that was really drawn. Those
-     are not results and showing them reads as sixteen rounds where the
-     machine forgot how to paint.
+  /* A round whose sheet is not its own work never happened.
 
-     Both halves of the test are needed. The earliest rounds carry no
-     painter because the driver did not record seats yet, and they drew
-     real dogs. The refactor rounds carry no score because they are judged
-     on bit-identical output rather than on taste, and they are real work.
-     Only the pair together isolates the outage. */
+     When a round fails to render, whether the painter arm ran out of
+     credit or the build died, the driver still writes a sheet into the
+     folder, and it is a placeholder shared with every other round that
+     failed the same way. So the publisher hashes the sheets and sets
+     `drew`: a real round's sheet is unique to it, and a sheet appearing
+     under two round numbers is a placeholder by construction.
+
+     The fallback matters. An older cached feed has no `drew` field, and
+     defaulting those to shown is right, because hiding every round on a
+     stale feed would look far worse than showing a few placeholders for
+     the minute before the next feed lands. */
   function drew(r) {
-    return !!(r.painter || r.cand_total != null);
+    return r.drew !== false;
   }
 
   function render(feed) {
