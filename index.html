@@ -36,7 +36,7 @@
   .why { padding-bottom: 140px; }
   .rules { padding-bottom: 120px; }
   .fatesec { padding-bottom: 74px; }
-  /* The King hangs off this section's bottom corner and half of him lands
+  /* The 1984 dog hangs off this section's bottom corner and half of it lands
      inside it, so the second column stops above him rather than under. */
   .bred { padding-bottom: 200px; }
   canvas.brush { display: block; width: min(1196px, calc(100% - 64px));
@@ -1013,34 +1013,38 @@
   <div class="oddsfoot">
   <div class="chipgroup">
     <div class="glbl">The one of ones &middot; 21 dogs, dealt at birth</div>
+    <!-- Chronological, which is not the seed order. Seeds 1 to 21 and the
+         costume each year stands for live in the painter brief; the page
+         only ever prints the year. -->
     <div class="chips">
-      <span class="chip grail">The Carpenter <b>1</b></span>
-      <span class="chip grail">The King <b>1</b></span>
-      <span class="chip grail">The Pope <b>1</b></span>
-      <span class="chip grail">The Painter <b>1</b></span>
-      <span class="chip grail">The Candelabra <b>1</b></span>
-      <span class="chip grail">The Rhinestone <b>1</b></span>
-      <span class="chip grail">The Headdress <b>1</b></span>
-      <span class="chip grail">The Purple One <b>1</b></span>
-      <span class="chip grail">The Lightning Bolt <b>1</b></span>
-      <span class="chip grail">The Yellow Jacket <b>1</b></span>
-      <span class="chip grail">The Dropout <b>1</b></span>
-      <span class="chip grail">The Selfie <b>1</b></span>
-      <span class="chip grail">The Updraft <b>1</b></span>
-      <span class="chip grail">The Flat Top <b>1</b></span>
-      <span class="chip grail">The Silver Wig <b>1</b></span>
-      <span class="chip grail">The Mustache <b>1</b></span>
-      <span class="chip grail">The Cage <b>1</b></span>
-      <span class="chip grail">The Pigeon Keeper <b>1</b></span>
-      <span class="chip grail">The Gold Chains <b>1</b></span>
-      <span class="chip grail">The Stuntman <b>1</b></span>
-      <span class="chip grail">The Glove <b>1</b></span>
+      <span class="chip grail">33 <b>1</b></span>
+      <span class="chip grail">1931 <b>1</b></span>
+      <span class="chip grail">1954 <b>1</b></span>
+      <span class="chip grail">1955 <b>1</b></span>
+      <span class="chip grail">1964 <b>1</b></span>
+      <span class="chip grail">1972 <b>1</b></span>
+      <span class="chip grail">1973 <b>1</b></span>
+      <span class="chip grail">1974 <b>1</b></span>
+      <span class="chip grail">1977 <b>1</b></span>
+      <span class="chip grail">1978 <b>1</b></span>
+      <span class="chip grail">1981 <b>1</b></span>
+      <span class="chip grail">1982 <b>1</b></span>
+      <span class="chip grail">1983 <b>1</b></span>
+      <span class="chip grail">1984 <b>1</b></span>
+      <span class="chip grail">1986 <b>1</b></span>
+      <span class="chip grail">1988 <b>1</b></span>
+      <span class="chip grail">1994 <b>1</b></span>
+      <span class="chip grail">1997 <b>1</b></span>
+      <span class="chip grail">2003 <b>1</b></span>
+      <span class="chip grail">2004 <b>1</b></span>
+      <span class="chip grail">2014 <b>1</b></span>
     </div>
   </div>
   <p class="fatenote" style="margin-bottom:20px">Twenty-one dogs in the pack
-  are somebody. They are named rather than shown, because working out who
-  is who is half of it, and the range runs from a first-century carpenter
-  to a single sequined glove. There are exactly twenty-one however many
+  are somebody. Each one carries a year and nothing else, because the year
+  is when the costume happened and working out whose costume it is
+  is the entire point. The first one is 33. Nobody will get all of them and
+  nobody is meant to. There are exactly twenty-one however many
   dogs get adopted, so a small pack makes them common and a big one makes
   them impossible, and nobody knows which until the door shuts. They are
   drawn by lot at the close, over the whole pack at once, so buying early
@@ -1056,7 +1060,7 @@
   also multiply. A crowned dog holding a martini is 0.09%
   &times; 0.1%, about one in a million, which at any pack size we are
   likely to see means it is almost certainly not coming. Even the one of
-  ones roll the held slot, so The Carpenter holding a martini is one
+  ones roll the held slot, so the one from 33 holding a martini is one
   specific dog times 0.1%, a piece that will probably never exist, and
   everyone will know the odds it beat if it does. Everything above is
   settled at the close. The weekly drop, the fate and the days lived are
@@ -2040,22 +2044,25 @@ function openStray(seed, state, label) {
     state + ' \u00b7 seed ' + seed;
   sview.classList.add('on');
 }
+/* The one-of-one seeds are labelled with the year they are published
+   under, never with who they are. Seeds 1 to 21 map to years in the
+   painter brief; 9 is 1973, 10 is 1986, 8 is 1984. */
 perch('.why',     100027, 'faithful', 'red balloon \u00b7 2.0%',   150);
-perch('.bred',    9,      'faithful', 'The Painter \u00b7 1 of 1',  195);
+perch('.bred',    9,      'faithful', '1973 \u00b7 1 of 1',        195);
 perch('.fatesec', 950003, 'zombie',   'zombie',                    150);
 perch('#dogs',    100037, 'faithful', 'boombox \u00b7 0.5%',        150);
-perch('.medium',  10,     'faithful', 'The Silver Wig \u00b7 1 of 1',120);
+perch('.medium',  10,     'faithful', '1986 \u00b7 1 of 1',        120);
 perch('.drop',    100030, 'faithful', 'teacup \u00b7 1.0%',         150);
 perch('.rules',   100013, 'faithful', '3D glasses \u00b7 2.86%',    150);
 perch('.choice',  100001, 'faithful', 'crown \u00b7 0.09%',         150);
 
-/* Two exceptions, both earned: The King hangs giant off the edge of the
-   section about who made this, where nothing perches on the boundary he
+/* Two exceptions, both earned: 1984 hangs giant off the edge of the
+   section about who made this, where nothing perches on the boundary it
    owns, and an angel floats in the cannon's night rather than standing on
    a line, because the cannon is the one thing that cannot touch her. */
 /* its label spills 30px past the dog, so the dog stands at least that far
    in or the page grows a sideways scrollbar */
-stray('.bred', 8, 'faithful', 'The King \u00b7 1 of 1',
+stray('.bred', 8, 'faithful', '1984 \u00b7 1 of 1',
   'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-200px;', 1100);
 stray('.cannon', 940002, 'angel', 'angel \u00b7 out of reach',
   'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));',
