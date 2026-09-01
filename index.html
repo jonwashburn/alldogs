@@ -181,6 +181,8 @@
   /* the dog currently going into the plate, so the mechanism is visible
      rather than asserted */
   .gtadding { display: flex; align-items: center; gap: 14px; }
+  /* a class rule beats the hidden attribute, so say it again here */
+  .gtadding[hidden] { display: none; }
   .gtadding canvas { width: 84px; height: 84px; display: block;
     border: 2px solid var(--ink); background: var(--hair); flex: none; }
   .gtadding span { font-size: 9px; letter-spacing: 2px; font-weight: 700;
@@ -197,7 +199,17 @@
     font-size: clamp(22px, 3vw, 32px); margin: 6px 0 14px; }
   .gtside p { font-size: 15px; line-height: 1.62; opacity: 0.74;
     margin-bottom: 12px; max-width: 56ch; }
-  .gtbtns { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 4px; }
+  /* the plate arrives finished, so the buttons have to say out loud that
+     they are the thing that replays it, or they read as a filter */
+  .gtcue { margin: 22px 0 0; font-family: "Instrument Sans", sans-serif;
+    font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; color: var(--red); display: flex; align-items: center;
+    gap: 8px; }
+  .gtcue span { font-size: 13px; letter-spacing: 0;
+    animation: gtnudge 1.6s ease-in-out infinite; }
+  @keyframes gtnudge { 0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); } }
+  .gtbtns { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0 4px; }
   .gtnote { font-size: 14.5px; }
   .gtnote b { opacity: 1; }
   @media (max-width: 860px) {
@@ -1253,9 +1265,11 @@
     <div class="gtleft">
       <div class="gtplate">
         <canvas id="gtCanvas" width="300" height="300"></canvas>
-        <div class="gtcap"><span id="gtWhich">the living</span><span id="gtN">0 dogs</span></div>
+        <div class="gtcap"><span id="gtWhich">the living</span><span id="gtN">&mdash;</span></div>
       </div>
-      <div class="gtadding">
+      <!-- nothing is going in until a build is running, so this stays
+           out of the way rather than showing an empty square -->
+      <div class="gtadding" id="gtAdding" hidden>
         <canvas id="gtOne" width="150" height="150"></canvas>
         <span>the dog<br>going in</span>
       </div>
@@ -1280,17 +1294,21 @@
       one dog. It is what a pack of dog people did over ninety days, every dog
       a brushstroke in it, and there has never been a way to look at that
       directly. This is the picture of the whole painting.</p>
+      <p class="gtcue" id="gtCue">Press one to build it in front of
+      you<span>&darr;</span></p>
       <div class="gtbtns">
         <button class="btn hot" data-st="faithful">The living</button>
         <button class="btn" data-st="zombie">The horde</button>
         <button class="btn" data-st="angel">The dead</button>
       </div>
-      <p class="gtnote" id="gtNote">Pick a fate and watch it build. The
-      dogs go in one at a time to start with, slowly enough to see each
-      one arrive and lose itself, then faster as it stops mattering which
-      one is which. Every dog on this page belongs to somebody. This one
-      cannot: an average has no owner, which makes it the only thing here
-      that belongs to all of them at once.</p>
+      <p class="gtnote" id="gtNote">That plate is a hundred and sixty dogs
+      already stacked. Press a fate and it empties and builds again from
+      one dog, slowly at first, slowly enough to watch each one arrive and
+      lose itself, then faster as it stops mattering which is which. It
+      comes out different every time, because every build samples the pack
+      again. Every dog on this page belongs to somebody. This one cannot:
+      an average has no owner, which makes it the only thing here that
+      belongs to all of them at once.</p>
     </div>
   </div>
 </div></section>
@@ -2515,6 +2533,9 @@ paintWhenNear(document.querySelector('footer'), () => {
   const oneCv = document.getElementById('gtOne');
   const one = oneCv.getContext('2d');
   const NAME = { faithful: 'the living', zombie: 'the horde', angel: 'the dead' };
+  const PLATE = 'https://recognitionphysics-public.t3.tigrisfiles.io'
+    + '/share/alldogs_design_live/composite_';
+  const PRESET = 160;               // how many dogs the shipped plate holds
   let state = 'faithful', n = 0, raf = 0, running = false, nextAt = 0;
 
   function show() {
@@ -2586,6 +2607,30 @@ paintWhenNear(document.querySelector('footer'), () => {
     raf = requestAnimationFrame(tick);
   }
 
+  /* The section opens on a finished plate rather than an empty box.
+     Building one in the browser costs about twenty seconds, a dog at a
+     time, so a visitor who scrolls here would meet a blank square and a
+     promise. The plate is rendered on the gauntlet box from the same
+     champion painter and the same contrast stretch, and shipped as an
+     image. Nothing is faked by that: every build samples random seeds, so
+     no two live builds agree either, and there is no single true
+     composite to be unfaithful to. */
+  function showPreset(st) {
+    const im = new Image();
+    /* deliberately not crossOrigin: the bucket sends no CORS header, so
+       asking for it would fail the load outright. Drawing it taints this
+       canvas, which costs nothing here because the plate is only ever
+       written to, never read back. The per-dog reads happen on a separate
+       scratch canvas. */
+    im.onload = () => {
+      if (running) return;          // a build started while it downloaded
+      g.drawImage(im, 0, 0, S, S);
+      document.getElementById('gtN').textContent = PRESET + ' dogs';
+    };
+    im.src = PLATE + st + '.png?v=' + Math.floor(Date.now() / 3600000);
+  }
+  showPreset('faithful');
+
   document.querySelectorAll('.gtbtns .btn').forEach(btn => {
     btn.addEventListener('click', () => {
       cancelAnimationFrame(raf);
@@ -2594,6 +2639,9 @@ paintWhenNear(document.querySelector('footer'), () => {
       state = btn.dataset.st;
       acc.fill(0); n = 0; nextAt = 0;
       document.getElementById('gtWhich').textContent = NAME[state];
+      const cue = document.getElementById('gtCue');
+      if (cue) cue.remove();        // it has been pressed; stop nudging
+      document.getElementById('gtAdding').hidden = false;
       g.clearRect(0, 0, S, S);
       one.clearRect(0, 0, oneCv.width, oneCv.height);
       running = true;
