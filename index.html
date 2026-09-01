@@ -206,23 +206,14 @@
   }
   @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
 
-  /* the whole pack, painted in front of you */
-  .packwall { margin-top: 46px; border-top: 2px solid var(--ink);
-    padding-top: 24px; }
-  .pwhead { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  /* the painter's progress, inside the map */
+  .yspaint { margin-top: 16px; }
+  .ysbar.plain u { display: none; }
   .pwcount { font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; opacity: 0.55; }
+    font-weight: 700; opacity: 0.55; margin-top: 10px; }
   .pwcount b { font-family: "Shantell Sans", sans-serif; font-size: 22px;
     letter-spacing: 0; opacity: 1; }
   .pwcount em { font-style: normal; margin-left: 14px; }
-  .pwbar { height: 5px; margin-top: 16px; background: var(--hair); }
-  .pwbar i { display: block; height: 100%; width: 0; background: var(--ink); }
-  .pwfield { margin-top: 18px; border: 2px solid var(--ink);
-    background: var(--hair); padding: 10px; }
-  .pwfield canvas { width: 100%; height: auto; display: block; }
-  .pwnote { font-size: 14.5px; line-height: 1.62; opacity: 0.72;
-    margin-top: 16px; max-width: 68ch; }
-  .pwnote b { opacity: 1; }
 
   /* fates: three the ninety days can reach, two that only the ending can */
   .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
@@ -726,7 +717,7 @@
 
   <div class="yearsim">
     <div class="ysfield">
-      <canvas id="ysPack" width="1640" height="1040"></canvas>
+      <canvas id="ysPack" width="1600" height="1000"></canvas>
       <div class="ysflash" id="ysFlash"></div>
     </div>
     <div class="yskey">
@@ -740,21 +731,30 @@
       <div class="ysstat"><span class="k">First sales</span><b id="ysZom" class="c-zom">0</b><span class="s">of 150</span></div>
       <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
     </div>
-    <div class="ysbar"><i id="ysProg"></i><u id="ysMark"></u></div>
+    <div class="ysbar"><i id="ysRace"></i><u id="ysMark"></u></div>
     <div class="ysctl">
       <button class="btn hot" id="ysRun">Pause</button>
+      <button class="btn" id="ysPaint">Paint all 1,000</button>
       <label for="ysRate">How often the pack sells
         <output id="ysRateOut">one every 14 hours</output></label>
       <input id="ysRate" type="range" min="20" max="500" step="1" value="167">
     </div>
-    <p class="ysverdict" id="ysVerdict">This map runs the ninety days,
-    then starts them again, for as long as you watch it. Nothing in it is
-    scripted: every night, every living dog rolls the same small chance of
-    dying that the rules give it, and somebody sells at the rate on the
-    slider. Only a dog's first sale turns it red, because a dog can only
-    be given up once. The slider sits on the line itself, one sale every
-    14 hours, close enough that some runs end in a graveyard and some end
-    in a cannon. Move it and see how little it takes.</p>
+    <div class="yspaint" id="ysPaintRow" hidden>
+      <div class="ysbar plain"><i id="pwProg"></i></div>
+      <div class="pwcount"><b id="pwDone">0</b> of 1,000 painted<em
+        id="pwElapsed"></em></div>
+    </div>
+    <p class="ysverdict" id="ysVerdict">A thousand marks, one dog to
+    each, running the ninety days over and over for as long as you watch.
+    Nothing in it is scripted: every night, every living dog rolls the
+    same small chance of dying the rules give it, and somebody sells at
+    the rate on the slider, which sits on the line itself. Press <b>paint
+    all 1,000</b> and the marks stop being marks. There is no folder of
+    pictures behind this page, so each one gets painted from its seed in
+    front of you, which takes about a minute and the minute is the proof.
+    After that the same grid keeps running, and a dog that turns is
+    repainted as the zombie it became. Click any of them to see it
+    large.</p>
   </div>
 </div></section>
 
@@ -1120,23 +1120,6 @@
     now, in public &rarr;</a></span>
   </div>
 
-  <div class="packwall">
-    <div class="pwhead">
-      <button class="btn hot" id="pwRun">Paint the whole pack</button>
-      <div class="pwcount"><b id="pwDone">0</b> of <span id="pwTotal">1,000</span>
-        painted<em id="pwElapsed"></em></div>
-    </div>
-    <div class="pwbar"><i id="pwProg"></i></div>
-    <div class="pwfield" id="pwField" hidden>
-      <canvas id="pwCanvas"></canvas>
-    </div>
-    <p class="pwnote" id="pwNote">There is no folder of pictures behind this
-    page, so there is nothing to load: press the button and a thousand dogs
-    get painted from their seeds, one at a time, in front of you. It takes
-    about a minute on a laptop, and the minute is the proof. Click any
-    square to see that dog at full size. This is the wall on the day the
-    pack fills, when every dog is still alive.</p>
-  </div>
 </div></section>
 
 <section class="medium" id="medium"><div class="wrap">
@@ -2294,131 +2277,19 @@ paintWhenNear(document.querySelector('footer'), () => {
   });
 })();
 
-/* The whole pack, painted in front of you.
+/* The ninety days, run over a thousand dogs.
 
-   The claim the rest of the page makes about the medium is that there is
-   no image file anywhere: a dog is code and a number. This is that claim
-   with the receipts. Every tile is a real call into the same painter that
-   draws every other dog here, and it is slow for the honest reason, which
-   is that a thousand paintings are being made while you watch. Painted in
-   scattered order so the wall resolves rather than wipes, one dog per
-   frame so the page stays usable, and stoppable, because nobody should be
-   trapped in a minute they did not want. */
-(function () {
-  const btn = document.getElementById('pwRun');
-  if (!btn) return;
-  const cv = document.getElementById('pwCanvas');
-  const field = document.getElementById('pwField');
-  const doneEl = document.getElementById('pwDone');
-  const progEl = document.getElementById('pwProg');
-  const elapsedEl = document.getElementById('pwElapsed');
-  const note = document.getElementById('pwNote');
-  const narrow = matchMedia('(max-width: 700px)').matches;
-  /* a phone paints the same dog several times slower, so it gets a pack it
-     can finish rather than one it has to be rescued from */
-  const TOTAL = narrow ? 240 : 1000;
-  const COLS = narrow ? 12 : 40;
-  const ROWS = Math.ceil(TOTAL / COLS);
-  const TILE = 46;
-  let order = [], seeds = [], i = 0, running = false, raf = 0, t0 = 0;
-  let ctx = null, scratch = null;
-  /* which dog ended up in which square, so a click can find it again. The
-     wall is one canvas rather than a thousand elements, so this map is the
-     only way back from a pixel to a dog. */
-  let slotSeed = [];
+   One grid does both jobs. Every square is a dog: a flat colour while it
+   is only a state, and a real painting once the painter has reached it.
+   Press paint and it works through all thousand from their seeds, which
+   takes about a minute because a thousand paintings take about a minute,
+   and the counter is the whole argument: there is no folder of pictures
+   behind this page.
 
-  document.getElementById('pwTotal').textContent = TOTAL.toLocaleString();
-
-  function setup() {
-    cv.width = COLS * TILE; cv.height = ROWS * TILE;
-    ctx = cv.getContext('2d');
-    ctx.fillStyle = '#ddd8cc';
-    ctx.fillRect(0, 0, cv.width, cv.height);
-    scratch = document.createElement('canvas');
-    scratch.width = TILE; scratch.height = TILE;
-    order = Array.from({ length: TOTAL }, (_, k) => k);
-    shuffle(order);
-    seeds = Array.from({ length: TOTAL }, () => rollSeed());
-    slotSeed = new Array(COLS * ROWS).fill(0);
-    i = 0;
-  }
-
-  function tick() {
-    if (!running) return;
-    if (i >= TOTAL) return finish();
-    const slot = order[i];
-    draw(scratch, seeds[i], 'faithful');
-    ctx.drawImage(scratch, (slot % COLS) * TILE, ((slot / COLS) | 0) * TILE);
-    slotSeed[slot] = seeds[i];
-    i++;
-    doneEl.textContent = i.toLocaleString();
-    progEl.style.width = (i / TOTAL * 100) + '%';
-    const secs = (performance.now() - t0) / 1000;
-    elapsedEl.textContent = secs.toFixed(0) + 's';
-    raf = requestAnimationFrame(tick);
-  }
-
-  function finish() {
-    running = false;
-    btn.textContent = 'Paint a different pack';
-    const secs = ((performance.now() - t0) / 1000).toFixed(0);
-    note.innerHTML = '<b>' + TOTAL.toLocaleString() + ' dogs, painted in '
-      + secs + ' seconds, none of which existed when you opened this page.</b> '
-      + 'Every one came out of a number and the same few hundred lines of '
-      + 'drawing code. Press it again and you get a different thousand, '
-      + 'because the seeds are rolled fresh each time. The day the pack fills, this '
-      + 'is the wall: all of them alive, and the clock not started.';
-  }
-
-  /* The canvas is drawn at 46px a tile and displayed at whatever width
-     the column gives it, so a click has to be measured against the
-     rendered box rather than the bitmap. */
-  function squareAt(ev) {
-    const r = cv.getBoundingClientRect();
-    const col = Math.floor((ev.clientX - r.left) / r.width * COLS);
-    const row = Math.floor((ev.clientY - r.top) / r.height * ROWS);
-    if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return -1;
-    return row * COLS + col;
-  }
-  cv.addEventListener('click', ev => {
-    const slot = squareAt(ev);
-    if (slot < 0 || !slotSeed[slot]) return;
-    openStray(slotSeed[slot], 'faithful', 'one of the pack');
-  });
-  cv.addEventListener('mousemove', ev => {
-    const slot = squareAt(ev);
-    cv.style.cursor = slot >= 0 && slotSeed[slot] ? 'zoom-in' : 'default';
-  });
-
-  btn.addEventListener('click', () => {
-    if (running) {
-      running = false; cancelAnimationFrame(raf);
-      btn.textContent = 'Keep painting';
-      note.innerHTML = '<b>Stopped at ' + i.toLocaleString() + '.</b> The '
-        + 'blank squares are dogs that have not been painted yet, not dogs '
-        + 'that failed to load. There is nothing to load.';
-      return;
-    }
-    if (i === 0 || i >= TOTAL) { setup(); t0 = performance.now(); }
-    else { t0 = performance.now() - 0; }
-    field.hidden = false;
-    running = true;
-    btn.textContent = 'Stop';
-    note.innerHTML = 'Painting. Each square is one call into the painter, '
-      + 'so the wall fills at the speed a machine can actually make a '
-      + 'thousand paintings.';
-    raf = requestAnimationFrame(tick);
-  });
-})();
-
-/* The year, run in front of you.
-
-   One mark per dog, a thousand of them. Every night each living dog
-   rolls the same 0.02% chance of dying that the rules give it, and the
-   pack sells at whatever rate you set, so nothing here is scripted and
-   two runs of the same slider do not match. The apocalypse fires the
-   night the count reaches 150, which is the only scripted thing in it,
-   because that is the rule. */
+   After that the two halves feed each other. The night rolls change a
+   dog's state, the painter repaints that square as what it became, and a
+   massacre queues more repaints than the painter can serve, which is why
+   the field flashes and the dogs catch up afterwards. */
 (function () {
   const cv = document.getElementById('ysPack');
   if (!cv) return;
@@ -2426,30 +2297,96 @@ paintWhenNear(document.querySelector('footer'), () => {
   const N = 1000, COLS = 40, ROWS = 25, DAYS = 90, TARGET = 150;
   const DEATH = 0.0002;
   const LIVING = 0, ZOMBIE = 1, ANGEL = 2;
-  const INK = { 0: 'rgba(253,253,251,0.80)', 1: '#ff3b2f', 2: '#f0b429' };
+  const NAME = ['faithful', 'zombie', 'angel'];
+  const INK = ['rgba(253,253,251,0.80)', '#ff3b2f', '#f0b429'];
+  const TILE = cv.width / COLS;
 
   const el = id => document.getElementById(id);
-  const field = new Uint8Array(N);
+  const field = new Uint8Array(N);       // the truth
+  const seeds = new Uint32Array(N);
+  /* every square keeps a painting per state it has actually been in, so
+     a dog that turns back at the start of the next run is instant and
+     the brush is only ever spent on something it has not made yet */
+  const tiles = Array.from({ length: N }, () => [null, null, null]);
+  const scratch = document.createElement('canvas');
+  scratch.width = scratch.height = Math.round(TILE);
   let day = 0, zombies = 0, angels = 0, living = N;
   let running = false, raf = 0, acc = 0, last = 0, over = null;
+  let painting = false, queue = [], painted = 0, t0 = 0;
 
-  const cw = cv.width / COLS, ch = cv.height / ROWS;
-  const mk = Math.min(cw, ch) * 0.62;
+  for (let i = 0; i < N; i++) seeds[i] = rollSeed();
 
-  function paint() {
-    g.clearRect(0, 0, cv.width, cv.height);
-    for (let i = 0; i < N; i++) {
-      const x = (i % COLS) * cw + (cw - mk) / 2;
-      const y = ((i / COLS) | 0) * ch + (ch - mk) / 2;
-      g.fillStyle = INK[field[i]];
-      g.fillRect(x, y, mk, mk);
+  function cellX(i) { return (i % COLS) * TILE; }
+  function cellY(i) { return ((i / COLS) | 0) * TILE; }
+
+  /* A square is a mark until it has been painted, and a painting after.
+     When a painted dog changes state the brush cannot keep up with the
+     night, so the old painting stays and takes a wash of the new state
+     until the repaint lands. That is why a massacre reddens instantly and
+     then resolves into actual zombies a few at a time. Reverting to
+     living needs no wash: the counters already say the run restarted. */
+  const WASH = [null, 'rgba(255,59,47,0.66)', 'rgba(240,180,41,0.62)'];
+  function anyTile(i) {
+    return tiles[i][0] || tiles[i][1] || tiles[i][2];
+  }
+  function cell(i) {
+    const x = cellX(i), y = cellY(i);
+    g.clearRect(x, y, TILE, TILE);
+    const want = tiles[i][field[i]];
+    if (want) { g.drawImage(want, x, y); return; }
+    const stale = anyTile(i);
+    if (stale) {
+      g.drawImage(stale, x, y);
+      if (WASH[field[i]]) {
+        g.fillStyle = WASH[field[i]];
+        g.fillRect(x, y, TILE, TILE);
+      }
+      return;
     }
+    const mk = TILE * 0.62, o = (TILE - mk) / 2;
+    g.fillStyle = INK[field[i]];
+    g.fillRect(x + o, y + o, mk, mk);
+  }
+
+  function paintAll() {
+    for (let i = 0; i < N; i++) cell(i);
+  }
+
+  /* one square, painted for real at whatever it currently is */
+  function paintOne(i) {
+    const st = field[i];
+    if (tiles[i][st]) { cell(i); return false; }
+    const fresh = anyTile(i) === null;
+    draw(scratch, seeds[i], NAME[st]);
+    const b = document.createElement('canvas');
+    b.width = b.height = scratch.width;
+    b.getContext('2d').drawImage(scratch, 0, 0);
+    tiles[i][st] = b;
+    cell(i);
+    return fresh;
+  }
+
+  /* only worth queueing a square that has been painted before and needs a
+     state it has not been painted in yet */
+  function enqueue(i) {
+    if (anyTile(i) && !tiles[i][field[i]]) queue.push(i);
+  }
+
+  function painterTick() {
+    if (!painting) return;
+    if (queue.length) {
+      const i = queue.shift();
+      if (paintOne(i)) painted++;
+      el('pwDone').textContent = painted.toLocaleString();
+      el('pwProg').style.width = (painted / N * 100) + '%';
+      el('pwElapsed').textContent =
+        ((performance.now() - t0) / 1000).toFixed(0) + 's';
+    }
+    requestAnimationFrame(painterTick);
   }
 
   function rate() { return el('ysRate').value / 100; }
-
-  /* the page talks about this line in hours ("one sale every 14 hours"),
-     so the slider does too until hours stop being readable */
+  /* the page quotes this line in hours, so the slider does too */
   function gap(perDay) {
     const h = 24 / perDay;
     return h < 72 ? 'one every ' + h.toFixed(0) + ' hours'
@@ -2461,7 +2398,7 @@ paintWhenNear(document.querySelector('footer'), () => {
     el('ysLiving').textContent = living;
     el('ysZom').textContent = zombies;
     el('ysAng').textContent = angels;
-    el('ysProg').style.width = Math.min(100, zombies / TARGET * 100) + '%';
+    el('ysRace').style.width = Math.min(100, zombies / TARGET * 100) + '%';
     el('ysMark').style.left = (day / DAYS * 100) + '%';
   }
 
@@ -2471,12 +2408,16 @@ paintWhenNear(document.querySelector('footer'), () => {
     const perDay = rate();
     for (let i = 0; i < N; i++) {
       if (field[i] !== LIVING) continue;
-      if (Math.random() < DEATH) { field[i] = ANGEL; angels++; living--; }
+      if (Math.random() < DEATH) {
+        field[i] = ANGEL; angels++; living--; cell(i); enqueue(i);
+      }
     }
     const pSell = living > 0 ? perDay / living : 0;
     for (let i = 0; i < N; i++) {
       if (field[i] !== LIVING) continue;
-      if (Math.random() < pSell) { field[i] = ZOMBIE; zombies++; living--; }
+      if (Math.random() < pSell) {
+        field[i] = ZOMBIE; zombies++; living--; cell(i); enqueue(i);
+      }
     }
     if (zombies >= TARGET) return 'apocalypse';
     if (day >= DAYS) return 'survived';
@@ -2490,7 +2431,9 @@ paintWhenNear(document.querySelector('footer'), () => {
     flash.classList.add('fire');
     let taken = 0;
     for (let i = 0; i < N; i++) {
-      if (field[i] === LIVING) { field[i] = ZOMBIE; taken++; }
+      if (field[i] === LIVING) {
+        field[i] = ZOMBIE; taken++; cell(i); enqueue(i);
+      }
     }
     zombies += taken; living = 0;
     return taken;
@@ -2503,25 +2446,29 @@ paintWhenNear(document.querySelector('footer'), () => {
       el('ysVerdict').innerHTML = '<b>The cannon fired on day ' + day
         + '.</b> The count reached a hundred and fifty, and the horde took '
         + 'the ' + taken + ' dogs that were still alive, all at the same '
-        + 'midnight. ' + angels + ' angels were already out of reach. '
-        + 'Nobody who held got anything for holding.';
+        + 'midnight. ' + angels + ' angels were already out of reach.'
+        + (painted ? ' The painter is repainting them as what they became, '
+          + 'one at a time, because a massacre outruns a brush.' : '');
     } else {
       el('ysVerdict').innerHTML = '<b>The zombies lost.</b> The ninety '
         + 'days ended ' + (TARGET - zombies) + ' short of the line. '
-        + living + ' dogs are '
-        + 'still alive and can never be turned by a sale again, ' + angels
-        + ' died of old age with a name on the plaque, and from here a '
-        + 'living dog that is traded becomes a vampire, or one time in ten '
-        + 'an immortal.';
+        + living + ' dogs are still alive and can never be turned by a sale '
+        + 'again, ' + angels + ' died of old age with a name on the plaque, '
+        + 'and from here a living dog that is traded becomes a vampire, or '
+        + 'one time in ten an immortal.';
     }
-    board(); paint();
-    nextYear();
+    board();
+    nextRun();
   }
 
+  /* the same thousand dogs, run again: only the states reset, so the
+     painter keeps everything it already made and the second run shows
+     what changed rather than a different pack */
   function reset() {
     field.fill(LIVING);
     day = 0; zombies = 0; angels = 0; living = N; over = null;
-    board(); paint();
+    for (let i = 0; i < N; i++) enqueue(i);
+    board(); paintAll();
   }
 
   /* about fifteen seconds for the ninety days, so a night is a heartbeat */
@@ -2532,14 +2479,11 @@ paintWhenNear(document.querySelector('footer'), () => {
     acc += (now - last) / 1000 * NIGHTS_PER_SEC;
     last = now;
     while (acc >= 1 && !over) { acc -= 1; over = night(); }
-    board(); paint();
+    board();
     if (over) { finish(over); return; }
     raf = requestAnimationFrame(tick);
   }
 
-  /* The map is meant to be alive, so a finished year is not an ending, it
-     is a pause long enough to read the verdict before the next thousand
-     dogs walk in. It only ever animates while it is on screen. */
   const CALM = !matchMedia('(prefers-reduced-motion: reduce)').matches;
   let paused = !CALM, visible = false, hold = 0;
 
@@ -2549,34 +2493,51 @@ paintWhenNear(document.querySelector('footer'), () => {
     running = true; last = 0;
     raf = requestAnimationFrame(tick);
   }
-  function halt() {
-    running = false; cancelAnimationFrame(raf); last = 0;
-  }
-  function label() {
-    el('ysRun').textContent = paused ? 'Run it' : 'Pause';
-  }
+  function halt() { running = false; cancelAnimationFrame(raf); last = 0; }
+  function label() { el('ysRun').textContent = paused ? 'Run it' : 'Pause'; }
 
-  function nextYear() {
+  function nextRun() {
     hold = setTimeout(() => {
       hold = 0; reset();
-      el('ysVerdict').textContent = 'A new thousand. Same rules, same '
-        + 'rolls, and no promise it goes the same way.';
+      el('ysVerdict').textContent = 'The same thousand dogs, another ninety '
+        + 'days. Same rules, same rolls, and no promise it goes the same way.';
       start();
-    }, 5200);
+    }, 6200);
   }
 
   el('ysRun').addEventListener('click', () => {
-    paused = !paused;
-    label();
-    if (paused) { clearTimeout(hold); hold = 0; halt(); }
-    else start();
+    paused = !paused; label();
+    if (paused) { clearTimeout(hold); hold = 0; halt(); } else start();
   });
+
+  el('ysPaint').addEventListener('click', () => {
+    if (painting) return;
+    painting = true; t0 = performance.now();
+    el('ysPaintRow').hidden = false;
+    el('ysPaint').textContent = 'Painting';
+    el('ysPaint').disabled = true;
+    const order = Array.from({ length: N }, (_, k) => k);
+    shuffle(order);
+    queue = order;
+    requestAnimationFrame(painterTick);
+  });
+
+  /* the grid is one canvas, so a click has to be measured against the
+     rendered box and turned back into a square */
+  cv.addEventListener('click', ev => {
+    const r = cv.getBoundingClientRect();
+    const col = Math.floor((ev.clientX - r.left) / r.width * COLS);
+    const row = Math.floor((ev.clientY - r.top) / r.height * ROWS);
+    if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return;
+    const i = row * COLS + col;
+    openStray(seeds[i], NAME[field[i]], 'one of the thousand');
+  });
+  cv.style.cursor = 'zoom-in';
 
   const out = el('ysRateOut');
   function showRate() { out.textContent = gap(rate()); }
   el('ysRate').addEventListener('input', showRate);
-  showRate();
-  label();
+  showRate(); label();
 
   /* off screen it stops entirely: a map nobody is looking at should not
      be spending anybody's battery */
@@ -2587,7 +2548,7 @@ paintWhenNear(document.querySelector('footer'), () => {
     });
   }, { threshold: 0.12 }).observe(document.getElementById('map'));
 
-  board(); paint();
+  board(); paintAll();
 })();
 
 /* the odds fold, at every width */
