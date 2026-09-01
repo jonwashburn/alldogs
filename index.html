@@ -1626,21 +1626,53 @@ document.getElementById('litter').addEventListener('click', () => {
 });
 
 (function freshHero() {
-  /* The hero is a WIDE painting of one of the one-of-ones, rendered by the
+  /* The hero is a WIDE painting of an ordinary dog, rendered by the
      gauntlet from the current champion and republished every time a painter
-     wins, so the header improves on its own and nothing here changes when
-     the art does.
-
-     A random one on every load. No default: the collection has no favourite.
-
-     Deliberately NO seed in the caption. These are one-of-ones, and printing
-     their seed numbers would tell anyone exactly which tokens they are, when
-     the whole point is that they should look like they turned up on their
-     own. */
+     wins, so the header improves on its own. The one-of-ones stay in the
+     pack. Up here the rotation is the five fates: living, zombie, angel,
+     vampire, immortal. A random one on every load. No default. */
   var HERO_BASE =
     'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
-  var HERO_SEEDS = [8, 9, 10, 13, 19, 20];
-  var pick = HERO_SEEDS[Math.floor(Math.random() * HERO_SEEDS.length)];
+  var HERO_FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
+  var HEROES = [
+    { state: 'faithful', seed: 4101 }, { state: 'faithful', seed: 777001 },
+    { state: 'faithful', seed: 910007 }, { state: 'faithful', seed: 318 },
+    { state: 'zombie', seed: 4102 }, { state: 'zombie', seed: 920001 },
+    { state: 'zombie', seed: 777002 }, { state: 'zombie', seed: 555012 },
+    { state: 'angel', seed: 4103 }, { state: 'angel', seed: 930001 },
+    { state: 'angel', seed: 777003 }, { state: 'angel', seed: 555013 },
+    { state: 'vampire', seed: 940001 }, { state: 'vampire', seed: 777004 },
+    { state: 'vampire', seed: 555014 }, { state: 'vampire', seed: 880001 },
+    { state: 'immortal', seed: 950001 }, { state: 'immortal', seed: 777005 },
+    { state: 'immortal', seed: 555015 }, { state: 'immortal', seed: 880002 }
+  ];
+  function heroKey(h) { return h.state + ':' + h.seed; }
+  function heroFile(h) { return 'hero_' + h.state + '_' + h.seed + '.png'; }
+  function heroCaption(h) {
+    var day = (h.seed * 17) % 90 + 1;
+    if (h.state === 'zombie') return 'zombie \u00b7 turned day ' + day;
+    if (h.state === 'angel') return 'angel \u00b7 lived ' + day + ' days';
+    if (h.state === 'vampire') return 'vampire \u00b7 after the war';
+    if (h.state === 'immortal') return 'immortal \u00b7 after the war';
+    return 'faithful \u00b7 day ' + day;
+  }
+
+  var recent = [];
+  try { recent = JSON.parse(sessionStorage.getItem('alldogs_hero') || '[]'); }
+  catch (e) { recent = []; }
+  if (recent.some(function (k) { return String(k).indexOf(':') < 0; })) recent = [];
+  var lastFates = recent.map(function (k) { return String(k).split(':')[0]; }).slice(-2);
+  var fatePool = HERO_FATES.filter(function (f) { return lastFates.indexOf(f) < 0; });
+  if (!fatePool.length) fatePool = HERO_FATES;
+  var fate = fatePool[Math.floor(Math.random() * fatePool.length)];
+  var ofFate = HEROES.filter(function (h) { return h.state === fate; });
+  var fresh = ofFate.filter(function (h) { return recent.indexOf(heroKey(h)) < 0; });
+  var pool = fresh.length ? fresh : ofFate;
+  var pick = pool[Math.floor(Math.random() * pool.length)];
+  recent.push(heroKey(pick));
+  while (recent.length > 8) recent.shift();
+  try { sessionStorage.setItem('alldogs_hero', JSON.stringify(recent)); }
+  catch (e) {}
 
   var img = document.getElementById('heroDog');
   var banner = document.querySelector('.herobanner');
@@ -1651,18 +1683,20 @@ document.getElementById('litter').addEventListener('click', () => {
     try {
       var cv = document.createElement('canvas');
       cv.width = 1600; cv.height = 1600;
-      draw(cv, (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0, 'faithful');
+      var liveFate = (typeof paintsFate === 'function' && paintsFate(pick.state))
+        ? pick.state : 'faithful';
+      var seed = (Math.floor(Math.random() * 0xfffffff0) + 22) >>> 0;
+      draw(cv, seed, liveFate);
       img.src = cv.toDataURL('image/png');
     } catch (e) { banner.classList.add('light'); }
   }, { once: true });
   /* Cached for ten minutes, so a new champion reaches the header quickly
      without every visitor re-downloading a 2400px image on each view. */
-  img.src = HERO_BASE + 'hero_' + pick + '.png?v=' + Math.floor(Date.now() / 6e5);
+  img.src = HERO_BASE + heroFile(pick) + '?v=' + Math.floor(Date.now() / 6e5);
 
-  var handle = '@' + HA[pick % HA.length] + '_' + HB[(pick >> 4) % HB.length];
+  var handle = '@' + HA[pick.seed % HA.length] + '_' + HB[(pick.seed >> 4) % HB.length];
   document.getElementById('heroHandle').textContent = handle;
-  document.getElementById('heroMeta').textContent =
-    'faithful \u00b7 day ' + ((pick * 17) % 365 + 1);
+  document.getElementById('heroMeta').textContent = heroCaption(pick);
 })();
 paintWhenNear(document.querySelector('.fatesec'), () => {
   draw(document.getElementById('f_faithful'), 4101, 'faithful');
