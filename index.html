@@ -69,8 +69,10 @@
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
     height: min(74vh, 780px); overflow: hidden; background: #2c4a52; }
-  .herobanner canvas { position: absolute; left: 0; top: 50%; width: 100%;
-    height: auto; transform: translateY(-50%); display: block; }
+  .herobanner img { position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: 50% 50%; display: block;
+    opacity: 0; transition: opacity .5s ease; }
+  .herobanner img.on { opacity: 1; }
   /* the title is a collar tag hung on the painting, swinging on its string */
   .herobanner h1 { position: absolute; left: 34px; top: 34px;
     color: var(--ink); background: var(--paper);
@@ -109,7 +111,7 @@
     max-width: 54ch; }
   @media (max-width: 700px) {
     .herobanner { height: 46vh; }
-    .herobanner canvas { width: 160%; left: -30%; }
+    .herobanner img { object-position: 62% 50%; }
   }
   .cta { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap;
     justify-content: center; }
@@ -682,7 +684,7 @@
 
 <section class="hero">
   <div class="herobanner">
-    <canvas id="heroDog" width="1600" height="1600"></canvas>
+    <img id="heroDog" alt="One of the dogs, painted wide">
     <h1>ALL <span class="d">DOGS</span><span class="tm">&trade;</span></h1>
   </div>
   <div class="wrap">
@@ -1624,62 +1626,43 @@ document.getElementById('litter').addEventListener('click', () => {
 });
 
 (function freshHero() {
-  // probe a seed at 64px: ground luminance plus the dog's bounding box
-  function probe(seed) {
-    const P = 64;
-    const c = document.createElement('canvas');
-    c.width = P; c.height = P;
-    draw(c, seed, 'faithful');
-    const d = c.getContext('2d').getImageData(0, 0, P, P).data;
-    let l = 0, n = 0;
-    for (let i = 0; i < P * 12 * 4; i += 4) {
-      l += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2]; n++;
-    }
-    const lum = l / n;
-    // border-average ground color, then bbox of non-ground pixels
-    let r = 0, g = 0, b = 0, m = 0;
-    for (let i = 0; i < P; i++) {
-      for (const [x, y] of [[i, 0], [i, P - 1], [0, i], [P - 1, i]]) {
-        const o = (y * P + x) * 4;
-        r += d[o]; g += d[o + 1]; b += d[o + 2]; m++;
-      }
-    }
-    r /= m; g /= m; b /= m;
-    let x0 = P, x1 = 0, y0 = P, y1 = 0;
-    for (let y = 0; y < P; y++) for (let x = 0; x < P; x++) {
-      const o = (y * P + x) * 4;
-      const dr = d[o] - r, dg = d[o + 1] - g, db = d[o + 2] - b;
-      if (dr * dr + dg * dg + db * db > 74 * 74 * 3) {
-        if (x < x0) x0 = x; if (x > x1) x1 = x;
-        if (y < y0) y0 = y; if (y > y1) y1 = y;
-      }
-    }
-    return { lum: lum, x0: x0 / P, x1: x1 / P, y0: y0 / P, y1: y1 / P,
-             ok: x1 > x0 };
-  }
-  // want: dark ground, dog mostly right of center (wordmark zone is the
-  // left 45%). Vertical crop is CSS: the square stays centered, so a
-  // wider window trims the same amount from the top and the bottom.
-  let seed = null, fallback = null;
-  for (let k = 0; k < 22; k++) {
-    const cand = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
-    const pi = probe(cand);
-    if (!pi.ok) continue;
-    if (fallback === null && pi.lum < 118) fallback = cand;
-    if (pi.lum < 118 && pi.x0 > 0.34) { seed = cand; break; }
-  }
-  if (seed === null && fallback !== null) seed = fallback;
-  const banner = document.querySelector('.herobanner');
-  if (seed === null) {
-    seed = (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
-    banner.classList.add('light');
-  }
-  const heroCv = document.getElementById('heroDog');
-  draw(heroCv, seed, 'faithful');
-  const handle = '@' + HA[seed % HA.length] + '_' + HB[(seed >> 4) % HB.length];
+  /* The hero is a WIDE painting of one of the one-of-ones, rendered by the
+     gauntlet from the current champion and republished every time a painter
+     wins, so the header improves on its own and nothing here changes when
+     the art does.
+
+     A random one on every load. No default: the collection has no favourite.
+
+     Deliberately NO seed in the caption. These are one-of-ones, and printing
+     their seed numbers would tell anyone exactly which tokens they are, when
+     the whole point is that they should look like they turned up on their
+     own. */
+  var HERO_BASE =
+    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
+  var HERO_SEEDS = [8, 9, 10, 13, 19, 20];
+  var pick = HERO_SEEDS[Math.floor(Math.random() * HERO_SEEDS.length)];
+
+  var img = document.getElementById('heroDog');
+  var banner = document.querySelector('.herobanner');
+  img.addEventListener('load', function () { img.classList.add('on'); });
+  img.addEventListener('error', function () {
+    /* If the published hero cannot be reached, paint a live one rather than
+       leave a hole: the baked painter is here even when the network is not. */
+    try {
+      var cv = document.createElement('canvas');
+      cv.width = 1600; cv.height = 1600;
+      draw(cv, (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0, 'faithful');
+      img.src = cv.toDataURL('image/png');
+    } catch (e) { banner.classList.add('light'); }
+  }, { once: true });
+  /* Cached for ten minutes, so a new champion reaches the header quickly
+     without every visitor re-downloading a 2400px image on each view. */
+  img.src = HERO_BASE + 'hero_' + pick + '.png?v=' + Math.floor(Date.now() / 6e5);
+
+  var handle = '@' + HA[pick % HA.length] + '_' + HB[(pick >> 4) % HB.length];
   document.getElementById('heroHandle').textContent = handle;
   document.getElementById('heroMeta').textContent =
-    'faithful \u00b7 day ' + (seed % 365 + 1) + ' \u00b7 seed ' + seed;
+    'faithful \u00b7 day ' + ((pick * 17) % 365 + 1);
 })();
 paintWhenNear(document.querySelector('.fatesec'), () => {
   draw(document.getElementById('f_faithful'), 4101, 'faithful');
