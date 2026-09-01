@@ -209,11 +209,7 @@
   /* fates: three the ninety days can reach, two that only the ending can */
   .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
     margin-top: 18px; }
-  /* the two unpainted fates sit two-up with the explanation filling the
-     third column, so the row reads complete instead of cut off */
-  .pendnote { margin: 0; font-size: 14.5px; line-height: 1.62;
-    opacity: 0.72; align-self: center; }
-  .pendnote a { color: inherit; }
+  .fates.after { grid-template-columns: repeat(2, 1fr); }
   .faterow { font-family: "Instrument Sans", sans-serif; font-size: 10.5px;
     letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
     opacity: 0.5; margin-top: 46px; padding-bottom: 7px;
@@ -911,14 +907,6 @@
       <span class="tag" style="color:var(--blue)">stopped &middot; superpowered</span>
       </div>
     </div>
-    <p class="pendnote" id="pendnote">Both are painted now, and they did
-    not come out the same kind of thing. The vampire is a law: night
-    ground, black eyes, two fangs and one drop of blood, every time. The
-    immortal is not a law at all, because the superpower is different on
-    every dog, so one of them burns and another pulls a column of light
-    down onto itself. Nobody knows the whole set until the pack is dealt.
-    <a href="design/">The look is still being fought over in public
-    &rarr;</a></p>
   </div>
   <div class="stack">
     <div class="stackcard">
@@ -1530,10 +1518,6 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
       tag.textContent = 'Being painted now';
       card.prepend(tag);
     });
-    document.getElementById('pendnote').innerHTML = 'Neither is drawn in '
-      + 'this copy of the painter, so those plates show the living dog the '
-      + 'piece would have been, dimmed. <a href="design/">The look is being '
-      + 'fought over in public right now &rarr;</a>';
   }
 });
 
