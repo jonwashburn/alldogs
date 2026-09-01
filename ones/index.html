@@ -67,6 +67,12 @@
   .family.potter h2 { color: var(--red); }
   .family.rings h2 { color: #b8860b; }
   .family.wars h2 { color: var(--blue); }
+  .family.toons h2 { color: #c2410c; }
+  .family.camp2 h2 { color: #7c3aed; }
+  .family.history h2 { color: #14532d; }
+  .family.movies h2 { color: #1f2937; }
+  .fix { margin: 6px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--red); }
+  .fix span { font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 10.5px; margin-right: 6px; }
 
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
@@ -144,7 +150,7 @@
 </div>
 
 <div class="wrap film">
-  <div class="kicker">All thirty, in seed order</div>
+  <div class="kicker">All seventy-three, in seed order</div>
   <div class="thumbs" id="thumbs"></div>
 </div>
 
@@ -184,11 +190,20 @@ var FAMILIES = [
   { id: 'rings', title: 'The ring', cls: 'rings',
     lead: 'Three from the long walk. Hairy feet, a staff, an axe.' },
   { id: 'wars', title: 'The wars', cls: 'wars',
-    lead: 'Three from the space opera. A mask, ears, a rolling droid.' }
+    lead: 'Three from the space opera. A mask, ears, a rolling droid.' },
+  { id: 'toons', title: 'The devil and the cartoons', cls: 'toons',
+    lead: 'Three. Horns and a pitchfork, a fat kid in a pompom hat, and two idiots on one couch.' },
+  { id: 'camp2', title: 'Camp, second wave', cls: 'camp2',
+    lead: 'Fifteen more pop saints. Cones, meat, sequins, a crocodile, a cardigan.' },
+  { id: 'history', title: 'History', cls: 'history',
+    lead: 'Fifteen. Presidents, a general, an emperor, a queen with a corgi, a kite in a storm.' },
+  { id: 'movies', title: 'The movies', cls: 'movies',
+    lead: 'Ten more from the pictures. Steps, a pirate, a fedora, a red balloon, a very tall building.' }
 ];
 var ONES = [
   { seed: 1,  year: 33,   family: 'camp',   who: 'Jesus',
-    note: 'White robe, red sash, tired kind eyes, a faint ring of light.' },
+    note: 'White robe, red sash, tired kind eyes, a faint ring of light.',
+    fix: 'A crown of thorns pressed into the brow, thin lines of blood running from it.' },
   { seed: 2,  year: 1972, family: 'camp',   who: 'Elvis',
     note: 'White rhinestone jumpsuit, pompadour, gold aviators, collar to the ears.' },
   { seed: 3,  year: 1978, family: 'camp',   who: 'John Paul II',
@@ -198,7 +213,8 @@ var ONES = [
   { seed: 5,  year: 1955, family: 'camp',   who: 'Liberace',
     note: 'White fur cape, jewelled toes, a lit candelabra on a piano lid.' },
   { seed: 6,  year: 1977, family: 'camp',   who: 'Dolly Parton',
-    note: 'Platinum bouffant taller than the skull, rhinestone fringe, a butterfly.' },
+    note: 'Platinum bouffant taller than the skull, rhinestone fringe, a butterfly.',
+    fix: 'An enormous bust straining a low-cut rhinestone top. Not subtle.' },
   { seed: 7,  year: 1988, family: 'camp',   who: 'Cher',
     note: 'Feathered headdress bigger than the dog, black hair to the floor.' },
   { seed: 8,  year: 1984, family: 'camp',   who: 'Prince',
@@ -208,7 +224,8 @@ var ONES = [
   { seed: 10, year: 1986, family: 'camp',   who: 'Freddie Mercury',
     note: 'Yellow military jacket, thick mustache, one fist up, half a mic stand.' },
   { seed: 11, year: 2004, family: 'camp',   who: 'Kanye West',
-    note: 'Shutter shades, varsity jacket, a small brown teddy at the foot.' },
+    note: 'Shutter shades, varsity jacket, a small brown teddy at the foot.',
+    fix: 'Brown coat, short flat muzzle (no long nose), the pout and the heavy-lidded eyes visible; shades pushed up onto the forehead.' },
   { seed: 12, year: 2014, family: 'camp',   who: 'Kim Kardashian',
     note: 'White bodysuit, long black hair, a phone held out with the dog on the screen.' },
   { seed: 13, year: 1954, family: 'camp',   who: 'Marilyn Monroe',
@@ -216,13 +233,15 @@ var ONES = [
   { seed: 14, year: 1981, family: 'camp',   who: 'Grace Jones',
     note: 'Razor-flat fade, angular black suit, one huge hoop.' },
   { seed: 15, year: 1964, family: 'camp',   who: 'Andy Warhol',
-    note: 'Silver wig, round black glasses, black turtleneck, one soup can.' },
+    note: 'Silver wig, round black glasses, black turtleneck, one soup can.',
+    fix: 'A second work on the wall: the 1954 dog as a two-by-two candy-coloured silkscreen block.' },
   { seed: 16, year: 1931, family: 'camp',   who: 'Salvador Dali',
     note: 'Waxed mustache past the ears, wild eyes, a clock melting on the shoulder.' },
   { seed: 17, year: 1997, family: 'camp',   who: 'Nicolas Cage',
     note: 'Black leather jacket, hair blown back, eyes too open, fire behind.' },
   { seed: 18, year: 2003, family: 'camp',   who: 'Mike Tyson',
-    note: 'Face tattoo, red boxing gloves, a pigeon sitting on the head.' },
+    note: 'Face tattoo, red boxing gloves, a pigeon sitting on the head.',
+    fix: 'Dark brown coat; the tribal tattoo bold and large around the left eye, readable at thumbnail.' },
   { seed: 19, year: 1982, family: 'camp',   who: 'Mr. T',
     note: 'Mohawk, gold hoops, a mountain of chains from chin to chest.' },
   { seed: 20, year: 1974, family: 'camp',   who: 'Evel Knievel',
@@ -246,7 +265,93 @@ var ONES = [
   { seed: 29, year: 1999, family: 'wars',   who: 'Yoda',
     note: 'Huge ears, small body, a cane, very old eyes.' },
   { seed: 30, year: 2015, family: 'wars',   who: 'Rey',
-    note: 'Three buns, a staff, a round rolling droid at the foot. Desert light.' }
+    note: 'Three buns, a staff, a round rolling droid at the foot. Desert light.' },
+  { seed: 31, year: 1667, family: 'toons',  who: 'Satan',
+    note: 'A red dog, horns, goatee, arrow-tipped tail, goat legs, a pitchfork, small flames at the feet. Delighted.' },
+  { seed: 32, year: 1995, family: 'toons',  who: 'Cartman',
+    note: 'A ball of a body, red jacket, teal beanie with a yellow pompom, yellow mittens, tiny eyes, a sour mouth. Snow.' },
+  { seed: 33, year: 1993, family: 'toons',  who: 'Beavis and Butt-Head',
+    note: 'Two dogs in one frame on a sagging couch, lit by the TV. Blond pompadour and underbite; peaked hair and braces. No lettering on the shirts.' },
+  { seed: 34, year: 1990, family: 'camp2',  who: 'Madonna',
+    note: 'High platinum ponytail, pink cone-bra corset, headset mic, stage grin.' },
+  { seed: 35, year: 2010, family: 'camp2',  who: 'Lady Gaga',
+    note: 'A dress cut from raw meat, meat hat, meat boots, one eyebrow up.' },
+  { seed: 36, year: 1975, family: 'camp2',  who: 'Elton John',
+    note: 'Sequined baseball uniform, giant rhinestone glasses, a huge grin, a piano lid behind.' },
+  { seed: 37, year: 1987, family: 'camp2',  who: 'Slash',
+    note: 'Top hat, black curls over the face, round shades, a sunburst guitar slung low, a cigarette.' },
+  { seed: 38, year: 1985, family: 'camp2',  who: 'Hulk Hogan',
+    note: 'Yellow bandana, horseshoe mustache, torn yellow tank, red trunks, both arms flexed, orange tan.' },
+  { seed: 39, year: 1979, family: 'camp2',  who: 'Bob Marley',
+    note: 'Dreadlocks, red-gold-green tam, denim shirt, acoustic guitar, a curl of smoke. Brown coat.' },
+  { seed: 40, year: 1970, family: 'camp2',  who: 'Ozzy Osbourne',
+    note: 'Long black hair, small round purple glasses, a big cross, a bat in the mouth.' },
+  { seed: 41, year: 2009, family: 'camp2',  who: 'RuPaul',
+    note: 'Towering blonde wig, floor-length sequined gown, long lashes, hand on hip. Brown coat.' },
+  { seed: 42, year: 1996, family: 'camp2',  who: 'Steve Irwin',
+    note: 'Khaki shorts and shirt, a crocodile clamped under one arm, thrilled eyes, huge grin.' },
+  { seed: 43, year: 1968, family: 'camp2',  who: 'Mister Rogers',
+    note: 'Red zip cardigan, blue sneakers, neat grey part, a tiny red trolley at the foot. The kindest face.' },
+  { seed: 44, year: 1956, family: 'camp2',  who: 'Little Richard',
+    note: 'Tall glossy pompadour, pencil mustache, sequined jacket, mid-whoop, one leg up on a piano. Brown coat.' },
+  { seed: 45, year: 1967, family: 'camp2',  who: 'Jimi Hendrix',
+    note: 'Headband, big afro, fringed velvet jacket, kneeling over a burning guitar. Brown coat.' },
+  { seed: 46, year: 2008, family: 'camp2',  who: 'Amy Winehouse',
+    note: 'Huge black beehive, winged eyeliner, tattooed arms, a drink, a tiny frame under all that hair.' },
+  { seed: 47, year: 1992, family: 'camp2',  who: 'Pamela Anderson',
+    note: 'Red one-piece, huge blonde blowout, a red rescue float, running on sand.' },
+  { seed: 48, year: 2011, family: 'camp2',  who: 'Weird Al',
+    note: 'Long brown curls, loud Hawaiian shirt, an accordion mid-squeeze, eyes crossed.' },
+  { seed: 49, year: 1863, family: 'history', who: 'Abraham Lincoln',
+    note: 'Stovepipe hat, chin beard with no mustache, black coat, bow tie, hollow cheeks, very tall.' },
+  { seed: 50, year: 1776, family: 'history', who: 'George Washington',
+    note: 'Powdered wig with a ribbon, blue coat with gold buttons, in the bow of a rowboat on an icy river.' },
+  { seed: 51, year: 1804, family: 'history', who: 'Napoleon',
+    note: 'Sideways bicorne, one paw tucked in the coat, epaulettes, red sash, short.' },
+  { seed: 52, year: 1951, family: 'history', who: 'Albert Einstein',
+    note: 'White hair in every direction, white mustache, cardigan, tongue all the way out.' },
+  { seed: 53, year: 1940, family: 'history', who: 'Winston Churchill',
+    note: 'Bowler, polka-dot bow tie, fat cigar, a V sign, jowls, black overcoat.' },
+  { seed: 54, year: 1930, family: 'history', who: 'Gandhi',
+    note: 'Bald, round wire glasses, white shawl and dhoti, sandals, a tall walking staff. Brown coat.' },
+  { seed: 55, year: 1953, family: 'history', who: 'Queen Elizabeth II',
+    note: 'Jewelled crown, pale blue coat, white gloves, black handbag, a corgi at the foot. A dog with a dog.' },
+  { seed: 56, year: 1912, family: 'history', who: 'Teddy Roosevelt',
+    note: 'Pince-nez on a cord, thick mustache, a grin of big square teeth, safari jacket and hat.' },
+  { seed: 57, year: 1961, family: 'history', who: 'JFK',
+    note: 'Thick side-parted hair, dark sunglasses, navy crewneck, tanned squint, a sailboat behind.' },
+  { seed: 58, year: 1969, family: 'history', who: 'Richard Nixon',
+    note: 'Heavy jowls, widow\'s peak, dark suit, both arms up in a double V sign.' },
+  { seed: 59, year: 1752, family: 'history', who: 'Ben Franklin',
+    note: 'Bald crown with long grey hair, small bifocals, a kite string with a key tied on, lightning behind.' },
+  { seed: 60, year: 1789, family: 'history', who: 'Marie Antoinette',
+    note: 'A wig taller than the dog with a model ship in it, panniered gown, a slice of cake held out.' },
+  { seed: 61, year: 1600, family: 'history', who: 'Shakespeare',
+    note: 'Stiff white ruff, high bald forehead, goatee, a quill, a skull held up.' },
+  { seed: 62, year: 2012, family: 'history', who: 'Barack Obama',
+    note: 'Grey-templed crop, big ears, navy suit, red tie, drawn in the flat cream-blue-navy-red poster palette.' },
+  { seed: 63, year: 2016, family: 'history', who: 'Donald Trump',
+    note: 'Orange coat, blond comb-over, long red tie past the belt, a plain red cap with nothing on it, pursed mouth, pinching paws.' },
+  { seed: 64, year: 1976, family: 'movies', who: 'Rocky',
+    note: 'Grey sweatsuit, black knit cap, red gloves, a glass of raw eggs, running up stone steps at dawn.' },
+  { seed: 65, year: 2006, family: 'movies', who: 'Jack Sparrow',
+    note: 'Red bandana under a tricorn, beaded braids, kohl eyes, gold tooth, an open compass, swaying.' },
+  { seed: 66, year: 1989, family: 'movies', who: 'Indiana Jones',
+    note: 'Brown fedora, leather jacket, coiled whip, satchel, a golden idol held up, a boulder behind.' },
+  { seed: 67, year: 2022, family: 'movies', who: 'Wednesday Addams',
+    note: 'Two long black braids, black dress with a white collar, dead-level stare, a severed hand at the foot.' },
+  { seed: 68, year: 1991, family: 'movies', who: 'The Terminator',
+    note: 'Black leather, sunglasses with one lens gone and a red eye behind it, chrome at the cheek, a motorcycle.' },
+  { seed: 69, year: 1971, family: 'movies', who: 'Willy Wonka',
+    note: 'Purple velvet coat, brown top hat, bow tie, cane, a blank gold ticket, a river of chocolate.' },
+  { seed: 70, year: 1966, family: 'movies', who: 'Batman',
+    note: 'Grey suit, blue cowl with ears, blue cape, yellow belt, a plain yellow oval on the chest. No bat in it.' },
+  { seed: 71, year: 2017, family: 'movies', who: 'Pennywise',
+    note: 'White face, orange tufts, red nose, ruffled collar, grey Victorian clown suit, a red balloon, too many teeth.' },
+  { seed: 72, year: 1962, family: 'movies', who: 'James Bond',
+    note: 'Black tuxedo, bow tie, a martini, one eyebrow up, a gun-barrel spiral behind.' },
+  { seed: 73, year: 1933, family: 'movies', who: 'King Kong',
+    note: 'A giant dark ape-shaped dog on top of a skyscraper, biplanes circling, a tiny blonde held gently in one paw.' }
 ];
 
 var fate = 'faithful';
@@ -287,8 +392,9 @@ function shown() {
 function renderBar() {
   var el = document.getElementById('bar');
   var html = '';
-  [['all', 'All thirty'], ['camp', 'Camp'], ['potter', 'School'],
-   ['rings', 'Ring'], ['wars', 'Wars']].forEach(function (p) {
+  [['all', 'All 73'], ['camp', 'Camp'], ['potter', 'School'],
+   ['rings', 'Ring'], ['wars', 'Wars'], ['toons', 'Devil + toons'],
+   ['camp2', 'Camp II'], ['history', 'History'], ['movies', 'Movies']].forEach(function (p) {
     html += '<button type="button" data-fam="' + p[0] + '"' +
             (family === p[0] ? ' class="on"' : '') + '>' + p[1] + '</button>';
   });
@@ -312,6 +418,7 @@ function cardHtml(o) {
     '<div class="year">' + o.year + '</div>' +
     '<div class="who"><span>Inspired by</span>' + o.who + '</div>' +
     '<p class="note">' + o.note + '</p>' +
+    (o.fix ? '<p class="fix"><span>Fix queued</span>' + o.fix + '</p>' : '') +
     '<div class="foot"><span>seed ' + o.seed + '</span>' +
     (drawn ? '<span>live champion</span>' : '<span class="badge">not drawn yet</span>') +
     '</div></div></article>';
@@ -363,7 +470,7 @@ function openOne(seed) {
   document.getElementById('lb-year').textContent = o.year;
   document.getElementById('lb-who').textContent = 'Inspired by ' + o.who +
     (isDrawn(o.seed) ? '' : '  ·  the costume is not in the champion yet');
-  document.getElementById('lb-note').textContent = o.note;
+  document.getElementById('lb-note').textContent = o.note + (o.fix ? ' Fix queued: ' + o.fix : '');
   paint(document.getElementById('lb-main'), o.seed, fate);
   var box = document.getElementById('lb-fates');
   box.innerHTML = FATES.map(function (s) {
