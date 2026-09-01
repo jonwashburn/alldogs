@@ -933,8 +933,7 @@
   </div>
   <p class="faterow">Only if the zombies lose</p>
   <div class="fates after">
-    <div class="fate pending">
-      <span class="soon">Being painted now</span>
+    <div class="fate" id="fate_vampire">
       <canvas id="f_vampire" width="800" height="800"></canvas>
       <div class="body">
       <h3>Vampire</h3>
@@ -947,8 +946,7 @@
       <span class="tag" style="color:var(--red)">stopped &middot; after the war</span>
       </div>
     </div>
-    <div class="fate pending">
-      <span class="soon">Being painted now</span>
+    <div class="fate" id="fate_immortal">
       <canvas id="f_immortal" width="800" height="800"></canvas>
       <div class="body">
       <h3>Immortal</h3>
@@ -961,10 +959,13 @@
       <span class="tag" style="color:var(--blue)">stopped &middot; superpowered</span>
       </div>
     </div>
-    <p class="pendnote">Both are written into the rules and neither is
-    drawn yet, so those plates show the living dog the piece would have
-    been, dimmed, until the painter has them.
-    <a href="design/">The look is being fought over in public right now
+    <p class="pendnote" id="pendnote">Both are painted now, and they did
+    not come out the same kind of thing. The vampire is a law: night
+    ground, black eyes, two fangs and one drop of blood, every time. The
+    immortal is not a law at all, because the superpower is different on
+    every dog, so one of them burns and another pulls a column of light
+    down onto itself. Nobody knows the whole set until the pack is dealt.
+    <a href="design/">The look is still being fought over in public
     &rarr;</a></p>
   </div>
   <div class="stack">
@@ -1566,11 +1567,39 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
   draw(document.getElementById('f_faithful'), 4101, 'faithful');
   draw(document.getElementById('f_zombie'), 4102, 'zombie');
   draw(document.getElementById('f_angel'), 4103, 'angel');
-  /* the vampire and the immortal show the living dog they were, dimmed by
-     CSS and badged, until the painter has the finished looks */
-  draw(document.getElementById('f_vampire'), 4104, 'faithful');
-  draw(document.getElementById('f_immortal'), 4105, 'faithful');
+  /* The champion painter draws all five fates, but the copy of the painter
+     baked into this repo is older and throws on the two that only exist
+     after the war. So ask before drawing: if the loaded painter knows
+     them, these are real plates, and if it does not they fall back to the
+     dimmed living dog they were, which is what they used to be. */
+  if (paintsFate('vampire')) {
+    draw(document.getElementById('f_vampire'), 940001, 'vampire');
+    draw(document.getElementById('f_immortal'), 950001, 'immortal');
+  } else {
+    draw(document.getElementById('f_vampire'), 4104, 'faithful');
+    draw(document.getElementById('f_immortal'), 4105, 'faithful');
+    ['vampire', 'immortal'].forEach(k => {
+      const card = document.getElementById('fate_' + k);
+      card.classList.add('pending');
+      const tag = document.createElement('span');
+      tag.className = 'soon';
+      tag.textContent = 'Being painted now';
+      card.prepend(tag);
+    });
+    document.getElementById('pendnote').innerHTML = 'Neither is drawn in '
+      + 'this copy of the painter, so those plates show the living dog the '
+      + 'piece would have been, dimmed. <a href="design/">The look is being '
+      + 'fought over in public right now &rarr;</a>';
+  }
 });
+
+/* Does the painter that actually loaded know this fate? The stale one
+   throws; the champion draws it. */
+function paintsFate(state) {
+  const c = document.createElement('canvas');
+  c.width = 16; c.height = 16;
+  try { draw(c, 7, state); return true; } catch (e) { return false; }
+}
 
 /* one seed, three lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {
