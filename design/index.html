@@ -20,12 +20,17 @@
     sans-serif; line-height: 1.5; font-weight: 400; }
   ::selection { background: var(--gold); color: var(--ink); }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  /* Anything that also sits on a .wrap sets its vertical padding with
+     padding-top and padding-bottom, never the padding shorthand: the
+     shorthand's horizontal slot overwrites the 28px above and takes the
+     text to the edge of the glass on a phone, while looking fine on a
+     desktop because the 1080px cap leaves margin regardless. */
   h1, h2 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
     text-transform: uppercase; letter-spacing: 0; }
   .kicker { font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
     font-weight: 700; margin-bottom: 20px; opacity: 0.45; }
 
-  .hero { padding: 84px 0 48px; }
+  .hero { padding-top: 84px; padding-bottom: 48px; }
   .hero h1 { font-size: clamp(40px, 7.4vw, 92px); line-height: 0.98; }
   .hero h1 em { font-style: normal; color: var(--red); }
   .hero .sub { margin-top: 22px; font-size: clamp(15px, 2vw, 18px);
@@ -63,7 +68,7 @@
   @media (max-width: 760px) { .corners { grid-template-columns: 1fr;
     gap: 22px; } .vs { display: none; } }
 
-  .process { padding: 84px 0 20px; }
+  .process { padding-top: 84px; padding-bottom: 20px; }
   .process h2 { font-size: clamp(26px, 4vw, 46px); line-height: 1.06;
     margin: 8px 0 14px; }
   .process .attr { font-size: 13px; opacity: 0.6; margin-bottom: 44px; }
@@ -83,7 +88,7 @@
   @media (max-width: 860px) { .procgrid { grid-template-columns: 1fr;
     gap: 30px; } }
 
-  .climb { padding: 64px 0 0; }
+  .climb { padding-top: 64px; padding-bottom: 0; }
   .climb h2 { font-size: clamp(22px, 3.2vw, 38px); line-height: 1.1;
     margin: 8px 0 26px; max-width: 30ch; }
   .climb h2 b { color: var(--gold); }
@@ -91,7 +96,7 @@
   .climb .cap { font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; opacity: 0.5; margin-top: 10px; }
 
-  .champ { padding: 64px 0; }
+  .champ { padding-top: 64px; padding-bottom: 64px; }
   .champ h2, .feed h2 { font-size: clamp(26px, 4vw, 46px); line-height: 1.02;
     margin: 8px 0 30px; }
   .champ .frame { border: 1px solid var(--ink); background: #fff; }
@@ -99,7 +104,7 @@
   .champ .cap { font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; opacity: 0.5; margin-top: 12px; }
 
-  .feed { padding: 24px 0 100px; }
+  .feed { padding-top: 24px; padding-bottom: 100px; }
   .round { border: 1px solid var(--ink); margin-bottom: 36px;
     background: #fff; }
   .round .head { display: flex; gap: 16px; flex-wrap: wrap;
@@ -152,7 +157,7 @@
     <div class="corner painter">
       <span class="clbl">In one corner</span>
       <h3>The Painter</h3>
-      <p>Rewrites every one of the 10,000 dogs from scratch, every round.
+      <p>Rewrites every one of the 1,000 dogs from scratch, every round.
       It reads the critic's last insult before it picks up the brush.</p>
     </div>
     <div class="vs">VS</div>
@@ -207,7 +212,7 @@
       decisions are made beforehand and the execution is a perfunctory
       affair." The instructions are the art. My drafters happen not to be
       human.</p>
-      <p>What I authored: the dogs, the four fates, the census, the
+      <p>What I authored: the dogs, the fates, the census, the
       tenderness, the temperature of the grounds, the wall the score has
       to clear, and every mid-fight correction, which this page publishes
       as it happens. What I could not author: the exact painting that
@@ -234,8 +239,9 @@
   <div class="kicker">CURRENT CHAMPION</div>
   <h2>Best dogs so far</h2>
   <div class="frame"><img id="champimg" alt="Current champion sheet"></div>
-  <p class="cap">16 dogs, fixed seeds: 10 faithful, 2 zombies, 2 angels, 2
-    ghosts. This sheet is replaced the moment a challenger wins.</p>
+  <p class="cap">16 dogs, fixed seeds: 8 faithful, 2 zombies, 2 angels,
+    2 vampires, 2 immortals. This sheet is replaced the moment a challenger
+    wins.</p>
 </div>
 
 <div class="wrap feed">
