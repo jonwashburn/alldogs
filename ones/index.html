@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS studio: the ones</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Private studio roster of the ALL DOGS one of ones. Not linked from the kennel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #fdfdfb; --ink: #111111; --hair: #dddad0;
+    --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; --green: #0b7a3e;
+  }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5; font-weight: 400; }
+  ::selection { background: var(--gold); color: var(--ink); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+  h1, h2 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0; }
+  .kicker { font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    font-weight: 700; margin-bottom: 20px; opacity: 0.45; }
+  .kicker .hot { color: var(--red); opacity: 1; }
+
+  .hero { padding-top: 72px; padding-bottom: 28px; }
+  .hero h1 { font-size: clamp(42px, 8vw, 96px); line-height: 0.96; }
+  .hero h1 em { font-style: normal; color: var(--red); }
+  .hero .sub { margin-top: 22px; font-size: clamp(15px, 2vw, 18px);
+    max-width: 58ch; opacity: 0.75; }
+  .hero .sub a { color: var(--ink); font-weight: 700; }
+  .stamp { display: inline-block; margin-top: 22px; font-size: 10px;
+    letter-spacing: 2.4px; text-transform: uppercase; font-weight: 700;
+    border: 1px solid var(--red); color: var(--red); padding: 7px 12px; }
+
+  .sticky { position: sticky; top: 0; z-index: 6; background: var(--paper);
+    border-bottom: 1px solid var(--ink); padding: 12px 0 10px; }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .bar button {
+    font-family: "Instrument Sans", sans-serif; font-size: 10.5px;
+    letter-spacing: 1.6px; text-transform: uppercase; font-weight: 700;
+    padding: 8px 14px; border: 1px solid var(--ink); background: #fff;
+    color: var(--ink); cursor: pointer; }
+  .bar button:hover { background: #fff8e4; }
+  .bar button.on { background: var(--ink); color: var(--paper); }
+  .bar .count { margin-left: auto; font-size: 11px; font-weight: 700;
+    letter-spacing: 1.4px; text-transform: uppercase; opacity: 0.45; }
+
+  .film { padding-top: 28px; padding-bottom: 8px; }
+  .thumbs { display: grid; grid-template-columns: repeat(15, 1fr); gap: 4px; }
+  .thumbs button { display: block; width: 100%; padding: 0; border: 1px solid var(--hair);
+    background: #fff; cursor: pointer; line-height: 0; }
+  .thumbs button:hover, .thumbs button.on { border-color: var(--ink); }
+  .thumbs canvas { width: 100%; height: auto; display: block; aspect-ratio: 1; }
+  @media (max-width: 900px) { .thumbs { grid-template-columns: repeat(10, 1fr); } }
+  @media (max-width: 560px) { .thumbs { grid-template-columns: repeat(6, 1fr); } }
+
+  .family { padding-top: 56px; padding-bottom: 8px; }
+  .family h2 { font-size: clamp(26px, 4vw, 46px); line-height: 1.02;
+    margin: 8px 0 10px; }
+  .family .lead { font-size: 15px; opacity: 0.68; max-width: 52ch;
+    margin-bottom: 28px; }
+  .family.potter h2 { color: var(--red); }
+  .family.rings h2 { color: #b8860b; }
+  .family.wars h2 { color: var(--blue); }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+
+  .card { border: 1px solid var(--ink); background: #fff; cursor: pointer;
+    display: flex; flex-direction: column; }
+  .card:hover { outline: 3px solid var(--gold); outline-offset: -1px; }
+  .card.queued { border-style: dashed; }
+  .frame { background: #fff; border-bottom: 1px solid var(--ink); }
+  .frame canvas { width: 100%; height: auto; display: block; aspect-ratio: 1; }
+  .meta { padding: 16px 16px 18px; }
+  .year { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    font-size: clamp(28px, 3.4vw, 40px); line-height: 0.95;
+    text-transform: uppercase; }
+  .who { margin-top: 6px; font-size: 16px; font-weight: 700; }
+  .who span { display: block; font-size: 10.5px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.42;
+    margin-bottom: 2px; }
+  .note { margin-top: 10px; font-size: 13.5px; opacity: 0.7; line-height: 1.45; }
+  .foot { margin-top: 12px; font-size: 10.5px; letter-spacing: 1.6px;
+    text-transform: uppercase; font-weight: 700; opacity: 0.4;
+    display: flex; justify-content: space-between; gap: 10px; }
+  .badge { color: var(--red); opacity: 1; }
+
+  .lightbox { position: fixed; inset: 0; background: rgba(17,17,17,0.86);
+    display: none; z-index: 20; padding: 28px; overflow: auto; }
+  .lightbox.on { display: block; }
+  .lb-inner { max-width: 920px; margin: 0 auto; background: var(--paper);
+    border: 1px solid #fff; }
+  .lb-top { display: flex; justify-content: space-between; gap: 16px;
+    align-items: flex-start; padding: 22px 24px 0; }
+  .lb-top h3 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
+    font-size: clamp(28px, 4vw, 48px); text-transform: uppercase; line-height: 0.95; }
+  .lb-top button { font: inherit; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; padding: 8px 12px;
+    border: 1px solid var(--ink); background: #fff; cursor: pointer; }
+  .lb-who { padding: 8px 24px 0; font-size: 18px; font-weight: 700; }
+  .lb-note { padding: 8px 24px 18px; font-size: 14.5px; opacity: 0.7; max-width: 62ch; }
+  .lb-art { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+  .lb-art canvas { width: 100%; height: auto; display: block; aspect-ratio: 1; }
+  .fates { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+    background: var(--ink); border-top: 1px solid var(--ink); }
+  .fates figure { background: #fff; margin: 0; }
+  .fates canvas { width: 100%; height: auto; display: block; aspect-ratio: 1; }
+  .fates figcaption { padding: 8px 6px 10px; text-align: center;
+    font-size: 9.5px; letter-spacing: 1.6px; text-transform: uppercase;
+    font-weight: 700; }
+  @media (max-width: 640px) { .fates { grid-template-columns: repeat(3, 1fr); } }
+
+  footer { border-top: 1px solid var(--hair); margin-top: 80px;
+    padding: 34px 28px 80px; font-size: 10.5px; font-weight: 600;
+    opacity: 0.5; letter-spacing: 1px; text-transform: uppercase; }
+  footer a { color: var(--ink); }
+  .empty { padding: 80px 0; font-size: 16px; opacity: 0.55; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="kicker">ALL DOGS / <span class="hot">Private studio</span> / the ones</div>
+  <h1>The ones,<br>with their <em>names</em></h1>
+  <p class="sub">The kennel only prints the year. This page is for you: every
+    one of one, drawn from the live champion, labelled with who it is riffing.
+    Nothing here is linked from
+    <a href="/">the kennel</a> or
+    <a href="/design/">the fight tape</a>.</p>
+  <div class="stamp">Studio. The kennel does not link here.</div>
+</div>
+
+<div class="sticky">
+  <div class="wrap">
+    <div class="bar" id="bar"></div>
+  </div>
+</div>
+
+<div class="wrap film">
+  <div class="kicker">All thirty, in seed order</div>
+  <div class="thumbs" id="thumbs"></div>
+</div>
+
+<div id="families"></div>
+
+<div id="lb" class="lightbox" hidden>
+  <div class="lb-inner">
+    <div class="lb-top">
+      <h3 id="lb-year"></h3>
+      <button type="button" id="lb-close">Close</button>
+    </div>
+    <p class="lb-who" id="lb-who"></p>
+    <p class="lb-note" id="lb-note"></p>
+    <div class="lb-art"><canvas id="lb-main" width="900" height="900"></canvas></div>
+    <div class="fates" id="lb-fates"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Studio roster &middot; years stay on the kennel &middot;
+    <a href="/design/">design gauntlet</a> &middot;
+    <a href="/">ALL DOGS</a>
+  </div>
+</footer>
+
+<script>
+var TIGRIS = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js';
+var FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
+var FATE_LABEL = { faithful: 'living', zombie: 'zombie', angel: 'angel',
+                   vampire: 'vampire', immortal: 'immortal' };
+var FAMILIES = [
+  { id: 'camp', title: 'Camp',
+    lead: 'The first twenty-one. Pop saints, dealt at birth.' },
+  { id: 'potter', title: 'The school', cls: 'potter',
+    lead: 'Three from the boy-wizard pictures. Glasses, a pink umbrella, a vial.' },
+  { id: 'rings', title: 'The ring', cls: 'rings',
+    lead: 'Three from the long walk. Hairy feet, a staff, an axe.' },
+  { id: 'wars', title: 'The wars', cls: 'wars',
+    lead: 'Three from the space opera. A mask, ears, a rolling droid.' }
+];
+var ONES = [
+  { seed: 1,  year: 33,   family: 'camp',   who: 'Jesus',
+    note: 'White robe, red sash, tired kind eyes, a faint ring of light.' },
+  { seed: 2,  year: 1972, family: 'camp',   who: 'Elvis',
+    note: 'White rhinestone jumpsuit, pompadour, gold aviators, collar to the ears.' },
+  { seed: 3,  year: 1978, family: 'camp',   who: 'John Paul II',
+    note: 'White cassock, tall mitre, one paw raised in blessing.' },
+  { seed: 4,  year: 1994, family: 'camp',   who: 'Bob Ross',
+    note: 'Permed halo, denim shirt, loaded palette, a tiny happy tree.' },
+  { seed: 5,  year: 1955, family: 'camp',   who: 'Liberace',
+    note: 'White fur cape, jewelled toes, a lit candelabra on a piano lid.' },
+  { seed: 6,  year: 1977, family: 'camp',   who: 'Dolly Parton',
+    note: 'Platinum bouffant taller than the skull, rhinestone fringe, a butterfly.' },
+  { seed: 7,  year: 1988, family: 'camp',   who: 'Cher',
+    note: 'Feathered headdress bigger than the dog, black hair to the floor.' },
+  { seed: 8,  year: 1984, family: 'camp',   who: 'Prince',
+    note: 'Purple ruffles, high collar, one lace glove, the unpronounceable guitar.' },
+  { seed: 9,  year: 1973, family: 'camp',   who: 'David Bowie',
+    note: 'Red-and-blue bolt across the face, red mullet, a gold circle on the brow.' },
+  { seed: 10, year: 1986, family: 'camp',   who: 'Freddie Mercury',
+    note: 'Yellow military jacket, thick mustache, one fist up, half a mic stand.' },
+  { seed: 11, year: 2004, family: 'camp',   who: 'Kanye West',
+    note: 'Shutter shades, varsity jacket, a small brown teddy at the foot.' },
+  { seed: 12, year: 2014, family: 'camp',   who: 'Kim Kardashian',
+    note: 'White bodysuit, long black hair, a phone held out with the dog on the screen.' },
+  { seed: 13, year: 1954, family: 'camp',   who: 'Marilyn Monroe',
+    note: 'White halter dress blown straight up, subway grate, a beauty mark.' },
+  { seed: 14, year: 1981, family: 'camp',   who: 'Grace Jones',
+    note: 'Razor-flat fade, angular black suit, one huge hoop.' },
+  { seed: 15, year: 1964, family: 'camp',   who: 'Andy Warhol',
+    note: 'Silver wig, round black glasses, black turtleneck, one soup can.' },
+  { seed: 16, year: 1931, family: 'camp',   who: 'Salvador Dali',
+    note: 'Waxed mustache past the ears, wild eyes, a clock melting on the shoulder.' },
+  { seed: 17, year: 1997, family: 'camp',   who: 'Nicolas Cage',
+    note: 'Black leather jacket, hair blown back, eyes too open, fire behind.' },
+  { seed: 18, year: 2003, family: 'camp',   who: 'Mike Tyson',
+    note: 'Face tattoo, red boxing gloves, a pigeon sitting on the head.' },
+  { seed: 19, year: 1982, family: 'camp',   who: 'Mr. T',
+    note: 'Mohawk, gold hoops, a mountain of chains from chin to chest.' },
+  { seed: 20, year: 1974, family: 'camp',   who: 'Evel Knievel',
+    note: 'Starred white leather, short cape, helmet under one arm, a row of buses.' },
+  { seed: 21, year: 1983, family: 'camp',   who: 'Michael Jackson',
+    note: 'One sequined glove, tilted fedora, red zipper jacket, up on the toes.' },
+  { seed: 22, year: 2001, family: 'potter', who: 'Harry Potter',
+    note: 'Round glasses, a lightning scar, a striped scarf, an owl on the shoulder.' },
+  { seed: 23, year: 1998, family: 'potter', who: 'Hagrid',
+    note: 'An enormous dog, a tiny pink umbrella, moleskin and beetle buttons.' },
+  { seed: 24, year: 2007, family: 'potter', who: 'Snape',
+    note: 'Greasy black hair, high black collar, one eyebrow, a small glass vial.' },
+  { seed: 25, year: 1937, family: 'rings',  who: 'Bilbo',
+    note: 'Hairy feet, a waistcoat, a plain gold ring too big for the paw. No writing.' },
+  { seed: 26, year: 2002, family: 'rings',  who: 'Gandalf',
+    note: 'Pointed hat, long grey beard, wooden staff, a firework in the pocket.' },
+  { seed: 27, year: 2013, family: 'rings',  who: 'Gimli',
+    note: 'Forked beard, a hood, an axe. Short, wide, pleased with itself.' },
+  { seed: 28, year: 1980, family: 'wars',   who: 'Darth Vader',
+    note: 'Black mask and cape, a ribbed chest box. No emblem.' },
+  { seed: 29, year: 1999, family: 'wars',   who: 'Yoda',
+    note: 'Huge ears, small body, a cane, very old eyes.' },
+  { seed: 30, year: 2015, family: 'wars',   who: 'Rey',
+    note: 'Three buns, a staff, a round rolling droid at the foot. Desert light.' }
+];
+
+var fate = 'faithful';
+var family = 'all';
+var painted = false;
+
+function jsUrl() {
+  if (location.port === '8787') return '/champion.js?t=' + Date.now();
+  return TIGRIS + '?t=' + Date.now();
+}
+
+function isDrawn(seed) {
+  var api = window.ALLDOGS;
+  if (!api) return seed <= 21;
+  if (typeof api.design === 'function') {
+    try {
+      var d = api.design(seed, 'faithful');
+      if (d && typeof d.one === 'boolean') return d.one;
+    } catch (e) {}
+  }
+  return seed <= 21;
+}
+
+function paint(cv, seed, state) {
+  var api = window.ALLDOGS;
+  if (!api || !api.drawDog) return;
+  var css = cv.clientWidth || cv.width || 320;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var px = Math.max(160, Math.round(css * dpr));
+  if (cv.width !== px) { cv.width = px; cv.height = px; }
+  api.drawDog(cv, seed, state);
+}
+
+function shown() {
+  return ONES.filter(function (o) { return family === 'all' || o.family === family; });
+}
+
+function renderBar() {
+  var el = document.getElementById('bar');
+  var html = '';
+  [['all', 'All thirty'], ['camp', 'Camp'], ['potter', 'School'],
+   ['rings', 'Ring'], ['wars', 'Wars']].forEach(function (p) {
+    html += '<button type="button" data-fam="' + p[0] + '"' +
+            (family === p[0] ? ' class="on"' : '') + '>' + p[1] + '</button>';
+  });
+  FATES.forEach(function (s) {
+    html += '<button type="button" data-fate="' + s + '"' +
+            (fate === s ? ' class="on"' : '') + '>' + FATE_LABEL[s] + '</button>';
+  });
+  var n = shown().length;
+  var pending = shown().filter(function (o) { return !isDrawn(o.seed); }).length;
+  html += '<span class="count">' + n + ' dogs' +
+          (pending ? ' · ' + pending + ' still ordinary' : '') + '</span>';
+  el.innerHTML = html;
+}
+
+function cardHtml(o) {
+  var drawn = isDrawn(o.seed);
+  return '<article class="card' + (drawn ? '' : ' queued') + '" id="one-' + o.seed +
+    '" data-seed="' + o.seed + '">' +
+    '<div class="frame"><canvas width="512" height="512"></canvas></div>' +
+    '<div class="meta">' +
+    '<div class="year">' + o.year + '</div>' +
+    '<div class="who"><span>Inspired by</span>' + o.who + '</div>' +
+    '<p class="note">' + o.note + '</p>' +
+    '<div class="foot"><span>seed ' + o.seed + '</span>' +
+    (drawn ? '<span>live champion</span>' : '<span class="badge">not drawn yet</span>') +
+    '</div></div></article>';
+}
+
+function renderFamilies() {
+  var root = document.getElementById('families');
+  var html = '';
+  FAMILIES.forEach(function (f) {
+    var rows = ONES.filter(function (o) {
+      return o.family === f.id && (family === 'all' || family === f.id);
+    });
+    if (!rows.length) return;
+    html += '<section class="wrap family ' + (f.cls || '') + '" id="fam-' + f.id + '">' +
+      '<div class="kicker">The ones</div>' +
+      '<h2>' + f.title + '</h2>' +
+      '<p class="lead">' + f.lead + '</p>' +
+      '<div class="grid">' + rows.map(cardHtml).join('') + '</div></section>';
+  });
+  root.innerHTML = html || '<div class="wrap empty">Nothing in this cut.</div>';
+}
+
+function renderThumbs() {
+  var el = document.getElementById('thumbs');
+  el.innerHTML = ONES.map(function (o) {
+    return '<button type="button" data-seed="' + o.seed + '" title="' +
+           o.year + ' ' + o.who + '"><canvas width="96" height="96"></canvas></button>';
+  }).join('');
+}
+
+function paintAll() {
+  if (!window.ALLDOGS) return;
+  var thumbs = document.querySelectorAll('#thumbs canvas');
+  ONES.forEach(function (o, i) {
+    if (thumbs[i]) paint(thumbs[i], o.seed, fate);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.card'), function (card) {
+    var seed = +card.getAttribute('data-seed');
+    var cv = card.querySelector('canvas');
+    if (cv) paint(cv, seed, fate);
+  });
+  painted = true;
+}
+
+function openOne(seed) {
+  var o = ONES.filter(function (x) { return x.seed === seed; })[0];
+  if (!o) return;
+  var lb = document.getElementById('lb');
+  document.getElementById('lb-year').textContent = o.year;
+  document.getElementById('lb-who').textContent = 'Inspired by ' + o.who +
+    (isDrawn(o.seed) ? '' : '  ·  the costume is not in the champion yet');
+  document.getElementById('lb-note').textContent = o.note;
+  paint(document.getElementById('lb-main'), o.seed, fate);
+  var box = document.getElementById('lb-fates');
+  box.innerHTML = FATES.map(function (s) {
+    return '<figure><canvas width="280" height="280" data-state="' + s +
+           '"></canvas><figcaption>' + FATE_LABEL[s] + '</figcaption></figure>';
+  }).join('');
+  Array.prototype.forEach.call(box.querySelectorAll('canvas'), function (cv) {
+    paint(cv, o.seed, cv.getAttribute('data-state'));
+  });
+  lb.hidden = false;
+  lb.className = 'lightbox on';
+}
+
+function closeLb() {
+  var lb = document.getElementById('lb');
+  lb.className = 'lightbox';
+  lb.hidden = true;
+}
+
+function loadDogs() {
+  var s = document.createElement('script');
+  s.src = jsUrl();
+  s.onload = function () {
+    renderBar();
+    renderThumbs();
+    renderFamilies();
+    requestAnimationFrame(paintAll);
+  };
+  s.onerror = function () {
+    document.getElementById('families').innerHTML =
+      '<div class="wrap empty">Could not load the live champion. Try the box page.</div>';
+  };
+  document.body.appendChild(s);
+}
+
+document.getElementById('bar').addEventListener('click', function (e) {
+  var b = e.target.closest('button');
+  if (!b) return;
+  if (b.getAttribute('data-fam')) family = b.getAttribute('data-fam');
+  if (b.getAttribute('data-fate')) fate = b.getAttribute('data-fate');
+  renderBar();
+  renderFamilies();
+  requestAnimationFrame(paintAll);
+});
+
+document.getElementById('thumbs').addEventListener('click', function (e) {
+  var b = e.target.closest('button');
+  if (!b) return;
+  var seed = +b.getAttribute('data-seed');
+  var card = document.getElementById('one-' + seed);
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  openOne(seed);
+});
+
+document.getElementById('families').addEventListener('click', function (e) {
+  var card = e.target.closest('.card');
+  if (!card) return;
+  openOne(+card.getAttribute('data-seed'));
+});
+
+document.getElementById('lb-close').addEventListener('click', closeLb);
+document.getElementById('lb').addEventListener('click', function (e) {
+  if (e.target.id === 'lb') closeLb();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeLb();
+});
+
+loadDogs();
+</script>
+</body>
+</html>
