@@ -971,8 +971,8 @@
             <button class="btn" id="stripRoll">Roll one</button>
             <button class="btn hot" id="stripGo">Draw it live</button>
           </div>
-          <p class="livestate" id="stripState">Showing the strip that was
-          rendered on the box, seed 910001.</p>
+          <p class="livestate" id="stripState">Each visit starts a
+          different dog.</p>
         </div>
       </div>
     </div>
@@ -2147,7 +2147,9 @@ function paintsFate(state) {
   function say(msg) { stateEl.textContent = msg; }
 
   function rollSeedValue() {
-    return (Math.floor(Math.random() * 0xfffffff0) + 1) >>> 0;
+    /* ordinary dogs only: 1 through 21 are the one of ones, and this
+       walk is not the place that singles them out */
+    return (Math.floor(Math.random() * 0xfffffff0) + 22) >>> 0;
   }
 
   function enterLive(seed) {
@@ -2155,6 +2157,12 @@ function paintsFate(state) {
     live = true;
     img.classList.add('live');
     painters.clear();
+    /* cover the box's recorded dog so the first live frame is not a
+       flash of somebody else's seed while the first painter arrives */
+    cv.width = cv.height = 800;
+    const g = cv.getContext('2d');
+    g.fillStyle = '#14140f';
+    g.fillRect(0, 0, 800, 800);
     say('Drawing seed ' + liveSeed + ' live. Each step loads that round\u2019s '
       + 'painter first, so it moves at the speed of the network.');
     show(0);
@@ -2163,8 +2171,7 @@ function paintsFate(state) {
   function leaveLive() {
     live = false;
     img.classList.remove('live', 'loading');
-    say('Showing the strip that was rendered on the box, seed '
-      + (m && m.seed ? m.seed : 910001) + '.');
+    say('Showing the strip that was rendered on the box.');
     show(i);
   }
 
@@ -2294,13 +2301,16 @@ function paintsFate(state) {
     scrub.max = m.count - 1;
     img.style.backgroundImage = 'url("' + spriteUrl(m) + '")';
     if (first) {
-      seedIn.value = m.seed || 910001;
-      seedIn.placeholder = String(m.seed || 910001);
+      const seed = rollSeedValue();
+      seedIn.value = seed;
+      seedIn.placeholder = String(seed);
       if (!m.frames.some(f => f.js)) {
         /* an older manifest has no renderers on it; offering a button
            that cannot work is worse than not offering one */
         const liveBox = box.querySelector('.striplive');
         if (liveBox) liveBox.remove();
+      } else {
+        enterLive(seed);
       }
       paused = !CALM; label();
     }
