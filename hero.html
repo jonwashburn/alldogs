@@ -60,7 +60,9 @@
     <h1>Pick the <em>header</em> dogs</h1>
     <p class="sub">Two hundred ordinary dogs, forty of each fate. Click one to
     put it in the rotation or take it out. Save writes the set the site uses.
-    Until you save, the header uses all of them.</p>
+    Until you save, the header uses all of them.
+    If Save cannot reach the box, use
+    <a href="http://192.222.59.241:8787/hero">the box picker</a>.</p>
   </header>
   <div class="sticky">
     <div class="bar">
@@ -76,7 +78,10 @@
 </div>
 <div id="toast"></div>
 <script>
-var API = location.port === '8787' ? '' : 'http://192.222.59.241:8787';
+var API = location.port === '8787' ? ''
+  : (location.protocol === 'https:'
+      ? 'https://api.vimarshini.com/alldogs'
+      : 'http://192.222.59.241:8787');
 var FEED = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_catalog.js';
 var BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
 var FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
@@ -166,7 +171,9 @@ function save() {
       renderGrid();
       toast((p[1].count || 0) + ' dogs will rotate. The site picks them up within a minute.');
     })
-    .catch(function () { toast('cannot reach the box', true); });
+    .catch(function () {
+      toast('cannot reach the box. Open http://192.222.59.241:8787/hero', true);
+    });
 }
 
 function boot(cat, picks) {
