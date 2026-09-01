@@ -2615,19 +2615,21 @@ paintWhenNear(document.querySelector('footer'), () => {
      image. Nothing is faked by that: every build samples random seeds, so
      no two live builds agree either, and there is no single true
      composite to be unfaithful to. */
+  /* The plate goes behind the canvas as a CSS background rather than
+     being drawn into it. The bucket sends no CORS header, so drawing it
+     would taint the canvas and make getImageData throw from then on. The
+     canvas is transparent until a build runs, and the first putImageData
+     covers the background completely. */
   function showPreset(st) {
+    const url = PLATE + st + '.png?v=' + Math.floor(Date.now() / 3600000);
     const im = new Image();
-    /* deliberately not crossOrigin: the bucket sends no CORS header, so
-       asking for it would fail the load outright. Drawing it taints this
-       canvas, which costs nothing here because the plate is only ever
-       written to, never read back. The per-dog reads happen on a separate
-       scratch canvas. */
     im.onload = () => {
       if (running) return;          // a build started while it downloaded
-      g.drawImage(im, 0, 0, S, S);
+      cv.style.backgroundImage = 'url("' + url + '")';
+      cv.style.backgroundSize = 'cover';
       document.getElementById('gtN').textContent = PRESET + ' dogs';
     };
-    im.src = PLATE + st + '.png?v=' + Math.floor(Date.now() / 3600000);
+    im.src = url;
   }
   showPreset('faithful');
 
@@ -2642,6 +2644,7 @@ paintWhenNear(document.querySelector('footer'), () => {
       const cue = document.getElementById('gtCue');
       if (cue) cue.remove();        // it has been pressed; stop nudging
       document.getElementById('gtAdding').hidden = false;
+      cv.style.backgroundImage = 'none';    // the plate is being replaced
       g.clearRect(0, 0, S, S);
       one.clearRect(0, 0, oneCv.width, oneCv.height);
       running = true;
