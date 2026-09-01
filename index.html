@@ -568,6 +568,44 @@
   @media (max-width: 860px) { .bredgrid { grid-template-columns: 1fr;
     gap: 36px; } }
 
+  /* the filmstrip: one seed, redrawn by every round that drew anything.
+     A sprite sheet stepped with background-position, because sixty-three
+     separate images would cost more than the whole rest of the page. */
+  .strip { margin-top: 54px; border-top: 2px solid var(--ink);
+    padding-top: 26px; }
+  .striphead h3 { font-size: clamp(22px, 3vw, 34px); line-height: 1.05;
+    margin-top: 6px; }
+  .stripbody { display: grid; grid-template-columns: 340px 1fr; gap: 46px;
+    align-items: start; margin-top: 26px; }
+  .stripframe { position: relative; }
+  .stripimg { width: 100%; aspect-ratio: 1; background-repeat: no-repeat;
+    background-color: #14140f; image-rendering: auto;
+    border: 2px solid var(--ink); }
+  .stripcap { display: flex; justify-content: space-between;
+    align-items: baseline; margin-top: 10px;
+    font-family: "Instrument Sans", sans-serif; }
+  .sround { font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; opacity: 0.55; }
+  .sround b { font-variant-numeric: tabular-nums; opacity: 1;
+    font-size: 12px; }
+  .sscore { font-size: 21px; font-weight: 700;
+    font-variant-numeric: tabular-nums; }
+  .sscore i { font-style: normal; font-size: 11px; opacity: 0.4;
+    margin-left: 1px; }
+  /* a promoted round is one the critic preferred to everything before it */
+  .stripframe.won .stripimg { border-color: var(--gold); }
+  .stripframe.won .sscore { color: var(--gold); }
+  .stripside p { font-size: 16.5px; opacity: 0.78; line-height: 1.65;
+    margin-bottom: 14px; }
+  .stripside .stripnote { font-size: 14.5px; opacity: 0.62; }
+  .stripctl { display: flex; align-items: center; gap: 16px;
+    margin-top: 22px; }
+  .stripctl input { flex: 1; min-width: 0; }
+  @media (max-width: 860px) {
+    .stripbody { grid-template-columns: 1fr; gap: 26px; }
+    .stripframe { max-width: 300px; }
+  }
+
   /* why */
   .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
     margin-top: 38px; }
@@ -798,6 +836,46 @@
       <span>&mdash; LeWitt, Sentences, no. 28</span></blockquote>
     </div>
   </div>
+
+  <div class="strip" id="strip">
+    <div class="striphead">
+      <p class="kicker">One dog, every round</p>
+      <h3>Watch it get worse on purpose.</h3>
+    </div>
+    <div class="stripbody">
+      <div class="stripframe">
+        <div class="stripimg" id="stripImg"></div>
+        <div class="stripcap">
+          <span class="sround">Round <b id="stripRound">1</b></span>
+          <span class="sscore" id="stripScore">28<i>/70</i></span>
+        </div>
+      </div>
+      <div class="stripside">
+        <p>Every round of the fight redraws the whole collection, so the
+        same seed comes out a different animal each time. This is that one
+        seed, from the first round to the newest, with nothing in between
+        removed except the rounds that drew nothing at all.</p>
+        <p>Watch the number while you watch the dog. The critic scores
+        blind, out of seventy, and it has never once been told what the
+        collection is supposed to look like beyond the constitution.
+        <b>The score goes up as the pictures get rougher.</b> The neat
+        little portrait near the start is not an earlier attempt at what
+        we have now. It is the thing we had, and left.</p>
+        <p class="stripnote">Competence was the easy part and it arrived
+        early. Anyone can point this machine at a smooth commercial dog
+        and it will paint one all day. That is not what is being selected
+        for here, and the strip is the receipt: the pictures are getting
+        stranger, looser and more sure of themselves, and the blind judge
+        keeps raising the score.</p>
+        <div class="stripctl">
+          <button class="btn hot" id="stripPlay">Pause</button>
+          <input id="stripScrub" type="range" min="0" max="0" step="1" value="0"
+            aria-label="Scrub through the rounds">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="cta">
     <a class="btn hot" href="design/">Watch the fight live</a>
     <a class="btn" href="#medium">How the paint works</a>
@@ -1551,6 +1629,96 @@ function paintsFate(state) {
   c.width = 16; c.height = 16;
   try { draw(c, 7, state); return true; } catch (e) { return false; }
 }
+
+/* The filmstrip: one seed, redrawn by every round of the gauntlet that
+   drew anything. The sprite and its manifest are built on the gauntlet
+   box (filmstrip.py) and republished when the fight moves, so this is the
+   real record rather than a cut of it. Rounds where the painter arm died
+   and the driver kept turning are already gone from both.
+
+   The frame steps by background-position rather than by swapping images,
+   so the whole animation is one request and scrubbing costs nothing. */
+(function () {
+  const box = document.getElementById('strip');
+  if (!box) return;
+  const img = document.getElementById('stripImg');
+  const frameEl = box.querySelector('.stripframe');
+  const roundEl = document.getElementById('stripRound');
+  const scoreEl = document.getElementById('stripScore');
+  const scrub = document.getElementById('stripScrub');
+  const play = document.getElementById('stripPlay');
+  const MANIFEST = 'https://recognitionphysics-public.t3.tigrisfiles.io'
+    + '/share/alldogs_design_live/filmstrip.json';
+
+  let m = null, i = 0, timer = 0, paused = false, visible = false;
+  const CALM = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function layout() {
+    /* the sprite is drawn at whatever width the column gives us, so every
+       measurement is derived from the rendered box rather than assumed */
+    const s = img.clientWidth;
+    if (!s || !m) return;
+    img.style.backgroundSize = (m.cols * s) + 'px ' + (m.rows * s) + 'px';
+    show(i);
+  }
+
+  function show(n) {
+    if (!m) return;
+    i = (n + m.count) % m.count;
+    const f = m.frames[i];
+    const s = img.clientWidth;
+    img.style.backgroundPosition =
+      (-(i % m.cols) * s) + 'px ' + (-Math.floor(i / m.cols) * s) + 'px';
+    roundEl.textContent = f.round;
+    scoreEl.innerHTML = (f.score == null ? '&ndash;' : f.score) + '<i>/70</i>';
+    frameEl.classList.toggle('won', !!f.promoted);
+    scrub.value = i;
+  }
+
+  /* Slow at the start, because the first rounds are where the change is
+     largest and a viewer needs to see the machine finding the animal at
+     all. Then it settles, the way the fight itself did. */
+  function gap(n) { return n < 8 ? 620 : n < 20 ? 380 : 260; }
+
+  function tick() {
+    if (paused || !visible) return;
+    show(i + 1);
+    timer = setTimeout(tick, gap(i));
+  }
+  function start() {
+    if (paused || !visible || timer || !m) return;
+    timer = setTimeout(tick, gap(i));
+  }
+  function halt() { clearTimeout(timer); timer = 0; }
+  function label() { play.textContent = paused ? 'Play' : 'Pause'; }
+
+  play.addEventListener('click', () => {
+    paused = !paused; label();
+    if (paused) halt(); else start();
+  });
+  scrub.addEventListener('input', () => {
+    paused = true; label(); halt(); show(+scrub.value);
+  });
+  addEventListener('resize', layout);
+
+  fetch(MANIFEST, { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      m = data;
+      if (!m.count) throw new Error('empty filmstrip');
+      scrub.max = m.count - 1;
+      img.style.backgroundImage = 'url("' + m.url + '")';
+      paused = !CALM; label();
+      layout();
+      new IntersectionObserver(es => {
+        es.forEach(e => {
+          visible = e.isIntersecting;
+          if (visible) start(); else halt();
+        });
+      }, { threshold: 0.25 }).observe(box);
+    })
+    .catch(() => { box.remove(); });
+})();
 
 /* one seed, three lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {

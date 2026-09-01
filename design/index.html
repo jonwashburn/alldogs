@@ -119,6 +119,7 @@
   .v-rejected { border: 1px solid var(--ink); color: var(--ink); }
   .v-gate { background: var(--red); color: #fff; }
   .v-wall { background: var(--gold); color: var(--ink); }
+  .v-painter { background: var(--blue); color: #fff; }
   .round .head .score { font-size: 12px; font-weight: 600; opacity: 0.55; }
   .round .head .when { font-size: 11px; font-weight: 600; opacity: 0.4;
     margin-left: auto; }
@@ -157,8 +158,9 @@
     <div class="corner painter">
       <span class="clbl">In one corner</span>
       <h3>The Painter</h3>
-      <p>Rewrites every one of the 1,000 dogs from scratch, every round.
-      It reads the critic's last insult before it picks up the brush.</p>
+      <p>Rewrites the code that draws every dog in the collection, from
+      scratch, every round. It reads the critic's last insult before it
+      picks up the brush.</p>
     </div>
     <div class="vs">VS</div>
     <div class="corner critic">
@@ -252,7 +254,7 @@
 
 <footer>
   <div class="wrap">
-    Builder: Claude Fable · Judge: Claude Opus, blind A/B ·
+    Painters rotate · Judge: Claude Opus, blind A/B ·
     Gate: deterministic render contract · Refreshes every 60s ·
     <a href="../">ALL DOGS</a>
   </div>
@@ -299,8 +301,24 @@
     return merged;
   }
 
+  /* A round that names no author and receives no verdict never happened.
+     When a painter arm dies mid-run the driver keeps turning: it logs a
+     round, records no painter, gets no score back, and the sheet sitting
+     in that round's folder is the last one that was really drawn. Those
+     are not results and showing them reads as sixteen rounds where the
+     machine forgot how to paint.
+
+     Both halves of the test are needed. The earliest rounds carry no
+     painter because the driver did not record seats yet, and they drew
+     real dogs. The refactor rounds carry no score because they are judged
+     on bit-identical output rather than on taste, and they are real work.
+     Only the pair together isolates the outage. */
+  function drew(r) {
+    return !!(r.painter || r.cand_total != null);
+  }
+
   function render(feed) {
-    var rounds = (feed.rounds || []).slice().reverse();
+    var rounds = (feed.rounds || []).filter(drew).slice().reverse();
     var promos = rounds.filter(function (r) { return r.promoted; }).length;
     var champTotal = null;
     for (var i = 0; i < rounds.length; i++) {
@@ -347,6 +365,7 @@
       html += '<div class="round">';
       html += '<div class="head"><span class="n">Round ' + r.round + '</span>';
       html += '<span class="verdict ' + vclass + '">' + verdict + '</span>';
+      if (r.painter) html += '<span class="verdict v-painter">' + esc(r.painter) + '</span>';
       if (r.wall_worthy) html += '<span class="verdict v-wall">WALL-WORTHY</span>';
       if (r.cand_total != null) {
         html += '<span class="score">challenger ' + r.cand_total +
