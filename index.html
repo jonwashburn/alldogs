@@ -251,6 +251,21 @@
   @media (max-width: 900px) { .fates, .fates.after {
     grid-template-columns: repeat(2, 1fr); max-width: none; } }
 
+  /* one seed, five fates: a single large plate, buttons change the life */
+  .faces { margin-top: 48px; }
+  .faces canvas { width: min(100%, 780px); height: auto; display: block;
+    margin: 0 auto; }
+  .facectl { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+    margin-top: 16px; }
+  .facectl .btn { padding: 11px 18px; }
+  .facenote { margin: 16px auto 0; max-width: 48ch; text-align: center;
+    font-size: 15.5px; opacity: 0.72; line-height: 1.58; }
+  @media (max-width: 700px) {
+    .faces canvas { width: 100%; }
+    .facectl .btn { flex: 1 1 28%; padding: 11px 8px; font-size: 10px;
+      letter-spacing: 1.2px; }
+  }
+
   .stack { margin-top: 52px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
   .stackcard.wide { grid-column: 1 / -1; }
@@ -420,7 +435,7 @@
   .k-live { background: rgba(253,253,251,0.80); }
   .k-zom { background: var(--red); }
   .k-ang { background: var(--gold); }
-  .ysboard { display: grid; grid-template-columns: repeat(4, 1fr);
+  .ysboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
     gap: 18px; margin-top: 22px; }
   .ysstat { border-top: 1px solid rgba(253,253,251,0.22); padding-top: 10px; }
   .ysstat .k { display: block; font-size: 9px; letter-spacing: 2px;
@@ -778,6 +793,8 @@
       <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">&mdash;</b></div>
       <div class="ysstat"><span class="k">First sales</span><b id="ysZom" class="c-zom">0</b><span class="s" id="ysTarget">of 15%</span></div>
       <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
+      <div class="ysstat"><span class="k">Still needed</span><b id="ysNeed" class="c-zom">&mdash;</b><span class="s">to end it</span></div>
+      <div class="ysstat"><span class="k">Pace</span><b id="ysPace">&mdash;</b><span class="s" id="ysPaceNote">against the line</span></div>
     </div>
     <div class="ysbar"><i id="ysRace"></i><u id="ysMark"></u></div>
     <div class="ysctl">
@@ -884,7 +901,7 @@
         </div>
         <div class="stripcap">
           <span class="sround">Round <b id="stripRound">1</b></span>
-          <span class="sscore" id="stripScore">28<i>/70</i></span>
+          <span class="sscore" id="stripScore">28<i>/80</i></span>
         </div>
       </div>
       <div class="stripside">
@@ -893,7 +910,8 @@
         seed, from the first round to the newest, with nothing in between
         removed except the rounds that drew nothing at all.</p>
         <p>Watch the number while you watch the dog. The critic scores
-        blind, out of seventy, and it has never once been told what the
+        blind, out of eighty (out of seventy before cuteness was a line on
+        the card), and it has never once been told what the
         collection is supposed to look like beyond the constitution.
         <b>The score goes up as the pictures get rougher.</b> The neat
         little portrait near the start is not an earlier attempt at what
@@ -1047,6 +1065,18 @@
       <span class="tag" style="color:var(--blue)">stopped &middot; superpowered</span>
       </div>
     </div>
+  </div>
+  <div class="faces" id="faces">
+    <canvas id="faceCv" width="1400" height="1400"></canvas>
+    <div class="facectl">
+      <button type="button" class="btn hot" data-st="faithful" aria-pressed="true">Faithful</button>
+      <button type="button" class="btn" data-st="zombie" aria-pressed="false">Zombie</button>
+      <button type="button" class="btn" data-st="angel" aria-pressed="false">Angel</button>
+      <button type="button" class="btn" data-st="vampire" aria-pressed="false">Vampire</button>
+      <button type="button" class="btn" data-st="immortal" aria-pressed="false">Immortal</button>
+    </div>
+    <p class="facenote">The same dog. The buttons change what happened to
+    it. Another of the twenty-one takes its place in a few seconds.</p>
   </div>
   <div class="stack">
     <div class="stackcard">
@@ -1749,6 +1779,61 @@ function paintsFate(state) {
   try { draw(c, 7, state); return true; } catch (e) { return false; }
 }
 
+/* One plate, five lives. The twenty-one keep their costume through every
+   fate, which is why they rotate here and an ordinary dog does not: you
+   can still tell it is the same animal after it turns. They are not
+   named. The buttons are the fate; the rotation is the next dog. */
+(function () {
+  const box = document.getElementById('faces');
+  const cv = document.getElementById('faceCv');
+  if (!box || !cv) return;
+  const FATES = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
+  const SEEDS = shuffle([3, 6, 8, 9, 10, 12, 14, 15, 18, 19, 21]);
+  const live = FATES.filter(st => paintsFate(st));
+  let i = 0, fate = 'faithful', timer = 0, visible = false;
+  const GAP = 9000;
+  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function paint() {
+    try { draw(cv, SEEDS[i], fate); }
+    catch (e) { draw(cv, SEEDS[i], 'faithful'); }
+  }
+  function mark() {
+    box.querySelectorAll('.facectl .btn').forEach(b => {
+      const on = b.dataset.st === fate;
+      b.classList.toggle('hot', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  function halt() { clearInterval(timer); timer = 0; }
+  function start() {
+    halt();
+    if (!calm || !visible) return;
+    timer = setInterval(() => {
+      i = (i + 1) % SEEDS.length;
+      paint();
+    }, GAP);
+  }
+
+  box.querySelectorAll('.facectl .btn').forEach(b => {
+    if (live.indexOf(b.dataset.st) < 0) { b.remove(); return; }
+    b.addEventListener('click', () => {
+      fate = b.dataset.st;
+      mark();
+      paint();
+      start();
+    });
+  });
+  mark();
+  paintWhenNear(box, () => { paint(); });
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      visible = e.isIntersecting;
+      if (visible) start(); else halt();
+    });
+  }, { threshold: 0.25 }).observe(box);
+})();
+
 /* The filmstrip: one seed, redrawn by every round of the gauntlet that
    drew anything. The sprite and its manifest are rebuilt on the box
    whenever a new unique sheet lands, and this page pulls them again
@@ -1870,7 +1955,8 @@ function paintsFate(state) {
     img.style.backgroundPosition =
       (-(i % m.cols) * s) + 'px ' + (-Math.floor(i / m.cols) * s) + 'px';
     roundEl.textContent = f.round;
-    scoreEl.innerHTML = (f.score == null ? '&ndash;' : f.score) + '<i>/70</i>';
+    scoreEl.innerHTML = (f.score == null ? '&ndash;' : f.score)
+      + '<i>/' + (f.out || 80) + '</i>';
     frameEl.classList.toggle('won', !!f.promoted);
     scrub.value = i;
     if (!live) return;
@@ -2091,7 +2177,7 @@ if (!yseed) {
 }
 let ystate = localStorage.getItem('alldogs_state') === 'zombie'
   ? 'zombie' : 'faithful';
-const yname = DOGNAMES[yseed % DOGNAMES.length];
+let yname = DOGNAMES[yseed % DOGNAMES.length];
 const yourCv = document.getElementById('yourDog');
 const chooseCv = document.getElementById('chooseDog');
 const chooseLine = document.getElementById('chooseLine');
@@ -2167,10 +2253,59 @@ function renderYours() {
   let running = false, raf = 0, last = 0, acc = 0, lastTrait = 0;
 
   hIn.value = localStorage.getItem('alldogs_handle') || '';
+
+  /* Your name makes your dog. On the real thing the seed is the hash of a
+     sealed salt and your lowercase handle, and the salt is published the
+     night the door shuts, so nobody (including the artist) can hunt a
+     handle for a crown beforehand. Here the salt is a demo constant, so
+     the dog you see is a rehearsal of the mechanism, not your dog. Same
+     handle, same dog, every visit; no handle, the dog you were dealt. */
+  const DEMO_SALT = 'alldogs-demo-salt-not-the-real-one';
+  function fnv(str) {
+    let h = 0x811c9dc5;
+    for (let i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h >>> 0;
+  }
+  async function seedFromHandle(raw) {
+    const h = raw.trim().replace(/^@+/, '').replace(/[^A-Za-z0-9_]/g, '').toLowerCase();
+    if (!h) return null;
+    const msg = DEMO_SALT + '|' + h;
+    if (window.crypto && crypto.subtle) {
+      try {
+        const buf = await crypto.subtle.digest('SHA-256',
+          new TextEncoder().encode(msg));
+        return (new DataView(buf).getUint32(0) >>> 0) || 1;
+      } catch (e) { /* fall through to the small hash */ }
+    }
+    return fnv(msg) || 1;
+  }
+  let pending = 0;
+  async function adoptHandle() {
+    const seed = await seedFromHandle(hIn.value);
+    if (seed == null || seed === yseed || running) return;
+    yseed = seed;
+    yname = DOGNAMES[yseed % DOGNAMES.length];
+    localStorage.setItem('alldogs_seed', String(yseed));
+    localStorage.setItem('alldogs_state', 'faithful');
+    ystate = 'faithful'; ydays = 1; ytraits = 0; lastTrait = 0;
+    dayEl.textContent = '1'; trEl.textContent = '0';
+    btn.textContent = 'Live its whole life';
+    renderYours();
+    note.innerHTML = '<b>Your name made this one.</b> On the real thing the '
+      + 'seed is the hash of a sealed salt and your handle, and the salt is '
+      + 'published the night the door shuts, so nobody can hunt a name for a '
+      + 'crown first. This salt is a rehearsal. Same name, same dog, every '
+      + 'time you come back.';
+  }
   hIn.addEventListener('input', () => {
     localStorage.setItem('alldogs_handle', hIn.value);
     if (ystate === 'angel') renderYours();
+    clearTimeout(pending);
+    pending = setTimeout(adoptHandle, 350);
   });
+  if (hIn.value) adoptHandle();
 
   function stop(msg) {
     running = false; cancelAnimationFrame(raf);
@@ -2883,6 +3018,22 @@ paintWhenNear(document.querySelector('footer'), () => {
     el('ysZom').textContent = zombies;
     el('ysTarget').textContent = 'of ' + TARGET;
     el('ysAng').textContent = angels;
+    // The two numbers the game document says the year hangs on: how many
+    // more first sales end it, and whether the pack is selling faster or
+    // slower than the habit that lands exactly on the line on the last
+    // night (TARGET over DAYS, one every 14 hours at a thousand dogs).
+    const need = Math.max(0, TARGET - zombies);
+    el('ysNeed').textContent = need;
+    if (day > 0) {
+      const onPace = TARGET * day / DAYS;
+      const diff = zombies - onPace;
+      el('ysPace').textContent = (diff >= 0 ? '+' : '\u2212') + Math.abs(Math.round(diff));
+      el('ysPaceNote').textContent = diff > 0.5 ? 'ahead of the line'
+        : diff < -0.5 ? 'behind the line' : 'on the line';
+    } else {
+      el('ysPace').textContent = '\u2014';
+      el('ysPaceNote').textContent = 'against the line';
+    }
     el('ysRace').style.width = Math.min(100, zombies / TARGET * 100) + '%';
     el('ysMark').style.left = (day / DAYS * 100) + '%';
     showRate();
