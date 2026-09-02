@@ -150,7 +150,7 @@
 </div>
 
 <div class="wrap film">
-  <div class="kicker">All seventy-three, in seed order</div>
+  <div class="kicker">All seventy-five, in seed order</div>
   <div class="thumbs" id="thumbs"></div>
 </div>
 
@@ -198,12 +198,11 @@ var FAMILIES = [
   { id: 'history', title: 'History', cls: 'history',
     lead: 'Fifteen. Presidents, a general, an emperor, a queen with a corgi, a kite in a storm.' },
   { id: 'movies', title: 'The movies', cls: 'movies',
-    lead: 'Ten more from the pictures. Steps, a pirate, a fedora, a red balloon, a very tall building.' }
+    lead: 'Twelve more from the pictures. Steps, a pirate, a fedora, a bench, a red balloon, a very tall building, a wheel.' }
 ];
 var ONES = [
   { seed: 1,  year: 33,   family: 'camp',   who: 'Jesus',
-    note: 'White robe, red sash, tired kind eyes, a faint ring of light.',
-    fix: 'A crown of thorns pressed into the brow, thin lines of blood running from it.' },
+    note: 'White robe, red sash, tired kind eyes, a crown of thorns with thin lines of blood, a faint ring of light.' },
   { seed: 2,  year: 1972, family: 'camp',   who: 'Elvis',
     note: 'White rhinestone jumpsuit, pompadour, gold aviators, collar to the ears.' },
   { seed: 3,  year: 1978, family: 'camp',   who: 'John Paul II',
@@ -213,8 +212,7 @@ var ONES = [
   { seed: 5,  year: 1955, family: 'camp',   who: 'Liberace',
     note: 'White fur cape, jewelled toes, a lit candelabra on a piano lid.' },
   { seed: 6,  year: 1977, family: 'camp',   who: 'Dolly Parton',
-    note: 'Platinum bouffant taller than the skull, rhinestone fringe, a butterfly.',
-    fix: 'An enormous bust straining a low-cut rhinestone top. Not subtle.' },
+    note: 'Platinum bouffant taller than the skull, an enormous bust in a low-cut rhinestone top, a small guitar, a butterfly.' },
   { seed: 7,  year: 1988, family: 'camp',   who: 'Cher',
     note: 'Feathered headdress bigger than the dog, black hair to the floor.' },
   { seed: 8,  year: 1984, family: 'camp',   who: 'Prince',
@@ -224,8 +222,7 @@ var ONES = [
   { seed: 10, year: 1986, family: 'camp',   who: 'Freddie Mercury',
     note: 'Yellow military jacket, thick mustache, one fist up, half a mic stand.' },
   { seed: 11, year: 2004, family: 'camp',   who: 'Kanye West',
-    note: 'Shutter shades, varsity jacket, a small brown teddy at the foot.',
-    fix: 'Brown coat, short flat muzzle (no long nose), the pout and the heavy-lidded eyes visible; shades pushed up onto the forehead.' },
+    note: 'Brown, short flat muzzle, the pout and heavy-lidded eyes, shutter shades pushed up on the forehead, varsity jacket, a small brown teddy at the foot.' },
   { seed: 12, year: 2014, family: 'camp',   who: 'Kim Kardashian',
     note: 'White bodysuit, long black hair, a phone held out with the dog on the screen.' },
   { seed: 13, year: 1954, family: 'camp',   who: 'Marilyn Monroe',
@@ -233,15 +230,13 @@ var ONES = [
   { seed: 14, year: 1981, family: 'camp',   who: 'Grace Jones',
     note: 'Razor-flat fade, angular black suit, one huge hoop.' },
   { seed: 15, year: 1964, family: 'camp',   who: 'Andy Warhol',
-    note: 'Silver wig, round black glasses, black turtleneck, one soup can.',
-    fix: 'A second work on the wall: the 1954 dog as a two-by-two candy-coloured silkscreen block.' },
+    note: 'Silver wig, round black glasses, black turtleneck, one soup can, and the 1954 dog as a candy-coloured silkscreen block on the wall.' },
   { seed: 16, year: 1931, family: 'camp',   who: 'Salvador Dali',
     note: 'Waxed mustache past the ears, wild eyes, a clock melting on the shoulder.' },
   { seed: 17, year: 1997, family: 'camp',   who: 'Nicolas Cage',
     note: 'Black leather jacket, hair blown back, eyes too open, fire behind.' },
   { seed: 18, year: 2003, family: 'camp',   who: 'Mike Tyson',
-    note: 'Face tattoo, red boxing gloves, a pigeon sitting on the head.',
-    fix: 'Dark brown coat; the tribal tattoo bold and large around the left eye, readable at thumbnail.' },
+    note: 'Dark brown, a bold tribal tattoo around the left eye, red boxing gloves, a pigeon sitting on the head.' },
   { seed: 19, year: 1982, family: 'camp',   who: 'Mr. T',
     note: 'Mohawk, gold hoops, a mountain of chains from chin to chest.' },
   { seed: 20, year: 1974, family: 'camp',   who: 'Evel Knievel',
@@ -338,10 +333,10 @@ var ONES = [
     note: 'Red bandana under a tricorn, beaded braids, kohl eyes, gold tooth, an open compass, swaying.' },
   { seed: 66, year: 1989, family: 'movies', who: 'Indiana Jones',
     note: 'Brown fedora, leather jacket, coiled whip, satchel, a golden idol held up, a boulder behind.' },
-  { seed: 67, year: 2022, family: 'movies', who: 'Wednesday Addams',
+  { seed: 67, year: 1991, family: 'movies', who: 'Wednesday Addams',
     note: 'Two long black braids, black dress with a white collar, dead-level stare, a severed hand at the foot.' },
-  { seed: 68, year: 1991, family: 'movies', who: 'The Terminator',
-    note: 'Black leather, sunglasses with one lens gone and a red eye behind it, chrome at the cheek, a motorcycle.' },
+  { seed: 68, year: 1995, family: 'movies', who: 'Forrest Gump',
+    note: 'Cream suit, blue check shirt, a park bench, a box of chocolates on the knee, a feather.' },
   { seed: 69, year: 1971, family: 'movies', who: 'Willy Wonka',
     note: 'Purple velvet coat, brown top hat, bow tie, cane, a blank gold ticket, a river of chocolate.' },
   { seed: 70, year: 1966, family: 'movies', who: 'Batman',
@@ -351,7 +346,11 @@ var ONES = [
   { seed: 72, year: 1962, family: 'movies', who: 'James Bond',
     note: 'Black tuxedo, bow tie, a martini, one eyebrow up, a gun-barrel spiral behind.' },
   { seed: 73, year: 1933, family: 'movies', who: 'King Kong',
-    note: 'A giant dark ape-shaped dog on top of a skyscraper, biplanes circling, a tiny blonde held gently in one paw.' }
+    note: 'A giant dark ape-shaped dog on top of a skyscraper, biplanes circling, a tiny blonde held gently in one paw.' },
+  { seed: 74, year: 2022, family: 'movies', who: 'Maverick (Top Gun)',
+    note: 'Leather bomber heavy with patches, aviators, dog tags, a jet tail behind.' },
+  { seed: 75, year: 1928, family: 'movies', who: 'Steamboat Willie',
+    note: 'Black and white, film grain. A sailor cap, a ship\'s wheel gripped in both paws, whistled notes. The 1928 public-domain one, on purpose.' }
 ];
 
 var fate = 'faithful';
@@ -365,14 +364,14 @@ function jsUrl() {
 
 function isDrawn(seed) {
   var api = window.ALLDOGS;
-  if (!api) return seed <= 21;
+  if (!api) return seed <= 75;
   if (typeof api.design === 'function') {
     try {
       var d = api.design(seed, 'faithful');
       if (d && typeof d.one === 'boolean') return d.one;
     } catch (e) {}
   }
-  return seed <= 21;
+  return seed <= 75;
 }
 
 function paint(cv, seed, state) {
@@ -392,7 +391,7 @@ function shown() {
 function renderBar() {
   var el = document.getElementById('bar');
   var html = '';
-  [['all', 'All 73'], ['camp', 'Camp'], ['potter', 'School'],
+  [['all', 'All 75'], ['camp', 'Camp'], ['potter', 'School'],
    ['rings', 'Ring'], ['wars', 'Wars'], ['toons', 'Devil + toons'],
    ['camp2', 'Camp II'], ['history', 'History'], ['movies', 'Movies']].forEach(function (p) {
     html += '<button type="button" data-fam="' + p[0] + '"' +
