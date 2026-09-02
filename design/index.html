@@ -116,6 +116,9 @@
   .round .head .verdict { font-size: 9.5px; letter-spacing: 2px;
     text-transform: uppercase; font-weight: 700; padding: 5px 12px; }
   .v-promoted { background: var(--green); color: #fff; }
+  .v-nopaint { background: #d9d6ce; color: #444; }
+  .empty-round { opacity: .62; padding: 10px 18px; margin-bottom: 14px; }
+  .empty-round .head { margin: 0; }
   .v-rejected { border: 1px solid var(--ink); color: var(--ink); }
   .v-gate { background: var(--red); color: #fff; }
   .v-wall { background: var(--gold); color: var(--ink); }
@@ -332,8 +335,14 @@
     // now that each painter runs its own loop, so a fast seat's 913
     // lands before a slow seat's 911 and the list reads as though
     // rounds are missing when they are only still being painted.
-    var rounds = (feed.rounds || []).filter(drew).slice()
+    // Every round is shown (Jon, 2026-09-01: the rejected builds must be
+    // visible). Rounds that put paint in front of the judge get the full
+    // card; rounds that drew nothing (a build that produced no change, an
+    // arm that was down) get one grey line, so the list is complete and
+    // the eye still lands on the art.
+    var all = (feed.rounds || []).slice()
       .sort(function (a, b) { return b.round - a.round; });
+    var rounds = all.filter(drew);
     var promos = rounds.filter(function (r) { return r.promoted; }).length;
     var champTotal = null;
     for (var i = 0; i < rounds.length; i++) {
@@ -368,7 +377,16 @@
       feed.champion_url + '?v=' + Math.floor(feed.generated);
 
     var html = '';
-    rounds.forEach(function (r) {
+    all.forEach(function (r) {
+      if (!drew(r)) {
+        html += '<div class="round empty-round"><div class="head">' +
+          '<span class="n">Round ' + r.round + '</span>' +
+          '<span class="verdict v-nopaint">NO PAINT</span>' +
+          (r.painter ? '<span class="verdict v-painter">' + esc(r.painter) + '</span>' : '') +
+          '<span class="score">' + esc(r.why_empty || 'nothing to judge') + '</span>' +
+          '<span class="when">' + ago(r.ts) + '</span></div></div>';
+        return;
+      }
       var verdict, vclass;
       if (r.gate && r.gate.pass === false) {
         verdict = 'GATE FAIL: ' + esc(r.gate.failed || '?'); vclass = 'v-gate';
@@ -414,7 +432,7 @@
 
       html += '</div>';
     });
-    if (!rounds.length) {
+    if (!all.length) {
       html = '<p class="empty">No rounds yet. The builder is thinking&hellip;</p>';
     }
     document.getElementById('rounds').innerHTML = html;
