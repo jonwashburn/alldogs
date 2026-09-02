@@ -69,6 +69,10 @@
   .family.wars h2 { color: var(--blue); }
   .family.toons h2 { color: #c2410c; }
   .family.camp2 h2 { color: #7c3aed; }
+  .family.dogs h2 { color: #0b7a3e; }
+  .family.painters h2 { color: #c2410c; }
+  .family.builders h2 { color: #111; }
+  .family.athletes h2 { color: #2c5cff; }
   .family.history h2 { color: #14532d; }
   .family.movies h2 { color: #1f2937; }
   .fix { margin: 6px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--red); }
@@ -150,7 +154,7 @@
 </div>
 
 <div class="wrap film">
-  <div class="kicker">All seventy-five, in seed order</div>
+  <div class="kicker">All one hundred and sixteen, in seed order; 1 to 75 drawn, 41 awaiting its redraw, 76 to 116 queued</div>
   <div class="thumbs" id="thumbs"></div>
 </div>
 
@@ -198,7 +202,15 @@ var FAMILIES = [
   { id: 'history', title: 'History', cls: 'history',
     lead: 'Fifteen. Presidents, a general, an emperor, a queen with a corgi, a kite in a storm.' },
   { id: 'movies', title: 'The movies', cls: 'movies',
-    lead: 'Twelve more from the pictures. Steps, a pirate, a fedora, a bench, a red balloon, a very tall building, a wheel.' }
+    lead: 'Twelve more from the pictures. Steps, a pirate, a fedora, a bench, a red balloon, a very tall building, a wheel.' },
+  { id: 'dogs', title: 'The famous dogs', cls: 'dogs',
+    lead: 'Twenty-five real dogs (and two from the oldest stories) who waited, were held, were let go, or were kept alive. No costume: the breed, the pose, one object and the place. What this collection is about.' },
+  { id: 'painters', title: 'The painters', cls: 'painters',
+    lead: 'Eight from the history of art, each in the clothes and the one object everybody knows, standing in their own weather.' },
+  { id: 'builders', title: 'The builders', cls: 'builders',
+    lead: 'Two who built companies. A turtleneck and a blank white rectangle; a rocket on a barge.' },
+  { id: 'athletes', title: 'The athletes', cls: 'athletes',
+    lead: 'Six, in jerseys with nothing on them. Three of them share a year with somebody else, on purpose.' }
 ];
 var ONES = [
   { seed: 1,  year: 33,   family: 'camp',   who: 'Jesus',
@@ -281,8 +293,8 @@ var ONES = [
     note: 'Dreadlocks, red-gold-green tam, denim shirt, acoustic guitar, a curl of smoke. Brown coat.' },
   { seed: 40, year: 1970, family: 'camp2',  who: 'Ozzy Osbourne',
     note: 'Long black hair, small round purple glasses, a big cross, a bat in the mouth.' },
-  { seed: 41, year: 2009, family: 'camp2',  who: 'RuPaul',
-    note: 'Towering blonde wig, floor-length sequined gown, long lashes, hand on hip. Brown coat.' },
+  { seed: 41, year: 2018, family: 'camp2',  who: 'Virgil Abloh',
+    note: 'Black-rimmed glasses, short beard, hoodie under a workwear vest, a hazard-striped band with nothing on it, one white sneaker held up with an orange zip tag. Brown coat. Replaces RuPaul (Jon, 2026-09-02); the row still needs repainting.' },
   { seed: 42, year: 2000, family: 'camp2',  who: 'Steve Irwin',
     note: 'Khaki shorts and shirt, a crocodile clamped under one arm, thrilled eyes, huge grin.' },
   { seed: 43, year: 1968, family: 'camp2',  who: 'Mister Rogers',
@@ -350,7 +362,48 @@ var ONES = [
   { seed: 74, year: 2022, family: 'movies', who: 'Maverick (Top Gun)',
     note: 'Leather bomber heavy with patches, aviators, dog tags, a jet tail behind.' },
   { seed: 75, year: 1928, family: 'movies', who: 'Steamboat Willie',
-    note: 'Black and white, film grain. A sailor cap, a ship\'s wheel gripped in both paws, whistled notes. The 1928 public-domain one, on purpose.' }
+    note: 'Black and white, film grain. A sailor cap, a ship\'s wheel gripped in both paws, whistled notes. The 1928 public-domain one, on purpose.' },
+  { seed: 76, year: 1935, family: 'dogs', who: 'Hachiko', note: 'Akita upright on a snowy platform under a clock, an empty bench, nobody coming.' },
+  { seed: 77, year: 1957, family: 'dogs', who: 'Laika', note: 'A small mongrel strapped in a riveted capsule, the blue curve of the planet below.' },
+  { seed: 78, year: 1872, family: 'dogs', who: 'Greyfriars Bobby', note: 'A shaggy grey dog flat on a churchyard grave in the rain, a tin bowl.' },
+  { seed: 79, year: 1898, family: 'dogs', who: 'Nipper', note: 'White terrier, one black ear, head cocked at a brass gramophone horn bigger than he is.' },
+  { seed: 80, year: 79, family: 'dogs', who: 'The dog of Pompeii', note: 'Cast in grey ash on its back, a studded collar, a chain to a ring, one red glow.' },
+  { seed: 81, year: -1178, family: 'dogs', who: 'Argos', note: 'An old thin hound on straw in a courtyard, tail lifting for the first time in twenty years, a great bow on the wall.' },
+  { seed: 82, year: 1925, family: 'dogs', who: 'Togo', note: 'Lead sled dog leaning into a white-out, a small crate lashed behind. No statue anywhere.' },
+  { seed: 83, year: 2005, family: 'dogs', who: 'Snuppy', note: 'Two identical silk-coated hounds, one drawn fainter, a glass dish and a pipette.' },
+  { seed: 84, year: 1888, family: 'dogs', who: 'Owney', note: 'Terrier in a harness of brass tags on a mailbag in a railway-car door.' },
+  { seed: 85, year: 1814, family: 'dogs', who: 'Barry', note: 'A St Bernard with a keg on the collar and a child on its back, a blizzard.' },
+  { seed: 86, year: 1918, family: 'dogs', who: 'Sergeant Stubby', note: 'Brindle bull terrier in an army coat with stripes and medals, a helmet too big.' },
+  { seed: 87, year: 1944, family: 'dogs', who: 'Smoky', note: 'A Yorkie inside an upturned steel helmet under a parachute.' },
+  { seed: 88, year: 1942, family: 'dogs', who: 'Judy', note: 'A pointer planted barking between ragged men and a raised stick. Brave, never pitiable.' },
+  { seed: 89, year: 1861, family: 'dogs', who: 'Bummer and Lazarus', note: 'Two fat dogs on a saloon step with a string of sausages. One seed, two dogs.' },
+  { seed: 90, year: 1960, family: 'dogs', who: 'Belka and Strelka', note: 'Two small dogs in orange flight suits on a scorched capsule in a wheat field. One seed, two dogs.' },
+  { seed: 91, year: 1952, family: 'dogs', who: 'Checkers', note: 'A cocker spaniel at a chrome microphone before a TV camera, entirely innocent.' },
+  { seed: 92, year: 1923, family: 'dogs', who: 'Bobbie the Wonder Dog', note: 'A burr-covered collie walking a dirt road toward a porch, a trail of prints the length of the picture.' },
+  { seed: 93, year: 1943, family: 'dogs', who: 'Fido', note: 'A white shepherd-mix at a dusk bus stop, the bus arriving, fourteen tally strokes on the post.' },
+  { seed: 94, year: 1897, family: 'dogs', who: 'Pavlov\'s dog', note: 'Laboratory harness, a brass bell, a bowl, one drop at the lip, tallies on a chalkboard.' },
+  { seed: 95, year: 1808, family: 'dogs', who: 'Boatswain', note: 'A Newfoundland on a carved plinth under a poet\'s cloak, the inscription too worn to read.' },
+  { seed: 96, year: 1929, family: 'dogs', who: 'Buddy', note: 'A shepherd in a rigid guide harness at a curb, a taxi grille, a white cane laid down.' },
+  { seed: 97, year: 1938, family: 'dogs', who: 'Sinbad', note: 'A mutt in a sailor\'s cap and peacoat at a ship\'s rail with a coffee mug, one ear inside out.' },
+  { seed: 98, year: 1900, family: 'dogs', who: 'Toto', note: 'A dark terrier in a wicker basket in a gingham lap, a cyclone behind, silver shoes. The book, not the film.' },
+  { seed: 99, year: 1906, family: 'dogs', who: 'The Brown Dog', note: 'A brown terrier finished in bronze on a drinking fountain over a stick-figure crowd with raised sticks.' },
+  { seed: 100, year: 1921, family: 'dogs', who: 'Marjorie', note: 'A collie content on a lab bench, a syringe on a tray, seventy days struck through on a calendar.' },
+  { seed: 101, year: 1889, family: 'painters', who: 'Vincent van Gogh', note: 'Red beard, straw hat, blue smock, a bandage under the hat, sunflowers in both paws, a swirling night behind.' },
+  { seed: 102, year: 1939, family: 'painters', who: 'Frida Kahlo', note: 'One brow across both eyes, braids, a flower crown, an embroidered dress, a monkey on the shoulder, a parrot.' },
+  { seed: 103, year: 1907, family: 'painters', who: 'Pablo Picasso', note: 'Bald dome, striped sailor shirt, huge dark eyes, one eye in profile on a frontal face, a cigarette.' },
+  { seed: 104, year: 1965, family: 'painters', who: 'Yayoi Kusama', note: 'Red bob wig, a red dress in white dots, dots on the coat and the ground, a dotted pumpkin.' },
+  { seed: 105, year: 1831, family: 'painters', who: 'Hokusai', note: 'An old dog in a blue kimono with a brush, a great clawed wave over everything, a small white mountain.' },
+  { seed: 106, year: 1503, family: 'painters', who: 'Leonardo da Vinci', note: 'Long white hair and beard, a red cap, a rose robe, paws folded, the faintest smile, a misty river.' },
+  { seed: 107, year: 1950, family: 'painters', who: 'Jackson Pollock', note: 'Black t-shirt, jeans, a cigarette, a paint can pouring from one paw, drips across everything.' },
+  { seed: 108, year: 1899, family: 'painters', who: 'Claude Monet', note: 'Long white beard, straw hat, a palette, on a green bridge over lily pads.' },
+  { seed: 109, year: 2007, family: 'builders', who: 'Steve Jobs', note: 'Black turtleneck, jeans, rimless glasses, stubble, a blank white rectangle held up. Shares 2007 with Snape.' },
+  { seed: 110, year: 2020, family: 'builders', who: 'Elon Musk', note: 'Black t-shirt, a rocket on a barge behind, a tiny red car, a manic grin, a finger at the sky.' },
+  { seed: 111, year: 1998, family: 'athletes', who: 'Michael Jordan', note: 'Red jersey, bald, one gold hoop, tongue out, a ball palmed in mid-air, a hoop behind. Shares 1998 with Hagrid.' },
+  { seed: 112, year: 2006, family: 'athletes', who: 'Kobe Bryant', note: 'Purple and gold, a headband, leaning back into a fadeaway. Shares 2006 with the pirate.' },
+  { seed: 113, year: 1958, family: 'athletes', who: 'Pele', note: 'A young dog in a yellow shirt and blue shorts, upside down in a bicycle kick.' },
+  { seed: 114, year: 2021, family: 'athletes', who: 'Lionel Messi', note: 'Sky-blue stripes, a short beard, a gold cup held up in confetti.' },
+  { seed: 115, year: 2019, family: 'athletes', who: 'Tiger Woods', note: 'Red polo, a blank black cap, a fist pumped, a club in the other paw, a green with a flag.' },
+  { seed: 116, year: 2024, family: 'athletes', who: 'Caitlin Clark', note: 'A high ponytail, black and gold, a ball just leaving the paws from the centre line, three fingers up.' }
 ];
 
 var fate = 'faithful';
