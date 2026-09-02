@@ -62,7 +62,7 @@
     put it in the rotation or take it out. Save writes the set the site uses.
     Until you save, the header uses all of them.
     If Save cannot reach the box, use
-    <a href="http://192.222.59.241:8787/hero">the box picker</a>.</p>
+    <a href="https://alldogs.wtf/hero.html">the box picker</a>.</p>
   </header>
   <div class="sticky">
     <div class="bar">
@@ -80,7 +80,7 @@
 <script>
 var API = location.port === '8787' ? ''
   : (location.protocol === 'https:'
-      ? 'https://api.vimarshini.com/alldogs'
+      ? 'https://api.alldogs.wtf'
       : 'http://192.222.59.241:8787');
 var FEED = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_catalog.js';
 var BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
@@ -172,7 +172,7 @@ function save() {
       toast((p[1].count || 0) + ' dogs will rotate. The site picks them up within a minute.');
     })
     .catch(function () {
-      toast('cannot reach the box. Open http://192.222.59.241:8787/hero', true);
+      toast('cannot reach the box. Open https://alldogs.wtf/hero.html', true);
     });
 }
 
