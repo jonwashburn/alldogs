@@ -365,6 +365,21 @@
     .specs { grid-template-columns: 1fr; gap: 28px; }
   }
 
+  /* the studio: where the paint is going */
+  .studio { margin-top: 42px; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+  .studio .big { grid-row: 1 / span 2; }
+  .studio img { width: 100%; height: auto; display: block;
+    border: 1px solid var(--ink); background: #fff; }
+  .studio .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
+    margin-top: 12px; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; }
+  .studiotwo { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  @media (max-width: 900px) {
+    .studio { grid-template-columns: 1fr; }
+    .studio .big { grid-row: auto; }
+  }
+
   /* the drop */
   .phases { margin-top: 42px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -1515,6 +1530,27 @@
       No second picture is ever swapped in. The same painter draws the same
       dog again, with what happened to it.</p>
     </div>
+  </div>
+  <div class="studio">
+    <div class="fl big">
+      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_dusk_20260903.png" alt="Dusk. A huge dog rises behind the horizon while its own doghouse burns, drawn in oil stick fibres." loading="lazy" width="1000" height="1000">
+      <div class="flcap">dusk &middot; the doghouse</div>
+    </div>
+    <div class="fl">
+      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_day_20260903.png" alt="Day. A dog in a bucket hat on an empty parking lot, looking at a pair of shoes left behind." loading="lazy" width="1000" height="1000">
+      <div class="flcap">day &middot; the lot</div>
+    </div>
+    <div class="fl">
+      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_night_20260903.png" alt="Night. A dog with a halo and a cigarette under a motel sign." loading="lazy" width="1000" height="1000">
+      <div class="flcap">night &middot; the motel</div>
+    </div>
+    <p class="flnote">Where the paint is going. Three studies in the
+    medium the collection is moving to: every fill, sky and ground and dog,
+    laid as thousands of short oil-stick fibres on toothed paper, the edges
+    a soft brown line drawn once and left. The dog stays what it is, a
+    lopsided blot with a face. The paint around it gets better. These three
+    take a minute and a half each to draw; the painter on this page has two
+    seconds. Closing that gap is the work now.</p>
   </div>
   <div class="specs">
     <div class="spec"><span>Deterministic</span>
