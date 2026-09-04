@@ -343,6 +343,12 @@
   .kennelrow .note a { color: var(--ink); font-weight: 700; }
   @media (max-width: 900px) { .kennel { grid-template-columns: repeat(2, 1fr); } }
 
+  /* a canvas whose dog is still being painted shows the paper it will be
+     painted on, breathing a little, so a slow dog reads as work in
+     progress and not as a hole in the page */
+  canvas.painting { background: #ece5d6; animation: painting 2.4s ease-in-out infinite; }
+  @keyframes painting { 0%, 100% { background-color: #ece5d6; } 50% { background-color: #dcd3c0; } }
+
   /* the medium */
   .fourlives { margin-top: 42px; display: grid;
     grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
@@ -1240,7 +1246,7 @@
   <div class="chipgroup">
     <div class="glbl">The world &middot; where the dog is standing (each dog rolls once, by fate)</div>
     <!-- Measured over fifteen hundred dogs (300 seeds x 5 fates) on the
-         champion of design round 1379. The rare layer modes (the wall, the
+         champion of design round 1380. The rare layer modes (the wall, the
          photocopier, holy, the blue angel...) are their own worlds and count
          as the plain room here. -->
     <div class="chips">
@@ -1519,7 +1525,9 @@
   browser, right now, by a JavaScript painter working from a single number.
   And because it is code, not a picture, the same dog repaints at any size
   you ask: the avatar on your phone and a hundred-inch gallery print are
-  the same strokes, laid down fresh, sharp at both.</p>
+  the same strokes, laid down fresh, sharp at both. The strokes are oil
+  stick and coloured pencil, thousands of them, so a large dog takes
+  minutes to arrive. Watch the paper while it does.</p>
   <div class="fourlives">
     <div class="fl"><canvas id="fl_faithful" width="1400" height="1400"></canvas><div class="flcap">faithful &middot; seed 910007</div></div>
     <div class="flgrid">
@@ -1544,13 +1552,14 @@
       <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_night_20260903.png" alt="Night. A dog with a halo and a cigarette under a motel sign." loading="lazy" width="1000" height="1000">
       <div class="flcap">night &middot; the motel</div>
     </div>
-    <p class="flnote">Where the paint is going. Three studies in the
-    medium the collection is moving to: every fill, sky and ground and dog,
-    laid as thousands of short oil-stick fibres on toothed paper, the edges
-    a soft brown line drawn once and left. The dog stays what it is, a
-    lopsided blot with a face. The paint around it gets better. These three
-    take a minute and a half each to draw; the painter on this page has two
-    seconds. Closing that gap is the work now.</p>
+    <p class="flnote">Three studies that set the medium every dog on this
+    page is now painted in: fills laid as bunched coloured pencil with the
+    paper showing between the strokes, every dark line a fat waxy oil stick,
+    the world behind the dog in coarse pencil of its own colours, the
+    paper's tooth over everything once at the end. The drawing underneath
+    did not change. The same lopsided blot, the same face, the same mess,
+    stroke for stroke; only the paint is different. A small dog takes a
+    second or two. A big one takes minutes, and the page lets it.</p>
   </div>
   <div class="specs">
     <div class="spec"><span>Deterministic</span>
@@ -1824,7 +1833,101 @@
      renderer when reachable, harmless 404 otherwise -->
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
 <script>
-const draw = window.ALLDOGS.drawDog;
+/* The painter works in oil stick and coloured pencil now, thousands of
+   strokes a dog, and a big one takes minutes. So no dog is painted on the
+   thread that scrolls the page: draw() hands the seed to a small pool of
+   workers, each running the same champion painter, and puts the finished
+   bitmap on the canvas when it comes back. It returns a promise that
+   resolves once the canvas holds the dog. drawNow() is the old synchronous
+   call, kept for the few places that need pixels on the spot and paint a
+   dog small enough to wait for. */
+const drawNow = window.ALLDOGS.drawDog;
+const draw = (function () {
+  const CHAMPION_URL =
+    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js';
+  const LOCAL_URL = new URL('dogs.js', location.href).href;
+  const N = Math.max(2, Math.min(6, (navigator.hardwareConcurrency || 4) - 1));
+  const workers = [], idle = [], queue = [], jobs = new Map();
+  let dead = false, nextId = 1;
+  const can = typeof OffscreenCanvas !== 'undefined' && typeof Worker !== 'undefined';
+  const SRC = 'self.window = self;\n'
+    + 'var ok = false;\n'
+    + 'try { importScripts(' + JSON.stringify(CHAMPION_URL) + '); ok = !!self.ALLDOGS; } catch (e) {}\n'
+    + 'if (!ok) { try { importScripts(' + JSON.stringify(LOCAL_URL) + '); } catch (e) {} }\n'
+    + 'self.onmessage = function (ev) { var m = ev.data;'
+    + ' try { var c = new OffscreenCanvas(m.w, m.h);'
+    + ' self.ALLDOGS.drawDog(c, m.seed, m.state);'
+    + ' var b = c.transferToImageBitmap();'
+    + ' postMessage({ id: m.id, bmp: b }, [b]); }'
+    + ' catch (e) { postMessage({ id: m.id, err: String(e) }); } };';
+  function spawn() {
+    let w;
+    try { w = new Worker(URL.createObjectURL(new Blob([SRC], { type: 'text/javascript' }))); }
+    catch (e) { return null; }
+    w.onmessage = ev => {
+      const j = jobs.get(ev.data.id);
+      jobs.delete(ev.data.id);
+      idle.push(w);
+      if (j) { if (ev.data.bmp) j.ok(ev.data.bmp); else j.fail(ev.data.err); }
+      pump();
+    };
+    w.onerror = () => {
+      /* one broken worker takes the pool with it; everything falls back
+         to painting in place */
+      dead = true;
+      workers.forEach(x => { try { x.terminate(); } catch (e) {} });
+      const all = Array.from(jobs.values()); jobs.clear();
+      const q = queue.splice(0); idle.length = 0;
+      all.forEach(j => j.fail('worker'));
+      q.forEach(j => j.fail('worker'));
+    };
+    workers.push(w); idle.push(w);
+    return w;
+  }
+  function pump() {
+    while (queue.length && idle.length) {
+      const j = queue.shift();
+      const w = idle.pop();
+      jobs.set(j.id, j);
+      w.postMessage({ id: j.id, seed: j.seed, state: j.state, w: j.cv.width, h: j.cv.height });
+    }
+  }
+  function sync(cv, seed, state) {
+    return new Promise((res, rej) => setTimeout(() => {
+      try { drawNow(cv, seed, state); res(cv); } catch (e) { rej(e); }
+    }, 0));
+  }
+  return function draw(cv, seed, state) {
+    if (dead || !can) return sync(cv, seed, state);
+    if (!workers.length) {
+      for (let i = 0; i < N; i++) spawn();
+      if (!workers.length) { dead = true; return sync(cv, seed, state); }
+    }
+    cv.classList.add('painting');
+    return new Promise((res, rej) => {
+      const j = {
+        id: nextId++, cv, seed, state,
+        done() { cv.classList.remove('painting'); },
+        ok(bmp) {
+          try {
+            cv.getContext('2d').drawImage(bmp, 0, 0, cv.width, cv.height);
+            if (bmp.close) bmp.close();
+            j.done(); res(cv);
+          } catch (e) { j.done(); rej(e); }
+        },
+        fail() {
+          /* the painter itself refused (a fate the champion does not know)
+             or the pool is gone: paint here, and let the caller's catch see
+             what the painter throws */
+          j.done();
+          sync(cv, seed, state).then(res, rej);
+        }
+      };
+      queue.push(j);
+      pump();
+    });
+  };
+})();
 
 /* Painting a dog is real work and most of them are below the fold, so a
    canvas waits until the reader is nearly at it. Where there is no
@@ -2118,9 +2221,9 @@ document.getElementById('litter').addEventListener('click', () => {
       if (!t.isConnected) { inflight = null; pump(); return; }
       const S = +cv.dataset.s;
       cv.width = S; cv.height = S;
-      try { draw(cv, t._dog.seed, t._dog.state); }
-      catch (e) { draw(cv, t._dog.seed, 'faithful'); }
-      finish(t);
+      draw(cv, t._dog.seed, t._dog.state)
+        .catch(() => draw(cv, t._dog.seed, 'faithful'))
+        .then(() => finish(t), () => finish(t));
     });
   }
   function paint(t) {
@@ -2305,7 +2408,7 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
 function paintsFate(state) {
   const c = document.createElement('canvas');
   c.width = 16; c.height = 16;
-  try { draw(c, 7, state); return true; } catch (e) { return false; }
+  try { drawNow(c, 7, state); return true; } catch (e) { return false; }
 }
 
 /* One plate, five lives. The twenty-one keep their costume through every
@@ -2324,8 +2427,7 @@ function paintsFate(state) {
   const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function paint() {
-    try { draw(cv, SEEDS[i], fate); }
-    catch (e) { draw(cv, SEEDS[i], 'faithful'); }
+    draw(cv, SEEDS[i], fate).catch(() => draw(cv, SEEDS[i], 'faithful'));
   }
   function mark() {
     box.querySelectorAll('.facectl .btn').forEach(b => {
@@ -2757,8 +2859,8 @@ let ydays = 1, ytraits = 0;
 
 function renderYours() {
   yourCv.width = 800; yourCv.height = 800;
-  draw(yourCv, yseed, ystate === 'angel' ? 'angel' : ystate);
-  if (ystate === 'angel') plaque(yourCv, ydays, yhandle());
+  const ydraw = draw(yourCv, yseed, ystate === 'angel' ? 'angel' : ystate);
+  if (ystate === 'angel') ydraw.then(() => plaque(yourCv, ydays, yhandle()));
   yourCv.classList.add('framedpick');
   draw(chooseCv, yseed, ystate === 'angel' ? 'angel' : ystate);
   document.getElementById('yourName').textContent = yname;
@@ -2932,7 +3034,7 @@ function cutoutOnce(targetCv, seed, state, size) {
   const S = size || 500;
   const src = document.createElement('canvas');
   src.width = S; src.height = S;
-  draw(src, seed, state);
+  drawNow(src, seed, state);
   const g = src.getContext('2d');
   const img = g.getImageData(0, 0, S, S);
   const d = img.data;
@@ -3038,7 +3140,7 @@ function cutoutOnce(targetCv, seed, state, size) {
   const holeFrac = bboxA > 0 ? holes / bboxA : 1;
   if (frac < 0.06 || frac > 0.85 || solidity < 0.45 || holeFrac > 0.035) {
     targetCv.width = S; targetCv.height = S;
-    draw(targetCv, seed, state);
+    drawNow(targetCv, seed, state);
     return 0;
   }
   const M = Math.max(6, Math.round(S * 0.014));
@@ -3075,7 +3177,7 @@ function cutout(targetCv, seed, state, size, tries) {
   }
   const S = size || 500;
   targetCv.width = S; targetCv.height = S;
-  draw(targetCv, seed, state);
+  drawNow(targetCv, seed, state);
   return false;
 }
 
@@ -3401,26 +3503,33 @@ paintWhenNear(document.querySelector('footer'), () => {
     return Math.max(0, 1500 * Math.exp(-k / 7) - 40);
   }
 
+  /* each dog is painted by the worker pool; the plate only ever waits on
+     one at a time, so a build is as fast as the painter and no faster */
+  let busy = false, gen = 0;
   function addOne() {
-    window.ALLDOGS.drawDog(scratch, rollSeed(), state);
-    one.drawImage(scratch, 0, 0, oneCv.width, oneCv.height);
-    const d = sg.getImageData(0, 0, S, S).data;
-    for (let q = 0, j = 0; q < PX; q++, j += 3) {
-      acc[j] += d[q * 4];
-      acc[j + 1] += d[q * 4 + 1];
-      acc[j + 2] += d[q * 4 + 2];
-    }
-    n++;
-    show(); say();
+    const myGen = gen;
+    busy = true;
+    sg.clearRect(0, 0, S, S);
+    draw(scratch, rollSeed(), state).then(() => {
+      if (myGen !== gen || !running) return;
+      one.drawImage(scratch, 0, 0, oneCv.width, oneCv.height);
+      const d = sg.getImageData(0, 0, S, S).data;
+      for (let q = 0, j = 0; q < PX; q++, j += 3) {
+        acc[j] += d[q * 4];
+        acc[j + 1] += d[q * 4 + 1];
+        acc[j + 2] += d[q * 4 + 2];
+      }
+      n++;
+      show(); say();
+      busy = false;
+      if (n >= 160) { running = false; return; }
+      nextAt = performance.now() + waitAfter(n);
+    }, () => { busy = false; });
   }
 
   function tick(now) {
     if (!running) return;
-    if (now >= nextAt) {
-      addOne();
-      if (n >= 160) { running = false; return; }
-      nextAt = now + waitAfter(n);
-    }
+    if (!busy && now >= nextAt) addOne();
     raf = requestAnimationFrame(tick);
   }
 
@@ -3456,7 +3565,7 @@ paintWhenNear(document.querySelector('footer'), () => {
       document.querySelectorAll('.gtbtns .btn').forEach(o => o.classList.remove('hot'));
       btn.classList.add('hot');
       state = btn.dataset.st;
-      acc.fill(0); n = 0; nextAt = 0;
+      acc.fill(0); n = 0; nextAt = 0; gen++; busy = false;
       document.getElementById('gtWhich').textContent = NAME[state];
       const cue = document.getElementById('gtCue');
       if (cue) cue.remove();        // it has been pressed; stop nudging
