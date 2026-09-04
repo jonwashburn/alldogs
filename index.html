@@ -68,9 +68,9 @@
   /* hero: the pack, hung edge to edge in a row with no first dog and no
      last one. The row is cut off at both sides of the screen on purpose:
      the collection has no edition size, so the picture of it has no edge.
-     Every portrait is the square painting itself, painted here by the
-     current painter as the reader reaches it, so the top of the page can
-     never show yesterday's dogs. */
+     Every portrait is the square painting itself, painted by the round
+     1380 painter and served as a still, so the row is up in the time an
+     image takes. */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
     --tile: clamp(300px, 58vh, 620px); --gap: 4px;
@@ -1524,13 +1524,15 @@
 <section class="medium" id="medium"><div class="wrap">
   <p class="kicker">The medium</p>
   <h2>The paint is code.</h2>
-  <p class="lede">There is no image file. Every dog is painted in your
-  browser, right now, by a JavaScript painter working from a single number.
-  And because it is code, not a picture, the same dog repaints at any size
-  you ask: the avatar on your phone and a hundred-inch gallery print are
-  the same strokes, laid down fresh, sharp at both. The strokes are oil
-  stick and coloured pencil, thousands of them, so a large dog takes
-  minutes to arrive. Watch the paper while it does.</p>
+  <p class="lede">There is no image file behind a dog. Every one is painted
+  by a JavaScript painter working from a single number. And because it is
+  code, not a picture, the same dog repaints at any size you ask: the
+  avatar on your phone and a hundred-inch gallery print are the same
+  strokes, laid down fresh, sharp at both. The strokes are oil stick and
+  coloured pencil, thousands of them, so a large dog takes minutes to
+  arrive. The dogs on this page that never change were painted once by that
+  painter and kept. Your own dog, and any dog you roll, is painted here
+  while you watch.</p>
   <div class="fourlives">
     <div class="fl"><canvas id="fl_faithful" width="1400" height="1400"></canvas><div class="flcap">faithful &middot; seed 910007</div></div>
     <div class="flgrid">
@@ -2203,9 +2205,7 @@ document.getElementById('litter').addEventListener('click', () => {
      row runs past both sides of the screen and keeps going as far as
      anyone cares to walk it, because the collection has no edition size
      and the picture of it should not have an edge either. Every portrait
-     is the square painting itself, made here by the current painter as
-     the reader reaches it, so the top of the page is always the dogs as
-     they are drawn today.
+     is the square painting itself, as the round 1380 painter drew it.
 
      The dogs are fixed for a visit: slot i always shows the same dog, so
      walking back finds what you passed. Fates are dealt at the pack's own
@@ -2880,16 +2880,19 @@ function paintsFate(state) {
     document.head.append(tag);
   }
 
-  pull(true);
+  /* the sprite is the largest thing on the page (about 4 MB), so it is
+     fetched when the reader is nearly at the strip, not with the first
+     screen; the once-a-minute refresh only starts once it has arrived */
+  paintWhenNear(box, () => pull(true));
   new IntersectionObserver(es => {
     es.forEach(e => {
       visible = e.isIntersecting;
       if (visible) start(); else halt();
     });
   }, { threshold: 0.25 }).observe(box);
-  setInterval(() => { if (!document.hidden) pull(false); }, 60000);
+  setInterval(() => { if (!document.hidden && m) pull(false); }, 60000);
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) pull(false);
+    if (!document.hidden && m) pull(false);
   });
 })();
 
