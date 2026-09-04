@@ -107,8 +107,9 @@
     .herobanner h1::after { top: 4px; width: 8px; height: 8px; } }
   .herocap { display: flex; justify-content: flex-end;
     margin-top: 14px; }
-  .herocap .hero-name { font-size: 10px; font-weight: 700;
-    letter-spacing: 3px; text-transform: uppercase; opacity: 0.45; }
+  .herocap .hero-name { font-size: 11px; font-weight: 500; line-height: 1.5;
+    letter-spacing: 0.2px; opacity: 0.6; max-width: 62ch; text-align: right; }
+  .herocap .hero-name b { font-weight: 700; letter-spacing: 3px; margin-right: 8px; }
   .hero .tagline { margin-top: 38px; font-size: 11px; letter-spacing: 3px;
     text-transform: uppercase; font-weight: 700; opacity: 0.85; }
   .hero .tagline em { font-style: normal; color: var(--red); }
@@ -700,7 +701,7 @@
     <h1>ALL <span class="d">DOGS</span><span class="tm">&trade;</span></h1>
   </div>
   <div class="wrap">
-  <div class="herocap"><span class="hero-name" id="heroName">Hulk Hogan</span></div>
+  <div class="herocap"><span class="hero-name" id="heroName"><b>1985</b> yellow bandana over blond side hair, blond horseshoe moustache, torn yellow tank top with red patches, bare arms flexed upward</span></div>
   <p class="tagline">Seven days to adopt &middot; one <em>zombie apocalypse</em> &middot; adoption fee $50 &middot; one per person</p>
   <p class="sub">ALL DOGS is the second half of a work about what a record
   does to a life. The first half, <a href="https://exaltedlove.com/">HOLY</a>,
@@ -1592,7 +1593,8 @@ function oneOf(n) {
 
 /* HERO: wide paintings of eight one of ones, rendered once by the round
    1384 painter at 2400x800 (3000x1000 for retina). Two stacked images
-   crossfade; the next one is fetched before it is shown. */
+   crossfade; the next one is fetched before it is shown. The caption is
+   the year and the costume, never a name: working out whose it is is the game. */
 (function () {
   const a = document.getElementById('heroDog');
   const b = document.getElementById('heroDog2');
@@ -1600,9 +1602,14 @@ function oneOf(n) {
   if (!a || !b) return;
   const BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1385/';
   const CAST = [
-    [38, 'Hulk Hogan'], [76, 'Hachiko'], [45, 'Jimi Hendrix'],
-    [42, 'Steve Irwin'], [77, 'Laika'], [47, 'Pamela Anderson'],
-    [64, 'Rocky'], [33, 'Beavis and Butt-Head']
+    [38, "1985", "yellow bandana over blond side hair, blond horseshoe moustache, torn yellow tank top with red patches, bare arms flexed upward"],
+    [76, "1935", "plain cream coat, grey railway platform, large round station clock past nine, empty wooden bench, newspaper at the paws in falling snow"],
+    [45, "1967", "dark afro with a pink headband, purple fringed jacket, yellow shirt, white electric guitar covered in flames"],
+    [42, "2000", "sun-bleached blond hair, khaki shirt with two chest pockets, khaki shorts, crocodile lying beside the feet"],
+    [77, "1957", "padded brown body harness, grey-green seat cushion, riveted metal porthole, air hose running to the capsule wall, black space and a blue planet"],
+    [47, "1996", "large blond blowout, red swimsuit, red rescue float held at the side, blue water and pale sand"],
+    [64, "1976", "black knit cap, grey sweat suit with a dark chest patch, red boxing gloves, glass of raw eggs on a step, wide stone steps"],
+    [33, "1993", "two dogs sitting together, tall blond spiked hair, brown peaked hair and metal braces, grey-blue and dark shirts with white marks, brown couch"]
   ];
   const GAP = 9000;
   const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1632,7 +1639,7 @@ function oneOf(n) {
     el.classList.add('on');
     if (el !== front) front.classList.remove('on');
     front = el; back = el === a ? b : a;
-    if (cap) cap.textContent = CAST[k][1];
+    if (cap) { cap.textContent = ''; const y = document.createElement('b'); y.textContent = CAST[k][1]; cap.appendChild(y); cap.appendChild(document.createTextNode(' ' + CAST[k][2])); }
   }
   function next() {
     if (document.hidden) return;
