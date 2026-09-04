@@ -65,10 +65,11 @@
   .ribbon b.r { color: #ff8a80; } .ribbon b.g { color: var(--gold); }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* hero: full-width paintings of the one of ones, 2400 by 800, crossfading */
+  /* hero: the paintings are 3:1; the frame is taller and crops the sides,
+     which is the design square the dog was drawn in. Phone is that square. */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
-    aspect-ratio: 3 / 1; min-height: 160px;
+    aspect-ratio: 2 / 1; min-height: 220px;
     background: #eeebe3; overflow: hidden; }
   .herobanner > img.hero-still { position: absolute; inset: 0; display: block;
     width: 100%; height: 100%; object-fit: cover; object-position: center;
@@ -98,6 +99,7 @@
     border: 2px solid var(--ink); box-sizing: border-box; }
   .hero h1 .tm { font-size: 0.5em; vertical-align: super; letter-spacing: 0; }
   @media (max-width: 700px) {
+    .herobanner { aspect-ratio: 1 / 1; min-height: 0; }
     .herobanner h1 { left: 16px; top: 24px; font-size: 19px;
       padding: 16px 16px 12px; border-radius: 9px;
       transform-origin: 50% -24px; }
@@ -112,9 +114,6 @@
   .hero .tagline em { font-style: normal; color: var(--red); }
   .hero .sub { margin: 20px auto 0; font-size: 17.5px; opacity: 0.78;
     max-width: 54ch; }
-  @media (max-width: 700px) {
-    .herobanner { min-height: 120px; }
-  }
   .cta { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap;
     justify-content: center; }
   .btn { display: inline-block; padding: 13px 22px;
