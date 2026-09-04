@@ -1544,28 +1544,6 @@
       dog again, with what happened to it.</p>
     </div>
   </div>
-  <div class="studio">
-    <div class="fl big">
-      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_dusk_20260903.png" alt="Dusk. A huge dog rises behind the horizon while its own doghouse burns, drawn in oil stick fibres." loading="lazy" width="1000" height="1000">
-      <div class="flcap">dusk &middot; the doghouse</div>
-    </div>
-    <div class="fl">
-      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_day_20260903.png" alt="Day. A dog in a bucket hat on an empty parking lot, looking at a pair of shoes left behind." loading="lazy" width="1000" height="1000">
-      <div class="flcap">day &middot; the lot</div>
-    </div>
-    <div class="fl">
-      <img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/studio/studio_night_20260903.png" alt="Night. A dog with a halo and a cigarette under a motel sign." loading="lazy" width="1000" height="1000">
-      <div class="flcap">night &middot; the motel</div>
-    </div>
-    <p class="flnote">Three studies that set the medium every dog on this
-    page is now painted in: fills laid as bunched coloured pencil with the
-    paper showing between the strokes, every dark line a fat waxy oil stick,
-    the world behind the dog in coarse pencil of its own colours, the
-    paper's tooth over everything once at the end. The drawing underneath
-    did not change. The same lopsided blot, the same face, the same mess,
-    stroke for stroke; only the paint is different. A small dog takes a
-    second or two. A big one takes minutes, and the page lets it.</p>
-  </div>
   <div class="specs">
     <div class="spec"><span>Deterministic</span>
       <p>The seed reconstructs the same painting instructions, stroke for
@@ -1854,7 +1832,9 @@ const draw = (function () {
   const CHAMPION_URL =
     'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js';
   const LOCAL_URL = new URL('dogs.js', location.href).href;
-  const N = Math.max(2, Math.min(6, (navigator.hardwareConcurrency || 4) - 1));
+  /* Two painters at most. Each one pins a core for seconds per dog, and six
+     of them left a laptop with nothing to scroll with. */
+  const N = Math.max(1, Math.min(2, (navigator.hardwareConcurrency || 4) - 1));
   const workers = [], idle = [], queue = [], jobs = new Map();
   let dead = false, nextId = 1;
   const can = typeof OffscreenCanvas !== 'undefined' && typeof Worker !== 'undefined';
@@ -1955,6 +1935,7 @@ const draw = (function () {
    paint; its .full property resolves when the full pass is on the canvas
    (or at once, when there is no full pass). */
 const QUICK_PX = 400;
+const FULL_PASS = false;
 function drawFast(cv, seed, state) {
   const S = Math.max(cv.width, cv.height);
   if (S <= QUICK_PX) {
@@ -1965,7 +1946,11 @@ function drawFast(cv, seed, state) {
   const quick = draw(cv, seed, state, QUICK_PX);
   const gen = cv._gen;
   quick.full = quick.then(() => {
-    if (S < 700 || cv._gen !== gen) return cv;
+    /* The full pass at 800 px is twenty-five seconds of a core per dog;
+       above 400 px the painter leaves its cheap mode. Until it is faster
+       the page stops at the quick pass, and a dog you open paints in
+       full on its own. */
+    if (!FULL_PASS || S < 700 || cv._gen !== gen) return cv;
     return new Promise(res => paintWhenNear(cv, () => {
       if (cv._gen !== gen) { res(cv); return; }
       draw(cv, seed, state, S, true).then(res, () => res(cv));
@@ -1989,6 +1974,19 @@ function stillUrl(seed, state, size) {
   if (!STILLS) return null;
   const k = stillKey(seed, state, size);
   return STILLS.items[k] ? STILLS.base + k + '.jpg' : null;
+}
+/* A still shown small loads its half-size copy (<key>_h.jpg, a quarter of
+   the bytes; the page was pulling 21 MB of 1000 and 1400 px JPEGs) and
+   falls back to the full still if the half is not there. onFail runs only
+   when neither loads. */
+const HALF_MAX = 1000;
+function setStillSrc(img, url, onFail) {
+  const half = img.width <= HALF_MAX ? url.replace(/\.jpg$/, '_h.jpg') : null;
+  img.onerror = () => {
+    if (half && img.src.endsWith('_h.jpg')) { img.src = url; return; }
+    onFail();
+  };
+  img.src = half || url;
 }
 /* Show a dog on the element that stands for it. cv is the canvas the page
    made for the dog (or the <img> that has since taken its place). With a
@@ -2028,13 +2026,12 @@ function showStill(cv, seed, state) {
     img.classList.remove('painting');
     img.classList.add('painting');
     img.onload = () => { img.classList.remove('painting'); res(img); };
-    img.onerror = () => {
+    setStillSrc(img, url, () => {
       /* the still is missing: the canvas comes back and is painted here */
       img.classList.remove('painting');
       if (img.parentNode) img.parentNode.replaceChild(canvas, img);
       drawFast(canvas, seed, state).then(() => res(canvas), () => res(canvas));
-    };
-    img.src = url;
+    });
     if (cur !== img && cur.parentNode) cur.parentNode.replaceChild(img, cur);
     if (img.complete && img.naturalWidth) { img.classList.remove('painting'); res(img); }
   });
@@ -2387,8 +2384,7 @@ document.getElementById('litter').addEventListener('click', () => {
       pic.loading = 'lazy';
       pic.decoding = 'async';
       pic.onload = () => { pic.classList.remove('painting'); t.classList.add('on'); t.dataset.painted = '1'; };
-      pic.onerror = () => { if (t.isConnected) goLive(t); };
-      pic.src = url;
+      setStillSrc(pic, url, () => { if (t.isConnected) goLive(t); });
     } else {
       pic = document.createElement('canvas');
       pic.dataset.s = paintSize();
@@ -2526,10 +2522,17 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
 
 /* Does the painter that actually loaded know this fate? The stale one
    throws; the champion draws it. */
+const _fateKnown = {};
 function paintsFate(state) {
+  /* The painter from round 1380 on exposes its medium and knows every
+     fate; asking it by painting, even at 16 px, cost most of a second a
+     probe and froze the page for its first eight seconds. */
+  if (window.ALLDOGS && window.ALLDOGS.remedium) return true;
+  if (state in _fateKnown) return _fateKnown[state];
   const c = document.createElement('canvas');
   c.width = 16; c.height = 16;
-  try { drawNow(c, 7, state); return true; } catch (e) { return false; }
+  try { drawNow(c, 7, state); _fateKnown[state] = true; } catch (e) { _fateKnown[state] = false; }
+  return _fateKnown[state];
 }
 
 /* One plate, five lives. The twenty-one keep their costume through every
@@ -3671,7 +3674,7 @@ paintWhenNear(document.querySelector('footer'), () => {
       n++;
       show(); say();
       busy = false;
-      if (n >= 160) { running = false; return; }
+      if (n >= 48) { running = false; return; }
       nextAt = performance.now() + waitAfter(n);
     }, () => { busy = false; });
   }
