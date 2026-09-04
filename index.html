@@ -65,14 +65,14 @@
   .ribbon b.r { color: #ff8a80; } .ribbon b.g { color: var(--gold); }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* hero: one full-width painting, Hulk Hogan, seed 38, 2400 by 800. */
+  /* hero: full-width paintings of the one of ones, 2400 by 800, crossfading */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
     aspect-ratio: 3 / 1; min-height: 160px;
     background: #eeebe3; overflow: hidden; }
-  .herobanner > img.hero-still { display: block; width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    opacity: 0; transition: opacity .7s ease; }
+  .herobanner > img.hero-still { position: absolute; inset: 0; display: block;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    opacity: 0; transition: opacity 1.2s ease; }
   .herobanner > img.hero-still.on { opacity: 1; }
   /* the title is a collar tag hung on the painting, swinging on its string */
   .herobanner h1 { position: absolute; left: 34px; top: 34px; z-index: 2;
@@ -238,21 +238,6 @@
     margin-top: 12px; }
   @media (max-width: 900px) { .fates {
     grid-template-columns: 1fr; max-width: none; } }
-
-  /* one seed, two fates: a single large plate, buttons change the life */
-  .faces { margin-top: 48px; }
-  .faces canvas, .faces img { width: min(100%, 780px); height: auto; display: block;
-    margin: 0 auto; }
-  .facectl { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
-    margin-top: 16px; }
-  .facectl .btn { padding: 11px 18px; }
-  .facenote { margin: 16px auto 0; max-width: 48ch; text-align: center;
-    font-size: 15.5px; opacity: 0.72; line-height: 1.58; }
-  @media (max-width: 700px) {
-    .faces canvas, .faces img { width: 100%; }
-    .facectl .btn { flex: 1 1 28%; padding: 11px 8px; font-size: 10px;
-      letter-spacing: 1.2px; }
-  }
 
   .stack { margin-top: 52px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -712,10 +697,11 @@
 <section class="hero">
   <div class="herobanner">
     <img id="heroDog" class="hero-still still painting" alt="" width="2400" height="800">
+    <img id="heroDog2" class="hero-still still" alt="" width="2400" height="800">
     <h1>ALL <span class="d">DOGS</span><span class="tm">&trade;</span></h1>
   </div>
   <div class="wrap">
-  <div class="herocap"><span class="hero-name">Hulk Hogan</span></div>
+  <div class="herocap"><span class="hero-name" id="heroName">Hulk Hogan</span></div>
   <p class="tagline">Seven days to adopt &middot; one <em>zombie apocalypse</em> &middot; adoption fee $50 &middot; one per person</p>
   <p class="sub">ALL DOGS is the second half of a work about what a record
   does to a life. The first half, <a href="https://exaltedlove.com/">HOLY</a>,
@@ -1014,15 +1000,6 @@
       <span class="tag" style="color:var(--red)">turned &middot; sold</span>
       </div>
     </div>
-  </div>
-  <div class="faces" id="faces">
-    <img id="faceCv" width="1400" height="1400" alt="" decoding="async">
-    <div class="facectl">
-      <button type="button" class="btn hot" data-st="faithful" aria-pressed="true">Faithful</button>
-      <button type="button" class="btn" data-st="zombie" aria-pressed="false">Zombie</button>
-    </div>
-    <p class="facenote">The same dog. The buttons change what happened to
-    it. Another of the one hundred and sixteen takes its place in a few seconds.</p>
   </div>
   <div class="stack">
     <div class="stackcard">
@@ -1614,27 +1591,59 @@ function oneOf(n) {
   return n;
 }
 
-/* HERO_38 */
+/* HERO: wide paintings of eight one of ones, rendered once by the round
+   1384 painter at 2400x800 (3000x1000 for retina). Two stacked images
+   crossfade; the next one is fetched before it is shown. */
 (function () {
-  const img = document.getElementById('heroDog');
-  if (!img) return;
-  img.loading = 'eager';
-  img.dataset.dog = '1';
-  img.dataset.seed = '38';
-  img.dataset.state = 'faithful';
-  const WIDE =
-    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1385/hero_faithful_38.jpg';
-  const RETINA =
-    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1385/hero_faithful_38_3000.jpg';
-  img.onload = () => { img.classList.remove('painting'); img.classList.add('on'); };
-  img.onerror = () => {
-    const url = stillUrl(38, 'faithful', TILE);
-    if (!url) { paper(img); return; }
-    setStillSrc(img, url, () => paper(img));
-  };
-  img.srcset = WIDE + ' 2400w, ' + RETINA + ' 3000w';
-  img.sizes = '100vw';
-  img.src = WIDE;
+  const a = document.getElementById('heroDog');
+  const b = document.getElementById('heroDog2');
+  const cap = document.getElementById('heroName');
+  if (!a || !b) return;
+  const BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1385/';
+  const CAST = [
+    [38, 'Hulk Hogan'], [76, 'Hachiko'], [45, 'Jimi Hendrix'],
+    [42, 'Steve Irwin'], [77, 'Laika'], [47, 'Pamela Anderson'],
+    [64, 'Rocky'], [33, 'Beavis and Butt-Head']
+  ];
+  const GAP = 9000;
+  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i = Math.floor(Math.random() * CAST.length);
+  let front = a, back = b, timer = 0;
+  [a, b].forEach(el => { el.dataset.dog = '1'; el.dataset.state = 'faithful'; el.sizes = '100vw'; });
+  a.loading = 'eager';
+  function urls(seed) {
+    return [BASE + 'hero_faithful_' + seed + '.jpg', BASE + 'hero_faithful_' + seed + '_3000.jpg'];
+  }
+  function load(el, seed) {
+    return new Promise(res => {
+      const [wide, retina] = urls(seed);
+      el.dataset.seed = String(seed);
+      el.onload = () => { el.classList.remove('painting'); res(true); };
+      el.onerror = () => {
+        const url = stillUrl(seed, 'faithful', TILE);
+        if (!url) { paper(el); res(false); return; }
+        setStillSrc(el, url, () => paper(el));
+        res(true);
+      };
+      el.srcset = wide + ' 2400w, ' + retina + ' 3000w';
+      el.src = wide;
+    });
+  }
+  function show(el, k) {
+    el.classList.add('on');
+    if (el !== front) front.classList.remove('on');
+    front = el; back = el === a ? b : a;
+    if (cap) cap.textContent = CAST[k][1];
+  }
+  function next() {
+    if (document.hidden) return;
+    const k = (i + 1) % CAST.length;
+    load(back, CAST[k][0]).then(ok => { if (!ok) return; i = k; show(back, k); });
+  }
+  load(a, CAST[i][0]).then(() => {
+    show(a, i);
+    if (calm && CAST.length > 1) timer = setInterval(next, GAP);
+  });
 })();
 
 /* endings: five one of ones, framed stills, no cutout */
@@ -1652,39 +1661,6 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
   showStill(document.getElementById('f_faithful'), 1, 'faithful');
   showStill(document.getElementById('f_zombie'), 2, 'zombie');
 });
-
-/* one plate, two lives: all 116, unnamed */
-(function () {
-  const box = document.getElementById('faces');
-  const cv = document.getElementById('faceCv');
-  if (!box || !cv) return;
-  const seeds = ONES.slice();
-  let i = 0, fate = 'faithful', timer = 0, visible = false;
-  const GAP = 9000;
-  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function paint() { showStill(document.getElementById('faceCv') || cv, seeds[i], fate); }
-  function mark() {
-    box.querySelectorAll('.facectl .btn').forEach(b => {
-      const on = b.dataset.st === fate;
-      b.classList.toggle('hot', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-  }
-  function halt() { clearInterval(timer); timer = 0; }
-  function start() {
-    halt();
-    if (!calm || !visible) return;
-    timer = setInterval(() => { i = (i + 1) % seeds.length; paint(); }, GAP);
-  }
-  box.querySelectorAll('.facectl .btn').forEach(b => {
-    b.addEventListener('click', () => { fate = b.dataset.st; mark(); paint(); start(); });
-  });
-  mark();
-  paintWhenNear(box, () => { paint(); });
-  new IntersectionObserver(es => {
-    es.forEach(e => { visible = e.isIntersecting; if (visible) start(); else halt(); });
-  }, { threshold: 0.25 }).observe(box);
-})();
 
 /* medium: one of one, two lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {
