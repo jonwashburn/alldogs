@@ -84,9 +84,9 @@
   .tile { position: absolute; top: 0; width: var(--tile);
     height: var(--tile); background: #eeebe3; overflow: hidden;
     cursor: pointer; }
-  .tile canvas { display: block; width: 100%; height: 100%; opacity: 0;
+  .tile canvas, .tile img { display: block; width: 100%; height: 100%; opacity: 0;
     transition: opacity .7s ease; }
-  .tile.on canvas { opacity: 1; }
+  .tile.on canvas, .tile.on img { opacity: 1; }
   /* every dog wears its collar: the handle, and how the ninety days have
      treated it so far */
   .tile .collar { position: absolute; left: 14px; bottom: 14px;
@@ -258,12 +258,12 @@
   /* the vampire and the immortal are written but not yet painted: the
      canvas shows the living dog they were, dimmed, so nobody mistakes it
      for the finished look */
-  .fate.pending canvas { opacity: 0.42; filter: saturate(0.35); }
+  .fate.pending canvas, .fate.pending img { opacity: 0.42; filter: saturate(0.35); }
   .fate .soon { position: absolute; top: 10px; left: 10px; z-index: 2;
     font-family: "Instrument Sans", sans-serif; font-size: 9px;
     letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
     background: var(--ink); color: var(--paper); padding: 5px 9px; }
-  .fate canvas { width: 100%; height: auto; display: block; }
+  .fate canvas, .fate img { width: 100%; height: auto; display: block; }
   .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink);
     margin-top: 14px; flex: 1; }
   .fate h3 { font-family: "Instrument Sans", sans-serif;
@@ -279,7 +279,7 @@
 
   /* one seed, five fates: a single large plate, buttons change the life */
   .faces { margin-top: 48px; }
-  .faces canvas { width: min(100%, 780px); height: auto; display: block;
+  .faces canvas, .faces img { width: min(100%, 780px); height: auto; display: block;
     margin: 0 auto; }
   .facectl { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
     margin-top: 16px; }
@@ -287,7 +287,7 @@
   .facenote { margin: 16px auto 0; max-width: 48ch; text-align: center;
     font-size: 15.5px; opacity: 0.72; line-height: 1.58; }
   @media (max-width: 700px) {
-    .faces canvas { width: 100%; }
+    .faces canvas, .faces img { width: 100%; }
     .facectl .btn { flex: 1 1 28%; padding: 11px 8px; font-size: 10px;
       letter-spacing: 1.2px; }
   }
@@ -331,7 +331,7 @@
   /* kennel: the wall */
   .kennel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
     margin-top: 42px; }
-  .pen canvas { width: 100%; height: auto; display: block; }
+  .pen canvas, .pen img { width: 100%; height: auto; display: block; }
   .pen .cap { border-top: 1px solid var(--ink); margin-top: 10px;
     padding: 9px 0 0; }
   .pen .h { font-size: 11px; font-weight: 700; word-break: break-all; }
@@ -346,14 +346,17 @@
   /* a canvas whose dog is still being painted shows the paper it will be
      painted on, breathing a little, so a slow dog reads as work in
      progress and not as a hole in the page */
-  canvas.painting { background: #ece5d6; animation: painting 2.4s ease-in-out infinite; }
+  canvas.painting, img.painting { background: #ece5d6; animation: painting 2.4s ease-in-out infinite; }
+  /* a still that has not arrived yet is the same breathing paper; once it
+     has, it is the painting */
+  img.still { color: transparent; font-size: 0; }
   @keyframes painting { 0%, 100% { background-color: #ece5d6; } 50% { background-color: #dcd3c0; } }
 
   /* the medium */
   .fourlives { margin-top: 42px; display: grid;
     grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
   .flgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-  .fl canvas { width: 100%; height: auto; display: block; }
+  .fl canvas, .fl img { width: 100%; height: auto; display: block; }
   .fl .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
     margin-top: 12px; font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; }
@@ -547,8 +550,8 @@
     display: flex; align-items: center; justify-content: center;
     background: var(--paper); transform: rotate(-4deg); }
   .gart { flex: none; display: flex; gap: 8px; align-items: center; }
-  .gart canvas { width: 96px; height: 96px; display: block; }
-  .gpair canvas { width: 84px; height: 84px; }
+  .gart canvas, .gart img { width: 96px; height: 96px; display: block; }
+  .gpair canvas, .gpair img { width: 84px; height: 84px; }
   .gfork { display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
     margin-top: 4px; }
   .gend { border: 1.5px solid var(--ink); border-radius: 14px;
@@ -562,23 +565,23 @@
   .gend.win .gtag { color: var(--blue); }
   .gend.lose .gtag { color: var(--red); }
   .gend .gart { justify-content: center; margin: 16px 0 14px; }
-  .gend .gart canvas { width: 118px; height: 118px; }
+  .gend .gart canvas, .gend .gart img { width: 118px; height: 118px; }
   .gend p { font-size: 15.5px; line-height: 1.55; font-weight: 500;
     margin: 0; max-width: 34ch; margin-inline: auto; }
-  canvas.cutout { flex: none; display: block; }
+  canvas.cutout, img.cutout { flex: none; display: block; }
   /* when a clean cutout is impossible, the dog hangs as a small painting */
-  canvas.framedpick { border: 2px solid var(--ink); border-radius: 4px;
+  canvas.framedpick, img.framedpick { border: 2px solid var(--ink); border-radius: 4px;
     background: var(--paper); padding: 4px; box-sizing: border-box;
     box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); transform: rotate(-1.3deg); }
-  .straywrap.framed canvas { border: 2px solid var(--ink); border-radius: 4px;
+  .straywrap.framed canvas, .straywrap.framed img { border: 2px solid var(--ink); border-radius: 4px;
     background: var(--paper); padding: 4%; box-sizing: border-box;
     box-shadow: 3px 4px 0 rgba(0,0,0,0.22); transform: rotate(-1.6deg); }
   .straywrap.framed .sground { display: none; }
   @media (max-width: 640px) {
     .gstep { gap: 16px; padding: 16px 18px; flex-wrap: wrap; }
     .gnum { width: 36px; height: 36px; font-size: 19px; }
-    .gart canvas { width: 74px; height: 74px; }
-    .gpair canvas { width: 66px; height: 66px; }
+    .gart canvas, .gart img { width: 74px; height: 74px; }
+    .gpair canvas, .gpair img { width: 66px; height: 66px; }
     .gfork { grid-template-columns: 1fr; }
   }
   /* The odds are a reference table sitting in the middle of an argument.
@@ -596,10 +599,10 @@
 
   /* stray dogs living on the page, tagged, at every scale */
   .straywrap { position: absolute; pointer-events: none; z-index: 2; }
-  .straywrap canvas { display: block; width: 100%; height: auto;
+  .straywrap canvas, .straywrap img { display: block; width: 100%; height: auto;
     position: relative; z-index: 1; pointer-events: auto; cursor: zoom-in;
     transition: transform 0.22s ease; transform-origin: 50% 100%; }
-  .straywrap canvas:hover { transform: scale(1.12); }
+  .straywrap canvas:hover, .straywrap img:hover { transform: scale(1.12); }
   #strayview { position: fixed; inset: 0; z-index: 60; display: none;
     align-items: center; justify-content: center; cursor: zoom-out;
     background: rgba(24,19,14,0.55); }
@@ -607,7 +610,7 @@
   #strayview .card { background: var(--paper); padding: 16px 16px 12px;
     border: 1.5px solid var(--ink); border-radius: 4px;
     box-shadow: 6px 8px 0 rgba(0,0,0,0.3); transform: rotate(-0.6deg); }
-  #strayview canvas { display: block; width: min(68vh, 84vw, 640px);
+  #strayview canvas, #strayview img { display: block; width: min(68vh, 84vw, 640px);
     height: auto; }
   #strayview .cap { margin-top: 10px; display: flex;
     justify-content: space-between; gap: 24px; font-size: 10px;
@@ -1832,6 +1835,9 @@
 <!-- newest promoted design from the live gauntlet; overrides the baked-in
      renderer when reachable, harmless 404 otherwise -->
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
+<!-- the dogs that never change, painted once by round 1380 on the box and
+     served as JPEGs; the page paints live only what has to be live -->
+<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1380/stills.js"></script>
 <script>
 /* The painter works in oil stick and coloured pencil now, thousands of
    strokes a dog, and a big one takes minutes. So no dog is painted on the
@@ -1889,7 +1895,7 @@ const draw = (function () {
       const j = queue.shift();
       const w = idle.pop();
       jobs.set(j.id, j);
-      w.postMessage({ id: j.id, seed: j.seed, state: j.state, w: j.cv.width, h: j.cv.height });
+      w.postMessage({ id: j.id, seed: j.seed, state: j.state, w: j.px, h: j.px });
     }
   }
   function sync(cv, seed, state) {
@@ -1897,20 +1903,29 @@ const draw = (function () {
       try { drawNow(cv, seed, state); res(cv); } catch (e) { rej(e); }
     }, 0));
   }
-  return function draw(cv, seed, state) {
+  /* px: the size the worker paints at; the bitmap is drawn scaled onto
+     the canvas. Omitted, it is the canvas's own size. keepGen: this paint
+     belongs to the canvas's current picture (the full pass after a quick
+     one) rather than starting a new one; a paint whose picture has been
+     replaced by a newer call is dropped when it arrives, so a slow full
+     pass can never overwrite a fresher dog. */
+  return function draw(cv, seed, state, px, keepGen) {
+    if (!keepGen) cv._gen = (cv._gen || 0) + 1;
+    const gen = cv._gen;
     if (dead || !can) return sync(cv, seed, state);
     if (!workers.length) {
       for (let i = 0; i < N; i++) spawn();
       if (!workers.length) { dead = true; return sync(cv, seed, state); }
     }
-    cv.classList.add('painting');
+    if (!keepGen) cv.classList.add('painting');
     return new Promise((res, rej) => {
       const j = {
         id: nextId++, cv, seed, state,
-        done() { cv.classList.remove('painting'); },
+        px: Math.max(1, Math.min(px || Math.max(cv.width, cv.height), Math.max(cv.width, cv.height))),
+        done() { if (!keepGen) cv.classList.remove('painting'); },
         ok(bmp) {
           try {
-            cv.getContext('2d').drawImage(bmp, 0, 0, cv.width, cv.height);
+            if (cv._gen === gen) cv.getContext('2d').drawImage(bmp, 0, 0, cv.width, cv.height);
             if (bmp.close) bmp.close();
             j.done(); res(cv);
           } catch (e) { j.done(); rej(e); }
@@ -1920,6 +1935,7 @@ const draw = (function () {
              or the pool is gone: paint here, and let the caller's catch see
              what the painter throws */
           j.done();
+          if (cv._gen !== gen) { res(cv); return; }
           sync(cv, seed, state).then(res, rej);
         }
       };
@@ -1928,6 +1944,99 @@ const draw = (function () {
     });
   };
 })();
+
+/* A dog that has to be painted live (an arbitrary seed) is painted fast
+   first: the worker paints it at 400 px, which takes a second or two, and
+   the bitmap is drawn up onto the canvas. If the canvas is 700 px or
+   larger, a full-size pass follows once the canvas is near the screen and
+   replaces the quick one. The returned promise resolves on the quick
+   paint; its .full property resolves when the full pass is on the canvas
+   (or at once, when there is no full pass). */
+const QUICK_PX = 400;
+function drawFast(cv, seed, state) {
+  const S = Math.max(cv.width, cv.height);
+  if (S <= QUICK_PX) {
+    const p = draw(cv, seed, state);
+    p.full = p;
+    return p;
+  }
+  const quick = draw(cv, seed, state, QUICK_PX);
+  const gen = cv._gen;
+  quick.full = quick.then(() => {
+    if (S < 700 || cv._gen !== gen) return cv;
+    return new Promise(res => paintWhenNear(cv, () => {
+      if (cv._gen !== gen) { res(cv); return; }
+      draw(cv, seed, state, S, true).then(res, () => res(cv));
+    }));
+  });
+  quick.full.catch(() => {});
+  return quick;
+}
+
+/* Stills. The dogs on this page that never change (fixed seed, fixed
+   fate, fixed size) were painted once on the box by the round 1380
+   painter and are served as JPEGs, so they arrive at the speed of an
+   image rather than the minutes the painter needs. The manifest lists
+   them by seed, fate and pixel size; a still is only ever used for a
+   canvas of exactly its size, because the painting is the point and an
+   up-scaled small one is not the painting. */
+const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items
+  && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
+function stillKey(seed, state, size) { return seed + '_' + state + '_' + size; }
+function stillUrl(seed, state, size) {
+  if (!STILLS) return null;
+  const k = stillKey(seed, state, size);
+  return STILLS.items[k] ? STILLS.base + k + '.jpg' : null;
+}
+/* Show a dog on the element that stands for it. cv is the canvas the page
+   made for the dog (or the <img> that has since taken its place). With a
+   still of the right size, an <img> takes the canvas's box, id, classes
+   and data, and the canvas is kept aside; without one, or if the still
+   fails to load, the canvas is put back and the painter paints it. The
+   promise resolves with whichever element is on the page. Nothing here
+   draws a still onto a canvas: the bucket sends no CORS header, and a
+   canvas that has held one can never be read again. */
+function showStill(cv, seed, state) {
+  const canvas = cv._cv || cv;
+  const cur = (canvas._img && canvas._img.isConnected) ? canvas._img : canvas;
+  const url = stillUrl(seed, state, canvas.width);
+  function back() {
+    if (cur !== canvas && cur.parentNode) cur.parentNode.replaceChild(canvas, cur);
+  }
+  if (!url) {
+    back();
+    return drawFast(canvas, seed, state).then(() => canvas);
+  }
+  canvas._gen = (canvas._gen || 0) + 1;    /* any live paint in flight is stale */
+  return new Promise(res => {
+    let img = canvas._img;
+    if (!img) {
+      img = document.createElement('img');
+      img._cv = canvas;
+      canvas._img = img;
+      if (canvas.id) img.id = canvas.id;
+      img.className = canvas.className;
+      img.classList.add('still');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+    }
+    for (const k in canvas.dataset) img.dataset[k] = canvas.dataset[k];
+    img.width = canvas.width; img.height = canvas.height;
+    img.alt = 'dog ' + seed + ', ' + state;
+    img.classList.remove('painting');
+    img.classList.add('painting');
+    img.onload = () => { img.classList.remove('painting'); res(img); };
+    img.onerror = () => {
+      /* the still is missing: the canvas comes back and is painted here */
+      img.classList.remove('painting');
+      if (img.parentNode) img.parentNode.replaceChild(canvas, img);
+      drawFast(canvas, seed, state).then(() => res(canvas), () => res(canvas));
+    };
+    img.src = url;
+    if (cur !== img && cur.parentNode) cur.parentNode.replaceChild(img, cur);
+    if (img.complete && img.naturalWidth) { img.classList.remove('painting'); res(img); }
+  });
+}
 
 /* Painting a dog is real work and most of them are below the fold, so a
    canvas waits until the reader is nearly at it. Where there is no
@@ -2044,7 +2153,10 @@ function penFor(seed, state, handle) {
   pen.dataset.state = state;
   const cv = document.createElement('canvas');
   cv.width = 800; cv.height = 800;
-  draw(cv, seed, state);
+  /* the first litter is fixed and ships as stills; a rolled litter paints
+     live, quick pass first */
+  pen.append(cv);
+  showStill(cv, seed, state);
   const cap = document.createElement('div');
   cap.className = 'cap';
   const h = document.createElement('div');
@@ -2052,7 +2164,7 @@ function penFor(seed, state, handle) {
   const t = document.createElement('div');
   t.className = 't'; t.textContent = fateLabel(state);
   cap.append(h, t);
-  pen.append(cv, cap);
+  pen.append(cap);
   return pen;
 }
 
@@ -2098,12 +2210,17 @@ document.getElementById('litter').addEventListener('click', () => {
      The dogs are fixed for a visit: slot i always shows the same dog, so
      walking back finds what you passed. Fates are dealt at the pack's own
      odds. One slot in eleven is one of the one of ones, unnamed, on the
-     same terms as the dog beside it. */
+     same terms as the dog beside it.
+
+     The dogs themselves come from a fixed cast: two hundred ordinary dogs
+     at the pack's odds and every one of the one of ones, each painted once
+     by the round 1380 painter at 1000 px and served as a still, so the row
+     is on the screen in the time an image takes. The visitor's salt still
+     chooses the order and deals the fates; only the faces are fixed. A
+     slot whose still is missing paints live. */
   const row = document.getElementById('heroRow');
   const track = document.getElementById('heroTrack');
   if (!row || !track) return;
-  const CHAMPION =
-    'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js';
   const SLOTS = 600, START = 300;
   const DRIFT = 14;            /* px per second, when nobody is touching it */
   const REST = 5000;           /* how long a touch stops the drift */
@@ -2121,13 +2238,60 @@ document.getElementById('litter').addEventListener('click', () => {
     x = Math.imul(x ^ (x >>> 13), 0xc2b2ae35) >>> 0;
     return (x ^ (x >>> 16)) >>> 0;
   }
+  /* a shuffle keyed on the salt and a tag, so every visit deals its own
+     order and the same visit deals it again on every scroll */
+  function saltShuffle(a, tag) {
+    for (let j = a.length - 1; j > 0; j--) {
+      const m = h32(h32(salt, tag), j) % (j + 1);
+      const t = a[j]; a[j] = a[m]; a[m] = t;
+    }
+    return a;
+  }
+  /* Fates are dealt in hands of six rather than rolled one dog at a time,
+     so a screenful always meets all three: a first screen that happened
+     to show no zombie would be telling the visitor something false about
+     the game. Four living, one turned, one gone to old age, shuffled by
+     the hand's own number. A hand that holds a one of one (they are
+     always shown living) deals the other three fates over its five
+     ordinary dogs. */
+  const HAND = ['faithful', 'faithful', 'faithful', 'faithful', 'zombie', 'angel'];
+  const CAST = STILLS && STILLS.hero && STILLS.hero.length ? STILLS.hero : null;
+  const ONE_SEEDS = STILLS && STILLS.ones && STILLS.ones.length ? STILLS.ones : ONES;
+  /* the whole row, dealt once: which dog stands in each slot */
+  const ROW = (function () {
+    const byFate = { faithful: [], zombie: [], angel: [] };
+    if (CAST) CAST.forEach(d => { if (byFate[d.state]) byFate[d.state].push(d.seed); });
+    Object.keys(byFate).forEach((f, k) => saltShuffle(byFate[f], 101 + k));
+    const ones = saltShuffle(ONE_SEEDS.slice(), 99);
+    const idx = { faithful: 0, zombie: 0, angel: 0 };
+    let oi = 0;
+    const out = [];
+    for (let h = 0; h * HAND.length < SLOTS; h++) {
+      const slots = [];
+      for (let p = 0; p < HAND.length && h * HAND.length + p < SLOTS; p++) slots.push(h * HAND.length + p);
+      const hand = HAND.slice();
+      if (slots.some(i => i % 11 === 5)) hand.splice(hand.indexOf('faithful'), 1);
+      saltShuffle(hand, 7777 + h);
+      let k = 0;
+      slots.forEach(i => {
+        if (i % 11 === 5) {
+          out[i] = { seed: ones[oi++ % ones.length], state: 'faithful', one: true };
+          return;
+        }
+        const f = hand[k++];
+        const list = byFate[f];
+        /* no cast (the manifest did not load): a rolled seed, painted live */
+        const seed = list.length ? list[idx[f]++ % list.length]
+          : (h32(h32(salt, i), 1) % 0xfffffff0) + 22;
+        out[i] = { seed, state: f, one: false };
+      });
+    }
+    return out;
+  })();
   function dogAt(i) {
     const r = h32(salt, i);
-    const one = i % 11 === 5;
-    const seed = one
-      ? ONES[(((i - 5) / 11) | 0) % ONES.length]
-      : (h32(r, 1) % 0xfffffff0) + 22;
-    const state = dealt(i);
+    const d = ROW[i];
+    const seed = d.seed, state = d.state;
     const handle = '@' + HA[h32(r, 3) % HA.length] + '_'
       + HB[h32(r, 4) % HB.length]
       + (h32(r, 5) % 10 < 4 ? h32(r, 6) % 99 : '');
@@ -2136,21 +2300,6 @@ document.getElementById('litter').addEventListener('click', () => {
       : state === 'angel' ? 'lived ' + day + ' days'
       : 'day ' + day;
     return { seed, state, handle, meta };
-  }
-  /* Fates are dealt in hands of six rather than rolled one dog at a time,
-     so a screenful always meets all three: a first screen that happened
-     to show no zombie would be telling the visitor something false about
-     the game. Four living, one turned, one gone to old age, shuffled by
-     the hand's own number. */
-  const HAND = ['faithful', 'faithful', 'faithful', 'faithful', 'zombie', 'angel'];
-  function dealt(i) {
-    const hand = Math.floor(i / HAND.length), k = i % HAND.length;
-    const a = HAND.slice();
-    for (let j = a.length - 1; j > 0; j--) {
-      const m = h32(h32(salt, 7777 + hand), j) % (j + 1);
-      const t = a[j]; a[j] = a[m]; a[m] = t;
-    }
-    return a[k];
   }
 
   /* geometry: the tile is the banner's height, read back from the CSS */
@@ -2164,50 +2313,15 @@ document.getElementById('litter').addEventListener('click', () => {
     track.style.width = (SLOTS * pitch) + 'px';
     tiles.forEach((t, i) => { t.style.left = (i * pitch) + 'px'; });
   }
+  const STILL_PX = 1000;      /* the size every hero still was painted at */
   function paintSize() {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
-    return Math.min(1000, Math.round(tile * dpr));
+    return Math.min(STILL_PX, Math.round(tile * dpr));
   }
 
-  /* the painter runs off the main thread when the browser allows it, so
-     a heavy champion never freezes the page; otherwise one dog per frame */
-  let worker = null, workerDead = false, nextId = 1;
-  const pending = new Map();
-  function getWorker() {
-    if (worker || workerDead) return worker;
-    if (typeof OffscreenCanvas === 'undefined' || typeof Worker === 'undefined'
-        || typeof window.ALLDOGS === 'undefined') { workerDead = true; return null; }
-    const src = 'self.window = self;\n'
-      + 'try { importScripts(' + JSON.stringify(CHAMPION) + '); } catch (e) {}\n'
-      + 'self.onmessage = function (ev) { var m = ev.data;'
-      + ' try { var c = new OffscreenCanvas(m.size, m.size);'
-      + ' self.ALLDOGS.drawDog(c, m.seed, m.state);'
-      + ' var b = c.transferToImageBitmap();'
-      + ' postMessage({ id: m.id, bmp: b }, [b]); }'
-      + ' catch (e) { postMessage({ id: m.id, err: String(e) }); } };';
-    try {
-      worker = new Worker(URL.createObjectURL(
-        new Blob([src], { type: 'text/javascript' })));
-    } catch (e) { workerDead = true; return null; }
-    worker.onmessage = ev => {
-      const p = pending.get(ev.data.id);
-      pending.delete(ev.data.id);
-      if (!p) return;
-      if (ev.data.bmp) p.ok(ev.data.bmp); else p.fail();
-    };
-    worker.onerror = () => {
-      const all = Array.from(pending.values());
-      pending.clear();
-      killWorker();
-      all.forEach(p => p.fail());
-    };
-    return worker;
-  }
-  function killWorker() {
-    if (worker) { try { worker.terminate(); } catch (e) {} }
-    worker = null; workerDead = true;
-  }
-
+  /* Live painting is the fallback, for a tile whose still did not load.
+     One at a time, nearest the middle of the screen first, through the
+     page's worker pool: quick pass, then full. */
   let inflight = null;
   function finish(t) {
     t.classList.add('on');
@@ -2215,48 +2329,40 @@ document.getElementById('litter').addEventListener('click', () => {
     inflight = null;
     pump();
   }
-  function paintMain(t) {
+  function paint(t) {
+    inflight = t;
     const cv = t.querySelector('canvas');
     requestAnimationFrame(() => {
-      if (!t.isConnected) { inflight = null; pump(); return; }
+      if (!t.isConnected || !cv) { inflight = null; pump(); return; }
       const S = +cv.dataset.s;
       cv.width = S; cv.height = S;
-      draw(cv, t._dog.seed, t._dog.state)
+      drawFast(cv, t._dog.seed, t._dog.state)
         .catch(() => draw(cv, t._dog.seed, 'faithful'))
         .then(() => finish(t), () => finish(t));
     });
   }
-  function paint(t) {
-    inflight = t;
-    const cv = t.querySelector('canvas');
-    const S = +cv.dataset.s;
-    const w = getWorker();
-    if (!w) { paintMain(t); return; }
-    const id = nextId++;
-    pending.set(id, {
-      ok: bmp => {
-        if (!t.isConnected) { bmp.close && bmp.close(); inflight = null; pump(); return; }
-        cv.width = S; cv.height = S;
-        const br = cv.getContext('bitmaprenderer');
-        if (br) br.transferFromImageBitmap(bmp);
-        else { cv.getContext('2d').drawImage(bmp, 0, 0); bmp.close && bmp.close(); }
-        finish(t);
-      },
-      fail: () => { killWorker(); paintMain(t); }
-    });
-    w.postMessage({ id, seed: t._dog.seed, state: t._dog.state, size: S });
-  }
-  /* paint the unpainted tile nearest the middle of the screen first */
+  /* paint the unpainted live tile nearest the middle of the screen first */
   function pump() {
     if (inflight || !visible) return;
     const mid = row.scrollLeft + row.clientWidth / 2;
     let best = null, bd = Infinity;
     tiles.forEach((t, i) => {
-      if (t.dataset.painted) return;
+      if (t.dataset.painted || !t.dataset.live) return;
       const d = Math.abs((i + 0.5) * pitch - mid);
       if (d < bd) { bd = d; best = t; }
     });
     if (best) paint(best);
+  }
+
+  /* a tile without a still gets a canvas and joins the live queue */
+  function goLive(t) {
+    const cv = document.createElement('canvas');
+    cv.dataset.s = paintSize();
+    const old = t.querySelector('img, canvas');
+    if (old) t.replaceChild(cv, old); else t.prepend(cv);
+    t.dataset.live = '1';
+    delete t.dataset.painted;
+    pump();
   }
 
   function mount(i) {
@@ -2271,15 +2377,30 @@ document.getElementById('litter').addEventListener('click', () => {
     t._dog = dog;
     t.dataset.seed = dog.seed;
     t.dataset.state = dog.state;
-    const cv = document.createElement('canvas');
-    cv.dataset.s = paintSize();
+    const url = stillUrl(dog.seed, dog.state, STILL_PX);
+    let pic;
+    if (url) {
+      pic = document.createElement('img');
+      pic.className = 'still painting';
+      pic.width = STILL_PX; pic.height = STILL_PX;
+      pic.alt = 'dog ' + dog.seed + ', ' + dog.state;
+      pic.loading = 'lazy';
+      pic.decoding = 'async';
+      pic.onload = () => { pic.classList.remove('painting'); t.classList.add('on'); t.dataset.painted = '1'; };
+      pic.onerror = () => { if (t.isConnected) goLive(t); };
+      pic.src = url;
+    } else {
+      pic = document.createElement('canvas');
+      pic.dataset.s = paintSize();
+      t.dataset.live = '1';
+    }
     const collar = document.createElement('div');
     collar.className = 'collar';
     const h = document.createElement('b'); h.textContent = dog.handle;
     const m = document.createElement('i');
     m.textContent = dog.state === 'faithful' ? 'faithful \u00b7 ' + dog.meta : dog.meta;
     collar.append(h, m);
-    t.append(cv, collar);
+    t.append(pic, collar);
     track.append(t);
     tiles.set(i, t);
   }
@@ -2378,20 +2499,20 @@ document.getElementById('litter').addEventListener('click', () => {
   requestAnimationFrame(ts => { lastTs = ts; requestAnimationFrame(tick); });
 })();
 paintWhenNear(document.querySelector('.fatesec'), () => {
-  draw(document.getElementById('f_faithful'), 4101, 'faithful');
-  draw(document.getElementById('f_zombie'), 4102, 'zombie');
-  draw(document.getElementById('f_angel'), 4103, 'angel');
+  showStill(document.getElementById('f_faithful'), 4101, 'faithful');
+  showStill(document.getElementById('f_zombie'), 4102, 'zombie');
+  showStill(document.getElementById('f_angel'), 4103, 'angel');
   /* The champion painter draws all five fates, but the copy of the painter
      baked into this repo is older and throws on the two that only exist
      after the war. So ask before drawing: if the loaded painter knows
      them, these are real plates, and if it does not they fall back to the
      dimmed living dog they were, which is what they used to be. */
   if (paintsFate('vampire')) {
-    draw(document.getElementById('f_vampire'), 940001, 'vampire');
-    draw(document.getElementById('f_immortal'), 950001, 'immortal');
+    showStill(document.getElementById('f_vampire'), 940001, 'vampire');
+    showStill(document.getElementById('f_immortal'), 950001, 'immortal');
   } else {
-    draw(document.getElementById('f_vampire'), 4104, 'faithful');
-    draw(document.getElementById('f_immortal'), 4105, 'faithful');
+    showStill(document.getElementById('f_vampire'), 4104, 'faithful');
+    showStill(document.getElementById('f_immortal'), 4105, 'faithful');
     ['vampire', 'immortal'].forEach(k => {
       const card = document.getElementById('fate_' + k);
       card.classList.add('pending');
@@ -2427,7 +2548,10 @@ function paintsFate(state) {
   const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function paint() {
-    draw(cv, SEEDS[i], fate).catch(() => draw(cv, SEEDS[i], 'faithful'));
+    /* all five fates of all eleven are stills at this size; a missing one
+       paints live, and a fate the painter refuses falls back to the
+       living dog */
+    showStill(cv, SEEDS[i], fate).catch(() => showStill(cv, SEEDS[i], 'faithful'));
   }
   function mark() {
     box.querySelectorAll('.facectl .btn').forEach(b => {
@@ -2534,10 +2658,14 @@ function paintsFate(state) {
     });
   }
 
+  /* the frame is painted on the main thread by that round's own painter,
+     so it is capped at 400 px: the newest painters take a second or two
+     there and minutes at full size */
+  const LIVE_PX = 400;
   function paintLive(round, fn) {
     if (!fn) return false;
     try {
-      cv.width = cv.height = 800;
+      cv.width = cv.height = LIVE_PX;
       fn(cv, liveSeed, 'faithful');
       return true;
     } catch (e) {
@@ -2560,10 +2688,10 @@ function paintsFate(state) {
     painters.clear();
     /* cover the box's recorded dog so the first live frame is not a
        flash of somebody else's seed while the first painter arrives */
-    cv.width = cv.height = 800;
+    cv.width = cv.height = LIVE_PX;
     const g = cv.getContext('2d');
     g.fillStyle = '#14140f';
-    g.fillRect(0, 0, 800, 800);
+    g.fillRect(0, 0, LIVE_PX, LIVE_PX);
     say('Drawing seed ' + liveSeed + ' live. Each step loads that round\u2019s '
       + 'painter first, so it moves at the speed of the network.');
     show(0);
@@ -2768,7 +2896,7 @@ function paintsFate(state) {
 /* one seed, three lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {
   ['faithful', 'zombie', 'angel'].forEach(st => {
-    draw(document.getElementById('fl_' + st), 910007, st);
+    showStill(document.getElementById('fl_' + st), 910007, st);
   });
 });
 
@@ -2859,10 +2987,16 @@ let ydays = 1, ytraits = 0;
 
 function renderYours() {
   yourCv.width = 800; yourCv.height = 800;
-  const ydraw = draw(yourCv, yseed, ystate === 'angel' ? 'angel' : ystate);
-  if (ystate === 'angel') ydraw.then(() => plaque(yourCv, ydays, yhandle()));
+  /* an arbitrary seed: quick pass first, full pass when it is near */
+  const ydraw = drawFast(yourCv, yseed, ystate === 'angel' ? 'angel' : ystate);
+  if (ystate === 'angel') {
+    const days = ydays, who = yhandle(), gen = yourCv._gen;
+    const stamp = () => { if (yourCv._gen === gen) plaque(yourCv, days, who); };
+    ydraw.then(stamp);
+    ydraw.full.then(stamp);
+  }
   yourCv.classList.add('framedpick');
-  draw(chooseCv, yseed, ystate === 'angel' ? 'angel' : ystate);
+  drawFast(chooseCv, yseed, ystate === 'angel' ? 'angel' : ystate);
   document.getElementById('yourName').textContent = yname;
   document.getElementById('yourIntro').textContent = yname;
   document.getElementById('yourState').textContent =
@@ -3188,8 +3322,8 @@ function cutout(targetCv, seed, state, size, tries) {
  ['cr_lose', 940001, 'zombie']].forEach(([id, seed, st]) => {
   const cv = document.getElementById(id);
   cv.width = 500; cv.height = 500;
-  draw(cv, seed, st);
   cv.classList.add('framedpick');
+  showStill(cv, seed, st);
 });
 /* stray dogs: scattered at every scale, live from the champion painter,
    tagged with the attribute their seed forces */
@@ -3231,12 +3365,16 @@ function stray(sectionSel, seed, state, label, css, size, noGround) {
      sticker is worse than a small painting, so every stray hangs framed. */
   const S = size || 500;
   cv.width = S; cv.height = S;
-  paintWhenNear(w, () => draw(cv, seed, state));
   w.classList.add('framed');
-  cv.addEventListener('click', e => {
+  w.append(cv);
+  /* fixed seeds are stills; the rolled pack paints live, quick pass first */
+  paintWhenNear(w, () => showStill(cv, seed, state));
+  /* the click lives on the wrap, so it survives the canvas becoming an
+     image; the wrap itself takes no pointer events, only the dog does */
+  w.addEventListener('click', e => {
+    if (e.target !== cv && e.target !== cv._img) return;
     e.stopPropagation(); openStray(seed, state, label);
   });
-  w.append(cv);
   if (!noGround) {
     const gnd = document.createElement('div');
     gnd.className = 'sground';
@@ -3297,14 +3435,22 @@ sview.innerHTML = '<div class="card"><canvas width="1100" height="1100">'
   + '</canvas><div class="cap"><span id="svlbl"></span>'
   + '<span id="svmeta"></span></div></div>';
 document.body.append(sview);
+const svCv = sview.querySelector('canvas');
 sview.addEventListener('click', () => sview.classList.remove('on'));
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') sview.classList.remove('on');
 });
+/* The card is 1100 px. The one of ones have a still at that size, so
+   they open at once. A dog from the hero row has its 1000 px still, and
+   the card is shown at 640 css px at most, so the card takes that size
+   for it rather than painting for minutes. Anything else paints live,
+   quick pass first, then full. */
 function openStray(seed, state, label) {
-  const cv = sview.querySelector('canvas');
-  cv.width = 1100; cv.height = 1100;
-  draw(cv, seed, state);
+  const cv = svCv;
+  const S = stillUrl(seed, state, 1100) ? 1100
+    : stillUrl(seed, state, 1000) ? 1000 : 1100;
+  cv.width = S; cv.height = S;
+  showStill(cv, seed, state);
   document.getElementById('svlbl').textContent = label || '';
   document.getElementById('svmeta').textContent =
     state + ' \u00b7 seed ' + seed;
@@ -3424,7 +3570,7 @@ paintWhenNear(document.querySelector('footer'), () => {
   fates.forEach(state => {
     const cv = document.createElement('canvas');
     cv.width = 500; cv.height = 500;
-    draw(cv, rollSeed(), state);
+    drawFast(cv, rollSeed(), state);
     cv.classList.add('framedpick');
     parade.append(cv);
   });
