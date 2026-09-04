@@ -69,7 +69,7 @@
      last one. The row is cut off at both sides of the screen on purpose:
      the collection has no edition size, so the picture of it has no edge.
      Every portrait is the square painting itself, painted by the round
-     1379 painter and served as a still, so the row is up in the time an
+     1384 painter and served as a still, so the row is up in the time an
      image takes. */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
@@ -1249,7 +1249,7 @@
   <div class="chipgroup">
     <div class="glbl">The world &middot; where the dog is standing (each dog rolls once, by fate)</div>
     <!-- Measured over fifteen hundred dogs (300 seeds x 5 fates) on the
-         champion of design round 1383 (the round 1379 painter). The rare layer modes (the wall, the
+         champion of design round 1384. The rare layer modes (the wall, the
          photocopier, holy, the blue angel...) are their own worlds and count
          as the plain room here. -->
     <div class="chips">
@@ -1259,25 +1259,15 @@
       <span class="chip">The studio floor <b>12%</b></span>
       <span class="chip">The revival <b>9%</b></span>
     </div>
-    <p class="fatenote" style="margin:10px 0 0">The plain room is the dog
-    alone on its ground, most often quiet: one slow shift of value around
-    the animal and a shadow under it. The wallpaper is painted flowers on
-    a saturated field, four times in five: closed-shape petals, dry-drag
-    paper tooth, climbing vine chains, and oil-stick edges, with blooms
-    interweaving around and over the dog; on this paper the dog takes a
-    bunched colored-pencil coat with Yoshitomo Nara's luminous skin technique
-    and rose blush, while keeping the fat oil-stick contours and face ink. One
-    time in five it is a toile of the artist's two earlier bodies of work,
-    hand-drawn in one ink: the boxy car, the pole and its wires, the lit
-    cloud, the people going up and the shoes they left, the tent, the school
-    bus, the robe on a hanger, the penguin, the neon cross, the motel sign.
-    The studio floor is a loud
-    flat field with one other creature at the dog's scale. The sunbelt and
-    the revival are places, each lit by one light: a parking lot under a
-    huge sky, a road, a ranch house, a fair, a shore, an overpass, a painted
-    wall, an office; a motel at night, a strip-mall lot, a bible camp, a
-    tent, a dock, a drive-in, a hall, a roller rink, an arena, a shop
-    window, a wood-paneled room.</p>
+    <p class="fatenote" style="margin:10px 0 0">The line is oil stick, fat
+    on the silhouette and thinner on the ears and fur. The coat is a few
+    long brush strokes along the form, on toothed paper. Each world is a
+    quiet room in that world's own colour, one horizon, and one object
+    taken from it: a sign, a car, a bus, a sword. The plain room is the dog
+    alone on its ground. The wallpaper keeps the flower field's colour.
+    The studio floor is a saturated field. The sunbelt and the revival
+    are places (a parking lot, a road, a motel, a drive-in, a hall) as
+    a sky, a ground band, and one thing from that place.</p>
   </div>
   <div class="chipgroup">
     <div class="glbl">The places &middot; where the sunbelt and the revival put the dog</div>
@@ -1813,10 +1803,10 @@
 <!-- newest promoted design from the live gauntlet; overrides the baked-in
      renderer when reachable, harmless 404 otherwise -->
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
-<!-- the dogs that never change, painted once by the round 1379 painter on
+<!-- the dogs that never change, painted once by the round 1384 painter on
      the box and served as JPEGs; the page paints live only what has to be
      live -->
-<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1379/stills.js"></script>
+<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1384k/stills.js"></script>
 <script>
 /* A big dog takes the painter seconds. So no dog is painted on the
    thread that scrolls the page: draw() hands the seed to a small pool of
@@ -1959,9 +1949,9 @@ function drawFast(cv, seed, state) {
 }
 
 /* Stills. The dogs on this page that never change (fixed seed, fixed
-   fate, fixed size) were painted once on the box by the round 1379
+   fate, fixed size) were painted once on the box by the round 1384
    painter and are served as JPEGs, so they arrive at the speed of an
-   image rather than the minutes the painter needs. The manifest lists
+   image rather than the seconds the painter needs. The manifest lists
    them by seed, fate and pixel size; a still is only ever used for a
    canvas of exactly its size, because the painting is the point and an
    up-scaled small one is not the painting. */
@@ -2200,7 +2190,7 @@ document.getElementById('litter').addEventListener('click', () => {
      row runs past both sides of the screen and keeps going as far as
      anyone cares to walk it, because the collection has no edition size
      and the picture of it should not have an edge either. Every portrait
-     is the square painting itself, as the round 1379 painter drew it.
+     is the square painting itself, as the round 1384 painter drew it.
 
      The dogs are fixed for a visit: slot i always shows the same dog, so
      walking back finds what you passed. Fates are dealt at the pack's own
@@ -2209,7 +2199,7 @@ document.getElementById('litter').addEventListener('click', () => {
 
      The dogs themselves come from a fixed cast: two hundred ordinary dogs
      at the pack's odds and every one of the one of ones, each painted once
-     by the round 1379 painter at 1000 px and served as a still, so the row
+     by the round 1384 painter at 1000 px and served as a still, so the row
      is on the screen in the time an image takes. The visitor's salt still
      chooses the order and deals the fates; only the faces are fixed. A
      slot whose still is missing paints live. */
@@ -2525,8 +2515,9 @@ function paintsFate(state) {
   /* A painter that exposes its medium (rounds 1380 to 1382) knows every
      fate; asking one of those by painting, even at 16 px, cost most of a
      second a probe and froze the page for its first eight seconds. The
-     round 1379 painter is probed at 16 px and takes a few ms. */
+     round 1384 painter exposes its kit, so this probe is skipped. */
   if (window.ALLDOGS && window.ALLDOGS.remedium) return true;
+  if (window.ALLDOGS && window.ALLDOGS.kitdog) return true;
   if (state in _fateKnown) return _fateKnown[state];
   const c = document.createElement('canvas');
   c.width = 16; c.height = 16;
