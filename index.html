@@ -221,23 +221,10 @@
   }
   @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
 
-  /* fates: three the ninety days can reach, two that only the ending can */
-  .fates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  /* fates: keep it, or sell it */
+  .fates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px;
     margin-top: 18px; }
-  .fates.after { grid-template-columns: repeat(2, 1fr); }
-  .faterow { font-family: "Instrument Sans", sans-serif; font-size: 10.5px;
-    letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700;
-    opacity: 0.5; margin-top: 46px; padding-bottom: 7px;
-    border-bottom: 2px solid var(--ink); }
   .fate { display: flex; flex-direction: column; position: relative; }
-  /* the vampire and the immortal are written but not yet painted: the
-     canvas shows the living dog they were, dimmed, so nobody mistakes it
-     for the finished look */
-  .fate.pending canvas, .fate.pending img { opacity: 0.42; filter: saturate(0.35); }
-  .fate .soon { position: absolute; top: 10px; left: 10px; z-index: 2;
-    font-family: "Instrument Sans", sans-serif; font-size: 9px;
-    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
-    background: var(--ink); color: var(--paper); padding: 5px 9px; }
   .fate canvas, .fate img { width: 100%; height: auto; display: block; }
   .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink);
     margin-top: 14px; flex: 1; }
@@ -249,10 +236,10 @@
     text-transform: uppercase; font-weight: 700; padding: 5px 10px;
     border: 1px solid currentColor; display: inline-block;
     margin-top: 12px; }
-  @media (max-width: 900px) { .fates, .fates.after {
-    grid-template-columns: repeat(2, 1fr); max-width: none; } }
+  @media (max-width: 900px) { .fates {
+    grid-template-columns: 1fr; max-width: none; } }
 
-  /* one seed, five fates: a single large plate, buttons change the life */
+  /* one seed, two fates: a single large plate, buttons change the life */
   .faces { margin-top: 48px; }
   .faces canvas, .faces img { width: min(100%, 780px); height: auto; display: block;
     margin: 0 auto; }
@@ -330,7 +317,7 @@
   /* the medium */
   .fourlives { margin-top: 42px; display: grid;
     grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
-  .flgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .fourlives .flnote { grid-column: 1 / -1; }
   .fl canvas, .fl img { width: 100%; height: auto; display: block; }
   .fl .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
     margin-top: 12px; font-size: 10px; font-weight: 700;
@@ -718,8 +705,8 @@
 <body>
 
 <div class="ribbon"><span>
-  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 ANGELS</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
-  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 ANGELS</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 DIED OF AGE</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 DIED OF AGE</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
 </span></div>
 
 <section class="hero">
@@ -743,7 +730,7 @@
   write the story.</p>
   <div class="cta">
     <a class="btn hot" href="#deal">How the ninety days work</a>
-    <a class="btn" href="#fates">Meet the five fates</a>
+    <a class="btn" href="#fates">Meet the two fates</a>
     <a class="btn" href="design/">Watch the machine draw</a>
   </div>
   </div>
@@ -821,7 +808,7 @@
       <div class="ysstat"><span class="k">Pack</span><b id="ysPackN">&ndash;</b><span class="s">adopted</span></div>
       <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">&ndash;</b></div>
       <div class="ysstat"><span class="k">First sales</span><b id="ysZom" class="c-zom">0</b><span class="s" id="ysTarget">of 15%</span></div>
-      <div class="ysstat"><span class="k">Angels</span><b id="ysAng" class="c-ang">0</b></div>
+      <div class="ysstat"><span class="k">Died of age</span><b id="ysDied" class="c-ang">0</b></div>
       <div class="ysstat"><span class="k">Still needed</span><b id="ysNeed" class="c-zom">&ndash;</b><span class="s">to end it</span></div>
       <div class="ysstat"><span class="k">Pace</span><b id="ysPace">&ndash;</b><span class="s" id="ysPaceNote">against the line</span></div>
     </div>
@@ -882,7 +869,7 @@
   <p class="dropnote">HOLY and ALL DOGS are one work in two halves: the
   album that kept nothing, and the album that cannot lose anything. The
   camera and the collar are the same object a generation apart, the one
-  thing that actually touched the life. And the angels leave the screen.
+  thing that actually touched the life.
   Every plaque a dog earns by dying held is engraved in brass, with the
   days and the handle, and hung in a room. The only way onto that wall is
   never to have let go.</p>
@@ -1001,7 +988,7 @@
       <span><b id="lifeTraits">0</b> traits earned</span>
     </div>
     <p class="lifenote" id="lifeNote">The death clock never stops, so a dog
-    nobody sells becomes an angel eventually. Run its life and watch: the
+    nobody sells dies of old age eventually. Run its life and watch: the
     weekly drop lands when it lands, old age comes when it comes, and the
     plaque at the end carries the days and the name of whoever was still
     holding.</p>
@@ -1010,12 +997,10 @@
 
 <section class="fatesec sheet" id="fates"><div class="wrap">
   <p class="kicker">The attributes</p>
-  <h2>Five fates.<br>One collar.</h2>
-  <p class="lede">Every dog starts alive. The owners decide what it
-  becomes, one midnight at a time; the adoption roll has no say in it and
-  neither does the artist. Three fates are reachable while the ninety
-  days run. The last two only exist if the zombies lose.</p>
-  <p class="faterow">While the ninety days run</p>
+  <h2>Two fates.<br>One collar.</h2>
+  <p class="lede">Every dog starts alive. Keep it, and it stays yours.
+  Sell it during the ninety days, and it turns. The owners decide which;
+  the adoption roll has no say in it and neither does the artist.</p>
   <div class="fates">
     <div class="fate">
       <img id="f_faithful" width="1000" height="1000" alt="" decoding="async">
@@ -1044,59 +1029,12 @@
       <span class="tag" style="color:var(--red)">turned &middot; sold</span>
       </div>
     </div>
-    <div class="fate">
-      <img id="f_angel" width="1000" height="1000" alt="" decoding="async">
-      <div class="body">
-      <h3>Angel</h3>
-      <p>Died of old age. Every living dog carries the same tiny daily
-      chance, about seven in a hundred over a year, and nobody chooses
-      which ones it lands on. A plaque is etched across the top of the
-      piece with the number of days it lived and the handle of the owner
-      who kept it the whole way. Only a keeper can be on that plaque,
-      because selling ends the life, and every plaque is also cut in brass
-      and hung in a room. Angels never count toward the 15%, and the
-      apocalypse cannot touch them.</p>
-      <span class="tag" style="color:#c28d13">at peace &middot; signed</span>
-      </div>
-    </div>
-  </div>
-  <p class="faterow">Only if the zombies lose</p>
-  <div class="fates after">
-    <div class="fate" id="fate_vampire">
-      <img id="f_vampire" width="1000" height="1000" alt="" decoding="async">
-      <div class="body">
-      <h3>Vampire</h3>
-      <p>If the ninety days end under 15%, no dog is ever turned into a zombie
-      by a sale again and everything trades freely. But a living dog still
-      cannot be traded and stay living. Most become vampires: black eyes, fangs, one
-      drop of blood, the same dog wearing the dark version of itself. It
-      stops aging and stops collecting traits, so it can never become an
-      angel and can never grow again.</p>
-      <span class="tag" style="color:var(--red)">stopped &middot; after the war</span>
-      </div>
-    </div>
-    <div class="fate" id="fate_immortal">
-      <img id="f_immortal" width="1000" height="1000" alt="" decoding="async">
-      <div class="body">
-      <h3>Immortal</h3>
-      <p>The rare side of that same trade, one in ten. Instead of the
-      fangs the dog is given a superpower, the only trait in the
-      collection that cannot be rolled at adoption or handed out by the
-      weekly drop. An immortal is a dog that was held through the entire
-      war and then let go on purpose. There is no other way to make
-      one.</p>
-      <span class="tag" style="color:var(--blue)">stopped &middot; superpowered</span>
-      </div>
-    </div>
   </div>
   <div class="faces" id="faces">
     <img id="faceCv" width="1400" height="1400" alt="" decoding="async">
     <div class="facectl">
       <button type="button" class="btn hot" data-st="faithful" aria-pressed="true">Faithful</button>
       <button type="button" class="btn" data-st="zombie" aria-pressed="false">Zombie</button>
-      <button type="button" class="btn" data-st="angel" aria-pressed="false">Angel</button>
-      <button type="button" class="btn" data-st="vampire" aria-pressed="false">Vampire</button>
-      <button type="button" class="btn" data-st="immortal" aria-pressed="false">Immortal</button>
     </div>
     <p class="facenote">The same dog. The buttons change what happened to
     it. Another of the one hundred and sixteen takes its place in a few seconds.</p>
@@ -1105,12 +1043,11 @@
     <div class="stackcard">
       <div class="lbl">Lived</div>
       <p>Every collar carries a number: how many days the dog lived. A
-      zombie is stamped the day it turned. An angel is stamped the day it
-      passed, and that number goes up on the plaque too. Vampires and
-      immortals stop on the day they were traded. The faithful just keep
-      counting, long after the ninety days end. <b>Day 3</b> (turned before its
-      first walk) and <b>day 3,650</b> (ten years old) are both rare; the
-      middle belongs to everyone.</p>
+      zombie is stamped the day it turned. A dog that dies of old age is
+      stamped the day it passed, and that number goes up on the plaque
+      too. The faithful just keep counting, long after the ninety days
+      end. <b>Day 3</b> (turned before its first walk) and <b>day 3,650</b>
+      (ten years old) are both rare; the middle belongs to everyone.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">Wardrobe</div>
@@ -1198,10 +1135,9 @@
   </div>
   <div class="chipgroup">
     <div class="glbl">The world &middot; where the dog is standing (each dog rolls once, by fate)</div>
-    <!-- Measured over fifteen hundred dogs (300 seeds x 5 fates) on the
-         champion of design round 1384. The rare layer modes (the wall, the
-         photocopier, holy, the blue angel...) are their own worlds and count
-         as the plain room here. -->
+    <!-- Measured over fifteen hundred dogs on the champion of design
+         round 1384. The rare layer modes (the wall, the photocopier,
+         holy) are their own worlds and count as the plain room here. -->
     <div class="chips">
       <span class="chip none">The plain room <b>34%</b></span>
       <span class="chip">The wallpaper <b>32%</b></span>
@@ -1282,8 +1218,7 @@
     company. Every one of them is painted the way the dog is: a ghost, fat
     patches of oil, a black stick line left where it landed, and each one
     casts its shadow on the same ground the dog does. None of them is a
-    background. The angel is the one who watches the lifted go; the vampire
-    keeps the motel.</p>
+    background.</p>
   </div>
   <div class="oddsfoot">
   <p class="fatenote" style="margin-bottom:20px">One hundred and sixteen
@@ -1348,14 +1283,11 @@
   the same strokes, sharp at both.</p>
   <div class="fourlives">
     <div class="fl"><img id="fl_faithful" width="1400" height="1400" alt="" decoding="async"><div class="flcap">faithful</div></div>
-    <div class="flgrid">
-      <div class="fl"><img id="fl_zombie" width="1000" height="1000" alt="" decoding="async"><div class="flcap">zombie</div></div>
-      <div class="fl"><img id="fl_angel" width="1000" height="1000" alt="" decoding="async"><div class="flcap">angel</div></div>
-      <p class="flnote">One of the one of ones, three lives. The same dog
-      through each fate the ninety days can hand it. No second picture is
-      ever swapped in. The same painter drew the same dog again, with what
-      happened to it.</p>
-    </div>
+    <div class="fl"><img id="fl_zombie" width="1400" height="1400" alt="" decoding="async"><div class="flcap">zombie</div></div>
+    <p class="flnote">One of the one of ones, two lives. The same dog
+    through each fate the ninety days can hand it. No second picture is
+    ever swapped in. The same painter drew the same dog again, with what
+    happened to it.</p>
   </div>
   <div class="specs">
     <div class="spec"><span>Deterministic</span>
@@ -1479,8 +1411,8 @@
       <p>Two clocks run on every living dog. Once a week a handful of them
       are handed one more trait, and only rare ones: two in every thousand
       living dogs a week, about a tenth of the pack a year. Every day, two
-      in every ten thousand living dogs die of old age and become angels,
-      about seven in a hundred a year. Nobody chooses either one and nothing you do
+      in every ten thousand living dogs die of old age, about seven in a
+      hundred a year. Nobody chooses either one and nothing you do
       changes your odds. Holding is the only way your dog gets rarer, and
       the only way it dies with your name on it.</p></div>
     <div class="step"><div class="n">02</div>
@@ -1510,16 +1442,14 @@
       percent over ninety days works out to one first sale per thousand
       dogs roughly every fourteen hours, sustained the whole way, which is
       an ordinary amount of churn for a new collection and is exactly why
-      the line is set there. Angels are already gone and cannot be
+      the line is set there. Dogs that already died of old age cannot be
       taken.</p></div>
     <div class="step"><div class="n">04</div>
       <h3>Survive the ninety days and the zombies lose forever.</h3>
       <p>If the last midnight passes with the count under the line, no dog is
       ever turned into a zombie by a sale again, and every dog still in
       its adopting wallet is a living animal that nobody could have
-      bought on any of those ninety days. A living dog still cannot be
-      traded and stay living, so from here letting go makes a vampire, or
-      one time in ten an immortal. That is all that happens, and it is
+      bought on any of those ninety days. That is all that happens, and it is
       the good ending.</p></div>
   </div>
 </div></section>
@@ -1588,8 +1518,8 @@
   <p class="ethnote">*Any transfer of a living dog turns it: a sale, a gift,
   or a move to your own second wallet. The contract cannot tell those apart
   and does not try, so your dog lives in the wallet that adopted it or it
-  does not live. Dogs that are already zombies, angels, vampires or
-  immortals move freely and never change again.</p>
+  does not live. Dogs that are already zombies move freely and never
+  change again.</p>
 </div></section>
 
 
@@ -1606,13 +1536,12 @@
 <!-- the one of ones, painted once by the round 1384 painter and served as JPEGs -->
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1384ones/stills.js"></script>
 <script>
-/* Stills only. Seeds 1..116, five fates, two sizes (1000 and 1400).
+/* Stills only. Seeds 1..116, two fates, two sizes (1000 and 1400).
    A missing still is paper. Nothing on this page paints a dog. */
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items
   && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
 const ONES = Array.from({length: 116}, (_, i) => i + 1);
-const FATES3 = ['faithful', 'zombie', 'angel'];
-const FATES5 = ['faithful', 'zombie', 'angel', 'vampire', 'immortal'];
+const FATES = ['faithful', 'zombie'];
 const TILE = 1000;
 const BIG = 1400;
 const HALF_MAX = 1000;
@@ -1713,17 +1642,16 @@ function shuffle(a) {
   return a;
 }
 function rollState() {
-  const r = Math.random();
-  return r < 0.70 ? 'faithful' : r < 0.90 ? 'zombie' : 'angel';
+  return Math.random() < 0.78 ? 'faithful' : 'zombie';
 }
 function dealFates(n) {
-  const out = FATES3.slice();
+  const out = FATES.slice();
   while (out.length < n) out.push(rollState());
   return shuffle(out);
 }
 function spreadFates(n) {
   const out = [];
-  while (out.length < n) out.push(FATES3[out.length % FATES3.length]);
+  while (out.length < n) out.push(FATES[out.length % FATES.length]);
   return shuffle(out);
 }
 function oneOf(n) {
@@ -1765,16 +1693,13 @@ function oneOf(n) {
   showStill(el, seed, st);
 });
 
-/* five fates exhibits */
+/* two fates exhibits */
 paintWhenNear(document.querySelector('.fatesec'), () => {
   showStill(document.getElementById('f_faithful'), 1, 'faithful');
   showStill(document.getElementById('f_zombie'), 2, 'zombie');
-  showStill(document.getElementById('f_angel'), 3, 'angel');
-  showStill(document.getElementById('f_vampire'), 4, 'vampire');
-  showStill(document.getElementById('f_immortal'), 5, 'immortal');
 });
 
-/* one plate, five lives: all 116, unnamed */
+/* one plate, two lives: all 116, unnamed */
 (function () {
   const box = document.getElementById('faces');
   const cv = document.getElementById('faceCv');
@@ -1807,11 +1732,10 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
   }, { threshold: 0.25 }).observe(box);
 })();
 
-/* medium: one of one, three lives */
+/* medium: one of one, two lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {
   showStill(document.getElementById('fl_faithful'), 7, 'faithful');
   showStill(document.getElementById('fl_zombie'), 7, 'zombie');
-  showStill(document.getElementById('fl_angel'), 7, 'angel');
 });
 
 /* litter: 24 of the 116, captions off, reshuffle is a reshuffle of stills */
@@ -1828,7 +1752,7 @@ function firstLitter() {
   kennel.innerHTML = '';
   for (let i = 0; i < 24; i++) {
     const seed = 49 + i;
-    const st = i % 8 === 6 ? 'zombie' : i % 8 === 7 ? 'angel' : 'faithful';
+    const st = i % 6 === 5 ? 'zombie' : 'faithful';
     kennel.append(penFor(seed, st));
   }
 }
@@ -1856,7 +1780,7 @@ let ydays = 1, ytraits = 0;
 const chooseLine = document.getElementById('chooseLine');
 
 function renderYours() {
-  const st = ystate === 'angel' ? 'angel' : ystate;
+  const st = ystate === 'died' ? 'faithful' : ystate;
   const y = document.getElementById('yourDog');
   const c = document.getElementById('chooseDog');
   if (y) { y.classList.add('framedpick'); showStill(y, yseed, st); }
@@ -1865,11 +1789,11 @@ function renderYours() {
   if (nameEl) nameEl.textContent = '';
   document.getElementById('yourState').textContent =
     ystate === 'faithful' ? 'alive \u00b7 yours'
-      : ystate === 'angel' ? 'angel \u00b7 ' + ydays.toLocaleString() + ' days'
+      : ystate === 'died' ? 'died \u00b7 ' + ydays.toLocaleString() + ' days'
       : 'zombie \u00b7 you did this';
   if (chooseLine) chooseLine.textContent = ystate === 'faithful'
     ? 'This is the dog you would be doing it to.'
-    : ystate === 'angel'
+    : ystate === 'died'
     ? 'It went of old age, with a name on the plaque.'
     : 'It is done. It stays done.';
 }
@@ -1939,7 +1863,7 @@ function renderYours() {
       acc -= 1; ydays++;
       if (ydays % 7 === 0 && Math.random() < TRAIT) { ytraits++; lastTrait = ydays; }
       if (Math.random() < DEATH) {
-        ystate = 'angel';
+        ystate = 'died';
         renderYours();
         dayEl.textContent = ydays.toLocaleString();
         trEl.textContent = ytraits;
@@ -1961,7 +1885,7 @@ function renderYours() {
       note.innerHTML = '<b>This one is a zombie.</b> Its clock stopped the day it was sold.';
       return;
     }
-    if (ystate === 'angel') {
+    if (ystate === 'died') {
       ydays = 1; ytraits = 0; lastTrait = 0; ystate = 'faithful'; renderYours();
     }
     running = true; last = 0; acc = 0;
@@ -1971,8 +1895,10 @@ function renderYours() {
 })();
 renderYours();
 document.querySelector('.bpanel.red').addEventListener('click', () => {
-  if (ystate === 'zombie') {
-    chooseLine.textContent = 'You already did. It only dies the once.';
+  if (ystate === 'zombie' || ystate === 'died') {
+    chooseLine.textContent = ystate === 'zombie'
+      ? 'You already did. It only dies the once.'
+      : 'Too late for that.';
     return;
   }
   ystate = 'zombie';
@@ -2072,7 +1998,7 @@ perch('.rules',   19, 'faithful', 150);
 perch('.choice',  20, 'faithful', 150);
 stray('.bred', 21, 'faithful',
   'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-200px;', TILE);
-stray('.cannon', 22, 'angel',
+stray('.cannon', 22, 'faithful',
   'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));', TILE);
 
 const PACK = [
@@ -2279,13 +2205,13 @@ document.querySelectorAll('section:not(.hero):not(.cannon)').forEach(sec => {
   const DAYS = 90, SHARE = 0.15, DEATH = 0.0002;
   const NMIN = 400, NMAX = 2400;
   const ASPECT = cv.width / cv.height;
-  const LIVING = 0, ZOMBIE = 1, ANGEL = 2;
-  const NAME = ['faithful', 'zombie', 'angel'];
+  const LIVING = 0, ZOMBIE = 1, DIED = 2;
+  const NAME = ['faithful', 'zombie', 'faithful'];
   const INK = ['rgba(253,253,251,0.80)', '#ff3b2f', '#f0b429'];
   const el = id => document.getElementById(id);
   let N = 0, COLS = 0, ROWS = 0, TILEW = 0, TARGET = 0;
   let field = new Uint8Array(0);
-  let day = 0, zombies = 0, angels = 0, living = 0;
+  let day = 0, zombies = 0, died = 0, living = 0;
   let running = false, raf = 0, acc = 0, last = 0, over = null;
   function deal() {
     N = NMIN + Math.floor(Math.random() * (NMAX - NMIN + 1));
@@ -2322,7 +2248,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon)').forEach(sec => {
     el('ysLiving').textContent = living.toLocaleString();
     el('ysZom').textContent = zombies;
     el('ysTarget').textContent = 'of ' + TARGET;
-    el('ysAng').textContent = angels;
+    el('ysDied').textContent = died;
     const need = Math.max(0, TARGET - zombies);
     el('ysNeed').textContent = need;
     if (day > 0) {
@@ -2344,7 +2270,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon)').forEach(sec => {
     const perDay = rate();
     for (let i = 0; i < N; i++) {
       if (field[i] !== LIVING) continue;
-      if (Math.random() < DEATH) { field[i] = ANGEL; angels++; living--; cell(i); }
+      if (Math.random() < DEATH) { field[i] = DIED; died++; living--; cell(i); }
     }
     const pSell = living > 0 ? perDay / living : 0;
     for (let i = 0; i < N; i++) {
@@ -2375,23 +2301,20 @@ document.querySelectorAll('section:not(.hero):not(.cannon)').forEach(sec => {
         + '.</b> ' + TARGET + ' of the ' + N.toLocaleString() + ' dogs that '
         + 'were adopted had been sold once, which is the 15%, and the horde '
         + 'took the ' + taken.toLocaleString() + ' that were still alive at '
-        + 'the same midnight. ' + angels + ' angels were already out of '
-        + 'reach.';
+        + 'the same midnight. ' + died + ' had already died of old age.';
     } else {
       el('ysVerdict').innerHTML = '<b>The zombies lost.</b> This pack was '
         + N.toLocaleString() + ' dogs, so the line sat at ' + TARGET
         + ', and the ninety days ended ' + (TARGET - zombies) + ' short of '
-        + 'it. ' + living.toLocaleString() + ' dogs are still alive and can '
-        + 'never be turned by a sale again, ' + angels + ' died of old age '
-        + 'with a name on the plaque, and from here a living dog that is '
-        + 'traded becomes a vampire, or one time in ten an immortal.';
+        + 'it. ' + living.toLocaleString() + ' dogs are still alive, and '
+        + died + ' died of old age with a name on the plaque.';
     }
     board();
     nextRun();
   }
   function reset() {
     deal();
-    day = 0; zombies = 0; angels = 0; living = N; over = null;
+    day = 0; zombies = 0; died = 0; living = N; over = null;
     board(); paintAll();
   }
   const NIGHTS_PER_SEC = 6;
