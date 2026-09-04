@@ -69,7 +69,7 @@
      last one. The row is cut off at both sides of the screen on purpose:
      the collection has no edition size, so the picture of it has no edge.
      Every portrait is the square painting itself, painted by the round
-     1380 painter and served as a still, so the row is up in the time an
+     1379 painter and served as a still, so the row is up in the time an
      image takes. */
   .hero { padding: 0 0 68px; border-top: none; text-align: center; }
   .herobanner { position: relative; width: 100%;
@@ -1249,7 +1249,7 @@
   <div class="chipgroup">
     <div class="glbl">The world &middot; where the dog is standing (each dog rolls once, by fate)</div>
     <!-- Measured over fifteen hundred dogs (300 seeds x 5 fates) on the
-         champion of design round 1382. The rare layer modes (the wall, the
+         champion of design round 1383 (the round 1379 painter). The rare layer modes (the wall, the
          photocopier, holy, the blue angel...) are their own worlds and count
          as the plain room here. -->
     <div class="chips">
@@ -1528,11 +1528,9 @@
   by a JavaScript painter working from a single number. And because it is
   code, not a picture, the same dog repaints at any size you ask: the
   avatar on your phone and a hundred-inch gallery print are the same
-  strokes, laid down fresh, sharp at both. The strokes are oil stick and
-  coloured pencil, thousands of them, so a large dog takes minutes to
-  arrive. The dogs on this page that never change were painted once by that
-  painter and kept. Your own dog, and any dog you roll, is painted here
-  while you watch.</p>
+  strokes, laid down fresh, sharp at both. The dogs on this page that never
+  change were painted once by that painter and kept. Your own dog, and any
+  dog you roll, is painted here while you watch.</p>
   <div class="fourlives">
     <div class="fl"><canvas id="fl_faithful" width="1400" height="1400"></canvas><div class="flcap">faithful &middot; seed 910007</div></div>
     <div class="flgrid">
@@ -1815,12 +1813,12 @@
 <!-- newest promoted design from the live gauntlet; overrides the baked-in
      renderer when reachable, harmless 404 otherwise -->
 <script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/champion_dogs.js"></script>
-<!-- the dogs that never change, painted once by round 1380 on the box and
-     served as JPEGs; the page paints live only what has to be live -->
-<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1380/stills.js"></script>
+<!-- the dogs that never change, painted once by the round 1379 painter on
+     the box and served as JPEGs; the page paints live only what has to be
+     live -->
+<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1379/stills.js"></script>
 <script>
-/* The painter works in oil stick and coloured pencil now, thousands of
-   strokes a dog, and a big one takes minutes. So no dog is painted on the
+/* A big dog takes the painter seconds. So no dog is painted on the
    thread that scrolls the page: draw() hands the seed to a small pool of
    workers, each running the same champion painter, and puts the finished
    bitmap on the canvas when it comes back. It returns a promise that
@@ -1961,7 +1959,7 @@ function drawFast(cv, seed, state) {
 }
 
 /* Stills. The dogs on this page that never change (fixed seed, fixed
-   fate, fixed size) were painted once on the box by the round 1380
+   fate, fixed size) were painted once on the box by the round 1379
    painter and are served as JPEGs, so they arrive at the speed of an
    image rather than the minutes the painter needs. The manifest lists
    them by seed, fate and pixel size; a still is only ever used for a
@@ -2202,7 +2200,7 @@ document.getElementById('litter').addEventListener('click', () => {
      row runs past both sides of the screen and keeps going as far as
      anyone cares to walk it, because the collection has no edition size
      and the picture of it should not have an edge either. Every portrait
-     is the square painting itself, as the round 1380 painter drew it.
+     is the square painting itself, as the round 1379 painter drew it.
 
      The dogs are fixed for a visit: slot i always shows the same dog, so
      walking back finds what you passed. Fates are dealt at the pack's own
@@ -2211,7 +2209,7 @@ document.getElementById('litter').addEventListener('click', () => {
 
      The dogs themselves come from a fixed cast: two hundred ordinary dogs
      at the pack's odds and every one of the one of ones, each painted once
-     by the round 1380 painter at 1000 px and served as a still, so the row
+     by the round 1379 painter at 1000 px and served as a still, so the row
      is on the screen in the time an image takes. The visitor's salt still
      chooses the order and deals the fates; only the faces are fixed. A
      slot whose still is missing paints live. */
@@ -2524,9 +2522,10 @@ paintWhenNear(document.querySelector('.fatesec'), () => {
    throws; the champion draws it. */
 const _fateKnown = {};
 function paintsFate(state) {
-  /* The painter from round 1380 on exposes its medium and knows every
-     fate; asking it by painting, even at 16 px, cost most of a second a
-     probe and froze the page for its first eight seconds. */
+  /* A painter that exposes its medium (rounds 1380 to 1382) knows every
+     fate; asking one of those by painting, even at 16 px, cost most of a
+     second a probe and froze the page for its first eight seconds. The
+     round 1379 painter is probed at 16 px and takes a few ms. */
   if (window.ALLDOGS && window.ALLDOGS.remedium) return true;
   if (state in _fateKnown) return _fateKnown[state];
   const c = document.createElement('canvas');
