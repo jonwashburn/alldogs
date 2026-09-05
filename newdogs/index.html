@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS: New dogs</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
+<meta name="description" content="New designs for the ALL DOGS painter as they land: the same 25 mint seeds drawn again and again, newest first.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --paper: #fdfdfb; --ink: #111111; --hair: #dddad0; --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  ::selection { background: var(--gold); color: var(--ink); }
+  a { color: inherit; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+  h1, h2 { font-family: "Shantell Sans", sans-serif; font-weight: 800; text-transform: uppercase; }
+  .kicker { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; opacity: .7; }
+  .top { padding-top: 40px; padding-bottom: 22px; border-bottom: 1px solid var(--ink); }
+  .top h1 { font-size: clamp(34px, 6vw, 72px); line-height: 0.98; margin-top: 10px; }
+  .top h1 em { font-style: normal; color: var(--red); }
+  .top p { margin-top: 16px; max-width: 720px; font-size: clamp(15px, 1.8vw, 17px); opacity: .8; }
+  .top p b { font-weight: 600; opacity: 1; }
+  .status { margin-top: 14px; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+  .entry { border: 1px solid var(--ink); margin-top: 36px; }
+  .entry .head { display: flex; gap: 14px 22px; flex-wrap: wrap; align-items: baseline;
+    padding: 12px 18px; border-bottom: 1px solid var(--ink); }
+  .entry .head .n { font-family: "Shantell Sans", sans-serif; font-size: clamp(17px, 2.4vw, 23px); font-weight: 800;
+    text-transform: uppercase; }
+  .entry .head .by { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--blue); }
+  .entry .head .when { font-size: 11px; opacity: .6; margin-left: auto; }
+  .entry .note { padding: 12px 18px 0; font-size: 15px; opacity: .82; max-width: 820px; }
+  .entry img { width: 100%; display: block; margin-top: 12px; border-top: 1px solid var(--hair); }
+  .entry .foot { padding: 8px 18px 12px; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; opacity: .55; }
+  .entry .foot a { text-decoration: none; }
+  .empty { padding: 60px 0; opacity: .6; }
+  .foot-page { padding-top: 48px; padding-bottom: 60px; font-size: 12px; opacity: .55; }
+</style>
+</head>
+<body>
+<div class="wrap top">
+  <div class="kicker">ALL DOGS &middot; THE STUDIO WALL</div>
+  <h1>New <em>dogs</em></h1>
+  <p>Designs for the painter as they land. Every sheet is the <b>same 25 mint seeds</b>: a random 32-bit seed, the fate
+  rolled at the collection's odds, every trait rolled by the painter, nothing placed by hand. What changes from sheet to
+  sheet is the drawing. Newest first.</p>
+  <div class="status" id="status">LOADING</div>
+</div>
+<div class="wrap" id="feed"><p class="empty">Waiting for the first sheet&hellip;</p></div>
+<div class="wrap foot-page">alldogs.wtf &middot; a page for looking, not linked from the front</div>
+<script>
+(function () {
+  var FEED = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/newdogs/feed.js';
+  var s = document.createElement('script');
+  s.src = FEED + '?v=' + Math.floor(Date.now() / 60000);
+  s.onload = render; s.onerror = function () { document.getElementById('status').textContent = 'FEED UNREACHABLE'; };
+  document.head.appendChild(s);
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function fmt(iso) { try { var d = new Date(iso); return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return iso; } }
+  function render() {
+    var feed = window.NEWDOGS || {}, entries = feed.entries || [];
+    var st = document.getElementById('status');
+    st.textContent = entries.length + (entries.length === 1 ? ' SHEET' : ' SHEETS') + (feed.updated ? ' \u00b7 UPDATED ' + fmt(feed.updated).toUpperCase() : '');
+    var root = document.getElementById('feed');
+    if (!entries.length) return;
+    root.innerHTML = '';
+    entries.forEach(function (e) {
+      var d = document.createElement('div'); d.className = 'entry';
+      var h = '<div class="head"><span class="n">' + esc(e.title) + '</span>' +
+        (e.by ? '<span class="by">' + esc(e.by) + '</span>' : '') +
+        '<span class="when">' + esc(fmt(e.when)) + '</span></div>';
+      if (e.note) h += '<div class="note">' + esc(e.note) + '</div>';
+      (e.images || []).forEach(function (u) { h += '<a href="' + esc(u) + '" target="_blank" rel="noopener"><img loading="lazy" src="' + esc(u) + '" alt="' + esc(e.title) + '"></a>'; });
+      h += '<div class="foot">' + (e.images || []).map(function (u, i) { return '<a href="' + esc(u) + '" target="_blank" rel="noopener">full size' + ((e.images || []).length > 1 ? ' ' + (i + 1) : '') + '</a>'; }).join(' \u00b7 ') + '</div>';
+      d.innerHTML = h; root.appendChild(d);
+    });
+  }
+})();
+</script>
+</body>
+</html>
