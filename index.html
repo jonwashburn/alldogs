@@ -525,10 +525,6 @@
   canvas.framedpick, img.framedpick { border: 2px solid var(--ink); border-radius: 4px;
     background: var(--paper); padding: 4px; box-sizing: border-box;
     box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); transform: rotate(-1.3deg); }
-  .straywrap.framed canvas, .straywrap.framed img { border: 2px solid var(--ink); border-radius: 4px;
-    background: var(--paper); padding: 4%; box-sizing: border-box;
-    box-shadow: 3px 4px 0 rgba(0,0,0,0.22); transform: rotate(-1.6deg); }
-  .straywrap.framed .sground { display: none; }
   @media (max-width: 640px) {
     .gstep { gap: 16px; padding: 16px 18px; flex-wrap: wrap; }
     .gnum { width: 36px; height: 36px; font-size: 19px; }
@@ -549,12 +545,6 @@
   .chips.collapsed { max-height: 31px; overflow: hidden; }
   @media (max-width: 700px) { .chips.collapsed { max-height: 70px; } }
 
-  /* stray dogs living on the page, tagged, at every scale */
-  .straywrap { position: absolute; pointer-events: none; z-index: 2; }
-  .straywrap canvas, .straywrap img { display: block; width: 100%; height: auto;
-    position: relative; z-index: 1; pointer-events: auto; cursor: zoom-in;
-    transition: transform 0.22s ease; transform-origin: 50% 100%; }
-  .straywrap canvas:hover, .straywrap img:hover { transform: scale(1.12); }
   #strayview { position: fixed; inset: 0; z-index: 60; display: none;
     align-items: center; justify-content: center; cursor: zoom-out;
     background: rgba(24,19,14,0.55); }
@@ -568,20 +558,6 @@
     justify-content: space-between; gap: 24px; font-size: 10px;
     font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
     opacity: 0.6; }
-  .straywrap .sground { position: absolute; bottom: -3px; left: 8%;
-    right: 8%; height: 12px; border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(20,16,12,.16), rgba(20,16,12,0) 70%); }
-  .straywrap .slbl { position: absolute; top: 100%; left: -30px;
-    right: -30px; text-align: center; margin-top: 9px; font-size: 9px;
-    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
-    opacity: 0.5; text-align: center; }
-  /* a dog standing in the margin has no room for a label that spills
-     30px each way, so its tag hugs it */
-  .straywrap.tightlbl .slbl { left: 0; right: 0; }
-  @media (max-width: 1160px) { .straywrap { display: none; } }
-  /* below this the margin is too thin to hold a dog worth looking at, so
-     the pack steps out rather than shrinking to a smudge */
-  @media (max-width: 1399px) { .straywrap.packdog { display: none; } }
 
   /* bred, not drawn */
   .bredgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
@@ -2091,121 +2067,6 @@ function openStray(seed, state) {
   sview.classList.add('on');
 }
 
-function stray(sectionSel, seed, state, css, size) {
-  const sec = document.querySelector(sectionSel);
-  if (!sec) return;
-  const w = document.createElement('div');
-  w.className = 'straywrap framed';
-  w.style.cssText = css;
-  w.dataset.seed = seed;
-  w.dataset.state = state;
-  const img = document.createElement('img');
-  img.className = 'still';
-  img.width = size || TILE;
-  img.height = size || TILE;
-  img.setAttribute('width', size || TILE);
-  img.setAttribute('height', size || TILE);
-  img.alt = '';
-  img.dataset.seed = String(seed);
-  img.dataset.state = state;
-  img.dataset.dog = '1';
-  w.append(img);
-  paintWhenNear(w, () => showStill(img, seed, state));
-  w.addEventListener('click', e => {
-    if (e.target !== img) return;
-    e.stopPropagation();
-    openStray(seed, state);
-  });
-  sec.append(w);
-  return w;
-}
-function perch(sectionSel, seed, state, width) {
-  stray(sectionSel, seed, state,
-    'width:' + width + 'px; top:59px; transform:translateY(-100%); '
-    + 'right:max(32px, calc((100% - 1196px) / 2));', TILE);
-}
-function markLast(sectionSel, cls) {
-  const sec = document.querySelector(sectionSel);
-  if (!sec) return null;
-  const wraps = sec.querySelectorAll('.straywrap');
-  const w = wraps[wraps.length - 1];
-  if (w) w.classList.add(cls);
-  return w;
-}
-function marginDog(sectionSel, seed, state, side, topPct) {
-  stray(sectionSel, seed, state,
-    'width:min(150px, calc((100% - 1212px) / 2)); top:' + topPct + '%; '
-    + side + ':max(4px, calc((100% - 1196px) / 2 - 158px));', TILE);
-  markLast(sectionSel, 'tightlbl');
-  markLast(sectionSel, 'packdog');
-}
-
-perch('.why',     13, 'faithful', 150);
-perch('.bred',    14, 'faithful', 195);
-perch('.fatesec', 15, 'zombie',   150);
-perch('#dogs',    16, 'faithful', 150);
-perch('.medium',  17, 'faithful', 120);
-perch('.drop',    18, 'faithful', 150);
-perch('.rules',   19, 'faithful', 150);
-perch('.choice',  20, 'faithful', 150);
-stray('.bred', 21, 'faithful',
-  'width:min(42vh, 380px); right:max(32px, 2vw); bottom:-200px;', TILE);
-stray('.cannon', 22, 'faithful',
-  'width:140px; top:64px; right:max(60px, calc((100% - 1196px) / 2));', TILE);
-
-const PACK = [
-  ['.why',     'left',  24], ['.why',     'right', 58],
-  ['.bred',    'left',  30], ['.bred',    'right', 68],
-  ['.yours',   'right', 26],
-  ['.fatesec', 'left',  16], ['.fatesec', 'right', 52],
-  ['#dogs',    'left',  22], ['#dogs',    'right', 60],
-  ['.medium',  'left',  18], ['.medium',  'right', 56],
-  ['.drop',    'right', 30],
-  ['.rules',   'left',  24], ['.rules',   'right', 64],
-  ['.choice',  'left',  28],
-  ['.cannon',  'left',  30]
-];
-const packFates = spreadFates(PACK.length);
-PACK.forEach(([sel, side, top], i) => {
-  marginDog(sel, 23 + i, packFates[i], side, top);
-});
-const ONES_MARGIN = [
-  ['.cannon',  'right', 30],
-  ['.why',     'right', 88],
-  ['.bred',    'left',  62],
-  ['.yours',   'left',  26],
-  ['.fatesec', 'left',  82],
-  ['#dogs',    'left',  86],
-  ['.medium',  'right', 86],
-  ['.drop',    'left',  30],
-  ['.rules',   'right', 88],
-  ['.choice',  'right', 28]
-];
-const onesFates = spreadFates(ONES_MARGIN.length);
-ONES_MARGIN.forEach(([sel, side, top], i) => {
-  marginDog(sel, 39 + i, onesFates[i], side, top);
-});
-
-function clearPackDogs() {
-  const copy = document.querySelectorAll('p, h1, h2, h3, h4, .kicker, .btn,'
-    + ' button, blockquote, li, .note, .cap, .flcap, .chip, .squig, .bar,'
-    + ' .straywrap');
-  document.querySelectorAll('.straywrap.packdog').forEach(w => {
-    const r = w.getBoundingClientRect();
-    if (!r.width || !r.height) return;
-    for (const el of copy) {
-      if (el === w || w.contains(el) || el.contains(w)) continue;
-      const q = el.getBoundingClientRect();
-      if (!q.width || !q.height) continue;
-      if (r.left < q.right - 4 && r.right > q.left + 4
-          && r.top < q.bottom - 4 && r.bottom > q.top + 4) {
-        w.remove();
-        return;
-      }
-    }
-  });
-}
-addEventListener('load', () => requestAnimationFrame(clearPackDogs));
 
 const parade = document.getElementById('parade');
 paintWhenNear(document.querySelector('footer'), () => {
