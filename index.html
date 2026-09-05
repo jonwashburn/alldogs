@@ -1658,7 +1658,7 @@ function stillKey(seed, state, size) { return seed + '_' + state + '_' + size; }
 function stillUrl(seed, state, size) {
   if (!STILLS) return null;
   const k = stillKey(seed, state, size);
-  return STILLS.items[k] ? STILLS.base + k + '.jpg' : null;
+  return STILLS.items[k] ? ((STILLS.items[k].base || STILLS.base) + k + '.jpg') : null;
 }
 function setStillSrc(img, url, onFail) {
   const half = img.width <= HALF_MAX ? url.replace(/\.jpg$/, '_h.jpg') : null;
