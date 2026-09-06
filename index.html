@@ -1777,17 +1777,22 @@ function oneOf(n) {
    by the round 1388 painter at 2400x800 (3000x1000 for retina). Two stacked
    images crossfade; the next one is fetched before it is shown. The caption
    is the year and the costume, never a name: working out whose it is is
-   the game. Nine bands, one dog each (Jon, 2026-09-05): the first five are
-   the finished ones, repainted on the paint layer (hero_r1388ones_lane);
-   the next four are the ones being worked on next, still in the round 1388
-   paint. A band with one dog does not turn. */
+   the game. Nine bands, one dog each (Jon, 2026-09-05): first the finished
+   ones, repainted on the paint layer (seven so far), then the ones being
+   worked on next, still in the round 1388 paint. A band with one dog does
+   not turn. */
 const HERO_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones/';
-const LANE_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_lane/';
-const LANE = [62, 38, 63, 70, 102];          /* finished: on the paint layer */
-const NEXT = [64, 68, 73, 111];              /* next up, in the order they will be done */
+const LANE_BASES = {   /* finished: on the paint layer; each batch has its own immutable prefix */
+  62: 'hero_r1388ones_lane/', 38: 'hero_r1388ones_lane/', 63: 'hero_r1388ones_lane/', 70: 'hero_r1388ones_lane/', 102: 'hero_r1388ones_lane/',
+  68: 'hero_r1388ones_lane2/', 111: 'hero_r1388ones_lane2/'
+};
+const LANE = [62, 38, 63, 70, 102, 68, 111];
+const NEXT = [64, 73];                       /* next up: the paint layer alone did not carry them, they need the hand */
 const SLOTS = LANE.concat(NEXT);
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
-function heroBase(seed) { return LANE.indexOf(seed) >= 0 ? LANE_BASE : HERO_BASE; }
+function heroBase(seed) {
+  return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
+}
 function heroBand(a, b, cap, cast, opts) {
   opts = opts || {};
   if (!a || !b || !cast.length) return;
