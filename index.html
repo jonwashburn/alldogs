@@ -30,6 +30,7 @@
   ::selection { background: var(--gold); color: var(--ink); }
   .wrap { max-width: 1260px; margin: 0 auto; padding: 0 32px; }
   section { padding: 52px 0 56px; position: relative; }
+  section[hidden] { display: none; }
   /* A dog perched on the next section's line hangs back over this one.
      Most sections stop well above it; these two run their long column
      right into the dog, so they leave it the room it needs. */
@@ -306,16 +307,18 @@
   @keyframes painting { 0%, 100% { background-color: #ece5d6; } 50% { background-color: #dcd3c0; } }
 
   /* the medium */
-  .fourlives { margin-top: 42px; display: grid;
-    grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
-  .fourlives .flnote { grid-column: 1 / -1; }
+  /* the two stills at half size, the note beside them, so the section is
+     half as tall as it was (Jon, 2026-09-05) */
+  .fourlives { margin-top: 30px; display: grid;
+    grid-template-columns: 1fr 1fr 2fr; gap: 26px; align-items: start; }
+  .fourlives .flnote { grid-column: auto; align-self: end; }
   .fl canvas, .fl img { width: 100%; height: auto; display: block; }
   .fl .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
     margin-top: 12px; font-size: 10px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase; }
-  .flnote { margin: 0; font-size: 14.5px; align-self: center;
-    opacity: 0.72; line-height: 1.62; grid-column: 1 / -1; }
-  .specs { margin-top: 46px; display: grid;
+  .flnote { margin: 0; font-size: 14.5px;
+    opacity: 0.72; line-height: 1.62; }
+  .specs { margin-top: 36px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
   .spec { border-top: 1px solid var(--ink); padding: 16px 0 0; }
   .spec span { display: block; font-size: 10px; letter-spacing: 2px;
@@ -323,7 +326,8 @@
     margin-bottom: 10px; }
   .spec p { font-size: 15px; opacity: 0.74; line-height: 1.62; }
   @media (max-width: 900px) {
-    .fourlives { grid-template-columns: 1fr; }
+    .fourlives { grid-template-columns: 1fr 1fr; }
+    .fourlives .flnote { grid-column: 1 / -1; }
     .specs { grid-template-columns: 1fr; gap: 28px; }
   }
 
@@ -1049,7 +1053,7 @@
     </div>
   </div>
   <div class="chipgroup">
-    <div class="glbl">The odds &middot; expression (the living faces; a zombie has its own)</div>
+    <div class="glbl">The odds &middot; expression</div>
     <div class="chips">
       <span class="chip">Happy <b>12.0%</b></span>
       <span class="chip">Grumpy <b>8.0%</b></span>
@@ -1061,7 +1065,7 @@
       <span class="chip">Mischievous <b>1.5%</b></span>
       <span class="chip none">Plain face <b>58.0%</b></span>
     </div>
-    <p class="fatenote" style="margin:10px 0 0">The seven dwarfs and one more. Each one is a few strokes over the eyes and mouth the dog already has: two bowed arcs and a tongue, two dashes driven down, a pink smear on the cheek, a slit and a smirk.</p>
+    <p class="fatenote" style="margin:14px 0 0">The living faces; a zombie has its own. The seven dwarfs and one more, each a few strokes over the eyes and mouth the dog already has: two bowed arcs and a tongue, two dashes driven down, a pink smear on the cheek, a slit and a smirk.</p>
   </div>
   <div class="chipgroup">
     <div class="glbl">The odds &middot; light (something the dog gives off, or that falls on it)</div>
@@ -1361,7 +1365,8 @@
   <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
 </section>
 
-<section id="dogs"><div class="wrap">
+<!-- the wall of all 141 is hidden for now (Jon, 2026-09-05); the markup and its script stay, drop the hidden attribute to bring it back -->
+<section id="dogs" hidden><div class="wrap">
   <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
   <p class="kicker">The collection</p>
   <h2>Every dog<br>its own drawing.</h2>
@@ -1772,11 +1777,17 @@ function oneOf(n) {
    by the round 1388 painter at 2400x800 (3000x1000 for retina). Two stacked
    images crossfade; the next one is fetched before it is shown. The caption
    is the year and the costume, never a name: working out whose it is is
-   the game. The sixteen at the top are the artist's picks; each band lower
-   on the page holds two of them and one of the twenty-five new scenes. */
+   the game. Nine bands, one dog each (Jon, 2026-09-05): the first five are
+   the finished ones, repainted on the paint layer (hero_r1388ones_lane);
+   the next four are the ones being worked on next, still in the round 1388
+   paint. A band with one dog does not turn. */
 const HERO_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones/';
+const LANE_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_lane/';
+const LANE = [62, 38, 63, 70, 102];          /* finished: on the paint layer */
+const NEXT = [64, 68, 73, 111];              /* next up, in the order they will be done */
+const SLOTS = LANE.concat(NEXT);
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
-const SCENES = [121, 127, 128, 134, 131, 118, 140, 120];
+function heroBase(seed) { return LANE.indexOf(seed) >= 0 ? LANE_BASE : HERO_BASE; }
 function heroBand(a, b, cap, cast, opts) {
   opts = opts || {};
   if (!a || !b || !cast.length) return;
@@ -1786,7 +1797,8 @@ function heroBand(a, b, cap, cast, opts) {
   let front = a, back = b, timer = 0, started = false, visible = true;
   [a, b].forEach(el => { el.dataset.dog = '1'; el.dataset.state = 'faithful'; el.sizes = '100vw'; });
   function urls(seed) {
-    return [HERO_BASE + 'hero_faithful_' + seed + '.jpg', HERO_BASE + 'hero_faithful_' + seed + '_3000.jpg'];
+    const base = heroBase(seed);
+    return [base + 'hero_faithful_' + seed + '.jpg', base + 'hero_faithful_' + seed + '_3000.jpg'];
   }
   function load(el, seed) {
     return new Promise(res => {
@@ -1839,12 +1851,11 @@ function heroBand(a, b, cap, cast, opts) {
   }
 }
 heroBand(document.getElementById('heroDog'), document.getElementById('heroDog2'),
-  document.getElementById('heroName'), PICKS, { eager: true });
+  document.getElementById('heroName'), [SLOTS[0]], { eager: true, start: 0 });
 document.querySelectorAll('section.feature').forEach((sec, n) => {
   const imgs = sec.querySelectorAll('img.hero-still');
-  const cast = [PICKS[(2 * n) % PICKS.length], PICKS[(2 * n + 1) % PICKS.length]];
-  if (SCENES[n] !== undefined) cast.push(SCENES[n]);
-  heroBand(imgs[0], imgs[1], sec.querySelector('.hero-name'), cast, { start: 0, gap: 11000 });
+  const seed = SLOTS[n + 1] !== undefined ? SLOTS[n + 1] : PICKS[(n + 1) % PICKS.length];
+  heroBand(imgs[0], imgs[1], sec.querySelector('.hero-name'), [seed], { start: 0 });
 });
 
 /* endings: five one of ones, framed stills, no cutout */
@@ -1902,9 +1913,11 @@ function clampSeed(n) {
   n = (n >>> 0) || 1;
   return ((n - 1) % ONES_N) + 1;
 }
+/* the one that is yours is one of the five finished ones (Jon, 2026-09-05);
+   a visitor who was given another dog earlier is given one of these instead */
 let yseed = clampSeed(parseInt(localStorage.getItem('alldogs_seed'), 10) || 0);
-if (yseed < 1 || yseed > ONES_N) {
-  yseed = 1 + Math.floor(Math.random() * ONES_N);
+if (LANE.indexOf(yseed) < 0) {
+  yseed = LANE[Math.floor(Math.random() * LANE.length)];
   localStorage.setItem('alldogs_seed', String(yseed));
 }
 let ystate = localStorage.getItem('alldogs_state') === 'zombie' ? 'zombie' : 'faithful';
