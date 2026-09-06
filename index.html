@@ -34,7 +34,7 @@
   /* A dog perched on the next section's line hangs back over this one.
      Most sections stop well above it; these two run their long column
      right into the dog, so they leave it the room it needs. */
-  .why { padding-bottom: 140px; }
+  .why { padding-bottom: 72px; }
   .rules { padding-bottom: 120px; }
   .fatesec { padding-bottom: 74px; }
   /* The 1984 dog hangs off this section's bottom corner and half of it lands
@@ -641,15 +641,39 @@
   }
 
   /* why */
-  .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
-    margin-top: 38px; }
+  /* Two hands: the photograph on the left, the fridge drawing on the right.
+     Each column is a subgrid of the same four rows (picture, caption,
+     heading, body) so the headings and the text sit on one line
+     across the page even when one heading wraps. */
+  .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 64px;
+    grid-auto-rows: auto; margin-top: 44px; }
+  .reason { display: grid; grid-template-rows: subgrid; grid-row: span 4;
+    align-content: start; }
+  .print { display: flex; align-items: flex-end; height: clamp(200px, 22vw, 320px);
+    margin-bottom: 18px; }
+  .print img { height: 100%; width: auto; max-width: 100%; display: block; }
+  .print.photo img { object-fit: cover; border: 2px solid var(--ink);
+    border-radius: 3px; background: var(--paper); padding: 4px;
+    box-sizing: border-box; box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); }
+  .print.drawing img { aspect-ratio: 1; transform: rotate(-1.3deg); }
+  .print.drawing img.painting { background: #ece9df; }
+  .handcap { font-size: 10px; letter-spacing: 3px; font-weight: 700;
+    text-transform: uppercase; opacity: 0.6; margin: 0 0 22px; }
+  .handcap b { color: var(--ink); opacity: 1; margin-right: 14px; }
   .reason h3 { font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 16px; }
   .reason p { font-size: 16.5px; opacity: 0.78; line-height: 1.65;
     margin-bottom: 14px; }
   .reason a { color: var(--ink); font-weight: 700; }
-  .reason { display: flex; flex-direction: column; }
-  @media (max-width: 860px) { .whygrid { grid-template-columns: 1fr;
-    gap: 44px; } }
+  .whynote { margin-top: 36px; }
+  @media (max-width: 860px) {
+    .whygrid { grid-template-columns: 1fr; gap: 0; }
+    .reason { display: block; }
+    .reason + .reason { margin-top: 48px; }
+    .print { height: auto; margin-bottom: 16px; }
+    .print.photo img { width: 100%; height: auto; }
+    .print.drawing img { width: 68%; height: auto; }
+    .handcap { letter-spacing: 2px; }
+  }
 
   footer { padding: 52px 0 72px; border-top: 1px solid var(--hair);
     text-align: center; }
@@ -694,10 +718,10 @@
   that has no record. The first half, <a href="https://exaltedlove.com/">HOLY</a>,
   is that adolescence described from memory to a machine. This half is
   the same childhood in the other hand, painted by a machine I am still
-  teaching, and then played: a ninety-day performance by friends of
-  friends, one dog each, every move signed on the collar. The artwork is
-  whatever is left when the ninety days end. The artist draws the dogs.
-  The owners write the story.</p>
+  teaching, then played as a ninety-day performance by friends of
+  friends: one dog each, every move signed on the collar. The artwork is
+  whatever is left when the ninety days end. The artist draws the dogs;
+  the owners write the story.</p>
   <div class="cta">
     <a class="btn hot" href="#deal">How the ninety days work</a>
     <a class="btn" href="#fates">The two fates</a>
@@ -711,40 +735,48 @@
   <h2>The record of a childhood<br>that has no record.</h2>
   <div class="whygrid">
     <div class="reason">
+      <a class="print photo" href="https://exaltedlove.com/" aria-label="HOLY, the photographs"><img src="https://exaltedlove.com/showimg/restore/e073523456bb.png?w=900" width="900" height="600" alt="" loading="eager" decoding="async"></a>
+      <p class="handcap"><b>HOLY</b>The camera was in the house.</p>
       <h3>Nobody has a picture.</h3>
+      <div class="body">
       <p>My other collection, <a href="https://exaltedlove.com/">HOLY</a>,
       is an evangelical adolescence between 1975 and 1995: church buses,
       revival carpet, motel pools, baptisms, hard flash. My mom's photo
-      albums were the most prized things she owned. They were lost in
-      hasty moves and in storage units nobody kept paying for, and by the
-      time I went back for them there was nothing left to restore. Nobody
+      albums were what she prized most. They were lost in hasty moves and
+      storage units nobody kept paying for, and by the time I was ready to
+      go back for them, and I mean ready in the way you have to be ready
+      for something like that, there was nothing left to restore. Nobody
       has a picture of those years. Nobody photographs the part you
       remember anyway.</p>
       <p>So I described that childhood from memory to a machine that was
-      not there, and what came back is HOLY. There is no original anywhere
-      in it. The only object in the world that light from those years
-      actually touched is the camera.</p>
+      not there, and what came back is HOLY. None of its pictures has a
+      source photograph. The only object in the world that light from
+      those years actually touched is the camera.</p>
+      </div>
     </div>
     <div class="reason">
+      <div class="print drawing"><img id="whyDog" class="framedpick still painting" width="1000" height="1000" alt="" loading="eager" decoding="async"></div>
+      <p class="handcap"><b>ALL DOGS</b>The collar is on the dog.</p>
       <h3>So I am making the record anyway.</h3>
-      <p>I grew up and built machines that can see, and I spend my
-      afternoons teaching them. ALL DOGS is the same childhood in the
-      other hand. The painter is a program I wrote, and I built it to
-      paint the way a kid paints: fat outline, the paint running out
-      mid-stroke, the eye a little wrong. These are the drawings that
-      would have been on the fridge, made now by a machine I am still
+      <div class="body">
+      <p>I grew up and built machines that can see. ALL DOGS is the same
+      childhood in the other hand. The painter is a program I wrote to
+      paint the way a kid paints: a fat outline, paint running out
+      mid-stroke, an eye a little wrong. These are the drawings that would
+      have been on the fridge, made now by a machine I spend my afternoons
       teaching.</p>
       <p>A record is not a person. The albums would not have brought
-      anyone back either. You make the record anyway. I can paint the
-      dog. I cannot paint who held on to it, so the collar writes that
-      part: your handle from the first day, and whether you kept the dog
-      or let it go, there for good.</p>
+      anyone back either. You make the record anyway. I can paint the dog.
+      I cannot paint who held on to it. The collar records that part: your
+      handle from the first day, and whether you kept the dog or sold it,
+      there for good.</p>
+      </div>
     </div>
   </div>
-  <p class="dropnote">HOLY and ALL DOGS are one childhood in two hands: the
-  one described from memory to a machine, and the one drawn by a machine
-  I am still teaching. The camera and the collar are the same object a
-  generation apart, the one thing that actually touched the life.</p>
+  <p class="dropnote whynote">HOLY and ALL DOGS are one childhood in two
+  hands: one described from memory to a machine, the other drawn by a
+  machine I am still teaching. The camera and the collar are a generation
+  apart, and they are the one thing that actually touched the life.</p>
 </div></section>
 
 <section class="creed"><div class="wrap">
@@ -1877,6 +1909,9 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   const seed = SLOTS[n + 1] !== undefined ? SLOTS[n + 1] : PICKS[(n + 1) % PICKS.length];
   heroBand(imgs[0], imgs[1], sec.querySelector('.hero-name'), [seed], { start: 0 });
 });
+
+/* why: the fridge drawing, Fred (43) */
+showStill(document.getElementById('whyDog'), 43, 'faithful');
 
 /* endings: five one of ones, framed stills, no cutout */
 [['cr_adopt', 8, 'faithful'], ['cr_love', 9, 'faithful'],
