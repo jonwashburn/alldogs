@@ -1788,8 +1788,11 @@ const LANE_BASES = {   /* finished: on the paint layer; each batch has its own i
   68: 'hero_r1388ones_lane2/', 111: 'hero_r1388ones_lane2/'
 };
 const LANE = [62, 38, 63, 70, 102, 68, 111];
-const HD_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_hd/';
-const HD = [62, 38, 63, 70, 102, 68, 111, 64, 73];   /* rendered as the 2:1 frame at 2400/3600/5120 */
+const HD_BASES = {   /* rendered as the 2:1 frame at 2400/3600/5120; the seven finished carry the paint at Jon's setting (mid) */
+  62: 'hero_r1388ones_mid/', 38: 'hero_r1388ones_mid/', 63: 'hero_r1388ones_mid/', 70: 'hero_r1388ones_mid/',
+  102: 'hero_r1388ones_mid/', 68: 'hero_r1388ones_mid/', 111: 'hero_r1388ones_mid/',
+  64: 'hero_r1388ones_hd/', 73: 'hero_r1388ones_hd/'
+};
 const NEXT = [64, 73];                       /* next up: the paint layer alone did not carry them, they need the hand */
 const SLOTS = LANE.concat(NEXT);
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
@@ -1808,8 +1811,8 @@ function heroBand(a, b, cap, cast, opts) {
   function urls(seed) {
     /* the nine on the bands are rendered as the 2:1 frame itself at 2400, 3600 and 5120 wide
        (hero_r1388ones_hd, 2026-09-05: the 3:1 pictures upscaled on a 5K monitor); the rest keep the 3:1 pair */
-    if (HD.indexOf(seed) >= 0) {
-      const f = HD_BASE + 'hero_faithful_' + seed + '_';
+    if (HD_BASES[seed]) {
+      const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
       return { src: f + '2400.jpg', srcset: f + '2400.jpg 2400w, ' + f + '3600.jpg 3600w, ' + f + '5120.jpg 5120w' };
     }
     const base = heroBase(seed);
