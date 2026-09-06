@@ -115,7 +115,8 @@
   /* feature bands: the same wide painting between the chapters, no title tag,
      the caption under it at the right like the hero */
   .feature { padding: 0 0 26px; border-top: none; }
-  .feature .herobanner { aspect-ratio: 3 / 1; min-height: 180px; }
+  /* the pictures are painted as a 2:1 frame; the band is the same frame, so nothing is cropped (Jon: 3:1 cut the feet) */
+  .feature .herobanner { aspect-ratio: 2 / 1; min-height: 180px; }
   @media (max-width: 700px) { .feature .herobanner { aspect-ratio: 1 / 1; } }
   .hero .tagline { margin-top: 38px; font-size: 11px; letter-spacing: 3px;
     text-transform: uppercase; font-weight: 700; opacity: 0.85; }
