@@ -94,8 +94,10 @@ const CAP = window.ALLDOGS_CAP || {};
 /* the zombies (Jon 2026-09-06): the Murakami zombie for every finished dog, one immutable batch */
 const ZOMBIE_BATCH = PUB + 'stills/r1388ones_zombie_murakami/';
 function url(seed, state) {
-  if (state === 'zombie') return { half: ZOMBIE_BATCH + seed + '_zombie_1000_h.jpg', full: ZOMBIE_BATCH + seed + '_zombie_1000.jpg' };
-  if (BATCH[seed]) return { half: PUB + BATCH[seed] + seed + '_' + state + '_1000_h.jpg', full: PUB + BATCH[seed] + seed + '_' + state + '_1000.jpg' };
+  /* three sizes: 500 for phones, 1000, and the 1400 master for a retina tile (a 530 css px tile on a 2x screen wants 1060 device px,
+     so the 1000 was being stretched); 77 exists only at 1000 */
+  if (state === 'zombie') return { half: ZOMBIE_BATCH + seed + '_zombie_1000_h.jpg', full: ZOMBIE_BATCH + seed + '_zombie_1000.jpg', big: seed === 77 ? null : ZOMBIE_BATCH + seed + '_zombie_1400.jpg' };
+  if (BATCH[seed]) return { half: PUB + BATCH[seed] + seed + '_' + state + '_1000_h.jpg', full: PUB + BATCH[seed] + seed + '_' + state + '_1000.jpg', big: seed === 77 ? null : PUB + BATCH[seed] + seed + '_' + state + '_1400.jpg' };
   if (!STILLS) return null;
   const k = seed + '_' + state + '_1000', it = STILLS.items[k];
   if (!it) return null;
@@ -115,7 +117,7 @@ for (let seed = 1; seed <= 141; seed++) {
   const f = d.querySelector('img.f'), z = d.querySelector('img.z');
   const uf = url(seed, 'faithful'), uz = url(seed, 'zombie');
   const SIZES = '(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw';
-  const put = (img, u) => { img.onerror = () => { img.onerror = null; img.removeAttribute('srcset'); img.src = u.full; }; img.srcset = u.half + ' 500w, ' + u.full + ' 1000w'; img.sizes = SIZES; img.src = u.full; };
+  const put = (img, u) => { img.onerror = () => { img.onerror = null; img.removeAttribute('srcset'); img.src = u.full; }; img.srcset = u.half + ' 500w, ' + u.full + ' 1000w' + (u.big ? ', ' + u.big + ' 1400w' : ''); img.sizes = SIZES; img.src = u.full; };
   if (uf) put(f, uf);
   if (uz) put(z, uz);
   /* rest on a dog: the zombie; tap on a phone: the zombie stays until the next tap */
