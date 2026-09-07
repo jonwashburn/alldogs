@@ -1811,7 +1811,7 @@ function oneOf(n) {
    is the year and the costume, never a name: working out whose it is is
    the game. Nine bands, one dog each (Jon, 2026-09-05): the hero is 62, the
    eight below it are drawn each visit from the finished dogs (the seven on
-   their grounds, then the hundred and four from 2026-09-07). A band with one
+   their grounds, then the hundred and twenty-eight from 2026-09-07). A band with one
    dog does not turn. */
 const HERO_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones/';
 const LANE_BASES = {   /* finished: on the paint layer; each batch has its own immutable prefix */
@@ -1826,17 +1826,18 @@ const HD_BASES = {   /* rendered as the 2:1 frame at 2400/3600/5120; the seven f
   102: 'hero_r1388ones_grounds/', 68: 'hero_r1388ones_grounds/', 111: 'hero_r1388ones_grounds/',
   64: 'hero_r1388ones_hd/', 73: 'hero_r1388ones_hd/'
 };
-/* 2026-09-07: 104 more one-of-ones through the same recipe as the six (the deploy painter's marks
+/* 2026-09-07: 128 more one-of-ones through the same recipe as the six (the deploy painter's marks
    recorded, re-laid on the ground the seeded draw gives each seed, photographed at Jon's setting),
-   rendered as the 2:1 frame at 2400/3600/5120 under hero_r1388ones_all. The 24 whose rooms carry
-   stamped sprites (stars, birds, bees, snow) are held back: the recorder keeps only a sprite's box,
-   so the replay cannot lay it. The six lying dogs (78 80 100 130 135 138) keep their round 1388 stills. */
-const MORE = [1, 2, 3, 4, 5, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 23, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 40, 41, 42, 44, 45, 46, 48, 49, 51, 52,
-  53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 67, 69, 71, 72, 73, 74, 76, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 101, 104, 105, 107, 108, 109, 110,
-  112, 114, 115, 116, 117, 118, 119, 120, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 140, 141];
+   rendered as the 2:1 frame at 2400/3600/5120 under hero_r1388ones_all. 104 in the first pass; the 24
+   whose rooms carry stamped sprites (stars, birds, bees, snow) followed once the recorder kept each
+   stamp's pixels and the replay laid them. The six lying dogs (78 80 100 130 135 138) keep their
+   round 1388 stills. */
+const MORE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
+  53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 69, 71, 72, 73, 74, 75, 76, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 103, 104, 105, 106, 107, 108, 109, 110,
+  112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141];
 MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
 /* the eight bands each carry one finished dog and do not turn; which eight is drawn fresh on every
-   visit from the six and the hundred and four, the six first when the draw lands on them */
+   visit from the six and the hundred and twenty-eight */
 function drawBands(n) {
   const pool = LANE.slice(1).concat(MORE), out = [];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
