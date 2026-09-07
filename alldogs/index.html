@@ -91,7 +91,10 @@ BATCH[62] = 'stills/r1388ones_paint_cotton/';
 BATCH[77] = 'ones_flat77/';
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
 const CAP = window.ALLDOGS_CAP || {};
+/* the zombies (Jon 2026-09-06): the Murakami zombie for every finished dog, one immutable batch */
+const ZOMBIE_BATCH = PUB + 'stills/r1388ones_zombie_murakami/';
 function url(seed, state) {
+  if (state === 'zombie') return { half: ZOMBIE_BATCH + seed + '_zombie_1000_h.jpg', full: ZOMBIE_BATCH + seed + '_zombie_1000.jpg' };
   if (BATCH[seed]) return { half: PUB + BATCH[seed] + seed + '_' + state + '_1000_h.jpg', full: PUB + BATCH[seed] + seed + '_' + state + '_1000.jpg' };
   if (!STILLS) return null;
   const k = seed + '_' + state + '_1000', it = STILLS.items[k];
