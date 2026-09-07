@@ -1731,7 +1731,7 @@ const HALF_MAX = 1000;
 function stillKey(seed, state, size) { return seed + '_' + state + '_' + size; }
 /* the zombies (Jon 2026-09-06): every finished dog's zombie is the Murakami one, six mouths of sharp teeth,
    four coat families, a band of skulls on some walls; one immutable batch, 1000 and 1400 with halves */
-const ZOMBIE_BATCH = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_zombie_murakami/';
+const ZOMBIE_BATCH = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_zombie_murakami_b/';
 function stillUrl(seed, state, size) {
   if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 141) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
   if (!STILLS) return null;
