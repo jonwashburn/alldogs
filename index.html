@@ -251,11 +251,20 @@
   .fatepic .pic { position: relative; aspect-ratio: 1; overflow: hidden;
     background: #ece5d6; border: 2px solid var(--ink); border-radius: 4px;
     box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); }
+  /* two layers, each holding one finished dog in both fates; the dogs rotate
+     through by crossfading the layers, the zombie by crossfading inside one */
+  .fatepic .layer { position: absolute; inset: 0; opacity: 0;
+    transition: opacity 0.9s ease; }
+  .fatepic .layer.on { opacity: 1; }
   .fatepic .pic img { position: absolute; inset: 0; width: 100%; height: 100%;
     display: block; object-fit: cover; transition: opacity 0.22s ease; }
   .fatepic .pic img.z { opacity: 0; }
   .fatepic.on .pic img.z { opacity: 1; }
   .fatepic.on .pic img.f { opacity: 0; }
+  .fatepic figcaption .who { display: block; margin-bottom: 4px; opacity: 1;
+    font-size: 13px; }
+  .fatepic figcaption .who b { color: var(--ink); margin-right: 8px; }
+  .fatepic figcaption .who b + b { color: var(--blue); }
   .fatepic .ztag { position: absolute; left: 12px; top: 12px; font-size: 10px;
     letter-spacing: 2px; font-weight: 700; text-transform: uppercase;
     background: var(--red); color: var(--paper); padding: 4px 8px 3px;
@@ -270,7 +279,7 @@
     .fatepic { max-width: 520px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .fatepic .pic img, .fatepic .ztag { transition: none; } }
+    .fatepic .pic img, .fatepic .ztag, .fatepic .layer { transition: none; } }
 
   .stack { margin-top: 52px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -1075,13 +1084,19 @@
         </div>
       </div>
     </div>
-    <figure class="fatepic" id="fatepic" tabindex="0" aria-label="One dog, alive. Rest on it or tap it to see the zombie.">
+    <figure class="fatepic" id="fatepic" tabindex="0" aria-label="One finished dog, alive. Rest on it or tap it to see the zombie.">
       <div class="pic">
-        <img id="f_faithful" class="f" width="1000" height="1000" alt="" decoding="async">
-        <img id="f_zombie" class="z" width="1000" height="1000" alt="" decoding="async">
+        <div class="layer" id="fateA">
+          <img class="f painting" width="1400" height="1400" alt="" decoding="async">
+          <img class="z" width="1400" height="1400" alt="" decoding="async">
+        </div>
+        <div class="layer" id="fateB">
+          <img class="f" width="1400" height="1400" alt="" decoding="async">
+          <img class="z" width="1400" height="1400" alt="" decoding="async">
+        </div>
         <span class="ztag">zombie</span>
       </div>
-      <figcaption>Rest on the dog, or tap it, to see the <b>zombie</b>.</figcaption>
+      <figcaption><span class="who" id="fateWho"></span>Rest on the dog, or tap it, to see the <b>zombie</b>.</figcaption>
     </figure>
   </div>
   <div class="stack">
@@ -1977,23 +1992,83 @@ showStill(document.getElementById('whyDog'), 43, 'faithful');
   showStill(el, seed, st);
 });
 
-/* two fates: one dog, both fates. Rest on it for the zombie; on a phone a
-   tap holds the zombie until the next tap. */
-paintWhenNear(document.querySelector('.fatesec'), () => {
-  showStill(document.getElementById('f_faithful'), 1, 'faithful');
-  showStill(document.getElementById('f_zombie'), 1, 'zombie');
-});
+/* two fates: the finished one-of-ones, one at a time, both fates of the same
+   dog at 1400. A fresh dog opens each visit, and while nobody is resting on
+   it another finished dog is rotated in every so often. Rest on it (tap on a
+   phone, the tap holds until the next tap) and it is the zombie. */
 (function () {
   const d = document.getElementById('fatepic');
   if (!d) return;
-  d.addEventListener('mouseenter', () => d.classList.add('on'));
-  d.addEventListener('mouseleave', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+  const PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
+  /* the square stills of the finished dogs sit by batch on immutable prefixes,
+     faithful and zombie, 1000 and 1400 */
+  const FIN = {};
+  FIN[62] = 'stills/r1388ones_paint_cotton/';
+  [38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
+  MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
+  /* 77 is served as the painter drew him (see FLAT), and that exists only at 1000 */
+  const finUrl = (seed, state) => seed === 77
+    ? PUB + 'ones_flat77/77_' + state + '_1000.jpg'
+    : PUB + FIN[seed] + seed + '_' + state + '_1400.jpg';
+  const pool = LANE.concat(MORE);
+  const order = shuffle(pool.slice());
+  const layers = [document.getElementById('fateA'), document.getElementById('fateB')];
+  const who = document.getElementById('fateWho');
+  const GAP = 9000;
+  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let k = 0, front = 0, timer = 0, started = false, resting = false;
+
+  function fetchPair(seed) {
+    return Promise.all(['faithful', 'zombie'].map(st => new Promise(res => {
+      const im = new Image();
+      im.onload = () => res(true); im.onerror = () => res(false);
+      im.src = finUrl(seed, st);
+    }))).then(ok => ok[0] && ok[1]);
+  }
+  function lay(layer, seed) {
+    const f = layer.querySelector('img.f'), z = layer.querySelector('img.z');
+    [f, z].forEach(im => { im.dataset.seed = String(seed); im.dataset.dog = '1'; im.classList.remove('painting'); });
+    f.dataset.state = 'faithful'; z.dataset.state = 'zombie';
+    f.src = finUrl(seed, 'faithful'); z.src = finUrl(seed, 'zombie');
+  }
+  function caption(seed) {
+    who.textContent = '';
+    const y = document.createElement('b'); y.textContent = capYear(seed); who.appendChild(y);
+    const nm = capName(seed);
+    if (nm) { const n = document.createElement('b'); n.textContent = nm; who.appendChild(n); }
+    who.appendChild(document.createTextNode(capNote(seed)));
+  }
+  function show(seed) {
+    const back = 1 - front;
+    lay(layers[back], seed);
+    layers[back].classList.add('on');
+    layers[front].classList.remove('on');
+    front = back;
+    caption(seed);
+  }
+  function next() {
+    if (document.hidden || resting || d.dataset.pinned) return;
+    const n = (k + 1) % order.length;
+    fetchPair(order[n]).then(ok => { if (!ok || resting || d.dataset.pinned) return; k = n; show(order[k]); });
+  }
+  function start() {
+    if (started) return; started = true;
+    fetchPair(order[k]).then(ok => {
+      if (!ok) { k = (k + 1) % order.length; }
+      show(order[k]);
+      if (calm && order.length > 1) timer = setInterval(next, GAP);
+    });
+  }
+  paintWhenNear(document.querySelector('.fatesec'), start);
+
+  d.addEventListener('mouseenter', () => { resting = true; d.classList.add('on'); });
+  d.addEventListener('mouseleave', () => { resting = false; if (!d.dataset.pinned) d.classList.remove('on'); });
   d.addEventListener('click', () => {
     if (d.dataset.pinned) { delete d.dataset.pinned; d.classList.remove('on'); }
     else { d.dataset.pinned = '1'; d.classList.add('on'); }
   });
-  d.addEventListener('focus', () => d.classList.add('on'));
-  d.addEventListener('blur', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+  d.addEventListener('focus', () => { resting = true; d.classList.add('on'); });
+  d.addEventListener('blur', () => { resting = false; if (!d.dataset.pinned) d.classList.remove('on'); });
 })();
 
 /* medium: one of one, two lives */
