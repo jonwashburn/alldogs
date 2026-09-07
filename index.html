@@ -685,11 +685,12 @@
     align-content: start; }
   .print { display: flex; align-items: flex-end; height: clamp(200px, 22vw, 320px);
     margin-bottom: 18px; }
-  .print img { height: 100%; width: auto; max-width: 100%; display: block; }
-  .print.photo img { object-fit: cover; border: 2px solid var(--ink);
+  /* both pictures are the same 3:2 print in the same frame; the dog is the wide
+     hero render cropped to it */
+  .print img { height: 100%; width: auto; max-width: 100%; display: block;
+    aspect-ratio: 3 / 2; object-fit: cover; border: 2px solid var(--ink);
     border-radius: 3px; background: var(--paper); padding: 4px;
     box-sizing: border-box; box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); }
-  .print.drawing img { aspect-ratio: 1; transform: rotate(-1.3deg); }
   .print.drawing img.painting { background: #ece9df; }
   .handcap { font-size: 10px; letter-spacing: 3px; font-weight: 700;
     text-transform: uppercase; opacity: 0.6; margin: 0 0 22px; }
@@ -704,8 +705,7 @@
     .reason { display: block; }
     .reason + .reason { margin-top: 48px; }
     .print { height: auto; margin-bottom: 16px; }
-    .print.photo img { width: 100%; height: auto; }
-    .print.drawing img { width: 68%; height: auto; }
+    .print img { width: 100%; height: auto; }
     .handcap { letter-spacing: 2px; }
   }
 
@@ -789,7 +789,7 @@
       </div>
     </div>
     <div class="reason">
-      <div class="print drawing"><img id="whyDog" class="framedpick still painting" width="1000" height="1000" alt="" loading="eager" decoding="async"></div>
+      <div class="print drawing"><img id="whyDog" class="still painting" width="900" height="600" alt="" loading="eager" decoding="async"></div>
       <p class="handcap"><b>ALL DOGS</b>The collar is on the dog.</p>
       <h3>So I am making the record anyway.</h3>
       <div class="body">
@@ -1911,6 +1911,19 @@ const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
 }
+/* the wide picture of a finished dog: the nine on the bands are rendered as the 2:1 frame itself
+   at 2400, 3600 and 5120 wide (hero_r1388ones_hd, 2026-09-05: the 3:1 pictures upscaled on a 5K
+   monitor); 77 is one flat 2000; the rest keep the 3:1 pair. The why picture crops the same file. */
+function heroUrls(seed) {
+  if (HD_BASES[seed]) {
+    const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
+    return { src: f + '2400.jpg', srcset: f + '2400.jpg 2400w, ' + f + '3600.jpg 3600w, ' + f + '5120.jpg 5120w' };
+  }
+  if (FLAT[seed]) { const f = FLAT[seed] + 'hero_faithful_' + seed + '_2000.jpg'; return { src: f, srcset: f + ' 2000w' }; }
+  const base = heroBase(seed);
+  const wide = base + 'hero_faithful_' + seed + '.jpg', retina = base + 'hero_faithful_' + seed + '_3000.jpg';
+  return { src: wide, srcset: wide + ' 2400w, ' + retina + ' 3000w' };
+}
 function heroBand(a, b, cap, cast, opts) {
   opts = opts || {};
   if (!a || !b || !cast.length) return;
@@ -1920,18 +1933,7 @@ function heroBand(a, b, cap, cast, opts) {
   let front = a, back = b, timer = 0, started = false, visible = true;
   /* the frame is 2:1 (1:1 on a phone) and the picture covers it, so a phone needs a picture about twice its width */
   [a, b].forEach(el => { el.dataset.dog = '1'; el.dataset.state = 'faithful'; el.sizes = '(max-width: 700px) 200vw, 100vw'; });
-  function urls(seed) {
-    /* the nine on the bands are rendered as the 2:1 frame itself at 2400, 3600 and 5120 wide
-       (hero_r1388ones_hd, 2026-09-05: the 3:1 pictures upscaled on a 5K monitor); the rest keep the 3:1 pair */
-    if (HD_BASES[seed]) {
-      const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
-      return { src: f + '2400.jpg', srcset: f + '2400.jpg 2400w, ' + f + '3600.jpg 3600w, ' + f + '5120.jpg 5120w' };
-    }
-    if (FLAT[seed]) { const f = FLAT[seed] + 'hero_faithful_' + seed + '_2000.jpg'; return { src: f, srcset: f + ' 2000w' }; }
-    const base = heroBase(seed);
-    const wide = base + 'hero_faithful_' + seed + '.jpg', retina = base + 'hero_faithful_' + seed + '_3000.jpg';
-    return { src: wide, srcset: wide + ' 2400w, ' + retina + ' 3000w' };
-  }
+  const urls = heroUrls;
   function load(el, seed) {
     return new Promise(res => {
       const u = urls(seed);
@@ -1990,16 +1992,22 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   heroBand(imgs[0], imgs[1], sec.querySelector('.hero-name'), [seed], { start: 0 });
 });
 
-/* why: the fridge drawing is the tenth finished dog of this visit's draw, at 1000
-   (77 as the painter drew him); falls back to the round 1388 still */
+/* why: the picture beside the photograph is the tenth finished dog of this visit's draw, the
+   same wide render the hero and bands use, cropped to the photograph's 3:2 (Jon 2026-09-06);
+   falls back to the square finished still */
 (function () {
   const im = document.getElementById('whyDog'), seed = SLOTS[9];
   if (!im || seed === undefined) return;
   im.dataset.seed = String(seed); im.dataset.state = 'faithful'; im.dataset.dog = '1';
+  im.sizes = '(max-width: 860px) 100vw, 40vw';
   im.onload = () => im.classList.remove('painting');
-  im.onerror = () => { im.onerror = null; showStill(im, seed, 'faithful'); };
-  im.src = seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
-    : FIN_PUB + FIN[seed] + seed + '_faithful_1000.jpg';
+  im.onerror = () => {
+    im.onerror = null; im.removeAttribute('srcset');
+    im.src = seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
+      : FIN_PUB + FIN[seed] + seed + '_faithful_1000.jpg';
+  };
+  const u = heroUrls(seed);
+  im.srcset = u.srcset; im.src = u.src;
 })();
 
 /* endings: five one of ones, framed stills, no cutout */
