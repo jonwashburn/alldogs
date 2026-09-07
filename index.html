@@ -1889,13 +1889,20 @@ MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
 const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
 delete HD_BASES[77];
 /* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
-   on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight) */
+   on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight). A tenth
+   is drawn with them for the why section's fridge drawing, so it never doubles a band. */
 function drawBands(n) {
   const pool = LANE.concat(MORE), out = [];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
   return out;
 }
-const SLOTS = drawBands(9);
+const SLOTS = drawBands(10);
+/* the square stills of the finished dogs sit by batch on immutable prefixes, faithful and zombie, 1000 and 1400 */
+const FIN_PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
+const FIN = {};
+FIN[62] = 'stills/r1388ones_paint_cotton/';
+[38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
+MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
@@ -1979,8 +1986,17 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   heroBand(imgs[0], imgs[1], sec.querySelector('.hero-name'), [seed], { start: 0 });
 });
 
-/* why: the fridge drawing, Fred (43) */
-showStill(document.getElementById('whyDog'), 43, 'faithful');
+/* why: the fridge drawing is the tenth finished dog of this visit's draw, at 1000
+   (77 as the painter drew him); falls back to the round 1388 still */
+(function () {
+  const im = document.getElementById('whyDog'), seed = SLOTS[9];
+  if (!im || seed === undefined) return;
+  im.dataset.seed = String(seed); im.dataset.state = 'faithful'; im.dataset.dog = '1';
+  im.onload = () => im.classList.remove('painting');
+  im.onerror = () => { im.onerror = null; showStill(im, seed, 'faithful'); };
+  im.src = seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
+    : FIN_PUB + FIN[seed] + seed + '_faithful_1000.jpg';
+})();
 
 /* endings: five one of ones, framed stills, no cutout */
 [['cr_adopt', 8, 'faithful'], ['cr_love', 9, 'faithful'],
@@ -1999,19 +2015,14 @@ showStill(document.getElementById('whyDog'), 43, 'faithful');
 (function () {
   const d = document.getElementById('fatepic');
   if (!d) return;
-  const PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
-  /* the square stills of the finished dogs sit by batch on immutable prefixes,
-     faithful and zombie, 1000 and 1400 */
-  const FIN = {};
-  FIN[62] = 'stills/r1388ones_paint_cotton/';
-  [38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
-  MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
+  const PUB = FIN_PUB;
   /* 77 is served as the painter drew him (see FLAT), and that exists only at 1000 */
   const finUrl = (seed, state) => seed === 77
     ? PUB + 'ones_flat77/77_' + state + '_1000.jpg'
     : PUB + FIN[seed] + seed + '_' + state + '_1400.jpg';
   const pool = LANE.concat(MORE);
-  const order = shuffle(pool.slice());
+  /* the dogs already on this visit's hero, bands and why picture go to the back of the rotation */
+  const order = shuffle(pool.filter(s => SLOTS.indexOf(s) < 0)).concat(shuffle(SLOTS.slice()));
   const layers = [document.getElementById('fateA'), document.getElementById('fateB')];
   const who = document.getElementById('fateWho');
   const GAP = 9000;
