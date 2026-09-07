@@ -185,50 +185,6 @@
   .lifenote b { opacity: 1; }
   @media (max-width: 560px) { .liferow .btn { width: 100%; } }
 
-  /* the composite: one face made of many dogs */
-  .galton { margin-top: 52px; border-top: 2px solid var(--ink);
-    padding-top: 28px; }
-  .gtleft { display: flex; flex-direction: column; gap: 18px; }
-  /* the dog currently going into the plate, so the mechanism is visible
-     rather than asserted */
-  .gtadding { display: flex; align-items: center; gap: 14px; }
-  /* a class rule beats the hidden attribute, so say it again here */
-  .gtadding[hidden] { display: none; }
-  .gtadding canvas { width: 84px; height: 84px; display: block;
-    border: 2px solid var(--ink); background: var(--hair); flex: none; }
-  .gtadding span { font-size: 9px; letter-spacing: 2px; font-weight: 700;
-    text-transform: uppercase; opacity: 0.5; line-height: 1.7; }
-  .gtplate { border: 2px solid var(--ink); padding: 10px;
-    background: var(--hair); box-shadow: 5px 5px 0 var(--ink); }
-  .gtplate canvas { width: 100%; height: auto; display: block;
-    image-rendering: auto; }
-  .gtcap { display: flex; justify-content: space-between; gap: 10px;
-    padding-top: 9px; margin-top: 9px; border-top: 1px solid var(--ink);
-    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; opacity: 0.6; }
-  .gtside h3 { font-family: "Shantell Sans", sans-serif; font-weight: 800;
-    font-size: clamp(22px, 3vw, 32px); margin: 6px 0 14px; }
-  .gtside p { font-size: 15px; line-height: 1.62; opacity: 0.74;
-    margin-bottom: 12px; max-width: 56ch; }
-  /* the plate arrives finished, so the buttons have to say out loud that
-     they are the thing that replays it, or they read as a filter */
-  .gtcue { margin: 22px 0 0; font-family: "Instrument Sans", sans-serif;
-    font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; color: var(--red); display: flex; align-items: center;
-    gap: 8px; }
-  .gtcue span { font-size: 13px; letter-spacing: 0;
-    animation: gtnudge 1.6s ease-in-out infinite; }
-  @keyframes gtnudge { 0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(3px); } }
-  .gtbtns { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0 4px; }
-  .gtnote { font-size: 14.5px; }
-  .gtnote b { opacity: 1; }
-  @media (max-width: 860px) {
-    .galton { grid-template-columns: 1fr; gap: 26px; }
-    .gtplate { max-width: 340px; box-shadow: none; }
-  }
-  @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
-
   /* fates: keep it, or sell it. One row: the words on the left, one dog on
      the right. Rest on the dog, or tap it, and it is the zombie. */
   .faterow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1491,37 +1447,6 @@
       add to it. The ninety days decide its fate, and the day it dies is
       etched on the plaque with the name of whoever kept it. What happened
       to the dog is the half of the painting the seed cannot supply.</p></div>
-  </div>
-
-  <div class="galton">
-    <div class="gtside">
-      <p class="kicker">The composite</p>
-      <h3>The face of the pack.</h3>
-      <p>In 1877 Francis Galton stacked portrait photographs on one plate,
-      giving each a fraction of the exposure, to find the face behind a
-      group of faces. He meant that literally and he meant it badly: he
-      coined the word eugenics, and the plates were an instrument for
-      finding inherited criminality in the shape of a jaw. He never found
-      it, because it is not there. What he had built instead was the first
-      way to photograph a population rather than a person, and the
-      technique outlived the whole ugly purpose of it.</p>
-      <p>Turning his instrument against his purpose is deliberate. His
-      composites were meant to show what people were born as. This one
-      shows what a group of people decided to do. The face of the living
-      exists because those particular owners did not sell, and it would
-      be a different face if they had. No single dog is the work. The work
-      is what a pack of dog people did over ninety days, every dog a
-      brushstroke in it, and the composite is the only way to look at that
-      directly.</p>
-      <p><b>Ninety nights.</b> Once the door shuts, every midnight the face
-      of the living is rebuilt from the dogs still in the wallets that
-      adopted them. On the ninetieth night there are ninety faces of one
-      tribe turning, dying and holding, and that sequence is the one token
-      I mint for myself: the only piece in the collection that belongs to
-      nobody in the pack, and the record of the record.</p>
-      <p class="gtnote">It is not shown here, because this page is the one
-      of ones, and an average of the pack is not one of them.</p>
-    </div>
   </div>
 </div></section>
 
