@@ -1329,10 +1329,13 @@ const FIX18 = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs
    both fates and the bands of all twenty live in one prefix */
 const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
 const ARTIST_SET = new Set(ARTISTS);
-const ARTISTS_PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/';
+/* the artists' batches: the ten with their art put back (4 15 101-108) in r1388ones_artists, the ten new painters after
+   Astra's second round (Jon 2026-09-07 08:25) in r1388ones_artists_r2 */
+const artistsDir = seed => seed >= 142 ? 'stills/r1388ones_artists_r2/' : 'stills/r1388ones_artists/';
+const ARTISTS_PUB = seed => 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/' + artistsDir(seed);
 function stillUrl(seed, state, size) {
   if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';
-  if (ARTIST_SET.has(seed) && (size === 1000 || size === 1400)) return ARTISTS_PUB + stillKey(seed, state, size) + '.jpg';
+  if (ARTIST_SET.has(seed) && (size === 1000 || size === 1400)) return ARTISTS_PUB(seed) + stillKey(seed, state, size) + '.jpg';
   if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 151) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
   if (!STILLS) return null;
   const k = stillKey(seed, state, size);
@@ -1483,7 +1486,7 @@ MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
 const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
 delete HD_BASES[77];
 HD_BASES[18] = 'ones_fix18/';
-ARTISTS.forEach(s => { HD_BASES[s] = 'stills/r1388ones_artists/'; });
+ARTISTS.forEach(s => { HD_BASES[s] = artistsDir(s); });
 /* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
    on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight). A tenth
    is drawn with them for the why section's fridge drawing, so it never doubles a band. */
@@ -1500,7 +1503,7 @@ FIN[62] = 'stills/r1388ones_paint_cotton/';
 [38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
 MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
 FIN[18] = 'ones_fix18/';
-ARTISTS.forEach(s => { FIN[s] = 'stills/r1388ones_artists/'; });
+ARTISTS.forEach(s => { FIN[s] = artistsDir(s); });
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
@@ -1627,7 +1630,7 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   const finUrl = (seed, state) => seed === 18
     ? PUB + 'ones_fix18/18_' + state + '_1400.jpg'
     : ARTIST_SET.has(seed)
-    ? PUB + 'stills/r1388ones_artists/' + seed + '_' + state + '_1400.jpg'
+    ? PUB + artistsDir(seed) + seed + '_' + state + '_1400.jpg'
     : state === 'zombie'
     ? ZOMBIE_BATCH + seed + '_zombie_1400.jpg'
     : seed === 77
