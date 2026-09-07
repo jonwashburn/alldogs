@@ -229,13 +229,14 @@
   }
   @media (prefers-reduced-motion: reduce) { .gtadding { display: none; } }
 
-  /* fates: keep it, or sell it */
-  .fates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px;
-    margin-top: 18px; }
-  .fate { display: flex; flex-direction: column; position: relative; }
-  .fate canvas, .fate img { width: 100%; height: auto; display: block; }
-  .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink);
-    margin-top: 14px; flex: 1; }
+  /* fates: keep it, or sell it. One row: the words on the left, one dog on
+     the right. Rest on the dog, or tap it, and it is the zombie. */
+  .faterow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px; align-items: center; }
+  .fatetext { min-width: 0; }
+  .fatetext .lede { max-width: 52ch; }
+  .fate { position: relative; margin-top: 26px; max-width: 58ch; }
+  .fate .body { padding: 14px 0 0; border-top: 1px solid var(--ink); }
   .fate h3 { font-family: "Instrument Sans", sans-serif;
     font-size: 11.5px; letter-spacing: 2px; }
   .fate p { font-size: 14.5px; margin-top: 9px; opacity: 0.72;
@@ -244,8 +245,32 @@
     text-transform: uppercase; font-weight: 700; padding: 5px 10px;
     border: 1px solid currentColor; display: inline-block;
     margin-top: 12px; }
-  @media (max-width: 900px) { .fates {
-    grid-template-columns: 1fr; max-width: none; } }
+  .fatepic { margin: 0; min-width: 0; cursor: pointer;
+    -webkit-tap-highlight-color: transparent; }
+  .fatepic:focus-visible { outline: 2px dashed var(--red); outline-offset: 6px; }
+  .fatepic .pic { position: relative; aspect-ratio: 1; overflow: hidden;
+    background: #ece5d6; border: 2px solid var(--ink); border-radius: 4px;
+    box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); }
+  .fatepic .pic img { position: absolute; inset: 0; width: 100%; height: 100%;
+    display: block; object-fit: cover; transition: opacity 0.22s ease; }
+  .fatepic .pic img.z { opacity: 0; }
+  .fatepic.on .pic img.z { opacity: 1; }
+  .fatepic.on .pic img.f { opacity: 0; }
+  .fatepic .ztag { position: absolute; left: 12px; top: 12px; font-size: 10px;
+    letter-spacing: 2px; font-weight: 700; text-transform: uppercase;
+    background: var(--red); color: var(--paper); padding: 4px 8px 3px;
+    border-radius: 2px; opacity: 0; transform: translateY(-4px);
+    transition: opacity 0.22s ease, transform 0.22s ease; pointer-events: none; }
+  .fatepic.on .ztag { opacity: 1; transform: none; }
+  .fatepic figcaption { margin-top: 12px; font-size: 12.5px; opacity: 0.6;
+    text-align: center; }
+  .fatepic figcaption b { font-weight: 700; color: var(--red); opacity: 1; }
+  @media (max-width: 900px) {
+    .faterow { grid-template-columns: 1fr; gap: 34px; }
+    .fatepic { max-width: 520px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fatepic .pic img, .fatepic .ztag { transition: none; } }
 
   .stack { margin-top: 52px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -1019,37 +1044,45 @@
 </section>
 
 <section class="fatesec sheet" id="fates"><div class="wrap">
-  <p class="kicker">The attributes</p>
-  <h2>Two fates.<br>One collar.</h2>
-  <p class="lede">Every dog starts alive. Keep it, and it stays yours.
-  Sell it during the ninety days, and it turns. The owners decide which;
-  the adoption roll has no say in it and neither does the artist.</p>
-  <div class="fates">
-    <div class="fate">
-      <img id="f_faithful" width="1000" height="1000" alt="" decoding="async">
-      <div class="body">
-      <h3>Faithful</h3>
-      <p>Still alive, still yours. A faithful dog is one that has never
-      moved: not sold, not gifted, not shuffled to another wallet. It is
-      also the only fate that keeps changing. Every week a few living dogs
-      are handed one more rare trait. Every day, two in every ten
-      thousand of them die of old age. Keeping is not standing still.</p>
-      <span class="tag" style="color:var(--blue)">alive &middot; still aging</span>
+  <div class="faterow">
+    <div class="fatetext">
+      <p class="kicker">The attributes</p>
+      <h2>Two fates.<br>One collar.</h2>
+      <p class="lede">Every dog starts alive. Keep it, and it stays yours.
+      Sell it during the ninety days, and it turns. The owners decide which;
+      the adoption roll has no say in it and neither does the artist.</p>
+      <div class="fate">
+        <div class="body">
+        <h3>Faithful</h3>
+        <p>Still alive, still yours. A faithful dog is one that has never
+        moved: not sold, not gifted, not shuffled to another wallet. It is
+        also the only fate that keeps changing. Every week a few living dogs
+        are handed one more rare trait. Every day, two in every ten
+        thousand of them die of old age. Keeping is not standing still.</p>
+        <span class="tag" style="color:var(--blue)">alive &middot; still aging</span>
+        </div>
+      </div>
+      <div class="fate">
+        <div class="body">
+        <h3>Zombie</h3>
+        <p>Sold, while the ninety days were still running. Its owner let it
+        go, the sale turned it in the same transaction, and that is signed on
+        the collar forever. Zombies move freely from then on and never
+        change again. A dog turns on its first sale and can never turn twice,
+        so the horde is a count of separate dogs given up, and fifteen in
+        every hundred adopted ends the world for everyone else.</p>
+        <span class="tag" style="color:var(--red)">turned &middot; sold</span>
+        </div>
       </div>
     </div>
-    <div class="fate">
-      <img id="f_zombie" width="1000" height="1000" alt="" decoding="async">
-      <div class="body">
-      <h3>Zombie</h3>
-      <p>Sold, while the ninety days were still running. Its owner let it
-      go, the sale turned it in the same transaction, and that is signed on
-      the collar forever. Zombies move freely from then on and never
-      change again. A dog turns on its first sale and can never turn twice,
-      so the horde is a count of separate dogs given up, and fifteen in
-      every hundred adopted ends the world for everyone else.</p>
-      <span class="tag" style="color:var(--red)">turned &middot; sold</span>
+    <figure class="fatepic" id="fatepic" tabindex="0" aria-label="One dog, alive. Rest on it or tap it to see the zombie.">
+      <div class="pic">
+        <img id="f_faithful" class="f" width="1000" height="1000" alt="" decoding="async">
+        <img id="f_zombie" class="z" width="1000" height="1000" alt="" decoding="async">
+        <span class="ztag">zombie</span>
       </div>
-    </div>
+      <figcaption>Rest on the dog, or tap it, to see the <b>zombie</b>.</figcaption>
+    </figure>
   </div>
   <div class="stack">
     <div class="stackcard">
@@ -1944,11 +1977,24 @@ showStill(document.getElementById('whyDog'), 43, 'faithful');
   showStill(el, seed, st);
 });
 
-/* two fates exhibits */
+/* two fates: one dog, both fates. Rest on it for the zombie; on a phone a
+   tap holds the zombie until the next tap. */
 paintWhenNear(document.querySelector('.fatesec'), () => {
   showStill(document.getElementById('f_faithful'), 1, 'faithful');
-  showStill(document.getElementById('f_zombie'), 2, 'zombie');
+  showStill(document.getElementById('f_zombie'), 1, 'zombie');
 });
+(function () {
+  const d = document.getElementById('fatepic');
+  if (!d) return;
+  d.addEventListener('mouseenter', () => d.classList.add('on'));
+  d.addEventListener('mouseleave', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+  d.addEventListener('click', () => {
+    if (d.dataset.pinned) { delete d.dataset.pinned; d.classList.remove('on'); }
+    else { d.dataset.pinned = '1'; d.classList.add('on'); }
+  });
+  d.addEventListener('focus', () => d.classList.add('on'));
+  d.addEventListener('blur', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+})();
 
 /* medium: one of one, two lives */
 paintWhenNear(document.querySelector('.fourlives'), () => {
