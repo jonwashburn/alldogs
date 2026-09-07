@@ -1023,7 +1023,7 @@
       thing is something the dog does: it sips the martini, hugs the teddy.
       <b>The crown is a 0.09% roll</b>, so whether this pack gets one
       depends on how many people came through the door. The one hundred and
-      forty-one keep their own costume and face, and still roll the rest.
+      fifty-one keep their own costume and face, and still roll the rest.
       A grumpy dog with wings of fire beside a house on fire is a story
       nobody can plan.</p>
     </div>
@@ -1035,7 +1035,7 @@
       seed.</p>
     </div>
   </div>
-  <p class="fatenote">One hundred and forty-one dogs in the pack are
+  <p class="fatenote">One hundred and fifty-one dogs in the pack are
   somebody: people, famous dogs, scenes from movies. Each carries a year
   and nothing else, drawn by lot at the close over the whole pack at once.
   They cannot be earned. Everything else on the dog is a roll, not a quota,
@@ -1059,7 +1059,7 @@
   <div class="kennel" id="kennel"></div>
   <div class="kennelrow">
     <button class="btn" id="litter">A new litter</button>
-    <span class="note">All one hundred and forty-one one of ones, in seed
+    <span class="note">All one hundred and fifty-one one of ones, in seed
     order, painted once by the round 1388 painter; the year under each is
     the only clue. Until adoption opens the style
     is still being fought over:
@@ -1304,7 +1304,7 @@
    A missing still is paper. Nothing on this page paints a dog. */
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items
   && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
-const ONES_N = 141;
+const ONES_N = 151;
 const ONES = Array.from({length: ONES_N}, (_, i) => i + 1);
 /* captions.js: CAP[seed] = [year, costume]. The year and the costume, never a name. */
 const CAP = window.ALLDOGS_CAP || {};
@@ -1325,9 +1325,15 @@ function stillKey(seed, state, size) { return seed + '_' + state + '_' + size; }
 const ZOMBIE_BATCH = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_zombie_murakami_b/';
 /* 18 the pigeon keeper: gloves on his paws (Jon 2026-09-07); both fates and his bands re-painted into one prefix */
 const FIX18 = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/ones_fix18/';
+/* the artists (Jon 2026-09-07): the ten painters got their art back behind them and ten more painters joined (142 to 151);
+   both fates and the bands of all twenty live in one prefix */
+const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
+const ARTIST_SET = new Set(ARTISTS);
+const ARTISTS_PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/';
 function stillUrl(seed, state, size) {
   if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';
-  if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 141) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
+  if (ARTIST_SET.has(seed) && (size === 1000 || size === 1400)) return ARTISTS_PUB + stillKey(seed, state, size) + '.jpg';
+  if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 151) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
   if (!STILLS) return null;
   const k = stillKey(seed, state, size);
   return STILLS.items[k] ? ((STILLS.items[k].base || STILLS.base) + k + '.jpg') : null;
@@ -1469,13 +1475,15 @@ const HD_BASES = {   /* rendered as the 2:1 frame at 2400/3600/5120; the seven f
    round 1388 stills. */
 const MORE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
   53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 69, 71, 72, 73, 74, 75, 76, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 103, 104, 105, 106, 107, 108, 109, 110,
-  112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141];
+  112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141,
+  142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
 MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
 /* 77 the space dog: the replay put his planet behind the wall texture, so he is served as the painter
    drew him (Jon 2026-09-06 20:49), one 2:1 picture at 2000 wide */
 const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
 delete HD_BASES[77];
 HD_BASES[18] = 'ones_fix18/';
+ARTISTS.forEach(s => { HD_BASES[s] = 'stills/r1388ones_artists/'; });
 /* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
    on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight). A tenth
    is drawn with them for the why section's fridge drawing, so it never doubles a band. */
@@ -1492,6 +1500,7 @@ FIN[62] = 'stills/r1388ones_paint_cotton/';
 [38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
 MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
 FIN[18] = 'ones_fix18/';
+ARTISTS.forEach(s => { FIN[s] = 'stills/r1388ones_artists/'; });
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
@@ -1617,6 +1626,8 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   /* 77 is served as the painter drew him (see FLAT), and that exists only at 1000 */
   const finUrl = (seed, state) => seed === 18
     ? PUB + 'ones_fix18/18_' + state + '_1400.jpg'
+    : ARTIST_SET.has(seed)
+    ? PUB + 'stills/r1388ones_artists/' + seed + '_' + state + '_1400.jpg'
     : state === 'zombie'
     ? ZOMBIE_BATCH + seed + '_zombie_1400.jpg'
     : seed === 77

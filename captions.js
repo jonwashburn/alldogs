@@ -141,4 +141,15 @@ window.ALLDOGS_CAP = {
   139: [1991, "A white jumpsuit, a dead-level stare, one glass plane with a dark bar.", "Hannibal"],
   140: [1993, "The red flare in the mouth, a spray at the burning tip.", "Alan"],
   141: [1994, "The red cap and the long beard on a white shirt.", "Gump"],
+  // 142 to 151: ten more painters, each in his own art (2026-09-07)
+  142: [1982, "Round black glasses, a plain white tee, drop ears; a barking dog, a red dancer and a radiant baby in thick black line on a hot yellow wall.", "Keith"],
+  143: [1893, "A pale bald head, a long dark coat, both paws pressed to the cheeks; a burning striped sky over a blue-black fjord and a bridge rail.", "Edvard"],
+  144: [1931, "A charcoal suit, a white shirt, the waxed moustache turned up, a cane; a bleached desert, a dead tree and two melting watches.", "Salvador"],
+  145: [1963, "A navy blazer, a white shirt, black square glasses; a field of red and blue dots, one empty speech balloon and one big yellow burst.", "Roy"],
+  146: [1930, "Round steel glasses, a dark grey suit, a small black bow tie; a white wall ruled in thick black lines with one red, one blue and one yellow block.", "Piet"],
+  147: [1953, "A short white beard, round wire glasses, a brown corduroy jacket; big cut-paper fronds in blue, green, orange, magenta and yellow on cream.", "Henri"],
+  148: [1908, "A full dark beard and the long blue painter's smock; a gold field, a tall cloak of black-and-white squares and coloured spirals, a flower meadow.", "Gustav"],
+  149: [1967, "Bleached blond hair, round black glasses, a mustard cardigan, mismatched socks; a flat pink house, two palms, a diving board and the splash.", "David"],
+  150: [1994, "A white shirt and a dark tie, no glasses; a huge magenta balloon dog with white highlights on a pale museum wall, floating balloon discs.", "Jeff"],
+  151: [1964, "A black bowler, a black overcoat, a white shirt front and a narrow red tie; a blue sky of cumulus, a sea, a brick parapet and one green apple beside the face.", "Rene"],
 };

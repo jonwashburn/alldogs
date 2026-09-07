@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ALL DOGS: the one hundred and forty-one</title>
+<title>ALL DOGS: the one hundred and fifty-one</title>
 <meta name="description" content="Every one-of-one dog, painted by a machine from a seed. Rest on a dog to see what it becomes if it is sold inside the ninety days.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
-<meta property="og:title" content="ALL DOGS: the one hundred and forty-one">
+<meta property="og:title" content="ALL DOGS: the one hundred and fifty-one">
 <meta property="og:description" content="Every one-of-one dog. Rest on one to see its zombie.">
 <meta property="og:image" content="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_og_20260830_41be44aaeaaa/alldogs_og.png">
 <meta property="og:type" content="website">
@@ -65,7 +65,7 @@
 <body>
 <header><div class="wrap">
   <p class="kicker"><a href="/">ALL DOGS</a> &middot; the one of ones</p>
-  <h1>The one hundred and forty-one.</h1>
+  <h1>The one hundred and fifty-one.</h1>
   <p class="lede">Every dog painted by the machine from its seed, each in its year and its costume.
   Rest on a dog, or tap it, to see the <b>zombie</b>: what it becomes if it is sold inside the ninety days.</p>
 </div></header>
@@ -92,6 +92,10 @@ BATCH[77] = 'ones_flat77/';
 /* 18 the pigeon keeper: gloves on his paws (Jon 2026-09-07), both fates re-painted into one prefix */
 BATCH[18] = 'ones_fix18/';
 const ZFIX = { 18: 'ones_fix18/' };
+/* the artists (Jon 2026-09-07): the ten painters got their art back behind them and ten more painters joined (142 to 151);
+   both fates and the bands of all twenty live in one prefix */
+const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
+ARTISTS.forEach(s => { BATCH[s] = 'stills/r1388ones_artists/'; ZFIX[s] = 'stills/r1388ones_artists/'; });
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
 const CAP = window.ALLDOGS_CAP || {};
 /* the zombies (Jon 2026-09-06): the Murakami zombie for every finished dog, one immutable batch */
@@ -111,7 +115,7 @@ function year(seed) { const c = CAP[seed]; if (!c) return ''; return c[0] < 0 ? 
 
 const wall = document.getElementById('wall');
 const LYING = new Set([78, 80, 100, 130, 135, 138]);
-for (let seed = 1; seed <= 141; seed++) {
+for (let seed = 1; seed <= 151; seed++) {
   const c = CAP[seed] || [];
   const d = document.createElement('figure'); d.className = 'dog' + (LYING.has(seed) ? ' lying' : ''); d.dataset.seed = seed;
   d.innerHTML = '<div class="pic"><img class="f" alt="" loading="lazy" decoding="async" width="1000" height="1000">'
