@@ -1330,8 +1330,8 @@ const FIX18 = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs
 const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
 const ARTIST_SET = new Set(ARTISTS);
 /* the artists' batches: the ten with their art put back (4 15 101-108) in r1388ones_artists, the ten new painters after
-   Astra's second round (Jon 2026-09-07 08:25) in r1388ones_artists_r2 */
-const artistsDir = seed => seed >= 142 ? 'stills/r1388ones_artists_r2/' : 'stills/r1388ones_artists/';
+   Astra's cleanup round (Jon 2026-09-07 13:31) in r1388ones_artists_r3 */
+const artistsDir = seed => seed >= 142 ? 'stills/r1388ones_artists_r3/' : 'stills/r1388ones_artists/';
 const ARTISTS_PUB = seed => 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/' + artistsDir(seed);
 function stillUrl(seed, state, size) {
   if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';

@@ -95,7 +95,7 @@ const ZFIX = { 18: 'ones_fix18/' };
 /* the artists (Jon 2026-09-07): the ten painters got their art back behind them and ten more painters joined (142 to 151);
    both fates and the bands of all twenty live in one prefix */
 const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
-ARTISTS.forEach(s => { const d = s >= 142 ? 'stills/r1388ones_artists_r2/' : 'stills/r1388ones_artists/'; BATCH[s] = d; ZFIX[s] = d; }); /* the ten new painters after Astra's second round (Jon 2026-09-07 08:25) */
+ARTISTS.forEach(s => { const d = s >= 142 ? 'stills/r1388ones_artists_r3/' : 'stills/r1388ones_artists/'; BATCH[s] = d; ZFIX[s] = d; }); /* the ten new painters after Astra's cleanup round (Jon 2026-09-07 13:31) */
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
 const CAP = window.ALLDOGS_CAP || {};
 /* the zombies (Jon 2026-09-06): the Murakami zombie for every finished dog, one immutable batch */
