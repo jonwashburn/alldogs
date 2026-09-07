@@ -675,13 +675,13 @@
   }
 
   /* why */
-  /* Two hands: the photograph on the left, the fridge drawing on the right.
-     Each column is a subgrid of the same four rows (picture, caption,
-     heading, body) so the headings and the text sit on one line
-     across the page even when one heading wraps. */
+  /* Two hands: the photograph on the left, the dog on the right.
+     Each column is a subgrid of the same three rows (picture, heading,
+     body) so the headings and the text sit on one line across the page
+     even when one heading wraps. */
   .whygrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 64px;
     grid-auto-rows: auto; margin-top: 44px; }
-  .reason { display: grid; grid-template-rows: subgrid; grid-row: span 4;
+  .reason { display: grid; grid-template-rows: subgrid; grid-row: span 3;
     align-content: start; }
   .print { display: flex; align-items: flex-end; height: clamp(200px, 22vw, 320px);
     margin-bottom: 18px; }
@@ -692,21 +692,16 @@
     border-radius: 3px; background: var(--paper); padding: 4px;
     box-sizing: border-box; box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.2); }
   .print.drawing img.painting { background: #ece9df; }
-  .handcap { font-size: 10px; letter-spacing: 3px; font-weight: 700;
-    text-transform: uppercase; opacity: 0.6; margin: 0 0 22px; }
-  .handcap b { color: var(--ink); opacity: 1; margin-right: 14px; }
   .reason h3 { font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 16px; }
   .reason p { font-size: 16.5px; opacity: 0.78; line-height: 1.65;
     margin-bottom: 14px; }
   .reason a { color: var(--ink); font-weight: 700; }
-  .whynote { margin-top: 36px; }
   @media (max-width: 860px) {
     .whygrid { grid-template-columns: 1fr; gap: 0; }
     .reason { display: block; }
     .reason + .reason { margin-top: 48px; }
     .print { height: auto; margin-bottom: 16px; }
     .print img { width: 100%; height: auto; }
-    .handcap { letter-spacing: 2px; }
   }
 
   footer { padding: 52px 0 72px; border-top: 1px solid var(--hair);
@@ -770,7 +765,6 @@
   <div class="whygrid">
     <div class="reason">
       <a class="print photo" href="https://exaltedlove.com/" aria-label="HOLY, the photographs"><img src="https://exaltedlove.com/showimg/restore/e073523456bb.png?w=900" width="900" height="600" alt="" loading="eager" decoding="async"></a>
-      <p class="handcap"><b>HOLY</b>The camera was in the house.</p>
       <h3>Nobody has a picture.</h3>
       <div class="body">
       <p>My other collection, <a href="https://exaltedlove.com/">HOLY</a>,
@@ -782,23 +776,17 @@
       for something like that, there was nothing left to restore. Nobody
       has a picture of those years. Nobody photographs the part you
       remember anyway.</p>
-      <p>So I described that childhood from memory to a machine that was
-      not there, and what came back is HOLY. None of its pictures has a
-      source photograph. The only object in the world that light from
-      those years actually touched is the camera.</p>
       </div>
     </div>
     <div class="reason">
       <div class="print drawing"><img id="whyDog" class="still painting" width="900" height="600" alt="" loading="eager" decoding="async"></div>
-      <p class="handcap"><b>ALL DOGS</b>The collar is on the dog.</p>
       <h3>So I am making the record anyway.</h3>
       <div class="body">
-      <p>I grew up and built machines that can see. ALL DOGS is the same
-      childhood in the other hand. The painter is a program I wrote to
-      paint the way a kid paints: a fat outline, paint running out
-      mid-stroke, an eye a little wrong. These are the drawings that would
-      have been on the fridge, made now by a machine I spend my afternoons
-      teaching.</p>
+      <p>ALL DOGS is the same childhood in the other hand. The painter is
+      a program I wrote to paint the way a kid paints: a fat outline,
+      paint running out mid-stroke, an eye a little wrong. These are the
+      drawings that would have been on the fridge, made now by a machine
+      I spend my afternoons teaching.</p>
       <p>A record is not a person. The albums would not have brought
       anyone back either. You make the record anyway. I can paint the dog.
       I cannot paint who held on to it. The collar records that part: your
@@ -807,10 +795,6 @@
       </div>
     </div>
   </div>
-  <p class="dropnote whynote">HOLY and ALL DOGS are one childhood in two
-  hands: one described from memory to a machine, the other drawn by a
-  machine I am still teaching. The camera and the collar are a generation
-  apart, and they are the one thing that actually touched the life.</p>
 </div></section>
 
 <section class="creed"><div class="wrap">
