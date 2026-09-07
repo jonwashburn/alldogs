@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL DOGS: the one hundred and forty-one</title>
+<meta name="description" content="Every one-of-one dog, painted by a machine from a seed. Rest on a dog to see what it becomes if it is sold inside the ninety days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
+<meta property="og:title" content="ALL DOGS: the one hundred and forty-one">
+<meta property="og:description" content="Every one-of-one dog. Rest on one to see its zombie.">
+<meta property="og:image" content="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_og_20260830_41be44aaeaaa/alldogs_og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --paper: #fdfdfb; --ink: #111111; --hair: #dddad0; --blue: #2c5cff; --red: #ff3b2f; --gold: #f0b429; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  h1, h2, .disp { font-family: "Shantell Sans", "Instrument Sans", sans-serif; font-weight: 800; text-transform: uppercase; }
+  ::selection { background: var(--gold); color: var(--ink); }
+  a { color: var(--ink); }
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+
+  header { padding: 44px 0 26px; }
+  .kicker { font-size: 10px; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; opacity: 0.45; margin-bottom: 14px; }
+  .kicker a { text-decoration: none; }
+  .kicker a:hover { text-decoration: underline; }
+  h1 { font-size: clamp(30px, 4.6vw, 58px); line-height: 1.02; margin-bottom: 16px; }
+  .lede { font-size: 17px; max-width: 58ch; opacity: 0.78; }
+  .lede b { font-weight: 700; color: var(--red); }
+
+  /* the wall: one square per dog, the caption under it like a gallery label */
+  .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 30px 22px; padding: 18px 0 80px; }
+  .dog { position: relative; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .dog .pic { position: relative; aspect-ratio: 1; background: #ece9df; overflow: hidden;
+    border: 2px solid var(--ink); border-radius: 2px; box-shadow: 2.5px 3.5px 0 rgba(0,0,0,0.18); }
+  .dog img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover;
+    transition: opacity 0.22s ease; }
+  .dog img.z { opacity: 0; }
+  .dog.on img.z { opacity: 1; }
+  .dog.on img.f { opacity: 0; }
+  .dog .tag { position: absolute; left: 8px; top: 8px; font-size: 10px; letter-spacing: 2px; font-weight: 700;
+    text-transform: uppercase; background: var(--red); color: var(--paper); padding: 3px 7px 2px; border-radius: 2px;
+    opacity: 0; transform: translateY(-4px); transition: opacity 0.22s ease, transform 0.22s ease; pointer-events: none; }
+  .dog.on .tag { opacity: 1; transform: none; }
+  .cap { margin-top: 9px; font-size: 13px; line-height: 1.4; opacity: 0.8; }
+  .cap b { font-weight: 700; margin-right: 8px; }
+  .cap b + b { color: var(--blue); }
+  .cap .n { display: block; opacity: 0.72; font-size: 12.5px; margin-top: 1px; }
+
+  footer { border-top: 1px solid var(--hair); padding: 26px 0 60px; font-size: 13px; opacity: 0.6; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 700px) {
+    .wrap { padding: 0 18px; }
+    .wall { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; }
+    .cap { font-size: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .dog img, .dog .tag { transition: none; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <p class="kicker"><a href="/">ALL DOGS</a> &middot; the one of ones</p>
+  <h1>The one hundred and forty-one.</h1>
+  <p class="lede">Every dog painted by the machine from its seed, each in its year and its costume.
+  Rest on a dog, or tap it, to see the <b>zombie</b>: what it becomes if it is sold inside the ninety days.</p>
+</div></header>
+
+<main><div class="wrap"><div class="wall" id="wall"></div></div></main>
+
+<footer><div class="wrap">The artist draws the dogs; the owners write the story. <a href="/">Back to the performance.</a></div></footer>
+
+<script src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/stills.js"></script>
+<script src="/captions.js"></script>
+<script>
+/* Where each dog's picture lives. The finished ones (on their grounds through the paint kit) sit on
+   immutable prefixes by batch; the six lying dogs come from the live stills manifest; 77 is the
+   painter's own drawing (the replay put his planet behind the wall). Faithful and zombie, 1000 px,
+   the half-size copy (_h) for the wall. */
+const PUB = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/';
+const BATCH = {};
+BATCH[62] = 'stills/r1388ones_paint_cotton/';
+[38, 63, 70, 102, 68, 111].forEach(s => BATCH[s] = 'stills/r1388ones_paint_grounds/');
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
+ 53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 69, 71, 72, 73, 74, 75, 76, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 103, 104, 105, 106, 107, 108, 109, 110,
+ 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141].forEach(s => BATCH[s] = 'stills/r1388ones_paint_all/');
+BATCH[77] = 'ones_flat77/';
+const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
+const CAP = window.ALLDOGS_CAP || {};
+function url(seed, state) {
+  if (BATCH[seed]) return { half: PUB + BATCH[seed] + seed + '_' + state + '_1000_h.jpg', full: PUB + BATCH[seed] + seed + '_' + state + '_1000.jpg' };
+  if (!STILLS) return null;
+  const k = seed + '_' + state + '_1000', it = STILLS.items[k];
+  if (!it) return null;
+  const u = (it.base || STILLS.base) + k + '.jpg';
+  return { half: u.replace(/\.jpg$/, '_h.jpg'), full: u };
+}
+function year(seed) { const c = CAP[seed]; if (!c) return ''; return c[0] < 0 ? (-c[0]) + ' BC' : String(c[0]); }
+
+const wall = document.getElementById('wall');
+const LYING = new Set([78, 80, 100, 130, 135, 138]);
+for (let seed = 1; seed <= 141; seed++) {
+  const c = CAP[seed] || [];
+  const d = document.createElement('figure'); d.className = 'dog' + (LYING.has(seed) ? ' lying' : ''); d.dataset.seed = seed;
+  d.innerHTML = '<div class="pic"><img class="f" alt="" loading="lazy" decoding="async" width="500" height="500">'
+    + '<img class="z" alt="" loading="lazy" decoding="async" width="500" height="500"><span class="tag">zombie</span></div>'
+    + '<figcaption class="cap"><b>' + year(seed) + '</b>' + (c[2] ? '<b>' + c[2] + '</b>' : '') + '<span class="n">' + (c[1] || '') + '</span></figcaption>';
+  const f = d.querySelector('img.f'), z = d.querySelector('img.z');
+  const uf = url(seed, 'faithful'), uz = url(seed, 'zombie');
+  if (uf) { f.src = uf.half; f.onerror = () => { f.onerror = null; f.src = uf.full; }; }
+  if (uz) { z.src = uz.half; z.onerror = () => { z.onerror = null; z.src = uz.full; }; }
+  /* rest on a dog: the zombie; tap on a phone: the zombie stays until the next tap */
+  d.addEventListener('mouseenter', () => d.classList.add('on'));
+  d.addEventListener('mouseleave', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+  d.addEventListener('click', () => { if (d.dataset.pinned) { delete d.dataset.pinned; d.classList.remove('on'); } else { d.dataset.pinned = '1'; d.classList.add('on'); } });
+  d.addEventListener('focus', () => d.classList.add('on')); d.addEventListener('blur', () => { if (!d.dataset.pinned) d.classList.remove('on'); });
+  d.tabIndex = 0;
+  wall.appendChild(d);
+}
+</script>
+</body>
+</html>

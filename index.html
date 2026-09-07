@@ -1836,14 +1836,18 @@ const MORE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
   53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 69, 71, 72, 73, 74, 75, 76, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 103, 104, 105, 106, 107, 108, 109, 110,
   112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141];
 MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
-/* the eight bands each carry one finished dog and do not turn; which eight is drawn fresh on every
-   visit from the six and the hundred and twenty-eight */
+/* 77 the space dog: the replay put his planet behind the wall texture, so he is served as the painter
+   drew him (Jon 2026-09-06 20:49), one 2:1 picture at 2000 wide */
+const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
+delete HD_BASES[77];
+/* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
+   on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight) */
 function drawBands(n) {
-  const pool = LANE.slice(1).concat(MORE), out = [];
+  const pool = LANE.concat(MORE), out = [];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
   return out;
 }
-const SLOTS = [LANE[0]].concat(drawBands(8));
+const SLOTS = drawBands(9);
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
@@ -1864,6 +1868,7 @@ function heroBand(a, b, cap, cast, opts) {
       const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
       return { src: f + '2400.jpg', srcset: f + '2400.jpg 2400w, ' + f + '3600.jpg 3600w, ' + f + '5120.jpg 5120w' };
     }
+    if (FLAT[seed]) { const f = FLAT[seed] + 'hero_faithful_' + seed + '_2000.jpg'; return { src: f, srcset: f + ' 2000w' }; }
     const base = heroBase(seed);
     const wide = base + 'hero_faithful_' + seed + '.jpg', retina = base + 'hero_faithful_' + seed + '_3000.jpg';
     return { src: wide, srcset: wide + ' 2400w, ' + retina + ' 3000w' };
