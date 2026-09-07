@@ -89,6 +89,9 @@ BATCH[62] = 'stills/r1388ones_paint_cotton/';
  53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 69, 71, 72, 73, 74, 75, 76, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 103, 104, 105, 106, 107, 108, 109, 110,
  112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 139, 140, 141].forEach(s => BATCH[s] = 'stills/r1388ones_paint_all/');
 BATCH[77] = 'ones_flat77/';
+/* 18 the pigeon keeper: gloves on his paws (Jon 2026-09-07), both fates re-painted into one prefix */
+BATCH[18] = 'ones_fix18/';
+const ZFIX = { 18: 'ones_fix18/' };
 const STILLS = (window.ALLDOGS_STILLS && window.ALLDOGS_STILLS.items && window.ALLDOGS_STILLS.base) ? window.ALLDOGS_STILLS : null;
 const CAP = window.ALLDOGS_CAP || {};
 /* the zombies (Jon 2026-09-06): the Murakami zombie for every finished dog, one immutable batch */
@@ -96,7 +99,7 @@ const ZOMBIE_BATCH = PUB + 'stills/r1388ones_zombie_murakami_b/';
 function url(seed, state) {
   /* three sizes: 500 for phones, 1000, and the 1400 master for a retina tile (a 530 css px tile on a 2x screen wants 1060 device px,
      so the 1000 was being stretched); 77 exists only at 1000 */
-  if (state === 'zombie') return { half: ZOMBIE_BATCH + seed + '_zombie_1000_h.jpg', full: ZOMBIE_BATCH + seed + '_zombie_1000.jpg', big: seed === 77 ? null : ZOMBIE_BATCH + seed + '_zombie_1400.jpg' };
+  if (state === 'zombie') { const zb = ZFIX[seed] ? PUB + ZFIX[seed] : ZOMBIE_BATCH; return { half: zb + seed + '_zombie_1000_h.jpg', full: zb + seed + '_zombie_1000.jpg', big: seed === 77 ? null : zb + seed + '_zombie_1400.jpg' }; }
   if (BATCH[seed]) return { half: PUB + BATCH[seed] + seed + '_' + state + '_1000_h.jpg', full: PUB + BATCH[seed] + seed + '_' + state + '_1000.jpg', big: seed === 77 ? null : PUB + BATCH[seed] + seed + '_' + state + '_1400.jpg' };
   if (!STILLS) return null;
   const k = seed + '_' + state + '_1000', it = STILLS.items[k];

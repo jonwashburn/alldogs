@@ -1323,7 +1323,10 @@ function stillKey(seed, state, size) { return seed + '_' + state + '_' + size; }
 /* the zombies (Jon 2026-09-06): every finished dog's zombie is the Murakami one, six mouths of sharp teeth,
    four coat families, a band of skulls on some walls; one immutable batch, 1000 and 1400 with halves */
 const ZOMBIE_BATCH = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_zombie_murakami_b/';
+/* 18 the pigeon keeper: gloves on his paws (Jon 2026-09-07); both fates and his bands re-painted into one prefix */
+const FIX18 = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/ones_fix18/';
 function stillUrl(seed, state, size) {
+  if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';
   if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 141) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
   if (!STILLS) return null;
   const k = stillKey(seed, state, size);
@@ -1472,6 +1475,7 @@ MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
    drew him (Jon 2026-09-06 20:49), one 2:1 picture at 2000 wide */
 const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
 delete HD_BASES[77];
+HD_BASES[18] = 'ones_fix18/';
 /* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
    on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight). A tenth
    is drawn with them for the why section's fridge drawing, so it never doubles a band. */
@@ -1487,6 +1491,7 @@ const FIN = {};
 FIN[62] = 'stills/r1388ones_paint_cotton/';
 [38, 63, 70, 102, 68, 111].forEach(s => { FIN[s] = 'stills/r1388ones_paint_grounds/'; });
 MORE.forEach(s => { FIN[s] = 'stills/r1388ones_paint_all/'; });
+FIN[18] = 'ones_fix18/';
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
@@ -1584,6 +1589,7 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   im.onerror = () => {
     im.onerror = null; im.removeAttribute('srcset');
     im.src = seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
+      : seed === 18 ? FIN_PUB + 'ones_fix18/18_faithful_1000.jpg'
       : FIN_PUB + FIN[seed] + seed + '_faithful_1000.jpg';
   };
   const u = heroUrls(seed);
@@ -1609,7 +1615,9 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   if (!d) return;
   const PUB = FIN_PUB;
   /* 77 is served as the painter drew him (see FLAT), and that exists only at 1000 */
-  const finUrl = (seed, state) => state === 'zombie'
+  const finUrl = (seed, state) => seed === 18
+    ? PUB + 'ones_fix18/18_' + state + '_1400.jpg'
+    : state === 'zombie'
     ? ZOMBIE_BATCH + seed + '_zombie_1400.jpg'
     : seed === 77
     ? PUB + 'ones_flat77/77_' + state + '_1000.jpg'
