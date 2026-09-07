@@ -1809,10 +1809,10 @@ function oneOf(n) {
    by the round 1388 painter at 2400x800 (3000x1000 for retina). Two stacked
    images crossfade; the next one is fetched before it is shown. The caption
    is the year and the costume, never a name: working out whose it is is
-   the game. Nine bands, one dog each (Jon, 2026-09-05): first the finished
-   ones, repainted on the paint layer (seven so far), then the ones being
-   worked on next, still in the round 1388 paint. A band with one dog does
-   not turn. */
+   the game. Nine bands, one dog each (Jon, 2026-09-05): the hero is 62, the
+   eight below it are drawn each visit from the finished dogs (the seven on
+   their grounds, then the hundred and four from 2026-09-07). A band with one
+   dog does not turn. */
 const HERO_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones/';
 const LANE_BASES = {   /* finished: on the paint layer; each batch has its own immutable prefix */
   62: 'hero_r1388ones_lane/', 38: 'hero_r1388ones_lane/', 63: 'hero_r1388ones_lane/', 70: 'hero_r1388ones_lane/', 102: 'hero_r1388ones_lane/',
@@ -1826,8 +1826,23 @@ const HD_BASES = {   /* rendered as the 2:1 frame at 2400/3600/5120; the seven f
   102: 'hero_r1388ones_grounds/', 68: 'hero_r1388ones_grounds/', 111: 'hero_r1388ones_grounds/',
   64: 'hero_r1388ones_hd/', 73: 'hero_r1388ones_hd/'
 };
-const NEXT = [64, 73];                       /* next up: the paint layer alone did not carry them, they need the hand */
-const SLOTS = LANE.concat(NEXT);
+/* 2026-09-07: 104 more one-of-ones through the same recipe as the six (the deploy painter's marks
+   recorded, re-laid on the ground the seeded draw gives each seed, photographed at Jon's setting),
+   rendered as the 2:1 frame at 2400/3600/5120 under hero_r1388ones_all. The 24 whose rooms carry
+   stamped sprites (stars, birds, bees, snow) are held back: the recorder keeps only a sprite's box,
+   so the replay cannot lay it. The six lying dogs (78 80 100 130 135 138) keep their round 1388 stills. */
+const MORE = [1, 2, 3, 4, 5, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 23, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 40, 41, 42, 44, 45, 46, 48, 49, 51, 52,
+  53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 67, 69, 71, 72, 73, 74, 76, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 101, 104, 105, 107, 108, 109, 110,
+  112, 114, 115, 116, 117, 118, 119, 120, 123, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134, 136, 137, 140, 141];
+MORE.forEach(s => { HD_BASES[s] = 'hero_r1388ones_all/'; });
+/* the eight bands each carry one finished dog and do not turn; which eight is drawn fresh on every
+   visit from the six and the hundred and four, the six first when the draw lands on them */
+function drawBands(n) {
+  const pool = LANE.slice(1).concat(MORE), out = [];
+  while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
+  return out;
+}
+const SLOTS = [LANE[0]].concat(drawBands(8));
 const PICKS = [62, 63, 64, 68, 70, 73, 102, 111, 1, 2, 10, 13, 32, 36, 38, 43];
 function heroBase(seed) {
   return LANE_BASES[seed] ? HERO_BASE.replace('hero_r1388ones/', LANE_BASES[seed]) : HERO_BASE;
