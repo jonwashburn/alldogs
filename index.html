@@ -277,6 +277,19 @@
   @keyframes painting { 0%, 100% { background-color: #ece5d6; } 50% { background-color: #dcd3c0; } }
 
   /* the medium */
+  /* the paint film (Jon 2026-09-08): one dog painted up, square, beside a note; plays muted while it is on
+     screen, a tap turns the sound on */
+  .paintfilm { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: end; }
+  .pf { position: relative; margin: 0; cursor: pointer; outline: none; }
+  .pf video { width: 100%; height: auto; aspect-ratio: 1 / 1; display: block; background: #ece9df; }
+  .pf .pfsound { position: absolute; right: 12px; bottom: 12px; padding: 5px 9px;
+    background: var(--ink); color: var(--paper); font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; pointer-events: none; }
+  .pf:focus-visible video { outline: 2px solid var(--red); outline-offset: 3px; }
+  .pfnote .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink); font-size: 10px;
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .pfnote p { margin: 14px 0 0; font-size: 14.5px; opacity: 0.72; line-height: 1.62; }
+  @media (max-width: 900px) { .paintfilm { grid-template-columns: 1fr; } }
   /* the two stills at half size, the note beside them, so the section is
      half as tall as it was (Jon, 2026-09-05) */
   .fourlives { margin-top: 30px; display: grid;
@@ -1085,6 +1098,23 @@
   that surface, lit from one side. Nothing is drawn. One number rebuilds
   it at any size, so the avatar on your phone and a hundred-inch gallery
   print are the same marks, sharp at both.</p>
+  <div class="paintfilm" id="paintfilm">
+    <figure class="pf" tabindex="0" aria-label="Frida being painted, thirty seconds. Tap for the sound.">
+      <video id="pfVideo" width="1080" height="1080" muted loop playsinline preload="none"
+        poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_v4_poster_1000.jpg">
+        <source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_paint_v4.mp4" type="video/mp4">
+      </video>
+      <span class="pfsound" id="pfSound">sound off</span>
+    </figure>
+    <div class="pfnote">
+      <div class="flcap">1939 &middot; Frida, painted</div>
+      <p>Thirty seconds of the brush at work. Bare cotton first. The ground
+      goes on with the same bristles, twenty-seven strokes. Then every mark
+      the seed calls for, in the order the painter made them. No frame is a
+      dissolve: each one is a photograph of the wet surface after the next
+      stroke landed. Tap it for the sound.</p>
+    </div>
+  </div>
   <div class="fourlives">
     <div class="fl"><img id="fl_faithful" width="1400" height="1400" alt="" decoding="async"><div class="flcap">faithful</div></div>
     <div class="fl"><img id="fl_zombie" width="1400" height="1400" alt="" decoding="async"><div class="flcap">zombie</div></div>
@@ -1704,6 +1734,31 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   });
   d.addEventListener('focus', () => { resting = true; d.classList.add('on'); });
   d.addEventListener('blur', () => { resting = false; if (!d.dataset.pinned) d.classList.remove('on'); });
+})();
+
+/* medium: the paint film. Fetched only when it is near, plays muted while on screen, pauses off it;
+   a tap (or Enter) turns the sound on and off. Under reduced motion it holds the poster until tapped. */
+(function () {
+  const fig = document.querySelector('.pf'), v = document.getElementById('pfVideo'), tag = document.getElementById('pfSound');
+  if (!fig || !v) return;
+  const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let onScreen = false, wanted = calm;
+  function label() { tag.textContent = v.paused ? 'play' : (v.muted ? 'sound off' : 'sound on'); }
+  function play() { if (v.preload === 'none') v.preload = 'auto'; v.play().then(label, label); }
+  function sync() { if (onScreen && wanted) play(); else if (!v.paused) { v.pause(); label(); } }
+  function tap() {
+    if (v.paused) { wanted = true; v.muted = false; sync(); return; }
+    v.muted = !v.muted; label();
+  }
+  fig.addEventListener('click', tap);
+  fig.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tap(); } });
+  v.addEventListener('play', label); v.addEventListener('pause', label); v.addEventListener('volumechange', label);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => { for (const e of es) onScreen = e.isIntersecting; sync(); }, { rootMargin: '200px 0px', threshold: 0.2 })
+      .observe(fig);
+  } else { onScreen = true; sync(); }
+  document.addEventListener('visibilitychange', () => { if (document.hidden && !v.paused) v.pause(); else sync(); });
+  label();
 })();
 
 /* medium: one of one, two lives */
