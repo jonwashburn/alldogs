@@ -340,6 +340,16 @@
   .step p { margin-top: 10px; font-size: 15.5px; opacity: 0.74;
     line-height: 1.62; }
   @media (max-width: 860px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
+  /* the tempter: the bid is the content, so it is set like a number */
+  .bidcard { margin-top: 40px; border-top: 1px solid var(--ink);
+    padding-top: 16px; max-width: 520px; }
+  .bidcard span { display: block; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; color: var(--red); }
+  .bidcard b { display: block; font-family: "Shantell Sans", sans-serif;
+    font-size: clamp(56px, 7vw, 104px); font-weight: 800; line-height: 1;
+    text-transform: uppercase; margin: 10px 0 8px; }
+  .bidcard i { display: block; font-style: normal; font-size: 15.5px;
+    opacity: 0.74; line-height: 1.62; }
 
   /* the choice */
   .choiceline { font-family: "Instrument Sans", sans-serif;
@@ -1219,12 +1229,19 @@
 <section class="rules sheet" id="tempter"><div class="wrap">
   <p class="kicker">The tempter</p>
   <h2>I will take your dog.<br>Dead.</h2>
-  <p class="lede">The first record went because the keeping cost more than
-  the cash. For the ninety days I bid double whatever it cost to adopt.
-  Take it and the dog is already dead, your name still on the collar,
-  counting toward the line. The bid stands until the apocalypse.</p>
-  <p class="dropnote">Somebody has to put that money on the table. It
-  should be me.</p>
+  <p class="lede">My mother's albums sat in a storage unit until the month
+  nobody paid. That is how a record goes: not stolen, let go for less than
+  it cost to keep. So for the ninety days I stand a public bid on every
+  living dog. Take it and the dog turns in that transaction, your handle
+  on the collar, one more toward the line.</p>
+  <div class="bidcard">
+    <span>The standing bid</span>
+    <b>Double</b>
+    <i>what it cost to adopt. Any living dog. Every day of the war.</i>
+  </div>
+  <p class="dropnote">It is my money. If the record goes again, it goes to
+  the person who lost it the first time, and every collar says who let
+  go.</p>
 </div></section>
 
 <section class="feature">
@@ -1248,8 +1265,7 @@
     <div class="bpanel red">
       <h3 id="turnTitle">Sell</h3>
       <div class="big">Zombie</div>
-      <p>The sale turns it. Whoever takes it gets the corpse.</p>
-      <p>I bid double. It is me.</p>
+      <p>The sale turns it. I bid double, so the corpse comes to me.</p>
       <p class="f">And the count goes up by one, toward the 15% that ends
       it for everybody. The sale is signed. Forever.</p>
     </div>
