@@ -277,9 +277,11 @@
   @keyframes painting { 0%, 100% { background-color: #ece5d6; } 50% { background-color: #dcd3c0; } }
 
   /* the medium */
-  /* the paint film (Jon 2026-09-08): one dog painted up, square, beside a note; plays muted while it is on
-     screen, a tap turns the sound on */
-  .paintfilm { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: end; }
+  /* one dog painted up. The note and the two paint facts sit beside it,
+     not a second picture. Muted on screen, tap for the sound. */
+  .paintfilm { margin-top: 34px; display: grid;
+    grid-template-columns: minmax(0, 520px) minmax(260px, 1fr);
+    gap: 36px 52px; align-items: start; }
   .pf { position: relative; margin: 0; cursor: pointer; outline: none; }
   .pf video { width: 100%; height: auto; aspect-ratio: 1 / 1; display: block; background: #ece9df; }
   .pf .pfsound { position: absolute; right: 12px; bottom: 12px; padding: 5px 9px;
@@ -288,30 +290,16 @@
   .pf:focus-visible video { outline: 2px solid var(--red); outline-offset: 3px; }
   .pfnote .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink); font-size: 10px;
     font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-  .pfnote p { margin: 14px 0 0; font-size: 14.5px; opacity: 0.72; line-height: 1.62; }
-  @media (max-width: 900px) { .paintfilm { grid-template-columns: 1fr; } }
-  /* the two stills at half size, the note beside them, so the section is
-     half as tall as it was (Jon, 2026-09-05) */
-  .fourlives { margin-top: 30px; display: grid;
-    grid-template-columns: 1fr 1fr 2fr; gap: 26px; align-items: start; }
-  .fourlives .flnote { grid-column: auto; align-self: end; }
-  .fl canvas, .fl img { width: 100%; height: auto; display: block; }
-  .fl .flcap { padding: 12px 0 0; border-top: 1px solid var(--ink);
-    margin-top: 12px; font-size: 10px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase; }
-  .flnote { margin: 0; font-size: 14.5px;
-    opacity: 0.72; line-height: 1.62; }
-  .specs { margin-top: 36px; display: grid;
-    grid-template-columns: repeat(3, 1fr); gap: 44px; }
+  .pfnote > p { margin: 14px 0 0; font-size: 14.5px; opacity: 0.72; line-height: 1.62; }
+  .paintfilm .specs { margin-top: 28px; display: grid;
+    grid-template-columns: 1fr; gap: 28px; }
   .spec { border-top: 1px solid var(--ink); padding: 16px 0 0; }
   .spec span { display: block; font-size: 10px; letter-spacing: 2px;
     text-transform: uppercase; font-weight: 700; color: var(--red);
     margin-bottom: 10px; }
   .spec p { font-size: 15px; opacity: 0.74; line-height: 1.62; }
   @media (max-width: 900px) {
-    .fourlives { grid-template-columns: 1fr 1fr; }
-    .fourlives .flnote { grid-column: 1 / -1; }
-    .specs { grid-template-columns: 1fr; gap: 28px; }
+    .paintfilm { grid-template-columns: 1fr; max-width: 520px; }
   }
 
   /* the studio: where the paint is going */
@@ -732,6 +720,49 @@
   </div>
 </div></section>
 
+<section class="medium" id="medium"><div class="wrap">
+  <p class="kicker">The medium</p>
+  <h2>The paint is code.</h2>
+  <p class="lede">In code, I've been building a brush. Each bristle holds
+  a finite load, tests the surface under it, picks up what's still wet,
+  and lays down what contact allows. Long strokes run out. The picture is
+  that surface, lit from one side. Nothing is drawn. One number rebuilds
+  it at any size, so the avatar on your phone and a hundred-inch gallery
+  print are the same marks, sharp at both.</p>
+  <div class="paintfilm" id="paintfilm">
+    <figure class="pf" tabindex="0" aria-label="Frida being painted, thirty seconds. Tap for the sound.">
+      <video id="pfVideo" width="1080" height="1080" muted loop playsinline preload="none"
+        poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_v4_poster_1000.jpg">
+        <source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_paint_v4.mp4" type="video/mp4">
+      </video>
+      <span class="pfsound" id="pfSound">sound off</span>
+    </figure>
+    <div class="pfnote">
+      <div class="flcap">1939 &middot; Frida, painted</div>
+      <p>Thirty seconds of the brush at work. Bare cotton first. The ground
+      goes on with the same bristles, twenty-seven strokes. Then every mark
+      the seed calls for, in the order the painter made them. No frame is a
+      dissolve: each one is a photograph of the wet surface after the next
+      stroke landed. Tap it for the sound.</p>
+      <div class="specs">
+        <div class="spec"><span>A finite load</span>
+          <p>A bristle that touches wet paint takes some of it into its tip.
+          Drag white through wet grey and the stroke goes grey for two or three
+          brush widths, then the clean colour in the reservoir comes back. I
+          never wrote a rule for that. A long stroke starves, and its last
+          third breaks into streaks.</p></div>
+        <div class="spec"><span>Lit from one side</span>
+          <p>Every mark adds height and a wet film to a canvas with tooth.
+          Slopes shade. Wet paint catches a highlight. The weave shows through
+          where the paint is thin. Every edge is where the paint stopped. What
+          a given screen makes of that field is a question for that screen,
+          which is the same bargain every painting has always had with the
+          light in the room.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <section class="creed"><div class="wrap">
   <p class="kicker">The game</p>
   <h2 class="t">Zombie apocalypse</h2>
@@ -1088,63 +1119,6 @@
   </div>
   <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
 </section>
-
-<section class="medium" id="medium"><div class="wrap">
-  <p class="kicker">The medium</p>
-  <h2>The paint is code.</h2>
-  <p class="lede">In code, I've been building a brush. Each bristle holds
-  a finite load, tests the surface under it, picks up what's still wet,
-  and lays down what contact allows. Long strokes run out. The picture is
-  that surface, lit from one side. Nothing is drawn. One number rebuilds
-  it at any size, so the avatar on your phone and a hundred-inch gallery
-  print are the same marks, sharp at both.</p>
-  <div class="paintfilm" id="paintfilm">
-    <figure class="pf" tabindex="0" aria-label="Frida being painted, thirty seconds. Tap for the sound.">
-      <video id="pfVideo" width="1080" height="1080" muted loop playsinline preload="none"
-        poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_v4_poster_1000.jpg">
-        <source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_paint_v4.mp4" type="video/mp4">
-      </video>
-      <span class="pfsound" id="pfSound">sound off</span>
-    </figure>
-    <div class="pfnote">
-      <div class="flcap">1939 &middot; Frida, painted</div>
-      <p>Thirty seconds of the brush at work. Bare cotton first. The ground
-      goes on with the same bristles, twenty-seven strokes. Then every mark
-      the seed calls for, in the order the painter made them. No frame is a
-      dissolve: each one is a photograph of the wet surface after the next
-      stroke landed. Tap it for the sound.</p>
-    </div>
-  </div>
-  <div class="fourlives">
-    <div class="fl"><img id="fl_faithful" width="1400" height="1400" alt="" decoding="async"><div class="flcap">faithful</div></div>
-    <div class="fl"><img id="fl_zombie" width="1400" height="1400" alt="" decoding="async"><div class="flcap">zombie</div></div>
-    <p class="flnote">One of the one of ones, two lives. The same dog
-    through each fate the ninety days can hand it. No second picture is
-    ever swapped in. The same brush painted the same dog again, with what
-    happened to it.</p>
-  </div>
-  <div class="specs">
-    <div class="spec"><span>A finite load</span>
-      <p>A bristle that touches wet paint takes some of it into its tip.
-      Drag white through wet grey and the stroke goes grey for two or three
-      brush widths, then the clean colour in the reservoir comes back. I
-      never wrote a rule for that. A long stroke starves, and its last
-      third breaks into streaks.</p></div>
-    <div class="spec"><span>Lit from one side</span>
-      <p>Every mark adds height and a wet film to a canvas with tooth.
-      Slopes shade. Wet paint catches a highlight. The weave shows through
-      where the paint is thin. Every edge is where the paint stopped. What
-      a given screen makes of that field is a question for that screen,
-      which is the same bargain every painting has always had with the
-      light in the room.</p></div>
-    <div class="spec"><span>The chain finishes it</span>
-      <p>The chain holds no image, only the number and what happened to
-      the dog. The seed decides the dog and its first wardrobe. The weeks
-      add to it. The ninety days decide its fate, and the day it dies is
-      etched on the plaque with the name of whoever kept it. What happened
-      to the dog is the half of the painting the seed cannot supply.</p></div>
-  </div>
-</div></section>
 
 <section class="feature">
   <div class="herobanner">
@@ -1761,12 +1735,6 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   label();
 })();
 
-/* medium: one of one, two lives */
-paintWhenNear(document.querySelector('.fourlives'), () => {
-  showStill(document.getElementById('fl_faithful'), 7, 'faithful');
-  showStill(document.getElementById('fl_zombie'), 7, 'zombie');
-});
-
 /* the wall: all 141 one of ones, the year under each, reshuffle is a
    reshuffle of stills and fates */
 function penFor(seed, state) {
@@ -2302,7 +2270,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
 
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const targets = document.querySelectorAll(
-    '.fate, .stackcard, .step, .spec, .fl, section h2, section .lede, .choiceline');
+    '.fate, .stackcard, .step, .spec, section h2, section .lede, .choiceline');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
