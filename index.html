@@ -1330,8 +1330,9 @@ const FIX18 = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs
 const ARTISTS = [4, 15, 101, 102, 103, 104, 105, 106, 107, 108, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151];
 const ARTIST_SET = new Set(ARTISTS);
 /* the artists' batches: the ten with their art put back (4 15 101-108) in r1388ones_artists, the ten new painters after
-   Astra's cleanup round (Jon 2026-09-07 13:31) in r1388ones_artists_r3 */
-const artistsDir = seed => seed >= 142 ? 'stills/r1388ones_artists_r3/' : 'stills/r1388ones_artists/';
+   Astra's cleanup round (Jon 2026-09-07 13:31) in r1388ones_artists_r3. 148 Gustav is the exception: his first
+   version, before Astra's round and the redesign (Jon 2026-09-08), lives in r1388ones_artists with the first ten. */
+const artistsDir = seed => (seed >= 142 && seed !== 148) ? 'stills/r1388ones_artists_r3/' : 'stills/r1388ones_artists/';
 const ARTISTS_PUB = seed => 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/' + artistsDir(seed);
 function stillUrl(seed, state, size) {
   if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';
@@ -1453,10 +1454,8 @@ function oneOf(n) {
    by the round 1388 painter at 2400x800 (3000x1000 for retina). Two stacked
    images crossfade; the next one is fetched before it is shown. The caption
    is the year and the costume, never a name: working out whose it is is
-   the game. Nine bands, one dog each (Jon, 2026-09-05): the hero is 62, the
-   eight below it are drawn each visit from the finished dogs (the seven on
-   their grounds, then the hundred and twenty-eight from 2026-09-07). A band with one
-   dog does not turn. */
+   the game. Nine bands, one dog each (Jon, 2026-09-05), drawn each visit
+   from the rotation (ROTATE, below). A band with one dog does not turn. */
 const HERO_BASE = 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones/';
 const LANE_BASES = {   /* finished: on the paint layer; each batch has its own immutable prefix */
   62: 'hero_r1388ones_lane/', 38: 'hero_r1388ones_lane/', 63: 'hero_r1388ones_lane/', 70: 'hero_r1388ones_lane/', 102: 'hero_r1388ones_lane/',
@@ -1487,11 +1486,19 @@ const FLAT = { 77: HERO_BASE.replace('hero_r1388ones/', 'ones_flat77/') };
 delete HD_BASES[77];
 HD_BASES[18] = 'ones_fix18/';
 ARTISTS.forEach(s => { HD_BASES[s] = artistsDir(s); });
+/* the rotation (Jon 2026-09-08): only these thirty turn on the page. Every slot that draws a dog at random
+   (the hero, the eight bands, the why picture, the two fates, the footer parade, yours, a mark in the
+   ninety days) draws from this list and nothing else. The wall still shows all one hundred and fifty-one.
+   1 Jesus, 4 Bob, 18 Mike, 21 Michael, 34 Madonna, 35 Gaga, 36 Elton, 38 Hulk, 41 Virgil, 46 Amy, 51 Napoleon,
+   53 Winston, 55 Elizabeth, 60 Marie, 62 Barack, 63 Donald, 70 Batman, 88 Judy, 101 Vincent, 102 Frida,
+   104 Yayoi, 110 Elon, 112 Kobe, 116 Caitlin, 117 Marty, 123 Dorothy, 129 Leia, 141 Gump, 148 Gustav, 151 Rene */
+const ROTATE = [1, 4, 18, 21, 34, 35, 36, 38, 41, 46, 51, 53, 55, 60, 62, 63, 70, 88, 101, 102, 104, 110, 112,
+  116, 117, 123, 129, 141, 148, 151];
 /* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
-   on every visit, evenly, from every finished dog (the seven and the hundred and twenty-eight). A tenth
-   is drawn with them for the why section's fridge drawing, so it never doubles a band. */
+   on every visit, evenly, from the rotation. A tenth is drawn with them for the why section's fridge
+   drawing, so it never doubles a band. */
 function drawBands(n) {
-  const pool = LANE.concat(MORE), out = [];
+  const pool = ROTATE.slice(), out = [];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
   return out;
 }
@@ -1636,7 +1643,7 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
     : seed === 77
     ? PUB + 'ones_flat77/77_' + state + '_1000.jpg'
     : PUB + FIN[seed] + seed + '_' + state + '_1400.jpg';
-  const pool = LANE.concat(MORE);
+  const pool = ROTATE.slice();
   /* the dogs already on this visit's hero, bands and why picture go to the back of the rotation */
   const order = shuffle(pool.filter(s => SLOTS.indexOf(s) < 0)).concat(shuffle(SLOTS.slice()));
   const layers = [document.getElementById('fateA'), document.getElementById('fateB')];
@@ -1737,11 +1744,11 @@ function clampSeed(n) {
   n = (n >>> 0) || 1;
   return ((n - 1) % ONES_N) + 1;
 }
-/* the one that is yours is one of the five finished ones (Jon, 2026-09-05);
+/* the one that is yours is one of the rotation (Jon, 2026-09-08);
    a visitor who was given another dog earlier is given one of these instead */
 let yseed = clampSeed(parseInt(localStorage.getItem('alldogs_seed'), 10) || 0);
-if (LANE.indexOf(yseed) < 0) {
-  yseed = LANE[Math.floor(Math.random() * LANE.length)];
+if (ROTATE.indexOf(yseed) < 0) {
+  yseed = ROTATE[Math.floor(Math.random() * ROTATE.length)];
   localStorage.setItem('alldogs_seed', String(yseed));
 }
 let ystate = localStorage.getItem('alldogs_state') === 'zombie' ? 'zombie' : 'faithful';
@@ -1789,13 +1796,15 @@ function renderYours() {
     const h = raw.trim().replace(/^@+/, '').replace(/[^A-Za-z0-9_]/g, '').toLowerCase();
     if (!h) return null;
     const msg = DEMO_SALT + '|' + h;
+    /* the rehearsal hash lands on one of the rotation */
+    const pickRot = h => ROTATE[(h >>> 0) % ROTATE.length];
     if (window.crypto && crypto.subtle) {
       try {
         const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
-        return clampSeed(new DataView(buf).getUint32(0) || 1);
+        return pickRot(new DataView(buf).getUint32(0) || 1);
       } catch (e) { /* fall through */ }
     }
-    return clampSeed(fnv(msg) || 1);
+    return pickRot(fnv(msg) || 1);
   }
   let pending = 0;
   async function adoptHandle() {
@@ -1912,7 +1921,7 @@ function openStray(seed, state) {
 const parade = document.getElementById('parade');
 paintWhenNear(document.querySelector('footer'), () => {
   const fates = spreadFates(12);
-  shuffle(ONES.slice()).slice(0, 12).forEach((seed, i) => {
+  shuffle(ROTATE.slice()).slice(0, 12).forEach((seed, i) => {
     const img = dogImg(seed, fates[i], TILE, 'framedpick');
     parade.append(img);
   });
@@ -2213,7 +2222,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
     if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return;
     const i = row * COLS + col;
     if (i >= N) return;
-    openStray(((i % ONES_N) + 1), NAME[field[i]]);
+    openStray(ROTATE[i % ROTATE.length], NAME[field[i]]);
   });
   cv.style.cursor = 'zoom-in';
   el('ysRate').addEventListener('input', showRate);
