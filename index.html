@@ -729,7 +729,6 @@
     </div>
   </div>
 </div></section>
-
 <section class="medium" id="medium"><div class="wrap">
   <p class="kicker">The medium</p>
   <h2>The paint is code.</h2>
@@ -772,113 +771,6 @@
     </div>
   </div>
 </div></section>
-
-<section class="creed"><div class="wrap">
-  <p class="kicker">The game</p>
-  <h2 class="t">Zombie apocalypse</h2>
-  <p class="glead">Dog people, each let in by somebody already here, adopt
-  one dog each and keep it for ninety days. A dog you keep grows older
-  every day and rarer every week. Selling it kills it: the moment a living
-  dog changes hands, the contract turns it into a zombie. If 15% of the
-  pack is sold before the ninety days are up, every living dog turns that
-  same night.</p>
-  <div class="gameplan">
-    <div class="gstep">
-      <span class="gnum">1</span>
-      <div class="gart"><img class="cutout" id="cr_adopt" width="1000" height="1000" alt="" decoding="async"></div>
-      <p>Start by <b class="blue">adopting your dog</b>.
-      <span class="lsub">One dog per confirmed handle.
-      Your handle goes on the collar.</span></p>
-    </div>
-    <div class="gstep">
-      <span class="gnum">2</span>
-      <div class="gart gpair">
-        <img class="cutout" id="cr_love" width="1000" height="1000" alt="" decoding="async">
-        <img class="cutout" id="cr_flip" width="1000" height="1000" alt="" decoding="async">
-      </div>
-      <p>Then decide: <b class="blue">keep it</b>, or <b class="red">kill it</b>.
-      <span class="lsub">Selling is the only way to kill it, and it always
-      does. Whoever takes it receives a corpse, and your sale counts toward
-      the 15% that ends it for everyone else.</span></p>
-    </div>
-    <div class="gfork">
-      <div class="gend win">
-        <span class="gtag">If under 15% are sold</span>
-        <div class="gart"><img class="cutout" id="cr_win" width="1000" height="1000" alt="" decoding="async"></div>
-        <p>The zombies lose, permanently, and <b class="blue">the dogs
-        live</b>: the only living dogs that will ever exist are the ones
-        nobody sold.</p>
-      </div>
-      <div class="gend lose">
-        <span class="gtag">If 15% are sold</span>
-        <div class="gart"><img class="cutout" id="cr_lose" width="1000" height="1000" alt="" decoding="async"></div>
-        <p>Fifteen in a hundred was enough. <b class="red">Everyone else
-        loses</b>: the apocalypse turns every living dog into a zombie the
-        same night.</p>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="feature">
-  <div class="herobanner">
-    <img class="hero-still still painting" alt="" width="2400" height="800">
-    <img class="hero-still still" alt="" width="2400" height="800">
-  </div>
-  <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
-</section>
-
-<section class="cannon sheet" id="map"><div class="moon"></div><div class="wrap">
-  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
-  <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
-  <p>The whole pack, one dog to a mark. The count of sold dogs is public
-  all day, and the world can only end at midnight. So you watch the count
-  climb, and you still never know which midnight is the one. Each run
-  below deals a different-sized pack, because the line is a share and not
-  a number: it plays the same at four hundred dogs as at four thousand.</p>
-
-  <div class="yearsim">
-    <div class="ysfield">
-      <canvas id="ysPack" width="1600" height="1000"></canvas>
-      <div class="ysflash" id="ysFlash"></div>
-    </div>
-    <div class="yskey">
-      <span><i class="k-live"></i>living</span>
-      <span><i class="k-zom"></i>sold once, turned</span>
-      <span><i class="k-ang"></i>died of old age</span>
-    </div>
-    <div class="ysboard">
-      <div class="ysstat"><span class="k">Day</span><b id="ysDay">0</b><span class="s">of 90</span></div>
-      <div class="ysstat"><span class="k">Pack</span><b id="ysPackN">&ndash;</b><span class="s">adopted</span></div>
-      <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">&ndash;</b></div>
-      <div class="ysstat"><span class="k">First sales</span><b id="ysZom" class="c-zom">0</b><span class="s" id="ysTarget">of 15%</span></div>
-      <div class="ysstat"><span class="k">Died of age</span><b id="ysDied" class="c-ang">0</b></div>
-      <div class="ysstat"><span class="k">Still needed</span><b id="ysNeed" class="c-zom">&ndash;</b><span class="s">to end it</span></div>
-      <div class="ysstat"><span class="k">Pace</span><b id="ysPace">&ndash;</b><span class="s" id="ysPaceNote">against the line</span></div>
-    </div>
-    <div class="ysbar"><i id="ysRace"></i><u id="ysMark"></u></div>
-    <div class="ysctl">
-      <button class="btn hot" id="ysRun">Pause</button>
-      <label for="ysRate">How often the pack sells
-        <output id="ysRateOut">one every 14 hours</output></label>
-      <input id="ysRate" type="range" min="20" max="500" step="1" value="167">
-    </div>
-    <p class="ysverdict" id="ysVerdict">The ninety days, run over and over
-    for as long as you watch. Nothing in it is scripted: every night, every
-    living dog rolls the same small chance of dying that the rules give it,
-    and somebody sells at the rate on the slider. Click a mark and one of
-    the one of ones opens.</p>
-  </div>
-</div></section>
-
-<section class="feature">
-  <div class="herobanner">
-    <img class="hero-still still painting" alt="" width="2400" height="800">
-    <img class="hero-still still" alt="" width="2400" height="800">
-  </div>
-  <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
-</section>
-
 <section class="bred sheet" id="bred"><div class="wrap">
   <p class="kicker">The method &middot; whose art this is</p>
   <h2>Bred, not drawn.</h2>
@@ -969,10 +861,9 @@
 
   <div class="cta">
     <a class="btn hot" href="design/">Watch the fight live</a>
-    <a class="btn" href="#medium">How the paint works</a>
+    <a class="btn" href="#game">Now the game</a>
   </div>
 </div></section>
-
 <section class="feature">
   <div class="herobanner">
     <img class="hero-still still painting" alt="" width="2400" height="800">
@@ -981,44 +872,52 @@
   <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
 </section>
 
-<section class="yours" id="yours"><div class="wrap">
-  <p class="kicker">Yours</p>
-  <h2>While you're here,<br>this one is yours.</h2>
-  <div class="yourswrap">
-    <img id="yourDog" width="1000" height="1000" alt="" decoding="async">
-    <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; day 1</span></div>
-  </div>
-  <p class="lede" style="margin-top:28px"><b id="yourIntro">This one</b> is
-  one of the one of ones. It isn't on any chain and nobody can take it. But
-  you already know what you could do to it. The button is further down the
-  page.</p>
-
-  <div class="lifebox">
-    <label class="lifelbl" for="yourHandle">Put your name on the collar</label>
-    <div class="liferow">
-      <input id="yourHandle" type="text" placeholder="@yourhandle"
-        maxlength="18" autocomplete="off" spellcheck="false">
-      <button class="btn hot" id="lifeRun">Live its whole life</button>
+<section class="creed" id="game"><div class="wrap">
+  <p class="kicker">The game</p>
+  <h2 class="t">Zombie apocalypse</h2>
+  <p class="glead">Dog people, each let in by somebody already here, adopt
+  one dog each and keep it for ninety days. A dog you keep grows older
+  every day and rarer every week. Selling it kills it: the moment a living
+  dog changes hands, the contract turns it into a zombie. If 15% of the
+  pack is sold before the ninety days are up, every living dog turns that
+  same night.</p>
+  <div class="gameplan">
+    <div class="gstep">
+      <span class="gnum">1</span>
+      <div class="gart"><img class="cutout" id="cr_adopt" width="1000" height="1000" alt="" decoding="async"></div>
+      <p>Start by <b class="blue">adopting your dog</b>.
+      <span class="lsub">One dog per confirmed handle.
+      Your handle goes on the collar.</span></p>
     </div>
-    <div class="lifeticks">
-      <span><b id="lifeDay">1</b> days lived</span>
-      <span><b id="lifeTraits">0</b> traits earned</span>
+    <div class="gstep">
+      <span class="gnum">2</span>
+      <div class="gart gpair">
+        <img class="cutout" id="cr_love" width="1000" height="1000" alt="" decoding="async">
+        <img class="cutout" id="cr_flip" width="1000" height="1000" alt="" decoding="async">
+      </div>
+      <p>Then decide: <b class="blue">keep it</b>, or <b class="red">kill it</b>.
+      <span class="lsub">Selling is the only way to kill it, and it always
+      does. Whoever takes it receives a corpse, and your sale counts toward
+      the 15% that ends it for everyone else.</span></p>
     </div>
-    <p class="lifenote" id="lifeNote">The death clock never stops, so a dog
-    nobody sells dies of old age eventually. Run its life and watch: the
-    weekly drop lands when it lands, old age comes when it comes, and the
-    plaque at the end carries the days and whoever was still holding.</p>
+    <div class="gfork">
+      <div class="gend win">
+        <span class="gtag">If under 15% are sold</span>
+        <div class="gart"><img class="cutout" id="cr_win" width="1000" height="1000" alt="" decoding="async"></div>
+        <p>The zombies lose, permanently, and <b class="blue">the dogs
+        live</b>: the only living dogs that will ever exist are the ones
+        nobody sold.</p>
+      </div>
+      <div class="gend lose">
+        <span class="gtag">If 15% are sold</span>
+        <div class="gart"><img class="cutout" id="cr_lose" width="1000" height="1000" alt="" decoding="async"></div>
+        <p>Fifteen in a hundred was enough. <b class="red">Everyone else
+        loses</b>: the apocalypse turns every living dog into a zombie the
+        same night.</p>
+      </div>
+    </div>
   </div>
 </div></section>
-
-<section class="feature">
-  <div class="herobanner">
-    <img class="hero-still still painting" alt="" width="2400" height="800">
-    <img class="hero-still still" alt="" width="2400" height="800">
-  </div>
-  <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
-</section>
-
 <section class="fatesec sheet" id="fates"><div class="wrap">
   <div class="faterow">
     <div class="fatetext">
@@ -1103,7 +1002,6 @@
   so whether this pack gets a crown depends on how many people walk through
   the door. Half the rarity is dealt. The other half is earned by staying.</p>
 </div></section>
-
 <section class="feature">
   <div class="herobanner">
     <img class="hero-still still painting" alt="" width="2400" height="800">
@@ -1112,23 +1010,67 @@
   <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
 </section>
 
-<!-- the wall of all 141 is hidden for now (Jon, 2026-09-05); the markup and its script stay, drop the hidden attribute to bring it back -->
-<section id="dogs" hidden><div class="wrap">
-  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
-  <p class="kicker">The collection</p>
-  <h2>Every dog<br>its own drawing.</h2>
-  <div class="kennel" id="kennel"></div>
-  <div class="kennelrow">
-    <button class="btn" id="litter">A new litter</button>
-    <span class="note">All one hundred and fifty-one one of ones, in seed
-    order, painted once by the round 1388 painter; the year under each is
-    the only clue. Until adoption opens the style
-    is still being fought over:
-    <a href="design/">watch the machines redraw the collection &rarr;</a></span>
+<section class="rules sheet" id="deal"><div class="wrap">
+  <p class="kicker">The ninety days</p>
+  <h2>How the ninety days work</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div>
+      <h3>A dog you keep does not sit still.</h3>
+      <p>Two clocks run on every living dog. Once a week a handful of them
+      are handed one more trait, and only rare ones: two in every thousand
+      living dogs a week, about a tenth of the pack a year. Every day, two
+      in every ten thousand living dogs die of old age, about seven in a
+      hundred a year. Nobody chooses either one and nothing you do
+      changes your odds. Holding is the only way your dog gets rarer, and
+      the only way it dies with your name on it.</p></div>
+    <div class="step"><div class="n">02</div>
+      <h3>Selling your dog kills it.</h3>
+      <p>Not as a penalty. As the mechanism. For the whole ninety days, the
+      moment a living dog leaves your wallet the contract turns it into a
+      zombie in the same transaction, and whoever takes it receives the corpse.
+      There is no button, no confirmation and no way to sell a dog and
+      keep it alive. The turn is signed on the collar forever, your handle
+      still on it. Offering the dog is a public announcement that its
+      owner is about to kill it.</p></div>
+    <div class="step"><div class="n">03</div>
+      <h3>At 15% first sales, the apocalypse.</h3>
+      <p>The count is <b>first sales only</b>. A dog turns once, on the day
+      it first leaves the wallet that adopted it, and moves as often as
+      anyone likes afterward without moving the number again. So the count
+      cannot be manufactured: it is how many separate
+      dogs have been given up, out of however many were adopted. The line
+      is fixed the moment the door shuts and never moved. If 15% of the
+      pack has been given up at any point inside the ninety days, the
+      horde takes every living dog at the next midnight: still yours,
+      free to move, never alive again. Fifteen percent over ninety days is one
+      first sale per thousand dogs roughly every fourteen hours, which is
+      exactly why the line is set there. Dogs that already died of old age cannot be
+      taken.</p></div>
+    <div class="step"><div class="n">04</div>
+      <h3>Survive the ninety days and the zombies lose forever.</h3>
+      <p>If the last midnight passes with the count under the line, no
+      sale can ever turn a dog again, and every dog still in its adopting
+      wallet is a living animal that nobody could have taken on any of
+      those ninety days. That is the good ending.</p></div>
   </div>
-
 </div></section>
-
+<section class="rules sheet" id="tempter"><div class="wrap">
+  <p class="kicker">The tempter</p>
+  <h2>I will take your dog.<br>Dead.</h2>
+  <p class="lede">My mother's albums sat in a storage unit until the month
+  nobody paid. That is how a record goes: not stolen, let go for less than
+  it cost to keep. So for the ninety days I stand a public bid on every
+  living dog. Take it and the dog turns in that transaction, your handle
+  on the collar, one more toward the line.</p>
+  <div class="bidcard">
+    <span>The standing bid</span>
+    <b>Double</b>
+    <i>what it cost to adopt. Any living dog. Every day of the war.</i>
+  </div>
+  <p class="dropnote">It is my money. If the record goes again, it goes to
+  the person who lost it the first time, and every collar says who let
+  go.</p>
+</div></section>
 <section class="feature">
   <div class="herobanner">
     <img class="hero-still still painting" alt="" width="2400" height="800">
@@ -1137,6 +1079,48 @@
   <div class="wrap"><div class="herocap"><span class="hero-name"></span></div></div>
 </section>
 
+<section class="cannon sheet" id="map"><div class="moon"></div><div class="wrap">
+  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
+  <p>The whole pack, one dog to a mark. The count of sold dogs is public
+  all day, and the world can only end at midnight. So you watch the count
+  climb, and you still never know which midnight is the one. Each run
+  below deals a different-sized pack, because the line is a share and not
+  a number: it plays the same at four hundred dogs as at four thousand.</p>
+
+  <div class="yearsim">
+    <div class="ysfield">
+      <canvas id="ysPack" width="1600" height="1000"></canvas>
+      <div class="ysflash" id="ysFlash"></div>
+    </div>
+    <div class="yskey">
+      <span><i class="k-live"></i>living</span>
+      <span><i class="k-zom"></i>sold once, turned</span>
+      <span><i class="k-ang"></i>died of old age</span>
+    </div>
+    <div class="ysboard">
+      <div class="ysstat"><span class="k">Day</span><b id="ysDay">0</b><span class="s">of 90</span></div>
+      <div class="ysstat"><span class="k">Pack</span><b id="ysPackN">&ndash;</b><span class="s">adopted</span></div>
+      <div class="ysstat"><span class="k">Living</span><b id="ysLiving" class="c-live">&ndash;</b></div>
+      <div class="ysstat"><span class="k">First sales</span><b id="ysZom" class="c-zom">0</b><span class="s" id="ysTarget">of 15%</span></div>
+      <div class="ysstat"><span class="k">Died of age</span><b id="ysDied" class="c-ang">0</b></div>
+      <div class="ysstat"><span class="k">Still needed</span><b id="ysNeed" class="c-zom">&ndash;</b><span class="s">to end it</span></div>
+      <div class="ysstat"><span class="k">Pace</span><b id="ysPace">&ndash;</b><span class="s" id="ysPaceNote">against the line</span></div>
+    </div>
+    <div class="ysbar"><i id="ysRace"></i><u id="ysMark"></u></div>
+    <div class="ysctl">
+      <button class="btn hot" id="ysRun">Pause</button>
+      <label for="ysRate">How often the pack sells
+        <output id="ysRateOut">one every 14 hours</output></label>
+      <input id="ysRate" type="range" min="20" max="500" step="1" value="167">
+    </div>
+    <p class="ysverdict" id="ysVerdict">The ninety days, run over and over
+    for as long as you watch. Nothing in it is scripted: every night, every
+    living dog rolls the same small chance of dying that the rules give it,
+    and somebody sells at the rate on the slider. Click a mark and one of
+    the one of ones opens.</p>
+  </div>
+</div></section>
 <section class="feature">
   <div class="herobanner">
     <img class="hero-still still painting" alt="" width="2400" height="800">
@@ -1187,70 +1171,51 @@
   than a count, so the game is identical at four hundred dogs and at four
   thousand. Dogs nobody adopts are never born at all.</p>
 </div></section>
+<!-- the wall of all 141 is hidden for now (Jon, 2026-09-05); the markup and its script stay, drop the hidden attribute to bring it back -->
+<section id="dogs" hidden><div class="wrap">
+  <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <p class="kicker">The collection</p>
+  <h2>Every dog<br>its own drawing.</h2>
+  <div class="kennel" id="kennel"></div>
+  <div class="kennelrow">
+    <button class="btn" id="litter">A new litter</button>
+    <span class="note">All one hundred and fifty-one one of ones, in seed
+    order, painted once by the round 1388 painter; the year under each is
+    the only clue. Until adoption opens the style
+    is still being fought over:
+    <a href="design/">watch the machines redraw the collection &rarr;</a></span>
+  </div>
 
-<section class="rules sheet" id="deal"><div class="wrap">
-  <p class="kicker">The ninety days</p>
-  <h2>How the ninety days work</h2>
-  <div class="steps">
-    <div class="step"><div class="n">01</div>
-      <h3>A dog you keep does not sit still.</h3>
-      <p>Two clocks run on every living dog. Once a week a handful of them
-      are handed one more trait, and only rare ones: two in every thousand
-      living dogs a week, about a tenth of the pack a year. Every day, two
-      in every ten thousand living dogs die of old age, about seven in a
-      hundred a year. Nobody chooses either one and nothing you do
-      changes your odds. Holding is the only way your dog gets rarer, and
-      the only way it dies with your name on it.</p></div>
-    <div class="step"><div class="n">02</div>
-      <h3>Selling your dog kills it.</h3>
-      <p>Not as a penalty. As the mechanism. For the whole ninety days, the
-      moment a living dog leaves your wallet the contract turns it into a
-      zombie in the same transaction, and whoever takes it receives the corpse.
-      There is no button, no confirmation and no way to sell a dog and
-      keep it alive. The turn is signed on the collar forever, your handle
-      still on it. Offering the dog is a public announcement that its
-      owner is about to kill it.</p></div>
-    <div class="step"><div class="n">03</div>
-      <h3>At 15% first sales, the apocalypse.</h3>
-      <p>The count is <b>first sales only</b>. A dog turns once, on the day
-      it first leaves the wallet that adopted it, and moves as often as
-      anyone likes afterward without moving the number again. So the count
-      cannot be manufactured: it is how many separate
-      dogs have been given up, out of however many were adopted. The line
-      is fixed the moment the door shuts and never moved. If 15% of the
-      pack has been given up at any point inside the ninety days, the
-      horde takes every living dog at the next midnight: still yours,
-      free to move, never alive again. Fifteen percent over ninety days is one
-      first sale per thousand dogs roughly every fourteen hours, which is
-      exactly why the line is set there. Dogs that already died of old age cannot be
-      taken.</p></div>
-    <div class="step"><div class="n">04</div>
-      <h3>Survive the ninety days and the zombies lose forever.</h3>
-      <p>If the last midnight passes with the count under the line, no
-      sale can ever turn a dog again, and every dog still in its adopting
-      wallet is a living animal that nobody could have taken on any of
-      those ninety days. That is the good ending.</p></div>
+</div></section>
+<section class="yours" id="yours"><div class="wrap">
+  <p class="kicker">Yours</p>
+  <h2>While you're here,<br>this one is yours.</h2>
+  <div class="yourswrap">
+    <img id="yourDog" width="1000" height="1000" alt="" decoding="async">
+    <div class="yourscap"><span id="yourName">&nbsp;</span><span id="yourState">alive &middot; day 1</span></div>
+  </div>
+  <p class="lede" style="margin-top:28px"><b id="yourIntro">This one</b> is
+  one of the one of ones. It isn't on any chain and nobody can take it. But
+  you already know what you could do to it. The button is further down the
+  page.</p>
+
+  <div class="lifebox">
+    <label class="lifelbl" for="yourHandle">Put your name on the collar</label>
+    <div class="liferow">
+      <input id="yourHandle" type="text" placeholder="@yourhandle"
+        maxlength="18" autocomplete="off" spellcheck="false">
+      <button class="btn hot" id="lifeRun">Live its whole life</button>
+    </div>
+    <div class="lifeticks">
+      <span><b id="lifeDay">1</b> days lived</span>
+      <span><b id="lifeTraits">0</b> traits earned</span>
+    </div>
+    <p class="lifenote" id="lifeNote">The death clock never stops, so a dog
+    nobody sells dies of old age eventually. Run its life and watch: the
+    weekly drop lands when it lands, old age comes when it comes, and the
+    plaque at the end carries the days and whoever was still holding.</p>
   </div>
 </div></section>
-
-<section class="rules sheet" id="tempter"><div class="wrap">
-  <p class="kicker">The tempter</p>
-  <h2>I will take your dog.<br>Dead.</h2>
-  <p class="lede">My mother's albums sat in a storage unit until the month
-  nobody paid. That is how a record goes: not stolen, let go for less than
-  it cost to keep. So for the ninety days I stand a public bid on every
-  living dog. Take it and the dog turns in that transaction, your handle
-  on the collar, one more toward the line.</p>
-  <div class="bidcard">
-    <span>The standing bid</span>
-    <b>Double</b>
-    <i>what it cost to adopt. Any living dog. Every day of the war.</i>
-  </div>
-  <p class="dropnote">It is my money. If the record goes again, it goes to
-  the person who lost it the first time, and every collar says who let
-  go.</p>
-</div></section>
-
 <section class="feature">
   <div class="herobanner">
     <img class="hero-still still painting" alt="" width="2400" height="800">
