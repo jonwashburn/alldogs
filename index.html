@@ -1494,11 +1494,12 @@ ARTISTS.forEach(s => { HD_BASES[s] = artistsDir(s); });
    104 Yayoi, 110 Elon, 112 Kobe, 116 Caitlin, 117 Marty, 123 Dorothy, 129 Leia, 141 Gump, 148 Gustav, 151 Rene */
 const ROTATE = [1, 4, 18, 21, 34, 35, 36, 38, 41, 46, 51, 53, 55, 60, 62, 63, 70, 88, 101, 102, 104, 110, 112,
   116, 117, 123, 129, 141, 148, 151];
-/* the hero and the eight bands each carry one finished dog and do not turn; all nine are drawn fresh
-   on every visit, evenly, from the rotation. A tenth is drawn with them for the why section's fridge
-   drawing, so it never doubles a band. */
+/* the hero is 62 Barack on every visit (Jon 2026-09-08). The eight bands below each carry one finished
+   dog and do not turn; they are drawn fresh on every visit, evenly, from the rest of the rotation. A tenth
+   is drawn with them for the why section's fridge drawing, so it never doubles a band. */
+const HERO_SEED = 62;
 function drawBands(n) {
-  const pool = ROTATE.slice(), out = [];
+  const pool = ROTATE.filter(s => s !== HERO_SEED), out = [HERO_SEED];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
   return out;
 }
