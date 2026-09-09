@@ -2,11 +2,219 @@
   "version": 1,
   "portraits": [
     {
+      "id": "duet1-leon-astra",
+      "title": "L\u00e9on \u00b7 watchful tenderness \u00b7 Astra \u00b7 extra high",
+      "image": "assets/duet1-leon-astra.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "description": "A long face, emphatically unequal eyes behind broken spectacle rims, a full olive cap and an inward coat. A warm crooked nose carries the tired expression.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/leon/astra/out/leon_astra_v2_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "comparison": {
+        "fingerprint": "a5c4402a30f7136f774cb0ac3ffe30ebaecfe039ece0626585835c3934fef793",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-leon-fable",
+      "title": "L\u00e9on \u00b7 worn and watchful \u00b7 Fable 5.1",
+      "image": "assets/duet1-leon-fable.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "description": "A longer sallow midface, broad warm nose, restrained unequal eyes and sparse stubble beneath a heavy charcoal cap. Long vertical coat drags echo the headwear.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/leon/fable/out/leon_fable_v1_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "comparison": {
+        "fingerprint": "106606d338dfa52ca309eee40edeb02c50a8a2f59c144e5c8d842858edb49a85",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-mathilda-astra",
+      "title": "Mathilda \u00b7 guarded defiance \u00b7 Astra \u00b7 extra high",
+      "image": "assets/duet1-mathilda-astra.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "description": "A low diagonal fringe, one sideways eye and one tall eye, compressed mouth and a held cuff. The withdrawn moss jacket keeps the expression guarded.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/mathilda/astra/out/mathilda_astra_v1_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "comparison": {
+        "fingerprint": "bff772161d433d13c0849997b52873dfb7788612dfc472b90c31e872be01b5e7",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-mathilda-fable",
+      "title": "Mathilda \u00b7 a withheld thought \u00b7 Fable 5.1",
+      "image": "assets/duet1-mathilda-fable.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "description": "Rough dark fringe falls into a quiet, worried face. Differently weighted eyes, a broken angular jaw and tightly folded arms give a more withheld presence.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/mathilda/fable/out/mathilda_fable_v1_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "comparison": {
+        "fingerprint": "ce50c14873ea30787c05dba66d7b6a3e7135f8303f18bfe6c7dbbaad08cd7c93",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-alan-astra",
+      "title": "Alan Garner \u00b7 a puzzled pause \u00b7 Astra \u00b7 extra high",
+      "image": "assets/duet1-alan-astra.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "description": "A pear-round head, broken walnut curls, sideways versus vertical eye and a small parted mouth. Warm separated beard marks and an awkward shirt opening carry the uncertainty.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/alan/astra/out/alan_astra_v1_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "comparison": {
+        "fingerprint": "e6fb3e81b6bf85c4980adc94c783e85be4619d7d1bc609490de25498e53f7d9a",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-alan-fable",
+      "title": "Alan Garner \u00b7 wide-eyed doubt \u00b7 Fable 5.1",
+      "image": "assets/duet1-alan-fable.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "description": "A broad heavy face with a large startled eye and a smaller doubtful eye. Curled loops, a full warm beard, a small mouth opening and a squat rumpled body carry the humor.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/alan/fable/out/alan_fable_v2_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "comparison": {
+        "fingerprint": "58ff8e59ec41aed137d9b705183e01d234d8a5fc5c5ef19545e6129952c1d00e",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-damon-astra",
+      "title": "Damon Salvatore \u00b7 knowing glance \u00b7 Astra \u00b7 extra high",
+      "image": "assets/duet1-damon-astra.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "description": "A tapered jaw, swept indigo hair, tall versus hooded blue eye and violet paint through the lifted cheek. Dark slouched leather and thin trouser legs hold the small body.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/damon/astra/out/damon_astra_v2_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "comparison": {
+        "fingerprint": "96b0baaf30f5a6ef066bd100137e412a7334887ad7599da7ac2cd22c28b4cb0c",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "duet1-damon-fable",
+      "title": "Damon Salvatore \u00b7 a crooked invitation \u00b7 Fable 5.1",
+      "image": "assets/duet1-damon-fable.jpg",
+      "group": "Two artists \u00b7 four characters",
+      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "description": "A broader angular face, unequal icy-blue eyes, swept raven hair and a crooked smirk. Broken jacket edges and a small grey neckline keep the dark figure open.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_01/damon/fable/out/damon_fable_v1_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "comparison": {
+        "fingerprint": "ec36130b7c8853a08934fe6d3abdd87ecefced894b3e0a0100f48c8bf0e223b4",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "amelie-1",
       "title": "Am\u00e9lie \u00b7 a private joke",
       "image": "assets/amelie-1.jpg",
       "group": "New character",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "Am\u00e9lie Poulain through a short uneven fringe, a dark bob curling toward the jaw, unequal attentive eyes and a tiny lifted smile. A wine-red cardigan and a small pale-green neckline stroke keep the color warm and restrained.",
       "moves": [
         "unequal-eyes",
@@ -1282,20 +1490,32 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "amelie-1",
-    "title": "New character \u00b7 Am\u00e9lie",
-    "description": "Two choices about expression and painted lines across different characters. Am\u00e9lie appears in both comparisons, alongside Bowie and Tiffany. Choose for the quality named; the next pair loads automatically.",
+    "id": "duet-1",
+    "title": "Four characters \u00b7 two artists",
+    "description": "Eight new paintings: one independent Fable 5.1 version and one Astra extra-high version of L\u00e9on, Mathilda, Alan and Damon. Four same-character comparisons, one question each about expression or painted lines. The sides are randomized; your choice loads the next pair. All eight are on the wall.",
     "trials": [
       {
         "attribute": "expression",
-        "left": "amelie-1",
-        "right": "bowie-3",
+        "left": "duet1-leon-astra",
+        "right": "duet1-leon-fable",
         "question": "Which expression feels more individual and alive?"
       },
       {
         "attribute": "brushwork",
-        "left": "amelie-1",
-        "right": "round3-tiffany-hand",
+        "left": "duet1-mathilda-astra",
+        "right": "duet1-mathilda-fable",
+        "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
+      },
+      {
+        "attribute": "expression",
+        "left": "duet1-alan-astra",
+        "right": "duet1-alan-fable",
+        "question": "Which expression feels more individual and alive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "duet1-damon-astra",
+        "right": "duet1-damon-fable",
         "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
       }
     ]
