@@ -2,11 +2,53 @@
   "version": 1,
   "portraits": [
     {
+      "id": "round3-tiffany-posture",
+      "title": "Tiffany \u00b7 holding her ground",
+      "image": "assets/round3-tiffany-posture.jpg",
+      "group": "Round 3",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "A raised shoulder, tighter diagonal arm fold and wider stance give the small body a more guarded attitude around the knowing expression.",
+      "moves": [
+        "cheek-mouth",
+        "unequal-eyes",
+        "bury-recover"
+      ],
+      "parent": "round2-tiffany-expression",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/round03_posture/out/posture_v2_corrected_1000.png",
+      "comparison": {
+        "fingerprint": "b4f70524304f7b6ca82193b0de94636e2c01d9f02436129d5c2ace9e430a692f",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "round3-tiffany-hand",
+      "title": "Tiffany \u00b7 a changing line",
+      "image": "assets/round3-tiffany-hand.jpg",
+      "group": "Round 3",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "Dark hair strokes swell and thin; the jaw contour disappears into paint and returns in fragments. Sleeve lines meet loaded paint, with a quieter change below the face.",
+      "moves": [
+        "loaded-deposit",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "round2-tiffany-expression",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/round03_hand/out/hand_v2_1000.png",
+      "comparison": {
+        "fingerprint": "6252bd5ce31c90545a88143f2b6194faeb6bc7ae86965b8993b1d4eb92e64279",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "round2-tiffany-expression",
       "title": "Tiffany \u00b7 a held smile",
       "image": "assets/round2-tiffany-expression.jpg",
       "group": "Round 2",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A lifted cheek and a displaced mouth corner suggest a more knowing expression. The unequal eyes and folded posture retain the original guarded character.",
       "moves": [
         "cheek-mouth",
@@ -45,7 +87,7 @@
       "title": "Tiffany \u00b7 broken hair planes",
       "image": "assets/round2-tiffany-hair.jpg",
       "group": "Round 2",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "Broad opposing dark masses and thin color planes rebuild the hair around the original face. The heavier shapes have a sharper, more collaged edge.",
       "moves": [
         "broken-color",
@@ -83,7 +125,7 @@
       "title": "Bowie \u00b7 a knowing glance",
       "image": "assets/round2-bowie-character.jpg",
       "group": "Round 2",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A flatter blue eye, lifted cheek and short mouth return change the expression within the displaced head-and-body relationship.",
       "moves": [
         "unequal-eyes",
@@ -1197,33 +1239,21 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "hand-round-2",
-    "title": "Round 2 \u00b7 Tiffany and Bowie",
-    "description": "Four choices, then we pause for your direction. Choose for the quality in each question; the next pair loads automatically. All studies remain on The wall.",
+    "id": "hand-round-3",
+    "title": "Round 3 \u00b7 Tiffany, gesture and line",
+    "description": "Two choices, then we pause for your direction. Each new study is compared with the Tiffany from the previous round, so that reference appears twice. Choose for the quality named; the next pair loads automatically.",
     "trials": [
       {
-        "attribute": "expression",
-        "left": "round2-tiffany-expression",
-        "right": "tiffany-2",
-        "question": "Which Tiffany expression feels more alive while staying understated?"
+        "attribute": "posture",
+        "left": "round3-tiffany-posture",
+        "right": "round2-tiffany-expression",
+        "question": "Which stance gives Tiffany more personality?"
       },
       {
         "attribute": "brushwork",
-        "left": "round2-tiffany-hair",
-        "right": "tiffany-2",
-        "question": "Which treatment of the hair feels more naturally painted?"
-      },
-      {
-        "attribute": "expression",
-        "left": "round2-bowie-character",
-        "right": "round1-displaced",
-        "question": "Which Bowie expression has more personality?"
-      },
-      {
-        "attribute": "eyes",
-        "left": "round2-bowie-character",
-        "right": "bowie-3",
-        "question": "Which uneven gaze feels more convincing?"
+        "left": "round3-tiffany-hand",
+        "right": "round2-tiffany-expression",
+        "question": "Which portrait\u2019s painted lines feel more natural, especially in the hair and jaw?"
       }
     ]
   }
