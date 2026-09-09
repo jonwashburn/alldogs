@@ -2,6 +2,69 @@
   "version": 1,
   "portraits": [
     {
+      "id": "round1-lost-eye",
+      "title": "Bowie \u00b7 partly lost eye",
+      "image": "assets/round1-lost-eye.jpg",
+      "group": "Round 1",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "A lower, incomplete blue eye with traces of its earlier rim. The face is drawn around the opening; the first covering-paint attempts were set aside.",
+      "moves": [
+        "unequal-eyes",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/round01_drag_recover/out/drag_recover_v3_1000.png",
+      "comparison": {
+        "fingerprint": "a4f7e36a39d2ad6a7c79dc4401c30df79584569349ef11250362fd304515199d",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "round1-eye-cheek",
+      "title": "Bowie \u00b7 eye into cheek",
+      "image": "assets/round1-eye-cheek.jpg",
+      "group": "Round 1",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "An irregular tall eye constructed together with the cheek. The transition is more open, but the eye loses some of its earlier clarity.",
+      "moves": [
+        "loaded-deposit",
+        "wet-crossing",
+        "dry-separation"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/round01_loaded_dry/out/loaded_dry_v4_1000.png",
+      "comparison": {
+        "fingerprint": "a3791c0c10357c65b60680061a6f39c747e3a8736be0ef9167196fd83f7a9888",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "round1-displaced",
+      "title": "Bowie \u00b7 displaced drawing",
+      "image": "assets/round1-displaced.jpg",
+      "group": "Round 1",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "The head and features follow different angles. The closer tall eye and unresolved jaw create a more direct gaze.",
+      "moves": [
+        "unequal-eyes",
+        "recovery-line",
+        "bury-recover"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/round01_displaced_drawing/out/displaced_v1_1000.png",
+      "comparison": {
+        "fingerprint": "da7409f67f9984bb1f39eac5373f2a1c00b84e4fedb93f9b4e52e225d554f47a",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "margot-original",
       "title": "Margot \u00b7 original",
       "image": "assets/margot-original.jpg",
@@ -1017,5 +1080,48 @@
       }
     }
   ],
-  "comparisonPolicy": "visible-differences-1"
+  "comparisonPolicy": "visible-differences-1",
+  "reviewRound": {
+    "id": "hand-round-1",
+    "title": "Round 1 \u00b7 Three ways of drawing the face",
+    "description": "Six choices, then we pause for your direction. Choose for the quality in each question; the next pair loads automatically. All studies remain on The wall.",
+    "trials": [
+      {
+        "attribute": "eyes",
+        "left": "round1-lost-eye",
+        "right": "bowie-3",
+        "question": "Which blue eye feels more alive?"
+      },
+      {
+        "attribute": "deconstruction",
+        "left": "round1-eye-cheek",
+        "right": "bowie-3",
+        "question": "Which portrait connects the eye and cheek more convincingly?"
+      },
+      {
+        "attribute": "posture",
+        "left": "round1-displaced",
+        "right": "bowie-3",
+        "question": "Which head-and-body relationship feels more alive?"
+      },
+      {
+        "attribute": "expression",
+        "left": "round1-lost-eye",
+        "right": "round1-eye-cheek",
+        "question": "Which expression would you take further?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "round1-eye-cheek",
+        "right": "round1-displaced",
+        "question": "Which paint feels more natural and varied?"
+      },
+      {
+        "attribute": "eyes",
+        "left": "round1-lost-eye",
+        "right": "round1-displaced",
+        "question": "Which uneven gaze feels more convincing?"
+      }
+    ]
+  }
 }

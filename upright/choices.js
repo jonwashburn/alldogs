@@ -22,12 +22,14 @@ function resembles(a,b){
     (a.comparison?.fingerprint && a.comparison.fingerprint===b.comparison?.fingerprint) ||
     a.comparison?.similar?.includes(b.id) || b.comparison?.similar?.includes(a.id);
 }
-export function nextTrial(portraits, answers={}, displayed=new Set(), previous=null, random=Math.random){
+export function nextTrial(portraits, answers={}, displayed=new Set(), previous=null, random=Math.random, schedule=null){
   const pending=[], byId=Object.fromEntries(portraits.map(p=>[p.id,p]));
+  const allowed=schedule===null?null:new Map(schedule.map(t=>[trialKey(t.attribute,t.left,t.right),t]));
   for(const q of QUESTIONS) for(let i=0;i<portraits.length;i++) for(let j=i+1;j<portraits.length;j++){
     if(!comparable(portraits[i],portraits[j],q.id))continue;
     const left=portraits[i].id,right=portraits[j].id,key=trialKey(q.id,left,right);
-    if(!answers[key]||answers[key].undone) pending.push({key,attribute:q.id,left,right});
+    if(allowed&&!allowed.has(key))continue;
+    if(!answers[key]||answers[key].undone) pending.push({key,attribute:q.id,left,right,...(allowed?.get(key)?.question?{question:allowed.get(key).question}:{})});
   }
   if(!pending.length)return null;
   const prefer=(pool,predicate)=>{const selected=pool.filter(predicate);return selected.length?selected:pool;};
@@ -49,7 +51,7 @@ export function summarizeChoices(answers,byId){
   const rows=Object.values(answers).filter(v=>!v.undone&&byId[v.left]&&byId[v.right]).sort((a,b)=>b.updatedAt-a.updatedAt);
   if(!rows.length)return ['No attribute comparisons yet.'];
   return [`${rows.length} comparisons recorded. Showing the latest ${Math.min(rows.length,60)}; the export retains all choices.`,...rows.slice(0,60).map(v=>{
-    const attribute=QUESTIONS.find(q=>q.id===v.attribute)?.label||v.attribute;
+    const attribute=v.question||QUESTIONS.find(q=>q.id===v.attribute)?.label||v.attribute;
     const left=byId[v.left].title,right=byId[v.right].title;
     if(v.choice==='tie')return `${attribute}: ${left} and ${right} about equal.`;
     if(v.choice==='neither')return `${attribute}: neither ${left} nor ${right}.`;
