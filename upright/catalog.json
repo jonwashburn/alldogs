@@ -2,11 +2,32 @@
   "version": 1,
   "portraits": [
     {
+      "id": "ethan-hunt-1",
+      "title": "Ethan Hunt \u00b7 watchful",
+      "image": "assets/ethan-hunt-1.jpg",
+      "group": "New character",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "Tom Cruise as Ethan Hunt, interpreted through a compressed slate-green eye, a taller dark eye, swept brown hair and a quiet mouth. A dark field jacket and planted stance give the small figure a reserved presence.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "round1-displaced",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/ethan_hunt/out/ethan_v2_1000.png",
+      "comparison": {
+        "fingerprint": "1d654bc51a26b74e8b220eec4859f2a9672d1638c14e5f067f748878f4c0c0e6",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "round3-tiffany-posture",
       "title": "Tiffany \u00b7 holding her ground",
       "image": "assets/round3-tiffany-posture.jpg",
       "group": "Round 3",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A raised shoulder, tighter diagonal arm fold and wider stance give the small body a more guarded attitude around the knowing expression.",
       "moves": [
         "cheek-mouth",
@@ -27,7 +48,7 @@
       "title": "Tiffany \u00b7 a changing line",
       "image": "assets/round3-tiffany-hand.jpg",
       "group": "Round 3",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "Dark hair strokes swell and thin; the jaw contour disappears into paint and returns in fragments. Sleeve lines meet loaded paint, with a quieter change below the face.",
       "moves": [
         "loaded-deposit",
@@ -1239,21 +1260,21 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "hand-round-3",
-    "title": "Round 3 \u00b7 Tiffany, gesture and line",
-    "description": "Two choices, then we pause for your direction. Each new study is compared with the Tiffany from the previous round, so that reference appears twice. Choose for the quality named; the next pair loads automatically.",
+    "id": "ethan-hunt-1",
+    "title": "New character \u00b7 Ethan Hunt",
+    "description": "Two choices about expression and painted lines across different characters. Ethan appears in both comparisons, alongside Bowie and Tiffany. Choose for the quality named; the next pair loads automatically.",
     "trials": [
       {
-        "attribute": "posture",
-        "left": "round3-tiffany-posture",
-        "right": "round2-tiffany-expression",
-        "question": "Which stance gives Tiffany more personality?"
+        "attribute": "expression",
+        "left": "ethan-hunt-1",
+        "right": "bowie-3",
+        "question": "Which expression feels more individual and alive?"
       },
       {
         "attribute": "brushwork",
-        "left": "round3-tiffany-hand",
-        "right": "round2-tiffany-expression",
-        "question": "Which portrait\u2019s painted lines feel more natural, especially in the hair and jaw?"
+        "left": "ethan-hunt-1",
+        "right": "round3-tiffany-hand",
+        "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
       }
     ]
   }
