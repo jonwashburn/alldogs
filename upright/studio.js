@@ -1,4 +1,4 @@
-import { QUESTIONS, nextTrial, trialKey, summarizeChoices } from './choices.js';
+import { QUESTIONS, nextTrial, trialKey, summarizeChoices } from './choices.js?v=distinct-pairs-1';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const API='https://api.alldogs.wtf/upright-api', KEY='upright-feedback-v1';
 const vocab=[
@@ -56,7 +56,7 @@ function choiceControls(loading){busy=loading;$('#choice-pictures').setAttribute
 function choiceCount(){$('#choice-count').textContent=Object.values(state.attributes).filter(x=>!x.undone).length+' choices recorded';}
 function loadPortrait(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src;});}
 async function showChoice(trial){displayed.add(trial.key);choiceControls(true);$('#choice-message').textContent='Loading pair…';try{await Promise.all([loadPortrait(byId[trial.left].image),loadPortrait(byId[trial.right].image)]);activeTrial=trial;displayed.add(trial.key);$('#choice-left-image').src=byId[trial.left].image;$('#choice-right-image').src=byId[trial.right].image;$('#choice-question').textContent=QUESTIONS.find(q=>q.id===trial.attribute).question;$('#choice-message').textContent='';choiceCount();choiceControls(false);}catch{activeTrial=null;$('#choice-message').textContent='A portrait could not load. Skip to try another pair.';$('#choice-skip').disabled=false;busy=false;}}
-async function nextChoice(){const trial=nextTrial(portraits,state.attributes,displayed,previousTrial);if(!trial){choiceControls(true);busy=false;$('#choice-undo').disabled=!lastChoice;$('#choice-question').textContent='You have reviewed every pairing.';$('#choice-message').textContent='Your choices are ready in the next-round brief.';return;}await showChoice(trial);}
+async function nextChoice(){const trial=nextTrial(portraits,state.attributes,displayed,previousTrial);if(!trial){choiceControls(true);busy=false;$('#choice-undo').disabled=!lastChoice;$('#choice-question').textContent='You have reviewed every available comparison.';$('#choice-message').textContent='Your choices are ready in the next-round brief.';return;}await showChoice(trial);}
 function answerChoice(choice){if(busy||!activeTrial||Date.now()<cooldownUntil)return;cooldownUntil=Date.now()+500;const t=activeTrial;lastChoice={...t};state.attributes[t.key]={attribute:t.attribute,left:t.left,right:t.right,choice,undone:false,updatedAt:Date.now()};previousTrial=t;persist();renderRound();nextChoice();}
 $('#choice-left').onclick=()=>answerChoice('left');$('#choice-right').onclick=()=>answerChoice('right');$('#choice-tie').onclick=()=>answerChoice('tie');$('#choice-neither').onclick=()=>answerChoice('neither');
 $('#choice-skip').onclick=()=>{if(busy)return;previousTrial=activeTrial;nextChoice();};

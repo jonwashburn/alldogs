@@ -9,17 +9,38 @@ export const QUESTIONS = [
   {id:'deconstruction', label:'Deconstruction', question:'Which way of breaking up the face do you prefer?'}
 ];
 export function trialKey(attribute,a,b){return [attribute,...[a,b].sort()].join('|');}
+// Metadata screens the quick-choice queue only; the archive and saved answers
+// retain every study. New portraits without metadata can still be compared.
+export function comparable(a,b,attribute){
+  if(a.id===b.id || (a.image && a.image===b.image))return false;
+  const x=a.comparison,y=b.comparison;
+  if(x?.fingerprint && x.fingerprint===y?.fingerprint)return false;
+  return !x?.indistinct?.[attribute]?.includes(b.id) && !y?.indistinct?.[attribute]?.includes(a.id);
+}
+function resembles(a,b){
+  return a.id===b.id || (a.image && a.image===b.image) ||
+    (a.comparison?.fingerprint && a.comparison.fingerprint===b.comparison?.fingerprint) ||
+    a.comparison?.similar?.includes(b.id) || b.comparison?.similar?.includes(a.id);
+}
 export function nextTrial(portraits, answers={}, displayed=new Set(), previous=null, random=Math.random){
-  const pending=[];
+  const pending=[], byId=Object.fromEntries(portraits.map(p=>[p.id,p]));
   for(const q of QUESTIONS) for(let i=0;i<portraits.length;i++) for(let j=i+1;j<portraits.length;j++){
+    if(!comparable(portraits[i],portraits[j],q.id))continue;
     const left=portraits[i].id,right=portraits[j].id,key=trialKey(q.id,left,right);
     if(!answers[key]||answers[key].undone) pending.push({key,attribute:q.id,left,right});
   }
   if(!pending.length)return null;
-  const unseen=pending.filter(t=>!displayed.has(t.key));
-  const available=unseen.length?unseen:pending;
-  const different=available.filter(t=>!previous||(t.attribute!==previous.attribute&&[t.left,t.right].sort().join('|')!==[previous.left,previous.right].sort().join('|')));
-  const pool=different.length?different:available;
+  const prefer=(pool,predicate)=>{const selected=pool.filter(predicate);return selected.length?selected:pool;};
+  let pool=pending;
+  if(previous){
+    const old=[previous.left,previous.right];
+    // Both portraits must change whenever any unanswered disjoint pair remains.
+    pool=prefer(pool,t=>!old.includes(t.left)&&!old.includes(t.right));
+    pool=prefer(pool,t=>[t.left,t.right].every(id=>old.every(prior=>!byId[prior]||!resembles(byId[id],byId[prior]))));
+    pool=prefer(pool,t=>t.attribute!==previous.attribute);
+    pool=prefer(pool,t=>[t.left,t.right].sort().join('|')!==old.slice().sort().join('|'));
+  }
+  pool=prefer(pool,t=>!displayed.has(t.key));
   const t={...pool[Math.floor(random()*pool.length)]};
   if(random()<.5)[t.left,t.right]=[t.right,t.left];
   return t;

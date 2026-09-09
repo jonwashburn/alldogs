@@ -14,7 +14,26 @@
       ],
       "parent": null,
       "featured": true,
-      "source": "raw_portraits_20260909/out/margot_bold_1000.jpg"
+      "source": "raw_portraits_20260909/out/margot_bold_1000.jpg",
+      "comparison": {
+        "fingerprint": "e3480b9818dfe3826b1825b208db96a18bc9bc97c0d78a195096bf89872533f0",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "etheline-reset"
+          ],
+          "mouth": [
+            "etheline-reset",
+            "ari-reset"
+          ],
+          "expression": [
+            "etheline-reset"
+          ],
+          "deconstruction": [
+            "etheline-reset"
+          ]
+        }
+      }
     },
     {
       "id": "margot-study",
@@ -29,7 +48,12 @@
       ],
       "parent": "margot-original",
       "featured": true,
-      "source": "raw_portraits_20260909/elevated_margot/out/elevated_margot_1000.jpg"
+      "source": "raw_portraits_20260909/elevated_margot/out/elevated_margot_1000.jpg",
+      "comparison": {
+        "fingerprint": "bab6ad96b0bd55fb93c8533fd784644deb73ae700d87b685afbab1e218a839f2",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "richie-bold",
@@ -44,7 +68,22 @@
       ],
       "parent": null,
       "featured": true,
-      "source": "raw_portraits_20260909/out/richie_bold_1000.jpg"
+      "source": "raw_portraits_20260909/out/richie_bold_1000.jpg",
+      "comparison": {
+        "fingerprint": "b4a6217d06fec4ce23ff57d031f750275b423cc3a3228bb2c8ea0609a0e0fe16",
+        "similar": [],
+        "indistinct": {
+          "mouth": [
+            "richie-raw"
+          ],
+          "hair": [
+            "richie-raw"
+          ],
+          "posture": [
+            "richie-raw"
+          ]
+        }
+      }
     },
     {
       "id": "richie-raw",
@@ -58,7 +97,22 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "raw_portraits_20260909/out/richie_raw_1000.jpg"
+      "source": "raw_portraits_20260909/out/richie_raw_1000.jpg",
+      "comparison": {
+        "fingerprint": "ec8a7441bdc0ab3ea3b6315f01a46b44baba6e382ca1f16afea193e88ef27d5b",
+        "similar": [],
+        "indistinct": {
+          "mouth": [
+            "richie-bold"
+          ],
+          "hair": [
+            "richie-bold"
+          ],
+          "posture": [
+            "richie-bold"
+          ]
+        }
+      }
     },
     {
       "id": "royal-early",
@@ -70,7 +124,12 @@
       "moves": [],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/royal/out/royal_1000.jpg"
+      "source": "tenenbaum_family_20260909/royal/out/royal_1000.jpg",
+      "comparison": {
+        "fingerprint": "daa2f4bf846ae4eee51a1c781b56452ba07c4c1df22e44966ad31fce73220aa8",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "etheline-early",
@@ -82,7 +141,12 @@
       "moves": [],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/etheline/out/etheline_final_1000.jpg"
+      "source": "tenenbaum_family_20260909/etheline/out/etheline_final_1000.jpg",
+      "comparison": {
+        "fingerprint": "5576b8de1fd9a0bc1eff6ff5681d365dbe9f8b2fa426b1cdfc4d4a7a93e63aa7",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "royal-reset",
@@ -96,7 +160,12 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/royal/reset_raw/out/royal_raw_reset_1000.jpg"
+      "source": "tenenbaum_family_20260909/royal/reset_raw/out/royal_raw_reset_1000.jpg",
+      "comparison": {
+        "fingerprint": "6009aee37d9c9df970483d0e3f4dd581f5f516060bb0f37b8bbc67fd58a02d72",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "etheline-reset",
@@ -110,7 +179,26 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/etheline/reset_raw/out/etheline_raw_reset_final_1000.jpg"
+      "source": "tenenbaum_family_20260909/etheline/reset_raw/out/etheline_raw_reset_final_1000.jpg",
+      "comparison": {
+        "fingerprint": "e3ca529d9099e4402b8b641713cfe64aadf14ed6db1b9c2639f9112857b385ff",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "margot-original"
+          ],
+          "mouth": [
+            "margot-original",
+            "ari-reset"
+          ],
+          "expression": [
+            "margot-original"
+          ],
+          "deconstruction": [
+            "margot-original"
+          ]
+        }
+      }
     },
     {
       "id": "chas-reset",
@@ -124,7 +212,12 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/chas/reset_raw/out/chas_raw_1000.jpg"
+      "source": "tenenbaum_family_20260909/chas/reset_raw/out/chas_raw_1000.jpg",
+      "comparison": {
+        "fingerprint": "7fb7d39f6c5d64490357c0e2b01e0936c748fdf8d6d0775a1fa7b5e8c3ad3cb0",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "ari-reset",
@@ -138,7 +231,17 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/ari/reset_raw/out/ari_reset_final_1000.jpg"
+      "source": "tenenbaum_family_20260909/ari/reset_raw/out/ari_reset_final_1000.jpg",
+      "comparison": {
+        "fingerprint": "0e9e9877352c047e3bd6228acc7f15102c525c4f509e00d9127d89e7d16963f7",
+        "similar": [],
+        "indistinct": {
+          "mouth": [
+            "margot-original",
+            "etheline-reset"
+          ]
+        }
+      }
     },
     {
       "id": "uzi-reset",
@@ -152,7 +255,12 @@
       ],
       "parent": null,
       "featured": false,
-      "source": "tenenbaum_family_20260909/uzi/reset_raw/out/uzi_raw_1000.jpg"
+      "source": "tenenbaum_family_20260909/uzi/reset_raw/out/uzi_raw_1000.jpg",
+      "comparison": {
+        "fingerprint": "7e40cfadf461cee6d7ffaa23bcc3fdb4bc0df9983707c4091d60b3dc5d6c4999",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "bowie-1",
@@ -169,7 +277,20 @@
       ],
       "parent": "margot-study",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/out/bowie_v1_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v1_1000.png",
+      "comparison": {
+        "fingerprint": "c67609940a5dc00a99f8dadedcf8eaadef2f033a56fc958e2d292694acc51381",
+        "similar": [],
+        "indistinct": {
+          "posture": [
+            "bowie-2",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ]
+        }
+      }
     },
     {
       "id": "bowie-2",
@@ -186,7 +307,48 @@
       ],
       "parent": "bowie-1",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/out/bowie_v2_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v2_1000.png",
+      "comparison": {
+        "fingerprint": "b3bb9c6292309b094742e4b98e9de47b73c58c69881f193eb83ef53a6be49340",
+        "similar": [
+          "bowie-4",
+          "crossed-cheek-2"
+        ],
+        "indistinct": {
+          "posture": [
+            "bowie-1",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ],
+          "eyes": [
+            "bowie-3",
+            "bowie-4"
+          ],
+          "hair": [
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ],
+          "expression": [
+            "bowie-4"
+          ],
+          "color": [
+            "bowie-4",
+            "crossed-cheek-2"
+          ],
+          "brushwork": [
+            "bowie-4",
+            "crossed-cheek-2"
+          ],
+          "deconstruction": [
+            "bowie-4",
+            "crossed-cheek-2"
+          ]
+        }
+      }
     },
     {
       "id": "bowie-3",
@@ -203,7 +365,29 @@
       ],
       "parent": "bowie-2",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/out/bowie_v3_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v3_1000.png",
+      "comparison": {
+        "fingerprint": "d9c70ebcbec2c88cb312eb1bedc0e273f70a0d75b6608e5af30c1b27af371ad1",
+        "similar": [],
+        "indistinct": {
+          "posture": [
+            "bowie-1",
+            "bowie-2",
+            "bowie-4",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ],
+          "eyes": [
+            "bowie-2"
+          ],
+          "hair": [
+            "bowie-2",
+            "bowie-4",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ]
+        }
+      }
     },
     {
       "id": "bowie-4",
@@ -220,7 +404,44 @@
       ],
       "parent": "bowie-3",
       "featured": true,
-      "source": "tenenbaum_family_20260909/bowie/out/bowie_v4_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v4_1000.png",
+      "comparison": {
+        "fingerprint": "aa09ee7ffefee7c69a3d1855db6d1600ca1afcfffc25ffc8591fcd8c29564587",
+        "similar": [
+          "bowie-2"
+        ],
+        "indistinct": {
+          "posture": [
+            "bowie-1",
+            "bowie-2",
+            "bowie-3",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ],
+          "eyes": [
+            "bowie-2"
+          ],
+          "expression": [
+            "bowie-2"
+          ],
+          "hair": [
+            "bowie-2",
+            "bowie-3",
+            "crossed-cheek-1",
+            "crossed-cheek-2"
+          ],
+          "color": [
+            "bowie-2"
+          ],
+          "brushwork": [
+            "bowie-2",
+            "crossed-cheek-2"
+          ],
+          "deconstruction": [
+            "bowie-2"
+          ]
+        }
+      }
     },
     {
       "id": "tiffany-1",
@@ -235,7 +456,25 @@
       ],
       "parent": "bowie-4",
       "featured": false,
-      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v1_1000.png"
+      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v1_1000.png",
+      "comparison": {
+        "fingerprint": "e90a3a6acf93edc3720ee709a67bdd0d6c78f19b4bfc67d739ec5902c7d9179d",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "tiffany-2"
+          ],
+          "hair": [
+            "tiffany-2"
+          ],
+          "posture": [
+            "tiffany-2"
+          ],
+          "brushwork": [
+            "tiffany-2"
+          ]
+        }
+      }
     },
     {
       "id": "tiffany-2",
@@ -250,7 +489,25 @@
       ],
       "parent": "tiffany-1",
       "featured": true,
-      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v2_1000.png"
+      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v2_1000.png",
+      "comparison": {
+        "fingerprint": "2f6c85c2f19e119651d4203309a431fc29e6dffac950427f9142af77a6beee49",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "tiffany-1"
+          ],
+          "hair": [
+            "tiffany-1"
+          ],
+          "posture": [
+            "tiffany-1"
+          ],
+          "brushwork": [
+            "tiffany-1"
+          ]
+        }
+      }
     },
     {
       "id": "tiffany-fable",
@@ -265,7 +522,12 @@
       ],
       "parent": "tiffany-2",
       "featured": true,
-      "source": "tenenbaum_family_20260909/tiffany/round2_fable51/out/tiffany_fable_v1_1000.png"
+      "source": "tenenbaum_family_20260909/tiffany/round2_fable51/out/tiffany_fable_v1_1000.png",
+      "comparison": {
+        "fingerprint": "9b1969cacf69f7fd2d5a6d4a5d3948e7dfc35bcb5678f78913403fd0e57b9dbe",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "mischief-1",
@@ -282,7 +544,31 @@
       ],
       "parent": "bowie-4",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v1_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v1_1000.png",
+      "comparison": {
+        "fingerprint": "7f7fcb7b3d8760be8721f7b0876bc96ea9bd0f2f8d0cec69330e24b210a439da",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "hair": [
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "posture": [
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ]
+        }
+      }
     },
     {
       "id": "mischief-2",
@@ -299,7 +585,54 @@
       ],
       "parent": "mischief-1",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v2_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v2_1000.png",
+      "comparison": {
+        "fingerprint": "b0ec1ae474da069bd9cde849125c7d26c304a2e17b832fbf4614749d79ac6f48",
+        "similar": [
+          "mischief-3",
+          "mischief-4"
+        ],
+        "indistinct": {
+          "eyes": [
+            "mischief-1",
+            "mischief-3"
+          ],
+          "hair": [
+            "mischief-1",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "posture": [
+            "mischief-1",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "mouth": [
+            "mischief-3",
+            "mischief-4"
+          ],
+          "expression": [
+            "mischief-3",
+            "mischief-4"
+          ],
+          "color": [
+            "mischief-3",
+            "mischief-4"
+          ],
+          "brushwork": [
+            "mischief-3",
+            "mischief-4"
+          ],
+          "deconstruction": [
+            "mischief-3",
+            "mischief-4"
+          ]
+        }
+      }
     },
     {
       "id": "mischief-3",
@@ -316,7 +649,55 @@
       ],
       "parent": "mischief-2",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v3_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v3_1000.png",
+      "comparison": {
+        "fingerprint": "062acd68128ad314a91944658e1d3339a749270fdd700b5d84d46bbe1a6d32e0",
+        "similar": [
+          "mischief-2",
+          "mischief-4"
+        ],
+        "indistinct": {
+          "eyes": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-4"
+          ],
+          "hair": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "posture": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-4",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "mouth": [
+            "mischief-2",
+            "mischief-4"
+          ],
+          "expression": [
+            "mischief-2",
+            "mischief-4"
+          ],
+          "color": [
+            "mischief-2",
+            "mischief-4"
+          ],
+          "brushwork": [
+            "mischief-2",
+            "mischief-4"
+          ],
+          "deconstruction": [
+            "mischief-2",
+            "mischief-4"
+          ]
+        }
+      }
     },
     {
       "id": "mischief-4",
@@ -333,7 +714,53 @@
       ],
       "parent": "mischief-3",
       "featured": true,
-      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v4_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v4_1000.png",
+      "comparison": {
+        "fingerprint": "e83abdbb3101508fe2a0da82234e03aebe7762ee21f5151193c6312bd9a43616",
+        "similar": [
+          "mischief-2",
+          "mischief-3"
+        ],
+        "indistinct": {
+          "hair": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "posture": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "painted-smile-1",
+            "painted-smile-2"
+          ],
+          "mouth": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "expression": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "color": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "brushwork": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "deconstruction": [
+            "mischief-2",
+            "mischief-3"
+          ],
+          "eyes": [
+            "mischief-3"
+          ]
+        }
+      }
     },
     {
       "id": "brush-1",
@@ -347,7 +774,12 @@
       ],
       "parent": "bowie-4",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v1_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v1_1000.png",
+      "comparison": {
+        "fingerprint": "cb16b74ea736523bb9bb61a35700921c236fa341099aab459d9dfda7e6a18876",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "brush-2",
@@ -361,7 +793,12 @@
       ],
       "parent": "brush-1",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v2_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v2_1000.png",
+      "comparison": {
+        "fingerprint": "aa1762d9a0b8cdc287d785e3ffdf393d5558b1fdea8d8c98ae1410ed091db7e1",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "brush-3",
@@ -375,7 +812,12 @@
       ],
       "parent": "brush-2",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v3_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v3_1000.png",
+      "comparison": {
+        "fingerprint": "71f7d4016b8592960d452974082d58b79a71b3935317d356c2a9ce774743b192",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "brush-4",
@@ -389,7 +831,12 @@
       ],
       "parent": "brush-3",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v4_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v4_1000.png",
+      "comparison": {
+        "fingerprint": "bce9be71446288023ca31580ee27d933b2a3d5cf951ba58983ff09456d1c35b2",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "brush-5",
@@ -405,7 +852,12 @@
       ],
       "parent": "brush-4",
       "featured": true,
-      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v5_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v5_1000.png",
+      "comparison": {
+        "fingerprint": "8ad53145a5fb1f215c437fc98abf35b3f4d0fafe9000cb9ef846e1e45372248d",
+        "similar": [],
+        "indistinct": {}
+      }
     },
     {
       "id": "crossed-cheek-1",
@@ -420,7 +872,29 @@
       ],
       "parent": "bowie-4",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v1_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v1_1000.png",
+      "comparison": {
+        "fingerprint": "2f3f8f260be18a77e25ce9d70f6bc6e8da483ad9ec4cb1e03b5311642d18d6d3",
+        "similar": [],
+        "indistinct": {
+          "posture": [
+            "bowie-1",
+            "bowie-2",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-2"
+          ],
+          "hair": [
+            "bowie-2",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-2"
+          ],
+          "brushwork": [
+            "crossed-cheek-2"
+          ]
+        }
+      }
     },
     {
       "id": "crossed-cheek-2",
@@ -436,7 +910,39 @@
       ],
       "parent": "crossed-cheek-1",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v2_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v2_1000.png",
+      "comparison": {
+        "fingerprint": "2461cab29d6c0db9cada2699d7d6e7f57dbf9003b11b4c0c4fbbe49e4c833db3",
+        "similar": [
+          "bowie-2"
+        ],
+        "indistinct": {
+          "posture": [
+            "bowie-1",
+            "bowie-2",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-1"
+          ],
+          "hair": [
+            "bowie-2",
+            "bowie-3",
+            "bowie-4",
+            "crossed-cheek-1"
+          ],
+          "color": [
+            "bowie-2"
+          ],
+          "brushwork": [
+            "bowie-2",
+            "bowie-4",
+            "crossed-cheek-1"
+          ],
+          "deconstruction": [
+            "bowie-2"
+          ]
+        }
+      }
     },
     {
       "id": "painted-smile-1",
@@ -452,7 +958,27 @@
       ],
       "parent": "mischief-4",
       "featured": true,
-      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v1_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v1_1000.png",
+      "comparison": {
+        "fingerprint": "e95c799b2110f703ce0c2ba8539500f0e2de9e2eaa6c0a433c0718b0fc4a3132",
+        "similar": [],
+        "indistinct": {
+          "hair": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-2"
+          ],
+          "posture": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-2"
+          ]
+        }
+      }
     },
     {
       "id": "painted-smile-2",
@@ -468,7 +994,28 @@
       ],
       "parent": "painted-smile-1",
       "featured": false,
-      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v2_1000.png"
+      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v2_1000.png",
+      "comparison": {
+        "fingerprint": "997f9dc8e6a2b3c07dd5db6cfef2abc862b521d8268c9a17ed1173e3d1517693",
+        "similar": [],
+        "indistinct": {
+          "hair": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1"
+          ],
+          "posture": [
+            "mischief-1",
+            "mischief-2",
+            "mischief-3",
+            "mischief-4",
+            "painted-smile-1"
+          ]
+        }
+      }
     }
-  ]
+  ],
+  "comparisonPolicy": "visible-differences-1"
 }
