@@ -1,2 +1,3 @@
-// Change a model to true only after its complete image set is present.
-window.PROP_AVAILABILITY = {astra:true, fable:false};
+// Both model sets and matched close-ups are complete.
+window.PROP_AVAILABILITY={astra:true,fable:true};
+window.PROP_IMAGE_REVISION='20260909-fable-r1';

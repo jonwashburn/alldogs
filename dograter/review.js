@@ -7,7 +7,8 @@ const PROPS = ['fire','angel_wings','jetpack','halo','crown','airplane','police_
 const CHOICES = ['astra','fable','both','neither'];
 const $ = id => document.getElementById(id);
 const label = slug => slug.split('_').map(s => s[0].toUpperCase() + s.slice(1)).join(' ');
-const candidatePath = (model, slug) => `out/${model}/${slug}.jpg`;
+const imagePath = path => window.PROP_IMAGE_REVISION ? `${path}?v=${encodeURIComponent(window.PROP_IMAGE_REVISION)}` : path;
+const candidatePath = (model, slug) => imagePath(`out/${model}/${slug}.jpg`);
 // Fail closed if availability.js is missing or a model is not explicitly true.
 const available = model => window.PROP_AVAILABILITY?.[model] === true;
 const empty = () => ({preference:'', note:'', updatedAt:0, choiceRevision:''});
@@ -121,7 +122,7 @@ function loadImages() {
   for (const [i, side] of ['left','right'].entries()) {
     const model = models[i], fullSrc = candidatePath(model, slug), img = $(side + '-image');
     const closeUp = $('close-up').checked;
-    const src = closeUp ? `out/details/${model}/${slug}.jpg` : fullSrc;
+    const src = closeUp ? imagePath(`out/details/${model}/${slug}.jpg`) : fullSrc;
     $(side + '-name').textContent = label(model);
     $(side + '-action').textContent = 'Choose ' + label(model);
     $(side + '-choice').dataset.model = model;
