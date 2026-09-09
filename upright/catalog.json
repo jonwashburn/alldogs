@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "portraits": [
+    {
+      "id": "margot-original",
+      "title": "Margot \u00b7 original",
+      "image": "assets/margot-original.jpg",
+      "group": "Origins",
+      "status": "Liked reference",
+      "description": "Large dark eyes with pink and cobalt interruptions.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color"
+      ],
+      "parent": null,
+      "featured": true,
+      "source": "raw_portraits_20260909/out/margot_bold_1000.jpg"
+    },
+    {
+      "id": "margot-study",
+      "title": "Margot \u00b7 drawing study",
+      "image": "assets/margot-study.jpg",
+      "group": "Origins",
+      "status": "Preferred reference",
+      "description": "The right-hand portrait in your screenshot. Unequal eyes, small body and a more individual posture.",
+      "moves": [
+        "unequal-eyes",
+        "recovery-line"
+      ],
+      "parent": "margot-original",
+      "featured": true,
+      "source": "raw_portraits_20260909/elevated_margot/out/elevated_margot_1000.jpg"
+    },
+    {
+      "id": "richie-bold",
+      "title": "Richie \u00b7 bold",
+      "image": "assets/richie-bold.jpg",
+      "group": "Origins",
+      "status": "Earlier portrait",
+      "description": "The companion to the early Margot. Retained as a reference for the original drawing language.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color"
+      ],
+      "parent": null,
+      "featured": true,
+      "source": "raw_portraits_20260909/out/richie_bold_1000.jpg"
+    },
+    {
+      "id": "richie-raw",
+      "title": "Richie \u00b7 raw",
+      "image": "assets/richie-raw.jpg",
+      "group": "Origins",
+      "status": "Earlier study",
+      "description": "An earlier surface and drawing study.",
+      "moves": [
+        "recovery-line"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "raw_portraits_20260909/out/richie_raw_1000.jpg"
+    },
+    {
+      "id": "royal-early",
+      "title": "Royal \u00b7 first direction",
+      "image": "assets/royal-early.jpg",
+      "group": "Family",
+      "status": "Rejected direction",
+      "description": "You found this direction too different from the portraits you liked.",
+      "moves": [],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/royal/out/royal_1000.jpg"
+    },
+    {
+      "id": "etheline-early",
+      "title": "Etheline \u00b7 first direction",
+      "image": "assets/etheline-early.jpg",
+      "group": "Family",
+      "status": "Rejected direction",
+      "description": "You found this direction too different from the portraits you liked.",
+      "moves": [],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/etheline/out/etheline_final_1000.jpg"
+    },
+    {
+      "id": "royal-reset",
+      "title": "Royal \u00b7 corrected family",
+      "image": "assets/royal-reset.jpg",
+      "group": "Family",
+      "status": "Too similar as a set",
+      "description": "The corrected family preserved the face too strictly. You wanted more individual character.",
+      "moves": [
+        "unequal-eyes"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/royal/reset_raw/out/royal_raw_reset_1000.jpg"
+    },
+    {
+      "id": "etheline-reset",
+      "title": "Etheline \u00b7 corrected family",
+      "image": "assets/etheline-reset.jpg",
+      "group": "Family",
+      "status": "Too similar as a set",
+      "description": "The corrected family preserved the face too strictly. You wanted more individual character.",
+      "moves": [
+        "unequal-eyes"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/etheline/reset_raw/out/etheline_raw_reset_final_1000.jpg"
+    },
+    {
+      "id": "chas-reset",
+      "title": "Chas \u00b7 corrected family",
+      "image": "assets/chas-reset.jpg",
+      "group": "Family",
+      "status": "Too similar as a set",
+      "description": "The corrected family preserved the face too strictly. You wanted more individual character.",
+      "moves": [
+        "unequal-eyes"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/chas/reset_raw/out/chas_raw_1000.jpg"
+    },
+    {
+      "id": "ari-reset",
+      "title": "Ari \u00b7 corrected family",
+      "image": "assets/ari-reset.jpg",
+      "group": "Family",
+      "status": "Too similar as a set",
+      "description": "The corrected family preserved the face too strictly. You wanted more individual character.",
+      "moves": [
+        "unequal-eyes"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/ari/reset_raw/out/ari_reset_final_1000.jpg"
+    },
+    {
+      "id": "uzi-reset",
+      "title": "Uzi \u00b7 corrected family",
+      "image": "assets/uzi-reset.jpg",
+      "group": "Family",
+      "status": "Too similar as a set",
+      "description": "The corrected family preserved the face too strictly. You wanted more individual character.",
+      "moves": [
+        "unequal-eyes"
+      ],
+      "parent": null,
+      "featured": false,
+      "source": "tenenbaum_family_20260909/uzi/reset_raw/out/uzi_raw_1000.jpg"
+    },
+    {
+      "id": "bowie-1",
+      "title": "Bowie \u00b7 study 1",
+      "image": "assets/bowie-1.jpg",
+      "group": "Bowie",
+      "status": "Earlier study",
+      "description": "A step toward the accepted Bowie; compare how the cheek and color connect.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "margot-study",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v1_1000.png"
+    },
+    {
+      "id": "bowie-2",
+      "title": "Bowie \u00b7 study 2",
+      "image": "assets/bowie-2.jpg",
+      "group": "Bowie",
+      "status": "Earlier study",
+      "description": "A step toward the accepted Bowie; compare how the cheek and color connect.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "bowie-1",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v2_1000.png"
+    },
+    {
+      "id": "bowie-3",
+      "title": "Bowie \u00b7 study 3",
+      "image": "assets/bowie-3.jpg",
+      "group": "Bowie",
+      "status": "Earlier study",
+      "description": "A step toward the accepted Bowie; compare how the cheek and color connect.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "bowie-2",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v3_1000.png"
+    },
+    {
+      "id": "bowie-4",
+      "title": "Bowie \u00b7 accepted painting",
+      "image": "assets/bowie-4.jpg",
+      "group": "Bowie",
+      "status": "Accepted reference",
+      "description": "Copper, coral and violet connect hair, face and clothing. The cheek is painted over and recovered.",
+      "moves": [
+        "unequal-eyes",
+        "broken-color",
+        "bury-recover",
+        "recovery-line"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/out/bowie_v4_1000.png"
+    },
+    {
+      "id": "tiffany-1",
+      "title": "Tiffany \u00b7 first study",
+      "image": "assets/tiffany-1.jpg",
+      "group": "Tiffany",
+      "status": "Earlier study",
+      "description": "Gathered dark hair, folded arms, guarded mouth. The underlying face remains close to Bowie.",
+      "moves": [
+        "unequal-eyes",
+        "dry-separation"
+      ],
+      "parent": "bowie-4",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v1_1000.png"
+    },
+    {
+      "id": "tiffany-2",
+      "title": "Tiffany \u00b7 selected portrait",
+      "image": "assets/tiffany-2.jpg",
+      "group": "Tiffany",
+      "status": "Good, limited variation",
+      "description": "Gathered dark hair, folded arms, guarded mouth. The underlying face remains close to Bowie.",
+      "moves": [
+        "unequal-eyes",
+        "dry-separation"
+      ],
+      "parent": "tiffany-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/out/tiffany_v2_1000.png"
+    },
+    {
+      "id": "tiffany-fable",
+      "title": "Tiffany \u00b7 Fable refinement",
+      "image": "assets/tiffany-fable.jpg",
+      "group": "Tiffany",
+      "status": "Too similar to its parent",
+      "description": "Smaller changes to hair, brow, mouth and neckline. You wanted deeper variation.",
+      "moves": [
+        "unequal-eyes",
+        "recovery-line"
+      ],
+      "parent": "tiffany-2",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/round2_fable51/out/tiffany_fable_v1_1000.png"
+    },
+    {
+      "id": "mischief-1",
+      "title": "Bowie \u00b7 mischief 1",
+      "image": "assets/mischief-1.jpg",
+      "group": "Expression",
+      "status": "Earlier experiment",
+      "description": "A sideways gaze and crooked grin; the mouth was too explicit.",
+      "moves": [
+        "unequal-eyes",
+        "sideways-gaze",
+        "cheek-mouth",
+        "dry-separation"
+      ],
+      "parent": "bowie-4",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v1_1000.png"
+    },
+    {
+      "id": "mischief-2",
+      "title": "Bowie \u00b7 mischief 2",
+      "image": "assets/mischief-2.jpg",
+      "group": "Expression",
+      "status": "Earlier experiment",
+      "description": "The mouth is compressed and the pale tooth fragment is broken.",
+      "moves": [
+        "unequal-eyes",
+        "sideways-gaze",
+        "cheek-mouth",
+        "dry-separation"
+      ],
+      "parent": "mischief-1",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v2_1000.png"
+    },
+    {
+      "id": "mischief-3",
+      "title": "Bowie \u00b7 mischief 3",
+      "image": "assets/mischief-3.jpg",
+      "group": "Expression",
+      "status": "Earlier experiment",
+      "description": "The lid picks up pale wet pigment and reads like a bandage.",
+      "moves": [
+        "unequal-eyes",
+        "sideways-gaze",
+        "cheek-mouth",
+        "dry-separation"
+      ],
+      "parent": "mischief-2",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v3_1000.png"
+    },
+    {
+      "id": "mischief-4",
+      "title": "Bowie \u00b7 mischief 4",
+      "image": "assets/mischief-4.jpg",
+      "group": "Expression",
+      "status": "Selected experiment",
+      "description": "Drying before the dark lid resolves the pale bandage. Stronger expression; the grin may still explain too much.",
+      "moves": [
+        "unequal-eyes",
+        "sideways-gaze",
+        "cheek-mouth",
+        "dry-separation"
+      ],
+      "parent": "mischief-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/mischief_expression/out/mischief_v4_1000.png"
+    },
+    {
+      "id": "brush-1",
+      "title": "Bowie \u00b7 brush study 1",
+      "image": "assets/brush-1.jpg",
+      "group": "Brushwork",
+      "status": "Earlier experiment",
+      "description": "New crown strokes became too uniform; pale paint flattened the brow.",
+      "moves": [
+        "loaded-deposit"
+      ],
+      "parent": "bowie-4",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v1_1000.png"
+    },
+    {
+      "id": "brush-2",
+      "title": "Bowie \u00b7 brush study 2",
+      "image": "assets/brush-2.jpg",
+      "group": "Brushwork",
+      "status": "Earlier experiment",
+      "description": "Repairs to the surface did not yet change the hand enough.",
+      "moves": [
+        "loaded-deposit"
+      ],
+      "parent": "brush-1",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v2_1000.png"
+    },
+    {
+      "id": "brush-3",
+      "title": "Bowie \u00b7 brush study 3",
+      "image": "assets/brush-3.jpg",
+      "group": "Brushwork",
+      "status": "Earlier experiment",
+      "description": "A large violet plane read as a flat sticker.",
+      "moves": [
+        "loaded-deposit"
+      ],
+      "parent": "brush-2",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v3_1000.png"
+    },
+    {
+      "id": "brush-4",
+      "title": "Bowie \u00b7 brush study 4",
+      "image": "assets/brush-4.jpg",
+      "group": "Brushwork",
+      "status": "Earlier experiment",
+      "description": "Native brushwork gives the violet relief, but it remains a separate pad.",
+      "moves": [
+        "loaded-deposit"
+      ],
+      "parent": "brush-3",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v4_1000.png"
+    },
+    {
+      "id": "brush-5",
+      "title": "Bowie \u00b7 brush study 5",
+      "image": "assets/brush-5.jpg",
+      "group": "Brushwork",
+      "status": "Useful passage, unresolved whole",
+      "description": "Flesh and coral pulled through wet violet visibly mix into lavender. Useful material behavior; the patch still feels separate.",
+      "moves": [
+        "loaded-deposit",
+        "exhausted-drag",
+        "wet-crossing"
+      ],
+      "parent": "brush-4",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v5_1000.png"
+    }
+  ]
+}
