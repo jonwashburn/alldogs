@@ -2,11 +2,33 @@
   "version": 1,
   "portraits": [
     {
+      "id": "amelie-1",
+      "title": "Am\u00e9lie \u00b7 a private joke",
+      "image": "assets/amelie-1.jpg",
+      "group": "New character",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "Am\u00e9lie Poulain through a short uneven fringe, a dark bob curling toward the jaw, unequal attentive eyes and a tiny lifted smile. A wine-red cardigan and a small pale-green neckline stroke keep the color warm and restrained.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "round3-tiffany-hand",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/amelie/out/amelie_v2_1000.png",
+      "comparison": {
+        "fingerprint": "99620e57fd411dc907c790f54f661f09bf0d67b10c5d7d85c496b820dafe4728",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "ethan-hunt-1",
       "title": "Ethan Hunt \u00b7 watchful",
       "image": "assets/ethan-hunt-1.jpg",
       "group": "New character",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "Tom Cruise as Ethan Hunt, interpreted through a compressed slate-green eye, a taller dark eye, swept brown hair and a quiet mouth. A dark field jacket and planted stance give the small figure a reserved presence.",
       "moves": [
         "unequal-eyes",
@@ -1260,19 +1282,19 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "ethan-hunt-1",
-    "title": "New character \u00b7 Ethan Hunt",
-    "description": "Two choices about expression and painted lines across different characters. Ethan appears in both comparisons, alongside Bowie and Tiffany. Choose for the quality named; the next pair loads automatically.",
+    "id": "amelie-1",
+    "title": "New character \u00b7 Am\u00e9lie",
+    "description": "Two choices about expression and painted lines across different characters. Am\u00e9lie appears in both comparisons, alongside Bowie and Tiffany. Choose for the quality named; the next pair loads automatically.",
     "trials": [
       {
         "attribute": "expression",
-        "left": "ethan-hunt-1",
+        "left": "amelie-1",
         "right": "bowie-3",
         "question": "Which expression feels more individual and alive?"
       },
       {
         "attribute": "brushwork",
-        "left": "ethan-hunt-1",
+        "left": "amelie-1",
         "right": "round3-tiffany-hand",
         "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
       }
