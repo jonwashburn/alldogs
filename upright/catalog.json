@@ -406,6 +406,69 @@
       "parent": "brush-4",
       "featured": true,
       "source": "tenenbaum_family_20260909/bowie/mischief_brush/out/brush_v5_1000.png"
+    },
+    {
+      "id": "crossed-cheek-1",
+      "title": "Bowie \u00b7 crossed cheek 1",
+      "image": "assets/crossed-cheek-1.jpg",
+      "group": "Brushwork",
+      "status": "Unresolved material study",
+      "description": "Studio note: wet color travels from the blue eye toward the lip. It connects the forms, but the pale passage becomes too smooth.",
+      "moves": [
+        "wet-crossing",
+        "exhausted-drag"
+      ],
+      "parent": "bowie-4",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v1_1000.png"
+    },
+    {
+      "id": "crossed-cheek-2",
+      "title": "Bowie \u00b7 crossed cheek 2",
+      "image": "assets/crossed-cheek-2.jpg",
+      "group": "Brushwork",
+      "status": "Unresolved material study",
+      "description": "Studio note: a shorter crossing disturbs the blue eye edge and exposes coral. The paint gathers into a knot rather than carrying naturally toward the lip.",
+      "moves": [
+        "wet-crossing",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "crossed-cheek-1",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/crossed_cheek_20260909/out/crossed_cheek_v2_1000.png"
+    },
+    {
+      "id": "painted-smile-1",
+      "title": "Bowie \u00b7 painted smile 1",
+      "image": "assets/painted-smile-1.jpg",
+      "group": "Expression",
+      "status": "Selected expression study",
+      "description": "The tooth outline and brows are removed while the mismatched gaze remains. Studio question: does the quieter mouth retain mischief, or become too subdued?",
+      "moves": [
+        "sideways-gaze",
+        "bury-recover",
+        "wet-crossing"
+      ],
+      "parent": "mischief-4",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v1_1000.png"
+    },
+    {
+      "id": "painted-smile-2",
+      "title": "Bowie \u00b7 painted smile 2",
+      "image": "assets/painted-smile-2.jpg",
+      "group": "Expression",
+      "status": "Expression experiment",
+      "description": "A tapering dark stroke and wet flesh ridge lift the cheek toward the eye. Studio note: the conspicuous smooth smile is less ambiguous than the first attempt.",
+      "moves": [
+        "cheek-mouth",
+        "loaded-deposit",
+        "wet-crossing"
+      ],
+      "parent": "painted-smile-1",
+      "featured": false,
+      "source": "tenenbaum_family_20260909/bowie/painted_smile_20260909/out/painted_smile_v2_1000.png"
     }
   ]
 }
