@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ALL DOGS: seven days to adopt, ninety days to hold the line.</title>
-<meta name="description" content="Adopt a dog, one per person, in the seven days the door is open. Nobody knows how big the pack will be, including me. Selling a dog inside the first ninety days turns it into a zombie, and at 15% first sales the apocalypse takes the rest. Generative dogs on Ethereum, real names on the collars.">
+<meta name="description" content="A childhood painted in code: 1,000 individually composed dogs and a ninety-day performance. The artist makes the dogs; the owners write the story. Explore the paintings in progress and try the game before adoption opens.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128021;</text></svg>">
 <meta property="og:title" content="ALL DOGS: seven days to adopt, ninety days to hold the line.">
-<meta property="og:description" content="A ninety-day performance. Adopt a dog you can never sell alive. At 15% first sales, the apocalypse. The door is open seven days and nobody knows how big the pack gets.">
+<meta property="og:description" content="1,000 individually composed dogs. Seven days of invitations. A ninety-day performance: at 15% first sales, the apocalypse. Explore the paintings and the game before adoption opens.">
 <meta property="og:image" content="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_og_20260830_41be44aaeaaa/alldogs_og.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -64,6 +64,20 @@
     font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
     font-weight: 700; }
   .ribbon b.r { color: #ff8a80; } .ribbon b.g { color: var(--gold); }
+  .ribbon { display: flex; align-items: center; padding: 0; }
+  .ribbon .ribbon-label { flex: 0 0 auto; z-index: 1; background: var(--ink);
+    border-right: 1px solid #777; padding: 10px 14px; font-size: 10px;
+    letter-spacing: 1px; }
+  .ribbon-track { overflow: hidden; padding: 10px 0; }
+  .site-status { font-size: 12px; margin: 20px auto 0; color: #595952; }
+  .site-status a { color: inherit; text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+  section[id] { scroll-margin-top: 64px; }
+  .pf-controls { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+  .pf-controls .btn { padding: 9px 14px; font-size: 12px; }
+  @media (max-width: 700px) {
+    .ribbon .ribbon-label { padding: 10px; letter-spacing: 0; }
+  }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* hero: the paintings are 3:1; the frame is taller and crops the sides,
@@ -662,10 +676,10 @@
 </head>
 <body>
 
-<div class="ribbon"><span>
-  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 DIED OF AGE</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
-  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,342 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">138 OF 201</b> &nbsp;&middot;&nbsp; <b class="g">14 DIED OF AGE</b> &nbsp;&middot;&nbsp; 1,190 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS PACK IS SELLING EVERY 9 HOURS &nbsp;&middot;&nbsp; <b class="r">201 LANDS ON DAY 78</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
-</span></div>
+<div class="ribbon" aria-label="Example simulation, not live adoption activity"><b class="ribbon-label">SIMULATION</b><div class="ribbon-track" aria-hidden="true"><span>
+  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,000 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">108 OF 150</b> &nbsp;&middot;&nbsp; <b class="g">10 DIED OF AGE</b> &nbsp;&middot;&nbsp; 882 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS EXAMPLE PACK SELLS EVERY 12 HOURS &nbsp;&middot;&nbsp; <b class="r">AT THAT PACE, 150 ON DAY 75</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+  DAY 54 OF 90 &nbsp;&middot;&nbsp; 1,000 DOGS ADOPTED &nbsp;&middot;&nbsp; FIRST SALES: <b class="r">108 OF 150</b> &nbsp;&middot;&nbsp; <b class="g">10 DIED OF AGE</b> &nbsp;&middot;&nbsp; 882 STILL LIVING &nbsp;&middot;&nbsp; THE LINE IS 15% OF THE PACK &nbsp;&middot;&nbsp; THIS EXAMPLE PACK SELLS EVERY 12 HOURS &nbsp;&middot;&nbsp; <b class="r">AT THAT PACE, 150 ON DAY 75</b> &nbsp;&middot;&nbsp; A SIMULATION, FOR NOW &nbsp;&middot;&nbsp;
+</span></div></div>
 
 <section class="hero">
   <div class="herobanner">
@@ -675,20 +689,21 @@
   </div>
   <div class="wrap">
   <div class="herocap"><span class="hero-name" id="heroName"><b>1985</b> yellow bandana over blond side hair, blond horseshoe moustache, torn yellow tank top with red patches, bare arms flexed upward</span></div>
-  <p class="tagline">Seven days to adopt &middot; one <em>zombie apocalypse</em> &middot; one per person</p>
+  <p class="tagline">1,000 individual paintings &middot; one <em>zombie apocalypse</em> &middot; one per person</p>
   <p class="sub">ALL DOGS is the second half of the record of a childhood
   that has no record. The first half, <a href="https://exaltedlove.com/">HOLY</a>,
   is that adolescence described from memory to a machine. This half is
-  the same childhood in the other hand, painted by a machine I am still
-  teaching, then played as a ninety-day performance by friends of
+  the same childhood in the other hand, composed dog by dog and painted
+  in code, then played as a ninety-day performance by friends of
   friends: one dog each, every move signed on the collar. The artwork is
   whatever is left when the ninety days end. The artist draws the dogs;
   the owners write the story.</p>
   <div class="cta">
-    <a class="btn hot" href="#deal">How the ninety days work</a>
-    <a class="btn" href="#fates">The two fates</a>
-    <a class="btn" href="design/">Watch the machine draw</a>
+    <a class="btn hot" href="alldogs/">See the paintings</a>
+    <a class="btn" href="#game">How the game works</a>
+    <a class="btn" href="#medium">See the brush at work</a>
   </div>
+  <p class="site-status">A work in progress. Adoption has not opened; the game below is a simulation.</p>
   </div>
 </section>
 
@@ -735,11 +750,12 @@
   <p class="lede">In code, I've been building a brush. Each bristle holds
   a finite load, tests the surface under it, picks up what's still wet,
   and lays down what contact allows. Long strokes run out. The picture is
-  that surface, lit from one side. Nothing is drawn. One number rebuilds
-  it at any size, so the avatar on your phone and a hundred-inch gallery
-  print are the same marks, sharp at both.</p>
+  that surface, lit from one side. Each dog's composition is written into
+  the painter: its face, clothes, pose, and the world around it. The code
+  places the marks; the brush gives them their edges. A seed lets the
+  painter make that dog again at a different resolution.</p>
   <div class="paintfilm" id="paintfilm">
-    <figure class="pf" tabindex="0" aria-label="Frida being painted, thirty seconds. Tap for the sound.">
+    <figure class="pf" tabindex="0" role="button" aria-label="Frida being painted, thirty seconds. Play or toggle sound.">
       <video id="pfVideo" width="1080" height="1080" muted loop playsinline preload="none"
         poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_v4_poster_1000.jpg">
         <source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/paint_video/102_paint_v4.mp4" type="video/mp4">
@@ -748,6 +764,7 @@
     </figure>
     <div class="pfnote">
       <div class="flcap">1939 &middot; Frida, painted</div>
+      <div class="pf-controls"><button class="btn" id="pfPause" type="button">Play film</button></div>
       <p>Thirty seconds of the brush at work. Bare cotton first. The ground
       goes on with the same bristles, twenty-seven strokes. Then every mark
       the seed calls for, in the order the painter made them. No frame is a
@@ -757,8 +774,8 @@
         <div class="spec"><span>A finite load</span>
           <p>A bristle that touches wet paint takes some of it into its tip.
           Drag white through wet grey and the stroke goes grey for two or three
-          brush widths, then the clean colour in the reservoir comes back. I
-          never wrote a rule for that. A long stroke starves, and its last
+          brush widths, then the clean colour in the reservoir comes back.
+          A long stroke starves, and its last
           third breaks into streaks.</p></div>
         <div class="spec"><span>Lit from one side</span>
           <p>Every mark adds height and a wet film to a canvas with tooth.
@@ -773,11 +790,11 @@
 </div></section>
 <section class="bred sheet" id="bred"><div class="wrap">
   <p class="kicker">The method &middot; whose art this is</p>
-  <h2>Bred, not drawn.</h2>
-  <p class="lede">"The idea becomes a machine that makes the art." Sol
-  LeWitt wrote that in Paragraphs on Conceptual Art, 1967. This collection
-  is that sentence, running, with one change LeWitt would not have
-  allowed. I stayed in the room.</p>
+  <h2>I stayed in the room.</h2>
+  <p class="lede">The collection will be 1,000 individually composed dogs.
+  About 150 are made so far. Each is worked on as a painting: a person, a pose, a costume,
+  a place. The brush is a program. Deciding what belongs in the picture
+  is work I keep coming back to.</p>
   <div class="bredgrid">
     <div class="bcol">
       <p>I wrote a constitution for this collection: what a dog is here,
@@ -785,39 +802,29 @@
       painters set the bar and why none of them may be copied, the color
       law that separates the living from the dead. Every rule the machines
       obey, I authored.</p>
-      <p>Six machines run it. Five painters rewrite the drawing code from
-      scratch, all at once, each against the same champion. One critic
-      reads the same constitution and scores every sheet blind, out of
-      eighty, never told which one is the champion. None of them can lower
-      the bar. That is the variation and the first cut. Then the sheets
-      come to me.</p>
-      <blockquote class="pq">"The process is mechanical and should not be
-      tampered with. It should run its course."
-      <span>LeWitt, Sentences on Conceptual Art, no. 29</span></blockquote>
-      <p>Mine gets tampered with every day. That is the difference between
-      a machine and a breeder.</p>
+      <p>The earlier gauntlet helped build the painter. Five AI painters
+      proposed changes to the code; a critic compared their sheets without
+      being told which was the champion. The scores made a first cut.
+      They did not make the final decision.</p>
+      <p>Now I also work on dogs one at a time with AI coding tools:
+      choosing the subject, asking for a different body or background,
+      changing the colour, looking again. I work on each picture until I
+      want to keep it. The code is how the picture gets painted.</p>
     </div>
     <div class="bcol">
-      <p>Breeding is two acts: something makes the variants, and someone
-      decides which ones live. The machines make them. I decide. I read
-      every sheet the critic passes, I have killed rounds it scored
-      highest, I have stopped whole lines of dogs and started others, and
-      each of those calls is published as it happens. The critic keeps the
-      fight honest. My eye decides what a dog here is allowed to become. I
-      do not touch the brush. I do the culling.</p>
-      <p>What none of us can author is the exact painting that survives.
-      That part surprises me the same way it surprises you, and it is the
-      part I wanted.</p>
-      <blockquote class="pq">"The process is carried out blindly. There
-      are many side effects that the artist cannot imagine."
-      <span>LeWitt, Sentences, no. 28</span></blockquote>
-      <p>The fight does not stop when the door shuts. What a dog <em>is</em>
+      <p>I have rejected rounds the critic scored highest. I have stopped
+      whole lines of dogs and started others. A good score does not make
+      me want a picture. I have to want it.</p>
+      <p>The brush still surprises me. A stroke runs dry, a line catches
+      the tooth, two colours meet in a way I want to keep. I can direct the
+      painting and still discover something in it.</p>
+      <p>In the performance, what a dog <em>is</em>
       freezes at the reveal: its type, its coat, its wardrobe, its one of
-      one, so the odds printed below are a contract. How it is
-      <em>painted</em> keeps being fought over, in public, for the same
+      one. How it is
+      <em>painted</em> can keep developing for the same
       ninety days the holding is fought over, and both freeze together at
-      the last midnight. Two wars, one end. The painter that is champion
-      that night is the painter forever.</p>
+      the last midnight. The painter kept that night is the painter
+      forever.</p>
     </div>
   </div>
 
@@ -835,15 +842,14 @@
         </div>
       </div>
       <div class="stripside">
-        <p>Every round of the fight redraws the whole collection, so the
-        same seed comes out a different animal each time. This is that one
-        seed, from the first round to the newest, with nothing in between
-        removed except the rounds that drew nothing at all.</p>
+        <p>This is one seed through the earlier gauntlet: the same dog,
+        painted by successive versions of the code. Rounds that drew
+        nothing are omitted. The final frame brings it through the paint
+        brush used for the paintings on this page.</p>
         <p>Watch the number while you watch the dog. The critic scores
         blind, out of eighty (out of seventy before cuteness was a line on
-        the card), and it has never once been told what the collection is
-        supposed to look like beyond the constitution. <b>The score goes
-        up as the pictures get rougher.</b> The neat little portrait near
+        the card). The constitution asked for a rougher picture, and the
+        score reflects those instructions. The neat little portrait near
         the start is not an earlier attempt at what we have now. It is the
         thing we had, and left.</p>
         <p class="stripnote">Competence was the easy part and it arrived
@@ -860,7 +866,7 @@
   </div>
 
   <div class="cta">
-    <a class="btn hot" href="design/">Watch the fight live</a>
+    <a class="btn hot" href="design/">See the gauntlet archive</a>
     <a class="btn" href="#game">Now the game</a>
   </div>
 </div></section>
@@ -874,6 +880,7 @@
 
 <section class="creed" id="game"><div class="wrap">
   <p class="kicker">The game</p>
+  <p class="site-status" style="margin:0 0 18px">The proposed rules. No contract is deployed yet.</p>
   <h2 class="t">Zombie apocalypse</h2>
   <p class="glead">Dog people, each let in by somebody already here, adopt
   one dog each and keep it for ninety days. A dog you keep grows older
@@ -896,8 +903,8 @@
         <img class="cutout" id="cr_flip" width="1000" height="1000" alt="" decoding="async">
       </div>
       <p>Then decide: <b class="blue">keep it</b>, or <b class="red">kill it</b>.
-      <span class="lsub">Selling is the only way to kill it, and it always
-      does. Whoever takes it receives a corpse, and your sale counts toward
+      <span class="lsub">Selling during the ninety days turns it.
+      Whoever takes it receives a corpse, and your sale counts toward
       the 15% that ends it for everyone else.</span></p>
     </div>
     <div class="gfork">
@@ -925,7 +932,7 @@
       <h2>Two fates.<br>One collar.</h2>
       <p class="lede">Every dog starts alive. Keep it, and it stays yours.
       Sell it during the ninety days, and it turns. The owners decide which;
-      the adoption roll has no say in it and neither does the artist.</p>
+      the painting has no say in it and neither does the artist.</p>
       <div class="fate">
         <div class="body">
         <h3>Faithful</h3>
@@ -977,15 +984,11 @@
     </div>
     <div class="stackcard">
       <div class="lbl">Wardrobe</div>
-      <p>The part decided at adoption. Each dog rolls a face, a light, a
-      hat, something worn, something held, one thing beside it, one thing
-      in the sky, and a place. Most of those rolls come up empty. A held
-      thing is something the dog does: it sips the martini, hugs the teddy.
-      <b>The crown is a 0.09% roll</b>, so whether this pack gets one
-      depends on how many people came through the door. The one hundred and
-      fifty-one keep their own costume and face, and still roll the rest.
-      A grumpy dog with wings of fire beside a house on fire is a story
-      nobody can plan.</p>
+      <p>The face, pose, clothes, and place are chosen together for each
+      painting. Something held is something the dog does: it sips the
+      martini, hugs the teddy. A crown belongs in a particular picture.
+      It is not a promised percentage of the edition. Every dog gets this
+      attention, whether it is somebody you recognise or somebody new.</p>
     </div>
     <div class="stackcard">
       <div class="lbl">On the piece</div>
@@ -995,12 +998,10 @@
       seed.</p>
     </div>
   </div>
-  <p class="fatenote">One hundred and fifty-one dogs in the pack are
-  somebody: people, famous dogs, scenes from movies. Each carries a year
-  and nothing else, drawn by lot at the close over the whole pack at once.
-  They cannot be earned. Everything else on the dog is a roll, not a quota,
-  so whether this pack gets a crown depends on how many people walk through
-  the door. Half the rarity is dealt. The other half is earned by staying.</p>
+  <p class="fatenote">All 1,000 dogs will be individual paintings.
+  People, famous dogs, scenes from movies, and dogs with stories of their
+  own. What happens after adoption belongs to the owners: the days lived,
+  the weekly chance of a new trait, and the decision to keep or sell.</p>
 </div></section>
 <section class="feature">
   <div class="herobanner">
@@ -1036,7 +1037,8 @@
       <h3>At 15% first sales, the apocalypse.</h3>
       <p>The count is <b>first sales only</b>. A dog turns once, on the day
       it first leaves the wallet that adopted it, and moves as often as
-      anyone likes afterward without moving the number again. So the count
+      anyone likes afterward without moving the number again. A gift or a
+      move to your own second wallet counts the same as a sale. So the count
       cannot be manufactured: it is how many separate
       dogs have been given up, out of however many were adopted. The line
       is fixed the moment the door shuts and never moved. If 15% of the
@@ -1081,12 +1083,13 @@
 
 <section class="cannon sheet" id="map"><div class="moon"></div><div class="wrap">
   <div class="squig"><svg viewBox="0 0 180 16" preserveAspectRatio="none"><path d="M2 8 Q 13 1 24 8 T 46 8 T 68 8 T 90 8 T 112 8 T 134 8 T 156 8 T 178 8"/></svg></div>
+  <p class="kicker">Try the simulation</p>
   <h2><span class="boom">Every midnight,</span><br>the cannon<span class="blink">_</span></h2>
   <p>The whole pack, one dog to a mark. The count of sold dogs is public
   all day, and the world can only end at midnight. So you watch the count
-  climb, and you still never know which midnight is the one. Each run
-  below deals a different-sized pack, because the line is a share and not
-  a number: it plays the same at four hundred dogs as at four thousand.</p>
+  climb, and you still never know which midnight is the one. This example
+  starts with all 1,000 dogs adopted, so the line is 150 first sales.
+  Change how often the pack sells and watch what happens.</p>
 
   <div class="yearsim">
     <div class="ysfield">
@@ -1095,7 +1098,7 @@
     </div>
     <div class="yskey">
       <span><i class="k-live"></i>living</span>
-      <span><i class="k-zom"></i>sold once, turned</span>
+      <span><i class="k-zom"></i>zombie</span>
       <span><i class="k-ang"></i>died of old age</span>
     </div>
     <div class="ysboard">
@@ -1133,43 +1136,30 @@
   <div class="wrap">
   <p class="kicker">The drop</p>
   <h2>Nobody gets in<br>who wasn't let in.</h2>
-  <p class="lede">There is no open list and there is no edition size.
-  The first dogs go to people who already collect my work. From there the
-  pack lets itself in three at a time, and after seven days the door
-  shuts on whoever made it through.</p>
+  <p class="lede">1,000 dogs, each an individual painting. Invitations
+  begin with people who already collect my work and pass through friends
+  of friends for seven days. One dog per confirmed handle.</p>
   <div class="phases">
     <div class="step"><div class="n">01</div>
       <h3>It starts with my collectors.</h3>
-      <p>No form, no application, no raffle. If you already hold something
-      of mine, a dog is waiting for you, one per confirmed Twitter
-      handle like everybody else. That first wave is the only part of the
-      pack I choose.</p></div>
+      <p>The first invitations go to people who already hold something
+      of mine. That first wave is the part of the pack I choose.</p></div>
     <div class="step"><div class="n">02</div>
       <h3>Adopt, and you get three invites.</h3>
-      <p>Three Twitter handles, named by you, each getting exactly what
-      you got: one dog, one handle on the collar. The moment they adopt
-      they get three invites of their own. After the
-      first wave, every place in this collection is handed over by
-      somebody who already took one.</p></div>
+      <p>Three Twitter handles, named by you. When an invited person
+      adopts, they get three invitations of their own. An invitation
+      does not add another dog to the edition: the limit stays 1,000.</p></div>
     <div class="step"><div class="n">03</div>
-      <h3>Seven days, and no other door.</h3>
-      <p>No public day, no bots, nothing to refresh at
-      midnight, and no way to skip the line. There is no
-      number of dogs to run out of, so nothing runs out and nothing is
-      won by being fast. The only scarce thing is the week. When it ends
-      the door shuts, the pack is however many walked through it, and
-      that number is fixed forever.</p></div>
+      <h3>Seven days. One thousand paintings.</h3>
+      <p>The invitation window is seven days. There is no separate public
+      sale. The allocation terms will be published before adoption opens,
+      including what happens if more than 1,000 people want a dog.</p></div>
   </div>
   <p class="dropnote">So the pack is a chain and not a crowd. The ninety
   days are a test of whether a group of people can hold together, and how
   the group was assembled is part of the experiment. A scramble for a
   public list gathers strangers. This gathers a tribe: dog people, friends of friends,
-  every one of them one link from somebody who vouched for them.<br><br>
-  Nobody knows how big this gets, and that includes me. An edition size is
-  a promise an artist makes about how much attention the work deserves,
-  and I would rather find out. Every rule downstream is a share rather
-  than a count, so the game is identical at four hundred dogs and at four
-  thousand. Dogs nobody adopts are never born at all.</p>
+  every one of them one link from somebody who vouched for them.</p>
 </div></section>
 <!-- the wall of all 141 is hidden for now (Jon, 2026-09-05); the markup and its script stay, drop the hidden attribute to bring it back -->
 <section id="dogs" hidden><div class="wrap">
@@ -1179,11 +1169,10 @@
   <div class="kennel" id="kennel"></div>
   <div class="kennelrow">
     <button class="btn" id="litter">A new litter</button>
-    <span class="note">All one hundred and fifty-one one of ones, in seed
-    order, painted once by the round 1388 painter; the year under each is
-    the only clue. Until adoption opens the style
+    <span class="note">The current one hundred and fifty-one paintings,
+    part of the 1,000-piece collection. Until adoption opens the style
     is still being fought over:
-    <a href="design/">watch the machines redraw the collection &rarr;</a></span>
+    <a href="design/">see the painter's earlier rounds &rarr;</a></span>
   </div>
 
 </div></section>
@@ -1515,6 +1504,7 @@ function heroBand(a, b, cap, cast, opts) {
     return new Promise(res => {
       const u = urls(seed);
       el.dataset.seed = String(seed);
+      el.alt = (capName(seed) || 'ALL DOGS painting') + ', ' + capYear(seed) + '. ' + capNote(seed);
       el.onload = () => { el.classList.remove('painting'); res(true); };
       el.onerror = () => {
         const url = stillUrl(seed, 'faithful', TILE);
@@ -1674,6 +1664,9 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
     if (d.dataset.pinned) { delete d.dataset.pinned; d.classList.remove('on'); }
     else { d.dataset.pinned = '1'; d.classList.add('on'); }
   });
+  d.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); d.click(); }
+  });
   d.addEventListener('focus', () => { resting = true; d.classList.add('on'); });
   d.addEventListener('blur', () => { resting = false; if (!d.dataset.pinned) d.classList.remove('on'); });
 })();
@@ -1685,7 +1678,12 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
   if (!fig || !v) return;
   const calm = !matchMedia('(prefers-reduced-motion: reduce)').matches;
   let onScreen = false, wanted = calm;
-  function label() { tag.textContent = v.paused ? 'play' : (v.muted ? 'sound off' : 'sound on'); }
+  const pause = document.getElementById('pfPause');
+  function label() {
+    tag.textContent = v.paused ? 'play' : (v.muted ? 'sound off' : 'sound on');
+    pause.textContent = v.paused ? 'Play film' : 'Pause film';
+    fig.setAttribute('aria-label', v.paused ? 'Play Frida being painted, thirty seconds' : (v.muted ? 'Turn film sound on' : 'Turn film sound off'));
+  }
   function play() { if (v.preload === 'none') v.preload = 'auto'; v.play().then(label, label); }
   function sync() { if (onScreen && wanted) play(); else if (!v.paused) { v.pause(); label(); } }
   function tap() {
@@ -1693,6 +1691,10 @@ document.querySelectorAll('section.feature').forEach((sec, n) => {
     v.muted = !v.muted; label();
   }
   fig.addEventListener('click', tap);
+  pause.addEventListener('click', () => {
+    wanted = v.paused;
+    if (wanted) play(); else { v.pause(); label(); }
+  });
   fig.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tap(); } });
   v.addEventListener('play', label); v.addEventListener('pause', label); v.addEventListener('volumechange', label);
   if ('IntersectionObserver' in window) {
@@ -2051,14 +2053,14 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
   brushDivider(sec, false);
 });
 
-/* The ninety days, run over a pack of unknown size. Marks are not dogs.
+/* The ninety days, with the full 1,000-piece edition adopted. Marks are not dogs.
    Clicking a mark opens one of the one of ones. */
 (function () {
   const cv = document.getElementById('ysPack');
   if (!cv) return;
   const g = cv.getContext('2d');
   const DAYS = 90, SHARE = 0.15, DEATH = 0.0002;
-  const NMIN = 400, NMAX = 2400;
+  const EDITION_SIZE = 1000;
   const ASPECT = cv.width / cv.height;
   const LIVING = 0, ZOMBIE = 1, DIED = 2;
   const NAME = ['faithful', 'zombie', 'faithful'];
@@ -2069,7 +2071,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
   let day = 0, zombies = 0, died = 0, living = 0;
   let running = false, raf = 0, acc = 0, last = 0, over = null;
   function deal() {
-    N = NMIN + Math.floor(Math.random() * (NMAX - NMIN + 1));
+    N = EDITION_SIZE;
     TARGET = Math.round(N * SHARE);
     COLS = Math.ceil(Math.sqrt(N * ASPECT));
     while (COLS * Math.floor(COLS / ASPECT) < N) COLS++;
@@ -2145,7 +2147,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
     for (let i = 0; i < N; i++) {
       if (field[i] === LIVING) { field[i] = ZOMBIE; taken++; cell(i); }
     }
-    zombies += taken; living = 0;
+    living = 0; // The apocalypse turns the remainder; those are not first sales.
     return taken;
   }
   function finish(how) {
@@ -2153,8 +2155,8 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
     if (how === 'apocalypse') {
       const taken = fireTheCannon();
       el('ysVerdict').innerHTML = '<b>The cannon fired on day ' + day
-        + '.</b> ' + TARGET + ' of the ' + N.toLocaleString() + ' dogs that '
-        + 'were adopted had been sold once, which is the 15%, and the horde '
+        + '.</b> ' + zombies + ' of the ' + N.toLocaleString() + ' dogs that '
+        + 'were adopted had been sold once, reaching the line of ' + TARGET + ', and the horde '
         + 'took the ' + taken.toLocaleString() + ' that were still alive at '
         + 'the same midnight. ' + died + ' had already died of old age.';
     } else {
@@ -2196,9 +2198,9 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
   function nextRun() {
     hold = setTimeout(() => {
       hold = 0; reset();
-      el('ysVerdict').textContent = 'The door opened again and '
-        + N.toLocaleString() + ' dogs came through it this time. Same rules, '
-        + 'same rolls, a line at ' + TARGET + ', and no promise it goes the '
+      el('ysVerdict').textContent = 'Another run with all '
+        + N.toLocaleString() + ' dogs adopted. Same rules, '
+        + 'a line at ' + TARGET + ', and no promise it goes the '
         + 'same way.';
       start();
     }, 6200);
