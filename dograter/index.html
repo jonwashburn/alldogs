@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dog rater · ALL DOGS</title>
+  <base href="/dograter/">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header><div><p class="eyebrow">ALL DOGS / WORKING STUDIES</p><h1>One dog. Twenty props.</h1><p>Astra and Fable, side by side on the accepted Obama dog.</p></div><button id="export">Export feedback</button></header>
+  <main>
+    <p class="scope">Choose the stronger drawing for each prop. These are review candidates; a preference does not accept or publish a dog.</p>
+    <aside class="storage"><strong id="save-status" role="status">Loading feedback…</strong><p>Notes stay in this browser, on this device and this page’s origin. They are not sent to your art server. Clearing browser data or using another browser will not carry them over. Export feedback to save or share it.</p></aside>
+    <div class="toolbar"><span id="progress" class="eyebrow"></span><div><button id="next-unreviewed">Next unreviewed</button><button id="swap">Swap sides</button><label><input type="checkbox" id="close-up"> Prop close-up</label><label><input type="checkbox" id="auto-next"> Advance after a choice</label></div></div>
+    <nav id="prop-list" aria-label="Choose a prop"></nav>
+    <section aria-labelledby="prop-title">
+      <div class="prop-heading"><div><p id="position" class="eyebrow"></p><h2 id="prop-title"></h2></div><div><button id="previous" aria-label="Previous prop">Previous</button><button id="next" aria-label="Next prop">Next</button></div></div>
+      <div id="pair" class="pair" aria-busy="true">
+        <article><div class="candidate-head"><h3 id="left-name">Astra</h3><a id="left-full" target="_blank" rel="noopener">Open full image ↗</a></div><button id="left-choice" class="image-choice" disabled><img id="left-image" alt=""><span id="left-action">Choose Astra</span></button><p id="left-status" class="image-status" role="status"></p></article>
+        <article><div class="candidate-head"><h3 id="right-name">Fable</h3><a id="right-full" target="_blank" rel="noopener">Open full image ↗</a></div><button id="right-choice" class="image-choice" disabled><img id="right-image" alt=""><span id="right-action">Choose Fable</span></button><p id="right-status" class="image-status" role="status"></p></article>
+      </div>
+      <div class="choices" role="group" aria-label="Preference"><button data-choice="astra" disabled>Astra <kbd>1</kbd></button><button data-choice="fable" disabled>Fable <kbd>2</kbd></button><button data-choice="both" disabled>Both <kbd>3</kbd></button><button data-choice="neither" disabled>Neither <kbd>4</kbd></button><button id="skip">Skip</button><button id="undo" disabled>Undo last choice</button><button id="retry" hidden>Retry images</button></div>
+      <p id="choice-status" class="choice-status" role="status"></p>
+      <label for="note" class="note-label">What should we keep or change?</label><textarea id="note" rows="3" maxlength="6000" placeholder="The prop, how the dog holds it, line quality, scale, expression…"></textarea>
+      <div class="note-bottom"><span id="note-count" class="eyebrow">0 / 6000</span><button id="clear-one">Clear this prop’s feedback…</button></div>
+    </section>
+    <details class="references"><summary>Original references</summary><div class="reference-grid"><figure><a href="refs/obama_fire_original.jpg" target="_blank" rel="noopener"><img src="refs/obama_fire_original.jpg" alt="Original Obama dog with fire" loading="lazy"></a><figcaption>Obama with fire</figcaption></figure><figure><a href="refs/trump_wings_original.jpg" target="_blank" rel="noopener"><img src="refs/trump_wings_original.jpg" alt="Original Trump dog with wings" loading="lazy"></a><figcaption>Trump with wings</figcaption></figure><figure><a href="refs/primary_aesthetic.png" target="_blank" rel="noopener"><img src="refs/primary_aesthetic.png" alt="Primary ALL DOGS aesthetic reference" loading="lazy"></a><figcaption>Primary aesthetic</figcaption></figure></div></details>
+    <details class="feedback-tools"><summary>Feedback tools</summary><p>Export includes every prop, your preference and notes, and the exact candidate paths. Exporting does not send anything automatically.</p><button id="copy">Copy feedback as text</button><label class="import-label">Restore an exported file <input type="file" id="import" accept="application/json,.json"></label><p id="tools-status" role="status"></p><button id="clear-all">Clear all feedback in this browser…</button></details>
+    <p class="keyboard">Keys: 1 Astra · 2 Fable · 3 Both · 4 Neither · ← / → Previous / Next · Z Undo. Shortcuts are paused while typing.</p>
+  </main>
+  <footer><span>OBAMA PROPS / ASTRA + FABLE / 2026-09-09</span><span id="summary"></span></footer>
+  <dialog id="clear-dialog"><form method="dialog"><h2 id="clear-title">Clear feedback?</h2><p id="clear-description"></p><label for="clear-confirm">Type CLEAR to confirm</label><input id="clear-confirm" autocomplete="off" spellcheck="false"><div class="dialog-actions"><button value="cancel">Cancel</button><button id="clear-confirm-button" value="confirm" disabled>Clear feedback</button></div></form></dialog>
+  <noscript><p class="no-script">Enable JavaScript to compare candidates and record feedback.</p></noscript>
+  <script src="availability.js" defer></script>
+  <script src="review.js" defer></script>
+</body>
+</html>
