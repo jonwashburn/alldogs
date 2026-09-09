@@ -2,11 +2,109 @@
   "version": 1,
   "portraits": [
     {
+      "id": "round2-tiffany-expression",
+      "title": "Tiffany \u00b7 a held smile",
+      "image": "assets/round2-tiffany-expression.jpg",
+      "group": "Round 2",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "A lifted cheek and a displaced mouth corner suggest a more knowing expression. The unequal eyes and folded posture retain the original guarded character.",
+      "moves": [
+        "cheek-mouth",
+        "unequal-eyes",
+        "dry-separation"
+      ],
+      "parent": "tiffany-2",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/round02_expression/out/expression_v2_1000.png",
+      "comparison": {
+        "fingerprint": "9379b3a9b788ab5e1f1ba35f0e752e6ff8b0d8ffbddff98041d5ed8262a25a99",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "round2-tiffany-hair",
+            "tiffany-1",
+            "tiffany-2"
+          ],
+          "posture": [
+            "round2-tiffany-hair",
+            "tiffany-1",
+            "tiffany-2"
+          ],
+          "hair": [
+            "tiffany-1",
+            "tiffany-2"
+          ],
+          "brushwork": [
+            "tiffany-2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "round2-tiffany-hair",
+      "title": "Tiffany \u00b7 broken hair planes",
+      "image": "assets/round2-tiffany-hair.jpg",
+      "group": "Round 2",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "Broad opposing dark masses and thin color planes rebuild the hair around the original face. The heavier shapes have a sharper, more collaged edge.",
+      "moves": [
+        "broken-color",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "tiffany-2",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/tiffany/round02_material/out/tiffany_material_v3_1000.png",
+      "comparison": {
+        "fingerprint": "a7ae06bbc7a55efb3f0cdd1d45a00f7475b91d7f76b65e80fab52d4b02f69358",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "round2-tiffany-expression",
+            "tiffany-1",
+            "tiffany-2"
+          ],
+          "posture": [
+            "round2-tiffany-expression",
+            "tiffany-1",
+            "tiffany-2"
+          ],
+          "mouth": [
+            "tiffany-2"
+          ],
+          "expression": [
+            "tiffany-2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "round2-bowie-character",
+      "title": "Bowie \u00b7 a knowing glance",
+      "image": "assets/round2-bowie-character.jpg",
+      "group": "Round 2",
+      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "description": "A flatter blue eye, lifted cheek and short mouth return change the expression within the displaced head-and-body relationship.",
+      "moves": [
+        "unequal-eyes",
+        "cheek-mouth",
+        "recovery-line"
+      ],
+      "parent": "round1-displaced",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/bowie/round02_character/out/character_v2_1000.png",
+      "comparison": {
+        "fingerprint": "256c5c6ad997fb883d37b7d47b583b565695ebe04a7165d37e7a81afb06bacc4",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "round1-lost-eye",
       "title": "Bowie \u00b7 partly lost eye",
       "image": "assets/round1-lost-eye.jpg",
       "group": "Round 1",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A lower, incomplete blue eye with traces of its earlier rim. The face is drawn around the opening; the first covering-paint attempts were set aside.",
       "moves": [
         "unequal-eyes",
@@ -27,7 +125,7 @@
       "title": "Bowie \u00b7 eye into cheek",
       "image": "assets/round1-eye-cheek.jpg",
       "group": "Round 1",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "An irregular tall eye constructed together with the cheek. The transition is more open, but the eye loses some of its earlier clarity.",
       "moves": [
         "loaded-deposit",
@@ -48,7 +146,7 @@
       "title": "Bowie \u00b7 displaced drawing",
       "image": "assets/round1-displaced.jpg",
       "group": "Round 1",
-      "status": "Astra + Fable study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "The head and features follow different angles. The closer tall eye and unresolved jaw create a more direct gaze.",
       "moves": [
         "unequal-eyes",
@@ -525,12 +623,17 @@
         "similar": [],
         "indistinct": {
           "eyes": [
+            "round2-tiffany-expression",
+            "round2-tiffany-hair",
             "tiffany-2"
           ],
           "hair": [
+            "round2-tiffany-expression",
             "tiffany-2"
           ],
           "posture": [
+            "round2-tiffany-expression",
+            "round2-tiffany-hair",
             "tiffany-2"
           ],
           "brushwork": [
@@ -544,8 +647,8 @@
       "title": "Tiffany \u00b7 selected portrait",
       "image": "assets/tiffany-2.jpg",
       "group": "Tiffany",
-      "status": "Good, limited variation",
-      "description": "Gathered dark hair, folded arms, guarded mouth. The underlying face remains close to Bowie.",
+      "status": "Loved reference",
+      "description": "Gathered dark hair, folded arms, a guarded mouth and individually drawn unequal eyes.",
       "moves": [
         "unequal-eyes",
         "dry-separation"
@@ -558,16 +661,28 @@
         "similar": [],
         "indistinct": {
           "eyes": [
+            "round2-tiffany-expression",
+            "round2-tiffany-hair",
             "tiffany-1"
           ],
           "hair": [
+            "round2-tiffany-expression",
             "tiffany-1"
           ],
           "posture": [
+            "round2-tiffany-expression",
+            "round2-tiffany-hair",
             "tiffany-1"
           ],
           "brushwork": [
+            "round2-tiffany-expression",
             "tiffany-1"
+          ],
+          "mouth": [
+            "round2-tiffany-hair"
+          ],
+          "expression": [
+            "round2-tiffany-hair"
           ]
         }
       }
@@ -1082,44 +1197,32 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "hand-round-1",
-    "title": "Round 1 \u00b7 Three ways of drawing the face",
-    "description": "Six choices, then we pause for your direction. Choose for the quality in each question; the next pair loads automatically. All studies remain on The wall.",
+    "id": "hand-round-2",
+    "title": "Round 2 \u00b7 Tiffany and Bowie",
+    "description": "Four choices, then we pause for your direction. Choose for the quality in each question; the next pair loads automatically. All studies remain on The wall.",
     "trials": [
       {
-        "attribute": "eyes",
-        "left": "round1-lost-eye",
-        "right": "bowie-3",
-        "question": "Which blue eye feels more alive?"
-      },
-      {
-        "attribute": "deconstruction",
-        "left": "round1-eye-cheek",
-        "right": "bowie-3",
-        "question": "Which portrait connects the eye and cheek more convincingly?"
-      },
-      {
-        "attribute": "posture",
-        "left": "round1-displaced",
-        "right": "bowie-3",
-        "question": "Which head-and-body relationship feels more alive?"
-      },
-      {
         "attribute": "expression",
-        "left": "round1-lost-eye",
-        "right": "round1-eye-cheek",
-        "question": "Which expression would you take further?"
+        "left": "round2-tiffany-expression",
+        "right": "tiffany-2",
+        "question": "Which Tiffany expression feels more alive while staying understated?"
       },
       {
         "attribute": "brushwork",
-        "left": "round1-eye-cheek",
+        "left": "round2-tiffany-hair",
+        "right": "tiffany-2",
+        "question": "Which treatment of the hair feels more naturally painted?"
+      },
+      {
+        "attribute": "expression",
+        "left": "round2-bowie-character",
         "right": "round1-displaced",
-        "question": "Which paint feels more natural and varied?"
+        "question": "Which Bowie expression has more personality?"
       },
       {
         "attribute": "eyes",
-        "left": "round1-lost-eye",
-        "right": "round1-displaced",
+        "left": "round2-bowie-character",
+        "right": "bowie-3",
         "question": "Which uneven gaze feels more convincing?"
       }
     ]
