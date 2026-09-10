@@ -2,6 +2,198 @@
   "version": 1,
   "portraits": [
     {
+      "id": "spirit2-leon-astra",
+      "title": "L\u00e9on \u00b7 Astra",
+      "image": "assets/spirit2-leon-astra.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A quiet, direct gaze, plain warm facial planes and an asymmetric green coat. The influence is human presence and economical weight. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-leon-astra",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/leon/astra/out/leon_spirit_v3_1000.png",
+      "author": "gpt-6-astra",
+      "effort": "xhigh",
+      "influence": "Henry Taylor",
+      "comparison": {
+        "fingerprint": "b9a530978cd9fc541d3c5eed4a4b793bc335b92bc1839b233ffb2806c32a7870",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-mathilda-astra",
+      "title": "Mathilda \u00b7 Astra",
+      "image": "assets/spirit2-mathilda-astra.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A turned body and raised hand counter the diagonal gaze. Revision and partially recovered gesture guide the painting. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-mathilda-astra",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/mathilda/astra/out/mathilda_astra_spirit_v3_1000.png",
+      "author": "gpt-6-astra",
+      "effort": "xhigh",
+      "influence": "Rita Ackermann",
+      "comparison": {
+        "fingerprint": "845193798fa60f6268fca6ce88b2f645f7a769062aec073de57f072370a4d251",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-alan-astra",
+      "title": "Alan \u00b7 Astra",
+      "image": "assets/spirit2-alan-astra.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A broad tilted head, tiny raised hand and deliberately awkward scale give Alan a more particular comic presence. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-alan-astra",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/alan/astra/out/alan_astra_spirit_v2_1000.png",
+      "author": "gpt-6-astra",
+      "effort": "xhigh",
+      "influence": "Rose Wylie",
+      "comparison": {
+        "fingerprint": "ad3cb5728ea9237e035428aa48924e90274e1b06cc3a4fcd2d0360797e9dc5db",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-damon-astra",
+      "title": "Damon \u00b7 Astra",
+      "image": "assets/spirit2-damon-astra.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "An elongated tilted face, conflicting eyes and a hand at the throat create unease through selective reconstruction and light. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-damon-astra",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/damon/astra/out/damon_astra_spirit_v1b_1000.png",
+      "author": "gpt-6-astra",
+      "effort": "xhigh",
+      "influence": "Adrian Ghenie",
+      "comparison": {
+        "fingerprint": "9de193480a98adccef07fe0eba6c35eb6a608bd96cb1a8bfa1b3ca68d96e62b6",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-leon-fable",
+      "title": "L\u00e9on \u00b7 Fable",
+      "image": "assets/spirit2-leon-fable.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A leaning dark coat and concentrated pressure around one temple and eye. Revision is localized within the face. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-leon-fable",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/leon/fable/out/leon_fable_spirit_v2_1000.png",
+      "author": "claude-fable-5-1",
+      "effort": "high",
+      "influence": "Arnulf Rainer",
+      "comparison": {
+        "fingerprint": "89d31796652752692775fbc7478fb8e82438e05abe9ff9dca51cb57bd55caaa4",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-mathilda-fable",
+      "title": "Mathilda \u00b7 Fable",
+      "image": "assets/spirit2-mathilda-fable.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "An unequal bob, sidelong gaze, pocketed hand and small fist. Pauses and selective contour carry the attitude. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-mathilda-fable",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/mathilda/fable/out/mathilda_fable_spirit_v2_1000.png",
+      "author": "claude-fable-5-1",
+      "effort": "high",
+      "influence": "Cy Twombly",
+      "comparison": {
+        "fingerprint": "e6f6b75697f4624cd4b21b5a23c4195f8de4b66d8f77eb3f5e1f4c8b259864bb",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-alan-fable",
+      "title": "Alan \u00b7 Fable",
+      "image": "assets/spirit2-alan-fable.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "Ochre, oxide and cobalt organize an odd, confident face with an uncertain eye and a hand resting on the belly. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-alan-fable",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/alan/fable/out/alan_fable_spirit_v2_1000.png",
+      "author": "claude-fable-5-1",
+      "effort": "high",
+      "influence": "Jean-Michel Basquiat",
+      "comparison": {
+        "fingerprint": "d1c095318a71439e4099e478452d234f5efa3100627285935f8d819d2eda6d55",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "spirit2-damon-fable",
+      "title": "Damon \u00b7 Fable",
+      "image": "assets/spirit2-damon-fable.jpg",
+      "group": "Eight spirits",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "Invitation and withholding occupy opposite sides of the face, with slate shadow and a warm cheek passage. An original Upright portrait; the artist reference informs decisions, without intended imitation of a recognizable hand.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "duet1-damon-fable",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/duet_round_02_spirit/damon/fable/out/damon_fable_spirit_v2_1000.png",
+      "author": "claude-fable-5-1",
+      "effort": "high",
+      "influence": "George Condo",
+      "comparison": {
+        "fingerprint": "6dd63388fba95a954088eb1e49123f03982fcf8d2de90bffb22604f52e40cd1a",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "duet1-leon-astra",
       "title": "L\u00e9on \u00b7 watchful tenderness \u00b7 Astra \u00b7 extra high",
       "image": "assets/duet1-leon-astra.jpg",
@@ -1490,33 +1682,57 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "duet-1",
-    "title": "Four characters \u00b7 two artists",
-    "description": "Eight new paintings: one independent Fable 5.1 version and one Astra extra-high version of L\u00e9on, Mathilda, Alan and Damon. Four same-character comparisons, one question each about expression or painted lines. The sides are randomized; your choice loads the next pair. All eight are on the wall.",
+    "id": "spirit-2",
+    "title": "Eight portraits \u00b7 eight influences",
+    "description": "Two versions of each character, with eight distinct influences beneath the drawing. Eight choices: expression and brushwork. Positions change automatically; choose for the quality named.",
     "trials": [
       {
         "attribute": "expression",
-        "left": "duet1-leon-astra",
-        "right": "duet1-leon-fable",
+        "left": "spirit2-leon-astra",
+        "right": "spirit2-leon-fable",
         "question": "Which expression feels more individual and alive?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "duet1-mathilda-astra",
-        "right": "duet1-mathilda-fable",
-        "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
       },
       {
         "attribute": "expression",
-        "left": "duet1-alan-astra",
-        "right": "duet1-alan-fable",
+        "left": "spirit2-mathilda-astra",
+        "right": "spirit2-mathilda-fable",
+        "question": "Which expression feels more individual and alive?"
+      },
+      {
+        "attribute": "expression",
+        "left": "spirit2-alan-astra",
+        "right": "spirit2-alan-fable",
+        "question": "Which expression feels more individual and alive?"
+      },
+      {
+        "attribute": "expression",
+        "left": "spirit2-damon-astra",
+        "right": "spirit2-damon-fable",
         "question": "Which expression feels more individual and alive?"
       },
       {
         "attribute": "brushwork",
-        "left": "duet1-damon-astra",
-        "right": "duet1-damon-fable",
-        "question": "Which portrait\u2019s painted lines feel more natural and expressive?"
+        "left": "spirit2-leon-astra",
+        "right": "spirit2-leon-fable",
+        "question": "Which portrait\u2019s painted lines and brushwork feel more natural and expressive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "spirit2-mathilda-astra",
+        "right": "spirit2-mathilda-fable",
+        "question": "Which portrait\u2019s painted lines and brushwork feel more natural and expressive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "spirit2-alan-astra",
+        "right": "spirit2-alan-fable",
+        "question": "Which portrait\u2019s painted lines and brushwork feel more natural and expressive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "spirit2-damon-astra",
+        "right": "spirit2-damon-fable",
+        "question": "Which portrait\u2019s painted lines and brushwork feel more natural and expressive?"
       }
     ]
   }
