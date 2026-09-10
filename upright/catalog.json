@@ -1800,7 +1800,7 @@
       "characterName": "Bowie",
       "image": "assets/taylor1-bowie-astra.jpg",
       "group": "Henry Taylor studies",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "Quiet warm flesh and a cool cheek sit beside loaded copper hair and a red-and-indigo jacket. Unequal eyes, a small crooked smile and a held hand carry the expression.",
       "moves": [
         "unequal-eyes",
@@ -1829,7 +1829,7 @@
       "characterName": "Am\u00e9lie",
       "image": "assets/taylor1-amelie-astra.jpg",
       "group": "Henry Taylor studies",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A calm warm face, emphatically different eyes, a dark loaded bob and a substantial red cardigan. Sparse directional sleeve marks leave the face and small hand in charge.",
       "moves": [
         "unequal-eyes",
@@ -1858,7 +1858,7 @@
       "characterName": "Bowie",
       "image": "assets/taylor1-bowie-fable.jpg",
       "group": "Henry Taylor studies",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A wider faded-blue coat, an arm at the hip and opposing brows give Bowie a more assertive stance. Copper hair and loaded coat edges meet thin warm and cool face planes.",
       "moves": [
         "unequal-eyes",
@@ -1887,7 +1887,7 @@
       "characterName": "Am\u00e9lie",
       "image": "assets/taylor1-amelie-fable.jpg",
       "group": "Henry Taylor studies",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "Earlier Astra + Fable study",
       "description": "A broad red cardigan, a quieter dark bob and layered warm skin color surround the unequal gaze. A lifted mouth corner and held cuff keep the expression private.",
       "moves": [
         "unequal-eyes",
@@ -2088,61 +2088,157 @@
         "similar": [],
         "indistinct": {}
       }
+    },
+    {
+      "id": "raw1-bowie-astra",
+      "title": "Bowie \u00b7 held lapel",
+      "characterId": "bowie",
+      "characterName": "Bowie",
+      "image": "assets/raw1-bowie-astra.jpg",
+      "group": "Raw paint and gesture",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A raised red shoulder and a small hand gripping the lapel give the unequal gaze a restrained, private expression. Earlier layered flesh and copper hair remain.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/raw_presence_round_01/bowie_astra/out/bowie_raw_astra_v2_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "reviewers": [
+        "Astra",
+        "Fable 5.1"
+      ],
+      "roundId": "raw-presence-1",
+      "comparison": {
+        "fingerprint": "2bee91451e08f8bf38ecb48a7164b391351cf1fcd3ae9150ceb92467e9703e33",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "raw1-amelie-astra",
+      "title": "Am\u00e9lie \u00b7 finger to chin",
+      "characterId": "amelie",
+      "characterName": "Am\u00e9lie",
+      "image": "assets/raw1-amelie-astra.jpg",
+      "group": "Raw paint and gesture",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A raised elbow brings a crooked finger to the chin. The dark bob, uneven eyes and red cardigan keep the earlier raw paint, with a more deliberate gesture.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/raw_presence_round_01/amelie_astra/out/amelie_raw_presence_v2_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "reviewers": [
+        "Astra",
+        "Fable 5.1"
+      ],
+      "roundId": "raw-presence-1",
+      "comparison": {
+        "fingerprint": "4d9ca74b4c069660f72b9b6a74abea3474b92054a277b3b15424af7c7384f737",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "raw1-bowie-fable",
+      "title": "Bowie \u00b7 loose arm",
+      "characterId": "bowie",
+      "characterName": "Bowie",
+      "image": "assets/raw1-bowie-fable.jpg",
+      "group": "Raw paint and gesture",
+      "status": "New study \u00b7 awaiting your response",
+      "description": "A violet and ochre jacket, a hanging hand and an arm tucked behind the body change the stance. Warm cheek paint and a broken collar passage cross the earlier drawing.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/raw_presence_round_01/bowie_fable/out/bowie_raw_fable_v1_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "reviewers": [
+        "Astra",
+        "Fable 5.1"
+      ],
+      "roundId": "raw-presence-1",
+      "comparison": {
+        "fingerprint": "a9461cfac737db3c7972801ec71fdaa759c1a88d824fb1c8590b65d5771807f4",
+        "similar": [],
+        "indistinct": {}
+      }
     }
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "taylor-1",
-    "title": "Bowie and Am\u00e9lie \u00b7 broader paint",
-    "description": "Four new paintings from Astra and Fable, exploring Henry Taylor\u2019s directness and broad color. Compare the new versions with each other and with the earlier paintings. Eight choices.",
+    "id": "raw-presence-1",
+    "title": "Raw paint, individual gestures",
+    "description": "Three new studies return to layered paint and unequal eyes. Compare each with its earlier portrait, then compare the two new Bowies. Eight choices.",
     "trials": [
       {
-        "attribute": "expression",
-        "left": "taylor1-bowie-astra",
-        "right": "taylor1-bowie-fable",
-        "question": "Which character feels more present and alive?"
-      },
-      {
         "attribute": "brushwork",
-        "left": "taylor1-bowie-astra",
-        "right": "taylor1-bowie-fable",
-        "question": "Which handling of paint feels more natural and expressive?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "taylor1-bowie-astra",
-        "right": "bowie-3",
-        "question": "Which handling of paint would you carry forward?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "taylor1-bowie-fable",
+        "left": "raw1-bowie-astra",
         "right": "bowie-3",
         "question": "Which handling of paint would you carry forward?"
       },
       {
         "attribute": "expression",
-        "left": "taylor1-amelie-astra",
-        "right": "taylor1-amelie-fable",
+        "left": "raw1-bowie-astra",
+        "right": "bowie-3",
         "question": "Which character feels more present and alive?"
       },
       {
         "attribute": "brushwork",
-        "left": "taylor1-amelie-astra",
-        "right": "taylor1-amelie-fable",
+        "left": "raw1-amelie-astra",
+        "right": "amelie-1",
+        "question": "Which handling of paint would you carry forward?"
+      },
+      {
+        "attribute": "expression",
+        "left": "raw1-amelie-astra",
+        "right": "amelie-1",
+        "question": "Which character feels more present and alive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "raw1-bowie-fable",
+        "right": "bowie-3",
+        "question": "Which handling of paint would you carry forward?"
+      },
+      {
+        "attribute": "expression",
+        "left": "raw1-bowie-fable",
+        "right": "bowie-3",
+        "question": "Which character feels more present and alive?"
+      },
+      {
+        "attribute": "expression",
+        "left": "raw1-bowie-astra",
+        "right": "raw1-bowie-fable",
+        "question": "Which character feels more present and alive?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "raw1-bowie-astra",
+        "right": "raw1-bowie-fable",
         "question": "Which handling of paint feels more natural and expressive?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "taylor1-amelie-astra",
-        "right": "amelie-1",
-        "question": "Which handling of paint would you carry forward?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "taylor1-amelie-fable",
-        "right": "amelie-1",
-        "question": "Which handling of paint would you carry forward?"
       }
     ]
   }
