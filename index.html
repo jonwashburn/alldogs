@@ -90,6 +90,8 @@
     width: 100%; height: 100%; object-fit: cover; object-position: center;
     opacity: 0; transition: opacity 1.2s ease; }
   .herobanner > img.hero-still.on { opacity: 1; }
+  img.approved-square { object-fit: contain !important; background: #b4b39b; }
+  .herocap a { margin-left: 12px; font-size: 14px; text-underline-offset: 3px; }
   /* the title is a collar tag hung on the painting, swinging on its string */
   .herobanner h1 { position: absolute; left: 34px; top: 34px; z-index: 2;
     pointer-events: none;
@@ -700,7 +702,7 @@
   <div class="cta">
     <a class="btn hot" href="alldogs/">See the paintings</a>
     <a class="btn" href="#game">How the game works</a>
-    <a class="btn" href="#medium">See the brush at work</a>
+    <a class="btn" href="/basquiat/">Watch Basquiat being painted</a>
   </div>
   <p class="site-status">A work in progress. Adoption has not opened; the game below is a simulation.</p>
   </div>
@@ -1312,6 +1314,11 @@ const ONES_N = 151;
 const ONES = Array.from({length: ONES_N}, (_, i) => i + 1);
 /* captions.js: CAP[seed] = [year, costume]. The year and the costume, never a name. */
 const CAP = window.ALLDOGS_CAP || {};
+/* Approved additions have their own display IDs; original seeds stay intact. */
+const APPROVED_DOGS = {
+  basquiat: { still: '/basquiat/basquiat-a96a439ec2d7.png' }
+};
+CAP.basquiat = [1982, 'uneven locs, a charcoal green jacket, a gold crown floating off the head', 'Basquiat'];
 function capYear(seed) {
   const c = CAP[seed]; if (!c) return '';
   const y = c[0]; return y < 0 ? (-y) + ' BC' : String(y);
@@ -1339,6 +1346,7 @@ const ARTIST_SET = new Set(ARTISTS);
 const artistsDir = seed => (seed >= 142 && seed !== 148) ? 'stills/r1388ones_artists_r3/' : 'stills/r1388ones_artists/';
 const ARTISTS_PUB = seed => 'https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/' + artistsDir(seed);
 function stillUrl(seed, state, size) {
+  if (APPROVED_DOGS[seed]) return state === 'faithful' ? APPROVED_DOGS[seed].still : null;
   if (seed === 18 && (size === 1000 || size === 1400)) return FIX18 + stillKey(seed, state, size) + '.jpg';
   if (ARTIST_SET.has(seed) && (size === 1000 || size === 1400)) return ARTISTS_PUB(seed) + stillKey(seed, state, size) + '.jpg';
   if (state === 'zombie' && (size === 1000 || size === 1400) && seed >= 1 && seed <= 151) return ZOMBIE_BATCH + stillKey(seed, state, size) + '.jpg';
@@ -1497,7 +1505,9 @@ ARTISTS.forEach(s => { HD_BASES[s] = artistsDir(s); });
    53 Winston, 55 Elizabeth, 60 Marie, 62 Barack, 63 Donald, 70 Batman, 88 Judy, 101 Vincent, 102 Frida,
    104 Yayoi, 110 Elon, 112 Kobe, 116 Caitlin, 117 Marty, 123 Dorothy, 129 Leia, 141 Gump, 148 Gustav, 151 Rene */
 const ROTATE = [1, 4, 18, 21, 34, 35, 36, 38, 41, 46, 51, 53, 55, 60, 62, 63, 70, 88, 101, 102, 104, 110, 112,
-  116, 117, 123, 129, 141, 148, 151];
+  116, 117, 123, 129, 141, 148, 151, 'basquiat'];
+/* Only originals with both approved fates enter the state-changing demonstrations. */
+const FATE_ROTATE = ROTATE.filter(seed => !APPROVED_DOGS[seed]);
 /* The hero is 62 Barack on every visit (Jon 2026-09-08). Each feature band
    holds one dog, drawn fresh on each visit from the selected rotation. Reserve
    one more for the why picture so the opening set has no duplicate dogs. */
@@ -1524,6 +1534,7 @@ function heroBase(seed) {
    at 2400, 3600 and 5120 wide (hero_r1388ones_hd, 2026-09-05: the 3:1 pictures upscaled on a 5K
    monitor); 77 is one flat 2000; the rest keep the 3:1 pair. The why picture crops the same file. */
 function heroUrls(seed) {
+  if (APPROVED_DOGS[seed]) return { src: APPROVED_DOGS[seed].still, srcset: '' };
   if (HD_BASES[seed]) {
     const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
     return { src: f + '2400.jpg', srcset: f + '2400.jpg 2400w, ' + f + '3600.jpg 3600w, ' + f + '5120.jpg 5120w' };
@@ -1548,6 +1559,7 @@ function heroBand(a, b, cap, cast, opts) {
     return new Promise(res => {
       const u = urls(seed);
       el.dataset.seed = String(seed);
+      el.classList.toggle('approved-square', !!APPROVED_DOGS[seed]);
       el.alt = (capName(seed) || 'ALL DOGS painting') + ', ' + capYear(seed) + '. ' + capNote(seed);
       el.onload = () => { el.classList.remove('painting'); res(true); };
       el.onerror = () => {
@@ -1571,6 +1583,10 @@ function heroBand(a, b, cap, cast, opts) {
       const nm = capName(cast[k]);
       if (nm) { const n = document.createElement('b'); n.textContent = nm; cap.appendChild(n); }
       cap.appendChild(document.createTextNode(' ' + capNote(cast[k])));
+      if (cast[k] === 'basquiat') {
+        const film = document.createElement('a'); film.href = '/basquiat/';
+        film.textContent = ' Watch him being painted'; cap.appendChild(film);
+      }
     }
   }
   function next() {
@@ -1610,11 +1626,13 @@ FEATURE_BANDS.forEach((sec, n) => {
   const im = document.getElementById('whyDog'), seed = SLOTS[SLOTS.length - 1];
   if (!im || seed === undefined) return;
   im.dataset.seed = String(seed); im.dataset.state = 'faithful'; im.dataset.dog = '1';
+  im.classList.toggle('approved-square', !!APPROVED_DOGS[seed]);
   im.sizes = '(max-width: 860px) 100vw, 40vw';
   im.onload = () => im.classList.remove('painting');
   im.onerror = () => {
     im.onerror = null; im.removeAttribute('srcset');
-    im.src = seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
+    im.src = APPROVED_DOGS[seed] ? APPROVED_DOGS[seed].still
+      : seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
       : seed === 18 ? FIN_PUB + 'ones_fix18/18_faithful_1000.jpg'
       : FIN_PUB + FIN[seed] + seed + '_faithful_1000.jpg';
   };
@@ -1650,9 +1668,9 @@ FEATURE_BANDS.forEach((sec, n) => {
     : seed === 77
     ? PUB + 'ones_flat77/77_' + state + '_1000.jpg'
     : PUB + FIN[seed] + seed + '_' + state + '_1400.jpg';
-  const pool = ROTATE.slice();
+  const pool = FATE_ROTATE.slice();
   /* the dogs already on this visit's hero, bands and why picture go to the back of the rotation */
-  const order = shuffle(pool.filter(s => SLOTS.indexOf(s) < 0)).concat(shuffle(SLOTS.slice()));
+  const order = shuffle(pool.filter(s => SLOTS.indexOf(s) < 0)).concat(shuffle(SLOTS.filter(s => FATE_ROTATE.includes(s))));
   const layers = [document.getElementById('fateA'), document.getElementById('fateB')];
   const who = document.getElementById('fateWho');
   const GAP = 9000;
@@ -1785,8 +1803,8 @@ function clampSeed(n) {
 /* the one that is yours is one of the rotation (Jon, 2026-09-08);
    a visitor who was given another dog earlier is given one of these instead */
 let yseed = clampSeed(parseInt(localStorage.getItem('alldogs_seed'), 10) || 0);
-if (ROTATE.indexOf(yseed) < 0) {
-  yseed = ROTATE[Math.floor(Math.random() * ROTATE.length)];
+if (FATE_ROTATE.indexOf(yseed) < 0) {
+  yseed = FATE_ROTATE[Math.floor(Math.random() * FATE_ROTATE.length)];
   localStorage.setItem('alldogs_seed', String(yseed));
 }
 let ystate = localStorage.getItem('alldogs_state') === 'zombie' ? 'zombie' : 'faithful';
@@ -1835,7 +1853,7 @@ function renderYours() {
     if (!h) return null;
     const msg = DEMO_SALT + '|' + h;
     /* the rehearsal hash lands on one of the rotation */
-    const pickRot = h => ROTATE[(h >>> 0) % ROTATE.length];
+    const pickRot = h => FATE_ROTATE[(h >>> 0) % FATE_ROTATE.length];
     if (window.crypto && crypto.subtle) {
       try {
         const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
@@ -1960,7 +1978,7 @@ const parade = document.getElementById('parade');
 paintWhenNear(document.querySelector('footer'), () => {
   const fates = spreadFates(12);
   shuffle(ROTATE.slice()).slice(0, 12).forEach((seed, i) => {
-    const img = dogImg(seed, fates[i], TILE, 'framedpick');
+    const img = dogImg(seed, APPROVED_DOGS[seed] ? 'faithful' : fates[i], TILE, 'framedpick');
     parade.append(img);
   });
 });
@@ -2260,7 +2278,7 @@ document.querySelectorAll('section:not(.hero):not(.cannon):not(.feature)').forEa
     if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return;
     const i = row * COLS + col;
     if (i >= N) return;
-    openStray(ROTATE[i % ROTATE.length], NAME[field[i]]);
+    openStray(FATE_ROTATE[i % FATE_ROTATE.length], NAME[field[i]]);
   });
   cv.style.cursor = 'zoom-in';
   el('ysRate').addEventListener('input', showRate);

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Watch the Basquiat dog take shape, from the floating crown to the final paint strokes.">
+  <meta name="theme-color" content="#151612">
+  <title>Basquiat, being painted · ALL DOGS</title>
+  <style>
+    :root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif;background:#151612;color:#f1efe5}
+    *{box-sizing:border-box}body{margin:0}a{color:inherit;text-underline-offset:4px}button{font:inherit;color:inherit;cursor:pointer;background:transparent;border:1px solid #8e8f83;padding:10px 18px}button:hover{background:#f1efe5;color:#151612}button:disabled{opacity:.45;cursor:default}:focus-visible{outline:3px solid #d6b249;outline-offset:5px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1400px;margin:auto;padding:22px 30px;font-size:14px}header>a{letter-spacing:3px;text-decoration:none}header span{color:#bebfaf}
+    main{max-width:1000px;margin:auto;padding:0 24px 30px}.painting{position:relative;margin:auto;max-width:min(100%,calc(100svh - 165px));aspect-ratio:1;background:#b4b39b;overflow:hidden}video,.finished{display:block;width:100%;height:100%;object-fit:contain}.finished{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s}.painting.complete .finished{opacity:1}
+    .caption{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:min(100%,calc(100svh - 165px));margin:16px auto 0}h1{font-size:20px;font-weight:400;letter-spacing:.03em;margin:0}p{font-size:14px;color:#bebfaf;line-height:1.6;margin:7px 0 0}.actions{display:flex;align-items:center;gap:16px;font-size:14px;white-space:nowrap}.error{padding:12px;border:1px solid #a88;line-height:1.5;font-size:16px}footer{max-width:1000px;margin:12px auto 0;padding:0 24px 30px;text-align:center;color:#bebfaf;font-size:14px}
+    @media(max-width:620px){header{padding:19px 18px}.painting,.caption{max-width:100%}main{padding:0 0 20px}.caption{padding:0 18px;align-items:flex-start;flex-direction:column;gap:14px}h1{font-size:20px}.actions{width:100%;justify-content:space-between}}
+    @media(prefers-reduced-motion:reduce){.finished{transition:none}}
+  </style>
+</head>
+<body>
+  <header><a href="/">ALL DOGS</a><span>Jonathan Washburn</span></header>
+  <main>
+    <div class="painting" id="painting">
+      <video id="film" controls playsinline muted preload="metadata" poster="basquiat-a96a439ec2d7.png" aria-label="Basquiat dog being painted, beginning with the floating crown">
+        <source src="basquiat-painting.mp4" type="video/mp4">
+        <p><a href="basquiat-painting.mp4">Watch the painting</a></p>
+      </video>
+      <img class="finished" src="basquiat-a96a439ec2d7.png" alt="The finished Basquiat dog with his floating crown">
+    </div>
+    <div class="caption"><div><h1>Basquiat, being painted</h1><p>The crown first. Then, a dog beneath it.</p></div><div class="actions"><button id="replay" type="button">Play</button><a href="basquiat-painting.mp4" download>Save the film</a></div></div>
+    <p class="error" id="error" hidden>The film could not load. <a href="basquiat-painting.mp4">Open the video directly</a>.</p>
+  </main>
+  <footer><a href="/">Back to the collection</a></footer>
+  <script>
+    const film=document.getElementById('film'),painting=document.getElementById('painting'),replay=document.getElementById('replay');
+    film.addEventListener('play',()=>{painting.classList.remove('complete');replay.textContent='Start again';});
+    film.addEventListener('ended',()=>{painting.classList.add('complete');replay.textContent='Paint him again';});
+    film.addEventListener('error',()=>{document.getElementById('error').hidden=false;});
+    film.querySelector('source').addEventListener('error',()=>{document.getElementById('error').hidden=false;});
+    replay.addEventListener('click',()=>{film.currentTime=0;painting.classList.remove('complete');film.play().catch(()=>{replay.textContent='Play';});});
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches)film.play().catch(()=>{});
+  </script>
+</body>
+</html>
