@@ -1,0 +1,4082 @@
+{
+  "version": 2,
+  "title": "Collection studio",
+  "dogs": [
+    {
+      "id": "original-1-bbc52cefbb802de5",
+      "dogId": "1",
+      "title": "Jesus",
+      "number": 1,
+      "kind": "original",
+      "image": "assets/dog-1-bbc52cefbb802de5.jpg",
+      "imageHash": "bbc52cefbb802de51eabdd78f061e64358ea11df1e6cb571d38ecf0a763690dc",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/1_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White robe, red sash, tired kind eyes, a crown of thorns with thin lines of blood, a faint ring of light.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "33",
+        "traits": [
+          "thorn branches around the head",
+          "small red drops on the thorns",
+          "white robe",
+          "rope belt"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-2-279c95ff78b23174",
+      "dogId": "2",
+      "title": "Elvis",
+      "number": 2,
+      "kind": "original",
+      "image": "assets/dog-2-279c95ff78b23174.jpg",
+      "imageHash": "279c95ff78b23174378f9e24bda3658bf0debebdfd831ccde8f3b57a7348ec1e",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/2_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White rhinestone jumpsuit, pompadour, gold aviators, collar to the ears.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1972",
+        "traits": [
+          "tall black quiff",
+          "gold aviator sunglasses",
+          "white rhinestone jumpsuit with a high collar",
+          "wide gold belt"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-3-c6ea20968593f6cf",
+      "dogId": "3",
+      "title": "John Paul",
+      "number": 3,
+      "kind": "original",
+      "image": "assets/dog-3-c6ea20968593f6cf.jpg",
+      "imageHash": "c6ea20968593f6cf5e7c47bf83885e06bc156fcf718f08961cfab69661440626",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/3_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White cassock, tall mitre, one paw raised in blessing.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1978",
+        "traits": [
+          "white and gold pointed hat",
+          "white cassock",
+          "short red cape",
+          "large gold cross"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-4-972d7d4b1228e500",
+      "dogId": "4",
+      "title": "Bob",
+      "number": 4,
+      "kind": "original",
+      "image": "assets/dog-4-972d7d4b1228e500.jpg",
+      "imageHash": "972d7d4b1228e5000df6f1f870abfbe372206d6bbdae5aa0beb5ca566a1ece42",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/4_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Permed halo, denim shirt, loaded palette, a tiny happy tree.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1994",
+        "traits": [
+          "large brown curls",
+          "paint-splashed denim shirt",
+          "wooden easel",
+          "small painted tree on canvas"
+        ],
+        "room": "an airy studio"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-5-5a6066d1f18dda34",
+      "dogId": "5",
+      "title": "Liberace",
+      "number": 5,
+      "kind": "original",
+      "image": "assets/dog-5-5a6066d1f18dda34.jpg",
+      "imageHash": "5a6066d1f18dda34fce3dd2889e25f81ece19a71a43b6ef825654382be3bd0ef",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/5_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White fur cape, jewelled toes, a lit candelabra on a piano lid.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1955",
+        "traits": [
+          "white sequined dinner jacket",
+          "black bow tie",
+          "gold five-armed candelabrum",
+          "black piano lid"
+        ],
+        "room": "a black room"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-6-c32ef0f627b0444c",
+      "dogId": "6",
+      "title": "Dolly",
+      "number": 6,
+      "kind": "original",
+      "image": "assets/dog-6-c32ef0f627b0444c.jpg",
+      "imageHash": "c32ef0f627b0444c9801962a97cc7ba44a68d4401955cf046683719df0d73f00",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/6_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Platinum bouffant taller than the skull, an enormous bust in a low-cut rhinestone top, a small guitar, a butterfly.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1977",
+        "traits": [
+          "towering platinum curls",
+          "pale blue rhinestone dress",
+          "large pink bow at the throat"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-7-8cd43f50358d6686",
+      "dogId": "7",
+      "title": "Cher",
+      "number": 7,
+      "kind": "original",
+      "image": "assets/dog-7-8cd43f50358d6686.jpg",
+      "imageHash": "8cd43f50358d668665d3a3f910cbd2e5c8b35d1e851058ea2c57070e21f336c5",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/7_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Feathered headdress bigger than the dog, black hair to the floor.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1988",
+        "traits": [
+          "long straight black hair",
+          "wide pale feather headdress",
+          "gold headband",
+          "black bodysuit with a silver sash"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-8-b0565aea8e98b05e",
+      "dogId": "8",
+      "title": "Prince",
+      "number": 8,
+      "kind": "original",
+      "image": "assets/dog-8-b0565aea8e98b05e.jpg",
+      "imageHash": "b0565aea8e98b05e387f3857590e9fa8554aa41699cf0c3b434c9f588362c251",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/8_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Purple ruffles, high collar, one lace glove, the unpronounceable guitar.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1984",
+        "traits": [
+          "close black curls",
+          "purple coat with gold buttons",
+          "white ruffled collar",
+          "cream ring-shaped guitar with a gold neck"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-9-807fcb4d034b7677",
+      "dogId": "9",
+      "title": "Ziggy",
+      "number": 9,
+      "kind": "original",
+      "image": "assets/dog-9-807fcb4d034b7677.jpg",
+      "imageHash": "807fcb4d034b76773a0561d45c1711b8ddd182b4384ff4b816ee39b10343903a",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/9_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red-and-blue bolt across the face, red mullet, a gold circle on the brow.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1973",
+        "traits": [
+          "red and blue lightning stripe across the face",
+          "pale knitted bodysuit",
+          "diagonal red and blue body bands"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-10-d15823c169ef60d4",
+      "dogId": "10",
+      "title": "Freddie",
+      "number": 10,
+      "kind": "original",
+      "image": "assets/dog-10-d15823c169ef60d4.jpg",
+      "imageHash": "d15823c169ef60d435f8478b6467fce2f9af23f6500492ec096caa979b42e5f9",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/10_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Yellow military jacket, thick mustache, one fist up, half a mic stand.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1986",
+        "traits": [
+          "thick black moustache",
+          "yellow jacket with red stripes",
+          "white belt",
+          "microphone stand at the muzzle"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-11-6cb2df6e0b158e25",
+      "dogId": "11",
+      "title": "Ye",
+      "number": 11,
+      "kind": "original",
+      "image": "assets/dog-11-6cb2df6e0b158e25.jpg",
+      "imageHash": "6cb2df6e0b158e25686fd056dc0a955558244ba976dbc474fb0080bdd4c79281",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/11_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Brown, short flat muzzle, the pout and heavy-lidded eyes, shutter shades pushed up on the forehead, varsity jacket, a small brown teddy at the foot.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2004",
+        "traits": [
+          "black shutter sunglasses pushed onto the forehead",
+          "purple polo shirt with a white collar",
+          "small brown teddy bear looking up"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-12-e09914cf578cc26f",
+      "dogId": "12",
+      "title": "Kim",
+      "number": 12,
+      "kind": "original",
+      "image": "assets/dog-12-e09914cf578cc26f.jpg",
+      "imageHash": "e09914cf578cc26fba6880c3806afe3aa4d2082b1507ee76e3609f11a7e752b3",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/12_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White bodysuit, long black hair, a phone held out with the dog on the screen.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2014",
+        "traits": [
+          "long straight black hair",
+          "tight cream dress",
+          "gold chain",
+          "phone showing a tiny dog face"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-13-9ff6ec586e5ed869",
+      "dogId": "13",
+      "title": "Marilyn",
+      "number": 13,
+      "kind": "original",
+      "image": "assets/dog-13-9ff6ec586e5ed869.jpg",
+      "imageHash": "9ff6ec586e5ed86920abc12e88f2d03e59b448308b972dc1945a60986fb06e94",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/13_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White halter dress blown straight up, subway grate, a beauty mark.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1954",
+        "traits": [
+          "white dress lifted over the hindquarters",
+          "dark street grate under the feet",
+          "pale air streaks rising from the grate"
+        ],
+        "room": "a dark street"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-14-ba292394abfb09d3",
+      "dogId": "14",
+      "title": "Grace",
+      "number": 14,
+      "kind": "original",
+      "image": "assets/dog-14-ba292394abfb09d3.jpg",
+      "imageHash": "ba292394abfb09d34785f3e585c0116d1b1c0ed0044a73b8e136012da58b88fa",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/14_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Razor-flat fade, angular black suit, one huge hoop.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1981",
+        "traits": [
+          "wide black flat-top hair",
+          "black suit",
+          "white shirt",
+          "thin black tie"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-15-c295c3028134633d",
+      "dogId": "15",
+      "title": "Andy",
+      "number": 15,
+      "kind": "original",
+      "image": "assets/dog-15-c295c3028134633d.jpg",
+      "imageHash": "c295c3028134633d01f21682d15a168f499d9ff41d5e5b929cbd38fd617786d9",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/15_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Silver wig, round black glasses, black turtleneck, one soup can, and the 1954 dog as a candy-coloured silkscreen block on the wall.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1964",
+        "traits": [
+          "straight silver-white wig",
+          "round black glasses",
+          "black turtleneck",
+          "red and cream can at the forepaw"
+        ],
+        "room": "a wall with four bright repeated face panels"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-16-c72b37d3ec8e3287",
+      "dogId": "16",
+      "title": "Salvador",
+      "number": 16,
+      "kind": "original",
+      "image": "assets/dog-16-c72b37d3ec8e3287.jpg",
+      "imageHash": "c72b37d3ec8e3287d95ea54d348248ced961b33eece67f7115e5da51a2b05bcb",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/16_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Waxed mustache past the ears, wild eyes, a clock melting on the shoulder.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1931",
+        "traits": [
+          "curled black moustache",
+          "dark suit",
+          "white shirt with a wide red tie",
+          "melting clock draped over one shoulder"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-17-138efb8320bddbef",
+      "dogId": "17",
+      "title": "Nicolas",
+      "number": 17,
+      "kind": "original",
+      "image": "assets/dog-17-138efb8320bddbef.jpg",
+      "imageHash": "138efb8320bddbef39047778939fafda4e33e252567e54ad8ebfe824a62d6991",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/17_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black leather jacket, hair blown back, eyes too open, fire behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1997",
+        "traits": [
+          "black hair swept back",
+          "dark suit with an open pale collar",
+          "small house burning behind the shoulder"
+        ],
+        "room": "daylight filled with fire and smoke"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-18-c27e3e01269c0e13",
+      "dogId": "18",
+      "title": "Mike",
+      "number": 18,
+      "kind": "original",
+      "image": "assets/dog-18-c27e3e01269c0e13.jpg",
+      "imageHash": "c27e3e01269c0e13c824eefa5a747234bac3654f0e30f7f18ed9aa7ed971e2bc",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/ones_fix18/18_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Dark brown, a bold tribal tattoo around the left eye, red boxing gloves, a pigeon sitting on the head.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2003",
+        "traits": [
+          "black spiral tattoo around one eye",
+          "black trunks with a white waist",
+          "red boxing gloves",
+          "grey pigeon perched on the head"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-19-a5e24a926d2fe504",
+      "dogId": "19",
+      "title": "Mr. T",
+      "number": 19,
+      "kind": "original",
+      "image": "assets/dog-19-a5e24a926d2fe504.jpg",
+      "imageHash": "a5e24a926d2fe5040fa6236656624b47fed67c7822a79d438b8f4a0047338814",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/19_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Mohawk, gold hoops, a mountain of chains from chin to chest.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1982",
+        "traits": [
+          "blunt black mohawk",
+          "black open vest",
+          "layered gold chains",
+          "gold hoop earrings"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-20-bd972985f50d0d97",
+      "dogId": "20",
+      "title": "Evel",
+      "number": 20,
+      "kind": "original",
+      "image": "assets/dog-20-bd972985f50d0d97.jpg",
+      "imageHash": "bd972985f50d0d97b25825d8e1e13475e9f6f59377924272665a8be85d648072",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/20_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Starred white leather, short cape, helmet under one arm, a row of buses.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1974",
+        "traits": [
+          "white jumpsuit with red stripes and blue stars",
+          "white helmet with a red stripe and blue star",
+          "row of buses and a launch ramp"
+        ],
+        "room": "an outdoor stunt ramp"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-21-af7a3c07b141be19",
+      "dogId": "21",
+      "title": "Michael",
+      "number": 21,
+      "kind": "original",
+      "image": "assets/dog-21-af7a3c07b141be19.jpg",
+      "imageHash": "af7a3c07b141be1973e1cbab95bc07be5f2c6a6181ad36369ff40d97336f6f01",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/21_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "One sequined glove, tilted fedora, red zipper jacket, up on the toes.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1983",
+        "traits": [
+          "black fedora with a red band",
+          "red jacket with black zips",
+          "single white sequined glove"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-22-a5cad5db9e4ebe40",
+      "dogId": "22",
+      "title": "Harry",
+      "number": 22,
+      "kind": "original",
+      "image": "assets/dog-22-a5cad5db9e4ebe40.jpg",
+      "imageHash": "a5cad5db9e4ebe40d7b07d083b71e8546139a7c0459f8f142a943a57a5333510",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/22_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Round glasses, a lightning scar, a striped scarf, an owl on the shoulder.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2001",
+        "traits": [
+          "messy black hair",
+          "round gold wire glasses",
+          "small pink lightning-shaped scar",
+          "burgundy and gold striped scarf",
+          "brown owl perched on one shoulder"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-23-eb57ed6456f1b689",
+      "dogId": "23",
+      "title": "Hagrid",
+      "number": 23,
+      "kind": "original",
+      "image": "assets/dog-23-eb57ed6456f1b689.jpg",
+      "imageHash": "eb57ed6456f1b689c8d30bafc31dfdf401563feef209a954a906a1e6e5ccb672",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/23_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "An enormous dog, a tiny pink umbrella, moleskin and beetle buttons.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1998",
+        "traits": [
+          "giant dog filling the frame",
+          "brown moleskin coat",
+          "small beetle-shaped buttons",
+          "tiny pink umbrella in the corner"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-24-de42295686cec8e4",
+      "dogId": "24",
+      "title": "Severus",
+      "number": 24,
+      "kind": "original",
+      "image": "assets/dog-24-de42295686cec8e4.jpg",
+      "imageHash": "de42295686cec8e40f39d7ab89c3042d987e3e4bac7ea51bc46655380f871784",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/24_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Greasy black hair, high black collar, one eyebrow, a small glass vial.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2007",
+        "traits": [
+          "greasy black hair",
+          "high black collar",
+          "glass vial of green liquid"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-25-3d1d9f438d53c3cb",
+      "dogId": "25",
+      "title": "Bilbo",
+      "number": 25,
+      "kind": "original",
+      "image": "assets/dog-25-3d1d9f438d53c3cb.jpg",
+      "imageHash": "3d1d9f438d53c3cbe34c0efc19c909cbf188d6e77a74e06db13f09f7a102c013",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/25_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Hairy feet, a waistcoat, a plain gold ring too big for the paw. No writing.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1937",
+        "traits": [
+          "small pointed ears",
+          "cream shirt and brown waistcoat",
+          "large gold ring held up in one paw",
+          "two large hairy feet"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-26-35050f10834e52f8",
+      "dogId": "26",
+      "title": "Gandalf",
+      "number": 26,
+      "kind": "original",
+      "image": "assets/dog-26-35050f10834e52f8.jpg",
+      "imageHash": "35050f10834e52f82c7f0c6007392b87e97602ae8f6e8c40422e6dd301aee53c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/26_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Pointed hat, long grey beard, wooden staff, a firework in the pocket.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2002",
+        "traits": [
+          "tall grey pointed hat",
+          "long grey beard",
+          "grey robe",
+          "wooden staff",
+          "red firework bursting from a pocket"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-27-208d7f08773e415c",
+      "dogId": "27",
+      "title": "Gimli",
+      "number": 27,
+      "kind": "original",
+      "image": "assets/dog-27-208d7f08773e415c.jpg",
+      "imageHash": "208d7f08773e415cc024a44010feb3824a26f21640446dc4ccec25266fa429e2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/27_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Forked beard, a hood, an axe. Short, wide, pleased with itself.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2013",
+        "traits": [
+          "brown hood",
+          "forked blond beard",
+          "short wide brown body",
+          "large iron axe with a wooden handle"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-28-0929bb67f3e00737",
+      "dogId": "28",
+      "title": "Vader",
+      "number": 28,
+      "kind": "original",
+      "image": "assets/dog-28-0929bb67f3e00737.jpg",
+      "imageHash": "0929bb67f3e0073751eb53a233f69016f43a4415ecdb367bc14cbf53c5e84089",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/28_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black mask and cape, a ribbed chest box. No emblem.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1980",
+        "traits": [
+          "black domed helmet",
+          "black triangular face mask with a ribbed grille",
+          "long black cape",
+          "ribbed black chest box"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-29-9c44d389c060b820",
+      "dogId": "29",
+      "title": "Yoda",
+      "number": 29,
+      "kind": "original",
+      "image": "assets/dog-29-9c44d389c060b820.jpg",
+      "imageHash": "9c44d389c060b820ee83a1bef77b888715519876e968bd3fb482dcd6fcdad5c1",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/29_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Huge ears, small body, a cane, very old eyes.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1999",
+        "traits": [
+          "huge pointed ears",
+          "small tan robe",
+          "wrinkles around the eyes",
+          "hooked wooden cane"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-30-6776c761d9f415d7",
+      "dogId": "30",
+      "title": "Rey",
+      "number": 30,
+      "kind": "original",
+      "image": "assets/dog-30-6776c761d9f415d7.jpg",
+      "imageHash": "6776c761d9f415d7322d979c635604e4613332cafe9f5d551c38e19c557c2f84",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/30_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Three buns, a staff, a round rolling droid at the foot. Desert light.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2015",
+        "traits": [
+          "three dark hair buns",
+          "rust-coloured wrapped robe",
+          "wooden staff",
+          "white and orange rolling ball-shaped robot"
+        ],
+        "room": "a yellow desert under one harsh sun"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-31-66a69c824e0001c6",
+      "dogId": "31",
+      "title": "Satan",
+      "number": 31,
+      "kind": "original",
+      "image": "assets/dog-31-66a69c824e0001c6.jpg",
+      "imageHash": "66a69c824e0001c6ee44f6c8bf4366cfc7a2ac9fb4cfbfd1e349ede75903baf5",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/31_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A red dog, horns, goatee, arrow-tipped tail, goat legs, a pitchfork, small flames at the feet. Delighted.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1667",
+        "traits": [
+          "two dark curved horns",
+          "small black goatee",
+          "red body",
+          "long pointed red tail",
+          "black three-pronged pitchfork"
+        ],
+        "room": "an ember-red floor with flames and orange glow"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-32-259dec6f4a8efd06",
+      "dogId": "32",
+      "title": "Cartman",
+      "number": 32,
+      "kind": "original",
+      "image": "assets/dog-32-259dec6f4a8efd06.jpg",
+      "imageHash": "259dec6f4a8efd0674c765d82005410b643e35f0574e2c97fb0fc78f6f9bf676",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/32_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A ball of a body, red jacket, teal beanie with a yellow pompom, yellow mittens, tiny eyes, a sour mouth. Snow.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1992",
+        "traits": [
+          "teal knit cap with a yellow band and pompom",
+          "red winter coat with a brown collar",
+          "yellow mittens",
+          "snowbank and falling snow"
+        ],
+        "room": "a snowy field"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-33-7b14b5afb1b4b891",
+      "dogId": "33",
+      "title": "Beavis & Butt-Head",
+      "number": 33,
+      "kind": "original",
+      "image": "assets/dog-33-7b14b5afb1b4b891.jpg",
+      "imageHash": "7b14b5afb1b4b891ea08f4b221599ba1b078554c2c2afaa0bb683ca32514d525",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/33_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two dogs in one frame on a sagging couch, lit by the TV. Blond pompadour and underbite; peaked hair and braces. No lettering on the shirts.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1993",
+        "traits": [
+          "two dogs sitting together",
+          "tall blond spiked hair",
+          "brown peaked hair and metal braces",
+          "grey-blue and dark shirts with white marks",
+          "brown couch"
+        ],
+        "room": "a dark room lit blue by an unseen television"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-34-fabe479938bae359",
+      "dogId": "34",
+      "title": "Madonna",
+      "number": 34,
+      "kind": "original",
+      "image": "assets/dog-34-fabe479938bae359.jpg",
+      "imageHash": "fabe479938bae3591fdf64ec42a2dde104fabb09e0a40c4b1c1219ba656ab566",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/34_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "High platinum ponytail, pink cone-bra corset, headset mic, stage grin.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1990",
+        "traits": [
+          "high platinum ponytail",
+          "black headset microphone",
+          "pink cone-shaped bra"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-35-a3ebd83425da90bf",
+      "dogId": "35",
+      "title": "Gaga",
+      "number": 35,
+      "kind": "original",
+      "image": "assets/dog-35-a3ebd83425da90bf.jpg",
+      "imageHash": "a3ebd83425da90bf50fdbdfd6a23b1bbdcc31d33e105c31326552014b2d26abd",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/35_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A dress cut from raw meat, meat hat, meat boots, one eyebrow up.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2010",
+        "traits": [
+          "pale blond hair topped with a red meat slab",
+          "red meat dress with pale marbling",
+          "raw meat flaps along the hem"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-36-09cf7bae29dd5246",
+      "dogId": "36",
+      "title": "Elton",
+      "number": 36,
+      "kind": "original",
+      "image": "assets/dog-36-09cf7bae29dd5246.jpg",
+      "imageHash": "09cf7bae29dd52463eac8813d160d861cec09cd6b3dcaae14789e257c28dff2c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/36_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Sequined baseball uniform, giant rhinestone glasses, a huge grin, a piano lid behind.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1975",
+        "traits": [
+          "huge white glasses ringed with pink stones",
+          "blue jacket covered in silver sequins",
+          "white vertical stripes and buttons",
+          "black piano with visible keys"
+        ],
+        "room": "beside a black piano"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-37-83794c57926d04bf",
+      "dogId": "37",
+      "title": "Slash",
+      "number": 37,
+      "kind": "original",
+      "image": "assets/dog-37-83794c57926d04bf.jpg",
+      "imageHash": "83794c57926d04bf1e618bb9b472e71900ccf7fba43db59124472425f7ee68d2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/37_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Top hat, black curls over the face, round shades, a sunburst guitar slung low, a cigarette.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1987",
+        "traits": [
+          "black top hat over long black curls",
+          "round dark sunglasses",
+          "cigarette at the muzzle",
+          "orange sunburst electric guitar"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-38-8c1f9d085e1cbc56",
+      "dogId": "38",
+      "title": "Hulk",
+      "number": 38,
+      "kind": "original",
+      "image": "assets/dog-38-8c1f9d085e1cbc56.jpg",
+      "imageHash": "8c1f9d085e1cbc56c7d3865edcd70d82222082edcb3d5075164de7a4e579aba0",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_grounds/38_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Yellow bandana, horseshoe mustache, torn yellow tank, red trunks, both arms flexed, orange tan.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1985",
+        "traits": [
+          "yellow bandana over blond side hair",
+          "blond horseshoe moustache",
+          "torn yellow tank top with red patches",
+          "bare arms flexed upward"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-39-cd3ab8e46a609b14",
+      "dogId": "39",
+      "title": "Bob",
+      "number": 39,
+      "kind": "original",
+      "image": "assets/dog-39-cd3ab8e46a609b14.jpg",
+      "imageHash": "cd3ab8e46a609b149264d758e0b3d62a4a66827cab2a942459a47d38cde1321a",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/39_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Dreadlocks, red-gold-green tam, denim shirt, acoustic guitar, a curl of smoke. Brown coat.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1979",
+        "traits": [
+          "long dark dreadlocks",
+          "green tam with yellow and red stripes",
+          "blue denim shirt",
+          "brown acoustic guitar",
+          "cigarette at the muzzle"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-40-7347a3a49fb99b61",
+      "dogId": "40",
+      "title": "Ozzy",
+      "number": 40,
+      "kind": "original",
+      "image": "assets/dog-40-7347a3a49fb99b61.jpg",
+      "imageHash": "7347a3a49fb99b6181c71b3c0a76afccb5ff9087327525beb01af3e873b3ebee",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/40_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Long black hair, small round purple glasses, a big cross, a bat in the mouth.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1970",
+        "traits": [
+          "long black hair",
+          "round purple glasses",
+          "black garment",
+          "gold cross on a chain",
+          "black bat held in the mouth"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-41-1363fc8e91acf2b5",
+      "dogId": "41",
+      "title": "Virgil",
+      "number": 41,
+      "kind": "original",
+      "image": "assets/dog-41-1363fc8e91acf2b5.jpg",
+      "imageHash": "1363fc8e91acf2b5d70f1e31cee44a33903489eb92f2c7f356436549ad90ec66",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/41_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black-rimmed glasses, short beard, hoodie under a workwear vest, a hazard-striped band with nothing on it, one white sneaker held up with an orange zip tag. Brown coat.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2018",
+        "traits": [
+          "short black hair",
+          "clear-framed glasses",
+          "white jacket with black diagonal stripes and an orange collar",
+          "black printed word in quotation marks",
+          "long yellow industrial belt"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-42-80fb6bdb15dbf546",
+      "dogId": "42",
+      "title": "Steve",
+      "number": 42,
+      "kind": "original",
+      "image": "assets/dog-42-80fb6bdb15dbf546.jpg",
+      "imageHash": "80fb6bdb15dbf546d2a72cc0dd04b698bc8861113c1ec67f15c720b32fb828ed",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/42_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Khaki shorts and shirt, a crocodile clamped under one arm, thrilled eyes, huge grin.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2000",
+        "traits": [
+          "sun-bleached blond hair",
+          "khaki shirt with two chest pockets",
+          "khaki shorts",
+          "crocodile lying beside the feet"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-43-51536fb2ea896ed0",
+      "dogId": "43",
+      "title": "Fred",
+      "number": 43,
+      "kind": "original",
+      "image": "assets/dog-43-51536fb2ea896ed0.jpg",
+      "imageHash": "51536fb2ea896ed07dd4d8a49e44401e4cb9c306c694d6c3771d42e48d3a2c6d",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/43_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red zip cardigan, blue sneakers, neat grey part, a tiny red trolley at the foot. The kindest face.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1968",
+        "traits": [
+          "neat grey hair",
+          "red zipped cardigan",
+          "white shirt and navy tie",
+          "blue boots",
+          "small red trolley on a short track"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-44-9031e3254780003a",
+      "dogId": "44",
+      "title": "Little Richard",
+      "number": 44,
+      "kind": "original",
+      "image": "assets/dog-44-9031e3254780003a.jpg",
+      "imageHash": "9031e3254780003a818b50be1899f0e30ac4e8a352a65ef9529f38323e72be4f",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/44_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Tall glossy pompadour, pencil mustache, sequined jacket, mid-whoop, one leg up on a piano. Brown coat.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1956",
+        "traits": [
+          "tall black quiff",
+          "thin black moustache",
+          "gold sequined jacket",
+          "white shirt and black bow tie",
+          "black piano with visible keys"
+        ],
+        "room": "beside a black piano under stadium lights"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-45-26c031c36cf4d91b",
+      "dogId": "45",
+      "title": "Jimi",
+      "number": 45,
+      "kind": "original",
+      "image": "assets/dog-45-26c031c36cf4d91b.jpg",
+      "imageHash": "26c031c36cf4d91b71eb2e35f38e72c926d5cb63b4d13335604c30dd4fa969d1",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/45_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Headband, big afro, fringed velvet jacket, kneeling over a burning guitar. Brown coat.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1967",
+        "traits": [
+          "dark afro with a pink headband",
+          "purple fringed jacket",
+          "yellow shirt",
+          "white electric guitar covered in flames"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-46-1fd6e9caa6e08dae",
+      "dogId": "46",
+      "title": "Amy",
+      "number": 46,
+      "kind": "original",
+      "image": "assets/dog-46-1fd6e9caa6e08dae.jpg",
+      "imageHash": "1fd6e9caa6e08dae9f0fde6c3d9fa74ef0e19f081e82363e491f865a7d957eb2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/46_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Huge black beehive, winged eyeliner, tattooed arms, a drink, a tiny frame under all that hair.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2008",
+        "traits": [
+          "towering black upswept hair with a small pink bow",
+          "heavy black winged eye lines",
+          "black sleeveless dress",
+          "white pearl necklace",
+          "dark tattoos down both arms"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-47-6e997fcbcdd285b9",
+      "dogId": "47",
+      "title": "Pam",
+      "number": 47,
+      "kind": "original",
+      "image": "assets/dog-47-6e997fcbcdd285b9.jpg",
+      "imageHash": "6e997fcbcdd285b9ec29e4a884b56e560d0224f91996e9b234430facee43b966",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/47_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red one-piece, huge blonde blowout, a red rescue float, running on sand.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1996",
+        "traits": [
+          "large blond blowout",
+          "red swimsuit",
+          "red rescue float held at the side",
+          "blue water and pale sand"
+        ],
+        "room": "a bright beach"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-48-1ec523da13414f7c",
+      "dogId": "48",
+      "title": "Weird Al",
+      "number": 48,
+      "kind": "original",
+      "image": "assets/dog-48-1ec523da13414f7c.jpg",
+      "imageHash": "1ec523da13414f7ccd72c56c97ae56e09985e80365f320f96ef8ff3320f65e6d",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/48_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Long brown curls, loud Hawaiian shirt, an accordion mid-squeeze, eyes crossed.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2011",
+        "traits": [
+          "large brown curls",
+          "orange flowered shirt",
+          "red-and-black accordion"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-49-c012f968565fd50b",
+      "dogId": "49",
+      "title": "Abe",
+      "number": 49,
+      "kind": "original",
+      "image": "assets/dog-49-c012f968565fd50b.jpg",
+      "imageHash": "c012f968565fd50b9d1dab7c5e5dd632a9ae2daf734a3ec049aa5717a29690cc",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/49_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Stovepipe hat, chin beard with no mustache, black coat, bow tie, hollow cheeks, very tall.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1863",
+        "traits": [
+          "tall black stovepipe hat",
+          "short black chin beard",
+          "black frock coat",
+          "white shirt and black bow tie"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-50-9881611ca2df5e7b",
+      "dogId": "50",
+      "title": "George",
+      "number": 50,
+      "kind": "original",
+      "image": "assets/dog-50-9881611ca2df5e7b.jpg",
+      "imageHash": "9881611ca2df5e7b476a63b90268f43339e2101dc6a495a6ecf9e804af94ec33",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/50_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Powdered wig with a ribbon, blue coat with gold buttons, in the bow of a rowboat on an icy river.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1776",
+        "traits": [
+          "white curled wig",
+          "blue military coat with gold trim",
+          "white waistcoat and breeches",
+          "wooden boat among ice slabs"
+        ],
+        "room": "a dark icy river"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-51-1796bda50755534a",
+      "dogId": "51",
+      "title": "Napoleon",
+      "number": 51,
+      "kind": "original",
+      "image": "assets/dog-51-1796bda50755534a.jpg",
+      "imageHash": "1796bda50755534a9065710db00dafb52cd20ba682c3116f85b0910f232daf26",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/51_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Sideways bicorne, one paw tucked in the coat, epaulettes, red sash, short.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1804",
+        "traits": [
+          "black two-cornered hat with a red, white, and blue cockade",
+          "navy military coat with white lapels",
+          "red sash and gold shoulder pieces",
+          "one forepaw tucked into the coat"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-52-623684a3325949e1",
+      "dogId": "52",
+      "title": "Albert",
+      "number": 52,
+      "kind": "original",
+      "image": "assets/dog-52-623684a3325949e1.jpg",
+      "imageHash": "623684a3325949e123175ecdc3e90e340d135a9b95d9e72ce3de293571a79805",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/52_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White hair in every direction, white mustache, cardigan, tongue all the way out.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1951",
+        "traits": [
+          "wild cloud of white hair",
+          "white drooping moustache",
+          "brown sweater",
+          "pink tongue hanging out"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-53-2fd510e9a4bad29e",
+      "dogId": "53",
+      "title": "Winston",
+      "number": 53,
+      "kind": "original",
+      "image": "assets/dog-53-2fd510e9a4bad29e.jpg",
+      "imageHash": "2fd510e9a4bad29e2d7160665724d168ed44e0cb7bd22d3f8b16297b8780b8cf",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/53_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Bowler, polka-dot bow tie, fat cigar, a V sign, jowls, black overcoat.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1940",
+        "traits": [
+          "black bowler hat",
+          "dark overcoat over a white shirt",
+          "dark blue spotted bow tie",
+          "lit cigar at the mouth",
+          "raised paw making a two-toe sign"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-54-ad5c2033a41c9b15",
+      "dogId": "54",
+      "title": "Gandhi",
+      "number": 54,
+      "kind": "original",
+      "image": "assets/dog-54-ad5c2033a41c9b15.jpg",
+      "imageHash": "ad5c2033a41c9b15be0848e26f56c261c6d01d4ed0c2da8e17e7676ac22e61a5",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/54_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Bald, round wire glasses, white shawl and dhoti, sandals, a tall walking staff. Brown coat.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1930",
+        "traits": [
+          "round wire glasses",
+          "white shawl crossing one bare shoulder",
+          "long wooden staff"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-55-8cf3cdad8b603a03",
+      "dogId": "55",
+      "title": "Elizabeth",
+      "number": 55,
+      "kind": "original",
+      "image": "assets/dog-55-8cf3cdad8b603a03.jpg",
+      "imageHash": "8cf3cdad8b603a03d40ec9d235259e2e1d164d0f955d7ed110362747df3bc394",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/55_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Jewelled crown, pale blue coat, white gloves, black handbag, a corgi at the foot. A dog with a dog.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1953",
+        "traits": [
+          "small gold crown over grey curls",
+          "pale blue royal coat",
+          "three strands of white pearls",
+          "black handbag",
+          "small orange dog sitting at the feet"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-56-77b88284e4b8d4f4",
+      "dogId": "56",
+      "title": "Teddy",
+      "number": 56,
+      "kind": "original",
+      "image": "assets/dog-56-77b88284e4b8d4f4.jpg",
+      "imageHash": "77b88284e4b8d4f41da7a71859c1d8f02f91ac8a54c4272fa3e9c3a971fee886",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/56_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Pince-nez on a cord, thick mustache, a grin of big square teeth, safari jacket and hat.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1912",
+        "traits": [
+          "tan safari hat",
+          "gold nose-pinching glasses with a black chain",
+          "thick brown moustache",
+          "tan safari jacket with two pockets",
+          "brown tie"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-57-a7549e5fd17469a1",
+      "dogId": "57",
+      "title": "Jack",
+      "number": 57,
+      "kind": "original",
+      "image": "assets/dog-57-a7549e5fd17469a1.jpg",
+      "imageHash": "a7549e5fd17469a17972ffa082c5059de7cbc211c14e6b0b1ee8e390094d42d7",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/57_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Thick side-parted hair, dark sunglasses, navy crewneck, tanned squint, a sailboat behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1961",
+        "traits": [
+          "brown side-parted hair",
+          "dark square sunglasses",
+          "navy crewneck sweater",
+          "white sailboat"
+        ],
+        "room": "blue water under a pale sky"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-58-117fcc86012b1c71",
+      "dogId": "58",
+      "title": "Richard",
+      "number": 58,
+      "kind": "original",
+      "image": "assets/dog-58-117fcc86012b1c71.jpg",
+      "imageHash": "117fcc86012b1c7149d6e6d40ce504d598e82411cef62b86827aaf6848483f5c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/58_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Heavy jowls, widow's peak, dark suit, both arms up in a double V sign.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1969",
+        "traits": [
+          "dark widow's peak",
+          "dark suit with a white shirt and maroon tie",
+          "both paws making two-toe signs",
+          "dark stubble around the muzzle"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-59-af91e41dd947da5e",
+      "dogId": "59",
+      "title": "Ben",
+      "number": 59,
+      "kind": "original",
+      "image": "assets/dog-59-af91e41dd947da5e.jpg",
+      "imageHash": "af91e41dd947da5e878aab04b0f2269b3824828f4b9d2166ab1e5e62c83d6cdd",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/59_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Bald crown with long grey hair, small bifocals, a kite string with a key tied on, lightning behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1752",
+        "traits": [
+          "bare crown with long grey side hair",
+          "round bifocal glasses",
+          "brown coat",
+          "pale kite in the storm",
+          "gold key tied to the kite string"
+        ],
+        "room": "a dark rainstorm with lightning"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-60-3a5e5c7b7aee2a00",
+      "dogId": "60",
+      "title": "Marie",
+      "number": 60,
+      "kind": "original",
+      "image": "assets/dog-60-3a5e5c7b7aee2a00.jpg",
+      "imageHash": "3a5e5c7b7aee2a0082dab43bc64c1f33c8d5c80a4ce8ae08625ad77a50c37155",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/60_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A wig taller than the dog with a model ship in it, panniered gown, a slice of cake held out.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1789",
+        "traits": [
+          "towering white wig with a miniature sailing ship",
+          "wide pale pink gown",
+          "white pleated collar",
+          "small pink cake on the ground"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-61-d8c7d837ca0e0aaf",
+      "dogId": "61",
+      "title": "William",
+      "number": 61,
+      "kind": "original",
+      "image": "assets/dog-61-d8c7d837ca0e0aaf.jpg",
+      "imageHash": "d8c7d837ca0e0aaf96838671a20cb84ea28c6c2962aa236afc2a5d420e3cb28c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/61_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Stiff white ruff, high bald forehead, goatee, a quill, a skull held up.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1600",
+        "traits": [
+          "high forehead with a white quill behind one ear",
+          "thin brown moustache and goatee",
+          "white pleated collar",
+          "black doublet",
+          "small skull held in one paw"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-62-fb27c29277cc6593",
+      "dogId": "62",
+      "title": "Barack",
+      "number": 62,
+      "kind": "original",
+      "image": "assets/dog-62-fb27c29277cc6593.jpg",
+      "imageHash": "fb27c29277cc65931edbfbfb65a3e8d6edef51ac1022edfa726b5e8620423444",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_cotton/62_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Grey-templed crop, big ears, navy suit, red tie, drawn in the flat cream-blue-navy-red poster palette.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2012",
+        "traits": [
+          "large exposed ears with grey hair at the temples",
+          "navy suit",
+          "wide blue, red, cream, and navy background bands"
+        ],
+        "room": "a flat poster-like field of broad colour bands"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-63-55f1aca66b25a384",
+      "dogId": "63",
+      "title": "Donald",
+      "number": 63,
+      "kind": "original",
+      "image": "assets/dog-63-55f1aca66b25a384.jpg",
+      "imageHash": "55f1aca66b25a384caefcbb8252535dd13167dcd32f0946ccef3ad12f264dbd5",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_grounds/63_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Orange coat, blond comb-over, long red tie past the belt, a red cap, pursed mouth, pinching paws.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2016",
+        "traits": [
+          "blond comb-over",
+          "red cap with two lines of white writing",
+          "dark navy suit",
+          "extra-long red tie"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-64-d83aeb2ac20f458a",
+      "dogId": "64",
+      "title": "Rocky",
+      "number": 64,
+      "kind": "original",
+      "image": "assets/dog-64-d83aeb2ac20f458a.jpg",
+      "imageHash": "d83aeb2ac20f458a5da39c598abb9b25ad185963378ff5e4611a6ac21e0f2b97",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/64_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Grey sweatsuit, black knit cap, red gloves, a glass of raw eggs, running up stone steps at dawn.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1976",
+        "traits": [
+          "black knit cap",
+          "grey sweat suit with a dark chest patch",
+          "red boxing gloves",
+          "glass of raw eggs on a step",
+          "wide stone steps"
+        ],
+        "room": "warm daylight on grey stone steps"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-65-34a4f6128f13545b",
+      "dogId": "65",
+      "title": "Jack",
+      "number": 65,
+      "kind": "original",
+      "image": "assets/dog-65-34a4f6128f13545b.jpg",
+      "imageHash": "34a4f6128f13545b28ea575a571543b87dd0339e717530c3def420043a7bfd82",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/65_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red bandana under a tricorn, beaded braids, kohl eyes, gold tooth, an open compass, swaying.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2006",
+        "traits": [
+          "dark dreadlocks and beaded braids",
+          "red bandana under a battered brown three-cornered hat",
+          "black eye makeup with a thin moustache and goatee",
+          "brown coat with coloured beads",
+          "open compass held in one paw"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-66-e277a295b0ae47b0",
+      "dogId": "66",
+      "title": "Indy",
+      "number": 66,
+      "kind": "original",
+      "image": "assets/dog-66-e277a295b0ae47b0.jpg",
+      "imageHash": "e277a295b0ae47b0f2c7d63ca279e7201574746618797d2b1f5ecc7042606a28",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/66_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Brown fedora, leather jacket, coiled whip, satchel, a golden idol held up, a boulder behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1989",
+        "traits": [
+          "brown fedora",
+          "brown leather jacket",
+          "small gold figure held in one paw",
+          "coiled brown whip at the hip",
+          "large grey boulder beside the feet"
+        ],
+        "room": "a pale outdoor ground"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-67-b274e6c6f4c593d7",
+      "dogId": "67",
+      "title": "Wednesday",
+      "number": 67,
+      "kind": "original",
+      "image": "assets/dog-67-b274e6c6f4c593d7.jpg",
+      "imageHash": "b274e6c6f4c593d7ab67f2f33537d04707188898e53a590ba4c0e63a3a0ca07a",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/67_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two long black braids, black dress with a white collar, dead-level stare, a severed hand at the foot.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1991",
+        "traits": [
+          "long black center-parted braids",
+          "black dress with a white collar and buttons",
+          "pale severed hand on the ground",
+          "dark red line around the wrist"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-68-2a4f5be77edac08f",
+      "dogId": "68",
+      "title": "Forrest",
+      "number": 68,
+      "kind": "original",
+      "image": "assets/dog-68-2a4f5be77edac08f.jpg",
+      "imageHash": "2a4f5be77edac08ff50079f704b521a48856a21d655ae1b4f5c0d3284a3fbb36",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_grounds/68_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Cream suit, blue check shirt, a park bench, a box of chocolates on the knee, a feather.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1995",
+        "traits": [
+          "short brown crew cut",
+          "cream suit over a blue checked shirt",
+          "open red box of chocolates",
+          "white feather drifting down"
+        ],
+        "room": "before a long green wooden bench"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-69-e0c7d0baa8f0cff4",
+      "dogId": "69",
+      "title": "Willy",
+      "number": 69,
+      "kind": "original",
+      "image": "assets/dog-69-e0c7d0baa8f0cff4.jpg",
+      "imageHash": "e0c7d0baa8f0cff48bb78c2bdba9d2b5b6d2cd2452bbaa9f8156fbb912c2eefa",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/69_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Purple velvet coat, brown top hat, bow tie, cane, a blank gold ticket, a river of chocolate.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1971",
+        "traits": [
+          "brown top hat with a gold band",
+          "purple velvet coat",
+          "cream shirt and yellow spotted bow tie",
+          "blank gold ticket and black cane",
+          "brown river with coloured round-topped trees"
+        ],
+        "room": "beside a brown river and round-topped trees"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-70-15217a88a113bca3",
+      "dogId": "70",
+      "title": "Batman",
+      "number": 70,
+      "kind": "original",
+      "image": "assets/dog-70-15217a88a113bca3.jpg",
+      "imageHash": "15217a88a113bca3e5b2e82c32a6c82cca5d4d1ca7d619a5a1f8dc34bc837705",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_grounds/70_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Grey suit, blue cowl with ears, blue cape, yellow belt, a plain yellow oval on the chest. No bat in it.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1966",
+        "traits": [
+          "blue pointed-eared cowl",
+          "grey suit with a blank yellow chest oval",
+          "yellow utility belt",
+          "long blue cape"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-71-9194e5c092fee693",
+      "dogId": "71",
+      "title": "Pennywise",
+      "number": 71,
+      "kind": "original",
+      "image": "assets/dog-71-9194e5c092fee693.jpg",
+      "imageHash": "9194e5c092fee69354f3e017776eef14f02af136abc7dce143b8244c0c820372",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/71_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White face, orange tufts, red nose, ruffled collar, grey Victorian clown suit, a red balloon, too many teeth.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2017",
+        "traits": [
+          "orange hair tufts",
+          "red nose and red face lines",
+          "white pleated collar",
+          "silver suit with red buttons",
+          "red balloon on a string"
+        ]
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-72-9df28c452c5ab6ac",
+      "dogId": "72",
+      "title": "James",
+      "number": 72,
+      "kind": "original",
+      "image": "assets/dog-72-9df28c452c5ab6ac.jpg",
+      "imageHash": "9df28c452c5ab6ac2a4528656fe7c1bb395592994880061392ec7f7259f61267",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/72_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black tuxedo, bow tie, a martini, one eyebrow up, a gun-barrel spiral behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1962",
+        "traits": [
+          "dark side-parted hair",
+          "black dinner jacket",
+          "white shirt and black bow tie",
+          "stemmed cocktail glass"
+        ],
+        "room": "inside concentric black and white rings"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-73-30ca09449d3fdf05",
+      "dogId": "73",
+      "title": "Kong",
+      "number": 73,
+      "kind": "original",
+      "image": "assets/dog-73-30ca09449d3fdf05.jpg",
+      "imageHash": "30ca09449d3fdf051144f52e56847c118958f4a180c1574649d91a3a0cb81dc4",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/73_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A giant dark ape-shaped dog on top of a skyscraper, biplanes circling, a tiny blonde held gently in one paw.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1933",
+        "traits": [
+          "dark brown plain coat",
+          "tiny blonde person standing in one paw",
+          "lit grey skyscraper",
+          "circling biplanes"
+        ],
+        "room": "high on a skyscraper against a dark skyline"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-74-43ad85561fe4caa5",
+      "dogId": "74",
+      "title": "Maverick",
+      "number": 74,
+      "kind": "original",
+      "image": "assets/dog-74-43ad85561fe4caa5.jpg",
+      "imageHash": "43ad85561fe4caa567b9c74bf982a48aea47d092c5be19a5fcebe7bc636c3faa",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/74_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Leather bomber heavy with patches, aviators, dog tags, a jet tail behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2022",
+        "traits": [
+          "short dark hair",
+          "gold aviator sunglasses",
+          "brown flight jacket with coloured patches",
+          "white fur collar",
+          "metal identification tags"
+        ],
+        "room": "on an airfield beside a grey jet tail"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-75-470bb5dff5a606b3",
+      "dogId": "75",
+      "title": "Willie",
+      "number": 75,
+      "kind": "original",
+      "image": "assets/dog-75-470bb5dff5a606b3.jpg",
+      "imageHash": "470bb5dff5a606b379d1eccc6bb0648020ac5d6ff372be6be97cddaf3a1ae183",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/75_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black and white, film grain. A sailor cap, a ship's wheel gripped in both paws, whistled notes. The 1928 public-domain one, on purpose.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1928",
+        "traits": [
+          "white sailor cap with a black band",
+          "red shorts with two white buttons",
+          "large grey ship wheel",
+          "tall black smokestack",
+          "black whistled musical notes"
+        ],
+        "room": "on a boat crossing a broad river"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-76-697eb9aee72ce243",
+      "dogId": "76",
+      "title": "Hachiko",
+      "number": 76,
+      "kind": "original",
+      "image": "assets/dog-76-697eb9aee72ce243.jpg",
+      "imageHash": "697eb9aee72ce24378c188d172c94960b124c24260a04a4b819f1240af43f766",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/76_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Akita upright on a snowy platform under a clock, an empty bench, nobody coming.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1935",
+        "traits": [
+          "plain cream coat",
+          "grey railway platform",
+          "large round station clock past nine",
+          "empty wooden bench",
+          "newspaper at the paws in falling snow"
+        ],
+        "room": "an empty railway station"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-77-3a249490ff4d1446",
+      "dogId": "77",
+      "title": "Laika",
+      "number": 77,
+      "kind": "original",
+      "image": "assets/dog-77-3a249490ff4d1446.jpg",
+      "imageHash": "3a249490ff4d14468283ca20f9cc728cff6e780556a8f296037c1ccb6b4d90e0",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/ones_flat77/77_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A small mongrel strapped in a riveted capsule, the blue curve of the planet below.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1957",
+        "traits": [
+          "padded brown body harness",
+          "grey-green seat cushion",
+          "riveted metal porthole",
+          "air hose running to the capsule wall",
+          "black space and a blue planet"
+        ],
+        "room": "inside a small space capsule"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-78-54b4ff05237f6b9d",
+      "dogId": "78",
+      "title": "Bobby",
+      "number": 78,
+      "kind": "original",
+      "image": "assets/dog-78-54b4ff05237f6b9d.jpg",
+      "imageHash": "54b4ff05237f6b9d00b428123708007fdd6a313807f8b18dbec2475e1f2e68c0",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/78_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A shaggy grey dog flat on a churchyard grave in the rain, a tin bowl.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1872",
+        "traits": [
+          "plain grey coat",
+          "short wiry grey chin beard",
+          "dog lying on one side",
+          "flat grey grave slab",
+          "small tin bowl in the rain"
+        ],
+        "room": "a rainy lamplit churchyard with a stone cross"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-79-bde61b8a0259824e",
+      "dogId": "79",
+      "title": "Nipper",
+      "number": 79,
+      "kind": "original",
+      "image": "assets/dog-79-bde61b8a0259824e.jpg",
+      "imageHash": "bde61b8a0259824e2588a47c20ea1765e9b49cf5e11a433759b2edcb5d1a117c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/79_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "White terrier, one black ear, head cocked at a brass gramophone horn bigger than he is.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1898",
+        "traits": [
+          "plain white coat",
+          "large dark patch over one ear",
+          "large brass sound horn",
+          "dark wooden cabinet and tabletop"
+        ],
+        "room": "beside a wooden sound cabinet"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-80-08654654770fe0ad",
+      "dogId": "80",
+      "title": "Pompeii",
+      "number": 80,
+      "kind": "original",
+      "image": "assets/dog-80-08654654770fe0ad.jpg",
+      "imageHash": "08654654770fe0ad905a2c646c5109db27e2437789f63c0bcb7835a0cd7bfed8",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/80_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Cast in grey ash on its back, a studded collar, a chain to a ring, one red glow.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "79",
+        "traits": [
+          "plain grey coat",
+          "dog lying on one side",
+          "bronze-studded collar",
+          "metal chain fixed to a wall ring",
+          "black ash sky with red ground glow"
+        ],
+        "room": "a black ash field under a red glow"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-81-f82d49557ba03681",
+      "dogId": "81",
+      "title": "Argos",
+      "number": 81,
+      "kind": "original",
+      "image": "assets/dog-81-f82d49557ba03681.jpg",
+      "imageHash": "f82d49557ba036816303ff3898ac8f96d9335344e1a0c54ce89d38105e52ea20",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/81_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "An old thin hound on straw in a courtyard, tail lifting for the first time in twenty years, a great bow on the wall.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "-1178",
+        "traits": [
+          "plain tan coat",
+          "loose straw heap",
+          "wooden bow leaning against a wall",
+          "ragged dark cloak at the edge",
+          "stone wall in broad courses"
+        ],
+        "room": "a stone courtyard"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-82-422c5a0d3acca55e",
+      "dogId": "82",
+      "title": "Togo",
+      "number": 82,
+      "kind": "original",
+      "image": "assets/dog-82-422c5a0d3acca55e.jpg",
+      "imageHash": "422c5a0d3acca55e5563dc9be9303d26d171bbc8d6ee52685be1d79f93139279",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/82_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Lead sled dog leaning into a white-out, a small crate lashed behind. No statue anywhere.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1925",
+        "traits": [
+          "grey coat",
+          "frayed brown harness and tow traces",
+          "ice and snow on the muzzle",
+          "grey sled and crate",
+          "blowing white snow"
+        ],
+        "room": "a whiteout snow field"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-83-a270d6a3fc8673a2",
+      "dogId": "83",
+      "title": "Snuppy",
+      "number": 83,
+      "kind": "original",
+      "image": "assets/dog-83-a270d6a3fc8673a2.jpg",
+      "imageHash": "a270d6a3fc8673a2f900e696652eee224e06d3fa4efc163df9514df4cfabcc4e",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/83_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two identical silk-coated hounds, one drawn fainter, a glass dish and a pipette.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2005",
+        "traits": [
+          "two near-identical dogs, one faded",
+          "plain pale tan coats",
+          "long tan silky ears",
+          "shallow glass dish and pipette",
+          "steel table"
+        ],
+        "room": "a pale laboratory"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-84-02af62532b1fe525",
+      "dogId": "84",
+      "title": "Owney",
+      "number": 84,
+      "kind": "original",
+      "image": "assets/dog-84-02af62532b1fe525.jpg",
+      "imageHash": "02af62532b1fe525ee15c8b377cb73764aa2c0d936ccd1f66eb4572097533e63",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/84_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Terrier in a harness of brass tags on a mailbag in a railway-car door.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1888",
+        "traits": [
+          "tan coat",
+          "brown harness hung with dozens of brass tags",
+          "large tan mailbag under the feet",
+          "dark wooden mail car doorway"
+        ],
+        "room": "inside a wooden railway mail car"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-85-a674430e613b5673",
+      "dogId": "85",
+      "title": "Barry",
+      "number": 85,
+      "kind": "original",
+      "image": "assets/dog-85-a674430e613b5673.jpg",
+      "imageHash": "a674430e613b5673abf1e07c6127140446282efa1ee4dcd1aa4aa98dab2e7bc2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/85_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A St Bernard with a keg on the collar and a child on its back, a blizzard.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1814",
+        "traits": [
+          "white coat with brown patches and a brown cap",
+          "child bundled in a red blanket on the back",
+          "small wooden keg at the neck",
+          "metal lantern glowing in the snow"
+        ],
+        "room": "a steep snow-covered mountain"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-86-aa7fff280f44e2b4",
+      "dogId": "86",
+      "title": "Stubby",
+      "number": 86,
+      "kind": "original",
+      "image": "assets/dog-86-aa7fff280f44e2b4.jpg",
+      "imageHash": "aa7fff280f44e2b4937b503a1956dd10526bacff48e3bf4ac7a02286fc1222ea",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/86_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Brindle bull terrier in an army coat with stripes and medals, a helmet too big.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1918",
+        "traits": [
+          "large olive military helmet",
+          "olive military coat with rank stripes",
+          "small coloured medals",
+          "sandbags and barbed wire"
+        ],
+        "room": "a brown battlefield trench"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-87-f118a80147e04e03",
+      "dogId": "87",
+      "title": "Smoky",
+      "number": 87,
+      "kind": "original",
+      "image": "assets/dog-87-f118a80147e04e03.jpg",
+      "imageHash": "f118a80147e04e03182fa6af1299016b0ef510c6df23982d63dd2cc3b5d3c99b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/87_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A Yorkie inside an upturned steel helmet under a parachute.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1944",
+        "traits": [
+          "plain tan coat",
+          "large green helmet surrounding the feet",
+          "white parachute canopy and cords",
+          "small wooden wire spool"
+        ],
+        "room": "a green military landing field"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-88-26bf0f0fdd814074",
+      "dogId": "88",
+      "title": "Judy",
+      "number": 88,
+      "kind": "original",
+      "image": "assets/dog-88-26bf0f0fdd814074.jpg",
+      "imageHash": "26bf0f0fdd814074d704e144d613d3f1954d76ae5da25266a63f982468679df2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/88_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A pointer planted barking between ragged men and a raised stick. Brave, never pitiable.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1942",
+        "traits": [
+          "cream coat with large brown patches",
+          "wire prison fence",
+          "row of ragged people",
+          "long raised wooden stick"
+        ],
+        "room": "a fenced green prison yard"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-89-8f702aca94c534aa",
+      "dogId": "89",
+      "title": "Bummer & Lazarus",
+      "number": 89,
+      "kind": "original",
+      "image": "assets/dog-89-8f702aca94c534aa.jpg",
+      "imageHash": "8f702aca94c534aa96081d47c016ba198ef4210c81b2585f8a6d9c73110bf6aa",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/89_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two fat dogs on a saloon step with a string of sausages. One seed, two dogs.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1861",
+        "traits": [
+          "two dogs standing together",
+          "plain black and tan coats",
+          "string of red sausages",
+          "dark stone doorstep"
+        ],
+        "room": "a wooden doorway under a gas lamp"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-90-d94964d4f1f600f4",
+      "dogId": "90",
+      "title": "Belka & Strelka",
+      "number": 90,
+      "kind": "original",
+      "image": "assets/dog-90-d94964d4f1f600f4.jpg",
+      "imageHash": "d94964d4f1f600f433e340de06ba045148ac96d42b390ac84072758b40ebe253",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/90_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two small dogs in orange flight suits on a scorched capsule in a wheat field. One seed, two dogs.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1960",
+        "traits": [
+          "two dogs in orange pressure suits",
+          "clear glass head domes",
+          "white harness stripes",
+          "pink tongues hanging out",
+          "scorched metal capsule"
+        ],
+        "room": "a pale wheat field"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-91-7e64aede475d7bbd",
+      "dogId": "91",
+      "title": "Checkers",
+      "number": 91,
+      "kind": "original",
+      "image": "assets/dog-91-7e64aede475d7bbd.jpg",
+      "imageHash": "7e64aede475d7bbd95335fa00b8d1efa2c0f79ae4a01d691f08ffe96c17dc635",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/91_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A cocker spaniel at a chrome microphone before a TV camera, entirely innocent.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1952",
+        "traits": [
+          "plain black coat",
+          "long black silky ears",
+          "microphone stand at the muzzle",
+          "white paper on a wooden desk",
+          "television camera on a tripod"
+        ],
+        "room": "a grey television studio"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-92-e3ad0dd98e7e9bb6",
+      "dogId": "92",
+      "title": "Bobbie",
+      "number": 92,
+      "kind": "original",
+      "image": "assets/dog-92-e3ad0dd98e7e9bb6.jpg",
+      "imageHash": "e3ad0dd98e7e9bb60f7b74f3634dbc8947316c8d6925958dab6e5fa64627f53d",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/92_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A burr-covered collie walking a dirt road toward a porch, a trail of prints the length of the picture.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1923",
+        "traits": [
+          "tan coat covered with burrs",
+          "trail of paw prints",
+          "dirt road leading to a lit farmhouse",
+          "distant mountains and blue streams"
+        ],
+        "room": "a long country road home"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-93-b92c1f4ca537cc36",
+      "dogId": "93",
+      "title": "Fido",
+      "number": 93,
+      "kind": "original",
+      "image": "assets/dog-93-b92c1f4ca537cc36.jpg",
+      "imageHash": "b92c1f4ca537cc362efb7f540ea4e6a71de08365e25f03d3e77caf926c4ae517",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/93_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A white shepherd-mix at a dusk bus stop, the bus arriving, fourteen tally strokes on the post.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1943",
+        "traits": [
+          "plain cream coat",
+          "dark arriving bus with bright headlights",
+          "grey stone bench",
+          "tall post marked with fourteen white strokes"
+        ],
+        "room": "a bus stop at sunset"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-94-c446a923574911f5",
+      "dogId": "94",
+      "title": "Pavlov's dog",
+      "number": 94,
+      "kind": "original",
+      "image": "assets/dog-94-c446a923574911f5.jpg",
+      "imageHash": "c446a923574911f55a683a187cdca8b067b4e2411e78a6aaeb05d9151619c58c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/94_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Laboratory harness, a brass bell, a bowl, one drop at the lip, tallies on a chalkboard.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1897",
+        "traits": [
+          "brown laboratory harness",
+          "brass bell hanging before the muzzle",
+          "metal bowl filled with meat",
+          "single drop of drool",
+          "wooden stand and chalkboard full of white marks"
+        ],
+        "room": "a grey laboratory"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-95-6b5094b4e04f1483",
+      "dogId": "95",
+      "title": "Boatswain",
+      "number": 95,
+      "kind": "original",
+      "image": "assets/dog-95-6b5094b4e04f1483.jpg",
+      "imageHash": "6b5094b4e04f14836956bcca518031c6b364a51d3c1e62b89fce3c93916ef670",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/95_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A Newfoundland on a carved plinth under a poet's cloak, the inscription too worn to read.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1808",
+        "traits": [
+          "black coat with a white chest patch",
+          "tall stone plinth with worn writing",
+          "dark red cloak draped over one corner",
+          "grey ruined arches"
+        ],
+        "room": "a ruined stone abbey"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-96-5062c3049bb08ff4",
+      "dogId": "96",
+      "title": "Buddy",
+      "number": 96,
+      "kind": "original",
+      "image": "assets/dog-96-5062c3049bb08ff4.jpg",
+      "imageHash": "5062c3049bb08ff44f64470d85184843a75236fbb0474725018b21346c5977b4",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/96_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A shepherd in a rigid guide harness at a curb, a taxi grille, a white cane laid down.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1929",
+        "traits": [
+          "brown guide harness with a tall handle",
+          "long white cane with a red tip",
+          "yellow taxi grille and headlight",
+          "grey city curb"
+        ],
+        "room": "a grey city street"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-97-8706aabb6a8a5646",
+      "dogId": "97",
+      "title": "Sinbad",
+      "number": 97,
+      "kind": "original",
+      "image": "assets/dog-97-8706aabb6a8a5646.jpg",
+      "imageHash": "8706aabb6a8a564661154be759c049bc998f80002f17a708eb65deb38439853b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/97_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A mutt in a sailor's cap and peacoat at a ship's rail with a coffee mug, one ear inside out.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1938",
+        "traits": [
+          "white sailor cap",
+          "navy peacoat with gold buttons",
+          "white coffee mug",
+          "white ship rail"
+        ],
+        "room": "a ship deck above blue water"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-98-9af84416ca2049c3",
+      "dogId": "98",
+      "title": "Toto",
+      "number": 98,
+      "kind": "original",
+      "image": "assets/dog-98-9af84416ca2049c3.jpg",
+      "imageHash": "9af84416ca2049c3b84ec42c70a198fbb8bc500d8794d21b80c963b41e0764d2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/98_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A dark terrier in a wicker basket in a gingham lap, a cyclone behind, silver shoes. The book, not the film.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1900",
+        "traits": [
+          "plain dark brown coat",
+          "large wicker basket with blue checked cloth",
+          "silver shoes beside the basket",
+          "tilting house and metal funnel"
+        ],
+        "room": "a windy farmyard"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-99-7a9548f9ef1bde21",
+      "dogId": "99",
+      "title": "Brown Dog",
+      "number": 99,
+      "kind": "original",
+      "image": "assets/dog-99-7a9548f9ef1bde21.jpg",
+      "imageHash": "7a9548f9ef1bde213dc6f9d4b961164e7cece330cba20ceb1d3faff4cfe4c1ec",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/99_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A brown terrier finished in bronze on a drinking fountain over a stick-figure crowd with raised sticks.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1906",
+        "traits": [
+          "bronze coat with green patina spots",
+          "grey stone fountain pedestal",
+          "dark crowd holding raised sticks",
+          "blocky grey city buildings"
+        ],
+        "room": "a crowded city square"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-100-7feb148016175fd7",
+      "dogId": "100",
+      "title": "Marjorie",
+      "number": 100,
+      "kind": "original",
+      "image": "assets/dog-100-7feb148016175fd7.jpg",
+      "imageHash": "7feb148016175fd7b30656cae11c4038684876bccec2b538027404587b6d70b3",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/100_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A collie content on a lab bench, a syringe on a tray, seventy days struck through on a calendar.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1921",
+        "traits": [
+          "plain black coat",
+          "dog lying on a dark wooden bench",
+          "wall calendar marked with seventy days",
+          "metal syringe and tray"
+        ],
+        "room": "a pale laboratory room"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-101-2d6658eb30b9627c",
+      "dogId": "101",
+      "title": "Vincent",
+      "number": 101,
+      "kind": "original",
+      "image": "assets/dog-101-2d6658eb30b9627c.jpg",
+      "imageHash": "2d6658eb30b9627ca53e3b342d7b6eaa60f6663dccf91bdfe4f36aa73a4f6c3b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/101_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red beard, straw hat, blue smock, a bandage under the hat, sunflowers in both paws, a swirling night behind.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1889",
+        "traits": [
+          "straw hat with a white bandage over one ear",
+          "red beard and moustache",
+          "blue painter's smock",
+          "vase of yellow sunflowers at the feet"
+        ],
+        "room": "a deep blue field of yellow stars and swirling bands"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-102-740f0ee3c80ab095",
+      "dogId": "102",
+      "title": "Frida",
+      "number": 102,
+      "kind": "original",
+      "image": "assets/dog-102-740f0ee3c80ab095.jpg",
+      "imageHash": "740f0ee3c80ab0951541903792d9fad5c4f352e4fcdeaaa689f5c7a1de87c415",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/102_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "One brow across both eyes, braids, a flower crown, an embroidered dress, a monkey on the shoulder, a parrot.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1939",
+        "traits": [
+          "bright flower crown over dark braids",
+          "single thick dark eyebrow",
+          "teal embroidered dress",
+          "small monkey on the back",
+          "green parrot on the ground"
+        ],
+        "room": "dense dark green leaves"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-103-060468725066a2bc",
+      "dogId": "103",
+      "title": "Pablo",
+      "number": 103,
+      "kind": "original",
+      "image": "assets/dog-103-060468725066a2bc.jpg",
+      "imageHash": "060468725066a2bcd80eed3649de3d75d0392c76946635552c7c184d726e5ad3",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/103_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Bald dome, striped sailor shirt, huge dark eyes, one eye in profile on a frontal face, a cigarette.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1907",
+        "traits": [
+          "white shirt with navy stripes",
+          "dark cigarette held at the muzzle",
+          "sharp red, blue, yellow, and black ground shapes"
+        ],
+        "room": "a fractured field of coloured shards"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-104-a88c3166790747ce",
+      "dogId": "104",
+      "title": "Yayoi",
+      "number": 104,
+      "kind": "original",
+      "image": "assets/dog-104-a88c3166790747ce.jpg",
+      "imageHash": "a88c3166790747ceab38f3e701f2a6fc5d864233a9ed04a8a95e0c4235ca0fe0",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/104_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red bob wig, a red dress in white dots, dots on the coat and the ground, a dotted pumpkin.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "1965",
+        "traits": [
+          "short red bob",
+          "white dots across the head",
+          "red dress with white dots",
+          "large yellow pumpkin covered in black dots"
+        ],
+        "room": "a bright spotted field"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-105-a8176b52c18815c0",
+      "dogId": "105",
+      "title": "Hokusai",
+      "number": 105,
+      "kind": "original",
+      "image": "assets/dog-105-a8176b52c18815c0.jpg",
+      "imageHash": "a8176b52c18815c00df3daabcba54ce06ae7f4b340ac99ce6b8fecc9c64d2a9d",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/105_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "An old dog in a blue kimono with a brush, a great clawed wave over everything, a small white mountain.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1831",
+        "traits": [
+          "blue robe with white wave marks",
+          "wide dark belt",
+          "paintbrush held in the mouth",
+          "giant blue wave with white foam"
+        ],
+        "room": "before a towering wave"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-106-0f2edbc3b5353c69",
+      "dogId": "106",
+      "title": "Leonardo",
+      "number": 106,
+      "kind": "original",
+      "image": "assets/dog-106-0f2edbc3b5353c69.jpg",
+      "imageHash": "0f2edbc3b5353c6956ca2f54f2202436bb2dc540d44fa63cf069b3e477f34f7c",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/106_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Long white hair and beard, a red cap, a rose robe, paws folded, the faintest smile, a misty river.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1503",
+        "traits": [
+          "soft red cap",
+          "long white side hair and beard",
+          "rose robe",
+          "front paws folded together",
+          "misty blue river and pale hills"
+        ],
+        "room": "a hazy river landscape"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-107-3de27bd860b47c58",
+      "dogId": "107",
+      "title": "Jackson",
+      "number": 107,
+      "kind": "original",
+      "image": "assets/dog-107-3de27bd860b47c58.jpg",
+      "imageHash": "3de27bd860b47c5847af7c43450d45803e0bab45d333624a0534910108438bbb",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/107_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black t-shirt, jeans, a cigarette, a paint can pouring from one paw, drips across everything.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1950",
+        "traits": [
+          "black short-sleeve shirt",
+          "blue jeans with paint drips",
+          "tipped paint can pouring black paint",
+          "black, white, red, and grey drips across the ground"
+        ],
+        "room": "a cream floor crossed by black paint"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-108-fd675a98c2c8b6dd",
+      "dogId": "108",
+      "title": "Claude",
+      "number": 108,
+      "kind": "original",
+      "image": "assets/dog-108-fd675a98c2c8b6dd.jpg",
+      "imageHash": "fd675a98c2c8b6dd70d9e864c6b8c2dde92d1fcda63b376df0ce5835b15bd617",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/108_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Long white beard, straw hat, a palette, on a green bridge over lily pads.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1899",
+        "traits": [
+          "straw boater hat",
+          "long white beard",
+          "grey painter's smock",
+          "wooden palette with bright paint"
+        ],
+        "room": "a green garden pond with a small bridge"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-109-e22863e278814ec3",
+      "dogId": "109",
+      "title": "Steve",
+      "number": 109,
+      "kind": "original",
+      "image": "assets/dog-109-e22863e278814ec3.jpg",
+      "imageHash": "e22863e278814ec3b96a7306dc94afa43095a30d6fb37151f203921c7184f911",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/109_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black turtleneck, jeans, rimless glasses, stubble, a blank white rectangle held up.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2007",
+        "traits": [
+          "neat grey hair",
+          "rimless glasses and a thin moustache",
+          "grey stubble around the muzzle",
+          "black turtleneck and blue jeans",
+          "grey running shoes",
+          "blank white rectangle held forward"
+        ],
+        "room": "a black presentation stage"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-110-21f993b6166eb351",
+      "dogId": "110",
+      "title": "Elon",
+      "number": 110,
+      "kind": "original",
+      "image": "assets/dog-110-21f993b6166eb351.jpg",
+      "imageHash": "21f993b6166eb351f1178cb1a73f59a0bf5b4f16143d75488d0dee4e6aeeaefa",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/110_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Black t-shirt, a rocket on a barge behind, a tiny red car, a manic grin, a finger at the sky.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2020",
+        "traits": [
+          "short black hair",
+          "black short-sleeve shirt and dark trousers",
+          "tiny red sports car at the feet",
+          "silver rocket and dark landing barge"
+        ],
+        "room": "a blue-water launch barge under daylight"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-111-a75fabe43762692e",
+      "dogId": "111",
+      "title": "MJ",
+      "number": 111,
+      "kind": "original",
+      "image": "assets/dog-111-a75fabe43762692e.jpg",
+      "imageHash": "a75fabe43762692e3b5e34565b840e9a6dc78fc898c80b247e8528b941513ea6",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_grounds/111_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red jersey, bald, one gold hoop, tongue out, a ball palmed in mid-air, a hoop behind.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1998",
+        "traits": [
+          "gold hoop earring",
+          "red jersey and shorts with white trim",
+          "pink tongue hanging out",
+          "orange basketball high in the air",
+          "basketball hoop and backboard"
+        ],
+        "room": "a red-lit basketball arena"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-112-cfcd6f3059d933e1",
+      "dogId": "112",
+      "title": "Kobe",
+      "number": 112,
+      "kind": "original",
+      "image": "assets/dog-112-cfcd6f3059d933e1.jpg",
+      "imageHash": "cfcd6f3059d933e15821ab7d0b4cf73d3a4b73da4cfa252ee386da1f846027d6",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/112_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Purple and gold, a headband, leaning back into a fadeaway.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2006",
+        "traits": [
+          "white headband",
+          "purple and gold jersey with no lettering",
+          "purple shorts and white shoes",
+          "orange basketball high in the air"
+        ],
+        "room": "a gold-lit basketball arena"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-113-e449d934263f8614",
+      "dogId": "113",
+      "title": "Pele",
+      "number": 113,
+      "kind": "original",
+      "image": "assets/dog-113-e449d934263f8614.jpg",
+      "imageHash": "e449d934263f86142c12944cf13296ea1693646404854895807d6f2698b8aa74",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/113_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A young dog in a yellow shirt and blue shorts, upside down in a bicycle kick.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "1958",
+        "traits": [
+          "yellow shirt with green trim",
+          "blue shorts and black shoes",
+          "white panelled football high overhead",
+          "green stadium field"
+        ],
+        "room": "a bright outdoor stadium"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-114-4e2326ca3d066f72",
+      "dogId": "114",
+      "title": "Leo",
+      "number": 114,
+      "kind": "original",
+      "image": "assets/dog-114-4e2326ca3d066f72.jpg",
+      "imageHash": "4e2326ca3d066f72e1853d49bf22277da0573e6864474c312e5d15cc1ba8acb2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/114_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Sky-blue stripes, a short beard, a gold cup held up in confetti.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2021",
+        "traits": [
+          "short crew cut and beard",
+          "white and sky-blue striped shirt",
+          "black shorts",
+          "large gold cup held overhead",
+          "blue and white confetti"
+        ],
+        "room": "a crowded football stadium"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-115-e82acf22b7da77c3",
+      "dogId": "115",
+      "title": "Tiger",
+      "number": 115,
+      "kind": "original",
+      "image": "assets/dog-115-e82acf22b7da77c3.jpg",
+      "imageHash": "e82acf22b7da77c3465895e4e698c76d0a500a1cb321e966a980d1042277f6d0",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/115_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Red polo, a blank black cap, a fist pumped, a club in the other paw, a green with a flag.",
+      "selectedReference": false,
+      "traitNotes": {
+        "year": "2019",
+        "traits": [
+          "black cap",
+          "red polo shirt and black trousers",
+          "golf club planted beside the feet",
+          "small white golf ball"
+        ],
+        "room": "a green golf course beside a red flag"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-116-b6e7d5e48cb47492",
+      "dogId": "116",
+      "title": "Caitlin",
+      "number": 116,
+      "kind": "original",
+      "image": "assets/dog-116-b6e7d5e48cb47492.jpg",
+      "imageHash": "b6e7d5e48cb47492b6092edfeb3550f8b78bbc79fc18035d96b87d75462bcfec",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/116_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A high ponytail, black and gold, a ball just leaving the paws from the centre line, three fingers up.",
+      "selectedReference": true,
+      "traitNotes": {
+        "year": "2024",
+        "traits": [
+          "high brown ponytail",
+          "black and gold jersey with no lettering",
+          "black shorts with gold cuffs",
+          "orange basketball far out in the air"
+        ],
+        "room": "a bright gold basketball arena"
+      },
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-117-34aa2133dcd107a3",
+      "dogId": "117",
+      "title": "Marty",
+      "number": 117,
+      "kind": "original",
+      "image": "assets/dog-117-34aa2133dcd107a3.jpg",
+      "imageHash": "34aa2133dcd107a3369a603d61b607924d5964543b623ed9088417bd5de142ae",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/117_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two parallel fire trails burning across the road behind him; the red puffer vest over a denim jacket.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-118-2cbfd5d334273898",
+      "dogId": "118",
+      "title": "Holly",
+      "number": 118,
+      "kind": "original",
+      "image": "assets/dog-118-2cbfd5d334273898.jpg",
+      "imageHash": "2cbfd5d334273898b68084637c631f7b1c4cfbb2d776b2827d70a7aef67ff079",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/118_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The black sheath and the pearls, the dark glasses, the tall updo with a small tiara, the long cigarette holder.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-119-c965806d8bb4fee0",
+      "dogId": "119",
+      "title": "Bruce",
+      "number": 119,
+      "kind": "original",
+      "image": "assets/dog-119-c965806d8bb4fee0.jpg",
+      "imageHash": "c965806d8bb4fee08a85772cfff35bed504987769d1caecb1f4fda7f355efbc2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/119_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The yellow suit with one black stripe running the length of the body and down every leg; the black bowl cut.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-120-9623a76846b17ab3",
+      "dogId": "120",
+      "title": "Tony",
+      "number": 120,
+      "kind": "original",
+      "image": "assets/dog-120-9623a76846b17ab3.jpg",
+      "imageHash": "9623a76846b17ab368d9ff62fe84dbffeef980b4965140d7569662c07b0fd492",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/120_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The white three-piece over a black shirt; one forepaw pointing straight up.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-121-6911e57e01723542",
+      "dogId": "121",
+      "title": "Jack",
+      "number": 121,
+      "kind": "original",
+      "image": "assets/dog-121-6911e57e01723542.jpg",
+      "imageHash": "6911e57e0172354227953364bc1b6daaea5ab0a1efdc149122092f11bdb6e7e2",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/121_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The split door plane behind, a hole around the head; the axe at the paws.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-122-50f776d14f87e6aa",
+      "dogId": "122",
+      "title": "Mia",
+      "number": 122,
+      "kind": "original",
+      "image": "assets/dog-122-50f776d14f87e6aa.jpg",
+      "imageHash": "50f776d14f87e6aa195ab75906e5d1456294055d154d3212fa1e3b2b110d8c5e",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/122_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The thin black tie; two fingers across the eyes; a black suit.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-123-3ed78be6fda0340e",
+      "dogId": "123",
+      "title": "Dorothy",
+      "number": 123,
+      "kind": "original",
+      "image": "assets/dog-123-3ed78be6fda0340e.jpg",
+      "imageHash": "3ed78be6fda0340e5bc927eca156679c6bb012f119a8eac7f91ccbc72ecbb645",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/123_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The red sequin shoes; a blue checked pinafore; a basket at the paws with a small blob in it.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-124-cd73b920dbec4ddd",
+      "dogId": "124",
+      "title": "Rick",
+      "number": 124,
+      "kind": "original",
+      "image": "assets/dog-124-cd73b920dbec4ddd.jpg",
+      "imageHash": "cd73b920dbec4ddd2048fd43471061a85d9d0f37af64bd03026abf4baa5ad0de",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/124_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A belted khaki trench, a dark fedora, one airfield lamp burning in the fog.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-125-8473abdbf1cbe640",
+      "dogId": "125",
+      "title": "Roger",
+      "number": 125,
+      "kind": "original",
+      "image": "assets/dog-125-8473abdbf1cbe640.jpg",
+      "imageHash": "8473abdbf1cbe640443bffa29f0dd2505653dda93dbc8a771e6e8c4f27d7277b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/125_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A grey suit in a dry empty field, one small plane low on the closed side.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-126-46b58cdc5d7580d0",
+      "dogId": "126",
+      "title": "Marion",
+      "number": 126,
+      "kind": "original",
+      "image": "assets/dog-126-46b58cdc5d7580d0.jpg",
+      "imageHash": "46b58cdc5d7580d0b36fa4368ab517de6b4386cea80c9eda0eb217a140db3ab1",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/126_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A hanging pale curtain, a raised knife as a dark ribbon on it, one wide eye.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-127-2df7b112024c2e2e",
+      "dogId": "127",
+      "title": "Dave",
+      "number": 127,
+      "kind": "original",
+      "image": "assets/dog-127-2df7b112024c2e2e.jpg",
+      "imageHash": "2df7b112024c2e2ecb0e94ab26a5615c53c33a9efbcd6e7bea48c4504d5d1c24",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/127_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A tall black slab standing in red rock, a bone held in the mouth.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-128-9e08de0ec4cbe93a",
+      "dogId": "128",
+      "title": "Jaws",
+      "number": 128,
+      "kind": "original",
+      "image": "assets/dog-128-9e08de0ec4cbe93a.jpg",
+      "imageHash": "9e08de0ec4cbe93a5ef7f7ebd8084c6d808de5e8b669ee3c0ca02a958d5255f3",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/128_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "One dark fin cutting the night water; a small yellow barrel at the forepaws.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-129-979b06df17a93815",
+      "dogId": "129",
+      "title": "Leia",
+      "number": 129,
+      "kind": "original",
+      "image": "assets/dog-129-979b06df17a93815.jpg",
+      "imageHash": "979b06df17a938158e9bb5aab3f35e15292d106cc1a42c4819126e702cfe7b1e",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/129_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Two round side buns of dark hair on a tight cap; a white hooded gown; a blue disc at the paws.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-130-441a83fca7b369fe",
+      "dogId": "130",
+      "title": "Kane",
+      "number": 130,
+      "kind": "original",
+      "image": "assets/dog-130-441a83fca7b369fe.jpg",
+      "imageHash": "441a83fca7b369fec57fc6e025ecb9442a6e2049f995d6cac2b113f6a2c26f5b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/130_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A white table in a white ship room; a small pale creature standing on it.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-131-83c5406c90d2d989",
+      "dogId": "131",
+      "title": "Elliott",
+      "number": 131,
+      "kind": "original",
+      "image": "assets/dog-131-83c5406c90d2d989.jpg",
+      "imageHash": "83c5406c90d2d98917104b6491d96408ce2dd69cd56129585f2f629aa87c0728",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/131_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A glowing fingertip from off-frame meeting the raised paw; a red hoodie; one moon.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-132-b9a5fc4e4dc044f3",
+      "dogId": "132",
+      "title": "Arnold",
+      "number": 132,
+      "kind": "original",
+      "image": "assets/dog-132-b9a5fc4e4dc044f3.jpg",
+      "imageHash": "b9a5fc4e4dc044f3f6a7fd2caafe157dc2375f9a7789608d5f8c96f3a55fa972",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/132_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The black leather jacket, the black glasses, a small red glint in one lens.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-133-657fe686cc4dbf03",
+      "dogId": "133",
+      "title": "Goose",
+      "number": 133,
+      "kind": "original",
+      "image": "assets/dog-133-657fe686cc4dbf03.jpg",
+      "imageHash": "657fe686cc4dbf03531a2fc2b984400c314de77f9bff5e5e9a45b5b6fd466298",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/133_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Aviators, dog tags, jeans, no shirt, a volleyball at the paws.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-134-aa1d19291acb728c",
+      "dogId": "134",
+      "title": "Lloyd",
+      "number": 134,
+      "kind": "original",
+      "image": "assets/dog-134-aa1d19291acb728c.jpg",
+      "imageHash": "aa1d19291acb728c59605d689ccfb26120cdba4bec85a815582b0ca54730c853",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/134_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The trench coat, a boombox held up in both forepaws.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-135-e5d7a9a37b9aa242",
+      "dogId": "135",
+      "title": "Baby",
+      "number": 135,
+      "kind": "original",
+      "image": "assets/dog-135-e5d7a9a37b9aa242.jpg",
+      "imageHash": "e5d7a9a37b9aa24279fc66df424ba13178cb6c303f55f7ee74752e08f5776b43",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/135_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The pink dress, arms out, body straight, lifted.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-136-6a6e090ff4d4f93d",
+      "dogId": "136",
+      "title": "John",
+      "number": 136,
+      "kind": "original",
+      "image": "assets/dog-136-6a6e090ff4d4f93d.jpg",
+      "imageHash": "6a6e090ff4d4f93d0aa2edc63da50fd442b9f62f5aa1fb696aff107d3324c27b",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/136_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A white vest gone grey, bare paws, a box at the mouth.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-137-8015c35129778e3a",
+      "dogId": "137",
+      "title": "Sally",
+      "number": 137,
+      "kind": "original",
+      "image": "assets/dog-137-8015c35129778e3a.jpg",
+      "imageHash": "8015c35129778e3a8505ef6a0f1ce35d02dbff22a91ea556970d3b44d3bc2bfd",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/137_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A sandwich at the paws, one pale table, the head thrown back.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-138-8ed74302ccc24be1",
+      "dogId": "138",
+      "title": "Molly",
+      "number": 138,
+      "kind": "original",
+      "image": "assets/dog-138-8ed74302ccc24be1.jpg",
+      "imageHash": "8ed74302ccc24be1f6980c3117ac1e4a0572a9e98af6e7d931ba066b03948d08",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones/138_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Clay-grey forepaws on a wheel, a white shirt.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-139-3099a70bd5623095",
+      "dogId": "139",
+      "title": "Hannibal",
+      "number": 139,
+      "kind": "original",
+      "image": "assets/dog-139-3099a70bd5623095.jpg",
+      "imageHash": "3099a70bd56230956d316d754e98a554eddb4ebe87c80ed0fc6d4a22246b9937",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/139_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A white jumpsuit, a dead-level stare, one glass plane with a dark bar.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-140-57937e31e10a91d2",
+      "dogId": "140",
+      "title": "Alan",
+      "number": 140,
+      "kind": "original",
+      "image": "assets/dog-140-57937e31e10a91d2.jpg",
+      "imageHash": "57937e31e10a91d2b87341d2129bdb2737a926e03a4bad64c2dab68a44fcbd3d",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/140_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The red flare in the mouth, a spray at the burning tip.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-141-09be16234b4d305e",
+      "dogId": "141",
+      "title": "Gump",
+      "number": 141,
+      "kind": "original",
+      "image": "assets/dog-141-09be16234b4d305e.jpg",
+      "imageHash": "09be16234b4d305e1d28e99d8386668dfc35a82f4a023a5172b0010be78db811",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_paint_all/141_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "The red cap and the long beard on a white shirt.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-142-69483a2fa3ca9e09",
+      "dogId": "142",
+      "title": "Keith",
+      "number": 142,
+      "kind": "original",
+      "image": "assets/dog-142-69483a2fa3ca9e09.jpg",
+      "imageHash": "69483a2fa3ca9e09d7cfca645107794c77988df4221f0c503530fbe05e2ae211",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/142_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Round black glasses, a plain white tee, drop ears; a barking dog, a red dancer and a radiant baby in thick black line on a hot yellow wall.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-143-738387230b697c2a",
+      "dogId": "143",
+      "title": "Edvard",
+      "number": 143,
+      "kind": "original",
+      "image": "assets/dog-143-738387230b697c2a.jpg",
+      "imageHash": "738387230b697c2acb29ca3e7b22b1b7dedf3a6b4e9771b528f2b79f9f6ae0fb",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/143_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A pale bald head, a long dark coat, both paws pressed to the cheeks; a burning striped sky over a blue-black fjord and a bridge rail.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-144-0129d92f30ca7aa9",
+      "dogId": "144",
+      "title": "Salvador",
+      "number": 144,
+      "kind": "original",
+      "image": "assets/dog-144-0129d92f30ca7aa9.jpg",
+      "imageHash": "0129d92f30ca7aa9e563c4060f61db0d5eed296a7afe35d7771f9ac2dbc1ff85",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/144_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A charcoal suit, a white shirt, the waxed moustache turned up, a cane; a bleached desert, a dead tree and two melting watches.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-145-8d1673476f456342",
+      "dogId": "145",
+      "title": "Roy",
+      "number": 145,
+      "kind": "original",
+      "image": "assets/dog-145-8d1673476f456342.jpg",
+      "imageHash": "8d1673476f456342d70a51c04e767365283fd7833d2242af0cb9c505eebc096f",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/145_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A navy blazer, a white shirt, black square glasses; a field of red and blue dots, one empty speech balloon and one big yellow burst.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-146-a07e3b46859d0319",
+      "dogId": "146",
+      "title": "Piet",
+      "number": 146,
+      "kind": "original",
+      "image": "assets/dog-146-a07e3b46859d0319.jpg",
+      "imageHash": "a07e3b46859d03190289af557fcc3bbfcb4e4acd46b0217c43a28594dd3ea01e",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/146_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Round steel glasses, a dark grey suit, a small black bow tie; a white wall ruled in thick black lines with one red, one blue and one yellow block.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-147-217ede0bec98c0de",
+      "dogId": "147",
+      "title": "Henri",
+      "number": 147,
+      "kind": "original",
+      "image": "assets/dog-147-217ede0bec98c0de.jpg",
+      "imageHash": "217ede0bec98c0dee9b0a89b45eee66c485862e8f41ad22be1fc58ddbb574f5a",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/147_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A short white beard, round wire glasses, a brown corduroy jacket; big cut-paper fronds in blue, green, orange, magenta and yellow on cream.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-148-7852aa2296e4960e",
+      "dogId": "148",
+      "title": "Gustav",
+      "number": 148,
+      "kind": "original",
+      "image": "assets/dog-148-7852aa2296e4960e.jpg",
+      "imageHash": "7852aa2296e4960e6a2633fe545149be8353bf64a589c62a01cb993d63e04fc3",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/148_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A full dark beard and the long blue painter's smock; a gold field, a tall cloak of black-and-white squares and coloured spirals, a flower meadow.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": "Gallery intentionally selects first artist version",
+      "prop": null
+    },
+    {
+      "id": "original-149-1c06e20e4536d542",
+      "dogId": "149",
+      "title": "David",
+      "number": 149,
+      "kind": "original",
+      "image": "assets/dog-149-1c06e20e4536d542.jpg",
+      "imageHash": "1c06e20e4536d542595825a3d6de538ec72ccb9b26984dfbae3c1389c196ea88",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/149_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "Bleached blond hair, round black glasses, a mustard cardigan, mismatched socks; a flat pink house, two palms, a diving board and the splash.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-150-747d7e732650810a",
+      "dogId": "150",
+      "title": "Jeff",
+      "number": 150,
+      "kind": "original",
+      "image": "assets/dog-150-747d7e732650810a.jpg",
+      "imageHash": "747d7e732650810a36fa12684f0408027da4c4e1fef46ff017637700a2d71675",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/150_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A white shirt and a dark tie, no glasses; a huge magenta balloon dog with white highlights on a pale museum wall, floating balloon discs.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "original-151-3cf9b3cff290171d",
+      "dogId": "151",
+      "title": "Rene",
+      "number": 151,
+      "kind": "original",
+      "image": "assets/dog-151-3cf9b3cff290171d.jpg",
+      "imageHash": "3cf9b3cff290171dc783c27a7b705c4339666b4ab627dc5f822a007adad9d995",
+      "parent": null,
+      "source": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/151_faithful_1000.jpg",
+      "sourceHash": null,
+      "description": "A black bowler, a black overcoat, a white shirt front and a narrow red tie; a blue sky of cumulus, a sea, a brick parapet and one green apple beside the face.",
+      "selectedReference": true,
+      "traitNotes": null,
+      "versionNote": null,
+      "prop": null
+    },
+    {
+      "id": "study-fire-28240b9414f607ba",
+      "dogId": "62",
+      "number": null,
+      "title": "Fire",
+      "kind": "study",
+      "image": "assets/study-fire-28240b9414f607ba.jpg",
+      "detail": "assets/detail-fire-f214445750572cce.jpg",
+      "imageHash": "28240b9414f607baa110396bb31a0dc8c5892a25fe422bc0ed64a9683f559447",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/fire",
+      "sourceHash": "971c2047e8ae51ab76f2c8d361f42057788293c4303d6e37f10bea912e6f1e87",
+      "selectedReference": false,
+      "prop": "fire",
+      "description": "A prop study on Barack. Original fire baseline."
+    },
+    {
+      "id": "study-angel_wings-17a68b0824f8d70a",
+      "dogId": "62",
+      "number": null,
+      "title": "Angel wings",
+      "kind": "study",
+      "image": "assets/study-angel_wings-17a68b0824f8d70a.jpg",
+      "detail": "assets/detail-angel_wings-39df8c735df89506.jpg",
+      "imageHash": "17a68b0824f8d70ab5de7d5bca1c4707eaeb1d3a9265ddfee8efcc0671e31158",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/angel_wings",
+      "sourceHash": "971c2047e8ae51ab76f2c8d361f42057788293c4303d6e37f10bea912e6f1e87",
+      "selectedReference": false,
+      "prop": "angel_wings",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-jetpack-64cbc7149ba88176",
+      "dogId": "62",
+      "number": null,
+      "title": "Jetpack",
+      "kind": "study",
+      "image": "assets/study-jetpack-64cbc7149ba88176.jpg",
+      "detail": "assets/detail-jetpack-123ca412a6668ed8.jpg",
+      "imageHash": "64cbc7149ba88176a60fb7c90580e6fb2c16b24d108d6491c617ab00b5c9a42c",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/jetpack",
+      "sourceHash": "da7a3cf5aab7485bbb7e738bd7910d8ca8147a5c7c2f5f995a916bb662c9adca",
+      "selectedReference": false,
+      "prop": "jetpack",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-halo-a1b4cdaa9f0de367",
+      "dogId": "62",
+      "number": null,
+      "title": "Halo",
+      "kind": "study",
+      "image": "assets/study-halo-a1b4cdaa9f0de367.jpg",
+      "detail": "assets/detail-halo-5efd07051ff3a40d.jpg",
+      "imageHash": "a1b4cdaa9f0de367a0b3857a011ec85b2e5d35d26b683f66eb7648532e65c952",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/halo",
+      "sourceHash": "da7a3cf5aab7485bbb7e738bd7910d8ca8147a5c7c2f5f995a916bb662c9adca",
+      "selectedReference": false,
+      "prop": "halo",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-crown-ae9dcc2d3349883d",
+      "dogId": "62",
+      "number": null,
+      "title": "Crown",
+      "kind": "study",
+      "image": "assets/study-crown-ae9dcc2d3349883d.jpg",
+      "detail": "assets/detail-crown-25f583a06b45c0b8.jpg",
+      "imageHash": "ae9dcc2d3349883d74f59bb6f6c6b3bff46ebe681c2e8b8a55e04d44fcd378af",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/crown",
+      "sourceHash": "231b055284b19a48f44bfd8550da3862e7e40e551003fa661f6fb8c22a397301",
+      "selectedReference": false,
+      "prop": "crown",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-airplane-3bb1ba296c232b0d",
+      "dogId": "62",
+      "number": null,
+      "title": "Airplane",
+      "kind": "study",
+      "image": "assets/study-airplane-3bb1ba296c232b0d.jpg",
+      "detail": "assets/detail-airplane-d8fe14289ab08946.jpg",
+      "imageHash": "3bb1ba296c232b0d563e0c65de2442e9453d9e505fcd56763a46302a579e090c",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/airplane",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "airplane",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-police_car-bf1172f9cd8382b2",
+      "dogId": "62",
+      "number": null,
+      "title": "Police car",
+      "kind": "study",
+      "image": "assets/study-police_car-bf1172f9cd8382b2.jpg",
+      "detail": "assets/detail-police_car-c045f7fbb6b0186f.jpg",
+      "imageHash": "bf1172f9cd8382b204ec1b2f58dbfc0d3a1bd3ce41691d637cc1429bfa966d78",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/police_car",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "police_car",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-pickup_truck-4d249e5cca2985a4",
+      "dogId": "62",
+      "number": null,
+      "title": "Pickup truck",
+      "kind": "study",
+      "image": "assets/study-pickup_truck-4d249e5cca2985a4.jpg",
+      "detail": "assets/detail-pickup_truck-123cd4f65524d678.jpg",
+      "imageHash": "4d249e5cca2985a481cca149090b2e8b85a668770ea87301c5eb939d272d68f9",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/pickup_truck",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "pickup_truck",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-motorcycle-37aefb23f3869aab",
+      "dogId": "62",
+      "number": null,
+      "title": "Motorcycle",
+      "kind": "study",
+      "image": "assets/study-motorcycle-37aefb23f3869aab.jpg",
+      "detail": "assets/detail-motorcycle-c2547cd279ee975c.jpg",
+      "imageHash": "37aefb23f3869aab3515b9ca3cdc638b5fe58ec783eb21192d40145fd374d1c7",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/motorcycle",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "motorcycle",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-tank-5f1a1962a8d0fa82",
+      "dogId": "62",
+      "number": null,
+      "title": "Tank",
+      "kind": "study",
+      "image": "assets/study-tank-5f1a1962a8d0fa82.jpg",
+      "detail": "assets/detail-tank-195d840dc1f781c3.jpg",
+      "imageHash": "5f1a1962a8d0fa82cae3a97aa843a81b122c925f893fab5c2a61483ec52a9e73",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/tank",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "tank",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-boat-61f87165e3f68fe7",
+      "dogId": "62",
+      "number": null,
+      "title": "Boat",
+      "kind": "study",
+      "image": "assets/study-boat-61f87165e3f68fe7.jpg",
+      "detail": "assets/detail-boat-d3c189c3d71042e4.jpg",
+      "imageHash": "61f87165e3f68fe76475500aec7a6300d6d06204f36ed4147bd48d6d5344e928",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/boat",
+      "sourceHash": "334012d404ee4250511770bc2028c6dae4abaa7ac026084615da533e5c2b2b76",
+      "selectedReference": false,
+      "prop": "boat",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-pocket_knife-cb7da6f62358a9d5",
+      "dogId": "62",
+      "number": null,
+      "title": "Pocket knife",
+      "kind": "study",
+      "image": "assets/study-pocket_knife-cb7da6f62358a9d5.jpg",
+      "detail": "assets/detail-pocket_knife-b03a010534be0f42.jpg",
+      "imageHash": "cb7da6f62358a9d503c23673ef45203827536d7788975ae4cb202efc69bbdfd2",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/pocket_knife",
+      "sourceHash": "9385c800b1c6eafe298a891bcf46b4a857353d24b1cce7ade2976b1bc7349020",
+      "selectedReference": false,
+      "prop": "pocket_knife",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-pocket_knife_loaded-3c7c395a2be3b112",
+      "dogId": "62",
+      "number": null,
+      "title": "Pocket knife loaded",
+      "kind": "study",
+      "image": "assets/study-pocket_knife_loaded-3c7c395a2be3b112.jpg",
+      "detail": "assets/detail-pocket_knife_loaded-40908930da43fa5f.jpg",
+      "imageHash": "3c7c395a2be3b1129afabe6963a5955863c4cb0995b7d09704fbaf93eaf7424d",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/pocket_knife_loaded",
+      "sourceHash": "9385c800b1c6eafe298a891bcf46b4a857353d24b1cce7ade2976b1bc7349020",
+      "selectedReference": false,
+      "prop": "pocket_knife_loaded",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-toy_gun-e665d6b52667fea4",
+      "dogId": "62",
+      "number": null,
+      "title": "Toy gun",
+      "kind": "study",
+      "image": "assets/study-toy_gun-e665d6b52667fea4.jpg",
+      "detail": "assets/detail-toy_gun-fc47802c86587e14.jpg",
+      "imageHash": "e665d6b52667fea4cf6381a4945858fe8832901b0d3c9cae6d7bd3d7c62f41bf",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/toy_gun",
+      "sourceHash": "2eff31c6a538ec600c313177963b63e1d91e1f46eff2fcc5b38cee4d8a1a257f",
+      "selectedReference": false,
+      "prop": "toy_gun",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-bomb-5297768551f261d1",
+      "dogId": "62",
+      "number": null,
+      "title": "Bomb",
+      "kind": "study",
+      "image": "assets/study-bomb-5297768551f261d1.jpg",
+      "detail": "assets/detail-bomb-3cedb57478533d79.jpg",
+      "imageHash": "5297768551f261d17cc1bb7de00cd4b6c217dc3fe5e8e8880c7803658999df90",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/bomb",
+      "sourceHash": "014ffe46f36823de22b2315ade9f05fe39845746a68ff14f79a0cbf4834c310a",
+      "selectedReference": false,
+      "prop": "bomb",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-guitar-c8a32853f860f15d",
+      "dogId": "62",
+      "number": null,
+      "title": "Guitar",
+      "kind": "study",
+      "image": "assets/study-guitar-c8a32853f860f15d.jpg",
+      "detail": "assets/detail-guitar-abe58e37e83c7ffb.jpg",
+      "imageHash": "c8a32853f860f15d32e04d4f8f6e5ce813e5195c4188189619191cba170442da",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/guitar",
+      "sourceHash": "bb7f0ae4179efb2d44d2e650cb4e85c5cb43f7f66f309e4ab1974431e0af18a8",
+      "selectedReference": false,
+      "prop": "guitar",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-boombox-a1e695a0a6152e74",
+      "dogId": "62",
+      "number": null,
+      "title": "Boombox",
+      "kind": "study",
+      "image": "assets/study-boombox-a1e695a0a6152e74.jpg",
+      "detail": "assets/detail-boombox-9ff26a0b3f023350.jpg",
+      "imageHash": "a1e695a0a6152e74d7d46b8f55070af8d070d138129abff3cbe0671e63d9a5d0",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/boombox",
+      "sourceHash": "2eff31c6a538ec600c313177963b63e1d91e1f46eff2fcc5b38cee4d8a1a257f",
+      "selectedReference": false,
+      "prop": "boombox",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-bird-507002ee832b9ac4",
+      "dogId": "62",
+      "number": null,
+      "title": "Bird",
+      "kind": "study",
+      "image": "assets/study-bird-507002ee832b9ac4.jpg",
+      "detail": "assets/detail-bird-533e7fbc5a2e07d0.jpg",
+      "imageHash": "507002ee832b9ac46dfe8994c0639e413ca8056ff231734f6da4f5918cab8564",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/bird",
+      "sourceHash": "da7a3cf5aab7485bbb7e738bd7910d8ca8147a5c7c2f5f995a916bb662c9adca",
+      "selectedReference": false,
+      "prop": "bird",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-cat-3135c0b7c0a56e2e",
+      "dogId": "62",
+      "number": null,
+      "title": "Cat",
+      "kind": "study",
+      "image": "assets/study-cat-3135c0b7c0a56e2e.jpg",
+      "detail": "assets/detail-cat-063ddd752fbf848e.jpg",
+      "imageHash": "3135c0b7c0a56e2ef4bfd966ce541479ae63bb78089a0e99954d8a10606b9ac9",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/cat",
+      "sourceHash": "b24d92486502627b5d34a7aabf7fcc54d8b04976c402967dc76feba5e36deea6",
+      "selectedReference": false,
+      "prop": "cat",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-flowers-89be27d99a41a92b",
+      "dogId": "62",
+      "number": null,
+      "title": "Flowers",
+      "kind": "study",
+      "image": "assets/study-flowers-89be27d99a41a92b.jpg",
+      "detail": "assets/detail-flowers-f942f51fa8e37a59.jpg",
+      "imageHash": "89be27d99a41a92ba94f8ff7b01bbf15f11fd7dab2fd9c52c9c02b8fe85dbca8",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/flowers",
+      "sourceHash": "bb7f0ae4179efb2d44d2e650cb4e85c5cb43f7f66f309e4ab1974431e0af18a8",
+      "selectedReference": false,
+      "prop": "flowers",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "study-house-1bd5fc728adb5607",
+      "dogId": "62",
+      "number": null,
+      "title": "House",
+      "kind": "study",
+      "image": "assets/study-house-1bd5fc728adb5607.jpg",
+      "detail": "assets/detail-house-218a803ac2475076.jpg",
+      "imageHash": "1bd5fc728adb5607215cc0677545e5d473598d2de59b9cd4c658736e6ebdcc35",
+      "parent": "original-62-fb27c29277cc6593",
+      "source": "prop-suite-r5/house",
+      "sourceHash": "da7a3cf5aab7485bbb7e738bd7910d8ca8147a5c7c2f5f995a916bb662c9adca",
+      "selectedReference": false,
+      "prop": "house",
+      "description": "A prop study on Barack. The original fire remains in the painting."
+    }
+  ],
+  "rounds": [
+    {
+      "id": "collection-r1",
+      "title": "First choices",
+      "description": "Twelve comparisons about particular details. A choice does not decide whether the whole dog joins the collection.",
+      "trials": [
+        {
+          "id": "collection-r1-q1-9ade21ce9961",
+          "roundId": "collection-r1",
+          "left": "original-62-fb27c29277cc6593",
+          "right": "original-63-55f1aca66b25a384",
+          "attribute": "eyes",
+          "question": "Which eye treatment would you carry into another dog?"
+        },
+        {
+          "id": "collection-r1-q2-50fb0e331054",
+          "roundId": "collection-r1",
+          "left": "study-pocket_knife-cb7da6f62358a9d5",
+          "right": "study-pocket_knife_loaded-3c7c395a2be3b112",
+          "attribute": "surface",
+          "question": "Which treatment of the knife’s painted surface do you prefer?"
+        },
+        {
+          "id": "collection-r1-q3-9911f3b664a8",
+          "roundId": "collection-r1",
+          "left": "original-38-8c1f9d085e1cbc56",
+          "right": "original-70-15217a88a113bca3",
+          "attribute": "clothing",
+          "question": "Which way of fitting the costume to the dog’s body do you prefer?"
+        },
+        {
+          "id": "collection-r1-q4-2937c373db9d",
+          "roundId": "collection-r1",
+          "left": "study-halo-a1b4cdaa9f0de367",
+          "right": "study-crown-ae9dcc2d3349883d",
+          "attribute": "composition",
+          "question": "Which shape above the head works better in this painting?"
+        },
+        {
+          "id": "collection-r1-q5-121cb932f24d",
+          "roundId": "collection-r1",
+          "left": "original-112-cfcd6f3059d933e1",
+          "right": "original-116-b6e7d5e48cb47492",
+          "attribute": "pose",
+          "question": "Which body pose would you carry into another dog?"
+        },
+        {
+          "id": "collection-r1-q6-19392833dac0",
+          "roundId": "collection-r1",
+          "left": "study-bird-507002ee832b9ac4",
+          "right": "study-cat-3135c0b7c0a56e2e",
+          "attribute": "companion",
+          "question": "Which small companion feels more at home beside this dog?"
+        },
+        {
+          "id": "collection-r1-q7-b9d9071099c2",
+          "roundId": "collection-r1",
+          "left": "original-101-2d6658eb30b9627c",
+          "right": "original-102-740f0ee3c80ab095",
+          "attribute": "palette",
+          "question": "Which combination of coat, clothing and background colors do you prefer?"
+        },
+        {
+          "id": "collection-r1-q8-8ed095caf2e6",
+          "roundId": "collection-r1",
+          "left": "study-airplane-3bb1ba296c232b0d",
+          "right": "study-police_car-bf1172f9cd8382b2",
+          "attribute": "action",
+          "question": "Which way of showing the toy in motion do you prefer?"
+        },
+        {
+          "id": "collection-r1-q9-936868b08eae",
+          "roundId": "collection-r1",
+          "left": "original-1-bbc52cefbb802de5",
+          "right": "original-129-979b06df17a93815",
+          "attribute": "clothing",
+          "question": "Which way of painting pale clothing around the dog’s body do you prefer?"
+        },
+        {
+          "id": "collection-r1-q10-c9479f5e195e",
+          "roundId": "collection-r1",
+          "left": "study-guitar-c8a32853f860f15d",
+          "right": "study-boombox-a1e695a0a6152e74",
+          "attribute": "interaction",
+          "question": "Which musical prop works better with the dog’s pose?"
+        },
+        {
+          "id": "collection-r1-q11-4aa4579a2057",
+          "roundId": "collection-r1",
+          "left": "original-148-7852aa2296e4960e",
+          "right": "original-151-3cf9b3cff290171d",
+          "attribute": "background",
+          "question": "Which relationship between the dog and its background do you prefer?"
+        },
+        {
+          "id": "collection-r1-q12-940b14f30ee8",
+          "roundId": "collection-r1",
+          "left": "study-fire-28240b9414f607ba",
+          "right": "study-angel_wings-17a68b0824f8d70a",
+          "attribute": "composition",
+          "question": "Which balance between the dog and its accessories do you prefer?"
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "oil-stick",
+      "title": "Uneven oil-stick line",
+      "description": "Vary pressure, thickness, gaps and buildup within a gesture.",
+      "example": "study-pocket_knife-cb7da6f62358a9d5"
+    },
+    {
+      "id": "paint-overflow",
+      "title": "Paint crosses the drawing",
+      "description": "Let pigment exceed or miss the independent contour.",
+      "example": "original-62-fb27c29277cc6593"
+    },
+    {
+      "id": "toy-scale",
+      "title": "A toy with presence",
+      "description": "Small enough to be a toy; large enough for its drawing and action to read.",
+      "example": "study-police_car-bf1172f9cd8382b2"
+    },
+    {
+      "id": "sound",
+      "title": "Sound from the object",
+      "description": "Sirens, music or words have a source and a direction.",
+      "example": "study-boombox-a1e695a0a6152e74"
+    },
+    {
+      "id": "air-gap",
+      "title": "A little impossibility",
+      "description": "A crown floats with visible space beneath it.",
+      "example": "study-crown-ae9dcc2d3349883d"
+    },
+    {
+      "id": "one-event",
+      "title": "One main event",
+      "description": "Let one action dominate while supporting marks stay quieter.",
+      "example": "study-tank-5f1a1962a8d0fa82"
+    },
+    {
+      "id": "companion",
+      "title": "A small relationship",
+      "description": "A companion belongs to the same space and participates in the scene.",
+      "example": "study-bird-507002ee832b9ac4"
+    },
+    {
+      "id": "silhouette",
+      "title": "Character in the silhouette",
+      "description": "Find personality in proportions and posture before adding accessories.",
+      "example": "original-116-b6e7d5e48cb47492"
+    }
+  ]
+}
