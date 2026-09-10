@@ -3,14 +3,14 @@
   "portraits": [
     {
       "id": "rushmore-oil-max",
-      "title": "Max Fischer \u00b7 Oil stick",
+      "title": "Max Fischer · Oil stick",
       "characterId": "max-fischer",
       "characterName": "Max Fischer",
       "image": "assets/rushmore-oil-max.jpg",
       "group": "Rushmore",
       "roundId": "rushmore-oil-1",
       "status": "New oil-stick study",
-      "description": "Broken, restarted glasses and a tipped head hold Max\u2019s determined stare. Dark hair drags meet bare ground; the eyes remain markedly unequal.",
+      "description": "Broken, restarted glasses and a tipped head hold Max’s determined stare. Dark hair drags meet bare ground; the eyes remain markedly unequal.",
       "moves": [
         "unequal-eyes",
         "recovery-line",
@@ -24,14 +24,14 @@
       "collaboratorRole": "Design and visual critique",
       "influence": "Cy Twombly",
       "comparison": {
-        "fingerprint": "d36b38cc5580ec2dae662d78f831d7294977b1a5142145db4969dc7fb2f70674",
+        "fingerprint": "454ead2fee75a38134ce3da3bd534f3259ac26c67a5b8a2191c3dafebfc9ed37",
         "similar": [],
         "indistinct": {}
       }
     },
     {
       "id": "rushmore-oil-herman",
-      "title": "Herman Blume \u00b7 Oil stick",
+      "title": "Herman Blume · Oil stick",
       "characterId": "herman-blume",
       "characterName": "Herman Blume",
       "image": "assets/rushmore-oil-herman.jpg",
@@ -52,14 +52,14 @@
       "collaboratorRole": "Design and visual critique",
       "influence": "Jean-Michel Basquiat",
       "comparison": {
-        "fingerprint": "40003bceae4e942e2bb3eeb8b77fa5b9321de431c9a260c0f2bbadff1a4a2c01",
+        "fingerprint": "16251a3b215a8b5c20d95a9887ce791da6ca425d80de6375d60e5cc796ec510a",
         "similar": [],
         "indistinct": {}
       }
     },
     {
       "id": "rushmore-oil-rosemary",
-      "title": "Rosemary Cross \u00b7 Oil stick",
+      "title": "Rosemary Cross · Oil stick",
       "characterId": "rosemary-cross",
       "characterName": "Rosemary Cross",
       "image": "assets/rushmore-oil-rosemary.jpg",
@@ -80,14 +80,14 @@
       "collaboratorRole": "Design and visual critique",
       "influence": "Henry Taylor",
       "comparison": {
-        "fingerprint": "a4474506ea8d857f164e137b60f10a48d4f1e268feb97d2d531ab90511292eff",
+        "fingerprint": "4a67345f05544c05d8a1100d6e0a5ecff061bfd582ccb4e2dcd449b8e7731166",
         "similar": [],
         "indistinct": {}
       }
     },
     {
       "id": "rushmore-oil-dirk",
-      "title": "Dirk Calloway \u00b7 Oil stick",
+      "title": "Dirk Calloway · Oil stick",
       "characterId": "dirk-calloway",
       "characterName": "Dirk Calloway",
       "image": "assets/rushmore-oil-dirk.jpg",
@@ -108,14 +108,14 @@
       "collaboratorRole": "Design and visual critique",
       "influence": "Original oil-stick study",
       "comparison": {
-        "fingerprint": "cd60782938cbbf62c0397bfe4b828023f23d55598536392d81c5b9fbebf0a6a5",
+        "fingerprint": "95645f9ca025d1a9f0916e900296384c508222fde8a298c032e505c0d59c2974",
         "similar": [],
         "indistinct": {}
       }
     },
     {
       "id": "spirit2-leon-astra",
-      "title": "L\u00e9on \u00b7 Astra",
+      "title": "Léon · Astra",
       "image": "assets/spirit2-leon-astra.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -137,11 +137,11 @@
         "indistinct": {}
       },
       "characterId": "leon",
-      "characterName": "L\u00e9on"
+      "characterName": "Léon"
     },
     {
       "id": "spirit2-mathilda-astra",
-      "title": "Mathilda \u00b7 Astra",
+      "title": "Mathilda · Astra",
       "image": "assets/spirit2-mathilda-astra.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -167,7 +167,7 @@
     },
     {
       "id": "spirit2-alan-astra",
-      "title": "Alan \u00b7 Astra",
+      "title": "Alan · Astra",
       "image": "assets/spirit2-alan-astra.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -193,7 +193,7 @@
     },
     {
       "id": "spirit2-damon-astra",
-      "title": "Damon \u00b7 Astra",
+      "title": "Damon · Astra",
       "image": "assets/spirit2-damon-astra.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -219,7 +219,7 @@
     },
     {
       "id": "spirit2-leon-fable",
-      "title": "L\u00e9on \u00b7 Fable",
+      "title": "Léon · Fable",
       "image": "assets/spirit2-leon-fable.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -241,11 +241,11 @@
         "indistinct": {}
       },
       "characterId": "leon",
-      "characterName": "L\u00e9on"
+      "characterName": "Léon"
     },
     {
       "id": "spirit2-mathilda-fable",
-      "title": "Mathilda \u00b7 Fable",
+      "title": "Mathilda · Fable",
       "image": "assets/spirit2-mathilda-fable.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -271,7 +271,7 @@
     },
     {
       "id": "spirit2-alan-fable",
-      "title": "Alan \u00b7 Fable",
+      "title": "Alan · Fable",
       "image": "assets/spirit2-alan-fable.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -297,7 +297,7 @@
     },
     {
       "id": "spirit2-damon-fable",
-      "title": "Damon \u00b7 Fable",
+      "title": "Damon · Fable",
       "image": "assets/spirit2-damon-fable.jpg",
       "group": "Eight spirits",
       "status": "Earlier Astra + Fable study",
@@ -323,10 +323,10 @@
     },
     {
       "id": "duet1-leon-astra",
-      "title": "L\u00e9on \u00b7 watchful tenderness \u00b7 Astra \u00b7 extra high",
+      "title": "Léon · watchful tenderness · Astra · extra high",
       "image": "assets/duet1-leon-astra.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Astra · extra high authored · reviewed by both models",
       "description": "A long face, emphatically unequal eyes behind broken spectacle rims, a full olive cap and an inward coat. A warm crooked nose carries the tired expression.",
       "moves": [
         "unequal-eyes",
@@ -347,14 +347,14 @@
         "indistinct": {}
       },
       "characterId": "leon",
-      "characterName": "L\u00e9on"
+      "characterName": "Léon"
     },
     {
       "id": "duet1-leon-fable",
-      "title": "L\u00e9on \u00b7 worn and watchful \u00b7 Fable 5.1",
+      "title": "Léon · worn and watchful · Fable 5.1",
       "image": "assets/duet1-leon-fable.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Fable 5.1 authored · reviewed by both models",
       "description": "A longer sallow midface, broad warm nose, restrained unequal eyes and sparse stubble beneath a heavy charcoal cap. Long vertical coat drags echo the headwear.",
       "moves": [
         "unequal-eyes",
@@ -375,14 +375,14 @@
         "indistinct": {}
       },
       "characterId": "leon",
-      "characterName": "L\u00e9on"
+      "characterName": "Léon"
     },
     {
       "id": "duet1-mathilda-astra",
-      "title": "Mathilda \u00b7 guarded defiance \u00b7 Astra \u00b7 extra high",
+      "title": "Mathilda · guarded defiance · Astra · extra high",
       "image": "assets/duet1-mathilda-astra.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Astra · extra high authored · reviewed by both models",
       "description": "A low diagonal fringe, one sideways eye and one tall eye, compressed mouth and a held cuff. The withdrawn moss jacket keeps the expression guarded.",
       "moves": [
         "unequal-eyes",
@@ -407,10 +407,10 @@
     },
     {
       "id": "duet1-mathilda-fable",
-      "title": "Mathilda \u00b7 a withheld thought \u00b7 Fable 5.1",
+      "title": "Mathilda · a withheld thought · Fable 5.1",
       "image": "assets/duet1-mathilda-fable.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Fable 5.1 authored · reviewed by both models",
       "description": "Rough dark fringe falls into a quiet, worried face. Differently weighted eyes, a broken angular jaw and tightly folded arms give a more withheld presence.",
       "moves": [
         "unequal-eyes",
@@ -435,10 +435,10 @@
     },
     {
       "id": "duet1-alan-astra",
-      "title": "Alan Garner \u00b7 a puzzled pause \u00b7 Astra \u00b7 extra high",
+      "title": "Alan Garner · a puzzled pause · Astra · extra high",
       "image": "assets/duet1-alan-astra.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Astra · extra high authored · reviewed by both models",
       "description": "A pear-round head, broken walnut curls, sideways versus vertical eye and a small parted mouth. Warm separated beard marks and an awkward shirt opening carry the uncertainty.",
       "moves": [
         "unequal-eyes",
@@ -463,10 +463,10 @@
     },
     {
       "id": "duet1-alan-fable",
-      "title": "Alan Garner \u00b7 wide-eyed doubt \u00b7 Fable 5.1",
+      "title": "Alan Garner · wide-eyed doubt · Fable 5.1",
       "image": "assets/duet1-alan-fable.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Fable 5.1 authored · reviewed by both models",
       "description": "A broad heavy face with a large startled eye and a smaller doubtful eye. Curled loops, a full warm beard, a small mouth opening and a squat rumpled body carry the humor.",
       "moves": [
         "unequal-eyes",
@@ -491,10 +491,10 @@
     },
     {
       "id": "duet1-damon-astra",
-      "title": "Damon Salvatore \u00b7 knowing glance \u00b7 Astra \u00b7 extra high",
+      "title": "Damon Salvatore · knowing glance · Astra · extra high",
       "image": "assets/duet1-damon-astra.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Astra \u00b7 extra high authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Astra · extra high authored · reviewed by both models",
       "description": "A tapered jaw, swept indigo hair, tall versus hooded blue eye and violet paint through the lifted cheek. Dark slouched leather and thin trouser legs hold the small body.",
       "moves": [
         "unequal-eyes",
@@ -519,10 +519,10 @@
     },
     {
       "id": "duet1-damon-fable",
-      "title": "Damon Salvatore \u00b7 a crooked invitation \u00b7 Fable 5.1",
+      "title": "Damon Salvatore · a crooked invitation · Fable 5.1",
       "image": "assets/duet1-damon-fable.jpg",
-      "group": "Two artists \u00b7 four characters",
-      "status": "Fable 5.1 authored \u00b7 reviewed by both models",
+      "group": "Two artists · four characters",
+      "status": "Fable 5.1 authored · reviewed by both models",
       "description": "A broader angular face, unequal icy-blue eyes, swept raven hair and a crooked smirk. Broken jacket edges and a small grey neckline keep the dark figure open.",
       "moves": [
         "unequal-eyes",
@@ -547,11 +547,11 @@
     },
     {
       "id": "amelie-1",
-      "title": "Am\u00e9lie \u00b7 a private joke",
+      "title": "Amélie · a private joke",
       "image": "assets/amelie-1.jpg",
       "group": "New character",
       "status": "Earlier Astra + Fable study",
-      "description": "Am\u00e9lie Poulain through a short uneven fringe, a dark bob curling toward the jaw, unequal attentive eyes and a tiny lifted smile. A wine-red cardigan and a small pale-green neckline stroke keep the color warm and restrained.",
+      "description": "Amélie Poulain through a short uneven fringe, a dark bob curling toward the jaw, unequal attentive eyes and a tiny lifted smile. A wine-red cardigan and a small pale-green neckline stroke keep the color warm and restrained.",
       "moves": [
         "unequal-eyes",
         "cheek-mouth",
@@ -564,14 +564,21 @@
       "comparison": {
         "fingerprint": "99620e57fd411dc907c790f54f661f09bf0d67b10c5d7d85c496b820dafe4728",
         "similar": [],
-        "indistinct": {}
+        "indistinct": {
+          "eyes": [
+            "anchored1-amelie"
+          ],
+          "hair": [
+            "anchored1-amelie"
+          ]
+        }
       },
       "characterId": "amelie",
-      "characterName": "Am\u00e9lie"
+      "characterName": "Amélie"
     },
     {
       "id": "ethan-hunt-1",
-      "title": "Ethan Hunt \u00b7 watchful",
+      "title": "Ethan Hunt · watchful",
       "image": "assets/ethan-hunt-1.jpg",
       "group": "New character",
       "status": "Earlier Astra + Fable study",
@@ -594,7 +601,7 @@
     },
     {
       "id": "round3-tiffany-posture",
-      "title": "Tiffany \u00b7 holding her ground",
+      "title": "Tiffany · holding her ground",
       "image": "assets/round3-tiffany-posture.jpg",
       "group": "Round 3",
       "status": "Earlier Astra + Fable study",
@@ -617,7 +624,7 @@
     },
     {
       "id": "round3-tiffany-hand",
-      "title": "Tiffany \u00b7 a changing line",
+      "title": "Tiffany · a changing line",
       "image": "assets/round3-tiffany-hand.jpg",
       "group": "Round 3",
       "status": "Earlier Astra + Fable study",
@@ -640,7 +647,7 @@
     },
     {
       "id": "round2-tiffany-expression",
-      "title": "Tiffany \u00b7 a held smile",
+      "title": "Tiffany · a held smile",
       "image": "assets/round2-tiffany-expression.jpg",
       "group": "Round 2",
       "status": "Earlier Astra + Fable study",
@@ -681,7 +688,7 @@
     },
     {
       "id": "round2-tiffany-hair",
-      "title": "Tiffany \u00b7 broken hair planes",
+      "title": "Tiffany · broken hair planes",
       "image": "assets/round2-tiffany-hair.jpg",
       "group": "Round 2",
       "status": "Earlier Astra + Fable study",
@@ -721,7 +728,7 @@
     },
     {
       "id": "round2-bowie-character",
-      "title": "Bowie \u00b7 a knowing glance",
+      "title": "Bowie · a knowing glance",
       "image": "assets/round2-bowie-character.jpg",
       "group": "Round 2",
       "status": "Earlier Astra + Fable study",
@@ -744,7 +751,7 @@
     },
     {
       "id": "round1-lost-eye",
-      "title": "Bowie \u00b7 partly lost eye",
+      "title": "Bowie · partly lost eye",
       "image": "assets/round1-lost-eye.jpg",
       "group": "Round 1",
       "status": "Earlier Astra + Fable study",
@@ -767,7 +774,7 @@
     },
     {
       "id": "round1-eye-cheek",
-      "title": "Bowie \u00b7 eye into cheek",
+      "title": "Bowie · eye into cheek",
       "image": "assets/round1-eye-cheek.jpg",
       "group": "Round 1",
       "status": "Earlier Astra + Fable study",
@@ -790,7 +797,7 @@
     },
     {
       "id": "round1-displaced",
-      "title": "Bowie \u00b7 displaced drawing",
+      "title": "Bowie · displaced drawing",
       "image": "assets/round1-displaced.jpg",
       "group": "Round 1",
       "status": "Earlier Astra + Fable study",
@@ -813,7 +820,7 @@
     },
     {
       "id": "margot-original",
-      "title": "Margot \u00b7 original",
+      "title": "Margot · original",
       "image": "assets/margot-original.jpg",
       "group": "Origins",
       "status": "Liked reference",
@@ -849,7 +856,7 @@
     },
     {
       "id": "margot-study",
-      "title": "Margot \u00b7 drawing study",
+      "title": "Margot · drawing study",
       "image": "assets/margot-study.jpg",
       "group": "Origins",
       "status": "Preferred reference",
@@ -871,7 +878,7 @@
     },
     {
       "id": "richie-bold",
-      "title": "Richie \u00b7 bold",
+      "title": "Richie · bold",
       "image": "assets/richie-bold.jpg",
       "group": "Origins",
       "status": "Earlier portrait",
@@ -903,7 +910,7 @@
     },
     {
       "id": "richie-raw",
-      "title": "Richie \u00b7 raw",
+      "title": "Richie · raw",
       "image": "assets/richie-raw.jpg",
       "group": "Origins",
       "status": "Earlier study",
@@ -934,7 +941,7 @@
     },
     {
       "id": "royal-early",
-      "title": "Royal \u00b7 first direction",
+      "title": "Royal · first direction",
       "image": "assets/royal-early.jpg",
       "group": "Family",
       "status": "Rejected direction",
@@ -953,7 +960,7 @@
     },
     {
       "id": "etheline-early",
-      "title": "Etheline \u00b7 first direction",
+      "title": "Etheline · first direction",
       "image": "assets/etheline-early.jpg",
       "group": "Family",
       "status": "Rejected direction",
@@ -972,7 +979,7 @@
     },
     {
       "id": "royal-reset",
-      "title": "Royal \u00b7 corrected family",
+      "title": "Royal · corrected family",
       "image": "assets/royal-reset.jpg",
       "group": "Family",
       "status": "Too similar as a set",
@@ -993,7 +1000,7 @@
     },
     {
       "id": "etheline-reset",
-      "title": "Etheline \u00b7 corrected family",
+      "title": "Etheline · corrected family",
       "image": "assets/etheline-reset.jpg",
       "group": "Family",
       "status": "Too similar as a set",
@@ -1028,7 +1035,7 @@
     },
     {
       "id": "chas-reset",
-      "title": "Chas \u00b7 corrected family",
+      "title": "Chas · corrected family",
       "image": "assets/chas-reset.jpg",
       "group": "Family",
       "status": "Too similar as a set",
@@ -1049,7 +1056,7 @@
     },
     {
       "id": "ari-reset",
-      "title": "Ari \u00b7 corrected family",
+      "title": "Ari · corrected family",
       "image": "assets/ari-reset.jpg",
       "group": "Family",
       "status": "Too similar as a set",
@@ -1075,7 +1082,7 @@
     },
     {
       "id": "uzi-reset",
-      "title": "Uzi \u00b7 corrected family",
+      "title": "Uzi · corrected family",
       "image": "assets/uzi-reset.jpg",
       "group": "Family",
       "status": "Too similar as a set",
@@ -1096,7 +1103,7 @@
     },
     {
       "id": "bowie-1",
-      "title": "Bowie \u00b7 study 1",
+      "title": "Bowie · study 1",
       "image": "assets/bowie-1.jpg",
       "group": "Bowie",
       "status": "Earlier study",
@@ -1128,7 +1135,7 @@
     },
     {
       "id": "bowie-2",
-      "title": "Bowie \u00b7 study 2",
+      "title": "Bowie · study 2",
       "image": "assets/bowie-2.jpg",
       "group": "Bowie",
       "status": "Earlier study",
@@ -1188,7 +1195,7 @@
     },
     {
       "id": "bowie-3",
-      "title": "Bowie \u00b7 study 3",
+      "title": "Bowie · study 3",
       "image": "assets/bowie-3.jpg",
       "group": "Bowie",
       "status": "Earlier study",
@@ -1229,7 +1236,7 @@
     },
     {
       "id": "bowie-4",
-      "title": "Bowie \u00b7 accepted painting",
+      "title": "Bowie · accepted painting",
       "image": "assets/bowie-4.jpg",
       "group": "Bowie",
       "status": "Accepted reference",
@@ -1285,7 +1292,7 @@
     },
     {
       "id": "tiffany-1",
-      "title": "Tiffany \u00b7 first study",
+      "title": "Tiffany · first study",
       "image": "assets/tiffany-1.jpg",
       "group": "Tiffany",
       "status": "Earlier study",
@@ -1325,7 +1332,7 @@
     },
     {
       "id": "tiffany-2",
-      "title": "Tiffany \u00b7 selected portrait",
+      "title": "Tiffany · selected portrait",
       "image": "assets/tiffany-2.jpg",
       "group": "Tiffany",
       "status": "Loved reference",
@@ -1372,7 +1379,7 @@
     },
     {
       "id": "tiffany-fable",
-      "title": "Tiffany \u00b7 Fable refinement",
+      "title": "Tiffany · Fable refinement",
       "image": "assets/tiffany-fable.jpg",
       "group": "Tiffany",
       "status": "Too similar to its parent",
@@ -1394,7 +1401,7 @@
     },
     {
       "id": "mischief-1",
-      "title": "Bowie \u00b7 mischief 1",
+      "title": "Bowie · mischief 1",
       "image": "assets/mischief-1.jpg",
       "group": "Expression",
       "status": "Earlier experiment",
@@ -1437,7 +1444,7 @@
     },
     {
       "id": "mischief-2",
-      "title": "Bowie \u00b7 mischief 2",
+      "title": "Bowie · mischief 2",
       "image": "assets/mischief-2.jpg",
       "group": "Expression",
       "status": "Earlier experiment",
@@ -1503,7 +1510,7 @@
     },
     {
       "id": "mischief-3",
-      "title": "Bowie \u00b7 mischief 3",
+      "title": "Bowie · mischief 3",
       "image": "assets/mischief-3.jpg",
       "group": "Expression",
       "status": "Earlier experiment",
@@ -1570,7 +1577,7 @@
     },
     {
       "id": "mischief-4",
-      "title": "Bowie \u00b7 mischief 4",
+      "title": "Bowie · mischief 4",
       "image": "assets/mischief-4.jpg",
       "group": "Expression",
       "status": "Selected experiment",
@@ -1635,7 +1642,7 @@
     },
     {
       "id": "brush-1",
-      "title": "Bowie \u00b7 brush study 1",
+      "title": "Bowie · brush study 1",
       "image": "assets/brush-1.jpg",
       "group": "Brushwork",
       "status": "Earlier experiment",
@@ -1656,7 +1663,7 @@
     },
     {
       "id": "brush-2",
-      "title": "Bowie \u00b7 brush study 2",
+      "title": "Bowie · brush study 2",
       "image": "assets/brush-2.jpg",
       "group": "Brushwork",
       "status": "Earlier experiment",
@@ -1677,7 +1684,7 @@
     },
     {
       "id": "brush-3",
-      "title": "Bowie \u00b7 brush study 3",
+      "title": "Bowie · brush study 3",
       "image": "assets/brush-3.jpg",
       "group": "Brushwork",
       "status": "Earlier experiment",
@@ -1698,7 +1705,7 @@
     },
     {
       "id": "brush-4",
-      "title": "Bowie \u00b7 brush study 4",
+      "title": "Bowie · brush study 4",
       "image": "assets/brush-4.jpg",
       "group": "Brushwork",
       "status": "Earlier experiment",
@@ -1719,7 +1726,7 @@
     },
     {
       "id": "brush-5",
-      "title": "Bowie \u00b7 brush study 5",
+      "title": "Bowie · brush study 5",
       "image": "assets/brush-5.jpg",
       "group": "Brushwork",
       "status": "Useful passage, unresolved whole",
@@ -1742,7 +1749,7 @@
     },
     {
       "id": "crossed-cheek-1",
-      "title": "Bowie \u00b7 crossed cheek 1",
+      "title": "Bowie · crossed cheek 1",
       "image": "assets/crossed-cheek-1.jpg",
       "group": "Brushwork",
       "status": "Unresolved material study",
@@ -1781,7 +1788,7 @@
     },
     {
       "id": "crossed-cheek-2",
-      "title": "Bowie \u00b7 crossed cheek 2",
+      "title": "Bowie · crossed cheek 2",
       "image": "assets/crossed-cheek-2.jpg",
       "group": "Brushwork",
       "status": "Unresolved material study",
@@ -1831,7 +1838,7 @@
     },
     {
       "id": "painted-smile-1",
-      "title": "Bowie \u00b7 painted smile 1",
+      "title": "Bowie · painted smile 1",
       "image": "assets/painted-smile-1.jpg",
       "group": "Expression",
       "status": "Selected expression study",
@@ -1869,7 +1876,7 @@
     },
     {
       "id": "painted-smile-2",
-      "title": "Bowie \u00b7 painted smile 2",
+      "title": "Bowie · painted smile 2",
       "image": "assets/painted-smile-2.jpg",
       "group": "Expression",
       "status": "Expression experiment",
@@ -1907,7 +1914,7 @@
     },
     {
       "id": "taylor1-bowie-astra",
-      "title": "Bowie \u00b7 quiet planes \u00b7 Astra",
+      "title": "Bowie · quiet planes · Astra",
       "characterId": "bowie",
       "characterName": "Bowie",
       "image": "assets/taylor1-bowie-astra.jpg",
@@ -1936,9 +1943,9 @@
     },
     {
       "id": "taylor1-amelie-astra",
-      "title": "Am\u00e9lie \u00b7 direct presence \u00b7 Astra",
+      "title": "Amélie · direct presence · Astra",
       "characterId": "amelie",
-      "characterName": "Am\u00e9lie",
+      "characterName": "Amélie",
       "image": "assets/taylor1-amelie-astra.jpg",
       "group": "Henry Taylor studies",
       "status": "Earlier Astra + Fable study",
@@ -1965,7 +1972,7 @@
     },
     {
       "id": "taylor1-bowie-fable",
-      "title": "Bowie \u00b7 blue coat \u00b7 Fable 5.1",
+      "title": "Bowie · blue coat · Fable 5.1",
       "characterId": "bowie",
       "characterName": "Bowie",
       "image": "assets/taylor1-bowie-fable.jpg",
@@ -1994,9 +2001,9 @@
     },
     {
       "id": "taylor1-amelie-fable",
-      "title": "Am\u00e9lie \u00b7 warm color \u00b7 Fable 5.1",
+      "title": "Amélie · warm color · Fable 5.1",
       "characterId": "amelie",
-      "characterName": "Am\u00e9lie",
+      "characterName": "Amélie",
       "image": "assets/taylor1-amelie-fable.jpg",
       "group": "Henry Taylor studies",
       "status": "Earlier Astra + Fable study",
@@ -2025,7 +2032,7 @@
       "id": "archive-steve-zissou",
       "characterId": "steve-zissou",
       "characterName": "Steve Zissou",
-      "title": "Steve Zissou \u00b7 earlier study",
+      "title": "Steve Zissou · earlier study",
       "image": "assets/archive-steve-zissou.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2043,7 +2050,7 @@
       "id": "archive-wednesday-addams",
       "characterId": "wednesday-addams",
       "characterName": "Wednesday Addams",
-      "title": "Wednesday Addams \u00b7 earlier study",
+      "title": "Wednesday Addams · earlier study",
       "image": "assets/archive-wednesday-addams.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2061,7 +2068,7 @@
       "id": "archive-napoleon-dynamite",
       "characterId": "napoleon-dynamite",
       "characterName": "Napoleon Dynamite",
-      "title": "Napoleon Dynamite \u00b7 earlier study",
+      "title": "Napoleon Dynamite · earlier study",
       "image": "assets/archive-napoleon-dynamite.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2079,7 +2086,7 @@
       "id": "archive-donald-trump",
       "characterId": "donald-trump",
       "characterName": "Donald Trump",
-      "title": "Donald Trump \u00b7 earlier study",
+      "title": "Donald Trump · earlier study",
       "image": "assets/archive-donald-trump.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2097,7 +2104,7 @@
       "id": "archive-andy-warhol",
       "characterId": "andy-warhol",
       "characterName": "Andy Warhol",
-      "title": "Andy Warhol \u00b7 earlier study",
+      "title": "Andy Warhol · earlier study",
       "image": "assets/archive-andy-warhol.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2115,7 +2122,7 @@
       "id": "archive-elvis-presley",
       "characterId": "elvis-presley",
       "characterName": "Elvis Presley",
-      "title": "Elvis Presley \u00b7 earlier study",
+      "title": "Elvis Presley · earlier study",
       "image": "assets/archive-elvis-presley.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2133,7 +2140,7 @@
       "id": "archive-amy-winehouse",
       "characterId": "amy-winehouse",
       "characterName": "Amy Winehouse",
-      "title": "Amy Winehouse \u00b7 earlier study",
+      "title": "Amy Winehouse · earlier study",
       "image": "assets/archive-amy-winehouse.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2151,7 +2158,7 @@
       "id": "archive-vincent-van-gogh",
       "characterId": "vincent-van-gogh",
       "characterName": "Vincent van Gogh",
-      "title": "Vincent van Gogh \u00b7 earlier study",
+      "title": "Vincent van Gogh · earlier study",
       "image": "assets/archive-vincent-van-gogh.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2169,7 +2176,7 @@
       "id": "archive-steve-jobs",
       "characterId": "steve-jobs",
       "characterName": "Steve Jobs",
-      "title": "Steve Jobs \u00b7 earlier study",
+      "title": "Steve Jobs · earlier study",
       "image": "assets/archive-steve-jobs.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2187,7 +2194,7 @@
       "id": "archive-albert-einstein",
       "characterId": "albert-einstein",
       "characterName": "Albert Einstein",
-      "title": "Albert Einstein \u00b7 earlier study",
+      "title": "Albert Einstein · earlier study",
       "image": "assets/archive-albert-einstein.jpg",
       "group": "Earlier portraits",
       "status": "Restored earlier study",
@@ -2203,12 +2210,12 @@
     },
     {
       "id": "raw1-bowie-astra",
-      "title": "Bowie \u00b7 held lapel",
+      "title": "Bowie · held lapel",
       "characterId": "bowie",
       "characterName": "Bowie",
       "image": "assets/raw1-bowie-astra.jpg",
       "group": "Raw paint and gesture",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "New study · awaiting your response",
       "description": "A raised red shoulder and a small hand gripping the lapel give the unequal gaze a restrained, private expression. Earlier layered flesh and copper hair remain.",
       "moves": [
         "unequal-eyes",
@@ -2230,17 +2237,31 @@
       "comparison": {
         "fingerprint": "2bee91451e08f8bf38ecb48a7164b391351cf1fcd3ae9150ceb92467e9703e33",
         "similar": [],
-        "indistinct": {}
+        "indistinct": {
+          "eyes": [
+            "anchored1-bowie"
+          ],
+          "mouth": [
+            "anchored1-bowie"
+          ],
+          "expression": [
+            "anchored1-bowie"
+          ],
+          "hair": [
+            "anchored1-bowie"
+          ],
+          "brushwork": []
+        }
       }
     },
     {
       "id": "raw1-amelie-astra",
-      "title": "Am\u00e9lie \u00b7 finger to chin",
+      "title": "Amélie · finger to chin",
       "characterId": "amelie",
-      "characterName": "Am\u00e9lie",
+      "characterName": "Amélie",
       "image": "assets/raw1-amelie-astra.jpg",
       "group": "Raw paint and gesture",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "New study · awaiting your response",
       "description": "A raised elbow brings a crooked finger to the chin. The dark bob, uneven eyes and red cardigan keep the earlier raw paint, with a more deliberate gesture.",
       "moves": [
         "unequal-eyes",
@@ -2267,12 +2288,12 @@
     },
     {
       "id": "raw1-bowie-fable",
-      "title": "Bowie \u00b7 loose arm",
+      "title": "Bowie · loose arm",
       "characterId": "bowie",
       "characterName": "Bowie",
       "image": "assets/raw1-bowie-fable.jpg",
       "group": "Raw paint and gesture",
-      "status": "New study \u00b7 awaiting your response",
+      "status": "New study · awaiting your response",
       "description": "A violet and ochre jacket, a hanging hand and an arm tucked behind the body change the stance. Warm cheek paint and a broken collar passage cross the earlier drawing.",
       "moves": [
         "unequal-eyes",
@@ -2296,37 +2317,141 @@
         "similar": [],
         "indistinct": {}
       }
+    },
+    {
+      "id": "anchored1-bowie",
+      "title": "Bowie · broken jacket paint",
+      "characterId": "bowie",
+      "characterName": "Bowie",
+      "image": "assets/anchored1-bowie.jpg",
+      "group": "Anchored paint and gesture",
+      "status": "New study · awaiting your response",
+      "description": "The held lapel and unequal gaze return, with a more broken red shoulder, varied violet paint and short dry seams. A body study within the earlier portrait family.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "exhausted-drag"
+      ],
+      "parent": "bowie-3",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/anchored_round_01/bowie/out/bowie_anchored_v2_1000.png",
+      "author": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "reviewers": [
+        "Astra",
+        "Fable 5.1"
+      ],
+      "roundId": "anchored-1",
+      "comparison": {
+        "fingerprint": "d74238c279fbfdee3227298832bc426d91402a3854b2915e98d3906b1c0e5e16",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "raw1-bowie-astra"
+          ],
+          "mouth": [
+            "raw1-bowie-astra"
+          ],
+          "expression": [
+            "raw1-bowie-astra"
+          ],
+          "hair": [
+            "raw1-bowie-astra"
+          ],
+          "brushwork": []
+        }
+      }
+    },
+    {
+      "id": "anchored1-amelie",
+      "title": "Amélie · recovered face, thoughtful hand",
+      "characterId": "amelie",
+      "characterName": "Amélie",
+      "image": "assets/anchored1-amelie.jpg",
+      "group": "Anchored paint and gesture",
+      "status": "New study · awaiting your response",
+      "description": "The newer finger-to-chin pose carries the earlier uneven eyes, dark bob and face texture. A controlled recovery of the accepted paint inside the more individual gesture.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "recovery-line"
+      ],
+      "parent": "amelie-1",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/anchored_round_01/amelie/out/amelie_anchored_v2_1000.png",
+      "author": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "reviewers": [
+        "Astra",
+        "Fable 5.1"
+      ],
+      "roundId": "anchored-1",
+      "comparison": {
+        "fingerprint": "539f7c8e48bffcb5cb72c7df6406fefea1f2f1068dc091406ca1e33d240abe9b",
+        "similar": [],
+        "indistinct": {
+          "eyes": [
+            "amelie-1"
+          ],
+          "hair": [
+            "amelie-1"
+          ]
+        }
+      }
     }
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "rushmore-oil-1",
-    "title": "Rushmore \u00b7 Oil stick",
-    "description": "Four new characters with different ways of drawing: interrupted, forceful, direct and spare. Four comparisons.",
+    "id": "anchored-1",
+    "title": "Back inside the portrait language",
+    "description": "Two studies keep the earlier unequal eyes, layered paint and small gestures. Four choices about paint and posture.",
     "trials": [
       {
         "attribute": "brushwork",
-        "left": "rushmore-oil-max",
-        "right": "rushmore-oil-herman",
-        "question": "Which handling of the oil stick should we develop further?"
-      },
-      {
-        "attribute": "deconstruction",
-        "left": "rushmore-oil-max",
-        "right": "rushmore-oil-dirk",
-        "question": "Which balance of definition and omission feels more alive?"
-      },
-      {
-        "attribute": "expression",
-        "left": "rushmore-oil-rosemary",
-        "right": "rushmore-oil-herman",
-        "question": "Which portrait has the more compelling presence?"
+        "left": "anchored1-bowie",
+        "right": "bowie-3",
+        "question": "Which handling of paint would you carry forward?"
       },
       {
         "attribute": "brushwork",
-        "left": "rushmore-oil-dirk",
-        "right": "rushmore-oil-rosemary",
-        "question": "Which marks feel more convincing as oil stick?"
+        "left": "anchored1-bowie",
+        "right": "raw1-bowie-astra",
+        "question": "Looking at the jacket and hand, which handling of paint would you carry forward?"
+      },
+      {
+        "attribute": "posture",
+        "left": "anchored1-amelie",
+        "right": "amelie-1",
+        "question": "Which pose gives Amélie more personality?"
+      },
+      {
+        "attribute": "brushwork",
+        "left": "anchored1-amelie",
+        "right": "raw1-amelie-astra",
+        "question": "Looking at the face and hair, which handling of paint would you carry forward?"
+      }
+    ],
+    "comparisonNotes": [
+      {
+        "attribute": "brushwork",
+        "pair": [
+          "anchored1-bowie",
+          "raw1-bowie-astra"
+        ],
+        "region": "jacket and hand",
+        "box": [
+          0.2,
+          0.63,
+          0.68,
+          0.99
+        ],
+        "previewRMS": 20.323645769241296,
+        "threshold": 6,
+        "purpose": "visible difference only; no quality inference"
       }
     ]
   }
