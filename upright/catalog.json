@@ -2,6 +2,118 @@
   "version": 1,
   "portraits": [
     {
+      "id": "rushmore-oil-max",
+      "title": "Max Fischer \u00b7 Oil stick",
+      "characterId": "max-fischer",
+      "characterName": "Max Fischer",
+      "image": "assets/rushmore-oil-max.jpg",
+      "group": "Rushmore",
+      "roundId": "rushmore-oil-1",
+      "status": "New oil-stick study",
+      "description": "Broken, restarted glasses and a tipped head hold Max\u2019s determined stare. Dark hair drags meet bare ground; the eyes remain markedly unequal.",
+      "moves": [
+        "unequal-eyes",
+        "recovery-line",
+        "dry-separation"
+      ],
+      "featured": true,
+      "source": "tenenbaum_family_20260909/rushmore_oilstick/max/out/max_final.png",
+      "author": "gpt-6-astra",
+      "effort": "high",
+      "collaborator": "claude-fable-5-1",
+      "collaboratorRole": "Design and visual critique",
+      "influence": "Cy Twombly",
+      "comparison": {
+        "fingerprint": "d36b38cc5580ec2dae662d78f831d7294977b1a5142145db4969dc7fb2f70674",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "rushmore-oil-herman",
+      "title": "Herman Blume \u00b7 Oil stick",
+      "characterId": "herman-blume",
+      "characterName": "Herman Blume",
+      "image": "assets/rushmore-oil-herman.jpg",
+      "group": "Rushmore",
+      "roundId": "rushmore-oil-1",
+      "status": "New oil-stick study",
+      "description": "A heavy lid and jaw press downward while the smaller eye and mouth corner lift. Ochre interrupts the cheek; the contour changes weight and breaks.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "broken-color"
+      ],
+      "featured": true,
+      "source": "tenenbaum_family_20260909/rushmore_oilstick/herman/out/herman_final.png",
+      "author": "gpt-6-astra",
+      "effort": "high",
+      "collaborator": "claude-fable-5-1",
+      "collaboratorRole": "Design and visual critique",
+      "influence": "Jean-Michel Basquiat",
+      "comparison": {
+        "fingerprint": "40003bceae4e942e2bb3eeb8b77fa5b9321de431c9a260c0f2bbadff1a4a2c01",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "rushmore-oil-rosemary",
+      "title": "Rosemary Cross \u00b7 Oil stick",
+      "characterId": "rosemary-cross",
+      "characterName": "Rosemary Cross",
+      "image": "assets/rushmore-oil-rosemary.jpg",
+      "group": "Rushmore",
+      "roundId": "rushmore-oil-1",
+      "status": "New oil-stick study",
+      "description": "A warm forehead turns into a cooler cheek. Unequal eyes, a long neck and a small cardigan give Rosemary a quieter, more direct presence.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "sideways-gaze"
+      ],
+      "featured": true,
+      "source": "tenenbaum_family_20260909/rushmore_oilstick/rosemary/out/rosemary_final.png",
+      "author": "gpt-6-astra",
+      "effort": "high",
+      "collaborator": "claude-fable-5-1",
+      "collaboratorRole": "Design and visual critique",
+      "influence": "Henry Taylor",
+      "comparison": {
+        "fingerprint": "a4474506ea8d857f164e137b60f10a48d4f1e268feb97d2d531ab90511292eff",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
+      "id": "rushmore-oil-dirk",
+      "title": "Dirk Calloway \u00b7 Oil stick",
+      "characterId": "dirk-calloway",
+      "characterName": "Dirk Calloway",
+      "image": "assets/rushmore-oil-dirk.jpg",
+      "group": "Rushmore",
+      "roundId": "rushmore-oil-1",
+      "status": "New oil-stick study",
+      "description": "Paper supplies most of the face and blond hair. A firm small mouth, one pink cheek and a slanted school jacket keep the drawing spare.",
+      "moves": [
+        "unequal-eyes",
+        "dry-separation",
+        "loaded-deposit"
+      ],
+      "featured": true,
+      "source": "tenenbaum_family_20260909/rushmore_oilstick/dirk/out/dirk_final.png",
+      "author": "gpt-6-astra",
+      "effort": "high",
+      "collaborator": "claude-fable-5-1",
+      "collaboratorRole": "Design and visual critique",
+      "influence": "Original oil-stick study",
+      "comparison": {
+        "fingerprint": "cd60782938cbbf62c0397bfe4b828023f23d55598536392d81c5b9fbebf0a6a5",
+        "similar": [],
+        "indistinct": {}
+      }
+    },
+    {
       "id": "spirit2-leon-astra",
       "title": "L\u00e9on \u00b7 Astra",
       "image": "assets/spirit2-leon-astra.jpg",
@@ -2188,57 +2300,33 @@
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "raw-presence-1",
-    "title": "Raw paint, individual gestures",
-    "description": "Three new studies return to layered paint and unequal eyes. Compare each with its earlier portrait, then compare the two new Bowies. Eight choices.",
+    "id": "rushmore-oil-1",
+    "title": "Rushmore \u00b7 Oil stick",
+    "description": "Four new characters with different ways of drawing: interrupted, forceful, direct and spare. Four comparisons.",
     "trials": [
       {
         "attribute": "brushwork",
-        "left": "raw1-bowie-astra",
-        "right": "bowie-3",
-        "question": "Which handling of paint would you carry forward?"
+        "left": "rushmore-oil-max",
+        "right": "rushmore-oil-herman",
+        "question": "Which handling of the oil stick should we develop further?"
+      },
+      {
+        "attribute": "deconstruction",
+        "left": "rushmore-oil-max",
+        "right": "rushmore-oil-dirk",
+        "question": "Which balance of definition and omission feels more alive?"
       },
       {
         "attribute": "expression",
-        "left": "raw1-bowie-astra",
-        "right": "bowie-3",
-        "question": "Which character feels more present and alive?"
+        "left": "rushmore-oil-rosemary",
+        "right": "rushmore-oil-herman",
+        "question": "Which portrait has the more compelling presence?"
       },
       {
         "attribute": "brushwork",
-        "left": "raw1-amelie-astra",
-        "right": "amelie-1",
-        "question": "Which handling of paint would you carry forward?"
-      },
-      {
-        "attribute": "expression",
-        "left": "raw1-amelie-astra",
-        "right": "amelie-1",
-        "question": "Which character feels more present and alive?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "raw1-bowie-fable",
-        "right": "bowie-3",
-        "question": "Which handling of paint would you carry forward?"
-      },
-      {
-        "attribute": "expression",
-        "left": "raw1-bowie-fable",
-        "right": "bowie-3",
-        "question": "Which character feels more present and alive?"
-      },
-      {
-        "attribute": "expression",
-        "left": "raw1-bowie-astra",
-        "right": "raw1-bowie-fable",
-        "question": "Which character feels more present and alive?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "raw1-bowie-astra",
-        "right": "raw1-bowie-fable",
-        "question": "Which handling of paint feels more natural and expressive?"
+        "left": "rushmore-oil-dirk",
+        "right": "rushmore-oil-rosemary",
+        "question": "Which marks feel more convincing as oil stick?"
       }
     ]
   }
