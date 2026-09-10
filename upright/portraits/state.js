@@ -1,11 +1,14 @@
+const aliases = new Map([['alan','alan-garner'],['damon','damon-salvatore']]);
+const names = new Map([['alan-garner','Alan Garner'],['damon-salvatore','Damon Salvatore']]);
+export const canonicalCharacterId = id => aliases.get(id) || id;
 export function characterId(p) {
-  return p.characterId || (p.characterName || p.title.split(' · ')[0]).normalize('NFKD').replace(/[^\x00-\x7F]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return canonicalCharacterId(p.characterId || (p.characterName || p.title.split(' · ')[0]).normalize('NFKD').replace(/[^\x00-\x7F]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
 }
 export function groupPortraits(portraits) {
   const groups = new Map();
   for (const p of portraits) {
     const id = characterId(p);
-    if (!groups.has(id)) groups.set(id, {id, name:p.characterName || p.title.split(' · ')[0], portraits:[]});
+    if (!groups.has(id)) groups.set(id, {id, name:names.get(id) || p.characterName || p.title.split(' · ')[0], portraits:[]});
     const group = groups.get(id);
     if (!group.portraits.some(q => q.id === p.id || (p.comparison?.fingerprint && q.comparison?.fingerprint === p.comparison.fingerprint))) group.portraits.push(p);
   }
@@ -16,11 +19,12 @@ const stampOK = n => typeof n === 'number' && Number.isFinite(n) && n >= 0;
 export function normalizeState(raw, groups) {
   const state = emptyState(), byId = new Map(groups.map(g => [g.id,g]));
   if (!raw || raw.version !== 1) return state;
-  for (const [id,p] of Object.entries(raw.primaries || {})) {
-    if (byId.get(id)?.portraits.some(q => q.id === p?.portraitId) && stampOK(p.updatedAt)) state.primaries[id] = {portraitId:p.portraitId,updatedAt:p.updatedAt};
+  for (const [legacyId,p] of Object.entries(raw.primaries || {})) {
+    const id = canonicalCharacterId(legacyId);
+    if (byId.get(id)?.portraits.some(q => q.id === p?.portraitId) && stampOK(p.updatedAt)) state.primaries[id] = later(state.primaries[id], {portraitId:p.portraitId,updatedAt:p.updatedAt});
   }
   if (Array.isArray(raw.order?.ids) && stampOK(raw.order.updatedAt)) {
-    state.order = {ids:[...new Set(raw.order.ids.filter(id => byId.has(id)))], updatedAt:raw.order.updatedAt};
+    state.order = {ids:[...new Set(raw.order.ids.map(canonicalCharacterId).filter(id => byId.has(id)))], updatedAt:raw.order.updatedAt};
   }
   return state;
 }
@@ -37,7 +41,7 @@ export function mergeState(local, remote, groups) {
   return result;
 }
 export function orderedIds(state, groups) {
-  return [...new Set([...state.order.ids.filter(id => groups.some(g => g.id===id)), ...groups.map(g=>g.id)])];
+  return [...new Set([...normalizeState(state,groups).order.ids, ...groups.map(g=>g.id)])];
 }
 export function primaryId(state, group) {return state.primaries[group.id]?.portraitId || group.portraits[0].id;}
 export function rotatedId(group, current, direction) {

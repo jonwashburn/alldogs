@@ -1,6 +1,6 @@
-import {groupPortraits,emptyState,normalizeState,mergeState,orderedIds,primaryId,rotatedId,moveId,nextStamp,payload} from './state.js?v=1';
+import {groupPortraits,emptyState,normalizeState,mergeState,orderedIds,primaryId,rotatedId,moveId,nextStamp,payload} from './state.js?v=2';
 const $=s=>document.querySelector(s), KEY='upright-character-gallery-v1', API='https://api.alldogs.wtf/upright-api/gallery';
-let groups=[], state=emptyState(), storageOK=true, connected=false, syncing=false, resync=false, revision=0, syncTimer, drag=null, frame=0;
+let groups=[], state=emptyState(), storageOK=true, connected=false, syncing=false, resync=false, revision=0, syncTimer, drag=null, frame=0, latestRoundId='';
 const previews=new Map(), cards=new Map();
 const fingerprint=s=>JSON.stringify({primaries:Object.fromEntries(Object.entries(s.primaries).sort(([a],[b])=>a.localeCompare(b))),order:s.order});
 function token(){try{return localStorage.getItem('upright_connection_disabled')?'':(localStorage.getItem('upright_token')||localStorage.getItem('alldogs_token')||'').trim();}catch{return '';}}
@@ -56,7 +56,13 @@ function createCard(group){
     e.preventDefault();const moved=moveId(ids,group.id,to);applyOrder(moved);handle.focus();announce(group.name+' moved to position '+(moved.indexOf(group.id)+1)+' of '+groups.length+'.');
   });
   const select=card.querySelector('.look-picker');select.setAttribute('aria-label','Choose a look for '+group.name);
-  group.portraits.forEach((p,i)=>{const option=document.createElement('option');option.value=p.id;option.textContent=(i+1)+'. '+p.title.split(' · ').slice(1).join(' · ');select.append(option);});
+  const latest=group.portraits.filter(p=>latestRoundId&&p.roundId===latestRoundId);
+  const addOptions=(portraits,parent)=>portraits.forEach(p=>{const option=document.createElement('option');option.value=p.id;option.textContent=p.title.split(' · ').slice(1).join(' · ')||p.title;parent.append(option);});
+  if(latest.length){
+    for(const [label,portraits] of [['Latest round',latest],['Earlier looks',group.portraits.filter(p=>!latest.includes(p))]]){
+      if(!portraits.length)continue;const section=document.createElement('optgroup');section.label=label;addOptions(portraits,section);select.append(section);
+    }
+  }else addOptions(group.portraits,select);
   select.addEventListener('change',()=>choosePreview(group,select.value));
   card.querySelector('.previous').setAttribute('aria-label','Previous look for '+group.name);
   card.querySelector('.next').setAttribute('aria-label','Next look for '+group.name);
@@ -77,6 +83,7 @@ function updateCard(group){
   const isPrimary=portrait.id===primaryId(state,group), explicit=!!state.primaries[group.id];
   const button=card.querySelector('.primary-button');button.textContent=isPrimary&&explicit?'✓ Primary':'Set primary';button.disabled=isPrimary&&explicit;button.classList.toggle('is-primary',isPrimary&&explicit);button.setAttribute('aria-label',isPrimary&&explicit?group.name+' primary portrait':'Set this look as '+group.name+' primary');
   card.querySelector('.primary-return').hidden=isPrimary;
+  card.querySelector('.primary-return').textContent=explicit?'Back to primary':'Back to first look';
   card.querySelector('.look-count').textContent=(group.portraits.findIndex(p=>p.id===portrait.id)+1)+' / '+group.portraits.length+' '+(group.portraits.length===1?'look':'looks');
 }
 function render(){
@@ -139,7 +146,8 @@ window.addEventListener('online',refresh);window.addEventListener('focus',refres
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refresh();});
 try{
   const response=await fetch('../catalog.json',{cache:'no-cache'});if(!response.ok)throw Error('The portrait collection could not load. Please reload.');
-  const catalog=await response.json();groups=groupPortraits(catalog.portraits);if(!groups.length)throw Error('No portraits are available yet.');
+  const catalog=await response.json();latestRoundId=catalog.reviewRound?.id||'';groups=groupPortraits(catalog.portraits);if(!groups.length)throw Error('No portraits are available yet.');
   state=normalizeState(readLocal(),groups);render();$('#grid').setAttribute('aria-busy','false');$('#count').textContent=groups.length+' characters · '+groups.reduce((n,g)=>n+g.portraits.length,0)+' portraits';
+  if(catalog.reviewRound?.title){$('#latest-round').hidden=false;$('#latest-round a').textContent='Review the latest round: '+catalog.reviewRound.title+' →';}
   status(storageOK?'Saved in this browser. Connect to save across devices.':'Connect to save your collection.');if(token())await refresh();
 }catch(error){$('#error').hidden=false;$('#error').textContent=error.message;$('#grid').setAttribute('aria-busy','false');status('Collection unavailable.');}
