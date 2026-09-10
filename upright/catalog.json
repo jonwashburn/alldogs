@@ -2402,56 +2402,50 @@
           ]
         }
       }
+    },
+    {
+      "id": "monumental1-bowie",
+      "title": "Bowie · a larger painting",
+      "characterId": "bowie",
+      "characterName": "Bowie",
+      "image": "assets/monumental1-bowie.jpg",
+      "group": "A larger painting",
+      "status": "Development study · awaiting your response",
+      "description": "Continuous pale flesh, overlapping warm and cool paint, recovered unequal eyes, and directional copper hair. Developed from the held-lapel Bowie; see Large painting for the native surface and proposed seven-foot scale.",
+      "moves": [
+        "unequal-eyes",
+        "loaded-deposit",
+        "exhausted-drag",
+        "recovery-line"
+      ],
+      "parent": "anchored1-bowie",
+      "featured": true,
+      "source": "tenenbaum_family_20260909/monumental_round_01/render/bowie_monumental_v3_4000.png",
+      "roundId": "monumental-1",
+      "comparison": {
+        "fingerprint": "9514838b745800b3867c86a7ffa8203392dde83837272408e668cfbb60665232",
+        "similar": [],
+        "indistinct": {}
+      }
     }
   ],
   "comparisonPolicy": "visible-differences-1",
   "reviewRound": {
-    "id": "anchored-1",
-    "title": "Back inside the portrait language",
-    "description": "Two studies keep the earlier unequal eyes, layered paint and small gestures. Four choices about paint and posture.",
+    "id": "monumental-1",
+    "title": "One larger painting",
+    "description": "A deeper Bowie, developed for a seven-foot canvas. See Large painting for the whole figure, close detail and a scale diagram, then make two comparisons.",
     "trials": [
       {
-        "attribute": "brushwork",
-        "left": "anchored1-bowie",
-        "right": "bowie-3",
-        "question": "Which handling of paint would you carry forward?"
+        "attribute": "expression",
+        "left": "monumental1-bowie",
+        "right": "anchored1-bowie",
+        "question": "Which figure has the stronger presence across a room?"
       },
       {
         "attribute": "brushwork",
-        "left": "anchored1-bowie",
-        "right": "raw1-bowie-astra",
-        "question": "Looking at the jacket and hand, which handling of paint would you carry forward?"
-      },
-      {
-        "attribute": "posture",
-        "left": "anchored1-amelie",
-        "right": "amelie-1",
-        "question": "Which pose gives Amélie more personality?"
-      },
-      {
-        "attribute": "brushwork",
-        "left": "anchored1-amelie",
-        "right": "raw1-amelie-astra",
-        "question": "Looking at the face and hair, which handling of paint would you carry forward?"
-      }
-    ],
-    "comparisonNotes": [
-      {
-        "attribute": "brushwork",
-        "pair": [
-          "anchored1-bowie",
-          "raw1-bowie-astra"
-        ],
-        "region": "jacket and hand",
-        "box": [
-          0.2,
-          0.63,
-          0.68,
-          0.99
-        ],
-        "previewRMS": 20.323645769241296,
-        "threshold": 6,
-        "purpose": "visible difference only; no quality inference"
+        "left": "monumental1-bowie",
+        "right": "anchored1-bowie",
+        "question": "Which painting has the more convincing depth and handling of paint?"
       }
     ]
   }

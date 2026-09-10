@@ -1,0 +1,10 @@
+{
+  "width": 4000,
+  "height": 4000,
+  "proposedHeightInches": 84,
+  "stage": "Development painting; physical scale has not been validated",
+  "nativePngSHA256": "0e4b66e04adaba269885b36e7f842b10fa10eb3d9ef98c1313c9ba93baf12705",
+  "nativeJpegSHA256": "3c5e0b00e3ac49986279dc2622aed70ce0828e066eb72b034a088ebcc660131b",
+  "earlierPngSHA256": "556b9c5178dbb63cfa1e77b94640bb775c197ca607af474c90124bead7da23cf",
+  "earlierJpegSHA256": "d61b16aa8812f2fd0cd601bae7c96c38d5c6aced307233387779e99250f2bf9a"
+}
