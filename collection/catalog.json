@@ -3922,6 +3922,1371 @@
       "selectedReference": false,
       "prop": "house",
       "description": "A prop study on Barack. The original fire remains in the painting."
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-one_more_song-f006e02670795cfe",
+      "dogId": "design-working_words_doodles_20260911-one_more_song",
+      "title": "One More Song",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f006e02670795cfe9d0bcb614f61ad883f5bde80b0be92adbe2297deb2d24fb8.png",
+      "imageHash": "f006e02670795cfe9d0bcb614f61ad883f5bde80b0be92adbe2297deb2d24fb8",
+      "parent": "original-44-9031e3254780003a",
+      "nativeParentSeed": 44,
+      "source": "../design/working_words_five_20260911/characters/one_more_song.js",
+      "sourceHash": "dbdc3c970a540d528cf8832c1a74b92fba1ba555694eff64b77c56a4b19c96cf",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/working_words_five_20260911/characters/one_more_song.js",
+          "sha256": "dbdc3c970a540d528cf8832c1a74b92fba1ba555694eff64b77c56a4b19c96cf"
+        },
+        {
+          "role": "native_doodle_addition",
+          "path": "../design/working_words_doodles_20260911/doodles/one_more_song.js",
+          "sha256": "4a02dd9af46b7aea3c3e2d52741815b47cd84c9ff881c2245ce117ece3754957"
+        }
+      ],
+      "description": "A late-night drummer refuses to finish the last song.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "working_words_doodles_20260911",
+      "slug": "one_more_song",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "user_liked",
+        "scope": "design_registration_metadata_not_a_rating_vote",
+        "evidence": {
+          "path": "../design/heroes_immortals_five_20260911/CHECKPOINT.md",
+          "statement": "Jonathan said the previous working_words_doodles five are good and asked to stop iterating those."
+        }
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/working_words_doodles_20260911/out/one_more_song.json",
+          "sha256": "df097f2d835d1229e3a8ea44815a5f9db20d3d06ac058df77c7d54525a957bdc"
+        },
+        "cast": {
+          "path": "../design/working_words_doodles_20260911/cast.json",
+          "sha256": "89de438e39e4e73293f7d770c6dbe597314de64e1cea7636f453b8f6b36f3160"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/working_words_doodles_20260911/painter.js",
+          "sha256": "13bf9867f5b4d110e96802fbaeca98685f340dd4af52fa6f55eb2fc05767844e"
+        },
+        "renderer": {
+          "path": "../design/working_words_doodles_20260911/render.js",
+          "sha256": "72f9f8634af967b4091942d8327cee1cfda971387a15e063b1ce1d0a49c7cefe"
+        },
+        "lettering": {
+          "path": "../design/working_words_doodles_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/working_words_doodles_20260911/fields.json",
+          "sha256": "bff5501a8ae5eb3759c4b1896db3852cb7f74e613dff2585993a8ee2a8f6a2f4"
+        },
+        "supports": {
+          "path": "../design/working_words_doodles_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-who_ate_the_moon-cf55293f5e6ad428",
+      "dogId": "design-working_words_doodles_20260911-who_ate_the_moon",
+      "title": "Who Ate the Moon?",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-cf55293f5e6ad42872423f1689b845e7651c67225d89ea677f5532c78be099f9.png",
+      "imageHash": "cf55293f5e6ad42872423f1689b845e7651c67225d89ea677f5532c78be099f9",
+      "parent": "original-79-bde61b8a0259824e",
+      "nativeParentSeed": 79,
+      "source": "../design/working_words_five_20260911/characters/who_ate_the_moon.js",
+      "sourceHash": "a9c775ebb9df81a15d32cdfe3163184bcd99bda208f5e0bf458de0dbc46b8cf3",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/working_words_five_20260911/characters/who_ate_the_moon.js",
+          "sha256": "a9c775ebb9df81a15d32cdfe3163184bcd99bda208f5e0bf458de0dbc46b8cf3"
+        },
+        {
+          "role": "native_doodle_addition",
+          "path": "../design/working_words_doodles_20260911/doodles/who_ate_the_moon.js",
+          "sha256": "f1132ec8ce01f161b62819d2ad172a6118cba66c31eb9c534f7b618d46bcf9c1"
+        }
+      ],
+      "description": "A baker and a suspiciously croissant-shaped moon.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "working_words_doodles_20260911",
+      "slug": "who_ate_the_moon",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "user_liked",
+        "scope": "design_registration_metadata_not_a_rating_vote",
+        "evidence": {
+          "path": "../design/heroes_immortals_five_20260911/CHECKPOINT.md",
+          "statement": "Jonathan said the previous working_words_doodles five are good and asked to stop iterating those."
+        }
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/working_words_doodles_20260911/out/who_ate_the_moon.json",
+          "sha256": "2862e5ea0a29607c2e913317f799dd88f8b4ddb89287162965a2bac2842d139f"
+        },
+        "cast": {
+          "path": "../design/working_words_doodles_20260911/cast.json",
+          "sha256": "89de438e39e4e73293f7d770c6dbe597314de64e1cea7636f453b8f6b36f3160"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/working_words_doodles_20260911/painter.js",
+          "sha256": "13bf9867f5b4d110e96802fbaeca98685f340dd4af52fa6f55eb2fc05767844e"
+        },
+        "renderer": {
+          "path": "../design/working_words_doodles_20260911/render.js",
+          "sha256": "72f9f8634af967b4091942d8327cee1cfda971387a15e063b1ce1d0a49c7cefe"
+        },
+        "lettering": {
+          "path": "../design/working_words_doodles_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/working_words_doodles_20260911/fields.json",
+          "sha256": "bff5501a8ae5eb3759c4b1896db3852cb7f74e613dff2585993a8ee2a8f6a2f4"
+        },
+        "supports": {
+          "path": "../design/working_words_doodles_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-i_wrote_back-1fbd876af29fbe68",
+      "dogId": "design-working_words_doodles_20260911-i_wrote_back",
+      "title": "I Wrote Back",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1fbd876af29fbe688e7bf749c14d7fd5d56401fb88f6aa6edec593113cb1f3e2.png",
+      "imageHash": "1fbd876af29fbe688e7bf749c14d7fd5d56401fb88f6aa6edec593113cb1f3e2",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/working_words_five_20260911/characters/i_wrote_back.js",
+      "sourceHash": "15e30eb77066a42acec355848ef799fc9cacfd1dcab4e854a039958b1639d206",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/working_words_five_20260911/characters/i_wrote_back.js",
+          "sha256": "15e30eb77066a42acec355848ef799fc9cacfd1dcab4e854a039958b1639d206"
+        },
+        {
+          "role": "native_doodle_addition",
+          "path": "../design/working_words_doodles_20260911/doodles/i_wrote_back.js",
+          "sha256": "73867d209bb90b52c4f4954b4bac642e54f87e1c30f92cc46eef77b905a85003"
+        }
+      ],
+      "description": "A postman sends an answer to a bird instead of an address.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "working_words_doodles_20260911",
+      "slug": "i_wrote_back",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "user_liked",
+        "scope": "design_registration_metadata_not_a_rating_vote",
+        "evidence": {
+          "path": "../design/heroes_immortals_five_20260911/CHECKPOINT.md",
+          "statement": "Jonathan said the previous working_words_doodles five are good and asked to stop iterating those."
+        }
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/working_words_doodles_20260911/out/i_wrote_back.json",
+          "sha256": "350b8abad9ea1394ce576d5d82ec1e7a9478b481283a916c0fb496f9f7795f3a"
+        },
+        "cast": {
+          "path": "../design/working_words_doodles_20260911/cast.json",
+          "sha256": "89de438e39e4e73293f7d770c6dbe597314de64e1cea7636f453b8f6b36f3160"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/working_words_doodles_20260911/painter.js",
+          "sha256": "13bf9867f5b4d110e96802fbaeca98685f340dd4af52fa6f55eb2fc05767844e"
+        },
+        "renderer": {
+          "path": "../design/working_words_doodles_20260911/render.js",
+          "sha256": "72f9f8634af967b4091942d8327cee1cfda971387a15e063b1ce1d0a49c7cefe"
+        },
+        "lettering": {
+          "path": "../design/working_words_doodles_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/working_words_doodles_20260911/fields.json",
+          "sha256": "bff5501a8ae5eb3759c4b1896db3852cb7f74e613dff2585993a8ee2a8f6a2f4"
+        },
+        "supports": {
+          "path": "../design/working_words_doodles_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-stay_up-eae6850ebc7a2986",
+      "dogId": "design-working_words_doodles_20260911-stay_up",
+      "title": "Stay Up",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-eae6850ebc7a2986a75fdddecd4b099985e0491bc052624d34b82ae6bf4e5a78.png",
+      "imageHash": "eae6850ebc7a2986a75fdddecd4b099985e0491bc052624d34b82ae6bf4e5a78",
+      "parent": "original-50-9881611ca2df5e7b",
+      "nativeParentSeed": 50,
+      "source": "../design/working_words_five_20260911/characters/stay_up.js",
+      "sourceHash": "7a2161f75c79a6f80a5439639d3002e066da020324e941f0891d8dc71b487ec1",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/working_words_five_20260911/characters/stay_up.js",
+          "sha256": "7a2161f75c79a6f80a5439639d3002e066da020324e941f0891d8dc71b487ec1"
+        },
+        {
+          "role": "native_doodle_addition",
+          "path": "../design/working_words_doodles_20260911/doodles/stay_up.js",
+          "sha256": "aba527a5a89c4c29883a414ffee6ac73e566c6d17da9a76cbdd73c02985f8df0"
+        }
+      ],
+      "description": "A kite repairer holds on to a small, unruly piece of sky.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "working_words_doodles_20260911",
+      "slug": "stay_up",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "user_liked",
+        "scope": "design_registration_metadata_not_a_rating_vote",
+        "evidence": {
+          "path": "../design/heroes_immortals_five_20260911/CHECKPOINT.md",
+          "statement": "Jonathan said the previous working_words_doodles five are good and asked to stop iterating those."
+        }
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/working_words_doodles_20260911/out/stay_up.json",
+          "sha256": "b9aec58c72db2a8355b9729ef07479826f58e380325dad1f27ff780822259276"
+        },
+        "cast": {
+          "path": "../design/working_words_doodles_20260911/cast.json",
+          "sha256": "89de438e39e4e73293f7d770c6dbe597314de64e1cea7636f453b8f6b36f3160"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/working_words_doodles_20260911/painter.js",
+          "sha256": "13bf9867f5b4d110e96802fbaeca98685f340dd4af52fa6f55eb2fc05767844e"
+        },
+        "renderer": {
+          "path": "../design/working_words_doodles_20260911/render.js",
+          "sha256": "72f9f8634af967b4091942d8327cee1cfda971387a15e063b1ce1d0a49c7cefe"
+        },
+        "lettering": {
+          "path": "../design/working_words_doodles_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/working_words_doodles_20260911/fields.json",
+          "sha256": "bff5501a8ae5eb3759c4b1896db3852cb7f74e613dff2585993a8ee2a8f6a2f4"
+        },
+        "supports": {
+          "path": "../design/working_words_doodles_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-night_shift-5cba1881faaaba13",
+      "dogId": "design-working_words_doodles_20260911-night_shift",
+      "title": "Night Shift",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5cba1881faaaba13c043d4d4e48abbd46b5a9f5057de2fcfeb237d9913d5886f.png",
+      "imageHash": "5cba1881faaaba13c043d4d4e48abbd46b5a9f5057de2fcfeb237d9913d5886f",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/working_words_five_20260911/characters/night_shift.js",
+      "sourceHash": "ac629527b5b4f4f19f31aa5e62e56595975d916dc7efb4c39069951a8c3e2dcb",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/working_words_five_20260911/characters/night_shift.js",
+          "sha256": "ac629527b5b4f4f19f31aa5e62e56595975d916dc7efb4c39069951a8c3e2dcb"
+        },
+        {
+          "role": "native_doodle_addition",
+          "path": "../design/working_words_doodles_20260911/doodles/night_shift.js",
+          "sha256": "6dd04ef026c33a4b71cd671ecb5898354b3b135bd18805ab5c675dd59c73dc98"
+        }
+      ],
+      "description": "A night watchman keeps a tiny sleeping house company.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "working_words_doodles_20260911",
+      "slug": "night_shift",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "user_liked",
+        "scope": "design_registration_metadata_not_a_rating_vote",
+        "evidence": {
+          "path": "../design/heroes_immortals_five_20260911/CHECKPOINT.md",
+          "statement": "Jonathan said the previous working_words_doodles five are good and asked to stop iterating those."
+        }
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/working_words_doodles_20260911/out/night_shift.json",
+          "sha256": "4bb37614c8fb71cbf6ad42c224bde347b2d8707ad2813f63ee7f8f14240991bc"
+        },
+        "cast": {
+          "path": "../design/working_words_doodles_20260911/cast.json",
+          "sha256": "89de438e39e4e73293f7d770c6dbe597314de64e1cea7636f453b8f6b36f3160"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/working_words_doodles_20260911/painter.js",
+          "sha256": "13bf9867f5b4d110e96802fbaeca98685f340dd4af52fa6f55eb2fc05767844e"
+        },
+        "renderer": {
+          "path": "../design/working_words_doodles_20260911/render.js",
+          "sha256": "72f9f8634af967b4091942d8327cee1cfda971387a15e063b1ce1d0a49c7cefe"
+        },
+        "lettering": {
+          "path": "../design/working_words_doodles_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/working_words_doodles_20260911/fields.json",
+          "sha256": "bff5501a8ae5eb3759c4b1896db3852cb7f74e613dff2585993a8ee2a8f6a2f4"
+        },
+        "supports": {
+          "path": "../design/working_words_doodles_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-prometheus-9865949abb123bdd",
+      "dogId": "design-heroes_immortals_five_20260911-prometheus",
+      "title": "Prometheus",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8.png",
+      "imageHash": "9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/heroes_immortals_five_20260911/characters/prometheus.js",
+      "sourceHash": "f3e46935684c39929765a1cb95cae9cb1abffceb40c427bad3dd30841be4078f",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/heroes_immortals_five_20260911/characters/prometheus.js",
+          "sha256": "f3e46935684c39929765a1cb95cae9cb1abffceb40c427bad3dd30841be4078f"
+        }
+      ],
+      "description": "A small fire thief carries a stolen sun.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "prometheus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/heroes_immortals_five_20260911/out/prometheus.json",
+          "sha256": "73df77a814a7aaafcce453e756e526cc2dd6e4cb644c46ff08b6d18d8ec066a5"
+        },
+        "cast": {
+          "path": "../design/heroes_immortals_five_20260911/cast.json",
+          "sha256": "2e06b783c20ab152a25b5f3123513202d1d45f00e0be2f163ff3c0712cb2df39"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/heroes_immortals_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/heroes_immortals_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/heroes_immortals_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/heroes_immortals_five_20260911/fields.json",
+          "sha256": "3082a11e3a13f204ff20fa47a8e47509f7e874efc2861e70b080adb29fb0dd06"
+        },
+        "supports": {
+          "path": "../design/heroes_immortals_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-thunderhound-0dc4064b55002f20",
+      "dogId": "design-heroes_immortals_five_20260911-thunderhound",
+      "title": "Thunderhound",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-0dc4064b55002f202b9a718b0dc12f61114a9cf2734c071d1e6775bfd65bd36b.png",
+      "imageHash": "0dc4064b55002f202b9a718b0dc12f61114a9cf2734c071d1e6775bfd65bd36b",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/heroes_immortals_five_20260911/characters/thunderhound.js",
+      "sourceHash": "6d22e19f8bff880d786de57ef4840620c15e524f82d5c3b554d4d073b33aee6c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/heroes_immortals_five_20260911/characters/thunderhound.js",
+          "sha256": "6d22e19f8bff880d786de57ef4840620c15e524f82d5c3b554d4d073b33aee6c"
+        }
+      ],
+      "description": "A thunder god with a battered hammer and a storm that follows him.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "thunderhound",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/heroes_immortals_five_20260911/out/thunderhound.json",
+          "sha256": "c257d81c7ff77c0ff20d851af84b53a768790f05d0a34bd5517712bcebde934a"
+        },
+        "cast": {
+          "path": "../design/heroes_immortals_five_20260911/cast.json",
+          "sha256": "2e06b783c20ab152a25b5f3123513202d1d45f00e0be2f163ff3c0712cb2df39"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/heroes_immortals_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/heroes_immortals_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/heroes_immortals_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/heroes_immortals_five_20260911/fields.json",
+          "sha256": "3082a11e3a13f204ff20fa47a8e47509f7e874efc2861e70b080adb29fb0dd06"
+        },
+        "supports": {
+          "path": "../design/heroes_immortals_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-little_atlas-90f74b66c058c1a8",
+      "dogId": "design-heroes_immortals_five_20260911-little_atlas",
+      "title": "Little Atlas",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-90f74b66c058c1a8d37d22a7344741ab28b5ae20f75ad27169237e132e53daa5.png",
+      "imageHash": "90f74b66c058c1a8d37d22a7344741ab28b5ae20f75ad27169237e132e53daa5",
+      "parent": "original-51-1796bda50755534a",
+      "nativeParentSeed": 51,
+      "source": "../design/heroes_immortals_five_20260911/characters/little_atlas.js",
+      "sourceHash": "35f55736c1a4251bbbf1abea99b7ed25acc93b7f63ce9868c0c9dca43c366a69",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/heroes_immortals_five_20260911/characters/little_atlas.js",
+          "sha256": "35f55736c1a4251bbbf1abea99b7ed25acc93b7f63ce9868c0c9dca43c366a69"
+        }
+      ],
+      "description": "He carries a small crooked world as if it weighs everything.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "little_atlas",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/heroes_immortals_five_20260911/out/little_atlas.json",
+          "sha256": "16bc1ab77b927bd0f7898ccd6819c4819160aee9355c74c6eb14b33faec0f97c"
+        },
+        "cast": {
+          "path": "../design/heroes_immortals_five_20260911/cast.json",
+          "sha256": "2e06b783c20ab152a25b5f3123513202d1d45f00e0be2f163ff3c0712cb2df39"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/heroes_immortals_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/heroes_immortals_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/heroes_immortals_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/heroes_immortals_five_20260911/fields.json",
+          "sha256": "3082a11e3a13f204ff20fa47a8e47509f7e874efc2861e70b080adb29fb0dd06"
+        },
+        "supports": {
+          "path": "../design/heroes_immortals_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-phoenix-25031432e6bc9a08",
+      "dogId": "design-heroes_immortals_five_20260911-phoenix",
+      "title": "Phoenix",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b.png",
+      "imageHash": "25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b",
+      "parent": "original-117-34aa2133dcd107a3",
+      "nativeParentSeed": 117,
+      "source": "../design/heroes_immortals_five_20260911/characters/phoenix.js",
+      "sourceHash": "8aea01ca208113e66cd1b3e0326f3878bdd92123bb24af8d06ee876d2471fe43",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/heroes_immortals_five_20260911/characters/phoenix.js",
+          "sha256": "8aea01ca208113e66cd1b3e0326f3878bdd92123bb24af8d06ee876d2471fe43"
+        }
+      ],
+      "description": "A scrappy immortal flies out of yesterday’s ashes.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "phoenix",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/heroes_immortals_five_20260911/out/phoenix.json",
+          "sha256": "84c33db449951716bef3cf39b75ccce675bbe914b75466dcf9fc018c020dcc6d"
+        },
+        "cast": {
+          "path": "../design/heroes_immortals_five_20260911/cast.json",
+          "sha256": "2e06b783c20ab152a25b5f3123513202d1d45f00e0be2f163ff3c0712cb2df39"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/heroes_immortals_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/heroes_immortals_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/heroes_immortals_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/heroes_immortals_five_20260911/fields.json",
+          "sha256": "3082a11e3a13f204ff20fa47a8e47509f7e874efc2861e70b080adb29fb0dd06"
+        },
+        "supports": {
+          "path": "../design/heroes_immortals_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-last_guardian-2e402830bb1cbfff",
+      "dogId": "design-heroes_immortals_five_20260911-last_guardian",
+      "title": "The Last Guardian",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-2e402830bb1cbfff228616b9033b42c342ec17577c26c3157df8a303be9ab888.png",
+      "imageHash": "2e402830bb1cbfff228616b9033b42c342ec17577c26c3157df8a303be9ab888",
+      "parent": "original-129-979b06df17a93815",
+      "nativeParentSeed": 129,
+      "source": "../design/heroes_immortals_five_20260911/characters/last_guardian.js",
+      "sourceHash": "ebe1353be5d5776a87eb24967b4f2fea42003fa32be7510e1c8a2146c91d85e4",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/heroes_immortals_five_20260911/characters/last_guardian.js",
+          "sha256": "ebe1353be5d5776a87eb24967b4f2fea42003fa32be7510e1c8a2146c91d85e4"
+        }
+      ],
+      "description": "A defiant guardian keeps a tiny living thing safe from the night.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "last_guardian",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/heroes_immortals_five_20260911/out/last_guardian.json",
+          "sha256": "6d1bec6d4b85a4e632b59f59c1386eea12ac09530d691e031f7e94b058cf8d37"
+        },
+        "cast": {
+          "path": "../design/heroes_immortals_five_20260911/cast.json",
+          "sha256": "2e06b783c20ab152a25b5f3123513202d1d45f00e0be2f163ff3c0712cb2df39"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/heroes_immortals_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/heroes_immortals_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/heroes_immortals_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/heroes_immortals_five_20260911/fields.json",
+          "sha256": "3082a11e3a13f204ff20fa47a8e47509f7e874efc2861e70b080adb29fb0dd06"
+        },
+        "supports": {
+          "path": "../design/heroes_immortals_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-red_racket-18db24ed367304e9",
+      "dogId": "design-wild_creatures_five_20260911-red_racket",
+      "title": "Red Racket",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-18db24ed367304e9c1dad593fb4643930f56814de531de937da715d4bbb50623.png",
+      "imageHash": "18db24ed367304e9c1dad593fb4643930f56814de531de937da715d4bbb50623",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/wild_creatures_five_20260911/characters/red_racket.js",
+      "sourceHash": "35c6cf77c869b7e705c29d328a2a32c49ab9ba714e87308c9e0ef8f613ce8a02",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/wild_creatures_five_20260911/characters/red_racket.js",
+          "sha256": "35c6cf77c869b7e705c29d328a2a32c49ab9ba714e87308c9e0ef8f613ce8a02"
+        }
+      ],
+      "description": "A crimson dog with crooked gold horns and violet bat wings starts a commotion.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "wild_creatures_five_20260911",
+      "slug": "red_racket",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/wild_creatures_five_20260911/out/red_racket.json",
+          "sha256": "c73b6c0b7955b2b9cb59f66d057618e2029c1ff3e733fa23b9c96bf4d53ffbf2"
+        },
+        "cast": {
+          "path": "../design/wild_creatures_five_20260911/cast.json",
+          "sha256": "26ae7275bfaf0b0d88b12090870fc0531b1917a1523d8bfed654b09d69096898"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/wild_creatures_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/wild_creatures_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/wild_creatures_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/wild_creatures_five_20260911/fields.json",
+          "sha256": "082bc71d8a84dfa8fdb5378e135247022f0c343fbf5b1f4ef424f81d42faf7a3"
+        },
+        "supports": {
+          "path": "../design/wild_creatures_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-cloud_biter-91ecbd393c8fb294",
+      "dogId": "design-wild_creatures_five_20260911-cloud_biter",
+      "title": "Cloud Biter",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-91ecbd393c8fb29409863707567db11f6389db17ddd1a795c8e28c1406eae235.png",
+      "imageHash": "91ecbd393c8fb29409863707567db11f6389db17ddd1a795c8e28c1406eae235",
+      "parent": "original-79-bde61b8a0259824e",
+      "nativeParentSeed": 79,
+      "source": "../design/wild_creatures_five_20260911/characters/cloud_biter.js",
+      "sourceHash": "33fbef3c9bb81ae2cd5aaaf0156a3208d7220fbb73ba405aa31e52a82ebc69e0",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/wild_creatures_five_20260911/characters/cloud_biter.js",
+          "sha256": "33fbef3c9bb81ae2cd5aaaf0156a3208d7220fbb73ba405aa31e52a82ebc69e0"
+        }
+      ],
+      "description": "An airborne ivory beast catches a cloud and unravels the sky.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "wild_creatures_five_20260911",
+      "slug": "cloud_biter",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/wild_creatures_five_20260911/out/cloud_biter.json",
+          "sha256": "a369c2d9df8bbd2aa9d14689014ae825cc2a50416335421d57c7af13d773f2b0"
+        },
+        "cast": {
+          "path": "../design/wild_creatures_five_20260911/cast.json",
+          "sha256": "26ae7275bfaf0b0d88b12090870fc0531b1917a1523d8bfed654b09d69096898"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/wild_creatures_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/wild_creatures_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/wild_creatures_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/wild_creatures_five_20260911/fields.json",
+          "sha256": "082bc71d8a84dfa8fdb5378e135247022f0c343fbf5b1f4ef424f81d42faf7a3"
+        },
+        "supports": {
+          "path": "../design/wild_creatures_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-gilded_trouble-cb0ed9ea4863a57b",
+      "dogId": "design-wild_creatures_five_20260911-gilded_trouble",
+      "title": "Gilded Trouble",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-cb0ed9ea4863a57bc1818c9608c0bf93628d07eaaed6336d1b915518a9a4af06.png",
+      "imageHash": "cb0ed9ea4863a57bc1818c9608c0bf93628d07eaaed6336d1b915518a9a4af06",
+      "parent": "original-148-7852aa2296e4960e",
+      "nativeParentSeed": 148,
+      "source": "../design/wild_creatures_five_20260911/characters/gilded_trouble.js",
+      "sourceHash": "c8758f65dd2dafd25790ce03b9f45215ab67f61a8a7527347b92c85734583bb7",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/wild_creatures_five_20260911/characters/gilded_trouble.js",
+          "sha256": "c8758f65dd2dafd25790ce03b9f45215ab67f61a8a7527347b92c85734583bb7"
+        }
+      ],
+      "description": "An ochre chimera with dark wings and scratched gold scales prowls a green ridge.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "wild_creatures_five_20260911",
+      "slug": "gilded_trouble",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/wild_creatures_five_20260911/out/gilded_trouble.json",
+          "sha256": "10c38326224ff31bb98842a07f196737bcfbae8ef6c5bde521192a29dc7c1e41"
+        },
+        "cast": {
+          "path": "../design/wild_creatures_five_20260911/cast.json",
+          "sha256": "26ae7275bfaf0b0d88b12090870fc0531b1917a1523d8bfed654b09d69096898"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/wild_creatures_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/wild_creatures_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/wild_creatures_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/wild_creatures_five_20260911/fields.json",
+          "sha256": "082bc71d8a84dfa8fdb5378e135247022f0c343fbf5b1f4ef424f81d42faf7a3"
+        },
+        "supports": {
+          "path": "../design/wild_creatures_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-blue_howler-a4bb313f0945b36e",
+      "dogId": "design-wild_creatures_five_20260911-blue_howler",
+      "title": "Blue Howler",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a4bb313f0945b36ec8ef48cc9a5366c16c3d5214e2ddbe0e8e1a41c6f5bfa696.png",
+      "imageHash": "a4bb313f0945b36ec8ef48cc9a5366c16c3d5214e2ddbe0e8e1a41c6f5bfa696",
+      "parent": "original-102-740f0ee3c80ab095",
+      "nativeParentSeed": 102,
+      "source": "../design/wild_creatures_five_20260911/characters/blue_howler.js",
+      "sourceHash": "3439aab11c2dcb4396d582fce46bdbd5a1e830c81df1cba1cfd4059cb7419416",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/wild_creatures_five_20260911/characters/blue_howler.js",
+          "sha256": "3439aab11c2dcb4396d582fce46bdbd5a1e830c81df1cba1cfd4059cb7419416"
+        }
+      ],
+      "description": "A blue dog with pink spines calls to a small drawn serpent.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "wild_creatures_five_20260911",
+      "slug": "blue_howler",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/wild_creatures_five_20260911/out/blue_howler.json",
+          "sha256": "238d05b46ffab6d9fb8dd66a56d1d4586bfb20788142614f6ce3dcdb6d0e4203"
+        },
+        "cast": {
+          "path": "../design/wild_creatures_five_20260911/cast.json",
+          "sha256": "26ae7275bfaf0b0d88b12090870fc0531b1917a1523d8bfed654b09d69096898"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/wild_creatures_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/wild_creatures_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/wild_creatures_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/wild_creatures_five_20260911/fields.json",
+          "sha256": "082bc71d8a84dfa8fdb5378e135247022f0c343fbf5b1f4ef424f81d42faf7a3"
+        },
+        "supports": {
+          "path": "../design/wild_creatures_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-wild_garden-33d2696725da6108",
+      "dogId": "design-wild_creatures_five_20260911-wild_garden",
+      "title": "Wild Garden",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-33d2696725da6108dc1ffbdac1f949232c97af62e5fdd006389bf2b2699e1573.png",
+      "imageHash": "33d2696725da6108dc1ffbdac1f949232c97af62e5fdd006389bf2b2699e1573",
+      "parent": "original-43-51536fb2ea896ed0",
+      "nativeParentSeed": 43,
+      "source": "../design/wild_creatures_five_20260911/characters/wild_garden.js",
+      "sourceHash": "70a409b3a050d2eafcdff00819457ae296896a9258a70cd3ee00c9e0f0ec6f2a",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/wild_creatures_five_20260911/characters/wild_garden.js",
+          "sha256": "70a409b3a050d2eafcdff00819457ae296896a9258a70cd3ee00c9e0f0ec6f2a"
+        }
+      ],
+      "description": "A green scaled dog with a silver wing bounds through unruly white flowers.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "wild_creatures_five_20260911",
+      "slug": "wild_garden",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/wild_creatures_five_20260911/out/wild_garden.json",
+          "sha256": "67132671b54e09eac088d16223f6257cbee8b46046d781c2857c974f28a3b64d"
+        },
+        "cast": {
+          "path": "../design/wild_creatures_five_20260911/cast.json",
+          "sha256": "26ae7275bfaf0b0d88b12090870fc0531b1917a1523d8bfed654b09d69096898"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/wild_creatures_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/wild_creatures_five_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/wild_creatures_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/wild_creatures_five_20260911/fields.json",
+          "sha256": "082bc71d8a84dfa8fdb5378e135247022f0c343fbf5b1f4ef424f81d42faf7a3"
+        },
+        "supports": {
+          "path": "../design/wild_creatures_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-blue_rook-c3a296538c2dbdc8",
+      "dogId": "design-cobalt_five_20260911-blue_rook",
+      "title": "Blue Rook",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-c3a296538c2dbdc862a023593d4505a79cbad1889d1d88368abf2190744fddee.png",
+      "imageHash": "c3a296538c2dbdc862a023593d4505a79cbad1889d1d88368abf2190744fddee",
+      "parent": "original-40-7347a3a49fb99b61",
+      "nativeParentSeed": 40,
+      "source": "../design/cobalt_five_20260911/characters/blue_rook.js",
+      "sourceHash": "8a4aacd86505839fff1b3863ad5afa52a6b970500e3d60f733ce9810e1db506d",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/cobalt_five_20260911/characters/blue_rook.js",
+          "sha256": "8a4aacd86505839fff1b3863ad5afa52a6b970500e3d60f733ce9810e1db506d"
+        }
+      ],
+      "description": "Cobalt shoulders, chalk-white cheeks and a ragged black wing caught in the wind.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "cobalt_five_20260911",
+      "slug": "blue_rook",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/cobalt_five_20260911/out/blue_rook.json",
+          "sha256": "970143b55158e82960657f307d14cc753f93dd01b4f3290166444ba3e5dd2bf4"
+        },
+        "cast": {
+          "path": "../design/cobalt_five_20260911/cast.json",
+          "sha256": "0d298122e08545e2ee64df69d81cc8ef71049799d574e90710e31c85f43bc60a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/cobalt_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/cobalt_five_20260911/render.js",
+          "sha256": "20fa3e2272841c946fc754435ec51cb88a55923a7d4fced31fc27dde58cc31f2"
+        },
+        "lettering": {
+          "path": "../design/cobalt_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/cobalt_five_20260911/fields.json",
+          "sha256": "5f24fe628d5bc3578a509bdfdb7cf91d2f32269a982add94d57f526c11d6a184"
+        },
+        "supports": {
+          "path": "../design/cobalt_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-chalk_moth-b549602727de7e0b",
+      "dogId": "design-cobalt_five_20260911-chalk_moth",
+      "title": "Chalk Moth",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b549602727de7e0b0688987b34debadfb8a1156fad5e1921d1d1a887be58db93.png",
+      "imageHash": "b549602727de7e0b0688987b34debadfb8a1156fad5e1921d1d1a887be58db93",
+      "parent": "original-35-a3ebd83425da90bf",
+      "nativeParentSeed": 35,
+      "source": "../design/cobalt_five_20260911/characters/chalk_moth.js",
+      "sourceHash": "9a923a8f3368eb9e7f480f083eab322b47d89505e1d8d8c73621804b4d4377a2",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/cobalt_five_20260911/characters/chalk_moth.js",
+          "sha256": "9a923a8f3368eb9e7f480f083eab322b47d89505e1d8d8c73621804b4d4377a2"
+        }
+      ],
+      "description": "A pale dog with uneven blue eyespots and black marks threaded through its wings.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "cobalt_five_20260911",
+      "slug": "chalk_moth",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/cobalt_five_20260911/out/chalk_moth.json",
+          "sha256": "383bd0a3aa9f4dd0d62be09d10243f9baaa197c9b0403938f89426402a7fa712"
+        },
+        "cast": {
+          "path": "../design/cobalt_five_20260911/cast.json",
+          "sha256": "0d298122e08545e2ee64df69d81cc8ef71049799d574e90710e31c85f43bc60a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/cobalt_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/cobalt_five_20260911/render.js",
+          "sha256": "20fa3e2272841c946fc754435ec51cb88a55923a7d4fced31fc27dde58cc31f2"
+        },
+        "lettering": {
+          "path": "../design/cobalt_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/cobalt_five_20260911/fields.json",
+          "sha256": "5f24fe628d5bc3578a509bdfdb7cf91d2f32269a982add94d57f526c11d6a184"
+        },
+        "supports": {
+          "path": "../design/cobalt_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-red_whistle-a7028c3d539fe7ac",
+      "dogId": "design-cobalt_five_20260911-red_whistle",
+      "title": "Red Whistle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a7028c3d539fe7ace20748b3f6dd85b84e44a176a00fe87f18b66aeb97ea2234.png",
+      "imageHash": "a7028c3d539fe7ace20748b3f6dd85b84e44a176a00fe87f18b66aeb97ea2234",
+      "parent": "original-2-279c95ff78b23174",
+      "nativeParentSeed": 2,
+      "source": "../design/cobalt_five_20260911/characters/red_whistle.js",
+      "sourceHash": "efc54615b9d733d3019c297a9097a5bfe558fa756092db97863978144bf89782",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/cobalt_five_20260911/characters/red_whistle.js",
+          "sha256": "efc54615b9d733d3019c297a9097a5bfe558fa756092db97863978144bf89782"
+        }
+      ],
+      "description": "A blue-and-white dog whistles a red thread toward a crooked branch.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "cobalt_five_20260911",
+      "slug": "red_whistle",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/cobalt_five_20260911/out/red_whistle.json",
+          "sha256": "a5b83e602117951ef4fd1adc660e1fde947363d607b3e4b667a2080f8ada28f7"
+        },
+        "cast": {
+          "path": "../design/cobalt_five_20260911/cast.json",
+          "sha256": "0d298122e08545e2ee64df69d81cc8ef71049799d574e90710e31c85f43bc60a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/cobalt_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/cobalt_five_20260911/render.js",
+          "sha256": "20fa3e2272841c946fc754435ec51cb88a55923a7d4fced31fc27dde58cc31f2"
+        },
+        "lettering": {
+          "path": "../design/cobalt_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/cobalt_five_20260911/fields.json",
+          "sha256": "5f24fe628d5bc3578a509bdfdb7cf91d2f32269a982add94d57f526c11d6a184"
+        },
+        "supports": {
+          "path": "../design/cobalt_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-storm_post-bc145901865ca83f",
+      "dogId": "design-cobalt_five_20260911-storm_post",
+      "title": "Storm Post",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-bc145901865ca83f7e4719c61a5e75e06c1f4583cdb265f58724763d626c4ead.png",
+      "imageHash": "bc145901865ca83f7e4719c61a5e75e06c1f4583cdb265f58724763d626c4ead",
+      "parent": "original-151-3cf9b3cff290171d",
+      "nativeParentSeed": 151,
+      "source": "../design/cobalt_five_20260911/characters/storm_post.js",
+      "sourceHash": "23994c65e1a67cff7f609d12875cb085f62f0c7416682e9a6f09adf073f27483",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/cobalt_five_20260911/characters/storm_post.js",
+          "sha256": "23994c65e1a67cff7f609d12875cb085f62f0c7416682e9a6f09adf073f27483"
+        }
+      ],
+      "description": "A watchful dog in a cobalt mantle shelters a tiny bird beneath a black wing.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "cobalt_five_20260911",
+      "slug": "storm_post",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/cobalt_five_20260911/out/storm_post.json",
+          "sha256": "db70fa1741a4370ec2756457c07fca2d5c675c2e1bdc1573a85abbd82ace23d4"
+        },
+        "cast": {
+          "path": "../design/cobalt_five_20260911/cast.json",
+          "sha256": "0d298122e08545e2ee64df69d81cc8ef71049799d574e90710e31c85f43bc60a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/cobalt_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/cobalt_five_20260911/render.js",
+          "sha256": "20fa3e2272841c946fc754435ec51cb88a55923a7d4fced31fc27dde58cc31f2"
+        },
+        "lettering": {
+          "path": "../design/cobalt_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/cobalt_five_20260911/fields.json",
+          "sha256": "5f24fe628d5bc3578a509bdfdb7cf91d2f32269a982add94d57f526c11d6a184"
+        },
+        "supports": {
+          "path": "../design/cobalt_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-midnight_relay-bb88f68d93b0ce26",
+      "dogId": "design-cobalt_five_20260911-midnight_relay",
+      "title": "Midnight Relay",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-bb88f68d93b0ce26d031e57514d5c9cb598b994cbbb7aa42c7f845a9ed9a589a.png",
+      "imageHash": "bb88f68d93b0ce26d031e57514d5c9cb598b994cbbb7aa42c7f845a9ed9a589a",
+      "parent": "original-74-43ad85561fe4caa5",
+      "nativeParentSeed": 74,
+      "source": "../design/cobalt_five_20260911/characters/midnight_relay.js",
+      "sourceHash": "6bf7b36da231283b4c8341c4c8060f8a125a5309e94ea745c397f7112cc48216",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/cobalt_five_20260911/characters/midnight_relay.js",
+          "sha256": "6bf7b36da231283b4c8341c4c8060f8a125a5309e94ea745c397f7112cc48216"
+        }
+      ],
+      "description": "A dark blue dog leaps low over a branch with chalk feathers and a trailing red ribbon.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "cobalt_five_20260911",
+      "slug": "midnight_relay",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/cobalt_five_20260911/out/midnight_relay.json",
+          "sha256": "0c65c19423fc795837fcd203eefb3b8ef454e84fd619e1cbac68e72c2992b9af"
+        },
+        "cast": {
+          "path": "../design/cobalt_five_20260911/cast.json",
+          "sha256": "0d298122e08545e2ee64df69d81cc8ef71049799d574e90710e31c85f43bc60a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/cobalt_five_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/cobalt_five_20260911/render.js",
+          "sha256": "20fa3e2272841c946fc754435ec51cb88a55923a7d4fced31fc27dde58cc31f2"
+        },
+        "lettering": {
+          "path": "../design/cobalt_five_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/cobalt_five_20260911/fields.json",
+          "sha256": "5f24fe628d5bc3578a509bdfdb7cf91d2f32269a982add94d57f526c11d6a184"
+        },
+        "supports": {
+          "path": "../design/cobalt_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
     }
   ],
   "rounds": [
