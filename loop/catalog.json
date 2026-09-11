@@ -490,6 +490,16 @@
       "batch": "loop_0009_bellringer_20260911",
       "slug": "bellringer",
       "image": "/collection/assets/candidate-9dfe1b5d4753275961efc9d43abdd94f29c1264c1706775172d73e373e0369e2.png"
+    },
+    {
+      "id": "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1",
+      "title": "Icarus, Into the Light",
+      "kind": "candidate",
+      "imageHash": "d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98",
+      "description": "Revised backlight for Icarus. Both earlier versions remain preserved.",
+      "batch": "loop_0006_icarus_backlight_20260911",
+      "slug": "icarus",
+      "image": "/collection/assets/candidate-d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98.png"
     }
   ],
   "references": [

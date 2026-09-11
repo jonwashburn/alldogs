@@ -6671,6 +6671,72 @@
           "sha256": "58b47733ff6cf5d05dbf461b19a03cdb6f20e48ffbd0f9f3eb63325af0ec33ca"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1",
+      "dogId": "design-loop_0006_icarus_backlight_20260911-icarus",
+      "title": "Icarus, Into the Light",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98.png",
+      "imageHash": "d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0006_icarus_backlight_20260911/characters/icarus.js",
+      "sourceHash": "ec2e56fd7d2e56ddb8862bf3b6e5b41f01e587118d17e5279463ea33ebc397a3",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0006_icarus_backlight_20260911/characters/icarus.js",
+          "sha256": "ec2e56fd7d2e56ddb8862bf3b6e5b41f01e587118d17e5279463ea33ebc397a3"
+        }
+      ],
+      "description": "Revised backlight for Icarus. Both earlier versions remain preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0006_icarus_backlight_20260911",
+      "slug": "icarus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/out/icarus.json",
+          "sha256": "6898bb701c5fbd6a3c7e31551d98fe8ad5c609be470552ecfae37e9c9f50ec09"
+        },
+        "cast": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/cast.json",
+          "sha256": "8bf0f524a1ba4d2dfc8ab7d403073ae408a00beda72cd75c9bb926f46acfe782"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/fields.json",
+          "sha256": "10253b0524b5541e9d9865e41508da2905d7842e1cec52ad4b7e14d5ce503172"
+        },
+        "supports": {
+          "path": "../design/loop_0006_icarus_backlight_20260911/supports.json",
+          "sha256": "6f352f7b8407cff053fe72fe4785befa93ed431810b56d89ccb45fa4455f8556"
+        }
+      }
     }
   ],
   "rounds": [
