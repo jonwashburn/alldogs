@@ -7067,6 +7067,72 @@
           "sha256": "5b01b43d04086658658dfc4ff466e9ff7954693109a483d643381ff7be067873"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0015_athena_20260911-athena-b88ce312c5bebd79",
+      "dogId": "design-loop_0015_athena_20260911-athena",
+      "title": "Athena Listens",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b88ce312c5bebd795e89165b2ebe7bbd8a6878b64d4c7827a5106ad54c428e2c.png",
+      "imageHash": "b88ce312c5bebd795e89165b2ebe7bbd8a6878b64d4c7827a5106ad54c428e2c",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/loop_0015_athena_20260911/characters/athena.js",
+      "sourceHash": "44e4b6cbf1d38f2c7578f53778397734da808583f924d2d39fc32033c88ba351",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0015_athena_20260911/characters/athena.js",
+          "sha256": "44e4b6cbf1d38f2c7578f53778397734da808583f924d2d39fc32033c88ba351"
+        }
+      ],
+      "description": "Even wisdom needs a second opinion.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0015_athena_20260911",
+      "slug": "athena",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0015_athena_20260911/out/athena.json",
+          "sha256": "00102c7acb50be520d63d492d850f95aa6b6aa32bf91cc56c552217b16339106"
+        },
+        "cast": {
+          "path": "../design/loop_0015_athena_20260911/cast.json",
+          "sha256": "985fd87e3ae78dd4bbdb8f9a9dce1f8eaaed0e352ecbea1f452c1afdcf5c34b2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0015_athena_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0015_athena_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0015_athena_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0015_athena_20260911/fields.json",
+          "sha256": "a8cc19915338a333dda97a7d064ec3c04fc03dd62cccdfb9ae5688faaec2b1eb"
+        },
+        "supports": {
+          "path": "../design/loop_0015_athena_20260911/supports.json",
+          "sha256": "572001786372fa908f449bb7abf42dd86568a30f02ecfdef3a2b6424c5b0e1b3"
+        }
+      }
     }
   ],
   "rounds": [

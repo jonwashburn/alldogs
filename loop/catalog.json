@@ -550,6 +550,16 @@
       "batch": "loop_0014_tightrope_20260911",
       "slug": "tightrope",
       "image": "/collection/assets/candidate-426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e.png"
+    },
+    {
+      "id": "candidate-loop_0015_athena_20260911-athena-b88ce312c5bebd79",
+      "title": "Athena Listens",
+      "kind": "candidate",
+      "imageHash": "b88ce312c5bebd795e89165b2ebe7bbd8a6878b64d4c7827a5106ad54c428e2c",
+      "description": "Even wisdom needs a second opinion.",
+      "batch": "loop_0015_athena_20260911",
+      "slug": "athena",
+      "image": "/collection/assets/candidate-b88ce312c5bebd795e89165b2ebe7bbd8a6878b64d4c7827a5106ad54c428e2c.png"
     }
   ],
   "references": [
