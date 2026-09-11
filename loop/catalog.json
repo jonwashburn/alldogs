@@ -1,0 +1,473 @@
+{
+  "version": 1,
+  "dogs": [
+    {
+      "id": "original-38-8c1f9d085e1cbc56",
+      "title": "Hulk",
+      "kind": "original",
+      "imageHash": "8c1f9d085e1cbc56c7d3865edcd70d82222082edcb3d5075164de7a4e579aba0",
+      "description": "Yellow bandana, horseshoe mustache, torn yellow tank, red trunks, both arms flexed, orange tan.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-38-8c1f9d085e1cbc56.jpg"
+    },
+    {
+      "id": "original-41-1363fc8e91acf2b5",
+      "title": "Virgil",
+      "kind": "original",
+      "imageHash": "1363fc8e91acf2b5d70f1e31cee44a33903489eb92f2c7f356436549ad90ec66",
+      "description": "Black-rimmed glasses, short beard, hoodie under a workwear vest, a hazard-striped band with nothing on it, one white sneaker held up with an orange zip tag. Brown coat.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-41-1363fc8e91acf2b5.jpg"
+    },
+    {
+      "id": "original-55-8cf3cdad8b603a03",
+      "title": "Elizabeth",
+      "kind": "original",
+      "imageHash": "8cf3cdad8b603a03d40ec9d235259e2e1d164d0f955d7ed110362747df3bc394",
+      "description": "Jewelled crown, pale blue coat, white gloves, black handbag, a corgi at the foot. A dog with a dog.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-55-8cf3cdad8b603a03.jpg"
+    },
+    {
+      "id": "original-60-3a5e5c7b7aee2a00",
+      "title": "Marie",
+      "kind": "original",
+      "imageHash": "3a5e5c7b7aee2a0082dab43bc64c1f33c8d5c80a4ce8ae08625ad77a50c37155",
+      "description": "A wig taller than the dog with a model ship in it, panniered gown, a slice of cake held out.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-60-3a5e5c7b7aee2a00.jpg"
+    },
+    {
+      "id": "original-62-fb27c29277cc6593",
+      "title": "Barack",
+      "kind": "original",
+      "imageHash": "fb27c29277cc65931edbfbfb65a3e8d6edef51ac1022edfa726b5e8620423444",
+      "description": "Grey-templed crop, big ears, navy suit, red tie, drawn in the flat cream-blue-navy-red poster palette.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-62-fb27c29277cc6593.jpg"
+    },
+    {
+      "id": "original-63-55f1aca66b25a384",
+      "title": "Donald",
+      "kind": "original",
+      "imageHash": "55f1aca66b25a384caefcbb8252535dd13167dcd32f0946ccef3ad12f264dbd5",
+      "description": "Orange coat, blond comb-over, long red tie past the belt, a red cap, pursed mouth, pinching paws.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-63-55f1aca66b25a384.jpg"
+    },
+    {
+      "id": "original-70-15217a88a113bca3",
+      "title": "Batman",
+      "kind": "original",
+      "imageHash": "15217a88a113bca3e5b2e82c32a6c82cca5d4d1ca7d619a5a1f8dc34bc837705",
+      "description": "Grey suit, blue cowl with ears, blue cape, yellow belt, a plain yellow oval on the chest. No bat in it.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-70-15217a88a113bca3.jpg"
+    },
+    {
+      "id": "original-88-26bf0f0fdd814074",
+      "title": "Judy",
+      "kind": "original",
+      "imageHash": "26bf0f0fdd814074d704e144d613d3f1954d76ae5da25266a63f982468679df2",
+      "description": "A pointer planted barking between ragged men and a raised stick. Brave, never pitiable.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-88-26bf0f0fdd814074.jpg"
+    },
+    {
+      "id": "original-131-83c5406c90d2d989",
+      "title": "Elliott",
+      "kind": "original",
+      "imageHash": "83c5406c90d2d98917104b6491d96408ce2dd69cd56129585f2f629aa87c0728",
+      "description": "A glowing fingertip from off-frame meeting the raised paw; a red hoodie; one moon.",
+      "batch": null,
+      "slug": null,
+      "image": "/collection/assets/dog-131-83c5406c90d2d989.jpg"
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-one_more_song-f006e02670795cfe",
+      "title": "One More Song",
+      "kind": "candidate",
+      "imageHash": "f006e02670795cfe9d0bcb614f61ad883f5bde80b0be92adbe2297deb2d24fb8",
+      "description": "A late-night drummer refuses to finish the last song.",
+      "batch": "working_words_doodles_20260911",
+      "slug": "one_more_song",
+      "image": "/collection/assets/candidate-f006e02670795cfe9d0bcb614f61ad883f5bde80b0be92adbe2297deb2d24fb8.png"
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-who_ate_the_moon-cf55293f5e6ad428",
+      "title": "Who Ate the Moon?",
+      "kind": "candidate",
+      "imageHash": "cf55293f5e6ad42872423f1689b845e7651c67225d89ea677f5532c78be099f9",
+      "description": "A baker and a suspiciously croissant-shaped moon.",
+      "batch": "working_words_doodles_20260911",
+      "slug": "who_ate_the_moon",
+      "image": "/collection/assets/candidate-cf55293f5e6ad42872423f1689b845e7651c67225d89ea677f5532c78be099f9.png"
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-i_wrote_back-1fbd876af29fbe68",
+      "title": "I Wrote Back",
+      "kind": "candidate",
+      "imageHash": "1fbd876af29fbe688e7bf749c14d7fd5d56401fb88f6aa6edec593113cb1f3e2",
+      "description": "A postman sends an answer to a bird instead of an address.",
+      "batch": "working_words_doodles_20260911",
+      "slug": "i_wrote_back",
+      "image": "/collection/assets/candidate-1fbd876af29fbe688e7bf749c14d7fd5d56401fb88f6aa6edec593113cb1f3e2.png"
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-stay_up-eae6850ebc7a2986",
+      "title": "Stay Up",
+      "kind": "candidate",
+      "imageHash": "eae6850ebc7a2986a75fdddecd4b099985e0491bc052624d34b82ae6bf4e5a78",
+      "description": "A kite repairer holds on to a small, unruly piece of sky.",
+      "batch": "working_words_doodles_20260911",
+      "slug": "stay_up",
+      "image": "/collection/assets/candidate-eae6850ebc7a2986a75fdddecd4b099985e0491bc052624d34b82ae6bf4e5a78.png"
+    },
+    {
+      "id": "candidate-working_words_doodles_20260911-night_shift-5cba1881faaaba13",
+      "title": "Night Shift",
+      "kind": "candidate",
+      "imageHash": "5cba1881faaaba13c043d4d4e48abbd46b5a9f5057de2fcfeb237d9913d5886f",
+      "description": "A night watchman keeps a tiny sleeping house company.",
+      "batch": "working_words_doodles_20260911",
+      "slug": "night_shift",
+      "image": "/collection/assets/candidate-5cba1881faaaba13c043d4d4e48abbd46b5a9f5057de2fcfeb237d9913d5886f.png"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-prometheus-9865949abb123bdd",
+      "title": "Prometheus",
+      "kind": "candidate",
+      "imageHash": "9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8",
+      "description": "A small fire thief carries a stolen sun.",
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "prometheus",
+      "image": "/collection/assets/candidate-9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8.png"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-thunderhound-0dc4064b55002f20",
+      "title": "Thunderhound",
+      "kind": "candidate",
+      "imageHash": "0dc4064b55002f202b9a718b0dc12f61114a9cf2734c071d1e6775bfd65bd36b",
+      "description": "A thunder god with a battered hammer and a storm that follows him.",
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "thunderhound",
+      "image": "/collection/assets/candidate-0dc4064b55002f202b9a718b0dc12f61114a9cf2734c071d1e6775bfd65bd36b.png"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-little_atlas-90f74b66c058c1a8",
+      "title": "Little Atlas",
+      "kind": "candidate",
+      "imageHash": "90f74b66c058c1a8d37d22a7344741ab28b5ae20f75ad27169237e132e53daa5",
+      "description": "He carries a small crooked world as if it weighs everything.",
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "little_atlas",
+      "image": "/collection/assets/candidate-90f74b66c058c1a8d37d22a7344741ab28b5ae20f75ad27169237e132e53daa5.png"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-phoenix-25031432e6bc9a08",
+      "title": "Phoenix",
+      "kind": "candidate",
+      "imageHash": "25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b",
+      "description": "A scrappy immortal flies out of yesterday\u2019s ashes.",
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "phoenix",
+      "image": "/collection/assets/candidate-25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b.png"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-last_guardian-2e402830bb1cbfff",
+      "title": "The Last Guardian",
+      "kind": "candidate",
+      "imageHash": "2e402830bb1cbfff228616b9033b42c342ec17577c26c3157df8a303be9ab888",
+      "description": "A defiant guardian keeps a tiny living thing safe from the night.",
+      "batch": "heroes_immortals_five_20260911",
+      "slug": "last_guardian",
+      "image": "/collection/assets/candidate-2e402830bb1cbfff228616b9033b42c342ec17577c26c3157df8a303be9ab888.png"
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-red_racket-18db24ed367304e9",
+      "title": "Red Racket",
+      "kind": "candidate",
+      "imageHash": "18db24ed367304e9c1dad593fb4643930f56814de531de937da715d4bbb50623",
+      "description": "A crimson dog with crooked gold horns and violet bat wings starts a commotion.",
+      "batch": "wild_creatures_five_20260911",
+      "slug": "red_racket",
+      "image": "/collection/assets/candidate-18db24ed367304e9c1dad593fb4643930f56814de531de937da715d4bbb50623.png"
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-cloud_biter-91ecbd393c8fb294",
+      "title": "Cloud Biter",
+      "kind": "candidate",
+      "imageHash": "91ecbd393c8fb29409863707567db11f6389db17ddd1a795c8e28c1406eae235",
+      "description": "An airborne ivory beast catches a cloud and unravels the sky.",
+      "batch": "wild_creatures_five_20260911",
+      "slug": "cloud_biter",
+      "image": "/collection/assets/candidate-91ecbd393c8fb29409863707567db11f6389db17ddd1a795c8e28c1406eae235.png"
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-gilded_trouble-cb0ed9ea4863a57b",
+      "title": "Gilded Trouble",
+      "kind": "candidate",
+      "imageHash": "cb0ed9ea4863a57bc1818c9608c0bf93628d07eaaed6336d1b915518a9a4af06",
+      "description": "An ochre chimera with dark wings and scratched gold scales prowls a green ridge.",
+      "batch": "wild_creatures_five_20260911",
+      "slug": "gilded_trouble",
+      "image": "/collection/assets/candidate-cb0ed9ea4863a57bc1818c9608c0bf93628d07eaaed6336d1b915518a9a4af06.png"
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-blue_howler-a4bb313f0945b36e",
+      "title": "Blue Howler",
+      "kind": "candidate",
+      "imageHash": "a4bb313f0945b36ec8ef48cc9a5366c16c3d5214e2ddbe0e8e1a41c6f5bfa696",
+      "description": "A blue dog with pink spines calls to a small drawn serpent.",
+      "batch": "wild_creatures_five_20260911",
+      "slug": "blue_howler",
+      "image": "/collection/assets/candidate-a4bb313f0945b36ec8ef48cc9a5366c16c3d5214e2ddbe0e8e1a41c6f5bfa696.png"
+    },
+    {
+      "id": "candidate-wild_creatures_five_20260911-wild_garden-33d2696725da6108",
+      "title": "Wild Garden",
+      "kind": "candidate",
+      "imageHash": "33d2696725da6108dc1ffbdac1f949232c97af62e5fdd006389bf2b2699e1573",
+      "description": "A green scaled dog with a silver wing bounds through unruly white flowers.",
+      "batch": "wild_creatures_five_20260911",
+      "slug": "wild_garden",
+      "image": "/collection/assets/candidate-33d2696725da6108dc1ffbdac1f949232c97af62e5fdd006389bf2b2699e1573.png"
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-blue_rook-c3a296538c2dbdc8",
+      "title": "Blue Rook",
+      "kind": "candidate",
+      "imageHash": "c3a296538c2dbdc862a023593d4505a79cbad1889d1d88368abf2190744fddee",
+      "description": "Cobalt shoulders, chalk-white cheeks and a ragged black wing caught in the wind.",
+      "batch": "cobalt_five_20260911",
+      "slug": "blue_rook",
+      "image": "/collection/assets/candidate-c3a296538c2dbdc862a023593d4505a79cbad1889d1d88368abf2190744fddee.png"
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-chalk_moth-b549602727de7e0b",
+      "title": "Chalk Moth",
+      "kind": "candidate",
+      "imageHash": "b549602727de7e0b0688987b34debadfb8a1156fad5e1921d1d1a887be58db93",
+      "description": "A pale dog with uneven blue eyespots and black marks threaded through its wings.",
+      "batch": "cobalt_five_20260911",
+      "slug": "chalk_moth",
+      "image": "/collection/assets/candidate-b549602727de7e0b0688987b34debadfb8a1156fad5e1921d1d1a887be58db93.png"
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-red_whistle-a7028c3d539fe7ac",
+      "title": "Red Whistle",
+      "kind": "candidate",
+      "imageHash": "a7028c3d539fe7ace20748b3f6dd85b84e44a176a00fe87f18b66aeb97ea2234",
+      "description": "A blue-and-white dog whistles a red thread toward a crooked branch.",
+      "batch": "cobalt_five_20260911",
+      "slug": "red_whistle",
+      "image": "/collection/assets/candidate-a7028c3d539fe7ace20748b3f6dd85b84e44a176a00fe87f18b66aeb97ea2234.png"
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-storm_post-bc145901865ca83f",
+      "title": "Storm Post",
+      "kind": "candidate",
+      "imageHash": "bc145901865ca83f7e4719c61a5e75e06c1f4583cdb265f58724763d626c4ead",
+      "description": "A watchful dog in a cobalt mantle shelters a tiny bird beneath a black wing.",
+      "batch": "cobalt_five_20260911",
+      "slug": "storm_post",
+      "image": "/collection/assets/candidate-bc145901865ca83f7e4719c61a5e75e06c1f4583cdb265f58724763d626c4ead.png"
+    },
+    {
+      "id": "candidate-cobalt_five_20260911-midnight_relay-bb88f68d93b0ce26",
+      "title": "Midnight Relay",
+      "kind": "candidate",
+      "imageHash": "bb88f68d93b0ce26d031e57514d5c9cb598b994cbbb7aa42c7f845a9ed9a589a",
+      "description": "A dark blue dog leaps low over a branch with chalk feathers and a trailing red ribbon.",
+      "batch": "cobalt_five_20260911",
+      "slug": "midnight_relay",
+      "image": "/collection/assets/candidate-bb88f68d93b0ce26d031e57514d5c9cb598b994cbbb7aa42c7f845a9ed9a589a.png"
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-sunday_best-8495574fbe134f3f",
+      "title": "Sunday Best",
+      "kind": "candidate",
+      "imageHash": "8495574fbe134f3f83edebbd623833fef0e63a3a3b901d5c6dc4becfdf73e2ff",
+      "description": "A cream dog with a white scalloped collar and one small blue button.",
+      "batch": "teal_smiles_five_20260911",
+      "slug": "sunday_best",
+      "image": "/collection/assets/candidate-8495574fbe134f3f83edebbd623833fef0e63a3a3b901d5c6dc4becfdf73e2ff.png"
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-little_secret-e306b114d6477eb8",
+      "title": "Little Secret",
+      "kind": "candidate",
+      "imageHash": "e306b114d6477eb889f99b9797d853a1d3618c6778c1e34f0d9ff3f435c1c4bb",
+      "description": "A dark-eared dog keeps a warm little smile beneath a deep teal doorway.",
+      "batch": "teal_smiles_five_20260911",
+      "slug": "little_secret",
+      "image": "/collection/assets/candidate-e306b114d6477eb889f99b9797d853a1d3618c6778c1e34f0d9ff3f435c1c4bb.png"
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-birthday_wish-e8779b14b8260501",
+      "title": "Birthday Wish",
+      "kind": "candidate",
+      "imageHash": "e8779b14b8260501f0b71c4b16f7c6249426428ef93b5dc3e192239f6f2b33ca",
+      "description": "A bright-eyed dog stands beside one small candle on a dry painted ground.",
+      "batch": "teal_smiles_five_20260911",
+      "slug": "birthday_wish",
+      "image": "/collection/assets/candidate-e8779b14b8260501f0b71c4b16f7c6249426428ef93b5dc3e192239f6f2b33ca.png"
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-blue_button-a2019f1fa8b66d71",
+      "title": "Blue Button",
+      "kind": "candidate",
+      "imageHash": "a2019f1fa8b66d718c4fbb4d6c742a558d0500ac94a5a4aadfda6ec947a4bf4b",
+      "description": "A soft cream dog trails a little blue button on a wavering thread.",
+      "batch": "teal_smiles_five_20260911",
+      "slug": "blue_button",
+      "image": "/collection/assets/candidate-a2019f1fa8b66d718c4fbb4d6c742a558d0500ac94a5a4aadfda6ec947a4bf4b.png"
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-after_the_rain-965472735763ea93",
+      "title": "After the Rain",
+      "kind": "candidate",
+      "imageHash": "965472735763ea93e6c8c0cebc61ea287191377e84af16f57a399ba5c2e6c743",
+      "description": "A dark-eared dog smiles beside a rain puddle holding a small orange reflection.",
+      "batch": "teal_smiles_five_20260911",
+      "slug": "after_the_rain",
+      "image": "/collection/assets/candidate-965472735763ea93e6c8c0cebc61ea287191377e84af16f57a399ba5c2e6c743.png"
+    },
+    {
+      "id": "candidate-mischief_five_20260911-bad_idea-af5ffc21bc97f0e4",
+      "title": "Bad Idea",
+      "kind": "candidate",
+      "imageHash": "af5ffc21bc97f0e4c30b96572e01ebb1f740a5a15ac51fb2215c9ca19ba60e36",
+      "description": "A crooked grin, a dangling bulb, and a suspiciously loose wire.",
+      "batch": "mischief_five_20260911",
+      "slug": "bad_idea",
+      "image": "/collection/assets/candidate-af5ffc21bc97f0e4c30b96572e01ebb1f740a5a15ac51fb2215c9ca19ba60e36.png"
+    },
+    {
+      "id": "candidate-mischief_five_20260911-love_me_not-f73689553c788b62",
+      "title": "Love Me Not",
+      "kind": "candidate",
+      "imageHash": "f73689553c788b62e781b0d43be32ce604313cf38c5722ae3aea176824073229",
+      "description": "One clipped flower, an unapologetic grin, and petals underfoot.",
+      "batch": "mischief_five_20260911",
+      "slug": "love_me_not",
+      "image": "/collection/assets/candidate-f73689553c788b62e781b0d43be32ce604313cf38c5722ae3aea176824073229.png"
+    },
+    {
+      "id": "candidate-mischief_five_20260911-little_saw-17a4b26264f9ca16",
+      "title": "Little Saw",
+      "kind": "candidate",
+      "imageHash": "17a4b26264f9ca163e9aff2497ca3a234dbb204053b5fa8ab4f6604b8d658682",
+      "description": "A small saw and a branch that was meant to become something else.",
+      "batch": "mischief_five_20260911",
+      "slug": "little_saw",
+      "image": "/collection/assets/candidate-17a4b26264f9ca163e9aff2497ca3a234dbb204053b5fa8ab4f6604b8d658682.png"
+    },
+    {
+      "id": "candidate-mischief_five_20260911-night_thief-69c1036c4773acb3",
+      "title": "Night Thief",
+      "kind": "candidate",
+      "imageHash": "69c1036c4773acb3c285bf050102bcf9eaff22e13f59298fa1d83a60131790af",
+      "description": "A little light has gone missing; the thief keeps it under glass.",
+      "batch": "mischief_five_20260911",
+      "slug": "night_thief",
+      "image": "/collection/assets/candidate-69c1036c4773acb3c285bf050102bcf9eaff22e13f59298fa1d83a60131790af.png"
+    },
+    {
+      "id": "candidate-mischief_five_20260911-no_apologies-bef8fc692d07089c",
+      "title": "No Apologies",
+      "kind": "candidate",
+      "imageHash": "bef8fc692d07089c45191be16d804b6837475c275046621151327732edc602a2",
+      "description": "A red-haired dog drags a crossed-out love letter through the room.",
+      "batch": "mischief_five_20260911",
+      "slug": "no_apologies",
+      "image": "/collection/assets/candidate-bef8fc692d07089c45191be16d804b6837475c275046621151327732edc602a2.png"
+    },
+    {
+      "id": "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5",
+      "title": "Hermes, Late Again",
+      "kind": "candidate",
+      "imageHash": "8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d",
+      "description": "The messenger of the gods has one letter left and absolutely no time.",
+      "batch": "loop_0001_hermes_20260911",
+      "slug": "hermes",
+      "image": "/collection/assets/candidate-8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d.png"
+    }
+  ],
+  "references": [
+    {
+      "id": "original-62-fb27c29277cc6593",
+      "title": "Barack",
+      "image": "references/dog-62-fb27c29277cc6593.jpg",
+      "imageHash": "fb27c29277cc65931edbfbfb65a3e8d6edef51ac1022edfa726b5e8620423444"
+    },
+    {
+      "id": "original-63-55f1aca66b25a384",
+      "title": "Donald",
+      "image": "references/dog-63-55f1aca66b25a384.jpg",
+      "imageHash": "55f1aca66b25a384caefcbb8252535dd13167dcd32f0946ccef3ad12f264dbd5"
+    },
+    {
+      "id": "original-70-15217a88a113bca3",
+      "title": "Batman",
+      "image": "references/dog-70-15217a88a113bca3.jpg",
+      "imageHash": "15217a88a113bca3e5b2e82c32a6c82cca5d4d1ca7d619a5a1f8dc34bc837705"
+    },
+    {
+      "id": "original-88-26bf0f0fdd814074",
+      "title": "Judy",
+      "image": "references/dog-88-26bf0f0fdd814074.jpg",
+      "imageHash": "26bf0f0fdd814074d704e144d613d3f1954d76ae5da25266a63f982468679df2"
+    },
+    {
+      "id": "original-131-83c5406c90d2d989",
+      "title": "Elliott",
+      "image": "references/dog-131-83c5406c90d2d989.jpg",
+      "imageHash": "83c5406c90d2d98917104b6491d96408ce2dd69cd56129585f2f629aa87c0728"
+    },
+    {
+      "id": "original-60-3a5e5c7b7aee2a00",
+      "title": "Marie",
+      "image": "references/dog-60-3a5e5c7b7aee2a00.jpg",
+      "imageHash": "3a5e5c7b7aee2a0082dab43bc64c1f33c8d5c80a4ce8ae08625ad77a50c37155"
+    },
+    {
+      "id": "original-55-8cf3cdad8b603a03",
+      "title": "Elizabeth",
+      "image": "references/dog-55-8cf3cdad8b603a03.jpg",
+      "imageHash": "8cf3cdad8b603a03d40ec9d235259e2e1d164d0f955d7ed110362747df3bc394"
+    },
+    {
+      "id": "original-41-1363fc8e91acf2b5",
+      "title": "Virgil",
+      "image": "references/dog-41-1363fc8e91acf2b5.jpg",
+      "imageHash": "1363fc8e91acf2b5d70f1e31cee44a33903489eb92f2c7f356436549ad90ec66"
+    },
+    {
+      "id": "original-38-8c1f9d085e1cbc56",
+      "title": "Hulk",
+      "image": "references/dog-38-8c1f9d085e1cbc56.jpg",
+      "imageHash": "8c1f9d085e1cbc56c7d3865edcd70d82222082edcb3d5075164de7a4e579aba0"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-phoenix-25031432e6bc9a08",
+      "title": "Phoenix",
+      "image": "references/phoenix.png",
+      "imageHash": "25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b"
+    },
+    {
+      "id": "candidate-heroes_immortals_five_20260911-prometheus-9865949abb123bdd",
+      "title": "Prometheus",
+      "image": "references/prometheus.png",
+      "imageHash": "9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8"
+    }
+  ]
+}

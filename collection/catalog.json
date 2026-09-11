@@ -6007,6 +6007,72 @@
           "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5",
+      "dogId": "design-loop_0001_hermes_20260911-hermes",
+      "title": "Hermes, Late Again",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d.png",
+      "imageHash": "8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/loop_0001_hermes_20260911/characters/hermes.js",
+      "sourceHash": "5785f9957c7c33e00672b64b6badf69396f406d1999f409096af1a79dd723139",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0001_hermes_20260911/characters/hermes.js",
+          "sha256": "5785f9957c7c33e00672b64b6badf69396f406d1999f409096af1a79dd723139"
+        }
+      ],
+      "description": "The messenger of the gods has one letter left and absolutely no time.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0001_hermes_20260911",
+      "slug": "hermes",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0001_hermes_20260911/out/hermes.json",
+          "sha256": "625ba3e7940643d97491fe0a6046dd3e06624aa3a8c20282869094dcdd5d6294"
+        },
+        "cast": {
+          "path": "../design/loop_0001_hermes_20260911/cast.json",
+          "sha256": "edda018add706ff1f841dd779c0411b471b4ebf4e7ad15c90b84d8cb54592861"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0001_hermes_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0001_hermes_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0001_hermes_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0001_hermes_20260911/fields.json",
+          "sha256": "469361d84b0f16e6c444735bb60a83537741bf099f43d26e5f05fef8672c7c9f"
+        },
+        "supports": {
+          "path": "../design/loop_0001_hermes_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
     }
   ],
   "rounds": [
