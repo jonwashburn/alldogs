@@ -6143,6 +6143,72 @@
           "sha256": "d6d289a69e510c536db58a65855727ecd681dbe5011d64236325207f1a66fc7c"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0003_persephone_20260911-persephone-fe82155b5bed528e",
+      "dogId": "design-loop_0003_persephone_20260911-persephone",
+      "title": "Persephone Keeps Spring",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-fe82155b5bed528ed6c15354b5914a76ee38af1e68821706e6ac27c918319dda.png",
+      "imageHash": "fe82155b5bed528ed6c15354b5914a76ee38af1e68821706e6ac27c918319dda",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/loop_0003_persephone_20260911/characters/persephone.js",
+      "sourceHash": "9613e6961f6c7876728690bffa07f6a952981c2251d54911feaf01d73fd4f516",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0003_persephone_20260911/characters/persephone.js",
+          "sha256": "9613e6961f6c7876728690bffa07f6a952981c2251d54911feaf01d73fd4f516"
+        }
+      ],
+      "description": "One pomegranate. A little spring escaping behind her.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0003_persephone_20260911",
+      "slug": "persephone",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0003_persephone_20260911/out/persephone.json",
+          "sha256": "28138af68b6f1db58c3f89b5160e42409ee3bbe79799f7d35b911f55e4d8bc33"
+        },
+        "cast": {
+          "path": "../design/loop_0003_persephone_20260911/cast.json",
+          "sha256": "36ffd1100bc4107ddf362ad0c65d19b648b10a98f79a9b04738fd9ea5de9085e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0003_persephone_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0003_persephone_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0003_persephone_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0003_persephone_20260911/fields.json",
+          "sha256": "d58ed35fb86218fe8e7cc26265b6b1a82f90fed51e54cd7993bdad15538811bf"
+        },
+        "supports": {
+          "path": "../design/loop_0003_persephone_20260911/supports.json",
+          "sha256": "24767a67088177b6f9c9aed78dbcbb0690d17070ce1f3998fe072fd42c9d5277"
+        }
+      }
     }
   ],
   "rounds": [

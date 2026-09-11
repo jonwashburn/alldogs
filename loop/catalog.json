@@ -410,6 +410,16 @@
       "batch": "loop_0002_keeper_20260911",
       "slug": "keeper",
       "image": "/collection/assets/candidate-4bff1da0274778986a2dddd8d1da6a01768a706548d185548e63af8b1d1be594.png"
+    },
+    {
+      "id": "candidate-loop_0003_persephone_20260911-persephone-fe82155b5bed528e",
+      "title": "Persephone Keeps Spring",
+      "kind": "candidate",
+      "imageHash": "fe82155b5bed528ed6c15354b5914a76ee38af1e68821706e6ac27c918319dda",
+      "description": "One pomegranate. A little spring escaping behind her.",
+      "batch": "loop_0003_persephone_20260911",
+      "slug": "persephone",
+      "image": "/collection/assets/candidate-fe82155b5bed528ed6c15354b5914a76ee38af1e68821706e6ac27c918319dda.png"
     }
   ],
   "references": [
