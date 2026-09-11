@@ -6803,6 +6803,72 @@
           "sha256": "72a8657f8407bd6eafc0709a783cdeac719d49733c8fd5c1c07ff9e48ddb82a6"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0011_ferryman_20260911-ferryman-b20e5aab444ca73e",
+      "dogId": "design-loop_0011_ferryman_20260911-ferryman",
+      "title": "Charon, One More Crossing",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b20e5aab444ca73ede16d6fdde07f458648957044b7704779dc2033d78937622.png",
+      "imageHash": "b20e5aab444ca73ede16d6fdde07f458648957044b7704779dc2033d78937622",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/loop_0011_ferryman_20260911/characters/ferryman.js",
+      "sourceHash": "170047673105908c7f770bac64146796e06b3ff4dfa18af077883e41782c6784",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0011_ferryman_20260911/characters/ferryman.js",
+          "sha256": "170047673105908c7f770bac64146796e06b3ff4dfa18af077883e41782c6784"
+        }
+      ],
+      "description": "One more crossing. One more coin.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0011_ferryman_20260911",
+      "slug": "ferryman",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0011_ferryman_20260911/out/ferryman.json",
+          "sha256": "9481dd9168176efce84e8ca80097a5f68e999eee31e8b8b4c286ce8ced34a8a9"
+        },
+        "cast": {
+          "path": "../design/loop_0011_ferryman_20260911/cast.json",
+          "sha256": "73b96e6f60d452a396cafced5cb8ba02d9ad4b698e86b131bb0f8b2993697b3f"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0011_ferryman_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0011_ferryman_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0011_ferryman_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0011_ferryman_20260911/fields.json",
+          "sha256": "34ab72c0909d244a53557634c82600fa57c26e606240b77063e476c97c70835f"
+        },
+        "supports": {
+          "path": "../design/loop_0011_ferryman_20260911/supports.json",
+          "sha256": "45e150d903d5ca1bd53d64b682c5bca426f56947525fd9094c50bd3469ddbe77"
+        }
+      }
     }
   ],
   "rounds": [

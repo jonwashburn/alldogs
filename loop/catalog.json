@@ -510,6 +510,16 @@
       "batch": "loop_0010_cook_20260911",
       "slug": "cook",
       "image": "/collection/assets/candidate-850ff2748bd8275bda3e32c884bdb2b9f5e7e0a686bad05db249ca1618562a83.png"
+    },
+    {
+      "id": "candidate-loop_0011_ferryman_20260911-ferryman-b20e5aab444ca73e",
+      "title": "Charon, One More Crossing",
+      "kind": "candidate",
+      "imageHash": "b20e5aab444ca73ede16d6fdde07f458648957044b7704779dc2033d78937622",
+      "description": "One more crossing. One more coin.",
+      "batch": "loop_0011_ferryman_20260911",
+      "slug": "ferryman",
+      "image": "/collection/assets/candidate-b20e5aab444ca73ede16d6fdde07f458648957044b7704779dc2033d78937622.png"
     }
   ],
   "references": [
