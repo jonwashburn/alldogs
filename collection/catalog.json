@@ -6073,6 +6073,76 @@
           "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0002_keeper_20260911-keeper-4bff1da027477898",
+      "dogId": "design-loop_0002_keeper_20260911-keeper",
+      "title": "The Lighthouse Keeper",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4bff1da0274778986a2dddd8d1da6a01768a706548d185548e63af8b1d1be594.png",
+      "imageHash": "4bff1da0274778986a2dddd8d1da6a01768a706548d185548e63af8b1d1be594",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/loop_0002_keeper_20260911/characters/keeper.js",
+      "sourceHash": "1fbf64bbf6607f4e5bb87e1a04f2979a2fde5f3bfa9f8bc5fa36e0225b82cf35",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0002_keeper_20260911/characters/keeper.js",
+          "sha256": "1fbf64bbf6607f4e5bb87e1a04f2979a2fde5f3bfa9f8bc5fa36e0225b82cf35"
+        }
+      ],
+      "description": "One small lantern keeps the shore from disappearing.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0002_keeper_20260911",
+      "slug": "keeper",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0002_keeper_20260911/out/keeper.json",
+          "sha256": "c60812205c3b602cdcfca34415f270dc041e7712075d1c73c188f05b76966d0d"
+        },
+        "cast": {
+          "path": "../design/loop_0002_keeper_20260911/cast.json",
+          "sha256": "834f9aad9c0daf9b12922746008ddf7c8edfeb735d0216311944e2bdca316cd7"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0002_keeper_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0002_keeper_20260911/render.js",
+          "sha256": "f099455eec3c967bffeff56e6e662907d33240cf6a60246b53b47d5526b11e78"
+        },
+        "lettering": {
+          "path": "../design/loop_0002_keeper_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0002_keeper_20260911/fields.json",
+          "sha256": "899a0a322f7b5f7538b8b707f29dd7bd6be3f7afc976e16a520341585242c54a"
+        },
+        "supports": {
+          "path": "../design/loop_0002_keeper_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "shoreControls": {
+          "path": "../design/loop_0002_keeper_20260911/shore_controls.js",
+          "sha256": "d6d289a69e510c536db58a65855727ecd681dbe5011d64236325207f1a66fc7c"
+        }
+      }
     }
   ],
   "rounds": [
