@@ -480,6 +480,16 @@
       "batch": "loop_0008_atlas_20260911",
       "slug": "atlas",
       "image": "/collection/assets/candidate-22a8b7635eb3b904c1648a7dac0062ea3fa05904c8ed8e41b645683592ef7e9b.png"
+    },
+    {
+      "id": "candidate-loop_0009_bellringer_20260911-bellringer-9dfe1b5d47532759",
+      "title": "The Midnight Bell Ringer",
+      "kind": "candidate",
+      "imageHash": "9dfe1b5d4753275961efc9d43abdd94f29c1264c1706775172d73e373e0369e2",
+      "description": "Everybody else gets to sleep.",
+      "batch": "loop_0009_bellringer_20260911",
+      "slug": "bellringer",
+      "image": "/collection/assets/candidate-9dfe1b5d4753275961efc9d43abdd94f29c1264c1706775172d73e373e0369e2.png"
     }
   ],
   "references": [

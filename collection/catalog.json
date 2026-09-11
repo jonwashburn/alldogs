@@ -6605,6 +6605,72 @@
           "sha256": "725db6f63c7717a0aaa7614307971e0c929d1e39033296a6d8f4a2667a1a8948"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0009_bellringer_20260911-bellringer-9dfe1b5d47532759",
+      "dogId": "design-loop_0009_bellringer_20260911-bellringer",
+      "title": "The Midnight Bell Ringer",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9dfe1b5d4753275961efc9d43abdd94f29c1264c1706775172d73e373e0369e2.png",
+      "imageHash": "9dfe1b5d4753275961efc9d43abdd94f29c1264c1706775172d73e373e0369e2",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/loop_0009_bellringer_20260911/characters/bellringer.js",
+      "sourceHash": "ff5caa88abc63fe4780c34bbbdae94b7b4f5bbc494cd9164d6f3cc69b0ea79ac",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0009_bellringer_20260911/characters/bellringer.js",
+          "sha256": "ff5caa88abc63fe4780c34bbbdae94b7b4f5bbc494cd9164d6f3cc69b0ea79ac"
+        }
+      ],
+      "description": "Everybody else gets to sleep.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0009_bellringer_20260911",
+      "slug": "bellringer",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0009_bellringer_20260911/out/bellringer.json",
+          "sha256": "abd7e1cf7d734ebc8ee3b6754f49e3e6afa6c1047ff574358a2dbae05894eb04"
+        },
+        "cast": {
+          "path": "../design/loop_0009_bellringer_20260911/cast.json",
+          "sha256": "e8dd46d3d96cb24e4f5535a131bc09a731ecfa483f7f5373ae01733f2f504bb9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0009_bellringer_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0009_bellringer_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0009_bellringer_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0009_bellringer_20260911/fields.json",
+          "sha256": "90dd44c00f7fae5228fd3ab33db1a493058bb7b77b59c30a164ed689355c7737"
+        },
+        "supports": {
+          "path": "../design/loop_0009_bellringer_20260911/supports.json",
+          "sha256": "58b47733ff6cf5d05dbf461b19a03cdb6f20e48ffbd0f9f3eb63325af0ec33ca"
+        }
+      }
     }
   ],
   "rounds": [
