@@ -6935,6 +6935,72 @@
           "sha256": "dbbd8e32b8381c4b42ce9365cbfa1f451ab87a35e39f43fde5b2348fccb0c655"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0013_detective_20260911-detective-96f41fdbc958e7e9",
+      "dogId": "design-loop_0013_detective_20260911-detective",
+      "title": "The Missing Bone",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-96f41fdbc958e7e90e27075595f3782b5e6a6fe84ae93c7e7b08c69bab965754.png",
+      "imageHash": "96f41fdbc958e7e90e27075595f3782b5e6a6fe84ae93c7e7b08c69bab965754",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/loop_0013_detective_20260911/characters/detective.js",
+      "sourceHash": "d7314dcce798683534ecc01e71bf49ab88750ea04cbe7f8e1e291448f319c0c6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0013_detective_20260911/characters/detective.js",
+          "sha256": "d7314dcce798683534ecc01e71bf49ab88750ea04cbe7f8e1e291448f319c0c6"
+        }
+      ],
+      "description": "The clue was there all along.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0013_detective_20260911",
+      "slug": "detective",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0013_detective_20260911/out/detective.json",
+          "sha256": "6e2c39bee4ac1f50c3d1e8f89582176c2747e9a5d9f40b7cad8229cdde4bcdde"
+        },
+        "cast": {
+          "path": "../design/loop_0013_detective_20260911/cast.json",
+          "sha256": "35875852d60e587793b6c7bd2fe866b5f3487cf93e80f590a41319244ca964d4"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0013_detective_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0013_detective_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0013_detective_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0013_detective_20260911/fields.json",
+          "sha256": "735b16653d5a9d091aa3f48de998d635a3d9c0a68ccf515a88a9bc886d346807"
+        },
+        "supports": {
+          "path": "../design/loop_0013_detective_20260911/supports.json",
+          "sha256": "c91a2605fee410b36f1aa9259c25ec3afc718086381c70821bff07f541493d9e"
+        }
+      }
     }
   ],
   "rounds": [
