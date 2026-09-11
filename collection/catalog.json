@@ -6275,6 +6275,72 @@
           "sha256": "6b1614e31cd033e455358761c0749fce17d941d6a00e5658020bce24e3a2cf13"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0005_magician_20260911-magician-e2e7c7974a1d637c",
+      "dogId": "design-loop_0005_magician_20260911-magician",
+      "title": "One More Trick",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e2e7c7974a1d637cc915f8dc1ffa7d3ec484b456481e24747224b60e03881ae8.png",
+      "imageHash": "e2e7c7974a1d637cc915f8dc1ffa7d3ec484b456481e24747224b60e03881ae8",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/loop_0005_magician_20260911/characters/magician.js",
+      "sourceHash": "d3e419ab0c9394c667c1f6417d090fc86f1b1e328e64746097b82d87910455d3",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0005_magician_20260911/characters/magician.js",
+          "sha256": "d3e419ab0c9394c667c1f6417d090fc86f1b1e328e64746097b82d87910455d3"
+        }
+      ],
+      "description": "The rabbit has seen this trick before.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0005_magician_20260911",
+      "slug": "magician",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0005_magician_20260911/out/magician.json",
+          "sha256": "126f9e33af33589014b61449d1b875eb96d169f1aad46ef8f6c995c36763a7c6"
+        },
+        "cast": {
+          "path": "../design/loop_0005_magician_20260911/cast.json",
+          "sha256": "cfd29ceadf1f60ecae3d10bb8081334a4b23d19a2c6d59a6a95aefe602d62328"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0005_magician_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0005_magician_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0005_magician_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0005_magician_20260911/fields.json",
+          "sha256": "016d53632c7db3c04e9dac4bf5808cc37ea7bc5abeeb0a4c469cae1d616b3ce3"
+        },
+        "supports": {
+          "path": "../design/loop_0005_magician_20260911/supports.json",
+          "sha256": "5f22245398b359b45b9149971d56cfcd63909e08828f1c8250ea9b3d0e7c663e"
+        }
+      }
     }
   ],
   "rounds": [

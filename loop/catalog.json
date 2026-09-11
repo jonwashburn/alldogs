@@ -430,6 +430,16 @@
       "batch": "loop_0004_quixote_20260911",
       "slug": "quixote",
       "image": "/collection/assets/candidate-d7074990b5d8c49a24f4832f8f209dcfa4b5cb79b2b68185a2d714e0f36ce9b2.png"
+    },
+    {
+      "id": "candidate-loop_0005_magician_20260911-magician-e2e7c7974a1d637c",
+      "title": "One More Trick",
+      "kind": "candidate",
+      "imageHash": "e2e7c7974a1d637cc915f8dc1ffa7d3ec484b456481e24747224b60e03881ae8",
+      "description": "The rabbit has seen this trick before.",
+      "batch": "loop_0005_magician_20260911",
+      "slug": "magician",
+      "image": "/collection/assets/candidate-e2e7c7974a1d637cc915f8dc1ffa7d3ec484b456481e24747224b60e03881ae8.png"
     }
   ],
   "references": [
