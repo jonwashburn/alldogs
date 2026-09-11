@@ -5617,6 +5617,396 @@
           "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
         }
       }
+    },
+    {
+      "id": "candidate-mischief_five_20260911-bad_idea-af5ffc21bc97f0e4",
+      "dogId": "design-mischief_five_20260911-bad_idea",
+      "title": "Bad Idea",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-af5ffc21bc97f0e4c30b96572e01ebb1f740a5a15ac51fb2215c9ca19ba60e36.png",
+      "imageHash": "af5ffc21bc97f0e4c30b96572e01ebb1f740a5a15ac51fb2215c9ca19ba60e36",
+      "parent": "original-67-b274e6c6f4c593d7",
+      "nativeParentSeed": 67,
+      "source": "../design/mischief_five_20260911/characters/bad_idea.js",
+      "sourceHash": "51f89f57e69cf41d346fdd7b2ff463db9ffe99c6bf0122528d0f656fd6a9bb20",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mischief_five_20260911/characters/bad_idea.js",
+          "sha256": "51f89f57e69cf41d346fdd7b2ff463db9ffe99c6bf0122528d0f656fd6a9bb20"
+        }
+      ],
+      "description": "A crooked grin, a dangling bulb, and a suspiciously loose wire.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mischief_five_20260911",
+      "slug": "bad_idea",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mischief_five_20260911/out/bad_idea.json",
+          "sha256": "59c75868e9213c41fc1b999f4bdd2287d43ea1cabe7c2fca61c1b48da3ed7808"
+        },
+        "cast": {
+          "path": "../design/mischief_five_20260911/cast.json",
+          "sha256": "a8cf9b07326e0472fbf9814d19544397541474dd775c4548477ec05df1a9395d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mischief_five_20260911/painter.js",
+          "sha256": "d29fbb82987e79b6079e1dbb681545bbc6bb495c3ab14bda0cd2a3297d248ba8"
+        },
+        "renderer": {
+          "path": "../design/mischief_five_20260911/render.js",
+          "sha256": "8db4138e7840e8d933a241938d90f16ef88280f4a0392af42de09b23ef9e4899"
+        },
+        "lettering": {
+          "path": "../design/mischief_five_20260911/lettering.js",
+          "sha256": "cdea081ee014dcfd63d7615152069deee523d2e8919051cf47e1482a7fa67eea"
+        },
+        "fields": {
+          "path": "../design/mischief_five_20260911/fields.json",
+          "sha256": "92e4f09080f0dae90863df0817ddcaa76e8b8fb3f72a902e72db5da13ed33273"
+        },
+        "supports": {
+          "path": "../design/mischief_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "cardboardPreparation": {
+          "path": "../design/mischief_five_20260911/material/cardboard.js",
+          "sha256": "321cbad44defa409359f23dc65f115f44ce1e11b1eb6909194eb4cb5388d0f99"
+        },
+        "cottonMaterial": {
+          "path": "../design/mischief_five_20260911/material/cotton.js",
+          "sha256": "d8913553f0fa04d66805caee364842d9227ad12e263e57ff67dc460dc50bd921"
+        },
+        "cottonLoader": {
+          "path": "../design/mischief_five_20260911/material/load_cotton.js",
+          "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
+        }
+      }
+    },
+    {
+      "id": "candidate-mischief_five_20260911-love_me_not-f73689553c788b62",
+      "dogId": "design-mischief_five_20260911-love_me_not",
+      "title": "Love Me Not",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f73689553c788b62e781b0d43be32ce604313cf38c5722ae3aea176824073229.png",
+      "imageHash": "f73689553c788b62e781b0d43be32ce604313cf38c5722ae3aea176824073229",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/mischief_five_20260911/characters/love_me_not.js",
+      "sourceHash": "983c10779e01698c1ba836792bf75b3ec600b9c9468f4642909b09ccfcec2cf3",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mischief_five_20260911/characters/love_me_not.js",
+          "sha256": "983c10779e01698c1ba836792bf75b3ec600b9c9468f4642909b09ccfcec2cf3"
+        }
+      ],
+      "description": "One clipped flower, an unapologetic grin, and petals underfoot.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mischief_five_20260911",
+      "slug": "love_me_not",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mischief_five_20260911/out/love_me_not.json",
+          "sha256": "c3161fe9ed733f92cef794aee358a585357cec9651525d7dd851de860a853a6c"
+        },
+        "cast": {
+          "path": "../design/mischief_five_20260911/cast.json",
+          "sha256": "a8cf9b07326e0472fbf9814d19544397541474dd775c4548477ec05df1a9395d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mischief_five_20260911/painter.js",
+          "sha256": "d29fbb82987e79b6079e1dbb681545bbc6bb495c3ab14bda0cd2a3297d248ba8"
+        },
+        "renderer": {
+          "path": "../design/mischief_five_20260911/render.js",
+          "sha256": "8db4138e7840e8d933a241938d90f16ef88280f4a0392af42de09b23ef9e4899"
+        },
+        "lettering": {
+          "path": "../design/mischief_five_20260911/lettering.js",
+          "sha256": "cdea081ee014dcfd63d7615152069deee523d2e8919051cf47e1482a7fa67eea"
+        },
+        "fields": {
+          "path": "../design/mischief_five_20260911/fields.json",
+          "sha256": "92e4f09080f0dae90863df0817ddcaa76e8b8fb3f72a902e72db5da13ed33273"
+        },
+        "supports": {
+          "path": "../design/mischief_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "cardboardPreparation": {
+          "path": "../design/mischief_five_20260911/material/cardboard.js",
+          "sha256": "321cbad44defa409359f23dc65f115f44ce1e11b1eb6909194eb4cb5388d0f99"
+        },
+        "cottonMaterial": {
+          "path": "../design/mischief_five_20260911/material/cotton.js",
+          "sha256": "d8913553f0fa04d66805caee364842d9227ad12e263e57ff67dc460dc50bd921"
+        },
+        "cottonLoader": {
+          "path": "../design/mischief_five_20260911/material/load_cotton.js",
+          "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
+        }
+      }
+    },
+    {
+      "id": "candidate-mischief_five_20260911-little_saw-17a4b26264f9ca16",
+      "dogId": "design-mischief_five_20260911-little_saw",
+      "title": "Little Saw",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-17a4b26264f9ca163e9aff2497ca3a234dbb204053b5fa8ab4f6604b8d658682.png",
+      "imageHash": "17a4b26264f9ca163e9aff2497ca3a234dbb204053b5fa8ab4f6604b8d658682",
+      "parent": "original-50-9881611ca2df5e7b",
+      "nativeParentSeed": 50,
+      "source": "../design/mischief_five_20260911/characters/little_saw.js",
+      "sourceHash": "5ca1f792c04e5702c7e86f788bc2e6e44aca75ee713d781192e6da826d194435",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mischief_five_20260911/characters/little_saw.js",
+          "sha256": "5ca1f792c04e5702c7e86f788bc2e6e44aca75ee713d781192e6da826d194435"
+        }
+      ],
+      "description": "A small saw and a branch that was meant to become something else.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mischief_five_20260911",
+      "slug": "little_saw",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mischief_five_20260911/out/little_saw.json",
+          "sha256": "d384f8a4799b4c47960c043ee6316ec8d2f04337ffca5aab9ae15eff48e4ecba"
+        },
+        "cast": {
+          "path": "../design/mischief_five_20260911/cast.json",
+          "sha256": "a8cf9b07326e0472fbf9814d19544397541474dd775c4548477ec05df1a9395d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mischief_five_20260911/painter.js",
+          "sha256": "d29fbb82987e79b6079e1dbb681545bbc6bb495c3ab14bda0cd2a3297d248ba8"
+        },
+        "renderer": {
+          "path": "../design/mischief_five_20260911/render.js",
+          "sha256": "8db4138e7840e8d933a241938d90f16ef88280f4a0392af42de09b23ef9e4899"
+        },
+        "lettering": {
+          "path": "../design/mischief_five_20260911/lettering.js",
+          "sha256": "cdea081ee014dcfd63d7615152069deee523d2e8919051cf47e1482a7fa67eea"
+        },
+        "fields": {
+          "path": "../design/mischief_five_20260911/fields.json",
+          "sha256": "92e4f09080f0dae90863df0817ddcaa76e8b8fb3f72a902e72db5da13ed33273"
+        },
+        "supports": {
+          "path": "../design/mischief_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "cardboardPreparation": {
+          "path": "../design/mischief_five_20260911/material/cardboard.js",
+          "sha256": "321cbad44defa409359f23dc65f115f44ce1e11b1eb6909194eb4cb5388d0f99"
+        },
+        "cottonMaterial": {
+          "path": "../design/mischief_five_20260911/material/cotton.js",
+          "sha256": "d8913553f0fa04d66805caee364842d9227ad12e263e57ff67dc460dc50bd921"
+        },
+        "cottonLoader": {
+          "path": "../design/mischief_five_20260911/material/load_cotton.js",
+          "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
+        }
+      }
+    },
+    {
+      "id": "candidate-mischief_five_20260911-night_thief-69c1036c4773acb3",
+      "dogId": "design-mischief_five_20260911-night_thief",
+      "title": "Night Thief",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-69c1036c4773acb3c285bf050102bcf9eaff22e13f59298fa1d83a60131790af.png",
+      "imageHash": "69c1036c4773acb3c285bf050102bcf9eaff22e13f59298fa1d83a60131790af",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/mischief_five_20260911/characters/night_thief.js",
+      "sourceHash": "8322436cf15d63a6f2a8d22cc0e6944a51532436f42c3b8e0ff7568441c54c6e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mischief_five_20260911/characters/night_thief.js",
+          "sha256": "8322436cf15d63a6f2a8d22cc0e6944a51532436f42c3b8e0ff7568441c54c6e"
+        }
+      ],
+      "description": "A little light has gone missing; the thief keeps it under glass.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mischief_five_20260911",
+      "slug": "night_thief",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mischief_five_20260911/out/night_thief.json",
+          "sha256": "c08a07db3ebb80f69931e229e736c33213cee34a048318d3b3bffc438bdea904"
+        },
+        "cast": {
+          "path": "../design/mischief_five_20260911/cast.json",
+          "sha256": "a8cf9b07326e0472fbf9814d19544397541474dd775c4548477ec05df1a9395d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mischief_five_20260911/painter.js",
+          "sha256": "d29fbb82987e79b6079e1dbb681545bbc6bb495c3ab14bda0cd2a3297d248ba8"
+        },
+        "renderer": {
+          "path": "../design/mischief_five_20260911/render.js",
+          "sha256": "8db4138e7840e8d933a241938d90f16ef88280f4a0392af42de09b23ef9e4899"
+        },
+        "lettering": {
+          "path": "../design/mischief_five_20260911/lettering.js",
+          "sha256": "cdea081ee014dcfd63d7615152069deee523d2e8919051cf47e1482a7fa67eea"
+        },
+        "fields": {
+          "path": "../design/mischief_five_20260911/fields.json",
+          "sha256": "92e4f09080f0dae90863df0817ddcaa76e8b8fb3f72a902e72db5da13ed33273"
+        },
+        "supports": {
+          "path": "../design/mischief_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "cardboardPreparation": {
+          "path": "../design/mischief_five_20260911/material/cardboard.js",
+          "sha256": "321cbad44defa409359f23dc65f115f44ce1e11b1eb6909194eb4cb5388d0f99"
+        },
+        "cottonMaterial": {
+          "path": "../design/mischief_five_20260911/material/cotton.js",
+          "sha256": "d8913553f0fa04d66805caee364842d9227ad12e263e57ff67dc460dc50bd921"
+        },
+        "cottonLoader": {
+          "path": "../design/mischief_five_20260911/material/load_cotton.js",
+          "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
+        }
+      }
+    },
+    {
+      "id": "candidate-mischief_five_20260911-no_apologies-bef8fc692d07089c",
+      "dogId": "design-mischief_five_20260911-no_apologies",
+      "title": "No Apologies",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-bef8fc692d07089c45191be16d804b6837475c275046621151327732edc602a2.png",
+      "imageHash": "bef8fc692d07089c45191be16d804b6837475c275046621151327732edc602a2",
+      "parent": "original-34-fabe479938bae359",
+      "nativeParentSeed": 34,
+      "source": "../design/mischief_five_20260911/characters/no_apologies.js",
+      "sourceHash": "2af94dd74ea9389fa343408f404fec320cd219dd7e9fe9622303e9769c704e58",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mischief_five_20260911/characters/no_apologies.js",
+          "sha256": "2af94dd74ea9389fa343408f404fec320cd219dd7e9fe9622303e9769c704e58"
+        }
+      ],
+      "description": "A red-haired dog drags a crossed-out love letter through the room.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mischief_five_20260911",
+      "slug": "no_apologies",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mischief_five_20260911/out/no_apologies.json",
+          "sha256": "a46564b6e70b9c1e930b3907c1c8c60c982a2e728ea935041a65000b9ca4c632"
+        },
+        "cast": {
+          "path": "../design/mischief_five_20260911/cast.json",
+          "sha256": "a8cf9b07326e0472fbf9814d19544397541474dd775c4548477ec05df1a9395d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mischief_five_20260911/painter.js",
+          "sha256": "d29fbb82987e79b6079e1dbb681545bbc6bb495c3ab14bda0cd2a3297d248ba8"
+        },
+        "renderer": {
+          "path": "../design/mischief_five_20260911/render.js",
+          "sha256": "8db4138e7840e8d933a241938d90f16ef88280f4a0392af42de09b23ef9e4899"
+        },
+        "lettering": {
+          "path": "../design/mischief_five_20260911/lettering.js",
+          "sha256": "cdea081ee014dcfd63d7615152069deee523d2e8919051cf47e1482a7fa67eea"
+        },
+        "fields": {
+          "path": "../design/mischief_five_20260911/fields.json",
+          "sha256": "92e4f09080f0dae90863df0817ddcaa76e8b8fb3f72a902e72db5da13ed33273"
+        },
+        "supports": {
+          "path": "../design/mischief_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        },
+        "cardboardPreparation": {
+          "path": "../design/mischief_five_20260911/material/cardboard.js",
+          "sha256": "321cbad44defa409359f23dc65f115f44ce1e11b1eb6909194eb4cb5388d0f99"
+        },
+        "cottonMaterial": {
+          "path": "../design/mischief_five_20260911/material/cotton.js",
+          "sha256": "d8913553f0fa04d66805caee364842d9227ad12e263e57ff67dc460dc50bd921"
+        },
+        "cottonLoader": {
+          "path": "../design/mischief_five_20260911/material/load_cotton.js",
+          "sha256": "4193f44e3ac306ccaab020a3ff2bf5de5d0604dd28c3136c644ea86f2159b483"
+        }
+      }
     }
   ],
   "rounds": [
