@@ -5287,6 +5287,336 @@
           "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
         }
       }
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-sunday_best-8495574fbe134f3f",
+      "dogId": "design-teal_smiles_five_20260911-sunday_best",
+      "title": "Sunday Best",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-8495574fbe134f3f83edebbd623833fef0e63a3a3b901d5c6dc4becfdf73e2ff.png",
+      "imageHash": "8495574fbe134f3f83edebbd623833fef0e63a3a3b901d5c6dc4becfdf73e2ff",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/teal_smiles_five_20260911/characters/sunday_best.js",
+      "sourceHash": "37bba0deb69aaab23b5d83b950b6089b7d6db01f20c2276723f2ed9de4b6845b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/teal_smiles_five_20260911/characters/sunday_best.js",
+          "sha256": "37bba0deb69aaab23b5d83b950b6089b7d6db01f20c2276723f2ed9de4b6845b"
+        }
+      ],
+      "description": "A cream dog with a white scalloped collar and one small blue button.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "teal_smiles_five_20260911",
+      "slug": "sunday_best",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/teal_smiles_five_20260911/out/sunday_best.json",
+          "sha256": "96acee26295400be89cf35da2026ed56669f61c496dbb5a4f868c224f05ea6e9"
+        },
+        "cast": {
+          "path": "../design/teal_smiles_five_20260911/cast.json",
+          "sha256": "3385290b884a682d40fd0c71e96d53722f7b48d919974e7d87e861cd509d0330"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/teal_smiles_five_20260911/painter.js",
+          "sha256": "8004a2c433a4590f8de91ab87fda5020fb34920afd23a0902de5883ec806f5fe"
+        },
+        "renderer": {
+          "path": "../design/teal_smiles_five_20260911/render.js",
+          "sha256": "f92d2bb83248db8dea5940beef9b48d0ae2e77865e53189d6d29867cd2f72723"
+        },
+        "lettering": {
+          "path": "../design/teal_smiles_five_20260911/lettering.js",
+          "sha256": "99693eedf26c816cf91db0d0a7ff5164c20666dde900b9fc8b826fa01a2446f2"
+        },
+        "fields": {
+          "path": "../design/teal_smiles_five_20260911/fields.json",
+          "sha256": "b4a1cee64ebd5bfc2948130b98773c1daab2ac06cd79b4fc3be700569c7d7a45"
+        },
+        "supports": {
+          "path": "../design/teal_smiles_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-little_secret-e306b114d6477eb8",
+      "dogId": "design-teal_smiles_five_20260911-little_secret",
+      "title": "Little Secret",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e306b114d6477eb889f99b9797d853a1d3618c6778c1e34f0d9ff3f435c1c4bb.png",
+      "imageHash": "e306b114d6477eb889f99b9797d853a1d3618c6778c1e34f0d9ff3f435c1c4bb",
+      "parent": "original-67-b274e6c6f4c593d7",
+      "nativeParentSeed": 67,
+      "source": "../design/teal_smiles_five_20260911/characters/little_secret.js",
+      "sourceHash": "8b6d03b8c0f818757249b30b4a597102de878e9d695f76bd7c364570dcd8a145",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/teal_smiles_five_20260911/characters/little_secret.js",
+          "sha256": "8b6d03b8c0f818757249b30b4a597102de878e9d695f76bd7c364570dcd8a145"
+        }
+      ],
+      "description": "A dark-eared dog keeps a warm little smile beneath a deep teal doorway.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "teal_smiles_five_20260911",
+      "slug": "little_secret",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/teal_smiles_five_20260911/out/little_secret.json",
+          "sha256": "2c77234b701eb86ad5be4cc3fe618a146d52226a7ede35e553ae67a3d13773fd"
+        },
+        "cast": {
+          "path": "../design/teal_smiles_five_20260911/cast.json",
+          "sha256": "3385290b884a682d40fd0c71e96d53722f7b48d919974e7d87e861cd509d0330"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/teal_smiles_five_20260911/painter.js",
+          "sha256": "8004a2c433a4590f8de91ab87fda5020fb34920afd23a0902de5883ec806f5fe"
+        },
+        "renderer": {
+          "path": "../design/teal_smiles_five_20260911/render.js",
+          "sha256": "f92d2bb83248db8dea5940beef9b48d0ae2e77865e53189d6d29867cd2f72723"
+        },
+        "lettering": {
+          "path": "../design/teal_smiles_five_20260911/lettering.js",
+          "sha256": "99693eedf26c816cf91db0d0a7ff5164c20666dde900b9fc8b826fa01a2446f2"
+        },
+        "fields": {
+          "path": "../design/teal_smiles_five_20260911/fields.json",
+          "sha256": "b4a1cee64ebd5bfc2948130b98773c1daab2ac06cd79b4fc3be700569c7d7a45"
+        },
+        "supports": {
+          "path": "../design/teal_smiles_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-birthday_wish-e8779b14b8260501",
+      "dogId": "design-teal_smiles_five_20260911-birthday_wish",
+      "title": "Birthday Wish",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e8779b14b8260501f0b71c4b16f7c6249426428ef93b5dc3e192239f6f2b33ca.png",
+      "imageHash": "e8779b14b8260501f0b71c4b16f7c6249426428ef93b5dc3e192239f6f2b33ca",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/teal_smiles_five_20260911/characters/birthday_wish.js",
+      "sourceHash": "87cac3a34c3e73650354761cd43129dd7c9f91ed04b913e29d673e8ba56cd5f9",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/teal_smiles_five_20260911/characters/birthday_wish.js",
+          "sha256": "87cac3a34c3e73650354761cd43129dd7c9f91ed04b913e29d673e8ba56cd5f9"
+        }
+      ],
+      "description": "A bright-eyed dog stands beside one small candle on a dry painted ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "teal_smiles_five_20260911",
+      "slug": "birthday_wish",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/teal_smiles_five_20260911/out/birthday_wish.json",
+          "sha256": "2c6792fa721d097b563fc2bb36ee1df399a6962c356f29774d0206e205b7a17a"
+        },
+        "cast": {
+          "path": "../design/teal_smiles_five_20260911/cast.json",
+          "sha256": "3385290b884a682d40fd0c71e96d53722f7b48d919974e7d87e861cd509d0330"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/teal_smiles_five_20260911/painter.js",
+          "sha256": "8004a2c433a4590f8de91ab87fda5020fb34920afd23a0902de5883ec806f5fe"
+        },
+        "renderer": {
+          "path": "../design/teal_smiles_five_20260911/render.js",
+          "sha256": "f92d2bb83248db8dea5940beef9b48d0ae2e77865e53189d6d29867cd2f72723"
+        },
+        "lettering": {
+          "path": "../design/teal_smiles_five_20260911/lettering.js",
+          "sha256": "99693eedf26c816cf91db0d0a7ff5164c20666dde900b9fc8b826fa01a2446f2"
+        },
+        "fields": {
+          "path": "../design/teal_smiles_five_20260911/fields.json",
+          "sha256": "b4a1cee64ebd5bfc2948130b98773c1daab2ac06cd79b4fc3be700569c7d7a45"
+        },
+        "supports": {
+          "path": "../design/teal_smiles_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-blue_button-a2019f1fa8b66d71",
+      "dogId": "design-teal_smiles_five_20260911-blue_button",
+      "title": "Blue Button",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a2019f1fa8b66d718c4fbb4d6c742a558d0500ac94a5a4aadfda6ec947a4bf4b.png",
+      "imageHash": "a2019f1fa8b66d718c4fbb4d6c742a558d0500ac94a5a4aadfda6ec947a4bf4b",
+      "parent": "original-34-fabe479938bae359",
+      "nativeParentSeed": 34,
+      "source": "../design/teal_smiles_five_20260911/characters/blue_button.js",
+      "sourceHash": "1d985c482727c98c6b8cd42946794e7f861118f783cd80c01fc970f05fd07442",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/teal_smiles_five_20260911/characters/blue_button.js",
+          "sha256": "1d985c482727c98c6b8cd42946794e7f861118f783cd80c01fc970f05fd07442"
+        }
+      ],
+      "description": "A soft cream dog trails a little blue button on a wavering thread.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "teal_smiles_five_20260911",
+      "slug": "blue_button",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/teal_smiles_five_20260911/out/blue_button.json",
+          "sha256": "c69fdefc6c0fbc42c9c480bb09bb1b1e1ccdfcb518f60d86b32960811c081d69"
+        },
+        "cast": {
+          "path": "../design/teal_smiles_five_20260911/cast.json",
+          "sha256": "3385290b884a682d40fd0c71e96d53722f7b48d919974e7d87e861cd509d0330"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/teal_smiles_five_20260911/painter.js",
+          "sha256": "8004a2c433a4590f8de91ab87fda5020fb34920afd23a0902de5883ec806f5fe"
+        },
+        "renderer": {
+          "path": "../design/teal_smiles_five_20260911/render.js",
+          "sha256": "f92d2bb83248db8dea5940beef9b48d0ae2e77865e53189d6d29867cd2f72723"
+        },
+        "lettering": {
+          "path": "../design/teal_smiles_five_20260911/lettering.js",
+          "sha256": "99693eedf26c816cf91db0d0a7ff5164c20666dde900b9fc8b826fa01a2446f2"
+        },
+        "fields": {
+          "path": "../design/teal_smiles_five_20260911/fields.json",
+          "sha256": "b4a1cee64ebd5bfc2948130b98773c1daab2ac06cd79b4fc3be700569c7d7a45"
+        },
+        "supports": {
+          "path": "../design/teal_smiles_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
+    },
+    {
+      "id": "candidate-teal_smiles_five_20260911-after_the_rain-965472735763ea93",
+      "dogId": "design-teal_smiles_five_20260911-after_the_rain",
+      "title": "After the Rain",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-965472735763ea93e6c8c0cebc61ea287191377e84af16f57a399ba5c2e6c743.png",
+      "imageHash": "965472735763ea93e6c8c0cebc61ea287191377e84af16f57a399ba5c2e6c743",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/teal_smiles_five_20260911/characters/after_the_rain.js",
+      "sourceHash": "50c5f5eda0e9570b607174ac25606bab160898cc878a3cd336e472d7e39c8b35",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/teal_smiles_five_20260911/characters/after_the_rain.js",
+          "sha256": "50c5f5eda0e9570b607174ac25606bab160898cc878a3cd336e472d7e39c8b35"
+        }
+      ],
+      "description": "A dark-eared dog smiles beside a rain puddle holding a small orange reflection.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "teal_smiles_five_20260911",
+      "slug": "after_the_rain",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/teal_smiles_five_20260911/out/after_the_rain.json",
+          "sha256": "2ad8b12f4b7d828d1f5468c339446f91bf228ad2b341a053ffcfd516eb196ede"
+        },
+        "cast": {
+          "path": "../design/teal_smiles_five_20260911/cast.json",
+          "sha256": "3385290b884a682d40fd0c71e96d53722f7b48d919974e7d87e861cd509d0330"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/teal_smiles_five_20260911/painter.js",
+          "sha256": "8004a2c433a4590f8de91ab87fda5020fb34920afd23a0902de5883ec806f5fe"
+        },
+        "renderer": {
+          "path": "../design/teal_smiles_five_20260911/render.js",
+          "sha256": "f92d2bb83248db8dea5940beef9b48d0ae2e77865e53189d6d29867cd2f72723"
+        },
+        "lettering": {
+          "path": "../design/teal_smiles_five_20260911/lettering.js",
+          "sha256": "99693eedf26c816cf91db0d0a7ff5164c20666dde900b9fc8b826fa01a2446f2"
+        },
+        "fields": {
+          "path": "../design/teal_smiles_five_20260911/fields.json",
+          "sha256": "b4a1cee64ebd5bfc2948130b98773c1daab2ac06cd79b4fc3be700569c7d7a45"
+        },
+        "supports": {
+          "path": "../design/teal_smiles_five_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
     }
   ],
   "rounds": [
