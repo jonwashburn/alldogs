@@ -6737,6 +6737,72 @@
           "sha256": "6f352f7b8407cff053fe72fe4785befa93ed431810b56d89ccb45fa4455f8556"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0010_cook_20260911-cook-850ff2748bd8275b",
+      "dogId": "design-loop_0010_cook_20260911-cook",
+      "title": "The Soup Cook",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-850ff2748bd8275bda3e32c884bdb2b9f5e7e0a686bad05db249ca1618562a83.png",
+      "imageHash": "850ff2748bd8275bda3e32c884bdb2b9f5e7e0a686bad05db249ca1618562a83",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/loop_0010_cook_20260911/characters/cook.js",
+      "sourceHash": "6a17fcdfd8eb50411dc70bfbec82c19925a5bfa64520295b9dd31de1b5a5a87a",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0010_cook_20260911/characters/cook.js",
+          "sha256": "6a17fcdfd8eb50411dc70bfbec82c19925a5bfa64520295b9dd31de1b5a5a87a"
+        }
+      ],
+      "description": "Everybody gets a bowl.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0010_cook_20260911",
+      "slug": "cook",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0010_cook_20260911/out/cook.json",
+          "sha256": "1cc78c0ffe15f2c20eada1810dddcbc06f212cc9fc35314746ad2409adb8867a"
+        },
+        "cast": {
+          "path": "../design/loop_0010_cook_20260911/cast.json",
+          "sha256": "98e8da8b4a8b31f8f493e42fd215087e6194edc7175d582fc5db7823d1609324"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0010_cook_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0010_cook_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0010_cook_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0010_cook_20260911/fields.json",
+          "sha256": "62aac91148ae6a5086ab1fbabd7f9eb9794f9457f3ee7999c320c09daa4c9d7c"
+        },
+        "supports": {
+          "path": "../design/loop_0010_cook_20260911/supports.json",
+          "sha256": "72a8657f8407bd6eafc0709a783cdeac719d49733c8fd5c1c07ff9e48ddb82a6"
+        }
+      }
     }
   ],
   "rounds": [

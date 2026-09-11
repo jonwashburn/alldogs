@@ -500,6 +500,16 @@
       "batch": "loop_0006_icarus_backlight_20260911",
       "slug": "icarus",
       "image": "/collection/assets/candidate-d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98.png"
+    },
+    {
+      "id": "candidate-loop_0010_cook_20260911-cook-850ff2748bd8275b",
+      "title": "The Soup Cook",
+      "kind": "candidate",
+      "imageHash": "850ff2748bd8275bda3e32c884bdb2b9f5e7e0a686bad05db249ca1618562a83",
+      "description": "Everybody gets a bowl.",
+      "batch": "loop_0010_cook_20260911",
+      "slug": "cook",
+      "image": "/collection/assets/candidate-850ff2748bd8275bda3e32c884bdb2b9f5e7e0a686bad05db249ca1618562a83.png"
     }
   ],
   "references": [
