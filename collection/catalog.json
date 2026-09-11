@@ -6407,6 +6407,138 @@
           "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0007_gardener_20260911-gardener-17d66bda78902b1f",
+      "dogId": "design-loop_0007_gardener_20260911-gardener",
+      "title": "The Night Gardener",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-17d66bda78902b1f1125bb418a2071964d3cd0ade89c860a013fd2e73498f8b5.png",
+      "imageHash": "17d66bda78902b1f1125bb418a2071964d3cd0ade89c860a013fd2e73498f8b5",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/loop_0007_gardener_20260911/characters/gardener.js",
+      "sourceHash": "395d33200a2ce68d91e530a6912d1b3d5936bb167079e678b010c36653761cee",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0007_gardener_20260911/characters/gardener.js",
+          "sha256": "395d33200a2ce68d91e530a6912d1b3d5936bb167079e678b010c36653761cee"
+        }
+      ],
+      "description": "One flower. Every night.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0007_gardener_20260911",
+      "slug": "gardener",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0007_gardener_20260911/out/gardener.json",
+          "sha256": "1b5c964f7d5800e62a474adbfcd2dea9d6a316fe093bf10b1fce78f52b751b18"
+        },
+        "cast": {
+          "path": "../design/loop_0007_gardener_20260911/cast.json",
+          "sha256": "8a709d3df44325eea8b45bc1329fd0cccde46e6bab9642211b79282267705f34"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0007_gardener_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0007_gardener_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0007_gardener_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0007_gardener_20260911/fields.json",
+          "sha256": "7f3f5df28cd3fcf14693d257cd767b6d115df1ae60a870c0faaf242b9a4513e4"
+        },
+        "supports": {
+          "path": "../design/loop_0007_gardener_20260911/supports.json",
+          "sha256": "bf7d72f05f3b7317e973888c83ed37f514ac4ec0124ffdac8655e5cb07d3058b"
+        }
+      }
+    },
+    {
+      "id": "candidate-loop_0006_icarus_glow_20260911-icarus-3cbb9677c2005506",
+      "dogId": "design-loop_0006_icarus_glow_20260911-icarus",
+      "title": "Icarus, In the Sun",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3cbb9677c20055064513426db4cb98707b7138271e47a5b1471d39f0964d94b4.png",
+      "imageHash": "3cbb9677c20055064513426db4cb98707b7138271e47a5b1471d39f0964d94b4",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0006_icarus_glow_20260911/characters/icarus.js",
+      "sourceHash": "11aa43920c873e36e49fecb4895fac31342c4229203041c016c613c4bb755fef",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0006_icarus_glow_20260911/characters/icarus.js",
+          "sha256": "11aa43920c873e36e49fecb4895fac31342c4229203041c016c613c4bb755fef"
+        }
+      ],
+      "description": "Sun-behind revision of Icarus, Still Climbing. The original is also preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0006_icarus_glow_20260911",
+      "slug": "icarus",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0006_icarus_glow_20260911/out/icarus.json",
+          "sha256": "51d5c1db30929311152036228881d9de5dc82b9c5b7fa1110a774c873210ab41"
+        },
+        "cast": {
+          "path": "../design/loop_0006_icarus_glow_20260911/cast.json",
+          "sha256": "ef15b8de6df68296e011a81726bc6d5633e03ad3366da81dd08255138aa7090f"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0006_icarus_glow_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0006_icarus_glow_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0006_icarus_glow_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0006_icarus_glow_20260911/fields.json",
+          "sha256": "10253b0524b5541e9d9865e41508da2905d7842e1cec52ad4b7e14d5ce503172"
+        },
+        "supports": {
+          "path": "../design/loop_0006_icarus_glow_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
     }
   ],
   "rounds": [

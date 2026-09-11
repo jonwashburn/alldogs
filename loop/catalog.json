@@ -450,6 +450,26 @@
       "batch": "loop_0006_icarus_20260911",
       "slug": "icarus",
       "image": "/collection/assets/candidate-1e7ec90981e65a7b2dcd8d6f3c99985626642ece9fa3863b9fd2a89b774f9e28.png"
+    },
+    {
+      "id": "candidate-loop_0007_gardener_20260911-gardener-17d66bda78902b1f",
+      "title": "The Night Gardener",
+      "kind": "candidate",
+      "imageHash": "17d66bda78902b1f1125bb418a2071964d3cd0ade89c860a013fd2e73498f8b5",
+      "description": "One flower. Every night.",
+      "batch": "loop_0007_gardener_20260911",
+      "slug": "gardener",
+      "image": "/collection/assets/candidate-17d66bda78902b1f1125bb418a2071964d3cd0ade89c860a013fd2e73498f8b5.png"
+    },
+    {
+      "id": "candidate-loop_0006_icarus_glow_20260911-icarus-3cbb9677c2005506",
+      "title": "Icarus, In the Sun",
+      "kind": "candidate",
+      "imageHash": "3cbb9677c20055064513426db4cb98707b7138271e47a5b1471d39f0964d94b4",
+      "description": "Sun-behind revision of Icarus, Still Climbing. The original is also preserved.",
+      "batch": "loop_0006_icarus_glow_20260911",
+      "slug": "icarus",
+      "image": "/collection/assets/candidate-3cbb9677c20055064513426db4cb98707b7138271e47a5b1471d39f0964d94b4.png"
     }
   ],
   "references": [
