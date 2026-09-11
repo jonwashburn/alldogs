@@ -6539,6 +6539,72 @@
           "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0008_atlas_20260911-atlas-22a8b7635eb3b904",
+      "dogId": "design-loop_0008_atlas_20260911-atlas",
+      "title": "Atlas, After Hours",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-22a8b7635eb3b904c1648a7dac0062ea3fa05904c8ed8e41b645683592ef7e9b.png",
+      "imageHash": "22a8b7635eb3b904c1648a7dac0062ea3fa05904c8ed8e41b645683592ef7e9b",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/loop_0008_atlas_20260911/characters/atlas.js",
+      "sourceHash": "4094a652c5608ab8e58c471d41b41e126fb440bc6846fea75557917990920d5c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0008_atlas_20260911/characters/atlas.js",
+          "sha256": "4094a652c5608ab8e58c471d41b41e126fb440bc6846fea75557917990920d5c"
+        }
+      ],
+      "description": "The world can wait. Apparently it will not.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0008_atlas_20260911",
+      "slug": "atlas",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0008_atlas_20260911/out/atlas.json",
+          "sha256": "28009e11e1b3da601a66d8123b24ba2fe83232fe9f9d5c2c4be4bc7c2f1a2edb"
+        },
+        "cast": {
+          "path": "../design/loop_0008_atlas_20260911/cast.json",
+          "sha256": "e8826f08211b84666b103e742e3a1713e54f57d5261fe721b07586ca477318ab"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0008_atlas_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0008_atlas_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0008_atlas_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0008_atlas_20260911/fields.json",
+          "sha256": "89870de8afe1323183e0607cddd90316915e8ca7762d705c0009ed22e42fab71"
+        },
+        "supports": {
+          "path": "../design/loop_0008_atlas_20260911/supports.json",
+          "sha256": "725db6f63c7717a0aaa7614307971e0c929d1e39033296a6d8f4a2667a1a8948"
+        }
+      }
     }
   ],
   "rounds": [

@@ -470,6 +470,16 @@
       "batch": "loop_0006_icarus_glow_20260911",
       "slug": "icarus",
       "image": "/collection/assets/candidate-3cbb9677c20055064513426db4cb98707b7138271e47a5b1471d39f0964d94b4.png"
+    },
+    {
+      "id": "candidate-loop_0008_atlas_20260911-atlas-22a8b7635eb3b904",
+      "title": "Atlas, After Hours",
+      "kind": "candidate",
+      "imageHash": "22a8b7635eb3b904c1648a7dac0062ea3fa05904c8ed8e41b645683592ef7e9b",
+      "description": "The world can wait. Apparently it will not.",
+      "batch": "loop_0008_atlas_20260911",
+      "slug": "atlas",
+      "image": "/collection/assets/candidate-22a8b7635eb3b904c1648a7dac0062ea3fa05904c8ed8e41b645683592ef7e9b.png"
     }
   ],
   "references": [
