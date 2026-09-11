@@ -6209,6 +6209,72 @@
           "sha256": "24767a67088177b6f9c9aed78dbcbb0690d17070ce1f3998fe072fd42c9d5277"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0004_quixote_20260911-quixote-d7074990b5d8c49a",
+      "dogId": "design-loop_0004_quixote_20260911-quixote",
+      "title": "Quixote Tilts Again",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-d7074990b5d8c49a24f4832f8f209dcfa4b5cb79b2b68185a2d714e0f36ce9b2.png",
+      "imageHash": "d7074990b5d8c49a24f4832f8f209dcfa4b5cb79b2b68185a2d714e0f36ce9b2",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/loop_0004_quixote_20260911/characters/quixote.js",
+      "sourceHash": "a271db0f2dd583feb41a4a1aa9f4845c2e799643e69991b91e6990b9e7e06514",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0004_quixote_20260911/characters/quixote.js",
+          "sha256": "a271db0f2dd583feb41a4a1aa9f4845c2e799643e69991b91e6990b9e7e06514"
+        }
+      ],
+      "description": "That is definitely a giant. Probably.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0004_quixote_20260911",
+      "slug": "quixote",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0004_quixote_20260911/out/quixote.json",
+          "sha256": "3594f6ce8d7e7fcb745bd81219eabe473305a76d866f22e37724fb3ef49d0a58"
+        },
+        "cast": {
+          "path": "../design/loop_0004_quixote_20260911/cast.json",
+          "sha256": "f25658efbd839c929a727ecbde1bf11c93ac683c31232542a64932128bbede44"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0004_quixote_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0004_quixote_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0004_quixote_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0004_quixote_20260911/fields.json",
+          "sha256": "5798c24c116df175f98f34f7aea8431c8d762f3066346b2ae8ea03c3fd643768"
+        },
+        "supports": {
+          "path": "../design/loop_0004_quixote_20260911/supports.json",
+          "sha256": "6b1614e31cd033e455358761c0749fce17d941d6a00e5658020bce24e3a2cf13"
+        }
+      }
     }
   ],
   "rounds": [

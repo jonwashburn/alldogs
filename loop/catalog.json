@@ -420,6 +420,16 @@
       "batch": "loop_0003_persephone_20260911",
       "slug": "persephone",
       "image": "/collection/assets/candidate-fe82155b5bed528ed6c15354b5914a76ee38af1e68821706e6ac27c918319dda.png"
+    },
+    {
+      "id": "candidate-loop_0004_quixote_20260911-quixote-d7074990b5d8c49a",
+      "title": "Quixote Tilts Again",
+      "kind": "candidate",
+      "imageHash": "d7074990b5d8c49a24f4832f8f209dcfa4b5cb79b2b68185a2d714e0f36ce9b2",
+      "description": "That is definitely a giant. Probably.",
+      "batch": "loop_0004_quixote_20260911",
+      "slug": "quixote",
+      "image": "/collection/assets/candidate-d7074990b5d8c49a24f4832f8f209dcfa4b5cb79b2b68185a2d714e0f36ce9b2.png"
     }
   ],
   "references": [
