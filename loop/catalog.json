@@ -540,6 +540,16 @@
       "batch": "loop_0013_detective_20260911",
       "slug": "detective",
       "image": "/collection/assets/candidate-96f41fdbc958e7e90e27075595f3782b5e6a6fe84ae93c7e7b08c69bab965754.png"
+    },
+    {
+      "id": "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538",
+      "title": "A Little Further",
+      "kind": "candidate",
+      "imageHash": "426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e",
+      "description": "She keeps her eyes on the other side.",
+      "batch": "loop_0014_tightrope_20260911",
+      "slug": "tightrope",
+      "image": "/collection/assets/candidate-426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e.png"
     }
   ],
   "references": [

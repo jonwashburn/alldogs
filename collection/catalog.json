@@ -7001,6 +7001,72 @@
           "sha256": "c91a2605fee410b36f1aa9259c25ec3afc718086381c70821bff07f541493d9e"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538",
+      "dogId": "design-loop_0014_tightrope_20260911-tightrope",
+      "title": "A Little Further",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e.png",
+      "imageHash": "426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/loop_0014_tightrope_20260911/characters/tightrope.js",
+      "sourceHash": "8e5befc6efa9e5ba614e7f1f28cf5cca91585d0c773dc9720e931874ef97d220",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0014_tightrope_20260911/characters/tightrope.js",
+          "sha256": "8e5befc6efa9e5ba614e7f1f28cf5cca91585d0c773dc9720e931874ef97d220"
+        }
+      ],
+      "description": "She keeps her eyes on the other side.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0014_tightrope_20260911",
+      "slug": "tightrope",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0014_tightrope_20260911/out/tightrope.json",
+          "sha256": "931f149394c74a5effdc69b0d209e4bc90e6354933826cf6ad68d016dbcd4a7f"
+        },
+        "cast": {
+          "path": "../design/loop_0014_tightrope_20260911/cast.json",
+          "sha256": "320cb10e4784ef062b62230288045fedc87b8ea7e082d3d8d247cbefcac81f30"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0014_tightrope_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0014_tightrope_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0014_tightrope_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0014_tightrope_20260911/fields.json",
+          "sha256": "c52b9a1c9bba2cb1bce0e931746452fef070a0e56b78df2ca3876e21f98720af"
+        },
+        "supports": {
+          "path": "../design/loop_0014_tightrope_20260911/supports.json",
+          "sha256": "5b01b43d04086658658dfc4ff466e9ff7954693109a483d643381ff7be067873"
+        }
+      }
     }
   ],
   "rounds": [
