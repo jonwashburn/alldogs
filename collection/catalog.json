@@ -6341,6 +6341,72 @@
           "sha256": "5f22245398b359b45b9149971d56cfcd63909e08828f1c8250ea9b3d0e7c663e"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0006_icarus_20260911-icarus-1e7ec90981e65a7b",
+      "dogId": "design-loop_0006_icarus_20260911-icarus",
+      "title": "Icarus, Still Climbing",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1e7ec90981e65a7b2dcd8d6f3c99985626642ece9fa3863b9fd2a89b774f9e28.png",
+      "imageHash": "1e7ec90981e65a7b2dcd8d6f3c99985626642ece9fa3863b9fd2a89b774f9e28",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0006_icarus_20260911/characters/icarus.js",
+      "sourceHash": "ef27caacd14e272a0163c2bd1a30e953f76700f96194f20a9e5fb127b6a30f7b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0006_icarus_20260911/characters/icarus.js",
+          "sha256": "ef27caacd14e272a0163c2bd1a30e953f76700f96194f20a9e5fb127b6a30f7b"
+        }
+      ],
+      "description": "He notices the feather. He keeps going.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0006_icarus_20260911",
+      "slug": "icarus",
+      "backing": "cardboard",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0006_icarus_20260911/out/icarus.json",
+          "sha256": "9b1103bd7bdb9161821d6091d154e2a40b65e3552037e3267d1dca80a473c86a"
+        },
+        "cast": {
+          "path": "../design/loop_0006_icarus_20260911/cast.json",
+          "sha256": "a3c63eae5f617d9bf262d9ed3d25ce5dbcdb4c450a591a22e44f94d9e53e0527"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0006_icarus_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0006_icarus_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0006_icarus_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0006_icarus_20260911/fields.json",
+          "sha256": "10253b0524b5541e9d9865e41508da2905d7842e1cec52ad4b7e14d5ce503172"
+        },
+        "supports": {
+          "path": "../design/loop_0006_icarus_20260911/supports.json",
+          "sha256": "a4e68f3f6a4767ced157dbe10de2d33b8f578a8b63fac01c7bf227a9b39465a1"
+        }
+      }
     }
   ],
   "rounds": [

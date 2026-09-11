@@ -440,6 +440,16 @@
       "batch": "loop_0005_magician_20260911",
       "slug": "magician",
       "image": "/collection/assets/candidate-e2e7c7974a1d637cc915f8dc1ffa7d3ec484b456481e24747224b60e03881ae8.png"
+    },
+    {
+      "id": "candidate-loop_0006_icarus_20260911-icarus-1e7ec90981e65a7b",
+      "title": "Icarus, Still Climbing",
+      "kind": "candidate",
+      "imageHash": "1e7ec90981e65a7b2dcd8d6f3c99985626642ece9fa3863b9fd2a89b774f9e28",
+      "description": "He notices the feather. He keeps going.",
+      "batch": "loop_0006_icarus_20260911",
+      "slug": "icarus",
+      "image": "/collection/assets/candidate-1e7ec90981e65a7b2dcd8d6f3c99985626642ece9fa3863b9fd2a89b774f9e28.png"
     }
   ],
   "references": [
