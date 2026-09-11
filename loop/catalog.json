@@ -520,6 +520,16 @@
       "batch": "loop_0011_ferryman_20260911",
       "slug": "ferryman",
       "image": "/collection/assets/candidate-b20e5aab444ca73ede16d6fdde07f458648957044b7704779dc2033d78937622.png"
+    },
+    {
+      "id": "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172",
+      "title": "The Comet Courier",
+      "kind": "candidate",
+      "imageHash": "fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095",
+      "description": "Special delivery. He takes the low road.",
+      "batch": "loop_0012_courier_20260911",
+      "slug": "courier",
+      "image": "/collection/assets/candidate-fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095.png"
     }
   ],
   "references": [

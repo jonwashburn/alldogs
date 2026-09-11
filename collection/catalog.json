@@ -6869,6 +6869,72 @@
           "sha256": "45e150d903d5ca1bd53d64b682c5bca426f56947525fd9094c50bd3469ddbe77"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172",
+      "dogId": "design-loop_0012_courier_20260911-courier",
+      "title": "The Comet Courier",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095.png",
+      "imageHash": "fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0012_courier_20260911/characters/courier.js",
+      "sourceHash": "4fc2c0e1ed002c7a5205fde406a69fc5c2401086309ebc053ff85311d4305579",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0012_courier_20260911/characters/courier.js",
+          "sha256": "4fc2c0e1ed002c7a5205fde406a69fc5c2401086309ebc053ff85311d4305579"
+        }
+      ],
+      "description": "Special delivery. He takes the low road.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0012_courier_20260911",
+      "slug": "courier",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0012_courier_20260911/out/courier.json",
+          "sha256": "998208614b9f71d060d6fd4dc2f58ebe940afdbf6f20e4fd1e646dc68de91f80"
+        },
+        "cast": {
+          "path": "../design/loop_0012_courier_20260911/cast.json",
+          "sha256": "f753b88e87e32625b598631bcbb878ebb53bf69281fb71a0ea9696b36c336037"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0012_courier_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0012_courier_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0012_courier_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0012_courier_20260911/fields.json",
+          "sha256": "9db35ce2f08bdab097b0cadf77e8814282ec0ee2915713cb7e2839905e67f18a"
+        },
+        "supports": {
+          "path": "../design/loop_0012_courier_20260911/supports.json",
+          "sha256": "dbbd8e32b8381c4b42ce9365cbfa1f451ab87a35e39f43fde5b2348fccb0c655"
+        }
+      }
     }
   ],
   "rounds": [
