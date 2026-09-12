@@ -7133,6 +7133,204 @@
           "sha256": "572001786372fa908f449bb7abf42dd86568a30f02ecfdef3a2b6424c5b0e1b3"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38",
+      "dogId": "design-loop_0016_thor_20260911-thor",
+      "title": "Thor, Small Thunder",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508.png",
+      "imageHash": "1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0016_thor_20260911/characters/thor.js",
+      "sourceHash": "50ad9c9c37ead8dbac9951520dcee55fc17e55f0b6e4a31f40d7e0845cddf55e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0016_thor_20260911/characters/thor.js",
+          "sha256": "50ad9c9c37ead8dbac9951520dcee55fc17e55f0b6e4a31f40d7e0845cddf55e"
+        }
+      ],
+      "description": "The hammer is heavy. The weather is personal.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0016_thor_20260911",
+      "slug": "thor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0016_thor_20260911/out/thor.json",
+          "sha256": "65dbf2106fd2cf2e2dc4da0303bb351cb8eb90c4b5ce74b86ddbfcce23ba1de2"
+        },
+        "cast": {
+          "path": "../design/loop_0016_thor_20260911/cast.json",
+          "sha256": "9ee3230584e686495641b22ae7648f8a2fc0bf628174c4d5abb43220671c9a9f"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0016_thor_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0016_thor_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0016_thor_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0016_thor_20260911/fields.json",
+          "sha256": "30058b434e157313be20ca3ce1e3b125062cffa245feda965193ded31b022bac"
+        },
+        "supports": {
+          "path": "../design/loop_0016_thor_20260911/supports.json",
+          "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
+        }
+      }
+    },
+    {
+      "id": "candidate-loop_0017_joan_20260911-joan-a721d495791beb22",
+      "dogId": "design-loop_0017_joan_20260911-joan",
+      "title": "Joan, Before Dawn",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751.png",
+      "imageHash": "a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/loop_0017_joan_20260911/characters/joan.js",
+      "sourceHash": "9f395cb9513fd97bfb66c902bdf2152f928bb921321655a295cf2e9d10b32338",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0017_joan_20260911/characters/joan.js",
+          "sha256": "9f395cb9513fd97bfb66c902bdf2152f928bb921321655a295cf2e9d10b32338"
+        }
+      ],
+      "description": "A small dog with an unreasonable amount of courage.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0017_joan_20260911",
+      "slug": "joan",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0017_joan_20260911/out/joan.json",
+          "sha256": "a53e6fefba6104ab474f919cbd6255249c465305bd062eb1166f88d4931ef55e"
+        },
+        "cast": {
+          "path": "../design/loop_0017_joan_20260911/cast.json",
+          "sha256": "4512585cf763e09d7dc0174d9e353eb4c499fadc367e4866dffaf830bc4b9c1b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0017_joan_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0017_joan_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0017_joan_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0017_joan_20260911/fields.json",
+          "sha256": "91508b3a95782fa320c3fc70a624fb94f57948232e98ce9d144b355e1b9922f8"
+        },
+        "supports": {
+          "path": "../design/loop_0017_joan_20260911/supports.json",
+          "sha256": "bed4b8fd21f88479f86da9de4ef58d2935e42c2e18085c6dacfaba470ca42a40"
+        }
+      }
+    },
+    {
+      "id": "candidate-loop_0018_wukong_20260911-wukong-787b213ce5f79446",
+      "dogId": "design-loop_0018_wukong_20260911-wukong",
+      "title": "Sun Wukong, Cloud Thief",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-787b213ce5f794467fb3ba068a3927ebacc297d0cf4a033b561e175a0e0a1807.png",
+      "imageHash": "787b213ce5f794467fb3ba068a3927ebacc297d0cf4a033b561e175a0e0a1807",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/loop_0018_wukong_20260911/characters/wukong.js",
+      "sourceHash": "22cff7121d7b29da359a5a71ae5d4925cbda288746a10398c24331f88a565e48",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0018_wukong_20260911/characters/wukong.js",
+          "sha256": "22cff7121d7b29da359a5a71ae5d4925cbda288746a10398c24331f88a565e48"
+        }
+      ],
+      "description": "Borrowed a cloud. Kept the sky.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0018_wukong_20260911",
+      "slug": "wukong",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0018_wukong_20260911/out/wukong.json",
+          "sha256": "a9e715385dccdce6c7ee2ece0504f8aa3db9876db79163daeadd775ec4937208"
+        },
+        "cast": {
+          "path": "../design/loop_0018_wukong_20260911/cast.json",
+          "sha256": "14ddcee2c1013bf5866ef09250d62a834fcd15352a00ca5d7c5dc33773fab8d4"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0018_wukong_20260911/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0018_wukong_20260911/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0018_wukong_20260911/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0018_wukong_20260911/fields.json",
+          "sha256": "a1a78be99d9c2042899e7cb4e1725a1a0d6716e1338b5f34334417453b09ac31"
+        },
+        "supports": {
+          "path": "../design/loop_0018_wukong_20260911/supports.json",
+          "sha256": "83622166b7039aa81d3c963a6e2c41e053d3761b040fdb06456a9c9d0e550edb"
+        }
+      }
     }
   ],
   "rounds": [

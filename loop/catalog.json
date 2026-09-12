@@ -560,6 +560,36 @@
       "batch": "loop_0015_athena_20260911",
       "slug": "athena",
       "image": "/collection/assets/candidate-b88ce312c5bebd795e89165b2ebe7bbd8a6878b64d4c7827a5106ad54c428e2c.png"
+    },
+    {
+      "id": "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38",
+      "title": "Thor, Small Thunder",
+      "kind": "candidate",
+      "imageHash": "1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508",
+      "description": "The hammer is heavy. The weather is personal.",
+      "batch": "loop_0016_thor_20260911",
+      "slug": "thor",
+      "image": "/collection/assets/candidate-1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508.png"
+    },
+    {
+      "id": "candidate-loop_0017_joan_20260911-joan-a721d495791beb22",
+      "title": "Joan, Before Dawn",
+      "kind": "candidate",
+      "imageHash": "a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751",
+      "description": "A small dog with an unreasonable amount of courage.",
+      "batch": "loop_0017_joan_20260911",
+      "slug": "joan",
+      "image": "/collection/assets/candidate-a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751.png"
+    },
+    {
+      "id": "candidate-loop_0018_wukong_20260911-wukong-787b213ce5f79446",
+      "title": "Sun Wukong, Cloud Thief",
+      "kind": "candidate",
+      "imageHash": "787b213ce5f794467fb3ba068a3927ebacc297d0cf4a033b561e175a0e0a1807",
+      "description": "Borrowed a cloud. Kept the sky.",
+      "batch": "loop_0018_wukong_20260911",
+      "slug": "wukong",
+      "image": "/collection/assets/candidate-787b213ce5f794467fb3ba068a3927ebacc297d0cf4a033b561e175a0e0a1807.png"
     }
   ],
   "references": [
