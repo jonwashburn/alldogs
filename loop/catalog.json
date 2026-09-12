@@ -610,6 +610,16 @@
       "batch": "loop_0020_thor_storm_20260912",
       "slug": "thor",
       "image": "/collection/assets/candidate-087c4f3c0fde8bda3aa818081f10d90b514cd34f8ca899be1f2dc50657e38e74.png"
+    },
+    {
+      "id": "candidate-loop_0021_robin_20260912-robin-1e16cb67ed54605b",
+      "title": "Robin, Taking the Long Way",
+      "kind": "candidate",
+      "imageHash": "1e16cb67ed54605bccc974258771f16c6d4264c8b6996d9f117cf98b0ab5be64",
+      "description": "The forest knows a shorter way. He has his reasons.",
+      "batch": "loop_0021_robin_20260912",
+      "slug": "robin",
+      "image": "/collection/assets/candidate-1e16cb67ed54605bccc974258771f16c6d4264c8b6996d9f117cf98b0ab5be64.png"
     }
   ],
   "references": [

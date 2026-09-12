@@ -7491,6 +7491,72 @@
           "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0021_robin_20260912-robin-1e16cb67ed54605b",
+      "dogId": "design-loop_0021_robin_20260912-robin",
+      "title": "Robin, Taking the Long Way",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1e16cb67ed54605bccc974258771f16c6d4264c8b6996d9f117cf98b0ab5be64.png",
+      "imageHash": "1e16cb67ed54605bccc974258771f16c6d4264c8b6996d9f117cf98b0ab5be64",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/loop_0021_robin_20260912/characters/robin.js",
+      "sourceHash": "1640171d423efe08156392427b5c629f6af33066832ebec883014810ae51eb6b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0021_robin_20260912/characters/robin.js",
+          "sha256": "1640171d423efe08156392427b5c629f6af33066832ebec883014810ae51eb6b"
+        }
+      ],
+      "description": "The forest knows a shorter way. He has his reasons.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0021_robin_20260912",
+      "slug": "robin",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0021_robin_20260912/out/robin.json",
+          "sha256": "33083639cb6190c355d978ac77a48ca49fe6433f2e48d925954c15b1db493207"
+        },
+        "cast": {
+          "path": "../design/loop_0021_robin_20260912/cast.json",
+          "sha256": "d47484dbada00e3b8d41617ebfa6790505cc0868f11b98df48ac0279225633b7"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0021_robin_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0021_robin_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0021_robin_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0021_robin_20260912/fields.json",
+          "sha256": "11b2c9dc0e4e069f64af5eee24791086ddc1ac51f6378bbdb95e04e0fd9cc72d"
+        },
+        "supports": {
+          "path": "../design/loop_0021_robin_20260912/supports.json",
+          "sha256": "45dfcdeaad27a9d184d958eda35a8c978ca0d38834a6bfb04da2cf493d2a0670"
+        }
+      }
     }
   ],
   "rounds": [
