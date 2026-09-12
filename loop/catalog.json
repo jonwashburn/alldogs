@@ -660,6 +660,16 @@
       "batch": "loop_0025_thor_stormbeast_20260912",
       "slug": "thor",
       "image": "/collection/assets/candidate-9eada1035b8dc3fd7790828439f5a8d0a04da83381c1a2f4ae6ca326fad88494.png"
+    },
+    {
+      "id": "candidate-loop_0026_thor_light_20260912-thor-1fd02d5a38a899b3",
+      "title": "Thor, White Lightning",
+      "kind": "candidate",
+      "imageHash": "1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f",
+      "description": "The sky lights up before he blinks.",
+      "batch": "loop_0026_thor_light_20260912",
+      "slug": "thor",
+      "image": "/collection/assets/candidate-1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f.png"
     }
   ],
   "references": [

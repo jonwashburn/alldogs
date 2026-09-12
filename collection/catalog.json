@@ -7821,6 +7821,72 @@
           "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0026_thor_light_20260912-thor-1fd02d5a38a899b3",
+      "dogId": "design-loop_0026_thor_light_20260912-thor",
+      "title": "Thor, White Lightning",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f.png",
+      "imageHash": "1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0026_thor_light_20260912/characters/thor.js",
+      "sourceHash": "ce0ff1fe351a26d663c8ec259f046756e006cb7c30ef5f085b4743e44db9a77b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0026_thor_light_20260912/characters/thor.js",
+          "sha256": "ce0ff1fe351a26d663c8ec259f046756e006cb7c30ef5f085b4743e44db9a77b"
+        }
+      ],
+      "description": "The sky lights up before he blinks.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0026_thor_light_20260912",
+      "slug": "thor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0026_thor_light_20260912/out/thor.json",
+          "sha256": "c10492ce3f4f844f0b107219a8d66d6e6645a2fea7121f7572699e3d37991c94"
+        },
+        "cast": {
+          "path": "../design/loop_0026_thor_light_20260912/cast.json",
+          "sha256": "f1f72b1d4bbccbe2210db0514cee997a90d3a05ecefbe5040b475ab55724c714"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0026_thor_light_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0026_thor_light_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0026_thor_light_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0026_thor_light_20260912/fields.json",
+          "sha256": "30058b434e157313be20ca3ce1e3b125062cffa245feda965193ded31b022bac"
+        },
+        "supports": {
+          "path": "../design/loop_0026_thor_light_20260912/supports.json",
+          "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
+        }
+      }
     }
   ],
   "rounds": [
