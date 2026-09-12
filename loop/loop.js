@@ -36,8 +36,22 @@ $('#note').oninput=()=>putReview({note:$('#note').value});$('#clear-score').oncl
 $('#connect').onclick=()=>$('#connection').showModal();$('#connect-form').onsubmit=async e=>{e.preventDefault();if(!writer)return;try{const key=$('#review-key').value.trim();if(!key)return;localStorage.setItem('collection_token',key);localStorage.removeItem('loop_disconnected');await connect();$('#review-key').value='';$('#connection').close();}catch(e){connected=false;$('#connect-status').textContent=e.message;}};$('#sync-now').onclick=()=>{if(connected)sync();else $('#connect-status').textContent='Enter your review key first.';};$('#disconnect').onclick=()=>{connected=false;localStorage.setItem('loop_disconnected','1');$('#connect').textContent='Connect feedback';$('#connection').close();status('Disconnected. Saved drafts remain in this browser.');};
 $('#open-feedback').onclick=()=>{renderMessages();$('#feedback').showModal();};$('#feedback-form').onsubmit=e=>{e.preventDefault();if(!writer||handingOff)return;const note=$('#general-note').value.trim();if(!note)return;edit(state,'loopFeedback',crypto.randomUUID(),{note});changed();renderMessages();$('#general-note').value='';};
 $('#export').onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({exportedAt:new Date().toISOString(),feedback:state,summary},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='all-dogs-loop-feedback.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);};
-window.addEventListener('focus',()=>{if(catalog){claimEditor(true);if(connected)sync();}});window.addEventListener('online',()=>{if(connected)sync();});window.addEventListener('storage',e=>{if(e.key!==KEY||writer)return;readLocal();renderArchive();renderMessages();renderScore(true);});
+window.addEventListener('focus',()=>{if(catalog){claimEditor(true);refreshCatalogue();if(connected)sync();}});window.addEventListener('online',()=>{if(connected)sync();});window.addEventListener('storage',e=>{if(e.key!==KEY||writer)return;readLocal();renderArchive();renderMessages();renderScore(true);});
 
+let catalogueRefresh=null;
+async function refreshCatalogue(followHash=false){
+ if(!catalogueRefresh)catalogueRefresh=(async()=>{
+  const r=await fetch('catalog.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});
+  if(!r.ok)throw Error('New paintings could not load. Your current painting and feedback are still here.');
+  const next=await r.json();if(!Array.isArray(next.dogs)||!Array.isArray(next.references))throw Error('The updated catalogue is unavailable.');
+  catalog=next;byId=Object.fromEntries(next.dogs.map(d=>[d.id,d]));const refs=new Set(next.references.map(x=>x.id));
+  dogs=next.dogs.filter(d=>d.kind==='candidate'&&!refs.has(d.id)).reverse();$('#total').textContent=dogs.length;renderArchive();
+  if(selected)$('#position').textContent=(dogs.findIndex(x=>x.id===selected)+1)+' / '+dogs.length;
+ })().finally(()=>{catalogueRefresh=null;});
+ try{await catalogueRefresh;if(followHash){const id=decodeURIComponent(location.hash.replace(/^#dog=/,''));if(dogs.some(d=>d.id===id)&&id!==selected)await show(id);}}
+ catch(e){status('New paintings could not load. Your current painting and feedback are still here.');}
+}
+window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.replace(/^#dog=/,''));if(dogs.some(d=>d.id===id))show(id);else refreshCatalogue(true);});
 function editorControls(){
  renderScore();$('#general-note').readOnly=!writer||handingOff;
  $('#feedback-form button.primary').disabled=!writer||handingOff;
