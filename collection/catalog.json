@@ -7425,6 +7425,72 @@
           }
         }
       }
+    },
+    {
+      "id": "candidate-loop_0020_thor_storm_20260912-thor-087c4f3c0fde8bda",
+      "dogId": "design-loop_0020_thor_storm_20260912-thor",
+      "title": "Thor, The Sky Answers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-087c4f3c0fde8bda3aa818081f10d90b514cd34f8ca899be1f2dc50657e38e74.png",
+      "imageHash": "087c4f3c0fde8bda3aa818081f10d90b514cd34f8ca899be1f2dc50657e38e74",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0020_thor_storm_20260912/characters/thor.js",
+      "sourceHash": "2c5adf4626480e3d4c75524b73566b5787c93118faa38bf3e1ff90fcb9f8065c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0020_thor_storm_20260912/characters/thor.js",
+          "sha256": "2c5adf4626480e3d4c75524b73566b5787c93118faa38bf3e1ff90fcb9f8065c"
+        }
+      ],
+      "description": "A small dog. An enormous answer.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0020_thor_storm_20260912",
+      "slug": "thor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0020_thor_storm_20260912/out/thor.json",
+          "sha256": "4fa7b754df2694c0ce04ff2fdb3205243a0181fd0c12ef58f5ae600cd0ba98cb"
+        },
+        "cast": {
+          "path": "../design/loop_0020_thor_storm_20260912/cast.json",
+          "sha256": "cd2bdc438cecbbb08e05ed7dbe56d4e7482e1fc6e5c9f8582e04bf1e9c9d99c0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0020_thor_storm_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0020_thor_storm_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0020_thor_storm_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0020_thor_storm_20260912/fields.json",
+          "sha256": "30058b434e157313be20ca3ce1e3b125062cffa245feda965193ded31b022bac"
+        },
+        "supports": {
+          "path": "../design/loop_0020_thor_storm_20260912/supports.json",
+          "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
+        }
+      }
     }
   ],
   "rounds": [

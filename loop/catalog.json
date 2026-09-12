@@ -600,6 +600,16 @@
       "batch": "loop_0019_hector_20260912",
       "slug": "hector",
       "image": "/collection/assets/candidate-a06afd9f0f208fc9f5618055d10c35c41d2ddba7ea7aa2301cd1f974cd6abeb4.png"
+    },
+    {
+      "id": "candidate-loop_0020_thor_storm_20260912-thor-087c4f3c0fde8bda",
+      "title": "Thor, The Sky Answers",
+      "kind": "candidate",
+      "imageHash": "087c4f3c0fde8bda3aa818081f10d90b514cd34f8ca899be1f2dc50657e38e74",
+      "description": "A small dog. An enormous answer.",
+      "batch": "loop_0020_thor_storm_20260912",
+      "slug": "thor",
+      "image": "/collection/assets/candidate-087c4f3c0fde8bda3aa818081f10d90b514cd34f8ca899be1f2dc50657e38e74.png"
     }
   ],
   "references": [
