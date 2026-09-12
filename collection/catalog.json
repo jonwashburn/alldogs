@@ -10551,6 +10551,376 @@
           "sha256": "2abff499f01dee3f418f3c6ec509b9945e50e3a7076fa3934c61729152e10995"
         }
       }
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f",
+      "dogId": "design-hero_gestures_round_04_20260912-ash_runner",
+      "title": "Ash Runner",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd.png",
+      "imageHash": "9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/hero_gestures_round_04_20260912/characters/ash_runner.js",
+      "sourceHash": "d486d6283cd70f619aa67cc151caa4f05e18b553668b729a329d198e58308edf",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_gestures_round_04_20260912/characters/ash_runner.js",
+          "sha256": "d486d6283cd70f619aa67cc151caa4f05e18b553668b729a329d198e58308edf"
+        }
+      ],
+      "description": "A bright red hero races low over the embers.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "ash_runner",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_gestures_round_04_20260912/out/ash_runner.json",
+          "sha256": "80dd0f68b07cc6eebad8f05d14f9b87f6ce9c4caee80deec2840c0274de5ce3c"
+        },
+        "cast": {
+          "path": "../design/hero_gestures_round_04_20260912/cast.json",
+          "sha256": "790ee851fce0f0dcd6bd8a04cf85f4e5256a01464015e6ccf81fb61bc456384e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_gestures_round_04_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_gestures_round_04_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_gestures_round_04_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_gestures_round_04_20260912/fields.json",
+          "sha256": "e9d43ed73542599528cad35c07da049aa193864099e7f2ba00d9ff6392605d41"
+        },
+        "supports": {
+          "path": "../design/hero_gestures_round_04_20260912/supports.json",
+          "sha256": "e91a46a6cdb17fb529d73fa754ea90293daf307ff6ca3042871e62050b4979b4"
+        },
+        "lightContact": {
+          "path": "../design/hero_gestures_round_04_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_gestures_round_04_20260912/work/ash_runner/light_contact.json",
+          "sha256": "305a880a2688a5f17b93b9b175bb1109f6ffeeb4d138a6d53a5362e7881257e2"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-rain_guardian-bfba0639aeba3b09",
+      "dogId": "design-hero_gestures_round_04_20260912-rain_guardian",
+      "title": "The Rain Guardian",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-bfba0639aeba3b09bc75db842e8207f9624f2052b6715b9d83c2122a7561e0e0.png",
+      "imageHash": "bfba0639aeba3b09bc75db842e8207f9624f2052b6715b9d83c2122a7561e0e0",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/hero_gestures_round_04_20260912/characters/rain_guardian.js",
+      "sourceHash": "cd386d3797064c080fab179b897ae092adaceb512209fc486777a1f6f2399509",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_gestures_round_04_20260912/characters/rain_guardian.js",
+          "sha256": "cd386d3797064c080fab179b897ae092adaceb512209fc486777a1f6f2399509"
+        }
+      ],
+      "description": "A blue guardian holds a red umbrella over three small flowers.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "rain_guardian",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_gestures_round_04_20260912/out/rain_guardian.json",
+          "sha256": "07edc5039d36855f6a7997df7ea213e1b33c58cac76eea943b3e6c009b5ec0ff"
+        },
+        "cast": {
+          "path": "../design/hero_gestures_round_04_20260912/cast.json",
+          "sha256": "790ee851fce0f0dcd6bd8a04cf85f4e5256a01464015e6ccf81fb61bc456384e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_gestures_round_04_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_gestures_round_04_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_gestures_round_04_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_gestures_round_04_20260912/fields.json",
+          "sha256": "e9d43ed73542599528cad35c07da049aa193864099e7f2ba00d9ff6392605d41"
+        },
+        "supports": {
+          "path": "../design/hero_gestures_round_04_20260912/supports.json",
+          "sha256": "e91a46a6cdb17fb529d73fa754ea90293daf307ff6ca3042871e62050b4979b4"
+        },
+        "lightContact": {
+          "path": "../design/hero_gestures_round_04_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_gestures_round_04_20260912/work/rain_guardian/light_contact.json",
+          "sha256": "b438d974af5f313f6ee6a4b8d2f736e5f16dbbef35aff7e7a55ec48b6b79ccbb"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-meteor_rider-478c680b5f386085",
+      "dogId": "design-hero_gestures_round_04_20260912-meteor_rider",
+      "title": "The Meteor Rider",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-478c680b5f386085c89c6ffd3b7abf182df38b7359b2bb729df77217d1fad11a.png",
+      "imageHash": "478c680b5f386085c89c6ffd3b7abf182df38b7359b2bb729df77217d1fad11a",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/hero_gestures_round_04_20260912/characters/meteor_rider.js",
+      "sourceHash": "06720f025ba63138ddb04ad48112f11a9dd00849e487da8d9a444c2666074142",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_gestures_round_04_20260912/characters/meteor_rider.js",
+          "sha256": "06720f025ba63138ddb04ad48112f11a9dd00849e487da8d9a444c2666074142"
+        }
+      ],
+      "description": "An emerald dog rides a golden meteor through the dark.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "meteor_rider",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_gestures_round_04_20260912/out/meteor_rider.json",
+          "sha256": "3eaf031b6d0d854802985a7021123b8775a1f42d7d38c6ed0a0e715dd6306023"
+        },
+        "cast": {
+          "path": "../design/hero_gestures_round_04_20260912/cast.json",
+          "sha256": "790ee851fce0f0dcd6bd8a04cf85f4e5256a01464015e6ccf81fb61bc456384e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_gestures_round_04_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_gestures_round_04_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_gestures_round_04_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_gestures_round_04_20260912/fields.json",
+          "sha256": "e9d43ed73542599528cad35c07da049aa193864099e7f2ba00d9ff6392605d41"
+        },
+        "supports": {
+          "path": "../design/hero_gestures_round_04_20260912/supports.json",
+          "sha256": "e91a46a6cdb17fb529d73fa754ea90293daf307ff6ca3042871e62050b4979b4"
+        },
+        "lightContact": {
+          "path": "../design/hero_gestures_round_04_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_gestures_round_04_20260912/work/meteor_rider/light_contact.json",
+          "sha256": "c5522338266b11985c91e2b69ef6df09eb0f430cfe31a9cfed846b8a4a386bf4"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-mountain_mover-5952d4fcb0ee75f0",
+      "dogId": "design-hero_gestures_round_04_20260912-mountain_mover",
+      "title": "The Mountain Mover",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5952d4fcb0ee75f0c7fb59613b86434e97425645a6d77e9adcde19e7ada75702.png",
+      "imageHash": "5952d4fcb0ee75f0c7fb59613b86434e97425645a6d77e9adcde19e7ada75702",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/hero_gestures_round_04_20260912/characters/mountain_mover.js",
+      "sourceHash": "ca97591efd349afc6ddaa927cde6f5eca0a049cb9ff82f8532ff45ac1125509a",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_gestures_round_04_20260912/characters/mountain_mover.js",
+          "sha256": "ca97591efd349afc6ddaa927cde6f5eca0a049cb9ff82f8532ff45ac1125509a"
+        }
+      ],
+      "description": "A small orange dog leans into an enormous pink mountain.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "mountain_mover",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_gestures_round_04_20260912/out/mountain_mover.json",
+          "sha256": "2d9038ea99bdabfd3d940c7fc114eb1d13d92a6307fec7d1cd3421112856c19e"
+        },
+        "cast": {
+          "path": "../design/hero_gestures_round_04_20260912/cast.json",
+          "sha256": "790ee851fce0f0dcd6bd8a04cf85f4e5256a01464015e6ccf81fb61bc456384e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_gestures_round_04_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_gestures_round_04_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_gestures_round_04_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_gestures_round_04_20260912/fields.json",
+          "sha256": "e9d43ed73542599528cad35c07da049aa193864099e7f2ba00d9ff6392605d41"
+        },
+        "supports": {
+          "path": "../design/hero_gestures_round_04_20260912/supports.json",
+          "sha256": "e91a46a6cdb17fb529d73fa754ea90293daf307ff6ca3042871e62050b4979b4"
+        },
+        "lightContact": {
+          "path": "../design/hero_gestures_round_04_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_gestures_round_04_20260912/work/mountain_mover/light_contact.json",
+          "sha256": "f1103c30ee0e7946b36f8ec5bea317ee61970463f41292e26c6f519beeae9209"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-dawn_herald-da29870ee919a776",
+      "dogId": "design-hero_gestures_round_04_20260912-dawn_herald",
+      "title": "The Dawn Herald",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57.png",
+      "imageHash": "da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/hero_gestures_round_04_20260912/characters/dawn_herald.js",
+      "sourceHash": "274e171eb7c9bd9577d7a9984d72c960ebc0e8f2261dc04ae1f2a561824b2906",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_gestures_round_04_20260912/characters/dawn_herald.js",
+          "sha256": "274e171eb7c9bd9577d7a9984d72c960ebc0e8f2261dc04ae1f2a561824b2906"
+        }
+      ],
+      "description": "A golden dog sounds a long horn into the morning.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "dawn_herald",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_gestures_round_04_20260912/out/dawn_herald.json",
+          "sha256": "b648c045c9b137a7f3c91450ed455f1e33efdb133e3c798c54e636c5bd6c9938"
+        },
+        "cast": {
+          "path": "../design/hero_gestures_round_04_20260912/cast.json",
+          "sha256": "790ee851fce0f0dcd6bd8a04cf85f4e5256a01464015e6ccf81fb61bc456384e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_gestures_round_04_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_gestures_round_04_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_gestures_round_04_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_gestures_round_04_20260912/fields.json",
+          "sha256": "e9d43ed73542599528cad35c07da049aa193864099e7f2ba00d9ff6392605d41"
+        },
+        "supports": {
+          "path": "../design/hero_gestures_round_04_20260912/supports.json",
+          "sha256": "e91a46a6cdb17fb529d73fa754ea90293daf307ff6ca3042871e62050b4979b4"
+        },
+        "lightContact": {
+          "path": "../design/hero_gestures_round_04_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_gestures_round_04_20260912/work/dawn_herald/light_contact.json",
+          "sha256": "26f11755bc3068cccff3ab9a05db099d45ee6f40699d1d5dd8693e1bbbe44ce8"
+        }
+      }
     }
   ],
   "rounds": [

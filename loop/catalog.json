@@ -1032,6 +1032,56 @@
       "batch": "hero_actions_round_03_20260912",
       "slug": "star_catcher",
       "image": "/collection/assets/candidate-8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824.png"
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f",
+      "title": "Ash Runner",
+      "kind": "candidate",
+      "imageHash": "9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd",
+      "description": "A bright red hero races low over the embers.",
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "ash_runner",
+      "image": "/collection/assets/candidate-9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd.png"
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-rain_guardian-bfba0639aeba3b09",
+      "title": "The Rain Guardian",
+      "kind": "candidate",
+      "imageHash": "bfba0639aeba3b09bc75db842e8207f9624f2052b6715b9d83c2122a7561e0e0",
+      "description": "A blue guardian holds a red umbrella over three small flowers.",
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "rain_guardian",
+      "image": "/collection/assets/candidate-bfba0639aeba3b09bc75db842e8207f9624f2052b6715b9d83c2122a7561e0e0.png"
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-meteor_rider-478c680b5f386085",
+      "title": "The Meteor Rider",
+      "kind": "candidate",
+      "imageHash": "478c680b5f386085c89c6ffd3b7abf182df38b7359b2bb729df77217d1fad11a",
+      "description": "An emerald dog rides a golden meteor through the dark.",
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "meteor_rider",
+      "image": "/collection/assets/candidate-478c680b5f386085c89c6ffd3b7abf182df38b7359b2bb729df77217d1fad11a.png"
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-mountain_mover-5952d4fcb0ee75f0",
+      "title": "The Mountain Mover",
+      "kind": "candidate",
+      "imageHash": "5952d4fcb0ee75f0c7fb59613b86434e97425645a6d77e9adcde19e7ada75702",
+      "description": "A small orange dog leans into an enormous pink mountain.",
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "mountain_mover",
+      "image": "/collection/assets/candidate-5952d4fcb0ee75f0c7fb59613b86434e97425645a6d77e9adcde19e7ada75702.png"
+    },
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-dawn_herald-da29870ee919a776",
+      "title": "The Dawn Herald",
+      "kind": "candidate",
+      "imageHash": "da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57",
+      "description": "A golden dog sounds a long horn into the morning.",
+      "batch": "hero_gestures_round_04_20260912",
+      "slug": "dawn_herald",
+      "image": "/collection/assets/candidate-da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57.png"
     }
   ],
   "references": [
@@ -1185,6 +1235,33 @@
           {
             "candidateId": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
             "imageHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824"
+          }
+        ]
+      },
+      {
+        "id": "round-04",
+        "title": "Round 04",
+        "frozenAt": "2026-09-12T23:19:54.570309+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f",
+            "imageHash": "9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd"
+          },
+          {
+            "candidateId": "candidate-hero_gestures_round_04_20260912-rain_guardian-bfba0639aeba3b09",
+            "imageHash": "bfba0639aeba3b09bc75db842e8207f9624f2052b6715b9d83c2122a7561e0e0"
+          },
+          {
+            "candidateId": "candidate-hero_gestures_round_04_20260912-meteor_rider-478c680b5f386085",
+            "imageHash": "478c680b5f386085c89c6ffd3b7abf182df38b7359b2bb729df77217d1fad11a"
+          },
+          {
+            "candidateId": "candidate-hero_gestures_round_04_20260912-mountain_mover-5952d4fcb0ee75f0",
+            "imageHash": "5952d4fcb0ee75f0c7fb59613b86434e97425645a6d77e9adcde19e7ada75702"
+          },
+          {
+            "candidateId": "candidate-hero_gestures_round_04_20260912-dawn_herald-da29870ee919a776",
+            "imageHash": "da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57"
           }
         ]
       }
