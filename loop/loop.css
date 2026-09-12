@@ -22,3 +22,5 @@ main{max-width:1440px;padding:12px 24px 40px}
 body:has(#image-viewer[open]){overflow:hidden}
 @media(max-width:1050px){#paint{grid-template-columns:1fr;gap:12px}#paint aside{position:static;max-width:720px;width:100%;margin:auto}.painting{max-width:1000px;width:100%;margin:auto}}
 @media(max-width:600px){main{padding:12px 10px 30px}.image-tools{gap:10px}.viewer-toolbar{align-items:flex-start;flex-wrap:wrap;padding:10px}.viewer-toolbar strong{font-size:18px}.viewer-controls button{padding:8px 12px}#viewer-scroll{padding:8px}}
+
+.round-progress{border-top:1px solid var(--line);margin-top:24px;padding-top:18px}.round-progress h2{font:600 14px/1.4 system-ui;margin:0 0 8px}.round-progress ol{list-style:none;padding:0;margin:10px 0 14px}.round-progress li button{display:flex;width:100%;justify-content:space-between;gap:14px;text-align:left;border:0;padding:7px 0;font-size:12px}.round-progress li button[aria-current=true]{color:var(--accent);font-weight:650}.round-progress li span{white-space:nowrap}.round-progress p{margin-bottom:8px}

@@ -9441,6 +9441,376 @@
           "sha256": "2c27a2133291f2c98d01925e4b298bc1c3cabc43e9390e52dd6c7b476b307a76"
         }
       }
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac",
+      "dogId": "design-judged_round_01_20260912-bell_diver",
+      "title": "The Bell Diver",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6.png",
+      "imageHash": "a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/judged_round_01_20260912/characters/bell_diver.js",
+      "sourceHash": "1c6b2cf085d5d14a0cc91a78559b3a866f51ff5110b2bfc93017a2f3c36e959d",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/judged_round_01_20260912/characters/bell_diver.js",
+          "sha256": "1c6b2cf085d5d14a0cc91a78559b3a866f51ff5110b2bfc93017a2f3c36e959d"
+        }
+      ],
+      "description": "A brass-clad diver suspended below a crooked air hose in deep teal water.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "judged_round_01_20260912",
+      "slug": "bell_diver",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/judged_round_01_20260912/out/bell_diver.json",
+          "sha256": "65fcc067516efa978d7c5c5abcd4c60ecb56d14ca4c21266a287b5dd61aa16c1"
+        },
+        "cast": {
+          "path": "../design/judged_round_01_20260912/cast.json",
+          "sha256": "ce0fd0baebf5e15d9c50ec630cf2814df6d2f30913b3e329f6ff1b4a6383cbe0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/judged_round_01_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/judged_round_01_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/judged_round_01_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/judged_round_01_20260912/fields.json",
+          "sha256": "d2342888717e1abf70a2f4b61c56b253e688e69a85566a32a7cd5718feab523c"
+        },
+        "supports": {
+          "path": "../design/judged_round_01_20260912/supports.json",
+          "sha256": "ce343048b64553ed84eff73a8d7064c3818e9d0f9487592bf5e5eff3fe71c39f"
+        },
+        "lightContact": {
+          "path": "../design/judged_round_01_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/judged_round_01_20260912/work/bell_diver/light_contact.json",
+          "sha256": "e2e6eac9375e12afb9f989d0a1ebf458601070ce4c3e60da07ad38c736689091"
+        }
+      }
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac",
+      "dogId": "design-judged_round_01_20260912-saint_george",
+      "title": "Saint George, Almost Brave",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a.png",
+      "imageHash": "65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/judged_round_01_20260912/characters/saint_george.js",
+      "sourceHash": "3dcd693dc1c679ff3182b389a733d6c79524d78b8133d3a42408211449af2a02",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/judged_round_01_20260912/characters/saint_george.js",
+          "sha256": "3dcd693dc1c679ff3182b389a733d6c79524d78b8133d3a42408211449af2a02"
+        }
+      ],
+      "description": "A scarlet knight faces a cobalt serpent with a lance and a doubtful expression.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "judged_round_01_20260912",
+      "slug": "saint_george",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/judged_round_01_20260912/out/saint_george.json",
+          "sha256": "6e97b6b8f085aaab619f785fcee94366efb86c7f35942c3d2ee1b6ed85efeeed"
+        },
+        "cast": {
+          "path": "../design/judged_round_01_20260912/cast.json",
+          "sha256": "ce0fd0baebf5e15d9c50ec630cf2814df6d2f30913b3e329f6ff1b4a6383cbe0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/judged_round_01_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/judged_round_01_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/judged_round_01_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/judged_round_01_20260912/fields.json",
+          "sha256": "d2342888717e1abf70a2f4b61c56b253e688e69a85566a32a7cd5718feab523c"
+        },
+        "supports": {
+          "path": "../design/judged_round_01_20260912/supports.json",
+          "sha256": "ce343048b64553ed84eff73a8d7064c3818e9d0f9487592bf5e5eff3fe71c39f"
+        },
+        "lightContact": {
+          "path": "../design/judged_round_01_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/judged_round_01_20260912/work/saint_george/light_contact.json",
+          "sha256": "71a29aa76771d9620024d5fdc5c96339787fe794d06e3710b4122cde9a8a6d5c"
+        }
+      }
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434",
+      "dogId": "design-judged_round_01_20260912-apple_thief",
+      "title": "The Apple Thief",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa.png",
+      "imageHash": "37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/judged_round_01_20260912/characters/apple_thief.js",
+      "sourceHash": "2b0a656015fab7c75f85fa71af9b981842754c69f021621f8e00931f52c7f8ee",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/judged_round_01_20260912/characters/apple_thief.js",
+          "sha256": "2b0a656015fab7c75f85fa71af9b981842754c69f021621f8e00931f52c7f8ee"
+        }
+      ],
+      "description": "A red apple in his mouth; an empty stem above his enormous ochre hood.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "judged_round_01_20260912",
+      "slug": "apple_thief",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/judged_round_01_20260912/out/apple_thief.json",
+          "sha256": "70ad577f62b25d3f007a9908c3fcdf6a20f6f9774d3ab70585479a77b0bfe558"
+        },
+        "cast": {
+          "path": "../design/judged_round_01_20260912/cast.json",
+          "sha256": "ce0fd0baebf5e15d9c50ec630cf2814df6d2f30913b3e329f6ff1b4a6383cbe0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/judged_round_01_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/judged_round_01_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/judged_round_01_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/judged_round_01_20260912/fields.json",
+          "sha256": "d2342888717e1abf70a2f4b61c56b253e688e69a85566a32a7cd5718feab523c"
+        },
+        "supports": {
+          "path": "../design/judged_round_01_20260912/supports.json",
+          "sha256": "ce343048b64553ed84eff73a8d7064c3818e9d0f9487592bf5e5eff3fe71c39f"
+        },
+        "lightContact": {
+          "path": "../design/judged_round_01_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/judged_round_01_20260912/work/apple_thief/light_contact.json",
+          "sha256": "9316519556dc2a455af63a58452e13a848075596a173d830ec2ed0b5f4e910e1"
+        }
+      }
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba",
+      "dogId": "design-judged_round_01_20260912-mapmaker",
+      "title": "The Mapmaker Who Got Lost",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae.png",
+      "imageHash": "91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/judged_round_01_20260912/characters/mapmaker.js",
+      "sourceHash": "593b8e10f9d563990c493e4ecb7810bfd225d1851b1ae350f5767194e57d34f8",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/judged_round_01_20260912/characters/mapmaker.js",
+          "sha256": "593b8e10f9d563990c493e4ecb7810bfd225d1851b1ae350f5767194e57d34f8"
+        }
+      ],
+      "description": "His coat is a map of crossed routes, a missing ferry and two places called home.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "judged_round_01_20260912",
+      "slug": "mapmaker",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/judged_round_01_20260912/out/mapmaker.json",
+          "sha256": "a8ba7b616e0ac913f6eb11c85f69aea54cb8be72f4a9345b862bdc517dd86473"
+        },
+        "cast": {
+          "path": "../design/judged_round_01_20260912/cast.json",
+          "sha256": "ce0fd0baebf5e15d9c50ec630cf2814df6d2f30913b3e329f6ff1b4a6383cbe0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/judged_round_01_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/judged_round_01_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/judged_round_01_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/judged_round_01_20260912/fields.json",
+          "sha256": "d2342888717e1abf70a2f4b61c56b253e688e69a85566a32a7cd5718feab523c"
+        },
+        "supports": {
+          "path": "../design/judged_round_01_20260912/supports.json",
+          "sha256": "ce343048b64553ed84eff73a8d7064c3818e9d0f9487592bf5e5eff3fe71c39f"
+        },
+        "lightContact": {
+          "path": "../design/judged_round_01_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/judged_round_01_20260912/work/mapmaker/light_contact.json",
+          "sha256": "02ed0ae4215bd105f9e3b3876d2157a9ee2399b4f58055913ccbae37db3a7505"
+        }
+      }
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-projectionist-28bd9ced04eb1c65",
+      "dogId": "design-judged_round_01_20260912-projectionist",
+      "title": "The Last Projectionist",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a.png",
+      "imageHash": "28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/judged_round_01_20260912/characters/projectionist.js",
+      "sourceHash": "bc8478c3deb8a7c8153f708ec9a3006662b326b3b77ab58342d301a17b18e951",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/judged_round_01_20260912/characters/projectionist.js",
+          "sha256": "bc8478c3deb8a7c8153f708ec9a3006662b326b3b77ab58342d301a17b18e951"
+        }
+      ],
+      "description": "A small projector throws a remembered blue-coated dog into the light above.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "judged_round_01_20260912",
+      "slug": "projectionist",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/judged_round_01_20260912/out/projectionist.json",
+          "sha256": "8f41fb991ab1e8b958073fc482e160f93e369f83e2e570847cc5d33f20d45f4b"
+        },
+        "cast": {
+          "path": "../design/judged_round_01_20260912/cast.json",
+          "sha256": "ce0fd0baebf5e15d9c50ec630cf2814df6d2f30913b3e329f6ff1b4a6383cbe0"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/judged_round_01_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/judged_round_01_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/judged_round_01_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/judged_round_01_20260912/fields.json",
+          "sha256": "d2342888717e1abf70a2f4b61c56b253e688e69a85566a32a7cd5718feab523c"
+        },
+        "supports": {
+          "path": "../design/judged_round_01_20260912/supports.json",
+          "sha256": "ce343048b64553ed84eff73a8d7064c3818e9d0f9487592bf5e5eff3fe71c39f"
+        },
+        "lightContact": {
+          "path": "../design/judged_round_01_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/judged_round_01_20260912/work/projectionist/light_contact.json",
+          "sha256": "ab6c01a64cb8814a753085543e3171be0e86e3a6ecfa259d0b58c1491d1f2282"
+        }
+      }
     }
   ],
   "rounds": [

@@ -882,6 +882,56 @@
       "batch": "loop_0027_ariadne_20260912",
       "slug": "ariadne",
       "image": "/collection/assets/candidate-4ec7bbe965f5d4ae49fe44b3d80990b757901d0cbc4710a674dca74169e6cece.png"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac",
+      "title": "The Bell Diver",
+      "kind": "candidate",
+      "imageHash": "a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6",
+      "description": "A brass-clad diver suspended below a crooked air hose in deep teal water.",
+      "batch": "judged_round_01_20260912",
+      "slug": "bell_diver",
+      "image": "/collection/assets/candidate-a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6.png"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac",
+      "title": "Saint George, Almost Brave",
+      "kind": "candidate",
+      "imageHash": "65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a",
+      "description": "A scarlet knight faces a cobalt serpent with a lance and a doubtful expression.",
+      "batch": "judged_round_01_20260912",
+      "slug": "saint_george",
+      "image": "/collection/assets/candidate-65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a.png"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434",
+      "title": "The Apple Thief",
+      "kind": "candidate",
+      "imageHash": "37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa",
+      "description": "A red apple in his mouth; an empty stem above his enormous ochre hood.",
+      "batch": "judged_round_01_20260912",
+      "slug": "apple_thief",
+      "image": "/collection/assets/candidate-37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa.png"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba",
+      "title": "The Mapmaker Who Got Lost",
+      "kind": "candidate",
+      "imageHash": "91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae",
+      "description": "His coat is a map of crossed routes, a missing ferry and two places called home.",
+      "batch": "judged_round_01_20260912",
+      "slug": "mapmaker",
+      "image": "/collection/assets/candidate-91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae.png"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-projectionist-28bd9ced04eb1c65",
+      "title": "The Last Projectionist",
+      "kind": "candidate",
+      "imageHash": "28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a",
+      "description": "A small projector throws a remembered blue-coated dog into the light above.",
+      "batch": "judged_round_01_20260912",
+      "slug": "projectionist",
+      "image": "/collection/assets/candidate-28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a.png"
     }
   ],
   "references": [
@@ -951,5 +1001,39 @@
       "image": "references/prometheus.png",
       "imageHash": "9865949abb123bddd8cf312969c678b7802aaf5af70104830d591512d90b65d8"
     }
-  ]
+  ],
+  "judgedRounds": {
+    "version": 1,
+    "targetMean": 8,
+    "targetConsecutiveRounds": 4,
+    "rounds": [
+      {
+        "id": "round-01",
+        "title": "Round 01",
+        "frozenAt": "2026-09-12T20:56:27.075779+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac",
+            "imageHash": "a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6"
+          },
+          {
+            "candidateId": "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac",
+            "imageHash": "65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a"
+          },
+          {
+            "candidateId": "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434",
+            "imageHash": "37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa"
+          },
+          {
+            "candidateId": "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba",
+            "imageHash": "91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae"
+          },
+          {
+            "candidateId": "candidate-judged_round_01_20260912-projectionist-28bd9ced04eb1c65",
+            "imageHash": "28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a"
+          }
+        ]
+      }
+    ]
+  }
 }
