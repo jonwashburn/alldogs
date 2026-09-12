@@ -1326,6 +1326,42 @@ const APPROVED_DOGS = {
   "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38": { still: "/collection/assets/candidate-1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508.png" },
   "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df": { still: "/collection/assets/candidate-ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c.png" }
 };
+/* BEGIN APPROVED WIDE BACKGROUNDS */
+const APPROVED_WIDE = {
+  "basquiat": {
+    "src": "/wide/basquiat-f010ba34225fd34f-2400.jpg",
+    "srcset": "/wide/basquiat-f010ba34225fd34f-2400.jpg 2400w, /wide/basquiat-f010ba34225fd34f-4000.jpg 4000w"
+  },
+  "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df": {
+    "src": "/wide/zeus-f78ac6f6b451360f-2400.jpg",
+    "srcset": "/wide/zeus-f78ac6f6b451360f-2400.jpg 2400w, /wide/zeus-f78ac6f6b451360f-4000.jpg 4000w"
+  },
+  "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5": {
+    "src": "/wide/hermes-51638080701f58ca-2400.jpg",
+    "srcset": "/wide/hermes-51638080701f58ca-2400.jpg 2400w, /wide/hermes-51638080701f58ca-4000.jpg 4000w"
+  },
+  "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1": {
+    "src": "/wide/icarus-03544ba6738312b1-2400.jpg",
+    "srcset": "/wide/icarus-03544ba6738312b1-2400.jpg 2400w, /wide/icarus-03544ba6738312b1-4000.jpg 4000w"
+  },
+  "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172": {
+    "src": "/wide/courier-9dc11919286d4206-2400.jpg",
+    "srcset": "/wide/courier-9dc11919286d4206-2400.jpg 2400w, /wide/courier-9dc11919286d4206-4000.jpg 4000w"
+  },
+  "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538": {
+    "src": "/wide/tightrope-c6b2cb20cbf2208f-2400.jpg",
+    "srcset": "/wide/tightrope-c6b2cb20cbf2208f-2400.jpg 2400w, /wide/tightrope-c6b2cb20cbf2208f-4000.jpg 4000w"
+  },
+  "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38": {
+    "src": "/wide/thor-6ed2ce94e12490e7-2400.jpg",
+    "srcset": "/wide/thor-6ed2ce94e12490e7-2400.jpg 2400w, /wide/thor-6ed2ce94e12490e7-4000.jpg 4000w"
+  },
+  "candidate-loop_0017_joan_20260911-joan-a721d495791beb22": {
+    "src": "/wide/joan-cc8450a314db074c-2400.jpg",
+    "srcset": "/wide/joan-cc8450a314db074c-2400.jpg 2400w, /wide/joan-cc8450a314db074c-4000.jpg 4000w"
+  }
+};
+/* END APPROVED WIDE BACKGROUNDS */
 CAP.basquiat = [1982, 'uneven locs, a charcoal green jacket, a gold crown floating off the head', 'Basquiat'];
 CAP["candidate-loop_0017_joan_20260911-joan-a721d495791beb22"] = ["", "A small dog with an unreasonable amount of courage.", "Joan, Before Dawn"];
 CAP["candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5"] = ["", "The messenger of the gods has one letter left and absolutely no time.", "Hermes, Late Again"];
@@ -1588,6 +1624,7 @@ function heroBase(seed) {
    at 2400, 3600 and 5120 wide (hero_r1388ones_hd, 2026-09-05: the 3:1 pictures upscaled on a 5K
    monitor); 77 is one flat 2000; the rest keep the 3:1 pair. The why picture crops the same file. */
 function heroUrls(seed) {
+  if (APPROVED_WIDE[seed]) return APPROVED_WIDE[seed];
   if (APPROVED_DOGS[seed]) return { src: APPROVED_DOGS[seed].still, srcset: '' };
   if (HD_BASES[seed]) {
     const f = HERO_BASE.replace('hero_r1388ones/', HD_BASES[seed]) + 'hero_faithful_' + seed + '_';
@@ -1613,12 +1650,14 @@ function heroBand(a, b, cap, cast, opts) {
     return new Promise(res => {
       const u = urls(seed);
       el.dataset.seed = String(seed);
-      el.classList.toggle('approved-square', !!APPROVED_DOGS[seed]);
+      el.classList.toggle('approved-square', !!APPROVED_DOGS[seed] && !APPROVED_WIDE[seed]);
       el.alt = [capName(seed) || 'ALL DOGS painting', capYear(seed)].filter(Boolean).join(', ') + '. ' + capNote(seed);
       el.onload = () => { el.classList.remove('painting'); res(true); };
       el.onerror = () => {
         const url = stillUrl(seed, 'faithful', TILE);
         if (!url) { paper(el); res(false); return; }
+        el.removeAttribute('srcset');
+        el.classList.add('approved-square');
         setStillSrc(el, url, () => paper(el));
         res(true);
       };
@@ -1680,11 +1719,12 @@ FEATURE_BANDS.forEach((sec, n) => {
   const im = document.getElementById('whyDog'), seed = SLOTS[SLOTS.length - 1];
   if (!im || seed === undefined) return;
   im.dataset.seed = String(seed); im.dataset.state = 'faithful'; im.dataset.dog = '1';
-  im.classList.toggle('approved-square', !!APPROVED_DOGS[seed]);
+  im.classList.toggle('approved-square', !!APPROVED_DOGS[seed] && !APPROVED_WIDE[seed]);
   im.sizes = '(max-width: 860px) 100vw, 40vw';
   im.onload = () => im.classList.remove('painting');
   im.onerror = () => {
     im.onerror = null; im.removeAttribute('srcset');
+    im.classList.add('approved-square');
     im.src = APPROVED_DOGS[seed] ? APPROVED_DOGS[seed].still
       : seed === 77 ? FIN_PUB + 'ones_flat77/77_faithful_1000.jpg'
       : seed === 18 ? FIN_PUB + 'ones_fix18/18_faithful_1000.jpg'

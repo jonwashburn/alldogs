@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "aspectRatio": [
+    2,
+    1
+  ],
+  "nativeMasterSize": [
+    4000,
+    2000
+  ],
+  "items": {
+    "candidate-loop_0017_joan_20260911-joan-a721d495791beb22": {
+      "title": "Joan, Before Dawn",
+      "originalHash": "a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751",
+      "masterHash": "cc8450a314db074c390ce7ef70a6764c5fff00656ce9d1998003ed001092f34d",
+      "variants": [
+        {
+          "src": "/wide/joan-cc8450a314db074c-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "fa8fc303a0b45cd64cc80351ef5fc71ca4b127171b4e42d04a60f1c5115fd36e",
+          "bytes": 378342
+        },
+        {
+          "src": "/wide/joan-cc8450a314db074c-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "64e2014e2134280fd6583deef473900417e94242c86f3f48d2c3d283fd41f298",
+          "bytes": 952704
+        }
+      ]
+    },
+    "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5": {
+      "title": "Hermes, Late Again",
+      "originalHash": "8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d",
+      "masterHash": "51638080701f58ca908a7b7d8d402b0818ce213fedaaa24545f13ea16d534be9",
+      "variants": [
+        {
+          "src": "/wide/hermes-51638080701f58ca-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "d4357048811992bcab84d30918015cf1dfe178118d7e71c1ede2b06660c5d31c",
+          "bytes": 515013
+        },
+        {
+          "src": "/wide/hermes-51638080701f58ca-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "abc4cb95d4f77d565707686827ebe9125f7864125256dba3f841332195a09259",
+          "bytes": 1393290
+        }
+      ]
+    },
+    "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538": {
+      "title": "A Little Further",
+      "originalHash": "426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e",
+      "masterHash": "c6b2cb20cbf2208ffbffeb48d42e3e8ef31ee4a99a246feaaac348ace21a32cc",
+      "variants": [
+        {
+          "src": "/wide/tightrope-c6b2cb20cbf2208f-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "4b0aa1f0f231357bab84bc323c4f8ff3da8af0aff281c7b0050ceb1454b352f5",
+          "bytes": 494305
+        },
+        {
+          "src": "/wide/tightrope-c6b2cb20cbf2208f-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "66d954a1ecae5e1ff926e14bdbf5085eb5b47ef36f5dec2cc44612963a223a04",
+          "bytes": 1335223
+        }
+      ]
+    },
+    "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172": {
+      "title": "The Comet Courier",
+      "originalHash": "fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095",
+      "masterHash": "9dc11919286d42063c5bcd1b23d2269166efb35fd2c63e9e924a58d03ba043cd",
+      "variants": [
+        {
+          "src": "/wide/courier-9dc11919286d4206-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "e526ccca4f629037f7f951bb5e596bf167657ebe4d851e86ee6356b82ea235a4",
+          "bytes": 431717
+        },
+        {
+          "src": "/wide/courier-9dc11919286d4206-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "3138ee14b1369246aeb814edcb0e15b0d22ece45a16cae5b9260dfa313594fc0",
+          "bytes": 1131079
+        }
+      ]
+    },
+    "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1": {
+      "title": "Icarus, Into the Light",
+      "originalHash": "d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98",
+      "masterHash": "03544ba6738312b17a993f522ef69ac56bf5e0827b39a6d09d5e89b20a76b884",
+      "variants": [
+        {
+          "src": "/wide/icarus-03544ba6738312b1-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "943300d98294513dc4063c801227a27371e5c3bc068a01955cd51e2092cd7214",
+          "bytes": 465464
+        },
+        {
+          "src": "/wide/icarus-03544ba6738312b1-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "b80eaffeebe8ecaf7de8ffbb92c3e0e85a00e49e438224c65c8d8edf57497f07",
+          "bytes": 1164946
+        }
+      ]
+    },
+    "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38": {
+      "title": "Thor, Small Thunder",
+      "originalHash": "1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508",
+      "masterHash": "6ed2ce94e12490e7278f8b7896175823a103b9e70f26312de53fa88080a861d9",
+      "variants": [
+        {
+          "src": "/wide/thor-6ed2ce94e12490e7-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "b48f00261c31208de98f9242962cfa189f3dbc8bed66b26a2f0ffbe150aa9cb7",
+          "bytes": 355502
+        },
+        {
+          "src": "/wide/thor-6ed2ce94e12490e7-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "7a627fdec5a8da579b23ff6ebd5bf2e287792850bce3da8fe1bf0cbd26527079",
+          "bytes": 873590
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df": {
+      "title": "Zeus, The Sky Answers",
+      "originalHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+      "masterHash": "f78ac6f6b451360fabf60757a780fae8be73daa65d3bac5ea5cef174d3af426b",
+      "variants": [
+        {
+          "src": "/wide/zeus-f78ac6f6b451360f-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "83563dca85fe2c69e3e1cbc95cc1dfa48191a367e660ca44354b32cade553c7e",
+          "bytes": 433976
+        },
+        {
+          "src": "/wide/zeus-f78ac6f6b451360f-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "fb39e7221a03c52816c3d7de4b2521943e66a3e02a3a2169e027048feb0703b1",
+          "bytes": 1085694
+        }
+      ]
+    },
+    "basquiat": {
+      "title": "Basquiat",
+      "originalHash": "a96a439ec2d7cbef0cadd427829cb6e3fb682a60cf5dcb7759b9dbc974ee7499",
+      "masterHash": "f010ba34225fd34f4e45ade49554d961061a484d65eee29318d3facf044db6eb",
+      "variants": [
+        {
+          "src": "/wide/basquiat-f010ba34225fd34f-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "1be6d82d7c1c95a85a24e911ea4b3c68c690e5a4fa0e816e87c4ebf9518a99f5",
+          "bytes": 681366
+        },
+        {
+          "src": "/wide/basquiat-f010ba34225fd34f-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "c89e540f4d0f69e0869b514159806b93f4c8b608d95b39b67c9070b2ab054b84",
+          "bytes": 1711858
+        }
+      ]
+    }
+  }
+}
