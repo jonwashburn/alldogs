@@ -810,6 +810,66 @@
       "batch": "greek_pantheon_20260912",
       "slug": "hestia",
       "image": "/collection/assets/candidate-93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-nyx-ce97bc2df3e87453",
+      "title": "Nyx, The Moon on a String",
+      "kind": "candidate",
+      "imageHash": "ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f",
+      "description": "The Moon on a String",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "nyx",
+      "image": "/collection/assets/candidate-ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-helios-919f81a8e212273d",
+      "title": "Helios, No Brakes",
+      "kind": "candidate",
+      "imageHash": "919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab",
+      "description": "No Brakes",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "helios",
+      "image": "/collection/assets/candidate-919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-persephone-597fb2b60f9f8111",
+      "title": "Persephone, Back Again",
+      "kind": "candidate",
+      "imageHash": "597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1",
+      "description": "Back Again",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "persephone",
+      "image": "/collection/assets/candidate-597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-hypnos-bb180999a33feffe",
+      "title": "Hypnos, Five More Minutes",
+      "kind": "candidate",
+      "imageHash": "bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc",
+      "description": "Five More Minutes",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "hypnos",
+      "image": "/collection/assets/candidate-bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-charon-1a06dcb982cead54",
+      "title": "Charon, Last Boat Home",
+      "kind": "candidate",
+      "imageHash": "1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d",
+      "description": "Last Boat Home",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "charon",
+      "image": "/collection/assets/candidate-1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d.png"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-pan-a3a5ecf69b916a0d",
+      "title": "Pan, The Woods Are Listening",
+      "kind": "candidate",
+      "imageHash": "a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e",
+      "description": "The Woods Are Listening",
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "pan",
+      "image": "/collection/assets/candidate-a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e.png"
     }
   ],
   "references": [

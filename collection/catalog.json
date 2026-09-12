@@ -8923,6 +8923,450 @@
           "sha256": "29489c0ab620eee54b4e111540a664430e31e0d8b2a2049ec3b9cd4a6e437359"
         }
       }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-nyx-ce97bc2df3e87453",
+      "dogId": "design-mythic_liberties_six_20260912-nyx",
+      "title": "Nyx, The Moon on a String",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f.png",
+      "imageHash": "ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/mythic_liberties_six_20260912/characters/nyx.js",
+      "sourceHash": "8b17ea3d4543e4a647963b90f98410d9d01201cb9c907a0df498ed3ba2734e4c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/nyx.js",
+          "sha256": "8b17ea3d4543e4a647963b90f98410d9d01201cb9c907a0df498ed3ba2734e4c"
+        }
+      ],
+      "description": "The Moon on a String",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "nyx",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/nyx.json",
+          "sha256": "1b048d2f1f2bcedbd64d7d1260ebeac1ebb243ff869691297f2ce5625636b875"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/nyx/light_contact.json",
+          "sha256": "f65093985119cb67b48423e8beb4b576053bc5450eadd5c4e14d6b96a538647b"
+        }
+      }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-helios-919f81a8e212273d",
+      "dogId": "design-mythic_liberties_six_20260912-helios",
+      "title": "Helios, No Brakes",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab.png",
+      "imageHash": "919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/mythic_liberties_six_20260912/characters/helios.js",
+      "sourceHash": "1f019fd382fddd3885049caf0001bc94aba45071fcee9c1292f9596b170ba3bf",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/helios.js",
+          "sha256": "1f019fd382fddd3885049caf0001bc94aba45071fcee9c1292f9596b170ba3bf"
+        }
+      ],
+      "description": "No Brakes",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "helios",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/helios.json",
+          "sha256": "819fe00ca928fef3d32c44207c542edda9e9c232050d63b124622bf2fb68f0c9"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/helios/light_contact.json",
+          "sha256": "aab92f9bd3719fa77a15bc7f911c7b9b26528ce89ff5c184a4bd13f7149337da"
+        }
+      }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-persephone-597fb2b60f9f8111",
+      "dogId": "design-mythic_liberties_six_20260912-persephone",
+      "title": "Persephone, Back Again",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1.png",
+      "imageHash": "597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/mythic_liberties_six_20260912/characters/persephone.js",
+      "sourceHash": "76f292cfa6a9e2c9ad261331bd735dc465ee3290a8656931e893a38907bf47b4",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/persephone.js",
+          "sha256": "76f292cfa6a9e2c9ad261331bd735dc465ee3290a8656931e893a38907bf47b4"
+        }
+      ],
+      "description": "Back Again",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "persephone",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/persephone.json",
+          "sha256": "edfaa8760ec12e5a060365e372a42a2fff46c5b348418995f4f8b8eeb5e4c0bc"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/persephone/light_contact.json",
+          "sha256": "5c96ba01668bd8ba5ebd95f8ae2567f458cbdd84b038ff96c808f563fc606760"
+        }
+      }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-hypnos-bb180999a33feffe",
+      "dogId": "design-mythic_liberties_six_20260912-hypnos",
+      "title": "Hypnos, Five More Minutes",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc.png",
+      "imageHash": "bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc",
+      "parent": "original-117-34aa2133dcd107a3",
+      "nativeParentSeed": 117,
+      "source": "../design/mythic_liberties_six_20260912/characters/hypnos.js",
+      "sourceHash": "efe9b54e7bdae413ae82455fe499bdb3793d5efec7aea1170b71343f84c9fbfe",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/hypnos.js",
+          "sha256": "efe9b54e7bdae413ae82455fe499bdb3793d5efec7aea1170b71343f84c9fbfe"
+        }
+      ],
+      "description": "Five More Minutes",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "hypnos",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/hypnos.json",
+          "sha256": "a6fbe825c3d8b3cf39343e417ba40917b78f6a22fd9fcc6eec1813a378d2f479"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/hypnos/light_contact.json",
+          "sha256": "a24bff3e840086e979b24cde340d3c943c540e7ca5a457d9df1bee3b3dc1fc3a"
+        }
+      }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-charon-1a06dcb982cead54",
+      "dogId": "design-mythic_liberties_six_20260912-charon",
+      "title": "Charon, Last Boat Home",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d.png",
+      "imageHash": "1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/mythic_liberties_six_20260912/characters/charon.js",
+      "sourceHash": "572b72bac4eb1cf6a7184ab1c0dd0b17a7eb84913feb812f5165419d143a5209",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/charon.js",
+          "sha256": "572b72bac4eb1cf6a7184ab1c0dd0b17a7eb84913feb812f5165419d143a5209"
+        }
+      ],
+      "description": "Last Boat Home",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "charon",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/charon.json",
+          "sha256": "0c80e75918ab79c1c27786fa209110822e60a815c56d181f16a524d0f0ea4538"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/charon/light_contact.json",
+          "sha256": "494da5519e300690211977bca8627d0904697bf8b493e64c8e6e6a66bd8552d1"
+        }
+      }
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-pan-a3a5ecf69b916a0d",
+      "dogId": "design-mythic_liberties_six_20260912-pan",
+      "title": "Pan, The Woods Are Listening",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e.png",
+      "imageHash": "a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/mythic_liberties_six_20260912/characters/pan.js",
+      "sourceHash": "ae8f60745238beef3c0d4ff2901a1b92f2eb4f510e0e8da84efafdfcb9362f2b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/mythic_liberties_six_20260912/characters/pan.js",
+          "sha256": "ae8f60745238beef3c0d4ff2901a1b92f2eb4f510e0e8da84efafdfcb9362f2b"
+        }
+      ],
+      "description": "The Woods Are Listening",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "mythic_liberties_six_20260912",
+      "slug": "pan",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/mythic_liberties_six_20260912/out/pan.json",
+          "sha256": "1ff23481a585ba0f9656336781c58ba00cfb1bd5c1110fd5759b5b1b868e8374"
+        },
+        "cast": {
+          "path": "../design/mythic_liberties_six_20260912/cast.json",
+          "sha256": "0e878b53b33da2b45576cc359f9cf3aecfa570fe3589e26ea6cea608e00e69f8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/mythic_liberties_six_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/mythic_liberties_six_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/mythic_liberties_six_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/mythic_liberties_six_20260912/fields.json",
+          "sha256": "a1d71c4bf6962b04acc65586bf1febc74c39f1b6a232ed3ee20062befa933ba9"
+        },
+        "supports": {
+          "path": "../design/mythic_liberties_six_20260912/supports.json",
+          "sha256": "66196dc1c77eedeb63b6812d4f4f952686c4685b1116147fcb3963e00dbab507"
+        },
+        "lightContact": {
+          "path": "../design/mythic_liberties_six_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/mythic_liberties_six_20260912/work/pan/light_contact.json",
+          "sha256": "f19541bc5c245b891fe7a727338f18180143f68290ff52bce1d11791a6bb16a6"
+        }
+      }
     }
   ],
   "rounds": [
