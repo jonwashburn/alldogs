@@ -9811,6 +9811,376 @@
           "sha256": "ab6c01a64cb8814a753085543e3171be0e86e3a6ecfa259d0b58c1491d1f2282"
         }
       }
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-solar_sentinel-b19e7c8c1b69357a",
+      "dogId": "design-hero_vivid_round_02_20260912-solar_sentinel",
+      "title": "The Solar Sentinel",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b19e7c8c1b69357a4e0d359304bb7567fb5bf8f2e3fc6d9d3a6224fed182d9af.png",
+      "imageHash": "b19e7c8c1b69357a4e0d359304bb7567fb5bf8f2e3fc6d9d3a6224fed182d9af",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/hero_vivid_round_02_20260912/characters/solar_sentinel.js",
+      "sourceHash": "8017c7e9d40e41b924ec94722b0194bf1bc564e3f085d75c7e0bf1b859a93deb",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_vivid_round_02_20260912/characters/solar_sentinel.js",
+          "sha256": "8017c7e9d40e41b924ec94722b0194bf1bc564e3f085d75c7e0bf1b859a93deb"
+        }
+      ],
+      "description": "A pale-faced sentinel in yellow armor carries a small fire through violet night.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "solar_sentinel",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_vivid_round_02_20260912/out/solar_sentinel.json",
+          "sha256": "de183f80c9003af56d1c7e814c6587d9a6a83bedeff878fb06d32fcb0b12f9a1"
+        },
+        "cast": {
+          "path": "../design/hero_vivid_round_02_20260912/cast.json",
+          "sha256": "1395ed41f75536e3f5e8e2a8624b01d05c2d3a532d103838915973117b800031"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_vivid_round_02_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/hero_vivid_round_02_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_vivid_round_02_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_vivid_round_02_20260912/fields.json",
+          "sha256": "ea06df9f1d5eb570e8e3e5d5d8f4c73188a70f2a7967dcda86316d793ee8064b"
+        },
+        "supports": {
+          "path": "../design/hero_vivid_round_02_20260912/supports.json",
+          "sha256": "f2536d8275f4883f91e5a7de600c0767bde88a37093a0e3e6b9a376fbf368d15"
+        },
+        "lightContact": {
+          "path": "../design/hero_vivid_round_02_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_vivid_round_02_20260912/work/solar_sentinel/light_contact.json",
+          "sha256": "71b9785964308d9959a1dd5d794d5d7aca4e553d5fb1f4737fe6f8d21c2a0a15"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-crimson_comet-da25078c3a7c12e5",
+      "dogId": "design-hero_vivid_round_02_20260912-crimson_comet",
+      "title": "The Crimson Comet",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-da25078c3a7c12e53d378d728470f34bd63b69a44c79f16e8c18d2a5ea6f44e7.png",
+      "imageHash": "da25078c3a7c12e53d378d728470f34bd63b69a44c79f16e8c18d2a5ea6f44e7",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/hero_vivid_round_02_20260912/characters/crimson_comet.js",
+      "sourceHash": "de63a98255ee4ca53fe60ed4d6a05324d59474b47b84134961352f2d0e754fa6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_vivid_round_02_20260912/characters/crimson_comet.js",
+          "sha256": "de63a98255ee4ca53fe60ed4d6a05324d59474b47b84134961352f2d0e754fa6"
+        }
+      ],
+      "description": "A scarlet hero flies low over a yellow trail, his red cape streaming behind him.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "crimson_comet",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_vivid_round_02_20260912/out/crimson_comet.json",
+          "sha256": "9b9719c7dd279d0c957f25fe9bb25b2a89c6961c301eb741dab8a80249c95df8"
+        },
+        "cast": {
+          "path": "../design/hero_vivid_round_02_20260912/cast.json",
+          "sha256": "1395ed41f75536e3f5e8e2a8624b01d05c2d3a532d103838915973117b800031"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_vivid_round_02_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/hero_vivid_round_02_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_vivid_round_02_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_vivid_round_02_20260912/fields.json",
+          "sha256": "ea06df9f1d5eb570e8e3e5d5d8f4c73188a70f2a7967dcda86316d793ee8064b"
+        },
+        "supports": {
+          "path": "../design/hero_vivid_round_02_20260912/supports.json",
+          "sha256": "f2536d8275f4883f91e5a7de600c0767bde88a37093a0e3e6b9a376fbf368d15"
+        },
+        "lightContact": {
+          "path": "../design/hero_vivid_round_02_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_vivid_round_02_20260912/work/crimson_comet/light_contact.json",
+          "sha256": "51658e4f4b30566bfb9db2fea20a32c6af8d1c2c720135c033131e7001c0e1c1"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-emerald_paladin-9628492203faa160",
+      "dogId": "design-hero_vivid_round_02_20260912-emerald_paladin",
+      "title": "The Emerald Paladin",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9628492203faa160eb22737b840f32a57f3b8d36413e4ee06f63a9f0a7b450d0.png",
+      "imageHash": "9628492203faa160eb22737b840f32a57f3b8d36413e4ee06f63a9f0a7b450d0",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/hero_vivid_round_02_20260912/characters/emerald_paladin.js",
+      "sourceHash": "4358260346e85c662aa704a0e8f39c522dece79fde96dbc60fa189cd03040d3b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_vivid_round_02_20260912/characters/emerald_paladin.js",
+          "sha256": "4358260346e85c662aa704a0e8f39c522dece79fde96dbc60fa189cd03040d3b"
+        }
+      ],
+      "description": "An emerald knight lifts a gold shield over one tiny plant.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "emerald_paladin",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_vivid_round_02_20260912/out/emerald_paladin.json",
+          "sha256": "0ed14980b0c95c6992376d47edbca545a26814d48cd025079a51322b629d8267"
+        },
+        "cast": {
+          "path": "../design/hero_vivid_round_02_20260912/cast.json",
+          "sha256": "1395ed41f75536e3f5e8e2a8624b01d05c2d3a532d103838915973117b800031"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_vivid_round_02_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/hero_vivid_round_02_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_vivid_round_02_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_vivid_round_02_20260912/fields.json",
+          "sha256": "ea06df9f1d5eb570e8e3e5d5d8f4c73188a70f2a7967dcda86316d793ee8064b"
+        },
+        "supports": {
+          "path": "../design/hero_vivid_round_02_20260912/supports.json",
+          "sha256": "f2536d8275f4883f91e5a7de600c0767bde88a37093a0e3e6b9a376fbf368d15"
+        },
+        "lightContact": {
+          "path": "../design/hero_vivid_round_02_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_vivid_round_02_20260912/work/emerald_paladin/light_contact.json",
+          "sha256": "652f95ff1c99022f13f0917c2561ece343ea9f2362983343bbbacb5fc5dbf511"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-violet_valkyrie-4d04a7fe73b0c606",
+      "dogId": "design-hero_vivid_round_02_20260912-violet_valkyrie",
+      "title": "The Violet Valkyrie",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4d04a7fe73b0c6065d07354bcc9c5d514a8acb81604d178bd79f69562afa6daf.png",
+      "imageHash": "4d04a7fe73b0c6065d07354bcc9c5d514a8acb81604d178bd79f69562afa6daf",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/hero_vivid_round_02_20260912/characters/violet_valkyrie.js",
+      "sourceHash": "b6420e2ac52d6cd296552c889dcdebb015f9416e39a8340c68481e66a6fa65fb",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_vivid_round_02_20260912/characters/violet_valkyrie.js",
+          "sha256": "b6420e2ac52d6cd296552c889dcdebb015f9416e39a8340c68481e66a6fa65fb"
+        }
+      ],
+      "description": "A violet valkyrie crosses an orange sky with a broad blue and cream wing.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "violet_valkyrie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_vivid_round_02_20260912/out/violet_valkyrie.json",
+          "sha256": "42385be34436f4281003c9d29ecc315579a0287276becea21dd87b0fe4636ce9"
+        },
+        "cast": {
+          "path": "../design/hero_vivid_round_02_20260912/cast.json",
+          "sha256": "1395ed41f75536e3f5e8e2a8624b01d05c2d3a532d103838915973117b800031"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_vivid_round_02_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/hero_vivid_round_02_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_vivid_round_02_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_vivid_round_02_20260912/fields.json",
+          "sha256": "ea06df9f1d5eb570e8e3e5d5d8f4c73188a70f2a7967dcda86316d793ee8064b"
+        },
+        "supports": {
+          "path": "../design/hero_vivid_round_02_20260912/supports.json",
+          "sha256": "f2536d8275f4883f91e5a7de600c0767bde88a37093a0e3e6b9a376fbf368d15"
+        },
+        "lightContact": {
+          "path": "../design/hero_vivid_round_02_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_vivid_round_02_20260912/work/violet_valkyrie/light_contact.json",
+          "sha256": "9664de9216aa7fe37244fddf6408b901f63c6eb4970c9036e656fef9b8e658fe"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-tidebreaker-dd7ac4e22c55a52f",
+      "dogId": "design-hero_vivid_round_02_20260912-tidebreaker",
+      "title": "The Tidebreaker",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f.png",
+      "imageHash": "dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/hero_vivid_round_02_20260912/characters/tidebreaker.js",
+      "sourceHash": "fd6ffed3775301dd6709e9aae729aa81be7db5e5620f9db4c3dc7e6bb429c2dc",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_vivid_round_02_20260912/characters/tidebreaker.js",
+          "sha256": "fd6ffed3775301dd6709e9aae729aa81be7db5e5620f9db4c3dc7e6bb429c2dc"
+        }
+      ],
+      "description": "A cobalt hero stands inside the coral gap of a curling blue wave.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "tidebreaker",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_vivid_round_02_20260912/out/tidebreaker.json",
+          "sha256": "dbe008dd8b36523dd4cff38f54b13525080c302f9ad6228495108e80bcb3adf1"
+        },
+        "cast": {
+          "path": "../design/hero_vivid_round_02_20260912/cast.json",
+          "sha256": "1395ed41f75536e3f5e8e2a8624b01d05c2d3a532d103838915973117b800031"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_vivid_round_02_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/hero_vivid_round_02_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_vivid_round_02_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_vivid_round_02_20260912/fields.json",
+          "sha256": "ea06df9f1d5eb570e8e3e5d5d8f4c73188a70f2a7967dcda86316d793ee8064b"
+        },
+        "supports": {
+          "path": "../design/hero_vivid_round_02_20260912/supports.json",
+          "sha256": "f2536d8275f4883f91e5a7de600c0767bde88a37093a0e3e6b9a376fbf368d15"
+        },
+        "lightContact": {
+          "path": "../design/hero_vivid_round_02_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_vivid_round_02_20260912/work/tidebreaker/light_contact.json",
+          "sha256": "49eb009ee1d8e60c50023fad6b559c06b24f212024bc67f35b0db36c1c7fb1fa"
+        }
+      }
     }
   ],
   "rounds": [

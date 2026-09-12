@@ -932,6 +932,56 @@
       "batch": "judged_round_01_20260912",
       "slug": "projectionist",
       "image": "/collection/assets/candidate-28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a.png"
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-solar_sentinel-b19e7c8c1b69357a",
+      "title": "The Solar Sentinel",
+      "kind": "candidate",
+      "imageHash": "b19e7c8c1b69357a4e0d359304bb7567fb5bf8f2e3fc6d9d3a6224fed182d9af",
+      "description": "A pale-faced sentinel in yellow armor carries a small fire through violet night.",
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "solar_sentinel",
+      "image": "/collection/assets/candidate-b19e7c8c1b69357a4e0d359304bb7567fb5bf8f2e3fc6d9d3a6224fed182d9af.png"
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-crimson_comet-da25078c3a7c12e5",
+      "title": "The Crimson Comet",
+      "kind": "candidate",
+      "imageHash": "da25078c3a7c12e53d378d728470f34bd63b69a44c79f16e8c18d2a5ea6f44e7",
+      "description": "A scarlet hero flies low over a yellow trail, his red cape streaming behind him.",
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "crimson_comet",
+      "image": "/collection/assets/candidate-da25078c3a7c12e53d378d728470f34bd63b69a44c79f16e8c18d2a5ea6f44e7.png"
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-emerald_paladin-9628492203faa160",
+      "title": "The Emerald Paladin",
+      "kind": "candidate",
+      "imageHash": "9628492203faa160eb22737b840f32a57f3b8d36413e4ee06f63a9f0a7b450d0",
+      "description": "An emerald knight lifts a gold shield over one tiny plant.",
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "emerald_paladin",
+      "image": "/collection/assets/candidate-9628492203faa160eb22737b840f32a57f3b8d36413e4ee06f63a9f0a7b450d0.png"
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-violet_valkyrie-4d04a7fe73b0c606",
+      "title": "The Violet Valkyrie",
+      "kind": "candidate",
+      "imageHash": "4d04a7fe73b0c6065d07354bcc9c5d514a8acb81604d178bd79f69562afa6daf",
+      "description": "A violet valkyrie crosses an orange sky with a broad blue and cream wing.",
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "violet_valkyrie",
+      "image": "/collection/assets/candidate-4d04a7fe73b0c6065d07354bcc9c5d514a8acb81604d178bd79f69562afa6daf.png"
+    },
+    {
+      "id": "candidate-hero_vivid_round_02_20260912-tidebreaker-dd7ac4e22c55a52f",
+      "title": "The Tidebreaker",
+      "kind": "candidate",
+      "imageHash": "dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f",
+      "description": "A cobalt hero stands inside the coral gap of a curling blue wave.",
+      "batch": "hero_vivid_round_02_20260912",
+      "slug": "tidebreaker",
+      "image": "/collection/assets/candidate-dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f.png"
     }
   ],
   "references": [
@@ -1031,6 +1081,33 @@
           {
             "candidateId": "candidate-judged_round_01_20260912-projectionist-28bd9ced04eb1c65",
             "imageHash": "28bd9ced04eb1c654cd7ee2128630832771644e3cad2e07ad659aa8f1b39ef0a"
+          }
+        ]
+      },
+      {
+        "id": "round-02",
+        "title": "Round 02",
+        "frozenAt": "2026-09-12T22:10:21.431438+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-hero_vivid_round_02_20260912-solar_sentinel-b19e7c8c1b69357a",
+            "imageHash": "b19e7c8c1b69357a4e0d359304bb7567fb5bf8f2e3fc6d9d3a6224fed182d9af"
+          },
+          {
+            "candidateId": "candidate-hero_vivid_round_02_20260912-crimson_comet-da25078c3a7c12e5",
+            "imageHash": "da25078c3a7c12e53d378d728470f34bd63b69a44c79f16e8c18d2a5ea6f44e7"
+          },
+          {
+            "candidateId": "candidate-hero_vivid_round_02_20260912-emerald_paladin-9628492203faa160",
+            "imageHash": "9628492203faa160eb22737b840f32a57f3b8d36413e4ee06f63a9f0a7b450d0"
+          },
+          {
+            "candidateId": "candidate-hero_vivid_round_02_20260912-violet_valkyrie-4d04a7fe73b0c606",
+            "imageHash": "4d04a7fe73b0c6065d07354bcc9c5d514a8acb81604d178bd79f69562afa6daf"
+          },
+          {
+            "candidateId": "candidate-hero_vivid_round_02_20260912-tidebreaker-dd7ac4e22c55a52f",
+            "imageHash": "dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f"
           }
         ]
       }
