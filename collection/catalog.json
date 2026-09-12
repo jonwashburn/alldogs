@@ -10181,6 +10181,376 @@
           "sha256": "49eb009ee1d8e60c50023fad6b559c06b24f212024bc67f35b0db36c1c7fb1fa"
         }
       }
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-lionheart-618352c43ee04df8",
+      "dogId": "design-hero_actions_round_03_20260912-lionheart",
+      "title": "Lionheart",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-618352c43ee04df8f4ad915b1d89b9094ffe8e9165a87a988e5d8f53da88d94f.png",
+      "imageHash": "618352c43ee04df8f4ad915b1d89b9094ffe8e9165a87a988e5d8f53da88d94f",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/hero_actions_round_03_20260912/characters/lionheart.js",
+      "sourceHash": "095f823097cca52e96cf0b2a19be146b35f7ba33e03789c78b4eb6af20d8e858",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_actions_round_03_20260912/characters/lionheart.js",
+          "sha256": "095f823097cca52e96cf0b2a19be146b35f7ba33e03789c78b4eb6af20d8e858"
+        }
+      ],
+      "description": "A red lionhearted dog leans into a stony golden slope.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "lionheart",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_actions_round_03_20260912/out/lionheart.json",
+          "sha256": "8a011e1fa21dce2c0a9cee1cfa0cee08e1175f1b691ff1027a8658e19a58bca4"
+        },
+        "cast": {
+          "path": "../design/hero_actions_round_03_20260912/cast.json",
+          "sha256": "d730c40459e1b1de18e5a323671f277b6d1528f2fd8e65f130f4b12069a5e0a6"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_actions_round_03_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_actions_round_03_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_actions_round_03_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_actions_round_03_20260912/fields.json",
+          "sha256": "f91b1b0165c27194f952772f1cdae145872db154e968366ace29b37f7abcc0a2"
+        },
+        "supports": {
+          "path": "../design/hero_actions_round_03_20260912/supports.json",
+          "sha256": "67f34b665fb892106a6366149c760338cc574a9e7f74d4855dafe046aea22c67"
+        },
+        "lightContact": {
+          "path": "../design/hero_actions_round_03_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_actions_round_03_20260912/work/lionheart/light_contact.json",
+          "sha256": "2cdf676ccc86df9fa7ec6df2f9434ea860457ccca74cbe06a79f5ee864dafa5a"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-emerald_giant-6c01f361df0f8f10",
+      "dogId": "design-hero_actions_round_03_20260912-emerald_giant",
+      "title": "The Gentle Colossus",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-6c01f361df0f8f10710fb75840a4737bfdc08e39fafa30866bf0813ae075e3c6.png",
+      "imageHash": "6c01f361df0f8f10710fb75840a4737bfdc08e39fafa30866bf0813ae075e3c6",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/hero_actions_round_03_20260912/characters/emerald_giant.js",
+      "sourceHash": "0a3e16e7018d53fd0782590d4da2de8471e45932d24c7a61f193c4fc713e7697",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_actions_round_03_20260912/characters/emerald_giant.js",
+          "sha256": "0a3e16e7018d53fd0782590d4da2de8471e45932d24c7a61f193c4fc713e7697"
+        }
+      ],
+      "description": "An emerald giant passes over a village small enough to fit beneath his belly.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "emerald_giant",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_actions_round_03_20260912/out/emerald_giant.json",
+          "sha256": "7c44a244ed883d731f6b603f985c86b9cb6a9772b0661818a57334b0b858255d"
+        },
+        "cast": {
+          "path": "../design/hero_actions_round_03_20260912/cast.json",
+          "sha256": "d730c40459e1b1de18e5a323671f277b6d1528f2fd8e65f130f4b12069a5e0a6"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_actions_round_03_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_actions_round_03_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_actions_round_03_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_actions_round_03_20260912/fields.json",
+          "sha256": "f91b1b0165c27194f952772f1cdae145872db154e968366ace29b37f7abcc0a2"
+        },
+        "supports": {
+          "path": "../design/hero_actions_round_03_20260912/supports.json",
+          "sha256": "67f34b665fb892106a6366149c760338cc574a9e7f74d4855dafe046aea22c67"
+        },
+        "lightContact": {
+          "path": "../design/hero_actions_round_03_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_actions_round_03_20260912/work/emerald_giant/light_contact.json",
+          "sha256": "a4fffc77813d08bef1f6399c21ea7ed3c277a33a1fcd90df27065088b93ec036"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51",
+      "dogId": "design-hero_actions_round_03_20260912-river_bridge",
+      "title": "The River Bridge",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339.png",
+      "imageHash": "090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/hero_actions_round_03_20260912/characters/river_bridge.js",
+      "sourceHash": "b97ed3ce33f1eba305125c73c01e650c9e4db326d8a5b3f757fb941306818188",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_actions_round_03_20260912/characters/river_bridge.js",
+          "sha256": "b97ed3ce33f1eba305125c73c01e650c9e4db326d8a5b3f757fb941306818188"
+        }
+      ],
+      "description": "Three little travelers cross the river on the back of a scarlet dog.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "river_bridge",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_actions_round_03_20260912/out/river_bridge.json",
+          "sha256": "4e729b235fbd6030e96ff7b7728d79f0dbfa8494ed6696e86a04187b65878e03"
+        },
+        "cast": {
+          "path": "../design/hero_actions_round_03_20260912/cast.json",
+          "sha256": "d730c40459e1b1de18e5a323671f277b6d1528f2fd8e65f130f4b12069a5e0a6"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_actions_round_03_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_actions_round_03_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_actions_round_03_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_actions_round_03_20260912/fields.json",
+          "sha256": "f91b1b0165c27194f952772f1cdae145872db154e968366ace29b37f7abcc0a2"
+        },
+        "supports": {
+          "path": "../design/hero_actions_round_03_20260912/supports.json",
+          "sha256": "67f34b665fb892106a6366149c760338cc574a9e7f74d4855dafe046aea22c67"
+        },
+        "lightContact": {
+          "path": "../design/hero_actions_round_03_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_actions_round_03_20260912/work/river_bridge/light_contact.json",
+          "sha256": "8d1f1e32e67cf556a2b9cc80fae356127a7bddf11f3091f22a1df69635814fb1"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-night_rescuer-7d965098b34e9691",
+      "dogId": "design-hero_actions_round_03_20260912-night_rescuer",
+      "title": "The Night Rescuer",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-7d965098b34e9691280569e86965c90c373f5153922c7c0d3971e024be6017f4.png",
+      "imageHash": "7d965098b34e9691280569e86965c90c373f5153922c7c0d3971e024be6017f4",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/hero_actions_round_03_20260912/characters/night_rescuer.js",
+      "sourceHash": "9e28a5e02afaf4b18997dc4bb35603085ab4e8f52fce726b7cf98f193e9afe20",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_actions_round_03_20260912/characters/night_rescuer.js",
+          "sha256": "9e28a5e02afaf4b18997dc4bb35603085ab4e8f52fce726b7cf98f193e9afe20"
+        }
+      ],
+      "description": "A blue dog carries a lantern toward a little dog waiting in the dark.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "night_rescuer",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_actions_round_03_20260912/out/night_rescuer.json",
+          "sha256": "42c620dd0744832b4ced0bd2963e037f28ed73510433a7169590b6beec969f42"
+        },
+        "cast": {
+          "path": "../design/hero_actions_round_03_20260912/cast.json",
+          "sha256": "d730c40459e1b1de18e5a323671f277b6d1528f2fd8e65f130f4b12069a5e0a6"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_actions_round_03_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_actions_round_03_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_actions_round_03_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_actions_round_03_20260912/fields.json",
+          "sha256": "f91b1b0165c27194f952772f1cdae145872db154e968366ace29b37f7abcc0a2"
+        },
+        "supports": {
+          "path": "../design/hero_actions_round_03_20260912/supports.json",
+          "sha256": "67f34b665fb892106a6366149c760338cc574a9e7f74d4855dafe046aea22c67"
+        },
+        "lightContact": {
+          "path": "../design/hero_actions_round_03_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_actions_round_03_20260912/work/night_rescuer/light_contact.json",
+          "sha256": "e2d127a97257a5490edc6fa2f1e26727ae1f6a1b47ae1e0c715f544b9dc11653"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
+      "dogId": "design-hero_actions_round_03_20260912-star_catcher",
+      "title": "The Star Catcher",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824.png",
+      "imageHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824",
+      "parent": "original-117-34aa2133dcd107a3",
+      "nativeParentSeed": 117,
+      "source": "../design/hero_actions_round_03_20260912/characters/star_catcher.js",
+      "sourceHash": "fcfb3dd4b90259edab730fb9dd2c505739377f69d260716256420e99398c010c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_actions_round_03_20260912/characters/star_catcher.js",
+          "sha256": "fcfb3dd4b90259edab730fb9dd2c505739377f69d260716256420e99398c010c"
+        }
+      ],
+      "description": "An airborne violet dog catches a falling star with a tangled red line.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "star_catcher",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_actions_round_03_20260912/out/star_catcher.json",
+          "sha256": "22576fd20cd989c13f4b92f9b3971ef3d7512b8cc4a5f6a55db975dee3ea3e18"
+        },
+        "cast": {
+          "path": "../design/hero_actions_round_03_20260912/cast.json",
+          "sha256": "d730c40459e1b1de18e5a323671f277b6d1528f2fd8e65f130f4b12069a5e0a6"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_actions_round_03_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_actions_round_03_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_actions_round_03_20260912/lettering.js",
+          "sha256": "429c4a2237cb9dd56d05656d52354e3c6e3149888a80a4d3b90f9bec3862e0d6"
+        },
+        "fields": {
+          "path": "../design/hero_actions_round_03_20260912/fields.json",
+          "sha256": "f91b1b0165c27194f952772f1cdae145872db154e968366ace29b37f7abcc0a2"
+        },
+        "supports": {
+          "path": "../design/hero_actions_round_03_20260912/supports.json",
+          "sha256": "67f34b665fb892106a6366149c760338cc574a9e7f74d4855dafe046aea22c67"
+        },
+        "lightContact": {
+          "path": "../design/hero_actions_round_03_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_actions_round_03_20260912/work/star_catcher/light_contact.json",
+          "sha256": "2abff499f01dee3f418f3c6ec509b9945e50e3a7076fa3934c61729152e10995"
+        }
+      }
     }
   ],
   "rounds": [

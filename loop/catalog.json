@@ -982,6 +982,56 @@
       "batch": "hero_vivid_round_02_20260912",
       "slug": "tidebreaker",
       "image": "/collection/assets/candidate-dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f.png"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-lionheart-618352c43ee04df8",
+      "title": "Lionheart",
+      "kind": "candidate",
+      "imageHash": "618352c43ee04df8f4ad915b1d89b9094ffe8e9165a87a988e5d8f53da88d94f",
+      "description": "A red lionhearted dog leans into a stony golden slope.",
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "lionheart",
+      "image": "/collection/assets/candidate-618352c43ee04df8f4ad915b1d89b9094ffe8e9165a87a988e5d8f53da88d94f.png"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-emerald_giant-6c01f361df0f8f10",
+      "title": "The Gentle Colossus",
+      "kind": "candidate",
+      "imageHash": "6c01f361df0f8f10710fb75840a4737bfdc08e39fafa30866bf0813ae075e3c6",
+      "description": "An emerald giant passes over a village small enough to fit beneath his belly.",
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "emerald_giant",
+      "image": "/collection/assets/candidate-6c01f361df0f8f10710fb75840a4737bfdc08e39fafa30866bf0813ae075e3c6.png"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51",
+      "title": "The River Bridge",
+      "kind": "candidate",
+      "imageHash": "090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339",
+      "description": "Three little travelers cross the river on the back of a scarlet dog.",
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "river_bridge",
+      "image": "/collection/assets/candidate-090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339.png"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-night_rescuer-7d965098b34e9691",
+      "title": "The Night Rescuer",
+      "kind": "candidate",
+      "imageHash": "7d965098b34e9691280569e86965c90c373f5153922c7c0d3971e024be6017f4",
+      "description": "A blue dog carries a lantern toward a little dog waiting in the dark.",
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "night_rescuer",
+      "image": "/collection/assets/candidate-7d965098b34e9691280569e86965c90c373f5153922c7c0d3971e024be6017f4.png"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
+      "title": "The Star Catcher",
+      "kind": "candidate",
+      "imageHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824",
+      "description": "An airborne violet dog catches a falling star with a tangled red line.",
+      "batch": "hero_actions_round_03_20260912",
+      "slug": "star_catcher",
+      "image": "/collection/assets/candidate-8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824.png"
     }
   ],
   "references": [
@@ -1108,6 +1158,33 @@
           {
             "candidateId": "candidate-hero_vivid_round_02_20260912-tidebreaker-dd7ac4e22c55a52f",
             "imageHash": "dd7ac4e22c55a52f93da2157e8d0a010d37f992a6b95d950aef6d08efee6d67f"
+          }
+        ]
+      },
+      {
+        "id": "round-03",
+        "title": "Round 03",
+        "frozenAt": "2026-09-12T22:45:20.393891+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-hero_actions_round_03_20260912-lionheart-618352c43ee04df8",
+            "imageHash": "618352c43ee04df8f4ad915b1d89b9094ffe8e9165a87a988e5d8f53da88d94f"
+          },
+          {
+            "candidateId": "candidate-hero_actions_round_03_20260912-emerald_giant-6c01f361df0f8f10",
+            "imageHash": "6c01f361df0f8f10710fb75840a4737bfdc08e39fafa30866bf0813ae075e3c6"
+          },
+          {
+            "candidateId": "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51",
+            "imageHash": "090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339"
+          },
+          {
+            "candidateId": "candidate-hero_actions_round_03_20260912-night_rescuer-7d965098b34e9691",
+            "imageHash": "7d965098b34e9691280569e86965c90c373f5153922c7c0d3971e024be6017f4"
+          },
+          {
+            "candidateId": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
+            "imageHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824"
           }
         ]
       }
