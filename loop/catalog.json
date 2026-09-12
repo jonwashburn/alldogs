@@ -590,6 +590,16 @@
       "batch": "loop_0018_wukong_20260911",
       "slug": "wukong",
       "image": "/collection/assets/candidate-787b213ce5f794467fb3ba068a3927ebacc297d0cf4a033b561e175a0e0a1807.png"
+    },
+    {
+      "id": "candidate-loop_0019_hector_20260912-hector-a06afd9f0f208fc9",
+      "title": "Hector, After the Battle",
+      "kind": "candidate",
+      "imageHash": "a06afd9f0f208fc9f5618055d10c35c41d2ddba7ea7aa2301cd1f974cd6abeb4",
+      "description": "The shield is down. He is still listening.",
+      "batch": "loop_0019_hector_20260912",
+      "slug": "hector",
+      "image": "/collection/assets/candidate-a06afd9f0f208fc9f5618055d10c35c41d2ddba7ea7aa2301cd1f974cd6abeb4.png"
     }
   ],
   "references": [

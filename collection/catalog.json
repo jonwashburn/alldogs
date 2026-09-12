@@ -7331,6 +7331,100 @@
           "sha256": "83622166b7039aa81d3c963a6e2c41e053d3761b040fdb06456a9c9d0e550edb"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0019_hector_20260912-hector-a06afd9f0f208fc9",
+      "dogId": "design-loop_0019_hector_20260912-hector",
+      "title": "Hector, After the Battle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a06afd9f0f208fc9f5618055d10c35c41d2ddba7ea7aa2301cd1f974cd6abeb4.png",
+      "imageHash": "a06afd9f0f208fc9f5618055d10c35c41d2ddba7ea7aa2301cd1f974cd6abeb4",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/loop_0019_hector_20260912/characters/hector.js",
+      "sourceHash": "3a235e886d80c9ffb6a8f50504e13566bb5e525e09905c1102df248e01e1e4a5",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0019_hector_20260912/characters/hector.js",
+          "sha256": "3a235e886d80c9ffb6a8f50504e13566bb5e525e09905c1102df248e01e1e4a5"
+        }
+      ],
+      "description": "The shield is down. He is still listening.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0019_hector_20260912",
+      "slug": "hector",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0019_hector_20260912/out/hector.json",
+          "sha256": "42beb247250b32b5f48be950f5e8af3bf1e9ca063c73a5ca72cdbd91819c1248"
+        },
+        "cast": {
+          "path": "../design/loop_0019_hector_20260912/cast.json",
+          "sha256": "edcbb060f4f13d86a29bffdc63eb15bd8dae4bc6e7931d965b09b69d79287d94"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0019_hector_20260912/painter.js",
+          "sha256": "c5d9eeb9550e190f3eea42e31e113ef015d94215c1538b045e99feeb7d0c83fa"
+        },
+        "renderer": {
+          "path": "../design/loop_0019_hector_20260912/render.js",
+          "sha256": "d2686ad102c116b496db06927b78733d95f42354e729686e1b30556fb3ece388"
+        },
+        "lettering": {
+          "path": "../design/loop_0019_hector_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0019_hector_20260912/fields.json",
+          "sha256": "b84110e538cc25056dbc8d51324cbfb02cb3a675dfa79cb4143c7c7eb2b561b0"
+        },
+        "supports": {
+          "path": "../design/loop_0019_hector_20260912/supports.json",
+          "sha256": "1892acd1e294a22920f55e7220037d4a4fbcc998198d052b5d8bd93eb56ea700"
+        },
+        "requestedMaterials": {
+          "finish": {
+            "path": "../design/loop_0019_hector_20260912/finish.json",
+            "sha256": "02cdcc4d70ecb0ffeac5e7aa968ae82006926d0396a94bb12a733b88a8a93f94"
+          },
+          "receipt": {
+            "path": "../design/loop_0019_hector_20260912/work/hector/new_materials.json",
+            "sha256": "4a29a3468e0b0dfc08da1806145e533ba7d4f2e6e5ed44d8e873db593adab214"
+          },
+          "sources": {
+            "skin_f82.js": {
+              "path": "../design/skin_stick_exchange_20260912/materials/skin_f82.js",
+              "sha256": "71017e3cb3e30edc6417921964a9c5a797106640e47143bb3c1944e42d953139"
+            },
+            "dragfield.js": {
+              "path": "../design/skin_stick_exchange_20260912/materials/dragfield.js",
+              "sha256": "16af0db401087ffaad539c05c7ec9ee7ec9b4b9903755b67e02ca679bbb92c67"
+            },
+            "slickstick.js": {
+              "path": "../design/skin_stick_exchange_20260912/materials/slickstick.js",
+              "sha256": "ec2c94a2ba503c73c97893a17c1e8f1061958a3c566c358540e31609567663c4"
+            },
+            "apply.js": {
+              "path": "../design/skin_stick_exchange_20260912/materials/apply.js",
+              "sha256": "e358ab04ca1706a77e9944375093fdd49511d3278f3d938537e6bde766fde869"
+            }
+          }
+        }
+      }
     }
   ],
   "rounds": [
