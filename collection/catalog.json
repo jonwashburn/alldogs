@@ -7755,6 +7755,72 @@
           "sha256": "a708ed770351e1efd7f3b6db21b60fc43cc72f6b2b79bd81e6165aa74c3ec42e"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0025_thor_stormbeast_20260912-thor-9eada1035b8dc3fd",
+      "dogId": "design-loop_0025_thor_stormbeast_20260912-thor",
+      "title": "Thor, The Storm Has Teeth",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9eada1035b8dc3fd7790828439f5a8d0a04da83381c1a2f4ae6ca326fad88494.png",
+      "imageHash": "9eada1035b8dc3fd7790828439f5a8d0a04da83381c1a2f4ae6ca326fad88494",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/loop_0025_thor_stormbeast_20260912/characters/thor.js",
+      "sourceHash": "00c5f6ca1837bd20defe72b23bef55570ff217d0587299908ae2727bbae3ddd2",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0025_thor_stormbeast_20260912/characters/thor.js",
+          "sha256": "00c5f6ca1837bd20defe72b23bef55570ff217d0587299908ae2727bbae3ddd2"
+        }
+      ],
+      "description": "Even the weather has something to say.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0025_thor_stormbeast_20260912",
+      "slug": "thor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/out/thor.json",
+          "sha256": "c49807a575dba7b22bd7cc6504c9eb99eb2f25bc225573ccc55d05e04584bf74"
+        },
+        "cast": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/cast.json",
+          "sha256": "463407a1a19b59fdd7abe6c865ae30fdaa39dc4a08fce956144a189080eefca7"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/fields.json",
+          "sha256": "30058b434e157313be20ca3ce1e3b125062cffa245feda965193ded31b022bac"
+        },
+        "supports": {
+          "path": "../design/loop_0025_thor_stormbeast_20260912/supports.json",
+          "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
+        }
+      }
     }
   ],
   "rounds": [

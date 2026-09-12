@@ -650,6 +650,16 @@
       "batch": "loop_0024_poseidon_20260912",
       "slug": "poseidon",
       "image": "/collection/assets/candidate-506a4aa86126f75ee99df3941a932795b4b9b6a06d4140c4279f8d7297d79907.png"
+    },
+    {
+      "id": "candidate-loop_0025_thor_stormbeast_20260912-thor-9eada1035b8dc3fd",
+      "title": "Thor, The Storm Has Teeth",
+      "kind": "candidate",
+      "imageHash": "9eada1035b8dc3fd7790828439f5a8d0a04da83381c1a2f4ae6ca326fad88494",
+      "description": "Even the weather has something to say.",
+      "batch": "loop_0025_thor_stormbeast_20260912",
+      "slug": "thor",
+      "image": "/collection/assets/candidate-9eada1035b8dc3fd7790828439f5a8d0a04da83381c1a2f4ae6ca326fad88494.png"
     }
   ],
   "references": [
