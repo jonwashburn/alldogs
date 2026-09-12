@@ -870,6 +870,16 @@
       "batch": "mythic_liberties_six_20260912",
       "slug": "pan",
       "image": "/collection/assets/candidate-a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e.png"
+    },
+    {
+      "id": "candidate-loop_0027_ariadne_20260912-ariadne-4ec7bbe965f5d4ae",
+      "title": "Ariadne, The Thread Remembers",
+      "kind": "candidate",
+      "imageHash": "4ec7bbe965f5d4ae49fe44b3d80990b757901d0cbc4710a674dca74169e6cece",
+      "description": "The Thread Remembers",
+      "batch": "loop_0027_ariadne_20260912",
+      "slug": "ariadne",
+      "image": "/collection/assets/candidate-4ec7bbe965f5d4ae49fe44b3d80990b757901d0cbc4710a674dca74169e6cece.png"
     }
   ],
   "references": [

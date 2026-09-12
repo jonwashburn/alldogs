@@ -9367,6 +9367,80 @@
           "sha256": "f19541bc5c245b891fe7a727338f18180143f68290ff52bce1d11791a6bb16a6"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0027_ariadne_20260912-ariadne-4ec7bbe965f5d4ae",
+      "dogId": "design-loop_0027_ariadne_20260912-ariadne",
+      "title": "Ariadne, The Thread Remembers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4ec7bbe965f5d4ae49fe44b3d80990b757901d0cbc4710a674dca74169e6cece.png",
+      "imageHash": "4ec7bbe965f5d4ae49fe44b3d80990b757901d0cbc4710a674dca74169e6cece",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/loop_0027_ariadne_20260912/characters/ariadne.js",
+      "sourceHash": "8f5a3de920ccde4c8e5c0f828c840cd5d96135436e13c6320bc15f83f5ab8782",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0027_ariadne_20260912/characters/ariadne.js",
+          "sha256": "8f5a3de920ccde4c8e5c0f828c840cd5d96135436e13c6320bc15f83f5ab8782"
+        }
+      ],
+      "description": "The Thread Remembers",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0027_ariadne_20260912",
+      "slug": "ariadne",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0027_ariadne_20260912/out/ariadne.json",
+          "sha256": "c511588f6bbf5be3b04c1d084f31ab529f82d7c3800a7f7f350309c2ebaf566f"
+        },
+        "cast": {
+          "path": "../design/loop_0027_ariadne_20260912/cast.json",
+          "sha256": "78b04f87b617dcf5e75e247d9094f7c12c194ad9cb5152026da08be8efb286da"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0027_ariadne_20260912/painter.js",
+          "sha256": "876f56447805ebaa6f97e3e8e7b2973d0729205e60466513657c1552cb31421e"
+        },
+        "renderer": {
+          "path": "../design/loop_0027_ariadne_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/loop_0027_ariadne_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/loop_0027_ariadne_20260912/fields.json",
+          "sha256": "4bffd82a4e50c68eda5486534b9018531423f5d9ac177fb29872d4ac8e435c62"
+        },
+        "supports": {
+          "path": "../design/loop_0027_ariadne_20260912/supports.json",
+          "sha256": "402ac39c86ed898d6c16b6209681a146604eedeed4d39d256e8a0e058d173da3"
+        },
+        "lightContact": {
+          "path": "../design/loop_0027_ariadne_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loop_0027_ariadne_20260912/work/ariadne/light_contact.json",
+          "sha256": "2c27a2133291f2c98d01925e4b298bc1c3cabc43e9390e52dd6c7b476b307a76"
+        }
+      }
     }
   ],
   "rounds": [
