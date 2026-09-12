@@ -7623,6 +7623,72 @@
           "sha256": "edae1630a026c0d637fcf30445a34b25817ac02d64bd51583a7a2e9a0c80cfb3"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0023_amelia_20260912-amelia-28df015e0e0e9753",
+      "dogId": "design-loop_0023_amelia_20260912-amelia",
+      "title": "Amelia, Into the Blue",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a.png",
+      "imageHash": "28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/loop_0023_amelia_20260912/characters/amelia.js",
+      "sourceHash": "1cbddbc19a5163e58ee7e5fb7a7d58ba9abe77753ab382423a7e921081880972",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0023_amelia_20260912/characters/amelia.js",
+          "sha256": "1cbddbc19a5163e58ee7e5fb7a7d58ba9abe77753ab382423a7e921081880972"
+        }
+      ],
+      "description": "The smallest plane still deserves a whole sky.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0023_amelia_20260912",
+      "slug": "amelia",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0023_amelia_20260912/out/amelia.json",
+          "sha256": "e9cd253342c3509ddfb414692755f676c3f697eeeb62d81734e5ec22899d70f8"
+        },
+        "cast": {
+          "path": "../design/loop_0023_amelia_20260912/cast.json",
+          "sha256": "b407a3a74a057c40cb98587f4f7610755f8be76d0d2ef31f73eceb1f97f2c16e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0023_amelia_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0023_amelia_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0023_amelia_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0023_amelia_20260912/fields.json",
+          "sha256": "a71d862757d965de53b09d0ebc4c360662a9b6bbed839ff9dbfb6cd12671eb9d"
+        },
+        "supports": {
+          "path": "../design/loop_0023_amelia_20260912/supports.json",
+          "sha256": "2ee905124fe08936b5bb2f76c78695a97745f7732e6c799e82c4e07d9074bc85"
+        }
+      }
     }
   ],
   "rounds": [

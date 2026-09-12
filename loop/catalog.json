@@ -630,6 +630,16 @@
       "batch": "loop_0022_orpheus_20260912",
       "slug": "orpheus",
       "image": "/collection/assets/candidate-228d75c2aad920f2a6e07c84105c7371d21317fbff848c306b9eb25194b8b5bc.png"
+    },
+    {
+      "id": "candidate-loop_0023_amelia_20260912-amelia-28df015e0e0e9753",
+      "title": "Amelia, Into the Blue",
+      "kind": "candidate",
+      "imageHash": "28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a",
+      "description": "The smallest plane still deserves a whole sky.",
+      "batch": "loop_0023_amelia_20260912",
+      "slug": "amelia",
+      "image": "/collection/assets/candidate-28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a.png"
     }
   ],
   "references": [
