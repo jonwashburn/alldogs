@@ -1323,7 +1323,8 @@ const APPROVED_DOGS = {
   "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538": { still: "/collection/assets/candidate-426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e.png" },
   "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172": { still: "/collection/assets/candidate-fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095.png" },
   "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1": { still: "/collection/assets/candidate-d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98.png" },
-  "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38": { still: "/collection/assets/candidate-1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508.png" }
+  "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38": { still: "/collection/assets/candidate-1a05642934dc8e385ab9459afca6d8e5ae9fcb3ff592b867be557061120af508.png" },
+  "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df": { still: "/collection/assets/candidate-ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c.png" }
 };
 CAP.basquiat = [1982, 'uneven locs, a charcoal green jacket, a gold crown floating off the head', 'Basquiat'];
 CAP["candidate-loop_0017_joan_20260911-joan-a721d495791beb22"] = ["", "A small dog with an unreasonable amount of courage.", "Joan, Before Dawn"];
@@ -1333,6 +1334,7 @@ CAP["candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538"] = ["", 
 CAP["candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172"] = ["", "Special delivery. He takes the low road.", "The Comet Courier"];
 CAP["candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1"] = ["", "Revised backlight for Icarus. Both earlier versions remain preserved.", "Icarus, Into the Light"];
 CAP["candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38"] = ["", "The hammer is heavy. The weather is personal.", "Thor, Small Thunder"];
+CAP["candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df"] = ["", "The Sky Answers", "Zeus, The Sky Answers"];
 function capYear(seed) {
   const c = CAP[seed]; if (!c) return '';
   const y = c[0]; return y < 0 ? (-y) + ' BC' : String(y);
@@ -1518,15 +1520,46 @@ ARTISTS.forEach(s => { HD_BASES[s] = artistsDir(s); });
    1 Jesus, 4 Bob, 18 Mike, 21 Michael, 34 Madonna, 35 Gaga, 36 Elton, 38 Hulk, 41 Virgil, 46 Amy, 51 Napoleon,
    53 Winston, 55 Elizabeth, 60 Marie, 62 Barack, 63 Donald, 70 Batman, 88 Judy, 101 Vincent, 102 Frida,
    104 Yayoi, 110 Elon, 112 Kobe, 116 Caitlin, 117 Marty, 123 Dorothy, 129 Leia, 141 Gump, 148 Gustav, 151 Rene */
-const ROTATE = [1, 4, 18, 21, 34, 35, 36, 38, 41, 46, 51, 53, 55, 60, 62, 63, 70, 88, 101, 102, 104, 110, 112,
-  116, 117, 123, 129, 141, 148, 151, 'basquiat',
+const ROTATE = [
+  1,
+  4,
+  18,
+  21,
+  34,
+  35,
+  36,
+  38,
+  41,
+  46,
+  51,
+  53,
+  55,
+  60,
+  62,
+  63,
+  70,
+  88,
+  101,
+  102,
+  104,
+  110,
+  112,
+  116,
+  117,
+  123,
+  129,
+  141,
+  148,
+  151,
+  "basquiat",
   "candidate-loop_0017_joan_20260911-joan-a721d495791beb22",
   "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5",
-  "candidate-loop_0006_icarus_20260911-icarus-1e7ec90981e65a7b",
   "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538",
   "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172",
   "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1",
-  "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38"];
+  "candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38",
+  "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df"
+];
 /* Only originals with both approved fates enter the state-changing demonstrations. */
 const FATE_ROTATE = ROTATE.filter(seed => !APPROVED_DOGS[seed]);
 /* The hero is 62 Barack on every visit (Jon 2026-09-08). Each feature band
