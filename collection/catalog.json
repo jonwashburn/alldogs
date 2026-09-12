@@ -7557,6 +7557,72 @@
           "sha256": "45dfcdeaad27a9d184d958eda35a8c978ca0d38834a6bfb04da2cf493d2a0670"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0022_orpheus_20260912-orpheus-228d75c2aad920f2",
+      "dogId": "design-loop_0022_orpheus_20260912-orpheus",
+      "title": "Orpheus, One More Song",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-228d75c2aad920f2a6e07c84105c7371d21317fbff848c306b9eb25194b8b5bc.png",
+      "imageHash": "228d75c2aad920f2a6e07c84105c7371d21317fbff848c306b9eb25194b8b5bc",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/loop_0022_orpheus_20260912/characters/orpheus.js",
+      "sourceHash": "bc527d851955b8ce2bf895cc629a91841a81d238f9b176a9f6495c9042c593b8",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0022_orpheus_20260912/characters/orpheus.js",
+          "sha256": "bc527d851955b8ce2bf895cc629a91841a81d238f9b176a9f6495c9042c593b8"
+        }
+      ],
+      "description": "He has almost reached daylight. There is still one song to finish.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0022_orpheus_20260912",
+      "slug": "orpheus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0022_orpheus_20260912/out/orpheus.json",
+          "sha256": "6493e6bba115b3aed3eac27a9129bb07be7bc14d81e64759fdcecaf24c618603"
+        },
+        "cast": {
+          "path": "../design/loop_0022_orpheus_20260912/cast.json",
+          "sha256": "90e837039116c7b4a6ec4cd33be0d941dd34666f0317bff1eb1eac39e65c8fd8"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0022_orpheus_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0022_orpheus_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0022_orpheus_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0022_orpheus_20260912/fields.json",
+          "sha256": "775016972e0375baa5bd58da7d2a8134d6659acc6ce19a45590759af74b344d8"
+        },
+        "supports": {
+          "path": "../design/loop_0022_orpheus_20260912/supports.json",
+          "sha256": "edae1630a026c0d637fcf30445a34b25817ac02d64bd51583a7a2e9a0c80cfb3"
+        }
+      }
     }
   ],
   "rounds": [

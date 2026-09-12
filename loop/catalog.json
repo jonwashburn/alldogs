@@ -620,6 +620,16 @@
       "batch": "loop_0021_robin_20260912",
       "slug": "robin",
       "image": "/collection/assets/candidate-1e16cb67ed54605bccc974258771f16c6d4264c8b6996d9f117cf98b0ab5be64.png"
+    },
+    {
+      "id": "candidate-loop_0022_orpheus_20260912-orpheus-228d75c2aad920f2",
+      "title": "Orpheus, One More Song",
+      "kind": "candidate",
+      "imageHash": "228d75c2aad920f2a6e07c84105c7371d21317fbff848c306b9eb25194b8b5bc",
+      "description": "He has almost reached daylight. There is still one song to finish.",
+      "batch": "loop_0022_orpheus_20260912",
+      "slug": "orpheus",
+      "image": "/collection/assets/candidate-228d75c2aad920f2a6e07c84105c7371d21317fbff848c306b9eb25194b8b5bc.png"
     }
   ],
   "references": [
