@@ -7887,6 +7887,1042 @@
           "sha256": "8b85aa541153f1321adb4e6accfaee693c9ac9108a0605d166145668adea1868"
         }
       }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "dogId": "design-greek_pantheon_20260912-zeus",
+      "title": "Zeus, The Sky Answers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c.png",
+      "imageHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/greek_pantheon_20260912/characters/zeus.js",
+      "sourceHash": "0237853097ddbafd3c7e4059ef3a6abb092d11d3c339a1d06d9d23888d6f9405",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/zeus.js",
+          "sha256": "0237853097ddbafd3c7e4059ef3a6abb092d11d3c339a1d06d9d23888d6f9405"
+        }
+      ],
+      "description": "The Sky Answers",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "zeus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/zeus.json",
+          "sha256": "2a54e7a63b21dcb1d93f84ae2bc21b834c661a933184fdb6c6087838f6050dbb"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/zeus/light_contact.json",
+          "sha256": "be13cdedb14507d719b08d71ed4c5f4db19cd7fa48ddceaa52877024c95fff36"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hera-3571150f54a53e3c",
+      "dogId": "design-greek_pantheon_20260912-hera",
+      "title": "Hera, Every Eye",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e.png",
+      "imageHash": "3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/greek_pantheon_20260912/characters/hera.js",
+      "sourceHash": "75dc0d7fc6802216a4706b5431d128c11d316958937deeb7ff81d869e1b81b8e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/hera.js",
+          "sha256": "75dc0d7fc6802216a4706b5431d128c11d316958937deeb7ff81d869e1b81b8e"
+        }
+      ],
+      "description": "Every Eye",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "hera",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/hera.json",
+          "sha256": "d431ba0529fdcec2bb5739756562cfa0b0cb0dbf726e06f509b218031a539efc"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/hera/light_contact.json",
+          "sha256": "448e4a5531789f3476a47d7e83f3937f1bf608099c4a2b1bc448f7ec4737b2f0"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "dogId": "design-greek_pantheon_20260912-poseidon",
+      "title": "Poseidon, A Sea in His Wake",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e.png",
+      "imageHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/greek_pantheon_20260912/characters/poseidon.js",
+      "sourceHash": "5493f076587cdd3380e3d9e60cefe3b733fa0046d5f4d4605cd807ef5473ed59",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/poseidon.js",
+          "sha256": "5493f076587cdd3380e3d9e60cefe3b733fa0046d5f4d4605cd807ef5473ed59"
+        }
+      ],
+      "description": "A Sea in His Wake",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "poseidon",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/poseidon.json",
+          "sha256": "07fdd42c4df5b5ff1fc09a306556fde57a4c251bf41c6667a02aa9b542398c93"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/poseidon/light_contact.json",
+          "sha256": "bac02134382fc0fda4264d5763a9e950becf0472a0c489641f0f18bcb51fb1db"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+      "dogId": "design-greek_pantheon_20260912-demeter",
+      "title": "Demeter, The Last Ear of Wheat",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c.png",
+      "imageHash": "1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/greek_pantheon_20260912/characters/demeter.js",
+      "sourceHash": "501226e4b251130d083d609bf6eee068377233939c6dd403396b1f38d55b82a6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/demeter.js",
+          "sha256": "501226e4b251130d083d609bf6eee068377233939c6dd403396b1f38d55b82a6"
+        }
+      ],
+      "description": "The Last Ear of Wheat",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "demeter",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/demeter.json",
+          "sha256": "cb15aa0e269a09577625c016a7a21e8329693f8dbc211b0b8fb57e3997d43d5d"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/demeter/light_contact.json",
+          "sha256": "c6a1633f8a619a9805f9293eaf87f32875a7cffde44b201632bce5d71479c57d"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "dogId": "design-greek_pantheon_20260912-athena",
+      "title": "Athena, Before the Noise",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62.png",
+      "imageHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/greek_pantheon_20260912/characters/athena.js",
+      "sourceHash": "d844cc043541159c98822ffb6d0a9f3b13083f0d5b3f823c6dabfd563b6ed171",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/athena.js",
+          "sha256": "d844cc043541159c98822ffb6d0a9f3b13083f0d5b3f823c6dabfd563b6ed171"
+        }
+      ],
+      "description": "Before the Noise",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "athena",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/athena.json",
+          "sha256": "7b5328bb5daeb6961d6c70f4617b023bf500e7b67c6bac448598bb56db8d4d27"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/athena/light_contact.json",
+          "sha256": "b27de1bb4eb2b1fcfe35f702954ee9170ab7eebcea5a2341e05eeb88a896fdce"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "dogId": "design-greek_pantheon_20260912-apollo",
+      "title": "Apollo, Morning Rehearsal",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f.png",
+      "imageHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/greek_pantheon_20260912/characters/apollo.js",
+      "sourceHash": "36f03931c4dd23e6ee44d713689a8dabe9c5980c07f66bfe99b8a5e705577154",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/apollo.js",
+          "sha256": "36f03931c4dd23e6ee44d713689a8dabe9c5980c07f66bfe99b8a5e705577154"
+        }
+      ],
+      "description": "Morning Rehearsal",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "apollo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/apollo.json",
+          "sha256": "c25613054b525521b03f65e7864f158adac0e54ec7f9b95b3acf5d87d740c5ed"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/apollo/light_contact.json",
+          "sha256": "04de26b07417df556c53f6ee249f694da6f7301ea22b186b00977999133b9632"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-artemis-2a8d442da4a5feb1",
+      "dogId": "design-greek_pantheon_20260912-artemis",
+      "title": "Artemis, Moon Watch",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-2a8d442da4a5feb1f940ee94272c7462477c683e50fbb300fe2455b1274658f1.png",
+      "imageHash": "2a8d442da4a5feb1f940ee94272c7462477c683e50fbb300fe2455b1274658f1",
+      "parent": "original-117-34aa2133dcd107a3",
+      "nativeParentSeed": 117,
+      "source": "../design/greek_pantheon_20260912/characters/artemis.js",
+      "sourceHash": "ea7e5302f100ac1eec5c890432cc7901a9773d74f7ca934963077dc480f5446b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/artemis.js",
+          "sha256": "ea7e5302f100ac1eec5c890432cc7901a9773d74f7ca934963077dc480f5446b"
+        }
+      ],
+      "description": "Moon Watch",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "artemis",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/artemis.json",
+          "sha256": "b256f702a8a14939127dd84ae0714f1ab0f9531c113b2b9dc6fb46a09a115936"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/artemis/light_contact.json",
+          "sha256": "22b701259d7373d953cf5f5470b0f5b08ad6eb8a379c0761c1376d48b80c6fc3"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "dogId": "design-greek_pantheon_20260912-ares",
+      "title": "Ares, A Flower After Battle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe.png",
+      "imageHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/greek_pantheon_20260912/characters/ares.js",
+      "sourceHash": "1042b4f66aedd866a4eeb0f4b76b8560e7ca367bf5ad3d280b80266f8bc1f6fb",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/ares.js",
+          "sha256": "1042b4f66aedd866a4eeb0f4b76b8560e7ca367bf5ad3d280b80266f8bc1f6fb"
+        }
+      ],
+      "description": "A Flower After Battle",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "ares",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/ares.json",
+          "sha256": "83901ec6b1ee7999aa717d4e6ddf33392615e6809069bf499d937e6f4b331197"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/ares/light_contact.json",
+          "sha256": "31c63fb653d30ea63679712c9cfb629b3d6a11b2fd66c5643ebafa106de64699"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-aphrodite-b05a96bcd23849d9",
+      "dogId": "design-greek_pantheon_20260912-aphrodite",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc.png",
+      "imageHash": "b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/greek_pantheon_20260912/characters/aphrodite.js",
+      "sourceHash": "68f97198f7a62863ee83c05c8bb605141097e4eb99af7e002cfff1b27f42aa89",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/aphrodite.js",
+          "sha256": "68f97198f7a62863ee83c05c8bb605141097e4eb99af7e002cfff1b27f42aa89"
+        }
+      ],
+      "description": "The Tide Brings Roses",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "aphrodite",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/aphrodite.json",
+          "sha256": "e745cf438224f5bc5f5a8ff6b06c1da4c7c5d15eb5b338a41921e2d6be9cfcec"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/aphrodite/light_contact.json",
+          "sha256": "8eb7b2570327b1ff213ee671f9b5839d41951806f90230c059659414616436c6"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hephaestus-f2061d10f1b55ee0",
+      "dogId": "design-greek_pantheon_20260912-hephaestus",
+      "title": "Hephaestus, One More Spark",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c.png",
+      "imageHash": "f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/greek_pantheon_20260912/characters/hephaestus.js",
+      "sourceHash": "0d8126e0d411d439bb4531d210f26d7b6f7e9adc3c9580086387765a66caa816",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/hephaestus.js",
+          "sha256": "0d8126e0d411d439bb4531d210f26d7b6f7e9adc3c9580086387765a66caa816"
+        }
+      ],
+      "description": "One More Spark",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "hephaestus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/hephaestus.json",
+          "sha256": "7c039f6b81723218a6917fd1ac43772a1e33dc75ee8cedbac366a6646d120d4c"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/hephaestus/light_contact.json",
+          "sha256": "d35ca350c598690112abf59daa5928eb0e2ae35a235ab40173ad86645ef6e340"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+      "dogId": "design-greek_pantheon_20260912-hermes",
+      "title": "Hermes, A Message for Tomorrow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5.png",
+      "imageHash": "a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/greek_pantheon_20260912/characters/hermes.js",
+      "sourceHash": "91f269abff982f554337fff7c67f389b01b2b1c7e8b08452b772bfef83c8e6a6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/hermes.js",
+          "sha256": "91f269abff982f554337fff7c67f389b01b2b1c7e8b08452b772bfef83c8e6a6"
+        }
+      ],
+      "description": "A Message for Tomorrow",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "hermes",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/hermes.json",
+          "sha256": "dd81855c27730070844bed5a14be896c3f14ee8c64db558dbd8604249400f667"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/hermes/light_contact.json",
+          "sha256": "d709815099e2ec40d8dda6708624eaa502a86a80cf422e96fac8efdc583f1c9d"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-dionysus-4bbcd2786bbcc979",
+      "dogId": "design-greek_pantheon_20260912-dionysus",
+      "title": "Dionysus, The Party Is Still Here",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229.png",
+      "imageHash": "4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/greek_pantheon_20260912/characters/dionysus.js",
+      "sourceHash": "14cb5c3858126561aebee4a36e6aa9261aea28ee3ec7bca668bd4e44f2e6ea2b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/dionysus.js",
+          "sha256": "14cb5c3858126561aebee4a36e6aa9261aea28ee3ec7bca668bd4e44f2e6ea2b"
+        }
+      ],
+      "description": "The Party Is Still Here",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "dionysus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/dionysus.json",
+          "sha256": "bde4dee741c695bf0c823b76cdeef47af0c17543dd1e2d1c82c08d97fa0f47ad"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/dionysus/light_contact.json",
+          "sha256": "bce7fed9506471aee27fabcf20fadea668309d207921805d9fa590f16c952900"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hades-570adc61b2fe3a0d",
+      "dogId": "design-greek_pantheon_20260912-hades",
+      "title": "Hades, A Small Light Below",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-570adc61b2fe3a0d618f4656b2285455ee1d975d3580a66ab82f08e52dc6e0d8.png",
+      "imageHash": "570adc61b2fe3a0d618f4656b2285455ee1d975d3580a66ab82f08e52dc6e0d8",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/greek_pantheon_20260912/characters/hades.js",
+      "sourceHash": "c7bbb66cb3d2f2534f26bea0265317345ba699be56e649ee8229ee944cd3caed",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/hades.js",
+          "sha256": "c7bbb66cb3d2f2534f26bea0265317345ba699be56e649ee8229ee944cd3caed"
+        }
+      ],
+      "description": "A Small Light Below",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "hades",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/hades.json",
+          "sha256": "81559dddd40398847634622b66c9546db48e2a43dd736fa0f68a1b3b9db4fbf8"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/hades/light_contact.json",
+          "sha256": "3cf4db2a42b29645bb6d93bd0f0b7bc192ff0f38e4cd1a6888f1941ef4b1487b"
+        }
+      }
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hestia-93363e971955d9c8",
+      "dogId": "design-greek_pantheon_20260912-hestia",
+      "title": "Hestia, Come Inside",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83.png",
+      "imageHash": "93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/greek_pantheon_20260912/characters/hestia.js",
+      "sourceHash": "2e6b8ae4cde0671c8045e787079a8c3bec871adf1a28fabe91f3e9951958192c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/greek_pantheon_20260912/characters/hestia.js",
+          "sha256": "2e6b8ae4cde0671c8045e787079a8c3bec871adf1a28fabe91f3e9951958192c"
+        }
+      ],
+      "description": "Come Inside",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "greek_pantheon_20260912",
+      "slug": "hestia",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/greek_pantheon_20260912/out/hestia.json",
+          "sha256": "5545c4b3c67fab38ca3f9186cd123839d275895ee5be944aaa1eead74bb2325d"
+        },
+        "cast": {
+          "path": "../design/greek_pantheon_20260912/cast.json",
+          "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/greek_pantheon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/greek_pantheon_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/greek_pantheon_20260912/lettering.js",
+          "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+        },
+        "fields": {
+          "path": "../design/greek_pantheon_20260912/fields.json",
+          "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+        },
+        "supports": {
+          "path": "../design/greek_pantheon_20260912/supports.json",
+          "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+        },
+        "lightContact": {
+          "path": "../design/greek_pantheon_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/greek_pantheon_20260912/work/hestia/light_contact.json",
+          "sha256": "29489c0ab620eee54b4e111540a664430e31e0d8b2a2049ec3b9cd4a6e437359"
+        }
+      }
     }
   ],
   "rounds": [

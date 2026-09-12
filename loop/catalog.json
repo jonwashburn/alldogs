@@ -670,6 +670,146 @@
       "batch": "loop_0026_thor_light_20260912",
       "slug": "thor",
       "image": "/collection/assets/candidate-1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "title": "Zeus, The Sky Answers",
+      "kind": "candidate",
+      "imageHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+      "description": "The Sky Answers",
+      "batch": "greek_pantheon_20260912",
+      "slug": "zeus",
+      "image": "/collection/assets/candidate-ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hera-3571150f54a53e3c",
+      "title": "Hera, Every Eye",
+      "kind": "candidate",
+      "imageHash": "3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e",
+      "description": "Every Eye",
+      "batch": "greek_pantheon_20260912",
+      "slug": "hera",
+      "image": "/collection/assets/candidate-3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "title": "Poseidon, A Sea in His Wake",
+      "kind": "candidate",
+      "imageHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+      "description": "A Sea in His Wake",
+      "batch": "greek_pantheon_20260912",
+      "slug": "poseidon",
+      "image": "/collection/assets/candidate-a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+      "title": "Demeter, The Last Ear of Wheat",
+      "kind": "candidate",
+      "imageHash": "1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c",
+      "description": "The Last Ear of Wheat",
+      "batch": "greek_pantheon_20260912",
+      "slug": "demeter",
+      "image": "/collection/assets/candidate-1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "title": "Athena, Before the Noise",
+      "kind": "candidate",
+      "imageHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+      "description": "Before the Noise",
+      "batch": "greek_pantheon_20260912",
+      "slug": "athena",
+      "image": "/collection/assets/candidate-3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "title": "Apollo, Morning Rehearsal",
+      "kind": "candidate",
+      "imageHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+      "description": "Morning Rehearsal",
+      "batch": "greek_pantheon_20260912",
+      "slug": "apollo",
+      "image": "/collection/assets/candidate-9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-artemis-2a8d442da4a5feb1",
+      "title": "Artemis, Moon Watch",
+      "kind": "candidate",
+      "imageHash": "2a8d442da4a5feb1f940ee94272c7462477c683e50fbb300fe2455b1274658f1",
+      "description": "Moon Watch",
+      "batch": "greek_pantheon_20260912",
+      "slug": "artemis",
+      "image": "/collection/assets/candidate-2a8d442da4a5feb1f940ee94272c7462477c683e50fbb300fe2455b1274658f1.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "title": "Ares, A Flower After Battle",
+      "kind": "candidate",
+      "imageHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+      "description": "A Flower After Battle",
+      "batch": "greek_pantheon_20260912",
+      "slug": "ares",
+      "image": "/collection/assets/candidate-811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-aphrodite-b05a96bcd23849d9",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "kind": "candidate",
+      "imageHash": "b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc",
+      "description": "The Tide Brings Roses",
+      "batch": "greek_pantheon_20260912",
+      "slug": "aphrodite",
+      "image": "/collection/assets/candidate-b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hephaestus-f2061d10f1b55ee0",
+      "title": "Hephaestus, One More Spark",
+      "kind": "candidate",
+      "imageHash": "f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c",
+      "description": "One More Spark",
+      "batch": "greek_pantheon_20260912",
+      "slug": "hephaestus",
+      "image": "/collection/assets/candidate-f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+      "title": "Hermes, A Message for Tomorrow",
+      "kind": "candidate",
+      "imageHash": "a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5",
+      "description": "A Message for Tomorrow",
+      "batch": "greek_pantheon_20260912",
+      "slug": "hermes",
+      "image": "/collection/assets/candidate-a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-dionysus-4bbcd2786bbcc979",
+      "title": "Dionysus, The Party Is Still Here",
+      "kind": "candidate",
+      "imageHash": "4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229",
+      "description": "The Party Is Still Here",
+      "batch": "greek_pantheon_20260912",
+      "slug": "dionysus",
+      "image": "/collection/assets/candidate-4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hades-570adc61b2fe3a0d",
+      "title": "Hades, A Small Light Below",
+      "kind": "candidate",
+      "imageHash": "570adc61b2fe3a0d618f4656b2285455ee1d975d3580a66ab82f08e52dc6e0d8",
+      "description": "A Small Light Below",
+      "batch": "greek_pantheon_20260912",
+      "slug": "hades",
+      "image": "/collection/assets/candidate-570adc61b2fe3a0d618f4656b2285455ee1d975d3580a66ab82f08e52dc6e0d8.png"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hestia-93363e971955d9c8",
+      "title": "Hestia, Come Inside",
+      "kind": "candidate",
+      "imageHash": "93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83",
+      "description": "Come Inside",
+      "batch": "greek_pantheon_20260912",
+      "slug": "hestia",
+      "image": "/collection/assets/candidate-93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83.png"
     }
   ],
   "references": [
