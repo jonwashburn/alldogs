@@ -1082,6 +1082,56 @@
       "batch": "hero_gestures_round_04_20260912",
       "slug": "dawn_herald",
       "image": "/collection/assets/candidate-da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57.png"
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-ropewalker-03778073f290fc47",
+      "title": "The Ropewalker",
+      "kind": "candidate",
+      "imageHash": "03778073f290fc47ab939a4bf0abc6e887ce67a6b57bac54fe4d33aed78c6ed0",
+      "description": "A blue hero crosses the chasm on one taut golden rope.",
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "ropewalker",
+      "image": "/collection/assets/candidate-03778073f290fc47ab939a4bf0abc6e887ce67a6b57bac54fe4d33aed78c6ed0.png"
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-cloud_mender-61f0380849a3b84a",
+      "title": "The Cloud Mender",
+      "kind": "candidate",
+      "imageHash": "61f0380849a3b84a6a00a30ed0e4d5b545731ab99df17503e8e312ec775c26a3",
+      "description": "A magenta dog stitches a blue cloud back together.",
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "cloud_mender",
+      "image": "/collection/assets/candidate-61f0380849a3b84a6a00a30ed0e4d5b545731ab99df17503e8e312ec775c26a3.png"
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-lantern_ferryman-33346468278e82cd",
+      "title": "The Lantern Ferryman",
+      "kind": "candidate",
+      "imageHash": "33346468278e82cd7f4c6fd104ae9714670e81402d37c00fab6cd4a691fe570b",
+      "description": "A green-clad dog carries a warm lantern across deep teal water.",
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "lantern_ferryman",
+      "image": "/collection/assets/candidate-33346468278e82cd7f4c6fd104ae9714670e81402d37c00fab6cd4a691fe570b.png"
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-bell_ringer-18ee31f1a7de0747",
+      "title": "The Bell Ringer",
+      "kind": "candidate",
+      "imageHash": "18ee31f1a7de074758327274d3525f81013aebd539f0a92f696ada99b2a0c8f0",
+      "description": "A scarlet hero leaps to ring an enormous golden bell.",
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "bell_ringer",
+      "image": "/collection/assets/candidate-18ee31f1a7de074758327274d3525f81013aebd539f0a92f696ada99b2a0c8f0.png"
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-bird_guardian-f6def49305d83483",
+      "title": "The Bird Guardian",
+      "kind": "candidate",
+      "imageHash": "f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55",
+      "description": "A violet guardian carries a small orange bird beneath a sweeping red branch.",
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "bird_guardian",
+      "image": "/collection/assets/candidate-f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55.png"
     }
   ],
   "references": [
@@ -1262,6 +1312,33 @@
           {
             "candidateId": "candidate-hero_gestures_round_04_20260912-dawn_herald-da29870ee919a776",
             "imageHash": "da29870ee919a776e5cd8fdeaf8ca3a4c2233cadaa5e1201fe39a5d17b665c57"
+          }
+        ]
+      },
+      {
+        "id": "round-05",
+        "title": "Round 05",
+        "frozenAt": "2026-09-12T23:53:54.073951+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-hero_rescue_round_05_20260912-ropewalker-03778073f290fc47",
+            "imageHash": "03778073f290fc47ab939a4bf0abc6e887ce67a6b57bac54fe4d33aed78c6ed0"
+          },
+          {
+            "candidateId": "candidate-hero_rescue_round_05_20260912-cloud_mender-61f0380849a3b84a",
+            "imageHash": "61f0380849a3b84a6a00a30ed0e4d5b545731ab99df17503e8e312ec775c26a3"
+          },
+          {
+            "candidateId": "candidate-hero_rescue_round_05_20260912-lantern_ferryman-33346468278e82cd",
+            "imageHash": "33346468278e82cd7f4c6fd104ae9714670e81402d37c00fab6cd4a691fe570b"
+          },
+          {
+            "candidateId": "candidate-hero_rescue_round_05_20260912-bell_ringer-18ee31f1a7de0747",
+            "imageHash": "18ee31f1a7de074758327274d3525f81013aebd539f0a92f696ada99b2a0c8f0"
+          },
+          {
+            "candidateId": "candidate-hero_rescue_round_05_20260912-bird_guardian-f6def49305d83483",
+            "imageHash": "f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55"
           }
         ]
       }

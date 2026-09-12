@@ -10921,6 +10921,376 @@
           "sha256": "26f11755bc3068cccff3ab9a05db099d45ee6f40699d1d5dd8693e1bbbe44ce8"
         }
       }
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-ropewalker-03778073f290fc47",
+      "dogId": "design-hero_rescue_round_05_20260912-ropewalker",
+      "title": "The Ropewalker",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-03778073f290fc47ab939a4bf0abc6e887ce67a6b57bac54fe4d33aed78c6ed0.png",
+      "imageHash": "03778073f290fc47ab939a4bf0abc6e887ce67a6b57bac54fe4d33aed78c6ed0",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/hero_rescue_round_05_20260912/characters/ropewalker.js",
+      "sourceHash": "700bfb624ab70b69b6d04ee08bfa6eed44dc3b56719fffdb3ceabe007d603bb5",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_rescue_round_05_20260912/characters/ropewalker.js",
+          "sha256": "700bfb624ab70b69b6d04ee08bfa6eed44dc3b56719fffdb3ceabe007d603bb5"
+        }
+      ],
+      "description": "A blue hero crosses the chasm on one taut golden rope.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "ropewalker",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_rescue_round_05_20260912/out/ropewalker.json",
+          "sha256": "353a606cfa2348c425e469f5a61dbb221694e4664752b4471d2632604da255ca"
+        },
+        "cast": {
+          "path": "../design/hero_rescue_round_05_20260912/cast.json",
+          "sha256": "bc33f4ee48e3be92b16cb57ebab52d0888e0d4b80463c73b13547acbfb6e744e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_rescue_round_05_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_rescue_round_05_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_rescue_round_05_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_rescue_round_05_20260912/fields.json",
+          "sha256": "e9446b7c9bd969354e2948b1505c751e363c033b6aae0b3925082c2247ececf1"
+        },
+        "supports": {
+          "path": "../design/hero_rescue_round_05_20260912/supports.json",
+          "sha256": "357308b73e7916704fccb662db55099056b1dade910c3c1e4475e965d83c6dc9"
+        },
+        "lightContact": {
+          "path": "../design/hero_rescue_round_05_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_rescue_round_05_20260912/work/ropewalker/light_contact.json",
+          "sha256": "1da047512b7dbb038567f34f3b465c3e7dfd04f229d8eeec68b251e920c5b1f5"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-cloud_mender-61f0380849a3b84a",
+      "dogId": "design-hero_rescue_round_05_20260912-cloud_mender",
+      "title": "The Cloud Mender",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-61f0380849a3b84a6a00a30ed0e4d5b545731ab99df17503e8e312ec775c26a3.png",
+      "imageHash": "61f0380849a3b84a6a00a30ed0e4d5b545731ab99df17503e8e312ec775c26a3",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/hero_rescue_round_05_20260912/characters/cloud_mender.js",
+      "sourceHash": "3719f840153f960da0a12a9b49c8804711047d537a5d9f1164fe6dd64ea87df1",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_rescue_round_05_20260912/characters/cloud_mender.js",
+          "sha256": "3719f840153f960da0a12a9b49c8804711047d537a5d9f1164fe6dd64ea87df1"
+        }
+      ],
+      "description": "A magenta dog stitches a blue cloud back together.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "cloud_mender",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_rescue_round_05_20260912/out/cloud_mender.json",
+          "sha256": "3985189019c36d136d538de95dbc154241bb9ec2df783965855535d53238b9c5"
+        },
+        "cast": {
+          "path": "../design/hero_rescue_round_05_20260912/cast.json",
+          "sha256": "bc33f4ee48e3be92b16cb57ebab52d0888e0d4b80463c73b13547acbfb6e744e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_rescue_round_05_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_rescue_round_05_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_rescue_round_05_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_rescue_round_05_20260912/fields.json",
+          "sha256": "e9446b7c9bd969354e2948b1505c751e363c033b6aae0b3925082c2247ececf1"
+        },
+        "supports": {
+          "path": "../design/hero_rescue_round_05_20260912/supports.json",
+          "sha256": "357308b73e7916704fccb662db55099056b1dade910c3c1e4475e965d83c6dc9"
+        },
+        "lightContact": {
+          "path": "../design/hero_rescue_round_05_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_rescue_round_05_20260912/work/cloud_mender/light_contact.json",
+          "sha256": "623c6e2994dbf0e30cca523674c72c930f07c99c562e774a90b6a76555206789"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-lantern_ferryman-33346468278e82cd",
+      "dogId": "design-hero_rescue_round_05_20260912-lantern_ferryman",
+      "title": "The Lantern Ferryman",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-33346468278e82cd7f4c6fd104ae9714670e81402d37c00fab6cd4a691fe570b.png",
+      "imageHash": "33346468278e82cd7f4c6fd104ae9714670e81402d37c00fab6cd4a691fe570b",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/hero_rescue_round_05_20260912/characters/lantern_ferryman.js",
+      "sourceHash": "8fd358e1b13d18e6ed3b43ceb012efa196e4b0a9dfff18cd293c3ddd91a8cb8b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_rescue_round_05_20260912/characters/lantern_ferryman.js",
+          "sha256": "8fd358e1b13d18e6ed3b43ceb012efa196e4b0a9dfff18cd293c3ddd91a8cb8b"
+        }
+      ],
+      "description": "A green-clad dog carries a warm lantern across deep teal water.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "lantern_ferryman",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_rescue_round_05_20260912/out/lantern_ferryman.json",
+          "sha256": "4df0cda06535296daa2d99668450b0a4d5371eaeb65c88c1d41ba05c73f7a9dd"
+        },
+        "cast": {
+          "path": "../design/hero_rescue_round_05_20260912/cast.json",
+          "sha256": "bc33f4ee48e3be92b16cb57ebab52d0888e0d4b80463c73b13547acbfb6e744e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_rescue_round_05_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_rescue_round_05_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_rescue_round_05_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_rescue_round_05_20260912/fields.json",
+          "sha256": "e9446b7c9bd969354e2948b1505c751e363c033b6aae0b3925082c2247ececf1"
+        },
+        "supports": {
+          "path": "../design/hero_rescue_round_05_20260912/supports.json",
+          "sha256": "357308b73e7916704fccb662db55099056b1dade910c3c1e4475e965d83c6dc9"
+        },
+        "lightContact": {
+          "path": "../design/hero_rescue_round_05_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_rescue_round_05_20260912/work/lantern_ferryman/light_contact.json",
+          "sha256": "3090eb033f5c521370d58db020cf838cfc2e1833611084efb14588ce4daea93c"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-bell_ringer-18ee31f1a7de0747",
+      "dogId": "design-hero_rescue_round_05_20260912-bell_ringer",
+      "title": "The Bell Ringer",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-18ee31f1a7de074758327274d3525f81013aebd539f0a92f696ada99b2a0c8f0.png",
+      "imageHash": "18ee31f1a7de074758327274d3525f81013aebd539f0a92f696ada99b2a0c8f0",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/hero_rescue_round_05_20260912/characters/bell_ringer.js",
+      "sourceHash": "e119adab5b2946bfad6641cafb642e6c72a8499c95d877c9e95d7e68bc4ef983",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_rescue_round_05_20260912/characters/bell_ringer.js",
+          "sha256": "e119adab5b2946bfad6641cafb642e6c72a8499c95d877c9e95d7e68bc4ef983"
+        }
+      ],
+      "description": "A scarlet hero leaps to ring an enormous golden bell.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "bell_ringer",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_rescue_round_05_20260912/out/bell_ringer.json",
+          "sha256": "d0cb46e841fa972b847e97ceb9efdcafa0d38f88a38cb45461021a62c7089854"
+        },
+        "cast": {
+          "path": "../design/hero_rescue_round_05_20260912/cast.json",
+          "sha256": "bc33f4ee48e3be92b16cb57ebab52d0888e0d4b80463c73b13547acbfb6e744e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_rescue_round_05_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_rescue_round_05_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_rescue_round_05_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_rescue_round_05_20260912/fields.json",
+          "sha256": "e9446b7c9bd969354e2948b1505c751e363c033b6aae0b3925082c2247ececf1"
+        },
+        "supports": {
+          "path": "../design/hero_rescue_round_05_20260912/supports.json",
+          "sha256": "357308b73e7916704fccb662db55099056b1dade910c3c1e4475e965d83c6dc9"
+        },
+        "lightContact": {
+          "path": "../design/hero_rescue_round_05_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_rescue_round_05_20260912/work/bell_ringer/light_contact.json",
+          "sha256": "8b1187e8f77ab35ab6dde9b4684f7e6e15fc90114e08cdcf554f0565329efa46"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_rescue_round_05_20260912-bird_guardian-f6def49305d83483",
+      "dogId": "design-hero_rescue_round_05_20260912-bird_guardian",
+      "title": "The Bird Guardian",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55.png",
+      "imageHash": "f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/hero_rescue_round_05_20260912/characters/bird_guardian.js",
+      "sourceHash": "31a2725e139df4c7a14fc71064d1307b9d40711e874b95cd0b5a6d4aad9b34ad",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_rescue_round_05_20260912/characters/bird_guardian.js",
+          "sha256": "31a2725e139df4c7a14fc71064d1307b9d40711e874b95cd0b5a6d4aad9b34ad"
+        }
+      ],
+      "description": "A violet guardian carries a small orange bird beneath a sweeping red branch.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_rescue_round_05_20260912",
+      "slug": "bird_guardian",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_rescue_round_05_20260912/out/bird_guardian.json",
+          "sha256": "814d7a43c6524f4ae5d10a8af236db330edce52ecdfa742221a3ddf48f54f594"
+        },
+        "cast": {
+          "path": "../design/hero_rescue_round_05_20260912/cast.json",
+          "sha256": "bc33f4ee48e3be92b16cb57ebab52d0888e0d4b80463c73b13547acbfb6e744e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_rescue_round_05_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_rescue_round_05_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_rescue_round_05_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_rescue_round_05_20260912/fields.json",
+          "sha256": "e9446b7c9bd969354e2948b1505c751e363c033b6aae0b3925082c2247ececf1"
+        },
+        "supports": {
+          "path": "../design/hero_rescue_round_05_20260912/supports.json",
+          "sha256": "357308b73e7916704fccb662db55099056b1dade910c3c1e4475e965d83c6dc9"
+        },
+        "lightContact": {
+          "path": "../design/hero_rescue_round_05_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_rescue_round_05_20260912/work/bird_guardian/light_contact.json",
+          "sha256": "d89e979ed823fde8e40b13a2096d7264434bd31b8ed6abd00f88d6af47509a44"
+        }
+      }
     }
   ],
   "rounds": [
