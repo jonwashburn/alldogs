@@ -1,7 +1,8 @@
 import {slot,emptyState,current,edit,mergeRecords,batch,acknowledge,conflicts,resolve} from './state.js';
 const $=s=>document.querySelector(s),API='https://api.alldogs.wtf/collection-api',KEY='all-dogs-loop-v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let state=emptyState(),catalog,byId={},dogs=[],selected,writer=false,connected=false,syncing=false,ready=false,ticket=0,timer,storage=true,summary=null,viewBase=0,handingOff=false,releaseEditor=null,editorPending=false,waitingForEditor=false;
+let state=emptyState(),catalog,byId={},dogs=[],selected,writer=false,connected=false,syncing=false,ready=false,ticket=0,timer,storage=true,summary=null,viewBase=0,handingOff=false,releaseEditor=null,editorPending=false,waitingForEditor=false,handoffTo=null,requestedEditor=false;
+const editorId=crypto.randomUUID();
 const editorChannel=typeof BroadcastChannel==='function'?new BroadcastChannel('all-dogs-loop-tabs-v2'):null;
 const token=()=>localStorage.getItem('loop_disconnected')?'':(localStorage.getItem('collection_token')||localStorage.getItem('upright_token')||localStorage.getItem('alldogs_token')||'').trim();
 function readLocal(){try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s?.version===2&&s.records&&s.drafts&&Array.isArray(s.outbox))state=s;}catch{storage=false;}}
@@ -57,26 +58,26 @@ function editorControls(){
  $('#feedback-form button.primary').disabled=!writer||handingOff;
  $('#connect-form button.primary').disabled=!writer||handingOff;
 }
-function yieldEditor(){
- if(!writer)return;save();handingOff=true;clearTimeout(timer);editorControls();
+function yieldEditor(target=null){
+ if(!writer)return;handoffTo=target;save();handingOff=true;clearTimeout(timer);editorControls();
  status('Your feedback is saved. Switching editing to the other Loop tab…');
  if(!syncing)releaseEditor?.();
 }
 async function claimEditor(ask=false){
  if(writer||editorPending||document.hidden)return;
  if(!navigator.locks){status('This browser cannot safely coordinate feedback. Browsing and originals are available.');editorControls();return;}
- editorPending=true;
+ editorPending=true;if(ask)requestedEditor=true;
  try{await navigator.locks.request('all-dogs-loop-editor',{ifAvailable:true},async lock=>{
-  if(!lock){waitingForEditor=true;$('#use-tab').hidden=false;status('Another Loop tab is editing. Use this tab below, or refresh an older Loop tab if it has not updated yet.');if(ask)editorChannel?.postMessage('release');return;}
-  waitingForEditor=false;handingOff=false;readLocal();writer=true;$('#use-tab').hidden=true;
+  if(!lock){waitingForEditor=true;$('#use-tab').hidden=false;status('Another Loop tab is editing. Use this tab below, or refresh an older Loop tab if it has not updated yet.');if(ask)editorChannel?.postMessage({type:'release',requester:editorId});return;}
+  waitingForEditor=false;requestedEditor=false;handingOff=false;readLocal();writer=true;$('#use-tab').hidden=true;
   renderScore(true);renderArchive();renderMessages();editorControls();status('Ready. Your scores guide the next paintings.');
   const hold=new Promise(resolve=>{releaseEditor=resolve;});
   try{if(token())try{await connect();}catch(e){status(e.message);}await hold;}
-  finally{clearTimeout(timer);save();writer=false;connected=false;releaseEditor=null;handingOff=false;editorControls();status('Feedback saved. Select this tab to continue rating here.');editorChannel?.postMessage('released');}
+  finally{clearTimeout(timer);save();writer=false;connected=false;releaseEditor=null;handingOff=false;editorControls();status('Feedback saved. Select this tab to continue rating here.');editorChannel?.postMessage(handoffTo?{type:'released',to:handoffTo}:'released');handoffTo=null;}
  });}catch(e){status('Feedback editing could not start. Your saved feedback is preserved.');}
  finally{editorPending=false;}
 }
-if(editorChannel)editorChannel.onmessage=e=>{if(e.data==='release')yieldEditor();else if(e.data==='released'&&waitingForEditor&&!document.hidden)setTimeout(()=>claimEditor(),0);};
+if(editorChannel)editorChannel.onmessage=e=>{const m=e.data;if(m?.type==='release')yieldEditor(m.requester);else if(m==='release')yieldEditor();else if((m?.type==='released'&&m.to===editorId||m==='released'&&requestedEditor)&&waitingForEditor&&!document.hidden)setTimeout(()=>claimEditor(),0);};
 $('#use-tab').onclick=()=>claimEditor(true);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)yieldEditor();else if(catalog)claimEditor(true);});
 try{const r=await fetch('catalog.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('The studio catalogue could not load.');catalog=await r.json();byId=Object.fromEntries(catalog.dogs.map(d=>[d.id,d]));const refIds=new Set(catalog.references.map(x=>x.id));dogs=catalog.dogs.filter(d=>d.kind==='candidate'&&!refIds.has(d.id)).reverse();$('#total').textContent=dogs.length;$('#reference-grid').innerHTML=catalog.references.map(d=>`<a class="card" href="${esc(d.image)}" target="_blank" rel="noopener"><img src="${esc(d.image)}" alt="${esc(d.title)}" width="1000" height="1000" loading="lazy"><div class="caption"><span>${esc(d.title)}</span><span>Permanent reference</span></div></a>`).join('');renderArchive();const id=decodeURIComponent(location.hash.replace(/^#dog=/,''));if(dogs.length)show(dogs.some(d=>d.id===id)?id:dogs[0].id);editorControls();status('Painting ready. Starting feedback…');claimEditor(true);}catch(e){$('#error').hidden=false;$('#error').textContent='The studio catalogue did not load. Please reload to try again.';status('Unable to load the studio.');}
