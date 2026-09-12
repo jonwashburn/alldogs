@@ -7689,6 +7689,72 @@
           "sha256": "2ee905124fe08936b5bb2f76c78695a97745f7732e6c799e82c4e07d9074bc85"
         }
       }
+    },
+    {
+      "id": "candidate-loop_0024_poseidon_20260912-poseidon-506a4aa86126f75e",
+      "dogId": "design-loop_0024_poseidon_20260912-poseidon",
+      "title": "Poseidon, Low Tide",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-506a4aa86126f75ee99df3941a932795b4b9b6a06d4140c4279f8d7297d79907.png",
+      "imageHash": "506a4aa86126f75ee99df3941a932795b4b9b6a06d4140c4279f8d7297d79907",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/loop_0024_poseidon_20260912/characters/poseidon.js",
+      "sourceHash": "2c62c61f87359cc9aa9eda7b1dfb0fc9825dc9c152b67732839bf252538caf74",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/loop_0024_poseidon_20260912/characters/poseidon.js",
+          "sha256": "2c62c61f87359cc9aa9eda7b1dfb0fc9825dc9c152b67732839bf252538caf74"
+        }
+      ],
+      "description": "For the moment, this is the whole sea.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loop_0024_poseidon_20260912",
+      "slug": "poseidon",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loop_0024_poseidon_20260912/out/poseidon.json",
+          "sha256": "698539081287c3ef66e9331028084ead0982b3abe9f8a13f4109b760edbad9e3"
+        },
+        "cast": {
+          "path": "../design/loop_0024_poseidon_20260912/cast.json",
+          "sha256": "73587a7871d0d31d77ed0e13b86683f9964a54c5ed49dfad349e6149f49fb77e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/loop_0024_poseidon_20260912/painter.js",
+          "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+        },
+        "renderer": {
+          "path": "../design/loop_0024_poseidon_20260912/render.js",
+          "sha256": "c744fb8f8286fd6476905c882b3d474d5d1d0d4e31bb1a72d8b7e4b630979d53"
+        },
+        "lettering": {
+          "path": "../design/loop_0024_poseidon_20260912/lettering.js",
+          "sha256": "7d38d2a304bc288dbafa64e65a1aa453bb609da181fdbe61318eca26847d4fa8"
+        },
+        "fields": {
+          "path": "../design/loop_0024_poseidon_20260912/fields.json",
+          "sha256": "d5aab46d7509834d0b7207b5527ff8d9a853c1dc9482efdef1e389766a75094a"
+        },
+        "supports": {
+          "path": "../design/loop_0024_poseidon_20260912/supports.json",
+          "sha256": "a708ed770351e1efd7f3b6db21b60fc43cc72f6b2b79bd81e6165aa74c3ec42e"
+        }
+      }
     }
   ],
   "rounds": [

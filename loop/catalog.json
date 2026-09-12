@@ -640,6 +640,16 @@
       "batch": "loop_0023_amelia_20260912",
       "slug": "amelia",
       "image": "/collection/assets/candidate-28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a.png"
+    },
+    {
+      "id": "candidate-loop_0024_poseidon_20260912-poseidon-506a4aa86126f75e",
+      "title": "Poseidon, Low Tide",
+      "kind": "candidate",
+      "imageHash": "506a4aa86126f75ee99df3941a932795b4b9b6a06d4140c4279f8d7297d79907",
+      "description": "For the moment, this is the whole sea.",
+      "batch": "loop_0024_poseidon_20260912",
+      "slug": "poseidon",
+      "image": "/collection/assets/candidate-506a4aa86126f75ee99df3941a932795b4b9b6a06d4140c4279f8d7297d79907.png"
     }
   ],
   "references": [
