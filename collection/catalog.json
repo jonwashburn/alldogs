@@ -15581,6 +15581,496 @@
           "sha256": "ceb71463e3cd71c3872c69ee6a80f8fc16a1b538795d7e81fc805b36b423bbcc"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_15_20260913-carmen-3bc599f1d380c56c",
+      "dogId": "design-character_round_15_20260913-carmen",
+      "title": "Carmen Miranda",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3bc599f1d380c56cbac5e4eacab536d027b6b3ed97ee14e00ceccd081262200d.png",
+      "imageHash": "3bc599f1d380c56cbac5e4eacab536d027b6b3ed97ee14e00ceccd081262200d",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_15_20260913/characters/carmen.js",
+      "sourceHash": "d5236338e6ffe1e36c51faf9eab620239d835cd648e829c97f5955ee9f97c9d6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_15_20260913/characters/carmen.js",
+          "sha256": "d5236338e6ffe1e36c51faf9eab620239d835cd648e829c97f5955ee9f97c9d6"
+        }
+      ],
+      "description": "Carmen Miranda: warm brown face, a tall fruit headdress and yellow, purple and red ruffles against deep blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_15_20260913",
+      "slug": "carmen",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_15_20260913/out/carmen.json",
+          "sha256": "2fc81a669f0f3ea9fc1201b6b624b21ad5467b84398248b71a9c2598d0b81ea0"
+        },
+        "cast": {
+          "path": "../design/character_round_15_20260913/cast.json",
+          "sha256": "1efdc8290069ff4cf08602d8c20845a884afb884119ae27652cc0f7494c5a56d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_15_20260913/out/carmen_wide_4000.png",
+          "sha256": "a38c20f12803789be89d6cb3e95c3015ac29633615751af5c52fd50b02bab693",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_15_20260913/out/carmen_square_2000.png",
+          "sha256": "945d4c3e2ecc3702587769e239ef33c2ba2b60af738e60f28375a634f02e6d1d",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_15_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_15_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_15_20260913/work/carmen/wide.json",
+          "sha256": "095a8f241f77442ff209b1b8124ec33091fca30475eae70db0196b336afc45cb"
+        },
+        "wrapper": {
+          "path": "../design/character_round_15_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_15_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_15_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_15_20260913/fields.json",
+          "sha256": "1a82ed3be2ca2e95272c78f18f58d80a0f94a54e7c77758248f321a5b1133950"
+        },
+        "supports": {
+          "path": "../design/character_round_15_20260913/supports.json",
+          "sha256": "48922fed4f6f9206900c3d76c538c3269943eef2bfaa70d711b310e02f21fe88"
+        },
+        "lightContact": {
+          "path": "../design/character_round_15_20260913/light-contact.js",
+          "sha256": "0f5d56c27fbf213d871d3ebd0493b41d17fb123ead34d4b4f090db3a13ce7151"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_15_20260913/work/carmen/light_contact.json",
+          "sha256": "da2d79e4f5ac0c3bac20c00f570c8bd0f07ee7392543f07687f5c7f9b6f88cef"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_15_20260913-marge-f15e97641e24570d",
+      "dogId": "design-character_round_15_20260913-marge",
+      "title": "Marge Simpson",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f15e97641e24570deba51a4cf8cf0f59046ef50e3d651c507b4777e1880f991a.png",
+      "imageHash": "f15e97641e24570deba51a4cf8cf0f59046ef50e3d651c507b4777e1880f991a",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_15_20260913/characters/marge.js",
+      "sourceHash": "1e993db935824a1dbe041ce38f3521d4656fbaef3dc9d12e740581b2e91934a6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_15_20260913/characters/marge.js",
+          "sha256": "1e993db935824a1dbe041ce38f3521d4656fbaef3dc9d12e740581b2e91934a6"
+        }
+      ],
+      "description": "Marge Simpson: towering cobalt hair, a yellow face, green dress and red beads against a coral ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_15_20260913",
+      "slug": "marge",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_15_20260913/out/marge.json",
+          "sha256": "daa61f11e23c6cb4ba8fd05d2b408de3750dec2673b0cc6646cf062c7f04fbab"
+        },
+        "cast": {
+          "path": "../design/character_round_15_20260913/cast.json",
+          "sha256": "1efdc8290069ff4cf08602d8c20845a884afb884119ae27652cc0f7494c5a56d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_15_20260913/out/marge_wide_4000.png",
+          "sha256": "cc4fb16b41b10fe3e6bd4a3b8e4ea41977bd70a9edccbaacee99c1535b3cb4f5",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_15_20260913/out/marge_square_2000.png",
+          "sha256": "8383297a9be5f673b4bf4e34587e8aa0ff57e9f76512cbf36945e6be74636ba7",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_15_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_15_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_15_20260913/work/marge/wide.json",
+          "sha256": "d7ea3264d1b9cbac1fe03997f456bba93c9f0fd3cd45fd011bebc8fe01dd7c48"
+        },
+        "wrapper": {
+          "path": "../design/character_round_15_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_15_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_15_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_15_20260913/fields.json",
+          "sha256": "1a82ed3be2ca2e95272c78f18f58d80a0f94a54e7c77758248f321a5b1133950"
+        },
+        "supports": {
+          "path": "../design/character_round_15_20260913/supports.json",
+          "sha256": "48922fed4f6f9206900c3d76c538c3269943eef2bfaa70d711b310e02f21fe88"
+        },
+        "lightContact": {
+          "path": "../design/character_round_15_20260913/light-contact.js",
+          "sha256": "0f5d56c27fbf213d871d3ebd0493b41d17fb123ead34d4b4f090db3a13ce7151"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_15_20260913/work/marge/light_contact.json",
+          "sha256": "7162416ffe3e8cce5f48792547c0598bc0934806f3a834d5fa5d80b98e6f877e"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_15_20260913-velma-c01b3bdc71079a41",
+      "dogId": "design-character_round_15_20260913-velma",
+      "title": "Velma Dinkley",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-c01b3bdc71079a419928647c68e60b6b3da9fc4cf407111895b3652f6a07a08b.png",
+      "imageHash": "c01b3bdc71079a419928647c68e60b6b3da9fc4cf407111895b3652f6a07a08b",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_15_20260913/characters/velma.js",
+      "sourceHash": "f5c4f85c017582c16c20f4cc94de97cf1ed8cc50363f4d98fbb2b3dd2c56c9ae",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_15_20260913/characters/velma.js",
+          "sha256": "f5c4f85c017582c16c20f4cc94de97cf1ed8cc50363f4d98fbb2b3dd2c56c9ae"
+        }
+      ],
+      "description": "Velma Dinkley: a broad orange sweater, rust skirt, dark bob and large square glasses on periwinkle cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_15_20260913",
+      "slug": "velma",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_15_20260913/out/velma.json",
+          "sha256": "c416fa394bff58b8b9bd09965d09fe3db3853fde844f2f644d1694027a7fa30a"
+        },
+        "cast": {
+          "path": "../design/character_round_15_20260913/cast.json",
+          "sha256": "1efdc8290069ff4cf08602d8c20845a884afb884119ae27652cc0f7494c5a56d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_15_20260913/out/velma_wide_4000.png",
+          "sha256": "c807093600f3c42268ed64d271fe157dfbbd24d8c6ae373a6dbf06791ebe04a5",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_15_20260913/out/velma_square_2000.png",
+          "sha256": "41d17fc9b5c7e11caa252b701b0267a6fd5049999befe95c1ed7a8a4c387aa2c",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_15_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_15_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_15_20260913/work/velma/wide.json",
+          "sha256": "4d07cc666b2c5683342604f3cbe1eacc18ebf033246b4ee827a273bce3953e6b"
+        },
+        "wrapper": {
+          "path": "../design/character_round_15_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_15_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_15_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_15_20260913/fields.json",
+          "sha256": "1a82ed3be2ca2e95272c78f18f58d80a0f94a54e7c77758248f321a5b1133950"
+        },
+        "supports": {
+          "path": "../design/character_round_15_20260913/supports.json",
+          "sha256": "48922fed4f6f9206900c3d76c538c3269943eef2bfaa70d711b310e02f21fe88"
+        },
+        "lightContact": {
+          "path": "../design/character_round_15_20260913/light-contact.js",
+          "sha256": "0f5d56c27fbf213d871d3ebd0493b41d17fb123ead34d4b4f090db3a13ce7151"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_15_20260913/work/velma/light_contact.json",
+          "sha256": "6677bfc1d8e3df695f7c0bd1b3312caee8c6cb938b44a8564c9e1a7eb1b2e451"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_15_20260913-zorro-f1d09dee75739485",
+      "dogId": "design-character_round_15_20260913-zorro",
+      "title": "Zorro",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f1d09dee75739485eccfb2bc4b92e7efe84b3968e8b94ac83bc567ae107d9550.png",
+      "imageHash": "f1d09dee75739485eccfb2bc4b92e7efe84b3968e8b94ac83bc567ae107d9550",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_15_20260913/characters/zorro.js",
+      "sourceHash": "368b56d18448f9a9b74b9d73f9da0c14af980098af66f6e900ed490a07f33817",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_15_20260913/characters/zorro.js",
+          "sha256": "368b56d18448f9a9b74b9d73f9da0c14af980098af66f6e900ed490a07f33817"
+        }
+      ],
+      "description": "Zorro: a broad black hat and eye mask, scarlet sash and sweeping dark cape, with a slender sword connected to the forepaw.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_15_20260913",
+      "slug": "zorro",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_15_20260913/out/zorro.json",
+          "sha256": "4800dfd1737e13caa08878d592a2acf7c2bf40063b6bc85adce94abe9e245c8c"
+        },
+        "cast": {
+          "path": "../design/character_round_15_20260913/cast.json",
+          "sha256": "1efdc8290069ff4cf08602d8c20845a884afb884119ae27652cc0f7494c5a56d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_15_20260913/out/zorro_wide_4000.png",
+          "sha256": "260c2b9684136560a9ef65f357e47a8fdccf18aa8dda48c19abca2f5b009f4da",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_15_20260913/out/zorro_square_2000.png",
+          "sha256": "9f538e21ddb58934699d3e656b08f2ec574340fbdf8b5d352e2136af07780dd7",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_15_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_15_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_15_20260913/work/zorro/wide.json",
+          "sha256": "fa49d00309ea89a4c29c3b8762562a7f3503baf92ebf8c199b7598e1e626a962"
+        },
+        "wrapper": {
+          "path": "../design/character_round_15_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_15_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_15_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_15_20260913/fields.json",
+          "sha256": "1a82ed3be2ca2e95272c78f18f58d80a0f94a54e7c77758248f321a5b1133950"
+        },
+        "supports": {
+          "path": "../design/character_round_15_20260913/supports.json",
+          "sha256": "48922fed4f6f9206900c3d76c538c3269943eef2bfaa70d711b310e02f21fe88"
+        },
+        "lightContact": {
+          "path": "../design/character_round_15_20260913/light-contact.js",
+          "sha256": "0f5d56c27fbf213d871d3ebd0493b41d17fb123ead34d4b4f090db3a13ce7151"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_15_20260913/work/zorro/light_contact.json",
+          "sha256": "cc3416af923c28c776a8059f412614b32e975f16303ec0de75cb81a163783eb9"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_15_20260913-panther-5e8f67d8039a3c2e",
+      "dogId": "design-character_round_15_20260913-panther",
+      "title": "Black Panther",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323.png",
+      "imageHash": "5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_15_20260913/characters/panther.js",
+      "sourceHash": "56e6cf6093afc601925e2789fda4dd8df67dc0071219ed63f24ec43e7c838452",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_15_20260913/characters/panther.js",
+          "sha256": "56e6cf6093afc601925e2789fda4dd8df67dc0071219ed63f24ec43e7c838452"
+        }
+      ],
+      "description": "Black Panther: a low dark dog with a deep chest, violet and blue suit passages, silver eyes and claw-shaped chest marks against ochre.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_15_20260913",
+      "slug": "panther",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_15_20260913/out/panther.json",
+          "sha256": "e46c6c29b240b82deb164dea2c23fc217744c9f20b12112522ec59f4dc5f78e9"
+        },
+        "cast": {
+          "path": "../design/character_round_15_20260913/cast.json",
+          "sha256": "1efdc8290069ff4cf08602d8c20845a884afb884119ae27652cc0f7494c5a56d"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_15_20260913/out/panther_wide_4000.png",
+          "sha256": "2df67130f1cd0b48a3de87bb5eea4d23602bb2a62ebafe7660336dc8ea3004eb",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_15_20260913/out/panther_square_2000.png",
+          "sha256": "9ff374c0676b34ead30d4bb8924446428883dc12e7b8754e66de8e2d4e557a58",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_15_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_15_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_15_20260913/work/panther/wide.json",
+          "sha256": "34f679d1a9480603d2df257a986be0666b6979d13bc86ded120c56343e57c393"
+        },
+        "wrapper": {
+          "path": "../design/character_round_15_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_15_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_15_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_15_20260913/fields.json",
+          "sha256": "1a82ed3be2ca2e95272c78f18f58d80a0f94a54e7c77758248f321a5b1133950"
+        },
+        "supports": {
+          "path": "../design/character_round_15_20260913/supports.json",
+          "sha256": "48922fed4f6f9206900c3d76c538c3269943eef2bfaa70d711b310e02f21fe88"
+        },
+        "lightContact": {
+          "path": "../design/character_round_15_20260913/light-contact.js",
+          "sha256": "0f5d56c27fbf213d871d3ebd0493b41d17fb123ead34d4b4f090db3a13ce7151"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_15_20260913/work/panther/light_contact.json",
+          "sha256": "14a6e3eb314d71dc39666271073ed49fe453660f659a72661d7f742047b49e1b"
+        }
+      }
     }
   ],
   "rounds": [

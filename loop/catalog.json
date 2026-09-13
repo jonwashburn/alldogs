@@ -1584,6 +1584,56 @@
       "batch": "character_round_14_20260913",
       "slug": "morpheus",
       "image": "/collection/assets/candidate-74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5.png"
+    },
+    {
+      "id": "candidate-character_round_15_20260913-carmen-3bc599f1d380c56c",
+      "title": "Carmen Miranda",
+      "kind": "candidate",
+      "imageHash": "3bc599f1d380c56cbac5e4eacab536d027b6b3ed97ee14e00ceccd081262200d",
+      "description": "Carmen Miranda: warm brown face, a tall fruit headdress and yellow, purple and red ruffles against deep blue cotton.",
+      "batch": "character_round_15_20260913",
+      "slug": "carmen",
+      "image": "/collection/assets/candidate-3bc599f1d380c56cbac5e4eacab536d027b6b3ed97ee14e00ceccd081262200d.png"
+    },
+    {
+      "id": "candidate-character_round_15_20260913-marge-f15e97641e24570d",
+      "title": "Marge Simpson",
+      "kind": "candidate",
+      "imageHash": "f15e97641e24570deba51a4cf8cf0f59046ef50e3d651c507b4777e1880f991a",
+      "description": "Marge Simpson: towering cobalt hair, a yellow face, green dress and red beads against a coral ground.",
+      "batch": "character_round_15_20260913",
+      "slug": "marge",
+      "image": "/collection/assets/candidate-f15e97641e24570deba51a4cf8cf0f59046ef50e3d651c507b4777e1880f991a.png"
+    },
+    {
+      "id": "candidate-character_round_15_20260913-velma-c01b3bdc71079a41",
+      "title": "Velma Dinkley",
+      "kind": "candidate",
+      "imageHash": "c01b3bdc71079a419928647c68e60b6b3da9fc4cf407111895b3652f6a07a08b",
+      "description": "Velma Dinkley: a broad orange sweater, rust skirt, dark bob and large square glasses on periwinkle cotton.",
+      "batch": "character_round_15_20260913",
+      "slug": "velma",
+      "image": "/collection/assets/candidate-c01b3bdc71079a419928647c68e60b6b3da9fc4cf407111895b3652f6a07a08b.png"
+    },
+    {
+      "id": "candidate-character_round_15_20260913-zorro-f1d09dee75739485",
+      "title": "Zorro",
+      "kind": "candidate",
+      "imageHash": "f1d09dee75739485eccfb2bc4b92e7efe84b3968e8b94ac83bc567ae107d9550",
+      "description": "Zorro: a broad black hat and eye mask, scarlet sash and sweeping dark cape, with a slender sword connected to the forepaw.",
+      "batch": "character_round_15_20260913",
+      "slug": "zorro",
+      "image": "/collection/assets/candidate-f1d09dee75739485eccfb2bc4b92e7efe84b3968e8b94ac83bc567ae107d9550.png"
+    },
+    {
+      "id": "candidate-character_round_15_20260913-panther-5e8f67d8039a3c2e",
+      "title": "Black Panther",
+      "kind": "candidate",
+      "imageHash": "5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323",
+      "description": "Black Panther: a low dark dog with a deep chest, violet and blue suit passages, silver eyes and claw-shaped chest marks against ochre.",
+      "batch": "character_round_15_20260913",
+      "slug": "panther",
+      "image": "/collection/assets/candidate-5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323.png"
     }
   ],
   "references": [
@@ -2034,6 +2084,33 @@
           {
             "candidateId": "candidate-character_round_14_20260913-morpheus-74b28613dd8e7cd2",
             "imageHash": "74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5"
+          }
+        ]
+      },
+      {
+        "id": "round-15",
+        "title": "Round 15",
+        "frozenAt": "2026-09-13T22:07:54.478066+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_15_20260913-carmen-3bc599f1d380c56c",
+            "imageHash": "3bc599f1d380c56cbac5e4eacab536d027b6b3ed97ee14e00ceccd081262200d"
+          },
+          {
+            "candidateId": "candidate-character_round_15_20260913-marge-f15e97641e24570d",
+            "imageHash": "f15e97641e24570deba51a4cf8cf0f59046ef50e3d651c507b4777e1880f991a"
+          },
+          {
+            "candidateId": "candidate-character_round_15_20260913-velma-c01b3bdc71079a41",
+            "imageHash": "c01b3bdc71079a419928647c68e60b6b3da9fc4cf407111895b3652f6a07a08b"
+          },
+          {
+            "candidateId": "candidate-character_round_15_20260913-zorro-f1d09dee75739485",
+            "imageHash": "f1d09dee75739485eccfb2bc4b92e7efe84b3968e8b94ac83bc567ae107d9550"
+          },
+          {
+            "candidateId": "candidate-character_round_15_20260913-panther-5e8f67d8039a3c2e",
+            "imageHash": "5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323"
           }
         ]
       }
