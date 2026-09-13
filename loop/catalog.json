@@ -1534,6 +1534,56 @@
       "batch": "character_round_13_20260913",
       "slug": "maleficent",
       "image": "/collection/assets/candidate-b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8.png"
+    },
+    {
+      "id": "candidate-character_round_14_20260913-billie-1e38cc8f7eef077e",
+      "title": "Billie Holiday",
+      "kind": "candidate",
+      "imageHash": "1e38cc8f7eef077e3801241f717e415596ca0ba64c16ccfd7df6d629941c2cb4",
+      "description": "Billie Holiday: warm brown skin, dark waved hair and an oversized ivory gardenia above a wine-colored dress, against peach cotton.",
+      "batch": "character_round_14_20260913",
+      "slug": "billie",
+      "image": "/collection/assets/candidate-1e38cc8f7eef077e3801241f717e415596ca0ba64c16ccfd7df6d629941c2cb4.png"
+    },
+    {
+      "id": "candidate-character_round_14_20260913-bjork-de506c787bf4a156",
+      "title": "Bj\u00f6rk",
+      "kind": "candidate",
+      "imageHash": "de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0",
+      "description": "Bj\u00f6rk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
+      "batch": "character_round_14_20260913",
+      "slug": "bjork",
+      "image": "/collection/assets/candidate-de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0.png"
+    },
+    {
+      "id": "candidate-character_round_14_20260913-sherlock-1e3e25df094e30f7",
+      "title": "Sherlock Holmes",
+      "kind": "candidate",
+      "imageHash": "1e3e25df094e30f7538a884307708d329d21a34eeb89929c3e01e322517754d4",
+      "description": "Sherlock Holmes: a moss-green checked coat and deerstalker, with a magnifying glass connected to the forepaw against a rust-colored ground.",
+      "batch": "character_round_14_20260913",
+      "slug": "sherlock",
+      "image": "/collection/assets/candidate-1e3e25df094e30f7538a884307708d329d21a34eeb89929c3e01e322517754d4.png"
+    },
+    {
+      "id": "candidate-character_round_14_20260913-doctor-4c0a14e7179797be",
+      "title": "The Fourth Doctor",
+      "kind": "candidate",
+      "imageHash": "4c0a14e7179797bec74908c2e9a542f4e8910f50253a7fc8cf62e5a1e2cb0432",
+      "description": "The Fourth Doctor: dark curls, a rust-colored coat and a long gold, red and teal scarf that crosses the wide indigo painting.",
+      "batch": "character_round_14_20260913",
+      "slug": "doctor",
+      "image": "/collection/assets/candidate-4c0a14e7179797bec74908c2e9a542f4e8910f50253a7fc8cf62e5a1e2cb0432.png"
+    },
+    {
+      "id": "candidate-character_round_14_20260913-morpheus-74b28613dd8e7cd2",
+      "title": "Morpheus",
+      "kind": "candidate",
+      "imageHash": "74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5",
+      "description": "Morpheus: a warm bare dome, reflected dark glasses and a deep jade coat, standing in an open painted doorway against terracotta.",
+      "batch": "character_round_14_20260913",
+      "slug": "morpheus",
+      "image": "/collection/assets/candidate-74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5.png"
     }
   ],
   "references": [
@@ -1957,6 +2007,33 @@
           {
             "candidateId": "candidate-character_round_13_20260913-maleficent-b2e3e174ca5f7ec8",
             "imageHash": "b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8"
+          }
+        ]
+      },
+      {
+        "id": "round-14",
+        "title": "Round 14",
+        "frozenAt": "2026-09-13T21:34:48.553699+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_14_20260913-billie-1e38cc8f7eef077e",
+            "imageHash": "1e38cc8f7eef077e3801241f717e415596ca0ba64c16ccfd7df6d629941c2cb4"
+          },
+          {
+            "candidateId": "candidate-character_round_14_20260913-bjork-de506c787bf4a156",
+            "imageHash": "de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0"
+          },
+          {
+            "candidateId": "candidate-character_round_14_20260913-sherlock-1e3e25df094e30f7",
+            "imageHash": "1e3e25df094e30f7538a884307708d329d21a34eeb89929c3e01e322517754d4"
+          },
+          {
+            "candidateId": "candidate-character_round_14_20260913-doctor-4c0a14e7179797be",
+            "imageHash": "4c0a14e7179797bec74908c2e9a542f4e8910f50253a7fc8cf62e5a1e2cb0432"
+          },
+          {
+            "candidateId": "candidate-character_round_14_20260913-morpheus-74b28613dd8e7cd2",
+            "imageHash": "74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5"
           }
         ]
       }

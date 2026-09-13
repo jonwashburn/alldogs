@@ -15091,6 +15091,496 @@
           "sha256": "34fd1390b82c983c12519d79c7abee15c58395216573c54bab726b67e610ece5"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_14_20260913-billie-1e38cc8f7eef077e",
+      "dogId": "design-character_round_14_20260913-billie",
+      "title": "Billie Holiday",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1e38cc8f7eef077e3801241f717e415596ca0ba64c16ccfd7df6d629941c2cb4.png",
+      "imageHash": "1e38cc8f7eef077e3801241f717e415596ca0ba64c16ccfd7df6d629941c2cb4",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_14_20260913/characters/billie.js",
+      "sourceHash": "5a5f34a9cff40feeae9d32d9693a86eaea5c4f205f2403e14ca038d20fe17dc2",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_14_20260913/characters/billie.js",
+          "sha256": "5a5f34a9cff40feeae9d32d9693a86eaea5c4f205f2403e14ca038d20fe17dc2"
+        }
+      ],
+      "description": "Billie Holiday: warm brown skin, dark waved hair and an oversized ivory gardenia above a wine-colored dress, against peach cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_14_20260913",
+      "slug": "billie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_14_20260913/out/billie.json",
+          "sha256": "0ea6d259fa4976da3d70699ba493dff8eaea76159c4cffd192bc3c55d67c89ab"
+        },
+        "cast": {
+          "path": "../design/character_round_14_20260913/cast.json",
+          "sha256": "ffe994d157a3cca2a93de6105a2c931b4e8ab27a459c1320c35fa045082271a9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_14_20260913/out/billie_wide_4000.png",
+          "sha256": "aec5c92736b2df01ff89f6f238b815ddbd552a467619b91cec281aacf13bf276",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_14_20260913/out/billie_square_2000.png",
+          "sha256": "8869bcc52a0f5dbd9e0e90802a21b43017d1a7187a06cc04d516a37cc6560d7b",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_14_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_14_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_14_20260913/work/billie/wide.json",
+          "sha256": "2f99abcf171028cc46d0f161fa0583e9fb2b4855f46d67364205a27107aeb99b"
+        },
+        "wrapper": {
+          "path": "../design/character_round_14_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_14_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_14_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_14_20260913/fields.json",
+          "sha256": "5ca5dec18de3063f9e48afcafd35704f860fe127276ee2e5b5d505e3157f21ca"
+        },
+        "supports": {
+          "path": "../design/character_round_14_20260913/supports.json",
+          "sha256": "4277b3efe5609de8f5d1de87678be7657591c027831b2989faa7c664aeda6190"
+        },
+        "lightContact": {
+          "path": "../design/character_round_14_20260913/light-contact.js",
+          "sha256": "8f4c2dfdffdd23e11a557a45874a888d206bc696c7ee5ad381874fb3997e9184"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_14_20260913/work/billie/light_contact.json",
+          "sha256": "eccee5abf6c43a3002228f411b6e5db1a87981e39d3dca9bd958ad7e505551b6"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_14_20260913-bjork-de506c787bf4a156",
+      "dogId": "design-character_round_14_20260913-bjork",
+      "title": "Björk",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0.png",
+      "imageHash": "de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_14_20260913/characters/bjork.js",
+      "sourceHash": "2ea9f0a5fed88d273c75454fba4f6923c9f90c5c11a0240b02c501ba04a3054b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_14_20260913/characters/bjork.js",
+          "sha256": "2ea9f0a5fed88d273c75454fba4f6923c9f90c5c11a0240b02c501ba04a3054b"
+        }
+      ],
+      "description": "Björk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_14_20260913",
+      "slug": "bjork",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_14_20260913/out/bjork.json",
+          "sha256": "c6a3877c0e205392fa1c032e3d0e646842d9b162c338293d1dadf5f2be803b30"
+        },
+        "cast": {
+          "path": "../design/character_round_14_20260913/cast.json",
+          "sha256": "ffe994d157a3cca2a93de6105a2c931b4e8ab27a459c1320c35fa045082271a9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_14_20260913/out/bjork_wide_4000.png",
+          "sha256": "d83a8135bc0d9dfc6aff3f37930a14766288ba25dfa53316c248cde8480fbe0c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_14_20260913/out/bjork_square_2000.png",
+          "sha256": "b05397b4229a88ccb570fa31d9ff847685a48a34babbcdd6244766c5fb939860",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_14_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_14_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_14_20260913/work/bjork/wide.json",
+          "sha256": "a908ce2ecf04c1d08e5597e2c00aff6ba680989e19d739d75d5c008be30f150d"
+        },
+        "wrapper": {
+          "path": "../design/character_round_14_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_14_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_14_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_14_20260913/fields.json",
+          "sha256": "5ca5dec18de3063f9e48afcafd35704f860fe127276ee2e5b5d505e3157f21ca"
+        },
+        "supports": {
+          "path": "../design/character_round_14_20260913/supports.json",
+          "sha256": "4277b3efe5609de8f5d1de87678be7657591c027831b2989faa7c664aeda6190"
+        },
+        "lightContact": {
+          "path": "../design/character_round_14_20260913/light-contact.js",
+          "sha256": "8f4c2dfdffdd23e11a557a45874a888d206bc696c7ee5ad381874fb3997e9184"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_14_20260913/work/bjork/light_contact.json",
+          "sha256": "c092c8a901b10f705a25d84c4aec73542ce9220ac1350eed637efb69e12dc061"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_14_20260913-sherlock-1e3e25df094e30f7",
+      "dogId": "design-character_round_14_20260913-sherlock",
+      "title": "Sherlock Holmes",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1e3e25df094e30f7538a884307708d329d21a34eeb89929c3e01e322517754d4.png",
+      "imageHash": "1e3e25df094e30f7538a884307708d329d21a34eeb89929c3e01e322517754d4",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_14_20260913/characters/sherlock.js",
+      "sourceHash": "9c68dfda07f747108d4db69fbf63e417de35b178242970e147d4b146a5bf3b5b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_14_20260913/characters/sherlock.js",
+          "sha256": "9c68dfda07f747108d4db69fbf63e417de35b178242970e147d4b146a5bf3b5b"
+        }
+      ],
+      "description": "Sherlock Holmes: a moss-green checked coat and deerstalker, with a magnifying glass connected to the forepaw against a rust-colored ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_14_20260913",
+      "slug": "sherlock",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_14_20260913/out/sherlock.json",
+          "sha256": "3c4f9584297550d4e0a1c70add69f15e13eaae8a8d5a0cbadd1f2ebff291defb"
+        },
+        "cast": {
+          "path": "../design/character_round_14_20260913/cast.json",
+          "sha256": "ffe994d157a3cca2a93de6105a2c931b4e8ab27a459c1320c35fa045082271a9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_14_20260913/out/sherlock_wide_4000.png",
+          "sha256": "4fec7ef31cc2e838ae82af23872957e63abbc344fe0cd83976e103d380842c15",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_14_20260913/out/sherlock_square_2000.png",
+          "sha256": "96f577dccb1bffd2c0ff0406483d9e54d2701c78007c8ea8df3ef8a8829b278d",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_14_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_14_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_14_20260913/work/sherlock/wide.json",
+          "sha256": "9e3b0f6ed365fc0ceb37447fa0f871a1dfe6dd4afdbb673afb92a4aa87ef932e"
+        },
+        "wrapper": {
+          "path": "../design/character_round_14_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_14_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_14_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_14_20260913/fields.json",
+          "sha256": "5ca5dec18de3063f9e48afcafd35704f860fe127276ee2e5b5d505e3157f21ca"
+        },
+        "supports": {
+          "path": "../design/character_round_14_20260913/supports.json",
+          "sha256": "4277b3efe5609de8f5d1de87678be7657591c027831b2989faa7c664aeda6190"
+        },
+        "lightContact": {
+          "path": "../design/character_round_14_20260913/light-contact.js",
+          "sha256": "8f4c2dfdffdd23e11a557a45874a888d206bc696c7ee5ad381874fb3997e9184"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_14_20260913/work/sherlock/light_contact.json",
+          "sha256": "af1d166a48e623d92e15873faecde0e43e2e9149ebe73c4b54f1e762588d6947"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_14_20260913-doctor-4c0a14e7179797be",
+      "dogId": "design-character_round_14_20260913-doctor",
+      "title": "The Fourth Doctor",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4c0a14e7179797bec74908c2e9a542f4e8910f50253a7fc8cf62e5a1e2cb0432.png",
+      "imageHash": "4c0a14e7179797bec74908c2e9a542f4e8910f50253a7fc8cf62e5a1e2cb0432",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/character_round_14_20260913/characters/doctor.js",
+      "sourceHash": "5055eee4939791200eadf4ea5abf3f7877b7dc2530a3fe1529ba74c83718e93a",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_14_20260913/characters/doctor.js",
+          "sha256": "5055eee4939791200eadf4ea5abf3f7877b7dc2530a3fe1529ba74c83718e93a"
+        }
+      ],
+      "description": "The Fourth Doctor: dark curls, a rust-colored coat and a long gold, red and teal scarf that crosses the wide indigo painting.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_14_20260913",
+      "slug": "doctor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_14_20260913/out/doctor.json",
+          "sha256": "202d55cb4b7be881bd9e5b559f85f2564ac09d3c1c7e825b2b975c63e29436f9"
+        },
+        "cast": {
+          "path": "../design/character_round_14_20260913/cast.json",
+          "sha256": "ffe994d157a3cca2a93de6105a2c931b4e8ab27a459c1320c35fa045082271a9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_14_20260913/out/doctor_wide_4000.png",
+          "sha256": "10aed7cf6acecc334ccc0a536b7ed531b556e02f17af6c4ea0e9cc3cdf8c7cc3",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_14_20260913/out/doctor_square_2000.png",
+          "sha256": "ef45827b68f6a75055ade5e263db71feea301f1d8925e738646cdd428fb5aa05",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_14_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_14_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_14_20260913/work/doctor/wide.json",
+          "sha256": "934f07b7c54b3335bf43f97a218de4225aa3e58fd3dcb6cb2604bb2a3e563f8e"
+        },
+        "wrapper": {
+          "path": "../design/character_round_14_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_14_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_14_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_14_20260913/fields.json",
+          "sha256": "5ca5dec18de3063f9e48afcafd35704f860fe127276ee2e5b5d505e3157f21ca"
+        },
+        "supports": {
+          "path": "../design/character_round_14_20260913/supports.json",
+          "sha256": "4277b3efe5609de8f5d1de87678be7657591c027831b2989faa7c664aeda6190"
+        },
+        "lightContact": {
+          "path": "../design/character_round_14_20260913/light-contact.js",
+          "sha256": "8f4c2dfdffdd23e11a557a45874a888d206bc696c7ee5ad381874fb3997e9184"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_14_20260913/work/doctor/light_contact.json",
+          "sha256": "59260fb0547a91f7a3c6671990d4a26f0f3b1f6f46996cda90a8dae05c1f913a"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_14_20260913-morpheus-74b28613dd8e7cd2",
+      "dogId": "design-character_round_14_20260913-morpheus",
+      "title": "Morpheus",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5.png",
+      "imageHash": "74b28613dd8e7cd2478e7ddd88d36ffdc3a9586ca842656a735e7a366118f6c5",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_14_20260913/characters/morpheus.js",
+      "sourceHash": "77aa9d6b97fde30f5f79ab63a461fa9b5d2134b8907b623e338de5f6af7a54e5",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_14_20260913/characters/morpheus.js",
+          "sha256": "77aa9d6b97fde30f5f79ab63a461fa9b5d2134b8907b623e338de5f6af7a54e5"
+        }
+      ],
+      "description": "Morpheus: a warm bare dome, reflected dark glasses and a deep jade coat, standing in an open painted doorway against terracotta.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_14_20260913",
+      "slug": "morpheus",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_14_20260913/out/morpheus.json",
+          "sha256": "eb7169430620ce6cb3153bc924a243a07fc5e17a627cd695755b2f5989d27c0f"
+        },
+        "cast": {
+          "path": "../design/character_round_14_20260913/cast.json",
+          "sha256": "ffe994d157a3cca2a93de6105a2c931b4e8ab27a459c1320c35fa045082271a9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_14_20260913/out/morpheus_wide_4000.png",
+          "sha256": "57a6d07839bdbea7b85637a6026b482b3772895142b9c17d243ccded6a5e7e0f",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_14_20260913/out/morpheus_square_2000.png",
+          "sha256": "eeb06d0e27fdd662a5bd8529d58e23bd8d334d6b14c2497f0f7602c4a634b7a9",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_14_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_14_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_14_20260913/work/morpheus/wide.json",
+          "sha256": "80de0a83821228507e78a649b58e52ed959fe58c009718e976a4e0d7c0d5c5f4"
+        },
+        "wrapper": {
+          "path": "../design/character_round_14_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_14_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_14_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_14_20260913/fields.json",
+          "sha256": "5ca5dec18de3063f9e48afcafd35704f860fe127276ee2e5b5d505e3157f21ca"
+        },
+        "supports": {
+          "path": "../design/character_round_14_20260913/supports.json",
+          "sha256": "4277b3efe5609de8f5d1de87678be7657591c027831b2989faa7c664aeda6190"
+        },
+        "lightContact": {
+          "path": "../design/character_round_14_20260913/light-contact.js",
+          "sha256": "8f4c2dfdffdd23e11a557a45874a888d206bc696c7ee5ad381874fb3997e9184"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_14_20260913/work/morpheus/light_contact.json",
+          "sha256": "ceb71463e3cd71c3872c69ee6a80f8fc16a1b538795d7e81fc805b36b423bbcc"
+        }
+      }
     }
   ],
   "rounds": [
