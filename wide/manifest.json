@@ -176,6 +176,552 @@
           "bytes": 1711858
         }
       ]
+    },
+    "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f": {
+      "title": "Ash Runner",
+      "originalHash": "9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd",
+      "masterHash": "41289df560c93af59b81787f3890f4f1ca0878a8feb9a307c56fb2939a3e5fee",
+      "variants": [
+        {
+          "src": "/wide/ash_runner-41289df560c93af5-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "1e0f61b6ed9d31d4768f2b374d930b43d864b5fced7a671728e8834a2a9e79f9",
+          "bytes": 368251
+        },
+        {
+          "src": "/wide/ash_runner-41289df560c93af5-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "42785e5c1099b8a72166b782fe5fbdbe87787db24232c129d3f2335ad47fa361",
+          "bytes": 927052
+        }
+      ]
+    },
+    "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2": {
+      "title": "The Star Catcher",
+      "originalHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824",
+      "masterHash": "88d63685116cff04ca0b81651758e0ba8eb12bbffd5beddc53c0a3886171e5c0",
+      "variants": [
+        {
+          "src": "/wide/star_catcher-88d63685116cff04-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "9248ca582215d5553e680c71de0e845bfd0b0b7aa8fa9b08ef8f504be513e394",
+          "bytes": 566236
+        },
+        {
+          "src": "/wide/star_catcher-88d63685116cff04-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "d7ac8b1c1cb9c6acd191c8cccb41da5a1eff95eebd594bd94e8f8a1a0f0ad5a4",
+          "bytes": 1506094
+        }
+      ]
+    },
+    "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51": {
+      "title": "The River Bridge",
+      "originalHash": "090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339",
+      "masterHash": "d808b645fd39b91d04fc1f67e6eb721eefdbdb6a8807e5b9b7967f59219e1a51",
+      "variants": [
+        {
+          "src": "/wide/river_bridge-d808b645fd39b91d-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "651b9210ee8f87ecb89cf3c74a0321282ce463f0a11999b23d4b3f772061ab3d",
+          "bytes": 648953
+        },
+        {
+          "src": "/wide/river_bridge-d808b645fd39b91d-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "3933dbe3e45a9f09a416cd79f9589f793b67b2c562811a9f9806ed5cac2b86c7",
+          "bytes": 1691693
+        }
+      ]
+    },
+    "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba": {
+      "title": "The Mapmaker Who Got Lost",
+      "originalHash": "91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae",
+      "masterHash": "499d16df317cc71d3b32f4556c6c9184b49a948a19ac831fb76b7a44c1c80533",
+      "variants": [
+        {
+          "src": "/wide/mapmaker-499d16df317cc71d-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c21162c4d1acf3d33e9da18f80d02de11aabdacfa7872e214f27f1e54e891447",
+          "bytes": 542025
+        },
+        {
+          "src": "/wide/mapmaker-499d16df317cc71d-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "70eb081d2ea952ff271d95453b2f91b5e2e4e3020343b780d2850097821c1435",
+          "bytes": 1461698
+        }
+      ]
+    },
+    "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434": {
+      "title": "The Apple Thief",
+      "originalHash": "37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa",
+      "masterHash": "f1ba69a45daa3f2808841a3d9a1565c00cab9b81a9981affe620e3aae2ca6c98",
+      "variants": [
+        {
+          "src": "/wide/apple_thief-f1ba69a45daa3f28-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "e07476d71016af287069d40cfede4ceba12aa6ddaaf9255ae0e584c4873c3de2",
+          "bytes": 431935
+        },
+        {
+          "src": "/wide/apple_thief-f1ba69a45daa3f28-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "09c7b5b8cee1d4136fe39aefdd1b101718fabb62f9503e1dfac3320adbc64d25",
+          "bytes": 1094724
+        }
+      ]
+    },
+    "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac": {
+      "title": "Saint George, Almost Brave",
+      "originalHash": "65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a",
+      "masterHash": "5e7e03a4e4427271fb1dac262f5dbc7003ac016d9e22206d73aa8c333a5c916b",
+      "variants": [
+        {
+          "src": "/wide/saint_george-5e7e03a4e4427271-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "6d19b096e5dd7196fd84ba65c807dd0a1e32b90dfddfb513a3b7e47cd92bbc26",
+          "bytes": 648786
+        },
+        {
+          "src": "/wide/saint_george-5e7e03a4e4427271-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "e2c2b63e01935671aceeabccd1f250c25a0ccab52093a98e1e7b0f652b9f548b",
+          "bytes": 1788426
+        }
+      ]
+    },
+    "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac": {
+      "title": "The Bell Diver",
+      "originalHash": "a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6",
+      "masterHash": "8b9bc875ff5ceccb37e967c4e5b9fd81935657262040ff897ad2e63d7110d680",
+      "variants": [
+        {
+          "src": "/wide/bell_diver-8b9bc875ff5ceccb-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "655623ec9912b97ad9b9dd9e798f515062a27ee43d36d6363de69b6981fcf37a",
+          "bytes": 320616
+        },
+        {
+          "src": "/wide/bell_diver-8b9bc875ff5ceccb-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "87b21d698d70b65d921cbf23e657d032d22ac37a159815999f8ab6142f4831c5",
+          "bytes": 797401
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-pan-a3a5ecf69b916a0d": {
+      "title": "Pan, The Woods Are Listening",
+      "originalHash": "a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e",
+      "masterHash": "42e09a97d83f156122cd6f5182fc81871f0375ff8e820c4ae88f0c4327caa578",
+      "variants": [
+        {
+          "src": "/wide/pan-42e09a97d83f1561-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "123b73a9b0a1244f134706753851ea7325f14d6009939590c06779c931cd5a94",
+          "bytes": 536049
+        },
+        {
+          "src": "/wide/pan-42e09a97d83f1561-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "6c561bef31fd693d058636ab9b29d6a14c9871016ef697bae4a39efa5f2b92f6",
+          "bytes": 1437566
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-charon-1a06dcb982cead54": {
+      "title": "Charon, Last Boat Home",
+      "originalHash": "1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d",
+      "masterHash": "6298f402064950663b98b9875b849061568c01476a2ecaa014fc16bb06089ccc",
+      "variants": [
+        {
+          "src": "/wide/charon-6298f40206495066-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "a2a13b283598903d3eb29875bb70e9db54b01008de0d9623b85c2fc29096fe2a",
+          "bytes": 612407
+        },
+        {
+          "src": "/wide/charon-6298f40206495066-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "716c7ff4a60b8db29fc29c1eeab7446a3d3a464a4879580b6aa5ff360ebc23bb",
+          "bytes": 1629171
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-hypnos-bb180999a33feffe": {
+      "title": "Hypnos, Five More Minutes",
+      "originalHash": "bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc",
+      "masterHash": "33ab9d4d1ebfec7d22b311ec5de005bdf65caf6c636394cc7456d84b919fd22b",
+      "variants": [
+        {
+          "src": "/wide/hypnos-33ab9d4d1ebfec7d-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "83720bc1bdfc4ce1e0f93f6f650afa2b1200871a90dd88b33245b9b1fc71695b",
+          "bytes": 412284
+        },
+        {
+          "src": "/wide/hypnos-33ab9d4d1ebfec7d-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "cbeaebbf6142b9bb024bf7ff47d2127d786cd88476c3916332fd81da03908f19",
+          "bytes": 1032348
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-persephone-597fb2b60f9f8111": {
+      "title": "Persephone, Back Again",
+      "originalHash": "597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1",
+      "masterHash": "758eaca8d5fdeb71350cca2d060ef8a6434962083fc359a271dbb5f1208ed7e3",
+      "variants": [
+        {
+          "src": "/wide/persephone-758eaca8d5fdeb71-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "05f5a66ca517ed161779c6a77d920e758112ee1aa5ac681824765a0ea28ed395",
+          "bytes": 443294
+        },
+        {
+          "src": "/wide/persephone-758eaca8d5fdeb71-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "0e69ee4e8a498dec29608b14a53246da6639e488aacc70dbeb327d63b302b788",
+          "bytes": 1166397
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-helios-919f81a8e212273d": {
+      "title": "Helios, No Brakes",
+      "originalHash": "919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab",
+      "masterHash": "ee98af6508a5bf7999433bd87e588e80f42412aa3e44f3c0dea3cc9735227c00",
+      "variants": [
+        {
+          "src": "/wide/helios-ee98af6508a5bf79-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "2c5c3b674d890b8ab4e218338f4a24d2995d4522870daa4478b2a9aff7e6ef92",
+          "bytes": 428606
+        },
+        {
+          "src": "/wide/helios-ee98af6508a5bf79-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "abdbcfd0da6204470ae211395bf6056c5de3be0e4a8cc07994d2387d9e6fd818",
+          "bytes": 1069129
+        }
+      ]
+    },
+    "candidate-mythic_liberties_six_20260912-nyx-ce97bc2df3e87453": {
+      "title": "Nyx, The Moon on a String",
+      "originalHash": "ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f",
+      "masterHash": "76c4d9e0955ac5b5ea0df33ed56f45a8f44b5b4f31c62f4d4c0c5695e0533612",
+      "variants": [
+        {
+          "src": "/wide/nyx-76c4d9e0955ac5b5-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "6dd11c7fe60b890efea91fa0af714fcf5cd4e8b036ca29a22f685057ce383609",
+          "bytes": 482549
+        },
+        {
+          "src": "/wide/nyx-76c4d9e0955ac5b5-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "95fce2cdab022a54ecee6dfa8b32210d4e2c70fcab8b83a4cfa26615bb5f7a0f",
+          "bytes": 1270668
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-hestia-93363e971955d9c8": {
+      "title": "Hestia, Come Inside",
+      "originalHash": "93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83",
+      "masterHash": "a5c841660372eacc697daab1fc415d93849f2cd7d09e38e1b3b040eaf4281325",
+      "variants": [
+        {
+          "src": "/wide/hestia-a5c841660372eacc-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "04138d8a8688456f589bde370b4ba5bbd0268b6cb440079d58c6ced92e336e25",
+          "bytes": 354856
+        },
+        {
+          "src": "/wide/hestia-a5c841660372eacc-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "d524487d4bf7ea743cc1df5be79cdb04f8a4be3390a4853a9f6e6e85fc29f06d",
+          "bytes": 885537
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-dionysus-4bbcd2786bbcc979": {
+      "title": "Dionysus, The Party Is Still Here",
+      "originalHash": "4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229",
+      "masterHash": "0c832dc5b05db2ac18861cc5ef4f87dd5f14f93cb69f6529c8e6b78eac3bcf4b",
+      "variants": [
+        {
+          "src": "/wide/dionysus-0c832dc5b05db2ac-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "620f9332f2fb8a0639cc9b69f711123c2a43845bd9b22a95fc58cfbe29d2567d",
+          "bytes": 503530
+        },
+        {
+          "src": "/wide/dionysus-0c832dc5b05db2ac-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "7673de1ec42379d6d32a9fdeeac9401d74af1c72ae12be5726c35598e87292d8",
+          "bytes": 1327573
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c": {
+      "title": "Hermes, A Message for Tomorrow",
+      "originalHash": "a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5",
+      "masterHash": "525fc3afa721bfee1759e4761678953f85eac2cb158602ef1afeaf931304bd14",
+      "variants": [
+        {
+          "src": "/wide/hermes-525fc3afa721bfee-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "4f5fd4b07b15d52783de8310d9609c0ce4517bb0ca82a520e365f0480ac8e9d6",
+          "bytes": 510280
+        },
+        {
+          "src": "/wide/hermes-525fc3afa721bfee-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "e44f708da5501eaaa5c5a8878bcbc42360b4858a83f42007fb517245f57b0438",
+          "bytes": 1398240
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-hephaestus-f2061d10f1b55ee0": {
+      "title": "Hephaestus, One More Spark",
+      "originalHash": "f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c",
+      "masterHash": "1f0aa1b8fa2e31f61dfdcf9d41726ea2be9e5ce8de4cb9160208d191dd03399b",
+      "variants": [
+        {
+          "src": "/wide/hephaestus-1f0aa1b8fa2e31f6-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "b86f1ce753a94234ebb077bebbc735939fa4d2cdff591c2ff27f9958a848ea36",
+          "bytes": 442182
+        },
+        {
+          "src": "/wide/hephaestus-1f0aa1b8fa2e31f6-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "451cc824face626e4b28854a95b977d2280426ff1b3c95f464e0f92c035abc96",
+          "bytes": 1160727
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-aphrodite-b05a96bcd23849d9": {
+      "title": "Aphrodite, The Tide Brings Roses",
+      "originalHash": "b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc",
+      "masterHash": "779e065ccb6fb423c7f6be35db1b6f1a1d26040b429454dae1e09f44dbc4eb59",
+      "variants": [
+        {
+          "src": "/wide/aphrodite-779e065ccb6fb423-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "82023dc4502957b55715239cfbc92a7913b9d96582bd3a59d4afaadcc24a54fc",
+          "bytes": 416195
+        },
+        {
+          "src": "/wide/aphrodite-779e065ccb6fb423-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "e0d5c8c95fb6500c4d8598de585ac166c099badc0baeadf4ecd7740aeba252f5",
+          "bytes": 1067591
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c": {
+      "title": "Ares, A Flower After Battle",
+      "originalHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+      "masterHash": "d4c8ccce156332f1dcd65b9b505d7a33d8ddd4cce47e94f0d982db643c5a5920",
+      "variants": [
+        {
+          "src": "/wide/ares-d4c8ccce156332f1-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "ff631046dc1e70af839b69259ba2598822433fbff455413ede2a19e06a6459d6",
+          "bytes": 488364
+        },
+        {
+          "src": "/wide/ares-d4c8ccce156332f1-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "bcd02e7a0c6ab2ec4142b325d97ebdcf9e85e7d34331081996745254f5b376a1",
+          "bytes": 1313322
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178": {
+      "title": "Apollo, Morning Rehearsal",
+      "originalHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+      "masterHash": "d70ad0d6162a25fab15459e7784d89dd8c7ec568468756115d2eae6755986ce7",
+      "variants": [
+        {
+          "src": "/wide/apollo-d70ad0d6162a25fa-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "71b6f7b46cfad7887f3b7b32537d0defd6a2edaf7dbc48a723d1c3ae08f74463",
+          "bytes": 510182
+        },
+        {
+          "src": "/wide/apollo-d70ad0d6162a25fa-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "d59767bd5e5e75401b48e5453e5d376a54b3606998a1f0cb26ebaabf33ddc0c6",
+          "bytes": 1316947
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304": {
+      "title": "Athena, Before the Noise",
+      "originalHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+      "masterHash": "21d23a0a3c70e6358e43315dc62b7210d5bb3090377bf0a0a8714a722a31b16e",
+      "variants": [
+        {
+          "src": "/wide/athena-21d23a0a3c70e635-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "f9c6be4f2f05525649eff5a6e5e65cabdbb1722bdbc8a43889f9e4e851390281",
+          "bytes": 510888
+        },
+        {
+          "src": "/wide/athena-21d23a0a3c70e635-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "d9b948d0a5e57bb3e68131646f389995b9d6721623cfc82921d3e4640af75710",
+          "bytes": 1366754
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98": {
+      "title": "Demeter, The Last Ear of Wheat",
+      "originalHash": "1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c",
+      "masterHash": "aea4114084293632f55448d5fbec91b2aca326949599c9487bb0c619f1e4b8a1",
+      "variants": [
+        {
+          "src": "/wide/demeter-aea4114084293632-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "4687db3dc13b96a63de5bc1220bef44e898ca3e8e30be411f19d2fc400b4f0de",
+          "bytes": 477972
+        },
+        {
+          "src": "/wide/demeter-aea4114084293632-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "5758c76d92089863e815a03ee941345c7a14d14f36be83b4cbd4a3aa1073a702",
+          "bytes": 1258616
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-poseidon-a79919956e293384": {
+      "title": "Poseidon, A Sea in His Wake",
+      "originalHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+      "masterHash": "9d29c7c34335ff996b64db37f1e56a9577207697646d414824870ccbf3a67456",
+      "variants": [
+        {
+          "src": "/wide/poseidon-9d29c7c34335ff99-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "7cd2e2fb4934f294f4809352d61f65aae6153e7080df5e9daaf2ef6039435676",
+          "bytes": 539846
+        },
+        {
+          "src": "/wide/poseidon-9d29c7c34335ff99-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "9181581b04f7189e37486321f3b0705bf6ec4527e8c7f185316441008275d0c1",
+          "bytes": 1451570
+        }
+      ]
+    },
+    "candidate-greek_pantheon_20260912-hera-3571150f54a53e3c": {
+      "title": "Hera, Every Eye",
+      "originalHash": "3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e",
+      "masterHash": "7b18bbeba1117a96d76f5e36e164890c78360f8a27f5bbe733527098024461bc",
+      "variants": [
+        {
+          "src": "/wide/hera-7b18bbeba1117a96-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "08347a978ce201ce54f138d11aaf1508da6e821ad181b950bcc7cfd425c80d0f",
+          "bytes": 506021
+        },
+        {
+          "src": "/wide/hera-7b18bbeba1117a96-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "2117424ab7079a951ad3c7f0b428aeac7503238722f1890c5398fe467a76690d",
+          "bytes": 1359239
+        }
+      ]
+    },
+    "candidate-loop_0026_thor_light_20260912-thor-1fd02d5a38a899b3": {
+      "title": "Thor, White Lightning",
+      "originalHash": "1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f",
+      "masterHash": "8c23a1ff303c7e46987e874d66153c8168c7aa08e4dcffd81eadf70663139048",
+      "variants": [
+        {
+          "src": "/wide/thor-8c23a1ff303c7e46-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "9be0fd0efccca4b34171f28d3fe2725855dc2808a0ffbf4c9b86b555286f1566",
+          "bytes": 436678
+        },
+        {
+          "src": "/wide/thor-8c23a1ff303c7e46-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "c9b7782290e89bf61810d0da70209ea63a875dd6eed114c05c783ae4d45f50dc",
+          "bytes": 1079168
+        }
+      ]
+    },
+    "candidate-loop_0023_amelia_20260912-amelia-28df015e0e0e9753": {
+      "title": "Amelia, Into the Blue",
+      "originalHash": "28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a",
+      "masterHash": "a93c682280d2f346a87242621d6d02b7a964dd009d987246b58adf1e3b38eb93",
+      "variants": [
+        {
+          "src": "/wide/amelia-a93c682280d2f346-2400.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "014b21bbeb123010b78a9c4b3b8fc383ce1e097f0955964e5d832b4cf4109970",
+          "bytes": 426703
+        },
+        {
+          "src": "/wide/amelia-a93c682280d2f346-4000.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "79dcb842f69e2c7da8f6c05d04ada9ffa46d2cfeac35e2508de14458f77008e7",
+          "bytes": 1068244
+        }
+      ]
     }
   }
 }
