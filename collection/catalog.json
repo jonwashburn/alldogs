@@ -13621,6 +13621,496 @@
           "sha256": "669f34a017d38181bc1df19b8319ed3b38d52c01ec3664c90f7345606edc1f82"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_11_20260913-dracula-abfc0e5072c8be1b",
+      "dogId": "design-character_round_11_20260913-dracula",
+      "title": "Dracula",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2.png",
+      "imageHash": "abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_11_20260913/characters/dracula.js",
+      "sourceHash": "ae9c2dd4017a68d4768b506cc55d8b8955ca4f05a27748123003089feed3b89e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_11_20260913/characters/dracula.js",
+          "sha256": "ae9c2dd4017a68d4768b506cc55d8b8955ca4f05a27748123003089feed3b89e"
+        }
+      ],
+      "description": "Dracula: a pale dog with a black widow’s peak, red standing collar and broad dark cape against muted green cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_11_20260913",
+      "slug": "dracula",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_11_20260913/out/dracula.json",
+          "sha256": "340a7f161e35bf8993580b785d0a4b6151b2ec74942f41c55d911da079fac697"
+        },
+        "cast": {
+          "path": "../design/character_round_11_20260913/cast.json",
+          "sha256": "bd586085bf1b58fd38a726f047c437b13c45942a64a6a9d462aa02128949fbc9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_11_20260913/out/dracula_wide_4000.png",
+          "sha256": "45341df0962ccf33fad7783614918c5e6e0851851b634ad32d98a8e6c177a714",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_11_20260913/out/dracula_square_2000.png",
+          "sha256": "c27597dbc670d86a16f362cae75b91ea2fc57ad339bcc05162abb8b7415706c4",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_11_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_11_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_11_20260913/work/dracula/wide.json",
+          "sha256": "b9d58e0afb994a06ccba1cd73d3e639611e99d4fed5bb9b70e057abaeb1c4e2b"
+        },
+        "wrapper": {
+          "path": "../design/character_round_11_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_11_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_11_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_11_20260913/fields.json",
+          "sha256": "81e6a42610d11b1dc16f1b2caea6d634677e2905079127ddd5a55e6c797aea48"
+        },
+        "supports": {
+          "path": "../design/character_round_11_20260913/supports.json",
+          "sha256": "ec654afe40cd048bf33a233e9e318add07889770edf87fa5d507c4b40dda0c5a"
+        },
+        "lightContact": {
+          "path": "../design/character_round_11_20260913/light-contact.js",
+          "sha256": "8bb04b0a14a36b50e5bb636bb560c79ba09fb0d1576b28895cd5dbbae3d816e5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_11_20260913/work/dracula/light_contact.json",
+          "sha256": "a5afe4c5ffcd805ed67a095395a2da3dcce7162850191b4e3dd16f4abea1a7af"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_11_20260913-cleopatra-0f100bde66348cba",
+      "dogId": "design-character_round_11_20260913-cleopatra",
+      "title": "Cleopatra",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-0f100bde66348cba4e6dc05e50d97fd66371080d1bb3a474fb79c83369c9a557.png",
+      "imageHash": "0f100bde66348cba4e6dc05e50d97fd66371080d1bb3a474fb79c83369c9a557",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_11_20260913/characters/cleopatra.js",
+      "sourceHash": "cdc864f30287181c827daebd475610113cfdba124a1b952f91a68d2d61a2acd6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_11_20260913/characters/cleopatra.js",
+          "sha256": "cdc864f30287181c827daebd475610113cfdba124a1b952f91a68d2d61a2acd6"
+        }
+      ],
+      "description": "Cleopatra: a severe black bob, gold cobra and collar, warm ochre face and turquoise body on blue-grey cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_11_20260913",
+      "slug": "cleopatra",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_11_20260913/out/cleopatra.json",
+          "sha256": "346c75a6ceb77817d76873b81cd11d8c64fda6b143ecc85da95c7bc864df2458"
+        },
+        "cast": {
+          "path": "../design/character_round_11_20260913/cast.json",
+          "sha256": "bd586085bf1b58fd38a726f047c437b13c45942a64a6a9d462aa02128949fbc9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_11_20260913/out/cleopatra_wide_4000.png",
+          "sha256": "33f32c745cbf5bcc4c28f322c838fa4fab61b35df81a521182a9bc65b2708433",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_11_20260913/out/cleopatra_square_2000.png",
+          "sha256": "d84bbfbae6381567d11b3c4c96933a428a665035e11cb3715893bee9a6e9b3f6",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_11_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_11_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_11_20260913/work/cleopatra/wide.json",
+          "sha256": "6ede807fee7d6d28e24f95fca87798e487f5ee0e0deca9a43c4d3f6f29fad72a"
+        },
+        "wrapper": {
+          "path": "../design/character_round_11_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_11_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_11_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_11_20260913/fields.json",
+          "sha256": "81e6a42610d11b1dc16f1b2caea6d634677e2905079127ddd5a55e6c797aea48"
+        },
+        "supports": {
+          "path": "../design/character_round_11_20260913/supports.json",
+          "sha256": "ec654afe40cd048bf33a233e9e318add07889770edf87fa5d507c4b40dda0c5a"
+        },
+        "lightContact": {
+          "path": "../design/character_round_11_20260913/light-contact.js",
+          "sha256": "8bb04b0a14a36b50e5bb636bb560c79ba09fb0d1576b28895cd5dbbae3d816e5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_11_20260913/work/cleopatra/light_contact.json",
+          "sha256": "3d6eb093ee01963aafdbcee00588d580d14c4d2027a7a7a8d36f7deea737c775"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_11_20260913-serena-0d3c85e4e29e3290",
+      "dogId": "design-character_round_11_20260913-serena",
+      "title": "Serena Williams",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-0d3c85e4e29e32901dc4e47a951a9241f84f56407cfcc8f2e45dbcc219916984.png",
+      "imageHash": "0d3c85e4e29e32901dc4e47a951a9241f84f56407cfcc8f2e45dbcc219916984",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_11_20260913/characters/serena.js",
+      "sourceHash": "c3371eee66ea404ec7aeeef28d7817af42d9975358f583c6f801139a355a6ebd",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_11_20260913/characters/serena.js",
+          "sha256": "c3371eee66ea404ec7aeeef28d7817af42d9975358f583c6f801139a355a6ebd"
+        }
+      ],
+      "description": "Serena Williams: a warm brown dog in vivid pink, white trainers and a dark ponytail; a racquet and tennis ball meet the painted court.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_11_20260913",
+      "slug": "serena",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_11_20260913/out/serena.json",
+          "sha256": "227a5d3126c5c8233adfd08ca78a5d8d5b6a7cc250299843499e6e3a97530857"
+        },
+        "cast": {
+          "path": "../design/character_round_11_20260913/cast.json",
+          "sha256": "bd586085bf1b58fd38a726f047c437b13c45942a64a6a9d462aa02128949fbc9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_11_20260913/out/serena_wide_4000.png",
+          "sha256": "17643ab27872599eaa9067c64f819d94ab4640e89e0b0430bd430d356d231bea",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_11_20260913/out/serena_square_2000.png",
+          "sha256": "118fe85ebc197fa2c1fd3b8e7994d02fe574b667b139bcff13d4f0493bcc37b6",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_11_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_11_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_11_20260913/work/serena/wide.json",
+          "sha256": "158464b24b876e911f471c139f8bd43695e03f3b635f8ebfec27319172a7b9bc"
+        },
+        "wrapper": {
+          "path": "../design/character_round_11_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_11_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_11_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_11_20260913/fields.json",
+          "sha256": "81e6a42610d11b1dc16f1b2caea6d634677e2905079127ddd5a55e6c797aea48"
+        },
+        "supports": {
+          "path": "../design/character_round_11_20260913/supports.json",
+          "sha256": "ec654afe40cd048bf33a233e9e318add07889770edf87fa5d507c4b40dda0c5a"
+        },
+        "lightContact": {
+          "path": "../design/character_round_11_20260913/light-contact.js",
+          "sha256": "8bb04b0a14a36b50e5bb636bb560c79ba09fb0d1576b28895cd5dbbae3d816e5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_11_20260913/work/serena/light_contact.json",
+          "sha256": "c1d058619b56e02e165d2a9487207d4a5c2468ab8ef49b0310a17b5945a1cdef"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_11_20260913-goku-da23ad442917ea01",
+      "dogId": "design-character_round_11_20260913-goku",
+      "title": "Goku",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-da23ad442917ea010fe1a10942ce8d48eb683decc40a074a101485eb66ba24e6.png",
+      "imageHash": "da23ad442917ea010fe1a10942ce8d48eb683decc40a074a101485eb66ba24e6",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/character_round_11_20260913/characters/goku.js",
+      "sourceHash": "f95a82c30d5eaf5ded00a17a2a99427880974e674fec6b89473c536cc456d8af",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_11_20260913/characters/goku.js",
+          "sha256": "f95a82c30d5eaf5ded00a17a2a99427880974e674fec6b89473c536cc456d8af"
+        }
+      ],
+      "description": "Goku: jagged black hair, a broad orange gi, blue belt and boots; an eager dog with a wide stance against blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_11_20260913",
+      "slug": "goku",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_11_20260913/out/goku.json",
+          "sha256": "11bc74f081644c5e28ed3c4a7c361fcaf654302389659cac6b549791a31833f0"
+        },
+        "cast": {
+          "path": "../design/character_round_11_20260913/cast.json",
+          "sha256": "bd586085bf1b58fd38a726f047c437b13c45942a64a6a9d462aa02128949fbc9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_11_20260913/out/goku_wide_4000.png",
+          "sha256": "083f16de64a7cd921ab575057c4d487ad4a66e6a9b35cfe55aec18ae9b9ca83e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_11_20260913/out/goku_square_2000.png",
+          "sha256": "9e28a4353984833d03ec51e2554d38fbc5a351d0237d02365acc5b130fa76b71",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_11_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_11_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_11_20260913/work/goku/wide.json",
+          "sha256": "006976df43a763fea7772742f2ea94f6a3747a8fcb8a8427db8156806d498a20"
+        },
+        "wrapper": {
+          "path": "../design/character_round_11_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_11_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_11_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_11_20260913/fields.json",
+          "sha256": "81e6a42610d11b1dc16f1b2caea6d634677e2905079127ddd5a55e6c797aea48"
+        },
+        "supports": {
+          "path": "../design/character_round_11_20260913/supports.json",
+          "sha256": "ec654afe40cd048bf33a233e9e318add07889770edf87fa5d507c4b40dda0c5a"
+        },
+        "lightContact": {
+          "path": "../design/character_round_11_20260913/light-contact.js",
+          "sha256": "8bb04b0a14a36b50e5bb636bb560c79ba09fb0d1576b28895cd5dbbae3d816e5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_11_20260913/work/goku/light_contact.json",
+          "sha256": "e398f74e846f1516966fa8a57b805286cb2cd69d64da8ea8310aac6926c1a461"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_11_20260913-charlie-b702a643acdc3cd2",
+      "dogId": "design-character_round_11_20260913-charlie",
+      "title": "Charlie Brown",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36.png",
+      "imageHash": "b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_11_20260913/characters/charlie.js",
+      "sourceHash": "97cfad359d6181f740f1eef42d119dd5cfdfd9e4cdd20c86c19d5c459ad33cdd",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_11_20260913/characters/charlie.js",
+          "sha256": "97cfad359d6181f740f1eef42d119dd5cfdfd9e4cdd20c86c19d5c459ad33cdd"
+        }
+      ],
+      "description": "Charlie Brown: a worried tan dog in a yellow zigzag shirt, with a fallen red kite beside the forepaw on muted rose cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_11_20260913",
+      "slug": "charlie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_11_20260913/out/charlie.json",
+          "sha256": "c87ecea40cafbf1155dc75b035cec32ce6a65f3f96a04169aff7faa93349a977"
+        },
+        "cast": {
+          "path": "../design/character_round_11_20260913/cast.json",
+          "sha256": "bd586085bf1b58fd38a726f047c437b13c45942a64a6a9d462aa02128949fbc9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_11_20260913/out/charlie_wide_4000.png",
+          "sha256": "8ce5ae8801fd30091b0a49d442dba28533d46c729662e6282a019348cde6f14e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_11_20260913/out/charlie_square_2000.png",
+          "sha256": "5718944bb37bb09e22840d6ccc9a6951acd576bca96c4a585389e7d44e02d700",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_11_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_11_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_11_20260913/work/charlie/wide.json",
+          "sha256": "007f937e26ec82f8dd29b9168be50affce37d5223b892e749703d91225a4c359"
+        },
+        "wrapper": {
+          "path": "../design/character_round_11_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_11_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_11_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_11_20260913/fields.json",
+          "sha256": "81e6a42610d11b1dc16f1b2caea6d634677e2905079127ddd5a55e6c797aea48"
+        },
+        "supports": {
+          "path": "../design/character_round_11_20260913/supports.json",
+          "sha256": "ec654afe40cd048bf33a233e9e318add07889770edf87fa5d507c4b40dda0c5a"
+        },
+        "lightContact": {
+          "path": "../design/character_round_11_20260913/light-contact.js",
+          "sha256": "8bb04b0a14a36b50e5bb636bb560c79ba09fb0d1576b28895cd5dbbae3d816e5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_11_20260913/work/charlie/light_contact.json",
+          "sha256": "fcf4ed1a8c5a922ca0c4d723bcfa92c8b068d72e3912bc37dfa201a582ed8b7c"
+        }
+      }
     }
   ],
   "rounds": [

@@ -1384,6 +1384,56 @@
       "batch": "character_recovery_refined_20260913",
       "slug": "sade",
       "image": "/collection/assets/candidate-05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073.png"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-dracula-abfc0e5072c8be1b",
+      "title": "Dracula",
+      "kind": "candidate",
+      "imageHash": "abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2",
+      "description": "Dracula: a pale dog with a black widow\u2019s peak, red standing collar and broad dark cape against muted green cotton.",
+      "batch": "character_round_11_20260913",
+      "slug": "dracula",
+      "image": "/collection/assets/candidate-abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2.png"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-cleopatra-0f100bde66348cba",
+      "title": "Cleopatra",
+      "kind": "candidate",
+      "imageHash": "0f100bde66348cba4e6dc05e50d97fd66371080d1bb3a474fb79c83369c9a557",
+      "description": "Cleopatra: a severe black bob, gold cobra and collar, warm ochre face and turquoise body on blue-grey cotton.",
+      "batch": "character_round_11_20260913",
+      "slug": "cleopatra",
+      "image": "/collection/assets/candidate-0f100bde66348cba4e6dc05e50d97fd66371080d1bb3a474fb79c83369c9a557.png"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-serena-0d3c85e4e29e3290",
+      "title": "Serena Williams",
+      "kind": "candidate",
+      "imageHash": "0d3c85e4e29e32901dc4e47a951a9241f84f56407cfcc8f2e45dbcc219916984",
+      "description": "Serena Williams: a warm brown dog in vivid pink, white trainers and a dark ponytail; a racquet and tennis ball meet the painted court.",
+      "batch": "character_round_11_20260913",
+      "slug": "serena",
+      "image": "/collection/assets/candidate-0d3c85e4e29e32901dc4e47a951a9241f84f56407cfcc8f2e45dbcc219916984.png"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-goku-da23ad442917ea01",
+      "title": "Goku",
+      "kind": "candidate",
+      "imageHash": "da23ad442917ea010fe1a10942ce8d48eb683decc40a074a101485eb66ba24e6",
+      "description": "Goku: jagged black hair, a broad orange gi, blue belt and boots; an eager dog with a wide stance against blue cotton.",
+      "batch": "character_round_11_20260913",
+      "slug": "goku",
+      "image": "/collection/assets/candidate-da23ad442917ea010fe1a10942ce8d48eb683decc40a074a101485eb66ba24e6.png"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-charlie-b702a643acdc3cd2",
+      "title": "Charlie Brown",
+      "kind": "candidate",
+      "imageHash": "b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36",
+      "description": "Charlie Brown: a worried tan dog in a yellow zigzag shirt, with a fallen red kite beside the forepaw on muted rose cotton.",
+      "batch": "character_round_11_20260913",
+      "slug": "charlie",
+      "image": "/collection/assets/candidate-b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36.png"
     }
   ],
   "references": [
@@ -1726,6 +1776,33 @@
           {
             "candidateId": "candidate-character_recovery_refined_20260913-sade-05b0d768e8a6c2d7",
             "imageHash": "05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073"
+          }
+        ]
+      },
+      {
+        "id": "round-11",
+        "title": "Round 11",
+        "frozenAt": "2026-09-13T12:58:26.448112+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_11_20260913-dracula-abfc0e5072c8be1b",
+            "imageHash": "abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2"
+          },
+          {
+            "candidateId": "candidate-character_round_11_20260913-cleopatra-0f100bde66348cba",
+            "imageHash": "0f100bde66348cba4e6dc05e50d97fd66371080d1bb3a474fb79c83369c9a557"
+          },
+          {
+            "candidateId": "candidate-character_round_11_20260913-serena-0d3c85e4e29e3290",
+            "imageHash": "0d3c85e4e29e32901dc4e47a951a9241f84f56407cfcc8f2e45dbcc219916984"
+          },
+          {
+            "candidateId": "candidate-character_round_11_20260913-goku-da23ad442917ea01",
+            "imageHash": "da23ad442917ea010fe1a10942ce8d48eb683decc40a074a101485eb66ba24e6"
+          },
+          {
+            "candidateId": "candidate-character_round_11_20260913-charlie-b702a643acdc3cd2",
+            "imageHash": "b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36"
           }
         ]
       }
