@@ -1234,6 +1234,56 @@
       "batch": "fable_wide_round_07_20260912",
       "slug": "bridge_keeper",
       "image": "/collection/assets/candidate-e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e.png"
+    },
+    {
+      "id": "candidate-character_round_08_20260913-prince-08eb15c5a1a08601",
+      "title": "Prince, After the Encore",
+      "kind": "candidate",
+      "imageHash": "08eb15c5a1a08601ff4e123de5c2b75e7055b31cdce8eac6d10f8206875764b0",
+      "description": "Purple velvet, white ruffles and a guitar still plugged in after the room goes quiet.",
+      "batch": "character_round_08_20260913",
+      "slug": "prince",
+      "image": "/collection/assets/candidate-08eb15c5a1a08601ff4e123de5c2b75e7055b31cdce8eac6d10f8206875764b0.png"
+    },
+    {
+      "id": "candidate-character_round_08_20260913-frida-e49663d54a94c7cf",
+      "title": "Frida, The Unruly Garden",
+      "kind": "candidate",
+      "imageHash": "e49663d54a94c7cf9784ee6224dcb6231427c449cd137ab9a47a80827b660afa",
+      "description": "A bright dress, flowers in her hair, and a vine that has decided to climb her instead of the wall.",
+      "batch": "character_round_08_20260913",
+      "slug": "frida",
+      "image": "/collection/assets/candidate-e49663d54a94c7cf9784ee6224dcb6231427c449cd137ab9a47a80827b660afa.png"
+    },
+    {
+      "id": "candidate-character_round_08_20260913-paddington-3e8153d2a934ebe6",
+      "title": "Paddington, Keeping the Sandwich Dry",
+      "kind": "candidate",
+      "imageHash": "3e8153d2a934ebe6d05a10ce89c6e1d1a90da6501ad4fea7f1a5d03d4dba2334",
+      "description": "Red hat, blue duffle coat, battered suitcase and a marmalade sandwich in the rain.",
+      "batch": "character_round_08_20260913",
+      "slug": "paddington",
+      "image": "/collection/assets/candidate-3e8153d2a934ebe6d05a10ce89c6e1d1a90da6501ad4fea7f1a5d03d4dba2334.png"
+    },
+    {
+      "id": "candidate-character_round_08_20260913-ripley-881594d7c77ba165",
+      "title": "Ripley and Jonesy",
+      "kind": "candidate",
+      "imageHash": "881594d7c77ba16516d608d781b170b9eff556cd56efce7bf70d97d2cda9e0eb",
+      "description": "She keeps the ship door open until the orange cat decides to come through.",
+      "batch": "character_round_08_20260913",
+      "slug": "ripley",
+      "image": "/collection/assets/candidate-881594d7c77ba16516d608d781b170b9eff556cd56efce7bf70d97d2cda9e0eb.png"
+    },
+    {
+      "id": "candidate-character_round_08_20260913-freddie-14a19c7955933ff2",
+      "title": "Freddie, One More Chorus",
+      "kind": "candidate",
+      "imageHash": "14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e",
+      "description": "The yellow jacket leaves the stage floor; the half microphone stand and its lead follow.",
+      "batch": "character_round_08_20260913",
+      "slug": "freddie",
+      "image": "/collection/assets/candidate-14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e.png"
     }
   ],
   "references": [
@@ -1495,6 +1545,33 @@
           {
             "candidateId": "candidate-fable_wide_round_07_20260912-bridge_keeper-e83ea290d8169d6b",
             "imageHash": "e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e"
+          }
+        ]
+      },
+      {
+        "id": "round-08",
+        "title": "Round 08",
+        "frozenAt": "2026-09-13T04:39:29.313261+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_08_20260913-prince-08eb15c5a1a08601",
+            "imageHash": "08eb15c5a1a08601ff4e123de5c2b75e7055b31cdce8eac6d10f8206875764b0"
+          },
+          {
+            "candidateId": "candidate-character_round_08_20260913-frida-e49663d54a94c7cf",
+            "imageHash": "e49663d54a94c7cf9784ee6224dcb6231427c449cd137ab9a47a80827b660afa"
+          },
+          {
+            "candidateId": "candidate-character_round_08_20260913-paddington-3e8153d2a934ebe6",
+            "imageHash": "3e8153d2a934ebe6d05a10ce89c6e1d1a90da6501ad4fea7f1a5d03d4dba2334"
+          },
+          {
+            "candidateId": "candidate-character_round_08_20260913-ripley-881594d7c77ba165",
+            "imageHash": "881594d7c77ba16516d608d781b170b9eff556cd56efce7bf70d97d2cda9e0eb"
+          },
+          {
+            "candidateId": "candidate-character_round_08_20260913-freddie-14a19c7955933ff2",
+            "imageHash": "14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e"
           }
         ]
       }

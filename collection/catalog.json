@@ -12151,6 +12151,496 @@
           "sha256": "9140374bafd76fdf8ad2a4869631a85380297d5eb45b21584a8d8b1940f9828e"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_08_20260913-prince-08eb15c5a1a08601",
+      "dogId": "design-character_round_08_20260913-prince",
+      "title": "Prince, After the Encore",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-08eb15c5a1a08601ff4e123de5c2b75e7055b31cdce8eac6d10f8206875764b0.png",
+      "imageHash": "08eb15c5a1a08601ff4e123de5c2b75e7055b31cdce8eac6d10f8206875764b0",
+      "parent": "original-8-b0565aea8e98b05e",
+      "nativeParentSeed": 8,
+      "source": "../design/character_round_08_20260913/characters/prince.js",
+      "sourceHash": "423aa6c8ee19b0c77cec74086bd50eed739b2fdd924cd164b511b0c311d7ab43",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_08_20260913/characters/prince.js",
+          "sha256": "423aa6c8ee19b0c77cec74086bd50eed739b2fdd924cd164b511b0c311d7ab43"
+        }
+      ],
+      "description": "Purple velvet, white ruffles and a guitar still plugged in after the room goes quiet.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_08_20260913",
+      "slug": "prince",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_08_20260913/out/prince.json",
+          "sha256": "7f6a4e6b223442fb06753c2bc2753c0c0704089b0bd2c8f4d1fc01981c6c81ca"
+        },
+        "cast": {
+          "path": "../design/character_round_08_20260913/cast.json",
+          "sha256": "511120eab41fb0b74e30a458079cfacc000496e2bc5384cb8bd29f7efa8911ee"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_08_20260913/out/prince_wide_4000.png",
+          "sha256": "e710dad2fe2c7340601cdcdc993b75d2c9cf83cf76c56101c3f70a602e8a072f",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_08_20260913/out/prince_square_2000.png",
+          "sha256": "3ecc6e3fb522b1db1c14d9f7dcd4984d113f0541a2b1574938933712cbe52bd2",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_08_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_08_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_08_20260913/work/prince/wide.json",
+          "sha256": "bb21416cae57d639af3a9198e010433ec9e8bc82fc5c8597c0f0d91aaf5a5c8c"
+        },
+        "wrapper": {
+          "path": "../design/character_round_08_20260913/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/character_round_08_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_08_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_08_20260913/fields.json",
+          "sha256": "7fa5a51b560b1a795a4500337f69031655a89f0a1e1c882179533337e075a3d6"
+        },
+        "supports": {
+          "path": "../design/character_round_08_20260913/supports.json",
+          "sha256": "46b7a9bd8df142c1fc34987912ab06f282ce651142d01f37a861b34f141935c2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_08_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_08_20260913/work/prince/light_contact.json",
+          "sha256": "d3c6b7157775cfba275bd846c6c6ff0b38812255746db9c35e3f4c3f9c7f1e82"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_08_20260913-frida-e49663d54a94c7cf",
+      "dogId": "design-character_round_08_20260913-frida",
+      "title": "Frida, The Unruly Garden",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e49663d54a94c7cf9784ee6224dcb6231427c449cd137ab9a47a80827b660afa.png",
+      "imageHash": "e49663d54a94c7cf9784ee6224dcb6231427c449cd137ab9a47a80827b660afa",
+      "parent": "original-102-740f0ee3c80ab095",
+      "nativeParentSeed": 102,
+      "source": "../design/character_round_08_20260913/characters/frida.js",
+      "sourceHash": "75114a77d538e46d52d975e21ae08ce8a5ec5a3cdd079ffda644abfa0ed5190c",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_08_20260913/characters/frida.js",
+          "sha256": "75114a77d538e46d52d975e21ae08ce8a5ec5a3cdd079ffda644abfa0ed5190c"
+        }
+      ],
+      "description": "A bright dress, flowers in her hair, and a vine that has decided to climb her instead of the wall.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_08_20260913",
+      "slug": "frida",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_08_20260913/out/frida.json",
+          "sha256": "ec53422b4f04ca8985ba6d4f048593ad51e142ee111a73d0f813f044567f12c0"
+        },
+        "cast": {
+          "path": "../design/character_round_08_20260913/cast.json",
+          "sha256": "511120eab41fb0b74e30a458079cfacc000496e2bc5384cb8bd29f7efa8911ee"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_08_20260913/out/frida_wide_4000.png",
+          "sha256": "400c2998acc383f1a694e659bd9cc1440aebe05664b13f6260098b3389ba2acc",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_08_20260913/out/frida_square_2000.png",
+          "sha256": "e3ad822fe558321a3bfa47cc374cb21686712b6aa8bac7ab12bf3b1479818bc0",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_08_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_08_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_08_20260913/work/frida/wide.json",
+          "sha256": "a9fa482bd763ec47fc8dd8547776c9edb9857406ee7fc8ace035f9e7a46823aa"
+        },
+        "wrapper": {
+          "path": "../design/character_round_08_20260913/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/character_round_08_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_08_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_08_20260913/fields.json",
+          "sha256": "7fa5a51b560b1a795a4500337f69031655a89f0a1e1c882179533337e075a3d6"
+        },
+        "supports": {
+          "path": "../design/character_round_08_20260913/supports.json",
+          "sha256": "46b7a9bd8df142c1fc34987912ab06f282ce651142d01f37a861b34f141935c2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_08_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_08_20260913/work/frida/light_contact.json",
+          "sha256": "e693ef7b65e739b11548b2ae1c3135c96c551d96f742fccb350744e050fb4176"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_08_20260913-paddington-3e8153d2a934ebe6",
+      "dogId": "design-character_round_08_20260913-paddington",
+      "title": "Paddington, Keeping the Sandwich Dry",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3e8153d2a934ebe6d05a10ce89c6e1d1a90da6501ad4fea7f1a5d03d4dba2334.png",
+      "imageHash": "3e8153d2a934ebe6d05a10ce89c6e1d1a90da6501ad4fea7f1a5d03d4dba2334",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_08_20260913/characters/paddington.js",
+      "sourceHash": "5fbd2c47f34e1c916e33298cc0874f9847f5db459206ea670d380aea831a6f97",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_08_20260913/characters/paddington.js",
+          "sha256": "5fbd2c47f34e1c916e33298cc0874f9847f5db459206ea670d380aea831a6f97"
+        }
+      ],
+      "description": "Red hat, blue duffle coat, battered suitcase and a marmalade sandwich in the rain.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_08_20260913",
+      "slug": "paddington",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_08_20260913/out/paddington.json",
+          "sha256": "37997c431f2b55fe407b36b090e2b73099ab6d8bc25bee36146465a28326e852"
+        },
+        "cast": {
+          "path": "../design/character_round_08_20260913/cast.json",
+          "sha256": "511120eab41fb0b74e30a458079cfacc000496e2bc5384cb8bd29f7efa8911ee"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_08_20260913/out/paddington_wide_4000.png",
+          "sha256": "9f5eb1e44f277462bccf735c041b4cd0f07d7cefe734cfd7bc87551f3c56c4c3",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_08_20260913/out/paddington_square_2000.png",
+          "sha256": "347a98fcabc20e67ce6cbc3e335fcc1e0576dd40cd7478d546b616bbe002a291",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_08_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_08_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_08_20260913/work/paddington/wide.json",
+          "sha256": "41059e6ed39d19e448b63cbed552467f09e78c37e5637b05564d3699d066f6f0"
+        },
+        "wrapper": {
+          "path": "../design/character_round_08_20260913/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/character_round_08_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_08_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_08_20260913/fields.json",
+          "sha256": "7fa5a51b560b1a795a4500337f69031655a89f0a1e1c882179533337e075a3d6"
+        },
+        "supports": {
+          "path": "../design/character_round_08_20260913/supports.json",
+          "sha256": "46b7a9bd8df142c1fc34987912ab06f282ce651142d01f37a861b34f141935c2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_08_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_08_20260913/work/paddington/light_contact.json",
+          "sha256": "59f379172faf345d369d95340dba11992ee699e1c437a7f328c9383ed904c6b0"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_08_20260913-ripley-881594d7c77ba165",
+      "dogId": "design-character_round_08_20260913-ripley",
+      "title": "Ripley and Jonesy",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-881594d7c77ba16516d608d781b170b9eff556cd56efce7bf70d97d2cda9e0eb.png",
+      "imageHash": "881594d7c77ba16516d608d781b170b9eff556cd56efce7bf70d97d2cda9e0eb",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_08_20260913/characters/ripley.js",
+      "sourceHash": "f031b738ad534763d6993b192be242779bf510d4fa7bbbf133351121204e47b6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_08_20260913/characters/ripley.js",
+          "sha256": "f031b738ad534763d6993b192be242779bf510d4fa7bbbf133351121204e47b6"
+        }
+      ],
+      "description": "She keeps the ship door open until the orange cat decides to come through.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_08_20260913",
+      "slug": "ripley",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_08_20260913/out/ripley.json",
+          "sha256": "43040406b77804e9ceb62b133182450eaec27b2a8187c194b9796ad1f02bc67c"
+        },
+        "cast": {
+          "path": "../design/character_round_08_20260913/cast.json",
+          "sha256": "511120eab41fb0b74e30a458079cfacc000496e2bc5384cb8bd29f7efa8911ee"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_08_20260913/out/ripley_wide_4000.png",
+          "sha256": "0296f7643c665d075c92e2764c774ca41171c8611794996b02f9f8daa9aabcf3",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_08_20260913/out/ripley_square_2000.png",
+          "sha256": "53f3490eb6bf72da27c46866d0047df7df6cb5902ac7987bbb98f5626dd1b4a2",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_08_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_08_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_08_20260913/work/ripley/wide.json",
+          "sha256": "26f4615e04c2b4c558b65225cdd312e08ab9d04cb94e94758ff110e38c18bacc"
+        },
+        "wrapper": {
+          "path": "../design/character_round_08_20260913/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/character_round_08_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_08_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_08_20260913/fields.json",
+          "sha256": "7fa5a51b560b1a795a4500337f69031655a89f0a1e1c882179533337e075a3d6"
+        },
+        "supports": {
+          "path": "../design/character_round_08_20260913/supports.json",
+          "sha256": "46b7a9bd8df142c1fc34987912ab06f282ce651142d01f37a861b34f141935c2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_08_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_08_20260913/work/ripley/light_contact.json",
+          "sha256": "6071c1280b218e8eaf7fb3a967295efb208e5b2cf270949b8f8bb8771f771d18"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_08_20260913-freddie-14a19c7955933ff2",
+      "dogId": "design-character_round_08_20260913-freddie",
+      "title": "Freddie, One More Chorus",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e.png",
+      "imageHash": "14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e",
+      "parent": "original-10-d15823c169ef60d4",
+      "nativeParentSeed": 10,
+      "source": "../design/character_round_08_20260913/characters/freddie.js",
+      "sourceHash": "1adbb9a07066eb047e46c669cb643ce79b758f02248bea852fae26e9e4e922fb",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_08_20260913/characters/freddie.js",
+          "sha256": "1adbb9a07066eb047e46c669cb643ce79b758f02248bea852fae26e9e4e922fb"
+        }
+      ],
+      "description": "The yellow jacket leaves the stage floor; the half microphone stand and its lead follow.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_08_20260913",
+      "slug": "freddie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_08_20260913/out/freddie.json",
+          "sha256": "f2409f43e4fc42f0f284e2e869623be821764ef6999fb73123ea810811b07533"
+        },
+        "cast": {
+          "path": "../design/character_round_08_20260913/cast.json",
+          "sha256": "511120eab41fb0b74e30a458079cfacc000496e2bc5384cb8bd29f7efa8911ee"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_08_20260913/out/freddie_wide_4000.png",
+          "sha256": "549344ac487baeb671e8207d415c34f0d03c2ed3099861bf43bfd0567b8a77f0",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_08_20260913/out/freddie_square_2000.png",
+          "sha256": "1b1c9258c740f48e617dd9682b2f6e4611b48013539b834401ad3e050fb177cf",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_08_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_08_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_08_20260913/work/freddie/wide.json",
+          "sha256": "87793c87d9faceea0036b62cc76bf6860b7c15513cf03c3ce7122edac38c495f"
+        },
+        "wrapper": {
+          "path": "../design/character_round_08_20260913/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/character_round_08_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_08_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_08_20260913/fields.json",
+          "sha256": "7fa5a51b560b1a795a4500337f69031655a89f0a1e1c882179533337e075a3d6"
+        },
+        "supports": {
+          "path": "../design/character_round_08_20260913/supports.json",
+          "sha256": "46b7a9bd8df142c1fc34987912ab06f282ce651142d01f37a861b34f141935c2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_08_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_08_20260913/work/freddie/light_contact.json",
+          "sha256": "4ad83d207a8aa483d5927f58e7009059394360074d6cc2398b76c8d48fdcea4d"
+        }
+      }
     }
   ],
   "rounds": [
