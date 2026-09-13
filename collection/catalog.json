@@ -11291,6 +11291,376 @@
           "sha256": "d89e979ed823fde8e40b13a2096d7264434bd31b8ed6abd00f88d6af47509a44"
         }
       }
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-afterburn-4310af1f34aad70d",
+      "dogId": "design-hero_presence_round_06_20260912-afterburn",
+      "title": "Afterburn",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97.png",
+      "imageHash": "4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/hero_presence_round_06_20260912/characters/afterburn.js",
+      "sourceHash": "55d9cb9453661185e65175f27ae5f6f1e61e8285d96c9f42fbf38c75f686d35d",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_presence_round_06_20260912/characters/afterburn.js",
+          "sha256": "55d9cb9453661185e65175f27ae5f6f1e61e8285d96c9f42fbf38c75f686d35d"
+        }
+      ],
+      "description": "A red and ivory hero cuts low through the blue night.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "afterburn",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_presence_round_06_20260912/out/afterburn.json",
+          "sha256": "76f4b5a825c172da15398cbbc827be35d41a0078d8b6ae2c14080c5a872ab5e7"
+        },
+        "cast": {
+          "path": "../design/hero_presence_round_06_20260912/cast.json",
+          "sha256": "acdd9369f98911b9eaa573a900f5cc77896d1bf315aa5320fd023046c7e0a544"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_presence_round_06_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_presence_round_06_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_presence_round_06_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_presence_round_06_20260912/fields.json",
+          "sha256": "e9cd0836b6d49f11916437607563432c736f0560b541cc1d2461ba6ea2a569b4"
+        },
+        "supports": {
+          "path": "../design/hero_presence_round_06_20260912/supports.json",
+          "sha256": "cfa936def3c8b49fe9200c289d173a5c6ef8b76cc4f0fb80aabec32598e5bdbe"
+        },
+        "lightContact": {
+          "path": "../design/hero_presence_round_06_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_presence_round_06_20260912/work/afterburn/light_contact.json",
+          "sha256": "35b6eae47433a37c46fefac266c5b9654d2c0f84f307152e0e162e91e49ec616"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-tideheart-b41f5264524433ec",
+      "dogId": "design-hero_presence_round_06_20260912-tideheart",
+      "title": "Tideheart",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3.png",
+      "imageHash": "b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/hero_presence_round_06_20260912/characters/tideheart.js",
+      "sourceHash": "3dbf065cc61e3ca825257410738d0aa547383b6886f0233065dd4efa6e15f13b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_presence_round_06_20260912/characters/tideheart.js",
+          "sha256": "3dbf065cc61e3ca825257410738d0aa547383b6886f0233065dd4efa6e15f13b"
+        }
+      ],
+      "description": "A green swimmer parts the dark water with its whole body.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "tideheart",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_presence_round_06_20260912/out/tideheart.json",
+          "sha256": "b0e47ea5c076520daeb93ca68ce4ed67d4eefc80d9fb7bb3a7ab2bad7fc474c4"
+        },
+        "cast": {
+          "path": "../design/hero_presence_round_06_20260912/cast.json",
+          "sha256": "acdd9369f98911b9eaa573a900f5cc77896d1bf315aa5320fd023046c7e0a544"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_presence_round_06_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_presence_round_06_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_presence_round_06_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_presence_round_06_20260912/fields.json",
+          "sha256": "e9cd0836b6d49f11916437607563432c736f0560b541cc1d2461ba6ea2a569b4"
+        },
+        "supports": {
+          "path": "../design/hero_presence_round_06_20260912/supports.json",
+          "sha256": "cfa936def3c8b49fe9200c289d173a5c6ef8b76cc4f0fb80aabec32598e5bdbe"
+        },
+        "lightContact": {
+          "path": "../design/hero_presence_round_06_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_presence_round_06_20260912/work/tideheart/light_contact.json",
+          "sha256": "b3134a873a3dda77c92b104b7ec92f10d9645ad2b6187b928c755d966519d1f2"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-cobalt_paladin-58b56c3d59237406",
+      "dogId": "design-hero_presence_round_06_20260912-cobalt_paladin",
+      "title": "The Cobalt Paladin",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-58b56c3d59237406f948fb0a56bca2fdb3c6cbbf59d1811ffdc91a8f1f0909b3.png",
+      "imageHash": "58b56c3d59237406f948fb0a56bca2fdb3c6cbbf59d1811ffdc91a8f1f0909b3",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/hero_presence_round_06_20260912/characters/cobalt_paladin.js",
+      "sourceHash": "28b18ff3286b24ecd831d85ff5d390d0c456d25cb3b788257934f4926559abd9",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_presence_round_06_20260912/characters/cobalt_paladin.js",
+          "sha256": "28b18ff3286b24ecd831d85ff5d390d0c456d25cb3b788257934f4926559abd9"
+        }
+      ],
+      "description": "A blue guardian stands in the last warm light.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "cobalt_paladin",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_presence_round_06_20260912/out/cobalt_paladin.json",
+          "sha256": "5bf45f7246ba72dcdec62cd0332d03ad953634e28e947cbe93f9589683d5187f"
+        },
+        "cast": {
+          "path": "../design/hero_presence_round_06_20260912/cast.json",
+          "sha256": "acdd9369f98911b9eaa573a900f5cc77896d1bf315aa5320fd023046c7e0a544"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_presence_round_06_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_presence_round_06_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_presence_round_06_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_presence_round_06_20260912/fields.json",
+          "sha256": "e9cd0836b6d49f11916437607563432c736f0560b541cc1d2461ba6ea2a569b4"
+        },
+        "supports": {
+          "path": "../design/hero_presence_round_06_20260912/supports.json",
+          "sha256": "cfa936def3c8b49fe9200c289d173a5c6ef8b76cc4f0fb80aabec32598e5bdbe"
+        },
+        "lightContact": {
+          "path": "../design/hero_presence_round_06_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_presence_round_06_20260912/work/cobalt_paladin/light_contact.json",
+          "sha256": "f1d3276180d0feeff7e2ad61c5e09df2a65eb8746fe03f15f1b5f764d30fb4c5"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-unimpressed-f38de48b29ac5574",
+      "dogId": "design-hero_presence_round_06_20260912-unimpressed",
+      "title": "The Unimpressed Immortal",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f38de48b29ac5574b275536855550c78bb719ab62db89fc08c08f1a67fd96f5c.png",
+      "imageHash": "f38de48b29ac5574b275536855550c78bb719ab62db89fc08c08f1a67fd96f5c",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/hero_presence_round_06_20260912/characters/unimpressed.js",
+      "sourceHash": "56ee27c733971e6fb1898f96a719b30bf0780df43827aa7ce89bbe62ae4a2d5e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_presence_round_06_20260912/characters/unimpressed.js",
+          "sha256": "56ee27c733971e6fb1898f96a719b30bf0780df43827aa7ce89bbe62ae4a2d5e"
+        }
+      ],
+      "description": "A small rose-colored immortal regards the world with suspicion.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "unimpressed",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_presence_round_06_20260912/out/unimpressed.json",
+          "sha256": "fec3820c871713c4fe12f2c07cb9b7f62e475925d15891815f0e6317031e7587"
+        },
+        "cast": {
+          "path": "../design/hero_presence_round_06_20260912/cast.json",
+          "sha256": "acdd9369f98911b9eaa573a900f5cc77896d1bf315aa5320fd023046c7e0a544"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_presence_round_06_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_presence_round_06_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_presence_round_06_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_presence_round_06_20260912/fields.json",
+          "sha256": "e9cd0836b6d49f11916437607563432c736f0560b541cc1d2461ba6ea2a569b4"
+        },
+        "supports": {
+          "path": "../design/hero_presence_round_06_20260912/supports.json",
+          "sha256": "cfa936def3c8b49fe9200c289d173a5c6ef8b76cc4f0fb80aabec32598e5bdbe"
+        },
+        "lightContact": {
+          "path": "../design/hero_presence_round_06_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_presence_round_06_20260912/work/unimpressed/light_contact.json",
+          "sha256": "0e1bc994e0fb94c717e88a3f7da235ad6528b5a2c7926e4cbfca5495c4c527bc"
+        }
+      }
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-split_second-f429f72e7e1e911d",
+      "dogId": "design-hero_presence_round_06_20260912-split_second",
+      "title": "The Split-Second Hound",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404.png",
+      "imageHash": "f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/hero_presence_round_06_20260912/characters/split_second.js",
+      "sourceHash": "459ec8746435f008836aa71d08e64b44325c8e0aa1b3dfad05014dba68cd58f8",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/hero_presence_round_06_20260912/characters/split_second.js",
+          "sha256": "459ec8746435f008836aa71d08e64b44325c8e0aa1b3dfad05014dba68cd58f8"
+        }
+      ],
+      "description": "A cobalt hound twists out of its own red afterimage.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "split_second",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/hero_presence_round_06_20260912/out/split_second.json",
+          "sha256": "84907b538e9a3f335922a50adb65262bc8f284f0bc2e89178e11ee78664deac6"
+        },
+        "cast": {
+          "path": "../design/hero_presence_round_06_20260912/cast.json",
+          "sha256": "acdd9369f98911b9eaa573a900f5cc77896d1bf315aa5320fd023046c7e0a544"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wrapper": {
+          "path": "../design/hero_presence_round_06_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/hero_presence_round_06_20260912/render.js",
+          "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+        },
+        "lettering": {
+          "path": "../design/hero_presence_round_06_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/hero_presence_round_06_20260912/fields.json",
+          "sha256": "e9cd0836b6d49f11916437607563432c736f0560b541cc1d2461ba6ea2a569b4"
+        },
+        "supports": {
+          "path": "../design/hero_presence_round_06_20260912/supports.json",
+          "sha256": "cfa936def3c8b49fe9200c289d173a5c6ef8b76cc4f0fb80aabec32598e5bdbe"
+        },
+        "lightContact": {
+          "path": "../design/hero_presence_round_06_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/hero_presence_round_06_20260912/work/split_second/light_contact.json",
+          "sha256": "270bb222eb6656820ce9a29e859b17f9b7f93abae72af30fbb157bd7ebf31872"
+        }
+      }
     }
   ],
   "rounds": [

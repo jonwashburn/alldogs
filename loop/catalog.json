@@ -1134,6 +1134,56 @@
       "batch": "hero_rescue_round_05_20260912",
       "slug": "bird_guardian",
       "image": "/collection/assets/candidate-f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55.png"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-afterburn-4310af1f34aad70d",
+      "title": "Afterburn",
+      "kind": "candidate",
+      "imageHash": "4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97",
+      "description": "A red and ivory hero cuts low through the blue night.",
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "afterburn",
+      "image": "/collection/assets/candidate-4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97.png"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-tideheart-b41f5264524433ec",
+      "title": "Tideheart",
+      "kind": "candidate",
+      "imageHash": "b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3",
+      "description": "A green swimmer parts the dark water with its whole body.",
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "tideheart",
+      "image": "/collection/assets/candidate-b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3.png"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-cobalt_paladin-58b56c3d59237406",
+      "title": "The Cobalt Paladin",
+      "kind": "candidate",
+      "imageHash": "58b56c3d59237406f948fb0a56bca2fdb3c6cbbf59d1811ffdc91a8f1f0909b3",
+      "description": "A blue guardian stands in the last warm light.",
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "cobalt_paladin",
+      "image": "/collection/assets/candidate-58b56c3d59237406f948fb0a56bca2fdb3c6cbbf59d1811ffdc91a8f1f0909b3.png"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-unimpressed-f38de48b29ac5574",
+      "title": "The Unimpressed Immortal",
+      "kind": "candidate",
+      "imageHash": "f38de48b29ac5574b275536855550c78bb719ab62db89fc08c08f1a67fd96f5c",
+      "description": "A small rose-colored immortal regards the world with suspicion.",
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "unimpressed",
+      "image": "/collection/assets/candidate-f38de48b29ac5574b275536855550c78bb719ab62db89fc08c08f1a67fd96f5c.png"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-split_second-f429f72e7e1e911d",
+      "title": "The Split-Second Hound",
+      "kind": "candidate",
+      "imageHash": "f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404",
+      "description": "A cobalt hound twists out of its own red afterimage.",
+      "batch": "hero_presence_round_06_20260912",
+      "slug": "split_second",
+      "image": "/collection/assets/candidate-f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404.png"
     }
   ],
   "references": [
@@ -1341,6 +1391,33 @@
           {
             "candidateId": "candidate-hero_rescue_round_05_20260912-bird_guardian-f6def49305d83483",
             "imageHash": "f6def49305d834831a6aeb4b7e1d5bd9a59ca32ec2e0acea660ff4de0902df55"
+          }
+        ]
+      },
+      {
+        "id": "round-06",
+        "title": "Round 06",
+        "frozenAt": "2026-09-13T01:18:40.434655+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-hero_presence_round_06_20260912-afterburn-4310af1f34aad70d",
+            "imageHash": "4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97"
+          },
+          {
+            "candidateId": "candidate-hero_presence_round_06_20260912-tideheart-b41f5264524433ec",
+            "imageHash": "b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3"
+          },
+          {
+            "candidateId": "candidate-hero_presence_round_06_20260912-cobalt_paladin-58b56c3d59237406",
+            "imageHash": "58b56c3d59237406f948fb0a56bca2fdb3c6cbbf59d1811ffdc91a8f1f0909b3"
+          },
+          {
+            "candidateId": "candidate-hero_presence_round_06_20260912-unimpressed-f38de48b29ac5574",
+            "imageHash": "f38de48b29ac5574b275536855550c78bb719ab62db89fc08c08f1a67fd96f5c"
+          },
+          {
+            "candidateId": "candidate-hero_presence_round_06_20260912-split_second-f429f72e7e1e911d",
+            "imageHash": "f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404"
           }
         ]
       }
