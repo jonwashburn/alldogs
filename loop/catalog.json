@@ -1434,6 +1434,56 @@
       "batch": "character_round_11_20260913",
       "slug": "charlie",
       "image": "/collection/assets/candidate-b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36.png"
+    },
+    {
+      "id": "candidate-character_round_12_20260913-tintin-0809e6904e1b5f8d",
+      "title": "Tintin",
+      "kind": "candidate",
+      "imageHash": "0809e6904e1b5f8d7212e2e6f4dd9f9bc31a92520cf8d5692fd285c71c5cc87d",
+      "description": "Tintin: an inquisitive tan dog with a lifted ginger quiff, vivid blue sweater and ochre breeches, stepping across a warm painted road.",
+      "batch": "character_round_12_20260913",
+      "slug": "tintin",
+      "image": "/collection/assets/candidate-0809e6904e1b5f8d7212e2e6f4dd9f9bc31a92520cf8d5692fd285c71c5cc87d.png"
+    },
+    {
+      "id": "candidate-character_round_12_20260913-louis-c8a6fd442b5fcecc",
+      "title": "Louis Armstrong",
+      "kind": "candidate",
+      "imageHash": "c8a6fd442b5fcecc456e14d16899bd2f3be9c5cadd28e9c1fdff8e12a63c9a39",
+      "description": "Louis Armstrong: warm brown skin and an ivory suit against indigo cotton, with a brass trumpet meeting the muzzle and a hanging handkerchief.",
+      "batch": "character_round_12_20260913",
+      "slug": "louis",
+      "image": "/collection/assets/candidate-c8a6fd442b5fcecc456e14d16899bd2f3be9c5cadd28e9c1fdff8e12a63c9a39.png"
+    },
+    {
+      "id": "candidate-character_round_12_20260913-frankenstein-10ec658cd382d780",
+      "title": "Frankenstein's creature",
+      "kind": "candidate",
+      "imageHash": "10ec658cd382d7803acd7858e42945163d3dee19f0368d4528a8f59a697fbb26",
+      "description": "Frankenstein\u2019s creature: green skin, a squared black crown, silver bolts and a violet coat; a small flower beside the heavy boots.",
+      "batch": "character_round_12_20260913",
+      "slug": "frankenstein",
+      "image": "/collection/assets/candidate-10ec658cd382d7803acd7858e42945163d3dee19f0368d4528a8f59a697fbb26.png"
+    },
+    {
+      "id": "candidate-character_round_12_20260913-picard-44ff47569438b10f",
+      "title": "Jean-Luc Picard",
+      "kind": "candidate",
+      "imageHash": "44ff47569438b10f530d2ab179a3b2f0c049d684337024864f17adb65a56f1ce",
+      "description": "Jean-Luc Picard: a warm bald dome and silver temples above a red and black uniform, with a gold badge and a small cup of tea.",
+      "batch": "character_round_12_20260913",
+      "slug": "picard",
+      "image": "/collection/assets/candidate-44ff47569438b10f530d2ab179a3b2f0c049d684337024864f17adb65a56f1ce.png"
+    },
+    {
+      "id": "candidate-character_round_12_20260913-pooh-477f99c9386391c4",
+      "title": "Winnie the Pooh",
+      "kind": "candidate",
+      "imageHash": "477f99c9386391c4acd8852fdeec13b8ababe89739bd30480102f53f3f16934d",
+      "description": "Winnie the Pooh: a deep golden dog in a cropped red shirt, watching a single bee over a honey pot against dark teal cotton.",
+      "batch": "character_round_12_20260913",
+      "slug": "pooh",
+      "image": "/collection/assets/candidate-477f99c9386391c4acd8852fdeec13b8ababe89739bd30480102f53f3f16934d.png"
     }
   ],
   "references": [
@@ -1803,6 +1853,33 @@
           {
             "candidateId": "candidate-character_round_11_20260913-charlie-b702a643acdc3cd2",
             "imageHash": "b702a643acdc3cd29cc3a8faf3e6f0423363716df7abfdd0327db0f4edc2ae36"
+          }
+        ]
+      },
+      {
+        "id": "round-12",
+        "title": "Round 12",
+        "frozenAt": "2026-09-13T18:26:02.546424+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_12_20260913-tintin-0809e6904e1b5f8d",
+            "imageHash": "0809e6904e1b5f8d7212e2e6f4dd9f9bc31a92520cf8d5692fd285c71c5cc87d"
+          },
+          {
+            "candidateId": "candidate-character_round_12_20260913-louis-c8a6fd442b5fcecc",
+            "imageHash": "c8a6fd442b5fcecc456e14d16899bd2f3be9c5cadd28e9c1fdff8e12a63c9a39"
+          },
+          {
+            "candidateId": "candidate-character_round_12_20260913-frankenstein-10ec658cd382d780",
+            "imageHash": "10ec658cd382d7803acd7858e42945163d3dee19f0368d4528a8f59a697fbb26"
+          },
+          {
+            "candidateId": "candidate-character_round_12_20260913-picard-44ff47569438b10f",
+            "imageHash": "44ff47569438b10f530d2ab179a3b2f0c049d684337024864f17adb65a56f1ce"
+          },
+          {
+            "candidateId": "candidate-character_round_12_20260913-pooh-477f99c9386391c4",
+            "imageHash": "477f99c9386391c4acd8852fdeec13b8ababe89739bd30480102f53f3f16934d"
           }
         ]
       }
