@@ -1184,6 +1184,56 @@
       "batch": "hero_presence_round_06_20260912",
       "slug": "split_second",
       "image": "/collection/assets/candidate-f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404.png"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+      "title": "Ember Warden",
+      "kind": "candidate",
+      "imageHash": "de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c",
+      "description": "A deep violet dog stands very still over the last ember, its shadow running far out across the cream ground.",
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "ember_warden",
+      "image": "/collection/assets/candidate-de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c.png"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-kite_thief-551eaf439165e647",
+      "title": "Kite Thief",
+      "kind": "candidate",
+      "imageHash": "551eaf439165e647c1655a70349653c36ed307fdda4b8831a3234686664b6375",
+      "description": "A scarlet dog in a yellow coat leaps away with a stolen magenta kite tangled on its hind foot, the tail streaming off the edge of the sky.",
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "kite_thief",
+      "image": "/collection/assets/candidate-551eaf439165e647c1655a70349653c36ed307fdda4b8831a3234686664b6375.png"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+      "title": "Undertow",
+      "kind": "candidate",
+      "imageHash": "64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827",
+      "description": "An enormous blue wave curls across the whole sky while a small lemon dog in an orange raincoat keeps hold of its red bucket.",
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "undertow",
+      "image": "/collection/assets/candidate-64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827.png"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-sunhauler-7bc6b265cf2e58f7",
+      "title": "Sunhauler",
+      "kind": "candidate",
+      "imageHash": "7bc6b265cf2e58f7d5bf5279172eec0a08237c41852761c86cc0b2490da87daf",
+      "description": "A cobalt dog in a cream harness strains forward, dragging the sinking sun along the horizon by a rope tied around its rump.",
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "sunhauler",
+      "image": "/collection/assets/candidate-7bc6b265cf2e58f7d5bf5279172eec0a08237c41852761c86cc0b2490da87daf.png"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-bridge_keeper-e83ea290d8169d6b",
+      "title": "Bridge-Keeper",
+      "kind": "candidate",
+      "imageHash": "e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e",
+      "description": "An emerald dog in a magenta vest stands squarely on a red plank that spans the whole width over dark water, sagging only where she stands.",
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "bridge_keeper",
+      "image": "/collection/assets/candidate-e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e.png"
     }
   ],
   "references": [
@@ -1418,6 +1468,33 @@
           {
             "candidateId": "candidate-hero_presence_round_06_20260912-split_second-f429f72e7e1e911d",
             "imageHash": "f429f72e7e1e911d8ea998a2839b38202fcb80ebef805878eee6909b03a09404"
+          }
+        ]
+      },
+      {
+        "id": "round-07",
+        "title": "Round 07",
+        "frozenAt": "2026-09-13T03:19:21.059544+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+            "imageHash": "de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c"
+          },
+          {
+            "candidateId": "candidate-fable_wide_round_07_20260912-kite_thief-551eaf439165e647",
+            "imageHash": "551eaf439165e647c1655a70349653c36ed307fdda4b8831a3234686664b6375"
+          },
+          {
+            "candidateId": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+            "imageHash": "64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827"
+          },
+          {
+            "candidateId": "candidate-fable_wide_round_07_20260912-sunhauler-7bc6b265cf2e58f7",
+            "imageHash": "7bc6b265cf2e58f7d5bf5279172eec0a08237c41852761c86cc0b2490da87daf"
+          },
+          {
+            "candidateId": "candidate-fable_wide_round_07_20260912-bridge_keeper-e83ea290d8169d6b",
+            "imageHash": "e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e"
           }
         ]
       }

@@ -11661,6 +11661,496 @@
           "sha256": "270bb222eb6656820ce9a29e859b17f9b7f93abae72af30fbb157bd7ebf31872"
         }
       }
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+      "dogId": "design-fable_wide_round_07_20260912-ember_warden",
+      "title": "Ember Warden",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c.png",
+      "imageHash": "de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/fable_wide_round_07_20260912/characters/ember_warden.js",
+      "sourceHash": "7bf7455ed539bb75ae1b6a7d3c57ea3f7779a1668fafd035eeeaf2b0a4f642fc",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/fable_wide_round_07_20260912/characters/ember_warden.js",
+          "sha256": "7bf7455ed539bb75ae1b6a7d3c57ea3f7779a1668fafd035eeeaf2b0a4f642fc"
+        }
+      ],
+      "description": "A deep violet dog stands very still over the last ember, its shadow running far out across the cream ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "ember_warden",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/fable_wide_round_07_20260912/out/ember_warden.json",
+          "sha256": "91868d404f2a4971745799fd5a49a5f4750effbb6cff583e881d2538d5bfe0d5"
+        },
+        "cast": {
+          "path": "../design/fable_wide_round_07_20260912/cast.json",
+          "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/fable_wide_round_07_20260912/out/ember_warden_wide_4000.png",
+          "sha256": "96eaf3a4114a510ea1af89d3b37ef7dc6b32977a58cd347de4e7f8220e4a11ba",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/fable_wide_round_07_20260912/out/ember_warden_square_2000.png",
+          "sha256": "4453088f200b20af5251f37cd3343f831a634ff9bcc9c295b6818c324ab377ff",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/fable_wide_round_07_20260912/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/fable_wide_round_07_20260912/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/fable_wide_round_07_20260912/work/ember_warden/wide.json",
+          "sha256": "06180ce6226e1cb1d3b0869cbfd1ecc4f6d01ca710b2f4b7ef55a766a83db55e"
+        },
+        "wrapper": {
+          "path": "../design/fable_wide_round_07_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/fable_wide_round_07_20260912/render.js",
+          "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+        },
+        "lettering": {
+          "path": "../design/fable_wide_round_07_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/fable_wide_round_07_20260912/fields.json",
+          "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+        },
+        "supports": {
+          "path": "../design/fable_wide_round_07_20260912/supports.json",
+          "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+        },
+        "lightContact": {
+          "path": "../design/fable_wide_round_07_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/fable_wide_round_07_20260912/work/ember_warden/light_contact.json",
+          "sha256": "110aca258e13cc591a4da1e107a9995cc92413f933c399bfd108ae881fb83d75"
+        }
+      }
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-kite_thief-551eaf439165e647",
+      "dogId": "design-fable_wide_round_07_20260912-kite_thief",
+      "title": "Kite Thief",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-551eaf439165e647c1655a70349653c36ed307fdda4b8831a3234686664b6375.png",
+      "imageHash": "551eaf439165e647c1655a70349653c36ed307fdda4b8831a3234686664b6375",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/fable_wide_round_07_20260912/characters/kite_thief.js",
+      "sourceHash": "599433f1b43f506fff220ff84bb0a89a97264761381a8a8ee5e28fab182ea83e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/fable_wide_round_07_20260912/characters/kite_thief.js",
+          "sha256": "599433f1b43f506fff220ff84bb0a89a97264761381a8a8ee5e28fab182ea83e"
+        }
+      ],
+      "description": "A scarlet dog in a yellow coat leaps away with a stolen magenta kite tangled on its hind foot, the tail streaming off the edge of the sky.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "kite_thief",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/fable_wide_round_07_20260912/out/kite_thief.json",
+          "sha256": "c2839f762770cf312d52e164d308f6c52fb7f63ee0a637a25cf6354cdc18cd4d"
+        },
+        "cast": {
+          "path": "../design/fable_wide_round_07_20260912/cast.json",
+          "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/fable_wide_round_07_20260912/out/kite_thief_wide_4000.png",
+          "sha256": "0d5cd6f7d345be2094e10cdac3a7b655eb237e4752a9892bedc35cfa45c12669",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/fable_wide_round_07_20260912/out/kite_thief_square_2000.png",
+          "sha256": "7648444d35b5322bcb863ed49e953360e1eddbfa81cef6563ed3057b345b0ebc",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/fable_wide_round_07_20260912/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/fable_wide_round_07_20260912/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/fable_wide_round_07_20260912/work/kite_thief/wide.json",
+          "sha256": "1e4be328a89145d111f83956c1beb9fa929062e1453b98637e46a4d5480d5cfd"
+        },
+        "wrapper": {
+          "path": "../design/fable_wide_round_07_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/fable_wide_round_07_20260912/render.js",
+          "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+        },
+        "lettering": {
+          "path": "../design/fable_wide_round_07_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/fable_wide_round_07_20260912/fields.json",
+          "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+        },
+        "supports": {
+          "path": "../design/fable_wide_round_07_20260912/supports.json",
+          "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+        },
+        "lightContact": {
+          "path": "../design/fable_wide_round_07_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/fable_wide_round_07_20260912/work/kite_thief/light_contact.json",
+          "sha256": "6e2314486d51d51cb6a46002825f55b873a38ef53c7f7ed7312848373a76153a"
+        }
+      }
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+      "dogId": "design-fable_wide_round_07_20260912-undertow",
+      "title": "Undertow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827.png",
+      "imageHash": "64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/fable_wide_round_07_20260912/characters/undertow.js",
+      "sourceHash": "d5916b5d1ae2c1479950a5a29d013145b0c6aa4fda6689294f5fbf0b8c59bd16",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/fable_wide_round_07_20260912/characters/undertow.js",
+          "sha256": "d5916b5d1ae2c1479950a5a29d013145b0c6aa4fda6689294f5fbf0b8c59bd16"
+        }
+      ],
+      "description": "An enormous blue wave curls across the whole sky while a small lemon dog in an orange raincoat keeps hold of its red bucket.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "undertow",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/fable_wide_round_07_20260912/out/undertow.json",
+          "sha256": "dcf0d08b96dedb37cfd5bda34402c0904c0167f760bb43cbd8e0c867b017069d"
+        },
+        "cast": {
+          "path": "../design/fable_wide_round_07_20260912/cast.json",
+          "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/fable_wide_round_07_20260912/out/undertow_wide_4000.png",
+          "sha256": "5b0d538e951788a872c1b28dda861c99221de83967fdff04afa88c3b9850b7e2",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/fable_wide_round_07_20260912/out/undertow_square_2000.png",
+          "sha256": "5696ff573df60ef1d6cf995fc0d73610e9909b3d2dabe0b76291b350614f06ad",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/fable_wide_round_07_20260912/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/fable_wide_round_07_20260912/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/fable_wide_round_07_20260912/work/undertow/wide.json",
+          "sha256": "187bca66157e28cbdf16bdbe01dd23f5c0ba58510a1decc736761f46785f200a"
+        },
+        "wrapper": {
+          "path": "../design/fable_wide_round_07_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/fable_wide_round_07_20260912/render.js",
+          "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+        },
+        "lettering": {
+          "path": "../design/fable_wide_round_07_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/fable_wide_round_07_20260912/fields.json",
+          "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+        },
+        "supports": {
+          "path": "../design/fable_wide_round_07_20260912/supports.json",
+          "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+        },
+        "lightContact": {
+          "path": "../design/fable_wide_round_07_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/fable_wide_round_07_20260912/work/undertow/light_contact.json",
+          "sha256": "d45a45762009446554f66b88bbd60328728e62c69a05460b29d2e0dd1bc10d96"
+        }
+      }
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-sunhauler-7bc6b265cf2e58f7",
+      "dogId": "design-fable_wide_round_07_20260912-sunhauler",
+      "title": "Sunhauler",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-7bc6b265cf2e58f7d5bf5279172eec0a08237c41852761c86cc0b2490da87daf.png",
+      "imageHash": "7bc6b265cf2e58f7d5bf5279172eec0a08237c41852761c86cc0b2490da87daf",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/fable_wide_round_07_20260912/characters/sunhauler.js",
+      "sourceHash": "3f6d859de704cd5b5c6fcb88b500aeb72f7cbeb54853e94f03d1a212745c0965",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/fable_wide_round_07_20260912/characters/sunhauler.js",
+          "sha256": "3f6d859de704cd5b5c6fcb88b500aeb72f7cbeb54853e94f03d1a212745c0965"
+        }
+      ],
+      "description": "A cobalt dog in a cream harness strains forward, dragging the sinking sun along the horizon by a rope tied around its rump.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "sunhauler",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/fable_wide_round_07_20260912/out/sunhauler.json",
+          "sha256": "e35cc5fd46d3fbc5bfb12bfc44ae380c2ea312f436c5c583859fc5ab323cd005"
+        },
+        "cast": {
+          "path": "../design/fable_wide_round_07_20260912/cast.json",
+          "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/fable_wide_round_07_20260912/out/sunhauler_wide_4000.png",
+          "sha256": "3596fafd9bea1cb3cbcb42b219f9423c6979553732327ae2f9614e3ba51b5081",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/fable_wide_round_07_20260912/out/sunhauler_square_2000.png",
+          "sha256": "1cd6a3d3563d82d2f5c77a0b545901a8d44698137ad921ad9d4f3b987092bb43",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/fable_wide_round_07_20260912/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/fable_wide_round_07_20260912/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/fable_wide_round_07_20260912/work/sunhauler/wide.json",
+          "sha256": "47d5981bba8ef66395f63c37d2e2a5a55bbfb198fed4b6dead0a88c58417466c"
+        },
+        "wrapper": {
+          "path": "../design/fable_wide_round_07_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/fable_wide_round_07_20260912/render.js",
+          "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+        },
+        "lettering": {
+          "path": "../design/fable_wide_round_07_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/fable_wide_round_07_20260912/fields.json",
+          "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+        },
+        "supports": {
+          "path": "../design/fable_wide_round_07_20260912/supports.json",
+          "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+        },
+        "lightContact": {
+          "path": "../design/fable_wide_round_07_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/fable_wide_round_07_20260912/work/sunhauler/light_contact.json",
+          "sha256": "869050f3e25ae234855d65ec3b2149d86c20e585af8a70547286ac91d28a5e82"
+        }
+      }
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-bridge_keeper-e83ea290d8169d6b",
+      "dogId": "design-fable_wide_round_07_20260912-bridge_keeper",
+      "title": "Bridge-Keeper",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e.png",
+      "imageHash": "e83ea290d8169d6b59a276816854dc80b8abe3695e29732391a6470c8e4f1c3e",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/fable_wide_round_07_20260912/characters/bridge_keeper.js",
+      "sourceHash": "8f228ba71168ebb5daf8e5c64b4d978601d04b428d71943007aab06b2b5aa8ac",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/fable_wide_round_07_20260912/characters/bridge_keeper.js",
+          "sha256": "8f228ba71168ebb5daf8e5c64b4d978601d04b428d71943007aab06b2b5aa8ac"
+        }
+      ],
+      "description": "An emerald dog in a magenta vest stands squarely on a red plank that spans the whole width over dark water, sagging only where she stands.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "fable_wide_round_07_20260912",
+      "slug": "bridge_keeper",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/fable_wide_round_07_20260912/out/bridge_keeper.json",
+          "sha256": "a4bee6f9a42165472a22a4098b23b881a97ab0709e54bee9cf212f0f99f5b2d1"
+        },
+        "cast": {
+          "path": "../design/fable_wide_round_07_20260912/cast.json",
+          "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/fable_wide_round_07_20260912/out/bridge_keeper_wide_4000.png",
+          "sha256": "f4c05e7719710f5ea20e62b95e8faa8dcc4a769af5d6f9671fd41312fe7aae3d",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/fable_wide_round_07_20260912/out/bridge_keeper_square_2000.png",
+          "sha256": "7a70c7af9054037cac8eca3c7b34a4e4c39a999800696276cc6b3f3b0cdbb5a2",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/fable_wide_round_07_20260912/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/fable_wide_round_07_20260912/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/fable_wide_round_07_20260912/work/bridge_keeper/wide.json",
+          "sha256": "a0b044f9047438d7b3df89d361e6ecd62bacf9b52330d55ca824d7f3abb94252"
+        },
+        "wrapper": {
+          "path": "../design/fable_wide_round_07_20260912/painter.js",
+          "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+        },
+        "renderer": {
+          "path": "../design/fable_wide_round_07_20260912/render.js",
+          "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+        },
+        "lettering": {
+          "path": "../design/fable_wide_round_07_20260912/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/fable_wide_round_07_20260912/fields.json",
+          "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+        },
+        "supports": {
+          "path": "../design/fable_wide_round_07_20260912/supports.json",
+          "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+        },
+        "lightContact": {
+          "path": "../design/fable_wide_round_07_20260912/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/fable_wide_round_07_20260912/work/bridge_keeper/light_contact.json",
+          "sha256": "9140374bafd76fdf8ad2a4869631a85380297d5eb45b21584a8d8b1940f9828e"
+        }
+      }
     }
   ],
   "rounds": [
