@@ -14601,6 +14601,496 @@
           "sha256": "19ae224ba06e143a95cd3458a1b4a1e2e7c5bd580943851924f89198bdb1d073"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_13_20260913-storm-1715c34fefb02be1",
+      "dogId": "design-character_round_13_20260913-storm",
+      "title": "Storm / Ororo Munroe",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1715c34fefb02be12b99ff022538db90430e02e01e93444ca1741f0d9723da82.png",
+      "imageHash": "1715c34fefb02be12b99ff022538db90430e02e01e93444ca1741f0d9723da82",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_13_20260913/characters/storm.js",
+      "sourceHash": "9a07cc71c7c9f963b3e72b77fff931c273559e6da08fd30a14f5a4097e64972b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_13_20260913/characters/storm.js",
+          "sha256": "9a07cc71c7c9f963b3e72b77fff931c273559e6da08fd30a14f5a4097e64972b"
+        }
+      ],
+      "description": "Storm / Ororo Munroe: a warm brown dog rising through violet air, with streaming ivory hair, a cobalt cape, white costume and lightning crossing the wide painting.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_13_20260913",
+      "slug": "storm",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_13_20260913/out/storm.json",
+          "sha256": "11e36c6e9cc354ab8c3887f2e9777f728c218cf4695358b83b062494b6a3ffa0"
+        },
+        "cast": {
+          "path": "../design/character_round_13_20260913/cast.json",
+          "sha256": "5e2f284d573f6fe77b25a47ca5c020937d01d8ecdc3084f3de8ad2f2fbbf1f4a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_13_20260913/out/storm_wide_4000.png",
+          "sha256": "bb3f86458f9078c3118666a3b0b1c16ef79a02cae4b5721e491dff91c277391d",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_13_20260913/out/storm_square_2000.png",
+          "sha256": "50ce8adac1179406bb47014bbcd26a0860305361eb22b771e7a3f1cf2eac6f53",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_13_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_13_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_13_20260913/work/storm/wide.json",
+          "sha256": "72bcc900dc885323bd869d1791870168d1342fdd76943d866b2a2dee4d608233"
+        },
+        "wrapper": {
+          "path": "../design/character_round_13_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_13_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_13_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_13_20260913/fields.json",
+          "sha256": "3a24b3be0ed802898d9d2a8f5c961e5593a592a3366826028867f668cd01aa18"
+        },
+        "supports": {
+          "path": "../design/character_round_13_20260913/supports.json",
+          "sha256": "aaa0ec798a2f54813c1fbc220c1f601146f8a7923c831a35c628f2fbe08eaff2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_13_20260913/light-contact.js",
+          "sha256": "525f34cd05f7dcc6b58d8e4588080bcc2b0493cced762f2ca30152941bdd8b1f"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_13_20260913/work/storm/light_contact.json",
+          "sha256": "373d475f83af49c76c7a083198adfd89cd635270a391f8244b2541b4d6073d03"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_13_20260913-ali-b0f85d3acef81543",
+      "dogId": "design-character_round_13_20260913-ali",
+      "title": "Muhammad Ali",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b0f85d3acef8154363c9c5d8b53ae943e6e8398d1346367d3d85f728a36423eb.png",
+      "imageHash": "b0f85d3acef8154363c9c5d8b53ae943e6e8398d1346367d3d85f728a36423eb",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_13_20260913/characters/ali.js",
+      "sourceHash": "37e210e95c2ea57c8ec60795dcfed352feef47386ff3ec4f7f16cd9e4a4ab4b5",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_13_20260913/characters/ali.js",
+          "sha256": "37e210e95c2ea57c8ec60795dcfed352feef47386ff3ec4f7f16cd9e4a4ab4b5"
+        }
+      ],
+      "description": "Muhammad Ali: an exposed warm brown torso, white and black trunks, and a red glove attached to an outstretched forepaw; painted ring ropes cross the teal ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_13_20260913",
+      "slug": "ali",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_13_20260913/out/ali.json",
+          "sha256": "c806707503e42aa127141031edcda5de5b7152e6d469c9a1bb66dfdbe2cb7cda"
+        },
+        "cast": {
+          "path": "../design/character_round_13_20260913/cast.json",
+          "sha256": "5e2f284d573f6fe77b25a47ca5c020937d01d8ecdc3084f3de8ad2f2fbbf1f4a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_13_20260913/out/ali_wide_4000.png",
+          "sha256": "5adaec4fbad081dcc8a668d122706e4594ab6cc4379a0303b6bcca9341ce4449",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_13_20260913/out/ali_square_2000.png",
+          "sha256": "038f9e5abe6a6c3264e48f4e53bb14f84b7628dabcbd299626f956962acfb5c3",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_13_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_13_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_13_20260913/work/ali/wide.json",
+          "sha256": "9f97f10086e38effaa44042db3e1a70d8de4f72161666a403317f91e76eba5d7"
+        },
+        "wrapper": {
+          "path": "../design/character_round_13_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_13_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_13_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_13_20260913/fields.json",
+          "sha256": "3a24b3be0ed802898d9d2a8f5c961e5593a592a3366826028867f668cd01aa18"
+        },
+        "supports": {
+          "path": "../design/character_round_13_20260913/supports.json",
+          "sha256": "aaa0ec798a2f54813c1fbc220c1f601146f8a7923c831a35c628f2fbe08eaff2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_13_20260913/light-contact.js",
+          "sha256": "525f34cd05f7dcc6b58d8e4588080bcc2b0493cced762f2ca30152941bdd8b1f"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_13_20260913/work/ali/light_contact.json",
+          "sha256": "10b1ae5bdae2e0eafb2542be5cbc3e8c344714ab7c9dc584e53c21dbb81def87"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_13_20260913-furiosa-6a5582203589b409",
+      "dogId": "design-character_round_13_20260913-furiosa",
+      "title": "Furiosa",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-6a5582203589b409182613da8145785884707120c026785de272ddd1c4055f69.png",
+      "imageHash": "6a5582203589b409182613da8145785884707120c026785de272ddd1c4055f69",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_13_20260913/characters/furiosa.js",
+      "sourceHash": "15a444687b9a4bdfe85c48edd82402b7861b181c353c515a5b929ae517250e94",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_13_20260913/characters/furiosa.js",
+          "sha256": "15a444687b9a4bdfe85c48edd82402b7861b181c353c515a5b929ae517250e94"
+        }
+      ],
+      "description": "Furiosa: a low advancing dog with cropped dark hair, a grease-dark brow, olive harness and a steel foreleg against a dusty burgundy ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_13_20260913",
+      "slug": "furiosa",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_13_20260913/out/furiosa.json",
+          "sha256": "ef098d9461cfc32a6af6715af473464d4e1fd79ad48af9ce3a2e2500f23d92de"
+        },
+        "cast": {
+          "path": "../design/character_round_13_20260913/cast.json",
+          "sha256": "5e2f284d573f6fe77b25a47ca5c020937d01d8ecdc3084f3de8ad2f2fbbf1f4a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_13_20260913/out/furiosa_wide_4000.png",
+          "sha256": "0405fdf228ec7dd3d47e0e9f595cd46ff3c30f11be8a7a09ab8445cc91dc0e54",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_13_20260913/out/furiosa_square_2000.png",
+          "sha256": "f5228295988c88475f4452d61f0eafdb10054a56a76f1921a266a61993f4c6da",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_13_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_13_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_13_20260913/work/furiosa/wide.json",
+          "sha256": "b4271972c8587ab06e82a469a6450ccaf9dc5a4de87050ed43dc9c632aa20d08"
+        },
+        "wrapper": {
+          "path": "../design/character_round_13_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_13_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_13_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_13_20260913/fields.json",
+          "sha256": "3a24b3be0ed802898d9d2a8f5c961e5593a592a3366826028867f668cd01aa18"
+        },
+        "supports": {
+          "path": "../design/character_round_13_20260913/supports.json",
+          "sha256": "aaa0ec798a2f54813c1fbc220c1f601146f8a7923c831a35c628f2fbe08eaff2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_13_20260913/light-contact.js",
+          "sha256": "525f34cd05f7dcc6b58d8e4588080bcc2b0493cced762f2ca30152941bdd8b1f"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_13_20260913/work/furiosa/light_contact.json",
+          "sha256": "981f898d3f916533ce0f92cd8c16d6c4a4b3aeb6054726c6427bcebfb1bf77d7"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_13_20260913-pippi-13cf58591ca20495",
+      "dogId": "design-character_round_13_20260913-pippi",
+      "title": "Pippi Longstocking",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-13cf58591ca204951659fb297bebe3cd7dcbb24c2704dfe1a17ef1a951df425c.png",
+      "imageHash": "13cf58591ca204951659fb297bebe3cd7dcbb24c2704dfe1a17ef1a951df425c",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_13_20260913/characters/pippi.js",
+      "sourceHash": "c460868c98164492c8fa8c5e554fb59ca1c467431176cb65d5601f45427e2ea9",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_13_20260913/characters/pippi.js",
+          "sha256": "c460868c98164492c8fa8c5e554fb59ca1c467431176cb65d5601f45427e2ea9"
+        }
+      ],
+      "description": "Pippi Longstocking: outward ginger braids, a green and golden patchwork dress and unequal stockings, with a skipping-rope curve across blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_13_20260913",
+      "slug": "pippi",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_13_20260913/out/pippi.json",
+          "sha256": "22ba6b1e9ffe0b09bdc9e04897c13a1a9423e5350ed1f96786d2893a3b3f696e"
+        },
+        "cast": {
+          "path": "../design/character_round_13_20260913/cast.json",
+          "sha256": "5e2f284d573f6fe77b25a47ca5c020937d01d8ecdc3084f3de8ad2f2fbbf1f4a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_13_20260913/out/pippi_wide_4000.png",
+          "sha256": "965f26517b1f7a0d2013d2529305b481a73be2461d3841e950f70eed5460df1f",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_13_20260913/out/pippi_square_2000.png",
+          "sha256": "f9bcfab088e41b22dfda2f62ee649a2090fa4fcd2d607fb2d47c0f2c872f4fe8",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_13_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_13_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_13_20260913/work/pippi/wide.json",
+          "sha256": "e601ab7bf04cb989e94d51bd269a310c0da6d70f3691008bafee19a590818da9"
+        },
+        "wrapper": {
+          "path": "../design/character_round_13_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_13_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_13_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_13_20260913/fields.json",
+          "sha256": "3a24b3be0ed802898d9d2a8f5c961e5593a592a3366826028867f668cd01aa18"
+        },
+        "supports": {
+          "path": "../design/character_round_13_20260913/supports.json",
+          "sha256": "aaa0ec798a2f54813c1fbc220c1f601146f8a7923c831a35c628f2fbe08eaff2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_13_20260913/light-contact.js",
+          "sha256": "525f34cd05f7dcc6b58d8e4588080bcc2b0493cced762f2ca30152941bdd8b1f"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_13_20260913/work/pippi/light_contact.json",
+          "sha256": "76d8526e39dcce8fd1a800b191eefdfed09b1fd165938b50b22aab9c9dbd131c"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_13_20260913-maleficent-b2e3e174ca5f7ec8",
+      "dogId": "design-character_round_13_20260913-maleficent",
+      "title": "Maleficent",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8.png",
+      "imageHash": "b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_13_20260913/characters/maleficent.js",
+      "sourceHash": "bab740461e972fbf39f69350f4e50c3bb1a99d399c14643fea047cb941585a49",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_13_20260913/characters/maleficent.js",
+          "sha256": "bab740461e972fbf39f69350f4e50c3bb1a99d399c14643fea047cb941585a49"
+        }
+      ],
+      "description": "Maleficent: pale green skin and tall curling black horns above an angular violet and black cloak; a thorn branch crosses the coral field.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_13_20260913",
+      "slug": "maleficent",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_13_20260913/out/maleficent.json",
+          "sha256": "d29e5787674537fd24d5a101e4060acad72132c16085470dc13334219f7fbad7"
+        },
+        "cast": {
+          "path": "../design/character_round_13_20260913/cast.json",
+          "sha256": "5e2f284d573f6fe77b25a47ca5c020937d01d8ecdc3084f3de8ad2f2fbbf1f4a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_13_20260913/out/maleficent_wide_4000.png",
+          "sha256": "c398bbef4e5160b8d9f3ad43234d30a4650c0c1c48e063cf79aca2ccfa20c766",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_13_20260913/out/maleficent_square_2000.png",
+          "sha256": "d3dc97f1227acc21222b482460a66ffd93c70b6bed8b9c3b71c0b5ff20b43d8f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_13_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_13_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_13_20260913/work/maleficent/wide.json",
+          "sha256": "733b2f8989e77f8263159cec0261597fc82b20e05e834d30b04adb037a827f6f"
+        },
+        "wrapper": {
+          "path": "../design/character_round_13_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_13_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_13_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_13_20260913/fields.json",
+          "sha256": "3a24b3be0ed802898d9d2a8f5c961e5593a592a3366826028867f668cd01aa18"
+        },
+        "supports": {
+          "path": "../design/character_round_13_20260913/supports.json",
+          "sha256": "aaa0ec798a2f54813c1fbc220c1f601146f8a7923c831a35c628f2fbe08eaff2"
+        },
+        "lightContact": {
+          "path": "../design/character_round_13_20260913/light-contact.js",
+          "sha256": "525f34cd05f7dcc6b58d8e4588080bcc2b0493cced762f2ca30152941bdd8b1f"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_13_20260913/work/maleficent/light_contact.json",
+          "sha256": "34fd1390b82c983c12519d79c7abee15c58395216573c54bab726b67e610ece5"
+        }
+      }
     }
   ],
   "rounds": [

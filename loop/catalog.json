@@ -1484,6 +1484,56 @@
       "batch": "character_round_12_20260913",
       "slug": "pooh",
       "image": "/collection/assets/candidate-477f99c9386391c4acd8852fdeec13b8ababe89739bd30480102f53f3f16934d.png"
+    },
+    {
+      "id": "candidate-character_round_13_20260913-storm-1715c34fefb02be1",
+      "title": "Storm / Ororo Munroe",
+      "kind": "candidate",
+      "imageHash": "1715c34fefb02be12b99ff022538db90430e02e01e93444ca1741f0d9723da82",
+      "description": "Storm / Ororo Munroe: a warm brown dog rising through violet air, with streaming ivory hair, a cobalt cape, white costume and lightning crossing the wide painting.",
+      "batch": "character_round_13_20260913",
+      "slug": "storm",
+      "image": "/collection/assets/candidate-1715c34fefb02be12b99ff022538db90430e02e01e93444ca1741f0d9723da82.png"
+    },
+    {
+      "id": "candidate-character_round_13_20260913-ali-b0f85d3acef81543",
+      "title": "Muhammad Ali",
+      "kind": "candidate",
+      "imageHash": "b0f85d3acef8154363c9c5d8b53ae943e6e8398d1346367d3d85f728a36423eb",
+      "description": "Muhammad Ali: an exposed warm brown torso, white and black trunks, and a red glove attached to an outstretched forepaw; painted ring ropes cross the teal ground.",
+      "batch": "character_round_13_20260913",
+      "slug": "ali",
+      "image": "/collection/assets/candidate-b0f85d3acef8154363c9c5d8b53ae943e6e8398d1346367d3d85f728a36423eb.png"
+    },
+    {
+      "id": "candidate-character_round_13_20260913-furiosa-6a5582203589b409",
+      "title": "Furiosa",
+      "kind": "candidate",
+      "imageHash": "6a5582203589b409182613da8145785884707120c026785de272ddd1c4055f69",
+      "description": "Furiosa: a low advancing dog with cropped dark hair, a grease-dark brow, olive harness and a steel foreleg against a dusty burgundy ground.",
+      "batch": "character_round_13_20260913",
+      "slug": "furiosa",
+      "image": "/collection/assets/candidate-6a5582203589b409182613da8145785884707120c026785de272ddd1c4055f69.png"
+    },
+    {
+      "id": "candidate-character_round_13_20260913-pippi-13cf58591ca20495",
+      "title": "Pippi Longstocking",
+      "kind": "candidate",
+      "imageHash": "13cf58591ca204951659fb297bebe3cd7dcbb24c2704dfe1a17ef1a951df425c",
+      "description": "Pippi Longstocking: outward ginger braids, a green and golden patchwork dress and unequal stockings, with a skipping-rope curve across blue cotton.",
+      "batch": "character_round_13_20260913",
+      "slug": "pippi",
+      "image": "/collection/assets/candidate-13cf58591ca204951659fb297bebe3cd7dcbb24c2704dfe1a17ef1a951df425c.png"
+    },
+    {
+      "id": "candidate-character_round_13_20260913-maleficent-b2e3e174ca5f7ec8",
+      "title": "Maleficent",
+      "kind": "candidate",
+      "imageHash": "b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8",
+      "description": "Maleficent: pale green skin and tall curling black horns above an angular violet and black cloak; a thorn branch crosses the coral field.",
+      "batch": "character_round_13_20260913",
+      "slug": "maleficent",
+      "image": "/collection/assets/candidate-b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8.png"
     }
   ],
   "references": [
@@ -1880,6 +1930,33 @@
           {
             "candidateId": "candidate-character_round_12_20260913-pooh-477f99c9386391c4",
             "imageHash": "477f99c9386391c4acd8852fdeec13b8ababe89739bd30480102f53f3f16934d"
+          }
+        ]
+      },
+      {
+        "id": "round-13",
+        "title": "Round 13",
+        "frozenAt": "2026-09-13T19:30:53.388641+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_13_20260913-storm-1715c34fefb02be1",
+            "imageHash": "1715c34fefb02be12b99ff022538db90430e02e01e93444ca1741f0d9723da82"
+          },
+          {
+            "candidateId": "candidate-character_round_13_20260913-ali-b0f85d3acef81543",
+            "imageHash": "b0f85d3acef8154363c9c5d8b53ae943e6e8398d1346367d3d85f728a36423eb"
+          },
+          {
+            "candidateId": "candidate-character_round_13_20260913-furiosa-6a5582203589b409",
+            "imageHash": "6a5582203589b409182613da8145785884707120c026785de272ddd1c4055f69"
+          },
+          {
+            "candidateId": "candidate-character_round_13_20260913-pippi-13cf58591ca20495",
+            "imageHash": "13cf58591ca204951659fb297bebe3cd7dcbb24c2704dfe1a17ef1a951df425c"
+          },
+          {
+            "candidateId": "candidate-character_round_13_20260913-maleficent-b2e3e174ca5f7ec8",
+            "imageHash": "b2e3e174ca5f7ec84edecd5300b3caf3933e42d459da231113ce3d03997849b8"
           }
         ]
       }
