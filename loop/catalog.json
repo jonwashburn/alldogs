@@ -1334,6 +1334,56 @@
       "batch": "character_round_09b_20260913",
       "slug": "mae",
       "image": "/collection/assets/candidate-26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9.png"
+    },
+    {
+      "id": "candidate-character_recovery_20260913-cousteau-3250c57f619b39a4",
+      "title": "Jacques Cousteau",
+      "kind": "candidate",
+      "imageHash": "3250c57f619b39a4bac4aa1fb2686c0b800cc088893a0e3cfa2e265ae66d76f6",
+      "description": "Jacques Cousteau: a compact cream dog in a broad blue suit and red watch cap, with exposed pale olive cotton around the figure.",
+      "batch": "character_recovery_20260913",
+      "slug": "cousteau",
+      "image": "/collection/assets/candidate-3250c57f619b39a4bac4aa1fb2686c0b800cc088893a0e3cfa2e265ae66d76f6.png"
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-beethoven-2074817a7c422353",
+      "title": "Beethoven",
+      "kind": "candidate",
+      "imageHash": "2074817a7c422353dd983af79a8f4b580de116a0d81a72f876910595d6f66883",
+      "description": "Beethoven: wild grey hair, a deep green coat and red cravat; one paw rests on a loose sheet of music.",
+      "batch": "character_recovery_refined_20260913",
+      "slug": "beethoven",
+      "image": "/collection/assets/candidate-2074817a7c422353dd983af79a8f4b580de116a0d81a72f876910595d6f66883.png"
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-angela-7e60ef917e98a772",
+      "title": "Angela Davis",
+      "kind": "candidate",
+      "imageHash": "7e60ef917e98a772894ba4773ebc5568f2520edec3ea30a24b5340b797ceb9aa",
+      "description": "Angela Davis: a large uneven Afro, warm brown face and vivid pink garment against pale green cotton.",
+      "batch": "character_recovery_refined_20260913",
+      "slug": "angela",
+      "image": "/collection/assets/candidate-7e60ef917e98a772894ba4773ebc5568f2520edec3ea30a24b5340b797ceb9aa.png"
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-josephine-77a996a63a0bbea9",
+      "title": "Josephine Baker",
+      "kind": "candidate",
+      "imageHash": "77a996a63a0bbea9230a72aaf67b4ac66675f2d54b36a54892691f4de01e4191",
+      "description": "Josephine Baker: sleek dark hair, gold hoops and an uneven yellow banana skirt against muted violet cotton.",
+      "batch": "character_recovery_refined_20260913",
+      "slug": "josephine",
+      "image": "/collection/assets/candidate-77a996a63a0bbea9230a72aaf67b4ac66675f2d54b36a54892691f4de01e4191.png"
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-sade-05b0d768e8a6c2d7",
+      "title": "Sade",
+      "kind": "candidate",
+      "imageHash": "05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073",
+      "description": "Sade: a swept black ponytail and gold hoops, with a broad dark suit against brick-red cotton.",
+      "batch": "character_recovery_refined_20260913",
+      "slug": "sade",
+      "image": "/collection/assets/candidate-05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073.png"
     }
   ],
   "references": [
@@ -1649,6 +1699,33 @@
           {
             "candidateId": "candidate-character_round_09b_20260913-mae-26e3d2f48cf79ce1",
             "imageHash": "26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9"
+          }
+        ]
+      },
+      {
+        "id": "round-10",
+        "title": "Round 10",
+        "frozenAt": "2026-09-13T11:59:22.005559+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_recovery_20260913-cousteau-3250c57f619b39a4",
+            "imageHash": "3250c57f619b39a4bac4aa1fb2686c0b800cc088893a0e3cfa2e265ae66d76f6"
+          },
+          {
+            "candidateId": "candidate-character_recovery_refined_20260913-beethoven-2074817a7c422353",
+            "imageHash": "2074817a7c422353dd983af79a8f4b580de116a0d81a72f876910595d6f66883"
+          },
+          {
+            "candidateId": "candidate-character_recovery_refined_20260913-angela-7e60ef917e98a772",
+            "imageHash": "7e60ef917e98a772894ba4773ebc5568f2520edec3ea30a24b5340b797ceb9aa"
+          },
+          {
+            "candidateId": "candidate-character_recovery_refined_20260913-josephine-77a996a63a0bbea9",
+            "imageHash": "77a996a63a0bbea9230a72aaf67b4ac66675f2d54b36a54892691f4de01e4191"
+          },
+          {
+            "candidateId": "candidate-character_recovery_refined_20260913-sade-05b0d768e8a6c2d7",
+            "imageHash": "05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073"
           }
         ]
       }

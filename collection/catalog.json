@@ -13131,6 +13131,496 @@
           "sha256": "b8eeea9585332695d4e2ef1114bb1a4d767d0e1d6e672828e5d1e5404b8f01eb"
         }
       }
+    },
+    {
+      "id": "candidate-character_recovery_20260913-cousteau-3250c57f619b39a4",
+      "dogId": "design-character_recovery_20260913-cousteau",
+      "title": "Jacques Cousteau",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3250c57f619b39a4bac4aa1fb2686c0b800cc088893a0e3cfa2e265ae66d76f6.png",
+      "imageHash": "3250c57f619b39a4bac4aa1fb2686c0b800cc088893a0e3cfa2e265ae66d76f6",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_recovery_20260913/characters/cousteau.js",
+      "sourceHash": "3712fde8e6726ce8971f11a06c4836ce41014c00b52a0eaf228ef53fdceb8a0a",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_recovery_20260913/characters/cousteau.js",
+          "sha256": "3712fde8e6726ce8971f11a06c4836ce41014c00b52a0eaf228ef53fdceb8a0a"
+        }
+      ],
+      "description": "Jacques Cousteau: a compact cream dog in a broad blue suit and red watch cap, with exposed pale olive cotton around the figure.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_recovery_20260913",
+      "slug": "cousteau",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_recovery_20260913/out/cousteau.json",
+          "sha256": "e04911e5d1dfc4d3b4614b089bf23c1904d721333dbc55f876ce9f5a3ce63e87"
+        },
+        "cast": {
+          "path": "../design/character_recovery_20260913/cast.json",
+          "sha256": "f4f56eacd2df311583769792173bbb6a0cf96d3b235cf2f79d85806d3c567a9e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_recovery_20260913/out/cousteau_wide_4000.png",
+          "sha256": "2315fec8f3e32139ed2757a1e1e51becb8682b912042a5b05bf19372734ac11b",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_recovery_20260913/out/cousteau_square_2000.png",
+          "sha256": "7ff758d06343657f44e475e1ad99c713d15be74747046a7510252a419e020266",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_recovery_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_recovery_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_recovery_20260913/work/cousteau/wide.json",
+          "sha256": "f8d13557383f57394b52e2718a1de172c56e3aa39c711fa5e75d7bdca55d74ae"
+        },
+        "wrapper": {
+          "path": "../design/character_recovery_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_recovery_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_recovery_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_recovery_20260913/fields.json",
+          "sha256": "a450dc57185c54217e9ecae2db3267f18e6bc4befe02271427b1c8466eb857ee"
+        },
+        "supports": {
+          "path": "../design/character_recovery_20260913/supports.json",
+          "sha256": "4acdaa0051ee4bfb49a4ff1db82be643d02e4171d16b2fee8e6e991994db73bd"
+        },
+        "lightContact": {
+          "path": "../design/character_recovery_20260913/light-contact.js",
+          "sha256": "862444879ec4a4025bdd9d4857c7431646e4f53b41c8e870563a3e6ed99296d1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_recovery_20260913/work/cousteau/light_contact.json",
+          "sha256": "8255ee5d455e086715934efb305089436cbbbde703795a55ad84669ef6839b8c"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-beethoven-2074817a7c422353",
+      "dogId": "design-character_recovery_refined_20260913-beethoven",
+      "title": "Beethoven",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-2074817a7c422353dd983af79a8f4b580de116a0d81a72f876910595d6f66883.png",
+      "imageHash": "2074817a7c422353dd983af79a8f4b580de116a0d81a72f876910595d6f66883",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_recovery_refined_20260913/characters/beethoven.js",
+      "sourceHash": "07c63a0dd4771b270520f38c7f601cc5556a2ad595c3aaa8ad55d16ce54ba936",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_recovery_refined_20260913/characters/beethoven.js",
+          "sha256": "07c63a0dd4771b270520f38c7f601cc5556a2ad595c3aaa8ad55d16ce54ba936"
+        }
+      ],
+      "description": "Beethoven: wild grey hair, a deep green coat and red cravat; one paw rests on a loose sheet of music.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_recovery_refined_20260913",
+      "slug": "beethoven",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_recovery_refined_20260913/out/beethoven.json",
+          "sha256": "b053dc74fa156016aac51bb0e7b717437084ba94dae87d48c99eb784b47e6da0"
+        },
+        "cast": {
+          "path": "../design/character_recovery_refined_20260913/cast.json",
+          "sha256": "ddf6b5110187a1dd93545bdf3de9c80eddf0305538f28dd6d163c424266e3deb"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_recovery_refined_20260913/out/beethoven_wide_4000.png",
+          "sha256": "a2db2d2fc9d83522d479b6072bbf9a3a6a2a7109fa685d76c62bc2bc90f9f293",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_recovery_refined_20260913/out/beethoven_square_2000.png",
+          "sha256": "ecae628a5b8da2be714a082ccb0c7b01e3e2a369ddaa1274f4716ecc78a197a9",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_recovery_refined_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_recovery_refined_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_recovery_refined_20260913/work/beethoven/wide.json",
+          "sha256": "974184534691f60085c1afb08618ee47e7f12525de4b8884ddef2cc174974711"
+        },
+        "wrapper": {
+          "path": "../design/character_recovery_refined_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_recovery_refined_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_recovery_refined_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_recovery_refined_20260913/fields.json",
+          "sha256": "84e125bfdd262349d40f1a2e9a126a3629645dff71766a07178a968c11b17b74"
+        },
+        "supports": {
+          "path": "../design/character_recovery_refined_20260913/supports.json",
+          "sha256": "b58020a8044c73042f603760e61c3f6f2fbff02d8ffa7538af759190f2b13e88"
+        },
+        "lightContact": {
+          "path": "../design/character_recovery_refined_20260913/light-contact.js",
+          "sha256": "cf10767795dacd2a32231b4f7e4baf72580110a1708a6cb6dd9d333a74d430cf"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_recovery_refined_20260913/work/beethoven/light_contact.json",
+          "sha256": "0471f9834cb75c1f5ac4a3b91aaac5b22de564bb852b0b01c50f858018b9badd"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-angela-7e60ef917e98a772",
+      "dogId": "design-character_recovery_refined_20260913-angela",
+      "title": "Angela Davis",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-7e60ef917e98a772894ba4773ebc5568f2520edec3ea30a24b5340b797ceb9aa.png",
+      "imageHash": "7e60ef917e98a772894ba4773ebc5568f2520edec3ea30a24b5340b797ceb9aa",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_recovery_refined_20260913/characters/angela.js",
+      "sourceHash": "0faa0fa34b2afe316644403062fbc9cf5e74138c11d5889cabc95164d969854b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_recovery_refined_20260913/characters/angela.js",
+          "sha256": "0faa0fa34b2afe316644403062fbc9cf5e74138c11d5889cabc95164d969854b"
+        }
+      ],
+      "description": "Angela Davis: a large uneven Afro, warm brown face and vivid pink garment against pale green cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_recovery_refined_20260913",
+      "slug": "angela",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_recovery_refined_20260913/out/angela.json",
+          "sha256": "c3df6525e0ce696134d4e7438d4df25b0a83cf73c5cd9dc378320ed003021a8d"
+        },
+        "cast": {
+          "path": "../design/character_recovery_refined_20260913/cast.json",
+          "sha256": "ddf6b5110187a1dd93545bdf3de9c80eddf0305538f28dd6d163c424266e3deb"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_recovery_refined_20260913/out/angela_wide_4000.png",
+          "sha256": "42262dc7e2c9b8ed8b24f940bbfc94c38fde9bad6fbe1406aede16c00d617d98",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_recovery_refined_20260913/out/angela_square_2000.png",
+          "sha256": "88216a03845e671dd111bd9cb4d6e9aef1c2cb09fd85bb524626236523dc7e20",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_recovery_refined_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_recovery_refined_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_recovery_refined_20260913/work/angela/wide.json",
+          "sha256": "63b098412017a07a850aeae1c8b8198ad9603d9fe2895cdcfaa7b8ddcbd95002"
+        },
+        "wrapper": {
+          "path": "../design/character_recovery_refined_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_recovery_refined_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_recovery_refined_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_recovery_refined_20260913/fields.json",
+          "sha256": "84e125bfdd262349d40f1a2e9a126a3629645dff71766a07178a968c11b17b74"
+        },
+        "supports": {
+          "path": "../design/character_recovery_refined_20260913/supports.json",
+          "sha256": "b58020a8044c73042f603760e61c3f6f2fbff02d8ffa7538af759190f2b13e88"
+        },
+        "lightContact": {
+          "path": "../design/character_recovery_refined_20260913/light-contact.js",
+          "sha256": "cf10767795dacd2a32231b4f7e4baf72580110a1708a6cb6dd9d333a74d430cf"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_recovery_refined_20260913/work/angela/light_contact.json",
+          "sha256": "270af1555ecd40220ce92871e0a8a0bd378f454170c019ef47df036d78e5efbe"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-josephine-77a996a63a0bbea9",
+      "dogId": "design-character_recovery_refined_20260913-josephine",
+      "title": "Josephine Baker",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-77a996a63a0bbea9230a72aaf67b4ac66675f2d54b36a54892691f4de01e4191.png",
+      "imageHash": "77a996a63a0bbea9230a72aaf67b4ac66675f2d54b36a54892691f4de01e4191",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_recovery_refined_20260913/characters/josephine.js",
+      "sourceHash": "bddc7c00e3bd253ef41fc96074484f08782abd1282186d07611116ec96bc86e3",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_recovery_refined_20260913/characters/josephine.js",
+          "sha256": "bddc7c00e3bd253ef41fc96074484f08782abd1282186d07611116ec96bc86e3"
+        }
+      ],
+      "description": "Josephine Baker: sleek dark hair, gold hoops and an uneven yellow banana skirt against muted violet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_recovery_refined_20260913",
+      "slug": "josephine",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_recovery_refined_20260913/out/josephine.json",
+          "sha256": "108b742fab443caec40fa6ccda9390086122062467eefffc5f30f2008dd74297"
+        },
+        "cast": {
+          "path": "../design/character_recovery_refined_20260913/cast.json",
+          "sha256": "ddf6b5110187a1dd93545bdf3de9c80eddf0305538f28dd6d163c424266e3deb"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_recovery_refined_20260913/out/josephine_wide_4000.png",
+          "sha256": "efafad3b45cfb9b664f3b14a32a4874b8701152f695ab283bc284a44b016346c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_recovery_refined_20260913/out/josephine_square_2000.png",
+          "sha256": "ef2053c372c1e3459df2fcc7306a306f0ca9f6ee62df7928a18d54f14ed8d518",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_recovery_refined_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_recovery_refined_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_recovery_refined_20260913/work/josephine/wide.json",
+          "sha256": "848c6789409ed83ef63ac642d8a773ca83e73874000d8ef7253efdf5c62c9305"
+        },
+        "wrapper": {
+          "path": "../design/character_recovery_refined_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_recovery_refined_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_recovery_refined_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_recovery_refined_20260913/fields.json",
+          "sha256": "84e125bfdd262349d40f1a2e9a126a3629645dff71766a07178a968c11b17b74"
+        },
+        "supports": {
+          "path": "../design/character_recovery_refined_20260913/supports.json",
+          "sha256": "b58020a8044c73042f603760e61c3f6f2fbff02d8ffa7538af759190f2b13e88"
+        },
+        "lightContact": {
+          "path": "../design/character_recovery_refined_20260913/light-contact.js",
+          "sha256": "cf10767795dacd2a32231b4f7e4baf72580110a1708a6cb6dd9d333a74d430cf"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_recovery_refined_20260913/work/josephine/light_contact.json",
+          "sha256": "e56ef7fd366f2afff5125ddef94f7f85189605131371c8b9bd219591060bbe5d"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_recovery_refined_20260913-sade-05b0d768e8a6c2d7",
+      "dogId": "design-character_recovery_refined_20260913-sade",
+      "title": "Sade",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073.png",
+      "imageHash": "05b0d768e8a6c2d78921ecc9c53a7b8e48e49a441a365a2401b8abdeabedc073",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_recovery_refined_20260913/characters/sade.js",
+      "sourceHash": "7f6f879452871fd7dce6c57e7067d2b5bef9fbfb21f2f20f78344ae479b6de34",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_recovery_refined_20260913/characters/sade.js",
+          "sha256": "7f6f879452871fd7dce6c57e7067d2b5bef9fbfb21f2f20f78344ae479b6de34"
+        }
+      ],
+      "description": "Sade: a swept black ponytail and gold hoops, with a broad dark suit against brick-red cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_recovery_refined_20260913",
+      "slug": "sade",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_recovery_refined_20260913/out/sade.json",
+          "sha256": "9dacdccbaa766b7c75c4f9059da29bfa6f7a6321eda7c69a7fabb8ba066e1464"
+        },
+        "cast": {
+          "path": "../design/character_recovery_refined_20260913/cast.json",
+          "sha256": "ddf6b5110187a1dd93545bdf3de9c80eddf0305538f28dd6d163c424266e3deb"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_recovery_refined_20260913/out/sade_wide_4000.png",
+          "sha256": "c96c3440a86e8c009d19f2825feb1842bbbf0e33d69e3c2d0943e77c2543f651",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_recovery_refined_20260913/out/sade_square_2000.png",
+          "sha256": "38ccc8fcecf05a7484311cdd3a9c44330c9a3c3fc9ebb86095d7ad452705a644",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_recovery_refined_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_recovery_refined_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_recovery_refined_20260913/work/sade/wide.json",
+          "sha256": "6f173b40695c248ab6de4db4b8a20efd721a7538a1602864fc9f861a27441038"
+        },
+        "wrapper": {
+          "path": "../design/character_recovery_refined_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_recovery_refined_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_recovery_refined_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_recovery_refined_20260913/fields.json",
+          "sha256": "84e125bfdd262349d40f1a2e9a126a3629645dff71766a07178a968c11b17b74"
+        },
+        "supports": {
+          "path": "../design/character_recovery_refined_20260913/supports.json",
+          "sha256": "b58020a8044c73042f603760e61c3f6f2fbff02d8ffa7538af759190f2b13e88"
+        },
+        "lightContact": {
+          "path": "../design/character_recovery_refined_20260913/light-contact.js",
+          "sha256": "cf10767795dacd2a32231b4f7e4baf72580110a1708a6cb6dd9d333a74d430cf"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_recovery_refined_20260913/work/sade/light_contact.json",
+          "sha256": "669f34a017d38181bc1df19b8319ed3b38d52c01ec3664c90f7345606edc1f82"
+        }
+      }
     }
   ],
   "rounds": [
