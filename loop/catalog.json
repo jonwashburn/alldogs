@@ -1634,6 +1634,56 @@
       "batch": "character_round_15_20260913",
       "slug": "panther",
       "image": "/collection/assets/candidate-5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323.png"
+    },
+    {
+      "id": "candidate-character_round_16_20260913-hellboy-c7b96760148f1767",
+      "title": "Hellboy",
+      "kind": "candidate",
+      "imageHash": "c7b96760148f1767b0667d1ed1228f0e0db3e6433df57d3a1af7d2fd5f72aca7",
+      "description": "Hellboy: a red face, filed horns and oversized stone forepaw, with a khaki coat against cool blue cotton.",
+      "batch": "character_round_16_20260913",
+      "slug": "hellboy",
+      "image": "/collection/assets/candidate-c7b96760148f1767b0667d1ed1228f0e0db3e6433df57d3a1af7d2fd5f72aca7.png"
+    },
+    {
+      "id": "candidate-character_round_16_20260913-shrek-5501707929fc3c21",
+      "title": "Shrek",
+      "kind": "candidate",
+      "imageHash": "5501707929fc3c21da838c560551e029918bd4a832e35a5f2c993e57254d2226",
+      "description": "Shrek: a broad lime-green head, tube ears and a cream shirt with brown vest against purple cotton.",
+      "batch": "character_round_16_20260913",
+      "slug": "shrek",
+      "image": "/collection/assets/candidate-5501707929fc3c21da838c560551e029918bd4a832e35a5f2c993e57254d2226.png"
+    },
+    {
+      "id": "candidate-character_round_16_20260913-missy-9206fb03d72e9238",
+      "title": "Missy Elliott",
+      "kind": "candidate",
+      "imageHash": "9206fb03d72e92381c88e056c95ae50221629c04358841ccc3051a0116b24687",
+      "description": "Missy Elliott: a compact, heavy dark suit with violet passages, a warm brown face and a silver chain against lime cotton.",
+      "batch": "character_round_16_20260913",
+      "slug": "missy",
+      "image": "/collection/assets/candidate-9206fb03d72e92381c88e056c95ae50221629c04358841ccc3051a0116b24687.png"
+    },
+    {
+      "id": "candidate-character_round_16_20260913-bette-99e145bdf6207a34",
+      "title": "Bette Davis as Baby Jane",
+      "kind": "candidate",
+      "imageHash": "99e145bdf6207a34f39700ca853a611896673f86d72e5f0c5e4730b0d6e65f4e",
+      "description": "Bette Davis as Baby Jane: pale curls, a blue bow, a stiff pink dress and a wary expression against deep green cotton.",
+      "batch": "character_round_16_20260913",
+      "slug": "bette",
+      "image": "/collection/assets/candidate-99e145bdf6207a34f39700ca853a611896673f86d72e5f0c5e4730b0d6e65f4e.png"
+    },
+    {
+      "id": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
+      "title": "Ast\u00e9rix",
+      "kind": "candidate",
+      "imageHash": "beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c",
+      "description": "Ast\u00e9rix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
+      "batch": "character_round_16_20260913",
+      "slug": "asterix",
+      "image": "/collection/assets/candidate-beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c.png"
     }
   ],
   "references": [
@@ -2111,6 +2161,33 @@
           {
             "candidateId": "candidate-character_round_15_20260913-panther-5e8f67d8039a3c2e",
             "imageHash": "5e8f67d8039a3c2e5018ac414b8bda56fbf7c95cc570e266b53bac6a27f82323"
+          }
+        ]
+      },
+      {
+        "id": "round-16",
+        "title": "Round 16",
+        "frozenAt": "2026-09-13T23:35:03.033718+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_16_20260913-hellboy-c7b96760148f1767",
+            "imageHash": "c7b96760148f1767b0667d1ed1228f0e0db3e6433df57d3a1af7d2fd5f72aca7"
+          },
+          {
+            "candidateId": "candidate-character_round_16_20260913-shrek-5501707929fc3c21",
+            "imageHash": "5501707929fc3c21da838c560551e029918bd4a832e35a5f2c993e57254d2226"
+          },
+          {
+            "candidateId": "candidate-character_round_16_20260913-missy-9206fb03d72e9238",
+            "imageHash": "9206fb03d72e92381c88e056c95ae50221629c04358841ccc3051a0116b24687"
+          },
+          {
+            "candidateId": "candidate-character_round_16_20260913-bette-99e145bdf6207a34",
+            "imageHash": "99e145bdf6207a34f39700ca853a611896673f86d72e5f0c5e4730b0d6e65f4e"
+          },
+          {
+            "candidateId": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
+            "imageHash": "beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c"
           }
         ]
       }

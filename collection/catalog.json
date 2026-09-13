@@ -16071,6 +16071,496 @@
           "sha256": "14a6e3eb314d71dc39666271073ed49fe453660f659a72661d7f742047b49e1b"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_16_20260913-hellboy-c7b96760148f1767",
+      "dogId": "design-character_round_16_20260913-hellboy",
+      "title": "Hellboy",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-c7b96760148f1767b0667d1ed1228f0e0db3e6433df57d3a1af7d2fd5f72aca7.png",
+      "imageHash": "c7b96760148f1767b0667d1ed1228f0e0db3e6433df57d3a1af7d2fd5f72aca7",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_16_20260913/characters/hellboy.js",
+      "sourceHash": "9e55387f7631c9ed7f2537a6184fa0c88347c27c1a7d00ac90d8323888958200",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_16_20260913/characters/hellboy.js",
+          "sha256": "9e55387f7631c9ed7f2537a6184fa0c88347c27c1a7d00ac90d8323888958200"
+        }
+      ],
+      "description": "Hellboy: a red face, filed horns and oversized stone forepaw, with a khaki coat against cool blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_16_20260913",
+      "slug": "hellboy",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_16_20260913/out/hellboy.json",
+          "sha256": "649a165dd84508be409bcde27e302a219b784e2a266b2e1a3c479ce16766c627"
+        },
+        "cast": {
+          "path": "../design/character_round_16_20260913/cast.json",
+          "sha256": "a48abb28347edc5fc03025c90c4de9380a9c572b1466e38aef4b4436d64a25bf"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_16_20260913/out/hellboy_wide_4000.png",
+          "sha256": "ed1b59ce45b401ec1d8b3e654c4a6022dedcef7f9d685ab11f5396b169392ed6",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_16_20260913/out/hellboy_square_2000.png",
+          "sha256": "5c19aa6b6b5f16caa0ef2ac6ef5e44493bafa7ab271009f3165122070f002cf1",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_16_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_16_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_16_20260913/work/hellboy/wide.json",
+          "sha256": "d32b2ef44e496967198817d865e4c987449f9c961567ef92008c2d7a82c76810"
+        },
+        "wrapper": {
+          "path": "../design/character_round_16_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_16_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_16_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_16_20260913/fields.json",
+          "sha256": "78096036b3abd2e41c1e4a00cf29cbd888ddc7f25a19bf65669bb01927d69dcd"
+        },
+        "supports": {
+          "path": "../design/character_round_16_20260913/supports.json",
+          "sha256": "286854434f44fbae3bd004af2417a744c7f218bba30352807c3c174f70887756"
+        },
+        "lightContact": {
+          "path": "../design/character_round_16_20260913/light-contact.js",
+          "sha256": "749bb80d2b37be8320e5679e439ba84dc96c477b6cd779533b556b444119e605"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_16_20260913/work/hellboy/light_contact.json",
+          "sha256": "3610d9e132bd8e8c07b2bf029a894dd97eae9bb353ef053343e064f5bebb450d"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_16_20260913-shrek-5501707929fc3c21",
+      "dogId": "design-character_round_16_20260913-shrek",
+      "title": "Shrek",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5501707929fc3c21da838c560551e029918bd4a832e35a5f2c993e57254d2226.png",
+      "imageHash": "5501707929fc3c21da838c560551e029918bd4a832e35a5f2c993e57254d2226",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_16_20260913/characters/shrek.js",
+      "sourceHash": "2eb95528a6a791a469aef59d4e5ab44ca46d65b1784739440d5ef89c0a3821cf",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_16_20260913/characters/shrek.js",
+          "sha256": "2eb95528a6a791a469aef59d4e5ab44ca46d65b1784739440d5ef89c0a3821cf"
+        }
+      ],
+      "description": "Shrek: a broad lime-green head, tube ears and a cream shirt with brown vest against purple cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_16_20260913",
+      "slug": "shrek",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_16_20260913/out/shrek.json",
+          "sha256": "788a9dece42cb88a729b82a774d1eb83930c41578a0f832cd99f10124d3bb241"
+        },
+        "cast": {
+          "path": "../design/character_round_16_20260913/cast.json",
+          "sha256": "a48abb28347edc5fc03025c90c4de9380a9c572b1466e38aef4b4436d64a25bf"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_16_20260913/out/shrek_wide_4000.png",
+          "sha256": "bf73251582861114bc49b50190531da2421d9dd005e10d5b99a1948e34e1c333",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_16_20260913/out/shrek_square_2000.png",
+          "sha256": "ec5f501e418cd4980121870cc453a23938beb27364c1f552e273a6a0fe72152f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_16_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_16_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_16_20260913/work/shrek/wide.json",
+          "sha256": "2b8c12dd72cfa262cdb0d267141ad1aa61e2c6180b24ea83e3d5a870cabfe02c"
+        },
+        "wrapper": {
+          "path": "../design/character_round_16_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_16_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_16_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_16_20260913/fields.json",
+          "sha256": "78096036b3abd2e41c1e4a00cf29cbd888ddc7f25a19bf65669bb01927d69dcd"
+        },
+        "supports": {
+          "path": "../design/character_round_16_20260913/supports.json",
+          "sha256": "286854434f44fbae3bd004af2417a744c7f218bba30352807c3c174f70887756"
+        },
+        "lightContact": {
+          "path": "../design/character_round_16_20260913/light-contact.js",
+          "sha256": "749bb80d2b37be8320e5679e439ba84dc96c477b6cd779533b556b444119e605"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_16_20260913/work/shrek/light_contact.json",
+          "sha256": "00b349c3eb1ece4f58aa7571aa669614717cc3e37cfafd075b0073285a7decf5"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_16_20260913-missy-9206fb03d72e9238",
+      "dogId": "design-character_round_16_20260913-missy",
+      "title": "Missy Elliott",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9206fb03d72e92381c88e056c95ae50221629c04358841ccc3051a0116b24687.png",
+      "imageHash": "9206fb03d72e92381c88e056c95ae50221629c04358841ccc3051a0116b24687",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_16_20260913/characters/missy.js",
+      "sourceHash": "01857dd104e92bef621dd85d61183288fc4e06cc433a67a803b0c049f9db4ca6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_16_20260913/characters/missy.js",
+          "sha256": "01857dd104e92bef621dd85d61183288fc4e06cc433a67a803b0c049f9db4ca6"
+        }
+      ],
+      "description": "Missy Elliott: a compact, heavy dark suit with violet passages, a warm brown face and a silver chain against lime cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_16_20260913",
+      "slug": "missy",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_16_20260913/out/missy.json",
+          "sha256": "92b838c195e4234f4647947b44ccd2678d903636d1e1021cb6889be7291bcff0"
+        },
+        "cast": {
+          "path": "../design/character_round_16_20260913/cast.json",
+          "sha256": "a48abb28347edc5fc03025c90c4de9380a9c572b1466e38aef4b4436d64a25bf"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_16_20260913/out/missy_wide_4000.png",
+          "sha256": "6a1a780885cd46ca2f9912d8a5334b130f662bc3fe03cf87b211da284d846dde",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_16_20260913/out/missy_square_2000.png",
+          "sha256": "f6d27631a43a23d7b0514f048d702d260d34b44cca973efd5ec48ce09918f6e7",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_16_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_16_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_16_20260913/work/missy/wide.json",
+          "sha256": "4346f4b785eb735737098df66d491568051dc8ea9822c4a2c2018669f461fce0"
+        },
+        "wrapper": {
+          "path": "../design/character_round_16_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_16_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_16_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_16_20260913/fields.json",
+          "sha256": "78096036b3abd2e41c1e4a00cf29cbd888ddc7f25a19bf65669bb01927d69dcd"
+        },
+        "supports": {
+          "path": "../design/character_round_16_20260913/supports.json",
+          "sha256": "286854434f44fbae3bd004af2417a744c7f218bba30352807c3c174f70887756"
+        },
+        "lightContact": {
+          "path": "../design/character_round_16_20260913/light-contact.js",
+          "sha256": "749bb80d2b37be8320e5679e439ba84dc96c477b6cd779533b556b444119e605"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_16_20260913/work/missy/light_contact.json",
+          "sha256": "d7d460726ee0a42f890ba32a639816989a6f47048a1bada7b910d5d7888bfbdf"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_16_20260913-bette-99e145bdf6207a34",
+      "dogId": "design-character_round_16_20260913-bette",
+      "title": "Bette Davis as Baby Jane",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-99e145bdf6207a34f39700ca853a611896673f86d72e5f0c5e4730b0d6e65f4e.png",
+      "imageHash": "99e145bdf6207a34f39700ca853a611896673f86d72e5f0c5e4730b0d6e65f4e",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_16_20260913/characters/bette.js",
+      "sourceHash": "f841e2d1f779f65a9efd9b1995f2054b359a9214c34a68eb8bd970629f7dce7f",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_16_20260913/characters/bette.js",
+          "sha256": "f841e2d1f779f65a9efd9b1995f2054b359a9214c34a68eb8bd970629f7dce7f"
+        }
+      ],
+      "description": "Bette Davis as Baby Jane: pale curls, a blue bow, a stiff pink dress and a wary expression against deep green cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_16_20260913",
+      "slug": "bette",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_16_20260913/out/bette.json",
+          "sha256": "9fde063f7674f6bac9b976ad287762ce60107714d5ecc2a36e04e8bea99ec467"
+        },
+        "cast": {
+          "path": "../design/character_round_16_20260913/cast.json",
+          "sha256": "a48abb28347edc5fc03025c90c4de9380a9c572b1466e38aef4b4436d64a25bf"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_16_20260913/out/bette_wide_4000.png",
+          "sha256": "00773112d5df4987f2b6a23b07afb4295c86415178e56c5cc1966d2ef0fbd540",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_16_20260913/out/bette_square_2000.png",
+          "sha256": "780b9b7d0dc1f85a1ff2ef0416362cd567877f0770c63222e8dede4b5446c085",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_16_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_16_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_16_20260913/work/bette/wide.json",
+          "sha256": "7a71181331bf375e2caf455321cf1673d3b638260315ef0a0062334979ce7286"
+        },
+        "wrapper": {
+          "path": "../design/character_round_16_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_16_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_16_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_16_20260913/fields.json",
+          "sha256": "78096036b3abd2e41c1e4a00cf29cbd888ddc7f25a19bf65669bb01927d69dcd"
+        },
+        "supports": {
+          "path": "../design/character_round_16_20260913/supports.json",
+          "sha256": "286854434f44fbae3bd004af2417a744c7f218bba30352807c3c174f70887756"
+        },
+        "lightContact": {
+          "path": "../design/character_round_16_20260913/light-contact.js",
+          "sha256": "749bb80d2b37be8320e5679e439ba84dc96c477b6cd779533b556b444119e605"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_16_20260913/work/bette/light_contact.json",
+          "sha256": "a73461f626702c913e9fd6af9028298a86df321393b7b696d0eae9b4353d1bf8"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
+      "dogId": "design-character_round_16_20260913-asterix",
+      "title": "Astérix",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c.png",
+      "imageHash": "beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c",
+      "parent": "original-38-8c1f9d085e1cbc56",
+      "nativeParentSeed": 38,
+      "source": "../design/character_round_16_20260913/characters/asterix.js",
+      "sourceHash": "78c133fcd4ccaceead6306cb2f61b409c16dd8435e40fb07e9477b134b780784",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_16_20260913/characters/asterix.js",
+          "sha256": "78c133fcd4ccaceead6306cb2f61b409c16dd8435e40fb07e9477b134b780784"
+        }
+      ],
+      "description": "Astérix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_16_20260913",
+      "slug": "asterix",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_16_20260913/out/asterix.json",
+          "sha256": "86fcc55197b8a50fcb50362b308d196eef45e698129834300be3c2ab84d615de"
+        },
+        "cast": {
+          "path": "../design/character_round_16_20260913/cast.json",
+          "sha256": "a48abb28347edc5fc03025c90c4de9380a9c572b1466e38aef4b4436d64a25bf"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_16_20260913/out/asterix_wide_4000.png",
+          "sha256": "35ac105232c0040608020c3c33a4244491f361ed1cd2d95b38d50bc7d8d78fa6",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_16_20260913/out/asterix_square_2000.png",
+          "sha256": "1112f60dbfa68f801faf3426f99f5bf0e57e31d9292cb66a94d59c0510497b7a",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_16_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_16_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_16_20260913/work/asterix/wide.json",
+          "sha256": "ce66b6ec6e83db8d3a2333a677570f30e8802a3b4a8915d778975bd3e869dc99"
+        },
+        "wrapper": {
+          "path": "../design/character_round_16_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_16_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_16_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_16_20260913/fields.json",
+          "sha256": "78096036b3abd2e41c1e4a00cf29cbd888ddc7f25a19bf65669bb01927d69dcd"
+        },
+        "supports": {
+          "path": "../design/character_round_16_20260913/supports.json",
+          "sha256": "286854434f44fbae3bd004af2417a744c7f218bba30352807c3c174f70887756"
+        },
+        "lightContact": {
+          "path": "../design/character_round_16_20260913/light-contact.js",
+          "sha256": "749bb80d2b37be8320e5679e439ba84dc96c477b6cd779533b556b444119e605"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_16_20260913/work/asterix/light_contact.json",
+          "sha256": "8c93519938015ede617c72904f4e5939be5b5fadfc4dc1047dbb921d73af5743"
+        }
+      }
     }
   ],
   "rounds": [
