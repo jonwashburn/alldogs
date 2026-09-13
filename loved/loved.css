@@ -40,5 +40,15 @@ dialog button:hover{background:#eeede6}
 .viewer-bottom{margin-top:14px}.viewer-label{text-align:center}
 #viewer-caption{margin:0;font-size:14px}.original{font-size:11px;color:var(--muted)}
 [hidden]{display:none!important}
-@media(max-width:600px){.masthead{padding:18px;gap:14px}.brand{font-size:17px}.masthead nav{gap:16px;font-size:12px}.heading{padding:26px 18px 28px;gap:16px;align-items:flex-start}h1{font-size:42px;letter-spacing:-2px}.intro{flex-direction:column;align-items:flex-end;gap:8px}.intro p{font-size:11px;text-align:right;max-width:170px}.shuffle{padding:8px 14px}.artwork{aspect-ratio:1/1}figure{margin-bottom:34px}figcaption{padding:11px 18px 0;font-size:13px}footer{margin:0 18px}.viewer-top,.viewer-bottom{gap:10px}dialog{padding:12px;width:calc(100vw - 16px)}#viewer-caption{font-size:12px}}
+@media(max-width:600px){.masthead{padding:18px;gap:14px}.brand{font-size:17px}.masthead nav{gap:16px;font-size:12px}.heading{padding:26px 18px 28px;gap:16px;align-items:flex-start}h1{font-size:42px;letter-spacing:-2px}.intro{flex-direction:column;align-items:flex-end;gap:8px}.intro p{font-size:11px;text-align:right;max-width:170px}.shuffle{padding:8px 14px}figure{margin-bottom:34px}figcaption{padding:11px 18px 0;font-size:13px}footer{margin:0 18px}.viewer-top,.viewer-bottom{gap:10px}dialog{padding:12px;width:calc(100vw - 16px)}#viewer-caption{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.gallery-controls{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.view-toggle{display:flex;border:1px solid #cbc7be;border-radius:100px;padding:3px;gap:2px}
+.view-toggle button{border:0;background:transparent;border-radius:100px;min-height:38px;padding:8px 14px;font-size:13px;white-space:nowrap}
+.view-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.view-toggle button:not([aria-pressed="true"]):hover{background:#f0eee8}
+.gallery[data-view="square"]{max-width:1000px;margin:0 auto}
+.gallery[data-view="square"] .artwork{aspect-ratio:1/1}
+@media(max-width:900px){.heading{flex-wrap:wrap}.intro{gap:18px;flex-wrap:wrap}}
+@media(max-width:600px){.intro{width:100%;align-items:flex-start;gap:14px}.intro p{text-align:left;max-width:none}.gallery-controls{justify-content:flex-start}.view-toggle button{min-height:38px;padding:8px 12px}}

@@ -1598,12 +1598,10 @@ const ROTATE = [
 ];
 /* Only originals with both approved fates enter the state-changing demonstrations. */
 const FATE_ROTATE = ROTATE.filter(seed => !APPROVED_DOGS[seed]);
-/* The hero is 62 Barack on every visit (Jon 2026-09-08). Each feature band
-   holds one dog, drawn fresh on each visit from the selected rotation. Reserve
-   one more for the why picture so the opening set has no duplicate dogs. */
-const HERO_SEED = 62;
+/* All opening pictures, including the primary hero, join the same fresh
+   per-visit draw. Reserve the why picture too so the opening set has no duplicates. */
 function drawBands(n) {
-  const pool = ROTATE.filter(s => s !== HERO_SEED), out = [HERO_SEED];
+  const pool = [...ROTATE], out = [];
   while (out.length < n && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
   return out;
 }

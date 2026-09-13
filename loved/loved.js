@@ -6,6 +6,26 @@
   const shuffleButton = document.querySelector('#shuffle');
   const announce = document.querySelector('#announcement');
   let observer;
+  const viewControls = document.querySelector('.view-toggle');
+  const viewButtons = [...document.querySelectorAll('.view-toggle [data-view]')];
+  let view = 'wide';
+  try { if (localStorage.getItem('alldogs-loved-view') === 'square') view = 'square'; } catch (_) {}
+  function imageSizes() { return view === 'square' ? '(max-width: 1000px) 200vw, 2000px' : '100vw'; }
+  function setView(next, save = false) {
+    view = next === 'square' ? 'square' : 'wide';
+    gallery.dataset.view = view;
+    viewButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === view)));
+    gallery.querySelectorAll('img').forEach(img => img.sizes = imageSizes());
+    if (save) {
+      try { localStorage.setItem('alldogs-loved-view', view); } catch (_) {}
+      announce.textContent = view === 'square' ? 'Square view.' : 'Full width view.';
+    }
+  }
+  setView(view);
+  if (viewControls) {
+    viewControls.hidden = false;
+    viewButtons.forEach(button => button.addEventListener('click', () => setView(button.dataset.view, true)));
+  }
   function load(card, eager = false) {
     const img = card.querySelector('img[data-src]');
     if (!img) return;
@@ -16,7 +36,7 @@
     }, {once:true});
     img.loading = eager ? 'eager' : 'lazy';
     img.fetchPriority = eager ? 'high' : 'auto';
-    img.sizes = '(max-width: 600px) 200vw, 100vw';
+    img.sizes = imageSizes();
     img.srcset = img.dataset.srcset;
     img.src = img.dataset.src;
     delete img.dataset.src; delete img.dataset.srcset;
