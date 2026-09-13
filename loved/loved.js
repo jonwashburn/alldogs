@@ -1,6 +1,9 @@
 (() => {
   const gallery = document.querySelector('.gallery');
   if (!gallery) return;
+  // Loved curation only: keep White Lightning and retain Small Thunder in the archive.
+  const omittedIds = new Set(['candidate-loop_0016_thor_20260911-thor-1a05642934dc8e38']);
+  gallery.querySelectorAll('figure').forEach(card => { if (omittedIds.has(card.id)) card.remove(); });
   let cards = [...gallery.querySelectorAll('figure')];
   const manualCards = new Map(cards.map(card => [card.id, card]));
   const shuffleButton = document.querySelector('#shuffle');
@@ -142,7 +145,7 @@
       const data = await response.json();
       if (data.version !== 1 || !Array.isArray(data.items)) throw Error('Invalid artwork list');
       clearTimeout(retryTimer); retryTimer = null; retryDelay = 5000;
-      const incoming = new Map(data.items.map(item => [item.id,item]));
+      const incoming = new Map(data.items.filter(item => !omittedIds.has(item.id)).map(item => [item.id,item]));
       // Validate the whole incoming set before touching the current gallery.
       const additions = [...incoming.values()].filter(item => !cards.some(card => card.id === item.id)).map(makeCard);
       const removals = cards.filter(card => !manualCards.has(card.id) && !incoming.has(card.id));
