@@ -2,6 +2,7 @@
   const gallery = document.querySelector('.gallery');
   if (!gallery) return;
   let cards = [...gallery.querySelectorAll('figure')];
+  const manualCards = new Map(cards.map(card => [card.id, card]));
   const shuffleButton = document.querySelector('#shuffle');
   const announce = document.querySelector('#announcement');
   let observer;
@@ -72,10 +73,11 @@
       if (turn === ticket) { image.style.visibility = 'visible'; caption.textContent += ' · Open the original below'; }
     });
   }
-  cards.forEach(card => card.querySelector('.artwork').addEventListener('click', event => {
+  function bindCard(card) { card.querySelector('.artwork').addEventListener('click', event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();show(cards.indexOf(card));dialog.showModal();
-  }));
+  }); }
+  cards.forEach(bindCard);
   document.querySelector('#close-viewer').addEventListener('click', () => dialog.close());
   document.querySelector('#previous').addEventListener('click', () => show(index - 1));
   document.querySelector('#next').addEventListener('click', () => show(index + 1));
@@ -84,6 +86,59 @@
       event.preventDefault();show(index + (event.key === 'ArrowRight' ? 1 : -1));
     }
   });
+  const allowedHosts = new Set(['alldogs.wtf', 'recognitionphysics-public.t3.tigrisfiles.io']);
+  function safeAsset(value) {
+    if (typeof value !== 'string') throw Error('Invalid image');
+    const url = new URL(value, location.origin);
+    if (url.protocol !== 'https:' || !allowedHosts.has(url.hostname)) throw Error('Invalid image host');
+    return url.href;
+  }
+  function makeCard(item) {
+    if (!/^[a-zA-Z0-9_-]{1,240}$/.test(item.id) || typeof item.title !== 'string' || !Array.isArray(item.variants) || !item.variants.length) throw Error('Invalid artwork');
+    const variants = item.variants.map(v => {
+      if (!Number.isInteger(v.width) || v.width !== 2 * v.height || v.width < 2000) throw Error('Wide artwork required');
+      return {...v, src:safeAsset(v.src)};
+    }).sort((a,b) => a.width-b.width);
+    const figure = document.createElement('figure'); figure.id = item.id;
+    figure.dataset.revision = item.id; figure.dataset.original = safeAsset(item.original);
+    const link = document.createElement('a'); link.className = 'artwork'; link.href = variants.at(-1).src;
+    link.setAttribute('aria-label', 'Enlarge ' + item.title);
+    const img = document.createElement('img'); img.alt = item.title; img.width = variants[0].width; img.height = variants[0].height; img.decoding = 'async';
+    img.dataset.src = variants[0].src; img.dataset.srcset = variants.map(v => v.src + ' ' + v.width + 'w').join(', ');
+    link.append(img);
+    const caption = document.createElement('figcaption'), title = document.createElement('span'), number = document.createElement('span');
+    title.textContent = item.title; number.className = 'number'; number.textContent = 'One of one'; caption.append(title,number);
+    figure.append(link,caption); bindCard(figure); return figure;
+  }
+  let refreshing = false;
+  async function refreshLoved() {
+    if (refreshing || document.hidden || dialog.open) return;
+    refreshing = true;
+    const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 10000);
+    try {
+      const response = await fetch('https://api.alldogs.wtf/collection-api/loved', {signal:controller.signal, credentials:'omit'});
+      if (!response.ok) throw Error('Artwork unavailable');
+      const data = await response.json();
+      if (data.version !== 1 || !Array.isArray(data.items)) throw Error('Invalid artwork list');
+      const incoming = new Map(data.items.map(item => [item.id,item]));
+      // Validate the whole incoming set before touching the current gallery.
+      const additions = [...incoming.values()].filter(item => !cards.some(card => card.id === item.id)).map(makeCard);
+      const removals = cards.filter(card => !manualCards.has(card.id) && !incoming.has(card.id));
+      if (!additions.length && !removals.length) return;
+      cards = cards.filter(card => !removals.includes(card)); removals.forEach(card => {observer?.unobserve(card);card.remove();});
+      cards.push(...additions); additions.forEach(card => {gallery.append(card);if(observer)observer.observe(card);else load(card);});
+      const count = cards.length;
+      gallery.setAttribute('aria-label', count + ' loved dogs');
+      const intro = document.querySelector('.intro p');intro.replaceChildren(document.createTextNode(count + ' favorites.'),document.createElement('br'),document.createTextNode('A different order every visit.'));
+      if (window.scrollY < 10) shuffle(true);
+      announce.textContent = additions.length ? additions.length + ' new loved ' + (additions.length === 1 ? 'dog.' : 'dogs.') : 'Loved paintings updated.';
+    } catch (_) {
+      // Retain the complete last-rendered gallery on a temporary service failure.
+    } finally {clearTimeout(timeout);refreshing=false;}
+  }
+  refreshLoved();
+  setInterval(refreshLoved, 60000);
+  document.addEventListener('visibilitychange', refreshLoved);
   dialog.addEventListener('click', event => {
     if (event.target !== dialog) return;
     const box = dialog.getBoundingClientRect();
