@@ -1284,6 +1284,56 @@
       "batch": "character_round_08_20260913",
       "slug": "freddie",
       "image": "/collection/assets/candidate-14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e.png"
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-chaplin-b4a5a7602ddfd1d8",
+      "title": "Chaplin, A Small Snag",
+      "kind": "candidate",
+      "imageHash": "b4a5a7602ddfd1d870edcc59aa5aa4282117cca0d96af16ee1888be4783967e5",
+      "description": "Charlie Chaplin as the Tramp: a long uneven black coat, bowler and oversized shoes; one forepaw holds a cane caught at a buckled paving stone. Cream and graphite against terracotta.",
+      "batch": "character_round_09b_20260913",
+      "slug": "chaplin",
+      "image": "/collection/assets/candidate-b4a5a7602ddfd1d870edcc59aa5aa4282117cca0d96af16ee1888be4783967e5.png"
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-poppins-1f2b9a898c417cf7",
+      "title": "Mary Poppins, Quite Composed",
+      "kind": "candidate",
+      "imageHash": "1f2b9a898c417cf71d26aaedb62c0c05fb875fb2b84dbcfe40ea61b2b39da250",
+      "description": "Mary Poppins suspended between a broad dark umbrella and a heavy patterned carpetbag. A small blue-coated dog against warm ochre cotton.",
+      "batch": "character_round_09b_20260913",
+      "slug": "poppins",
+      "image": "/collection/assets/candidate-1f2b9a898c417cf71d26aaedb62c0c05fb875fb2b84dbcfe40ea61b2b39da250.png"
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-houdini-f006ee819578178e",
+      "title": "Houdini, Through the Smallest Opening",
+      "kind": "candidate",
+      "imageHash": "f006ee819578178e3ac871e7893ae57208489230691f69a05549e224b1452995",
+      "description": "Harry Houdini emerging from a rough teal packing crate, with a broken chain trailing from the forward wrist. Warm skin and cream cloth against pale green.",
+      "batch": "character_round_09b_20260913",
+      "slug": "houdini",
+      "image": "/collection/assets/candidate-f006ee819578178e3ac871e7893ae57208489230691f69a05549e224b1452995.png"
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-lucy-b60b933f02bd8ba1",
+      "title": "Lucy, Faster Than Chocolate",
+      "kind": "candidate",
+      "imageHash": "b60b933f02bd8ba132dfbdbb960d2f93619745f9743bc0b2e3bb86cc0d69a006",
+      "description": "Lucille Ball as Lucy Ricardo in the chocolate-factory scene: a red-haired dog in pink, with chocolates gathered in her apron and at her mouth as a diagonal conveyor crosses the painting.",
+      "batch": "character_round_09b_20260913",
+      "slug": "lucy",
+      "image": "/collection/assets/candidate-b60b933f02bd8ba132dfbdbb960d2f93619745f9743bc0b2e3bb86cc0d69a006.png"
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-mae-26e3d2f48cf79ce1",
+      "title": "Mae, A Window of Her Own",
+      "kind": "candidate",
+      "imageHash": "26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9",
+      "description": "Mae Jemison in an orange flight suit, holding a pale helmet beside a dark spacecraft window and a small painted Earth. A quiet warm portrait against deep blue.",
+      "batch": "character_round_09b_20260913",
+      "slug": "mae",
+      "image": "/collection/assets/candidate-26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9.png"
     }
   ],
   "references": [
@@ -1572,6 +1622,33 @@
           {
             "candidateId": "candidate-character_round_08_20260913-freddie-14a19c7955933ff2",
             "imageHash": "14a19c7955933ff21fc9a1175517df4e90a101c0bff57f8d8218b41c85b0ee9e"
+          }
+        ]
+      },
+      {
+        "id": "round-09",
+        "title": "Round 09",
+        "frozenAt": "2026-09-13T06:08:29.252078+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_09b_20260913-chaplin-b4a5a7602ddfd1d8",
+            "imageHash": "b4a5a7602ddfd1d870edcc59aa5aa4282117cca0d96af16ee1888be4783967e5"
+          },
+          {
+            "candidateId": "candidate-character_round_09b_20260913-poppins-1f2b9a898c417cf7",
+            "imageHash": "1f2b9a898c417cf71d26aaedb62c0c05fb875fb2b84dbcfe40ea61b2b39da250"
+          },
+          {
+            "candidateId": "candidate-character_round_09b_20260913-houdini-f006ee819578178e",
+            "imageHash": "f006ee819578178e3ac871e7893ae57208489230691f69a05549e224b1452995"
+          },
+          {
+            "candidateId": "candidate-character_round_09b_20260913-lucy-b60b933f02bd8ba1",
+            "imageHash": "b60b933f02bd8ba132dfbdbb960d2f93619745f9743bc0b2e3bb86cc0d69a006"
+          },
+          {
+            "candidateId": "candidate-character_round_09b_20260913-mae-26e3d2f48cf79ce1",
+            "imageHash": "26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9"
           }
         ]
       }

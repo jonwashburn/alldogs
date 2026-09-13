@@ -12641,6 +12641,496 @@
           "sha256": "4ad83d207a8aa483d5927f58e7009059394360074d6cc2398b76c8d48fdcea4d"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-chaplin-b4a5a7602ddfd1d8",
+      "dogId": "design-character_round_09b_20260913-chaplin",
+      "title": "Chaplin, A Small Snag",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b4a5a7602ddfd1d870edcc59aa5aa4282117cca0d96af16ee1888be4783967e5.png",
+      "imageHash": "b4a5a7602ddfd1d870edcc59aa5aa4282117cca0d96af16ee1888be4783967e5",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_09b_20260913/characters/chaplin.js",
+      "sourceHash": "9dd67665b6f3f2eb46ea77f2144378a2be28d8ed4eab27cf0b19949bb2c4b708",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_09b_20260913/characters/chaplin.js",
+          "sha256": "9dd67665b6f3f2eb46ea77f2144378a2be28d8ed4eab27cf0b19949bb2c4b708"
+        }
+      ],
+      "description": "Charlie Chaplin as the Tramp: a long uneven black coat, bowler and oversized shoes; one forepaw holds a cane caught at a buckled paving stone. Cream and graphite against terracotta.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_09b_20260913",
+      "slug": "chaplin",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_09b_20260913/out/chaplin.json",
+          "sha256": "c6ea4a23e7270da6ddb45e17e70ed9dd13db115a1ceebcfb5925237d106848e0"
+        },
+        "cast": {
+          "path": "../design/character_round_09b_20260913/cast.json",
+          "sha256": "384839bc764d6ec4a076e380290584bf0d5dbe6a51004be9ab77ec48cff469f9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_09b_20260913/out/chaplin_wide_4000.png",
+          "sha256": "bcc832fc4dd85ae1c4ccc08850a35ab311b10bddee2d99e7c39d7288d1894612",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_09b_20260913/out/chaplin_square_2000.png",
+          "sha256": "22b17fcb87a87066be5751eabbbb32486178a9febec7912f3ceab2ade4593b2c",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_09b_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_09b_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_09b_20260913/work/chaplin/wide.json",
+          "sha256": "a5f2a26a4614bc0bf16960d3cef53a4555ecfc13f2f07a0f91fedd5137848bd4"
+        },
+        "wrapper": {
+          "path": "../design/character_round_09b_20260913/painter.js",
+          "sha256": "fb1783045aa29ab3a0b4abbd2ae1ec535ae75947f7680e0cb565bfcc4bbe2038"
+        },
+        "renderer": {
+          "path": "../design/character_round_09b_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_09b_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_09b_20260913/fields.json",
+          "sha256": "8759ccee07d9c9b61f9f0434c6b06eb8ac55bac03f8ae93f540c1699b1cd75f4"
+        },
+        "supports": {
+          "path": "../design/character_round_09b_20260913/supports.json",
+          "sha256": "51484d553a6d64119323ae777de5911cd09a1858aea96db1e6c6b857b2b2f4ca"
+        },
+        "lightContact": {
+          "path": "../design/character_round_09b_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_09b_20260913/work/chaplin/light_contact.json",
+          "sha256": "170fa043d3f1de10df7e4670c52851f49fdeb13d43fefe1bd3f3bffb0b50ba4c"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-poppins-1f2b9a898c417cf7",
+      "dogId": "design-character_round_09b_20260913-poppins",
+      "title": "Mary Poppins, Quite Composed",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1f2b9a898c417cf71d26aaedb62c0c05fb875fb2b84dbcfe40ea61b2b39da250.png",
+      "imageHash": "1f2b9a898c417cf71d26aaedb62c0c05fb875fb2b84dbcfe40ea61b2b39da250",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_09b_20260913/characters/poppins.js",
+      "sourceHash": "587e1a9504d1f9f4355dfc90727b937530f51e877a493588e73d0f314325df9d",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_09b_20260913/characters/poppins.js",
+          "sha256": "587e1a9504d1f9f4355dfc90727b937530f51e877a493588e73d0f314325df9d"
+        }
+      ],
+      "description": "Mary Poppins suspended between a broad dark umbrella and a heavy patterned carpetbag. A small blue-coated dog against warm ochre cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_09b_20260913",
+      "slug": "poppins",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_09b_20260913/out/poppins.json",
+          "sha256": "7f06af604ed4669e4c74ed065945df45febe34cb282afec93c1ad091d46671c7"
+        },
+        "cast": {
+          "path": "../design/character_round_09b_20260913/cast.json",
+          "sha256": "384839bc764d6ec4a076e380290584bf0d5dbe6a51004be9ab77ec48cff469f9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_09b_20260913/out/poppins_wide_4000.png",
+          "sha256": "4453d6211909f99832bb9f0cdc29e37ba01e27e29d0a83fda493364b5bedb894",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_09b_20260913/out/poppins_square_2000.png",
+          "sha256": "a71c7fcf6252e5748cc5f0db53d5276c69421344c8fb0b4b30036930d05a9e9f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_09b_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_09b_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_09b_20260913/work/poppins/wide.json",
+          "sha256": "4ff3c5f174280d749d1243737c9cbaf1e916634798f784bded7e39abf748a36e"
+        },
+        "wrapper": {
+          "path": "../design/character_round_09b_20260913/painter.js",
+          "sha256": "fb1783045aa29ab3a0b4abbd2ae1ec535ae75947f7680e0cb565bfcc4bbe2038"
+        },
+        "renderer": {
+          "path": "../design/character_round_09b_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_09b_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_09b_20260913/fields.json",
+          "sha256": "8759ccee07d9c9b61f9f0434c6b06eb8ac55bac03f8ae93f540c1699b1cd75f4"
+        },
+        "supports": {
+          "path": "../design/character_round_09b_20260913/supports.json",
+          "sha256": "51484d553a6d64119323ae777de5911cd09a1858aea96db1e6c6b857b2b2f4ca"
+        },
+        "lightContact": {
+          "path": "../design/character_round_09b_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_09b_20260913/work/poppins/light_contact.json",
+          "sha256": "ea4b772d8e903cba01f03afe64f4090ff0cf8a56ad6b76fdd75b538a830c7146"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-houdini-f006ee819578178e",
+      "dogId": "design-character_round_09b_20260913-houdini",
+      "title": "Houdini, Through the Smallest Opening",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f006ee819578178e3ac871e7893ae57208489230691f69a05549e224b1452995.png",
+      "imageHash": "f006ee819578178e3ac871e7893ae57208489230691f69a05549e224b1452995",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_09b_20260913/characters/houdini.js",
+      "sourceHash": "d60686ebf079b7267713858812cf552c779ac461d046695bebb8379014ff82ea",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_09b_20260913/characters/houdini.js",
+          "sha256": "d60686ebf079b7267713858812cf552c779ac461d046695bebb8379014ff82ea"
+        }
+      ],
+      "description": "Harry Houdini emerging from a rough teal packing crate, with a broken chain trailing from the forward wrist. Warm skin and cream cloth against pale green.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_09b_20260913",
+      "slug": "houdini",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_09b_20260913/out/houdini.json",
+          "sha256": "546b4a7880e88c61ad7f96af0e5472326a1496f1ac98771290f6914fa0623cd6"
+        },
+        "cast": {
+          "path": "../design/character_round_09b_20260913/cast.json",
+          "sha256": "384839bc764d6ec4a076e380290584bf0d5dbe6a51004be9ab77ec48cff469f9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_09b_20260913/out/houdini_wide_4000.png",
+          "sha256": "19f20fa6474790db19e3aba001a391efe8594d810e0966ddb28cc069a1dfea4c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_09b_20260913/out/houdini_square_2000.png",
+          "sha256": "88bd9d2af823e7abcee4da7a40128e356fddbcce36a8c3c82325255c084e8d65",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_09b_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_09b_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_09b_20260913/work/houdini/wide.json",
+          "sha256": "2a7965b3159ffb0f92fe9e1f373d9723c081e6100053d33493c346864af27d4c"
+        },
+        "wrapper": {
+          "path": "../design/character_round_09b_20260913/painter.js",
+          "sha256": "fb1783045aa29ab3a0b4abbd2ae1ec535ae75947f7680e0cb565bfcc4bbe2038"
+        },
+        "renderer": {
+          "path": "../design/character_round_09b_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_09b_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_09b_20260913/fields.json",
+          "sha256": "8759ccee07d9c9b61f9f0434c6b06eb8ac55bac03f8ae93f540c1699b1cd75f4"
+        },
+        "supports": {
+          "path": "../design/character_round_09b_20260913/supports.json",
+          "sha256": "51484d553a6d64119323ae777de5911cd09a1858aea96db1e6c6b857b2b2f4ca"
+        },
+        "lightContact": {
+          "path": "../design/character_round_09b_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_09b_20260913/work/houdini/light_contact.json",
+          "sha256": "7e39d4964aa93863f69a5b9fa1c6ccb5dd04fafe5d88bb4fdb24b641ddc479b2"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-lucy-b60b933f02bd8ba1",
+      "dogId": "design-character_round_09b_20260913-lucy",
+      "title": "Lucy, Faster Than Chocolate",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b60b933f02bd8ba132dfbdbb960d2f93619745f9743bc0b2e3bb86cc0d69a006.png",
+      "imageHash": "b60b933f02bd8ba132dfbdbb960d2f93619745f9743bc0b2e3bb86cc0d69a006",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_09b_20260913/characters/lucy.js",
+      "sourceHash": "46edf80bb58759843dbc945e4c14070601b8f3801ae41f18e765ed2c229e6e6d",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_09b_20260913/characters/lucy.js",
+          "sha256": "46edf80bb58759843dbc945e4c14070601b8f3801ae41f18e765ed2c229e6e6d"
+        }
+      ],
+      "description": "Lucille Ball as Lucy Ricardo in the chocolate-factory scene: a red-haired dog in pink, with chocolates gathered in her apron and at her mouth as a diagonal conveyor crosses the painting.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_09b_20260913",
+      "slug": "lucy",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_09b_20260913/out/lucy.json",
+          "sha256": "73be6708f12156928a30f9829adc266dacaf20f59f919d17f1cd6457191ce130"
+        },
+        "cast": {
+          "path": "../design/character_round_09b_20260913/cast.json",
+          "sha256": "384839bc764d6ec4a076e380290584bf0d5dbe6a51004be9ab77ec48cff469f9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_09b_20260913/out/lucy_wide_4000.png",
+          "sha256": "d59a0cc36e0f2917fdf84d3d887f40cf46dfc952c9f548bbe3df996a9a1c08ec",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_09b_20260913/out/lucy_square_2000.png",
+          "sha256": "486b28be692c5cacb143807fd10e36bee8a255127f2d316f840c963c6550dbfd",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_09b_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_09b_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_09b_20260913/work/lucy/wide.json",
+          "sha256": "2850c6c5c9e2a14136b0ddef3949800ee5347f7a2a838206c2fa25392696ba70"
+        },
+        "wrapper": {
+          "path": "../design/character_round_09b_20260913/painter.js",
+          "sha256": "fb1783045aa29ab3a0b4abbd2ae1ec535ae75947f7680e0cb565bfcc4bbe2038"
+        },
+        "renderer": {
+          "path": "../design/character_round_09b_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_09b_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_09b_20260913/fields.json",
+          "sha256": "8759ccee07d9c9b61f9f0434c6b06eb8ac55bac03f8ae93f540c1699b1cd75f4"
+        },
+        "supports": {
+          "path": "../design/character_round_09b_20260913/supports.json",
+          "sha256": "51484d553a6d64119323ae777de5911cd09a1858aea96db1e6c6b857b2b2f4ca"
+        },
+        "lightContact": {
+          "path": "../design/character_round_09b_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_09b_20260913/work/lucy/light_contact.json",
+          "sha256": "7c6e8f9f7501195012ead541de23ae66d2f2f1e81b864d7fa304f36237dff05d"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_09b_20260913-mae-26e3d2f48cf79ce1",
+      "dogId": "design-character_round_09b_20260913-mae",
+      "title": "Mae, A Window of Her Own",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9.png",
+      "imageHash": "26e3d2f48cf79ce10a552729d9bd4e6b80cb686365d379f1041c2e06629247a9",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_09b_20260913/characters/mae.js",
+      "sourceHash": "36a63d4480ceec6b887a1142e6e49370112534c59e7ee06dce522c9ac1e981da",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_09b_20260913/characters/mae.js",
+          "sha256": "36a63d4480ceec6b887a1142e6e49370112534c59e7ee06dce522c9ac1e981da"
+        }
+      ],
+      "description": "Mae Jemison in an orange flight suit, holding a pale helmet beside a dark spacecraft window and a small painted Earth. A quiet warm portrait against deep blue.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_09b_20260913",
+      "slug": "mae",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_09b_20260913/out/mae.json",
+          "sha256": "9b631cde57057c0b100e30245d38af4b21fa8160b739c5d6a872542e08d3f11e"
+        },
+        "cast": {
+          "path": "../design/character_round_09b_20260913/cast.json",
+          "sha256": "384839bc764d6ec4a076e380290584bf0d5dbe6a51004be9ab77ec48cff469f9"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_09b_20260913/out/mae_wide_4000.png",
+          "sha256": "daeaefce6c95010df86d639704863a4d90ce7a4c329661e400cd6f029bcbdebf",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_09b_20260913/out/mae_square_2000.png",
+          "sha256": "26bc0a1ab1cf5d80532dbffa54fb6e0dbfcf65461c8f4965210acce5bdc8c3bf",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_09b_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_09b_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_09b_20260913/work/mae/wide.json",
+          "sha256": "af4b6b70770c0587ae56be9f02c53011ee06492cab227cb67f064d4a60e7bc0a"
+        },
+        "wrapper": {
+          "path": "../design/character_round_09b_20260913/painter.js",
+          "sha256": "fb1783045aa29ab3a0b4abbd2ae1ec535ae75947f7680e0cb565bfcc4bbe2038"
+        },
+        "renderer": {
+          "path": "../design/character_round_09b_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_09b_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_09b_20260913/fields.json",
+          "sha256": "8759ccee07d9c9b61f9f0434c6b06eb8ac55bac03f8ae93f540c1699b1cd75f4"
+        },
+        "supports": {
+          "path": "../design/character_round_09b_20260913/supports.json",
+          "sha256": "51484d553a6d64119323ae777de5911cd09a1858aea96db1e6c6b857b2b2f4ca"
+        },
+        "lightContact": {
+          "path": "../design/character_round_09b_20260913/light-contact.js",
+          "sha256": "ea66af07d8a3ce6f5b546f77380ff8a172531353616277b10bca42ed153a66bb"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_09b_20260913/work/mae/light_contact.json",
+          "sha256": "b8eeea9585332695d4e2ef1114bb1a4d767d0e1d6e672828e5d1e5404b8f01eb"
+        }
+      }
     }
   ],
   "rounds": [
