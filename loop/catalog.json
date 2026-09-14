@@ -2315,6 +2315,111 @@
       "slug": "elton_b",
       "image": "/collection/assets/candidate-71f5385e72011fae7a255520d5042c2cfee9c49c4bd4a6ba5d6f15c815ab3e47.png",
       "supersededBy": "candidate-loved_zombies_round_02_elton_repair_20260914-elton_a-669cfe4146896b81"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-marty_a-f2aec1054beab6f4",
+      "title": "Marty",
+      "kind": "candidate",
+      "imageHash": "f2aec1054beab6f4e5cf27242a73185db3b98ea591f7576b0bb5e91e39f37c8b",
+      "description": "Marty with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "marty_a",
+      "image": "/collection/assets/candidate-f2aec1054beab6f4e5cf27242a73185db3b98ea591f7576b0bb5e91e39f37c8b.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-marty_b-269e76c50bc7da63",
+      "title": "Marty",
+      "kind": "candidate",
+      "imageHash": "269e76c50bc7da63d3ea36e5cb2ac88ccd58dd06e0e1e36a6d8dba5ef1759f7c",
+      "description": "Marty with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "marty_b",
+      "image": "/collection/assets/candidate-269e76c50bc7da63d3ea36e5cb2ac88ccd58dd06e0e1e36a6d8dba5ef1759f7c.png",
+      "supersededBy": "candidate-loved_zombies_round_03_20260914-marty_a-f2aec1054beab6f4"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-fred_a-08136ecd1ee47f31",
+      "title": "Fred",
+      "kind": "candidate",
+      "imageHash": "08136ecd1ee47f31c2690ec30edb4efc4360d03a54bb6ce387d011a83abaec24",
+      "description": "Fred with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "fred_a",
+      "image": "/collection/assets/candidate-08136ecd1ee47f31c2690ec30edb4efc4360d03a54bb6ce387d011a83abaec24.png",
+      "supersededBy": "candidate-loved_zombies_round_03_20260914-fred_b-e1084e03e68110b1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-fred_b-e1084e03e68110b1",
+      "title": "Fred",
+      "kind": "candidate",
+      "imageHash": "e1084e03e68110b1e700e8efc0446f6818263b8f345ed68f0c51cdf229c7ba9e",
+      "description": "Fred with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "fred_b",
+      "image": "/collection/assets/candidate-e1084e03e68110b1e700e8efc0446f6818263b8f345ed68f0c51cdf229c7ba9e.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-wednesday_a-563080cd924352e4",
+      "title": "Wednesday",
+      "kind": "candidate",
+      "imageHash": "563080cd924352e46db22c3f9fc619fb5d8f0d79b18ca2113dfc17a9c7ea8dd0",
+      "description": "Wednesday with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "wednesday_a",
+      "image": "/collection/assets/candidate-563080cd924352e46db22c3f9fc619fb5d8f0d79b18ca2113dfc17a9c7ea8dd0.png",
+      "supersededBy": "candidate-loved_zombies_round_03_20260914-wednesday_b-c2ccf31d832304ec"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-wednesday_b-c2ccf31d832304ec",
+      "title": "Wednesday",
+      "kind": "candidate",
+      "imageHash": "c2ccf31d832304ece4ada1a6e8f0f3486fcd9d42ab11a1f71a1f308c75b598f7",
+      "description": "Wednesday with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "wednesday_b",
+      "image": "/collection/assets/candidate-c2ccf31d832304ece4ada1a6e8f0f3486fcd9d42ab11a1f71a1f308c75b598f7.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-maverick_a-dd71719d5e81aef8",
+      "title": "Maverick",
+      "kind": "candidate",
+      "imageHash": "dd71719d5e81aef85a6015f1b30a0988946ff4b560d5a1ce3a0acd8d2562a5f2",
+      "description": "Maverick with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "maverick_a",
+      "image": "/collection/assets/candidate-dd71719d5e81aef85a6015f1b30a0988946ff4b560d5a1ce3a0acd8d2562a5f2.png",
+      "supersededBy": "candidate-loved_zombies_round_03_20260914-maverick_b-7ea0d72aa1c20c63"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-maverick_b-7ea0d72aa1c20c63",
+      "title": "Maverick",
+      "kind": "candidate",
+      "imageHash": "7ea0d72aa1c20c632f6eb0fec5e08e83fb8ee380bc1bf07e7fc7e0ccdd92004e",
+      "description": "Maverick with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "maverick_b",
+      "image": "/collection/assets/candidate-7ea0d72aa1c20c632f6eb0fec5e08e83fb8ee380bc1bf07e7fc7e0ccdd92004e.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a",
+      "title": "Nipper",
+      "kind": "candidate",
+      "imageHash": "75403ab52610023a754d3c241cfa10c0175722d60083f19728a2d7764c32c7db",
+      "description": "Nipper with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "nipper_a",
+      "image": "/collection/assets/candidate-75403ab52610023a754d3c241cfa10c0175722d60083f19728a2d7764c32c7db.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_03_20260914-nipper_b-19751987854af78a",
+      "title": "Nipper",
+      "kind": "candidate",
+      "imageHash": "19751987854af78a1852c6b96b5afda47e700c7bb952d76f9b5a2b79f037e166",
+      "description": "Nipper with a structurally generated zombie composition, preserving native character details.",
+      "batch": "loved_zombies_round_03_20260914",
+      "slug": "nipper_b",
+      "image": "/collection/assets/candidate-19751987854af78a1852c6b96b5afda47e700c7bb952d76f9b5a2b79f037e166.png",
+      "supersededBy": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a"
     }
   ],
   "references": [
@@ -2981,6 +3086,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_02_20260914-leia_a-2a6949c6370d9529",
             "imageHash": "2a6949c6370d95296b323c82c18d8e9a0c87f2e0e14ba5dbc19000a5e5fe4148"
+          }
+        ]
+      },
+      {
+        "id": "round-23",
+        "title": "Round 23 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-14T22:36:15.415954+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_03_20260914-marty_a-f2aec1054beab6f4",
+            "imageHash": "f2aec1054beab6f4e5cf27242a73185db3b98ea591f7576b0bb5e91e39f37c8b"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_03_20260914-fred_b-e1084e03e68110b1",
+            "imageHash": "e1084e03e68110b1e700e8efc0446f6818263b8f345ed68f0c51cdf229c7ba9e"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_03_20260914-wednesday_b-c2ccf31d832304ec",
+            "imageHash": "c2ccf31d832304ece4ada1a6e8f0f3486fcd9d42ab11a1f71a1f308c75b598f7"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_03_20260914-maverick_b-7ea0d72aa1c20c63",
+            "imageHash": "7ea0d72aa1c20c632f6eb0fec5e08e83fb8ee380bc1bf07e7fc7e0ccdd92004e"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a",
+            "imageHash": "75403ab52610023a754d3c241cfa10c0175722d60083f19728a2d7764c32c7db"
           }
         ]
       }

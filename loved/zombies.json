@@ -540,6 +540,141 @@
         "height": 2000,
         "sha256": "d61376eb1157ff2d17d472eff343f526121a477ee01471dc1f77fbf0f89a4e3d"
       }
+    },
+    {
+      "parentId": "original-117-34aa2133dcd107a3",
+      "parentHash": "34aa2133dcd107a3369a603d61b607924d5964543b623ed9088417bd5de142ae",
+      "title": "Marty",
+      "zombieId": "candidate-loved_zombies_round_03_20260914-marty_a-f2aec1054beab6f4",
+      "imageHash": "f2aec1054beab6f4e5cf27242a73185db3b98ea591f7576b0bb5e91e39f37c8b",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/e6edaf39b52f8f105b56d9178c2eb9c75aa47867a91370625ebceba02e079031.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "e6edaf39b52f8f105b56d9178c2eb9c75aa47867a91370625ebceba02e079031"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/83610c6e5f114e53db0eb3cbd0e21bb66edf681b1b15f0b84e9a865949490734.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "83610c6e5f114e53db0eb3cbd0e21bb66edf681b1b15f0b84e9a865949490734"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/040aa0f60c3566aa2d42b1ad8c992c0dc3da79132989e4f8bdd9a3ee8c061352.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "040aa0f60c3566aa2d42b1ad8c992c0dc3da79132989e4f8bdd9a3ee8c061352"
+      }
+    },
+    {
+      "parentId": "original-43-51536fb2ea896ed0",
+      "parentHash": "51536fb2ea896ed07dd4d8a49e44401e4cb9c306c694d6c3771d42e48d3a2c6d",
+      "title": "Fred",
+      "zombieId": "candidate-loved_zombies_round_03_20260914-fred_b-e1084e03e68110b1",
+      "imageHash": "e1084e03e68110b1e700e8efc0446f6818263b8f345ed68f0c51cdf229c7ba9e",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/9749b340256baaffca02381f53e6d275f0600542d168168b0268c30dfe48db0f.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "9749b340256baaffca02381f53e6d275f0600542d168168b0268c30dfe48db0f"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/8188cf1f58e21e410cc72b408d83e5c2b83d999a5a55e0df10b6ed0b404877b7.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "8188cf1f58e21e410cc72b408d83e5c2b83d999a5a55e0df10b6ed0b404877b7"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/4f2467c41c6cb42225876f1f51e983fa1381cc676a737333013f7b0e756e4c43.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "4f2467c41c6cb42225876f1f51e983fa1381cc676a737333013f7b0e756e4c43"
+      }
+    },
+    {
+      "parentId": "original-67-b274e6c6f4c593d7",
+      "parentHash": "b274e6c6f4c593d7ab67f2f33537d04707188898e53a590ba4c0e63a3a0ca07a",
+      "title": "Wednesday",
+      "zombieId": "candidate-loved_zombies_round_03_20260914-wednesday_b-c2ccf31d832304ec",
+      "imageHash": "c2ccf31d832304ece4ada1a6e8f0f3486fcd9d42ab11a1f71a1f308c75b598f7",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/9145523cdc6a23c0c7dfa58e95cdeafa95d5930fad6032ad1b186096ffb03645.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "9145523cdc6a23c0c7dfa58e95cdeafa95d5930fad6032ad1b186096ffb03645"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c15132927eeb7e39c2c4e1c73f3127b82c230b8d9ce917af76fd45127359ba15.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "c15132927eeb7e39c2c4e1c73f3127b82c230b8d9ce917af76fd45127359ba15"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/43af3ca0882fb697409eae001169e7eb9686a680499ad07ae0ab0641e49760d1.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "43af3ca0882fb697409eae001169e7eb9686a680499ad07ae0ab0641e49760d1"
+      }
+    },
+    {
+      "parentId": "original-74-43ad85561fe4caa5",
+      "parentHash": "43ad85561fe4caa567b9c74bf982a48aea47d092c5be19a5fcebe7bc636c3faa",
+      "title": "Maverick",
+      "zombieId": "candidate-loved_zombies_round_03_20260914-maverick_b-7ea0d72aa1c20c63",
+      "imageHash": "7ea0d72aa1c20c632f6eb0fec5e08e83fb8ee380bc1bf07e7fc7e0ccdd92004e",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/83b08d3d1b59e621a62e92f3758671f35196c74a2d69b4ed8dd2c062cfe1f987.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "83b08d3d1b59e621a62e92f3758671f35196c74a2d69b4ed8dd2c062cfe1f987"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/094eb3eb747ecf1c3d64ae3f6b94bd4bd3528e42e2bd83ce004457c6d142adbc.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "094eb3eb747ecf1c3d64ae3f6b94bd4bd3528e42e2bd83ce004457c6d142adbc"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/50317c50a9fe217bbb5d3473a40177522ff99a09e02f6a7cf98db464057eb941.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "50317c50a9fe217bbb5d3473a40177522ff99a09e02f6a7cf98db464057eb941"
+      }
+    },
+    {
+      "parentId": "original-79-bde61b8a0259824e",
+      "parentHash": "bde61b8a0259824e2588a47c20ea1765e9b49cf5e11a433759b2edcb5d1a117c",
+      "title": "Nipper",
+      "zombieId": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a",
+      "imageHash": "75403ab52610023a754d3c241cfa10c0175722d60083f19728a2d7764c32c7db",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/5978f15ec532ce08cdd4e26b4ed396cbc8dc7dd559d6c76351bb4b86104c5807.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "5978f15ec532ce08cdd4e26b4ed396cbc8dc7dd559d6c76351bb4b86104c5807"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f692c8f1ebadfeff29d69ae18c326da06d68e7dd3a7a7a9604181fc18d7aa1a0.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "f692c8f1ebadfeff29d69ae18c326da06d68e7dd3a7a7a9604181fc18d7aa1a0"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/af1b5a86ba28cbc99931ad038196cb6bc8ff1a2376f12250070f58e7d9e6f84c.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "af1b5a86ba28cbc99931ad038196cb6bc8ff1a2376f12250070f58e7d9e6f84c"
+      }
     }
   ]
 }
