@@ -18031,6 +18031,496 @@
           "sha256": "b515d97947b620e1123de7b7e67acbd6fbd849b2f6a65305db0798dad370e78d"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_20_20260913-totoro-946611c179c0a1c5",
+      "dogId": "design-character_round_20_20260913-totoro",
+      "title": "Totoro",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-946611c179c0a1c51a604ee81218e97188fb12b2c39b446d780bd5acf24f1803.png",
+      "imageHash": "946611c179c0a1c51a604ee81218e97188fb12b2c39b446d780bd5acf24f1803",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_20_20260913/characters/totoro.js",
+      "sourceHash": "c6ec05394a89ce4e63d6998fb6748fa6215aca23c1aad2cc7dbcf52bbcdf7540",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_20_20260913/characters/totoro.js",
+          "sha256": "c6ec05394a89ce4e63d6998fb6748fa6215aca23c1aad2cc7dbcf52bbcdf7540"
+        }
+      ],
+      "description": "Totoro: a deep grey body with a broad cream belly, irregular chevrons, tall ears and a small leaf against warm red cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_20_20260913",
+      "slug": "totoro",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_20_20260913/out/totoro.json",
+          "sha256": "4b9d1483667f5bae77508f58244d032ec06fe5454650f557a89d7b3cccacb7e1"
+        },
+        "cast": {
+          "path": "../design/character_round_20_20260913/cast.json",
+          "sha256": "132a06ca6b991d9d3b8a6049129028eb7f2881fbf5356fb81488a05e789003bc"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_20_20260913/out/totoro_wide_4000.png",
+          "sha256": "e0fe0e645e159d6df8f1ed7c869c3a4f0e5d52f6c7be8d244e1f8709d82b60c1",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_20_20260913/out/totoro_square_2000.png",
+          "sha256": "f3593e652ab159bc269ee663b394a4c497f09cc94586e1b5d25e7ce785a6fabd",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_20_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_20_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_20_20260913/work/totoro/wide.json",
+          "sha256": "16859b19f40b652789cfd1e8a78d5019ffd921a5a795c2d48cb97fe130baadaf"
+        },
+        "wrapper": {
+          "path": "../design/character_round_20_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_20_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_20_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_20_20260913/fields.json",
+          "sha256": "37f21eba91be155c259f86b1f7138be945af5e55287b470b36540032ef4264a8"
+        },
+        "supports": {
+          "path": "../design/character_round_20_20260913/supports.json",
+          "sha256": "952214dab2c29d57b04f5ac8a57678d64da4089f4e8f3e856c77168164b305d5"
+        },
+        "lightContact": {
+          "path": "../design/character_round_20_20260913/light-contact.js",
+          "sha256": "72d0b7abf25ea26c8bbd6b0d9f4d0e09fa48823c2b5edca94d6e2fc24831ea71"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_20_20260913/work/totoro/light_contact.json",
+          "sha256": "90263493fd5a6a36930cf521c591f05933962d7a8a4484e27ddf3d8d9f67a9e5"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_20_20260913-spock-232b3e8df3ed0457",
+      "dogId": "design-character_round_20_20260913-spock",
+      "title": "Spock",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-232b3e8df3ed0457618289154a08da6b2643e6f24abcdf481870810c9c895c5d.png",
+      "imageHash": "232b3e8df3ed0457618289154a08da6b2643e6f24abcdf481870810c9c895c5d",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_20_20260913/characters/spock.js",
+      "sourceHash": "fe3015667de99654b15a5895e739c6a4f3f7c3edabf1e0fe659f1eb58b6f6147",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_20_20260913/characters/spock.js",
+          "sha256": "fe3015667de99654b15a5895e739c6a4f3f7c3edabf1e0fe659f1eb58b6f6147"
+        }
+      ],
+      "description": "Spock: pointed ears and a severe dark fringe above a blue uniform with dark collar and boots against wine-colored cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_20_20260913",
+      "slug": "spock",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_20_20260913/out/spock.json",
+          "sha256": "0e14c038cfa026185d3479d96d282ddcf392303f1df3bf8adda9197ea9d38ef5"
+        },
+        "cast": {
+          "path": "../design/character_round_20_20260913/cast.json",
+          "sha256": "132a06ca6b991d9d3b8a6049129028eb7f2881fbf5356fb81488a05e789003bc"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_20_20260913/out/spock_wide_4000.png",
+          "sha256": "e80052dba2c389d1145f8c3330556a9e4c2903a64d82443185b1fc31d31e88ef",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_20_20260913/out/spock_square_2000.png",
+          "sha256": "173ae2c717aeeaccd0e1b6d054c9981735bd5d27fb9f9b4aa539b98e3c01f73e",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_20_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_20_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_20_20260913/work/spock/wide.json",
+          "sha256": "da81c18646bf299ffd4d8447059965e425d1ebac06447dc822220e12414fbb08"
+        },
+        "wrapper": {
+          "path": "../design/character_round_20_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_20_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_20_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_20_20260913/fields.json",
+          "sha256": "37f21eba91be155c259f86b1f7138be945af5e55287b470b36540032ef4264a8"
+        },
+        "supports": {
+          "path": "../design/character_round_20_20260913/supports.json",
+          "sha256": "952214dab2c29d57b04f5ac8a57678d64da4089f4e8f3e856c77168164b305d5"
+        },
+        "lightContact": {
+          "path": "../design/character_round_20_20260913/light-contact.js",
+          "sha256": "72d0b7abf25ea26c8bbd6b0d9f4d0e09fa48823c2b5edca94d6e2fc24831ea71"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_20_20260913/work/spock/light_contact.json",
+          "sha256": "15b5c8091325facbdd8cffb5383947fc0e2c1a2aa191d04baed8020d1bbc8a74"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_20_20260913-edna-7523f39e72ccacaf",
+      "dogId": "design-character_round_20_20260913-edna",
+      "title": "Edna Mode",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-7523f39e72ccacaf8dc010e6283b357b1b327539ca3a20df47a2c5482134953f.png",
+      "imageHash": "7523f39e72ccacaf8dc010e6283b357b1b327539ca3a20df47a2c5482134953f",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_20_20260913/characters/edna.js",
+      "sourceHash": "f5c705231643ac7a4d0f4a303f943c92714ba07d475e61ff26a7fdde5157861b",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_20_20260913/characters/edna.js",
+          "sha256": "f5c705231643ac7a4d0f4a303f943c92714ba07d475e61ff26a7fdde5157861b"
+        }
+      ],
+      "description": "Edna Mode: a compact red coat beneath a heavy dark bob, oversized round glasses and small dark shoes against warm khaki cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_20_20260913",
+      "slug": "edna",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_20_20260913/out/edna.json",
+          "sha256": "7f4612dbabae421925e249f0962c6a507703eba414d440e1a947ba10a15b2f82"
+        },
+        "cast": {
+          "path": "../design/character_round_20_20260913/cast.json",
+          "sha256": "132a06ca6b991d9d3b8a6049129028eb7f2881fbf5356fb81488a05e789003bc"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_20_20260913/out/edna_wide_4000.png",
+          "sha256": "6452929148bcc7ef3cf2c4fa31765e606132f141106d0b4786b392ece381b10c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_20_20260913/out/edna_square_2000.png",
+          "sha256": "e94d02e86c5c5c9879cfd4d0c5bac7577b5840b0e4a7867646b37040380af3cf",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_20_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_20_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_20_20260913/work/edna/wide.json",
+          "sha256": "bd46ffa3f639aa3b75e162f13257fa22ffbaaf1f6ca980bc788cbfcf8c8db3a8"
+        },
+        "wrapper": {
+          "path": "../design/character_round_20_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_20_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_20_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_20_20260913/fields.json",
+          "sha256": "37f21eba91be155c259f86b1f7138be945af5e55287b470b36540032ef4264a8"
+        },
+        "supports": {
+          "path": "../design/character_round_20_20260913/supports.json",
+          "sha256": "952214dab2c29d57b04f5ac8a57678d64da4089f4e8f3e856c77168164b305d5"
+        },
+        "lightContact": {
+          "path": "../design/character_round_20_20260913/light-contact.js",
+          "sha256": "72d0b7abf25ea26c8bbd6b0d9f4d0e09fa48823c2b5edca94d6e2fc24831ea71"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_20_20260913/work/edna/light_contact.json",
+          "sha256": "2022a158867faecccd38b4e40efaba70cefb5d616adef39b2ba0e4c4efeade13"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_20_20260913-spongebob-774ef0049f8dc354",
+      "dogId": "design-character_round_20_20260913-spongebob",
+      "title": "SpongeBob SquarePants",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-774ef0049f8dc354910e55f1eaf4598d7506c94845e9b0b48f1aecd6e2360f82.png",
+      "imageHash": "774ef0049f8dc354910e55f1eaf4598d7506c94845e9b0b48f1aecd6e2360f82",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_20_20260913/characters/spongebob.js",
+      "sourceHash": "02d1213bfb2f9c7fa68254f1c207f91cdb79a48b116d92efbb34cc6c34dad6b5",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_20_20260913/characters/spongebob.js",
+          "sha256": "02d1213bfb2f9c7fa68254f1c207f91cdb79a48b116d92efbb34cc6c34dad6b5"
+        }
+      ],
+      "description": "SpongeBob SquarePants: a yellow dog with brown shorts, white collar, red tie and a floating pale bubble against deep teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_20_20260913",
+      "slug": "spongebob",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_20_20260913/out/spongebob.json",
+          "sha256": "1572e5070b1387361e63b3d16412cdf4cd4d32b218997dbc236bab2e150b6597"
+        },
+        "cast": {
+          "path": "../design/character_round_20_20260913/cast.json",
+          "sha256": "132a06ca6b991d9d3b8a6049129028eb7f2881fbf5356fb81488a05e789003bc"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_20_20260913/out/spongebob_wide_4000.png",
+          "sha256": "80d609691c222b1ddcd8679b6620fb71d462d41f514089f4f21094f4c8790446",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_20_20260913/out/spongebob_square_2000.png",
+          "sha256": "1f7a50504904e93ccd1fcc3a2eed80bba914cb94df7612c50d74320e109352ca",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_20_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_20_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_20_20260913/work/spongebob/wide.json",
+          "sha256": "fc52b02a4e54c80e017d843133c99b69c700fe39d843eab643009374c3bebd50"
+        },
+        "wrapper": {
+          "path": "../design/character_round_20_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_20_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_20_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_20_20260913/fields.json",
+          "sha256": "37f21eba91be155c259f86b1f7138be945af5e55287b470b36540032ef4264a8"
+        },
+        "supports": {
+          "path": "../design/character_round_20_20260913/supports.json",
+          "sha256": "952214dab2c29d57b04f5ac8a57678d64da4089f4e8f3e856c77168164b305d5"
+        },
+        "lightContact": {
+          "path": "../design/character_round_20_20260913/light-contact.js",
+          "sha256": "72d0b7abf25ea26c8bbd6b0d9f4d0e09fa48823c2b5edca94d6e2fc24831ea71"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_20_20260913/work/spongebob/light_contact.json",
+          "sha256": "587ff0d6ba3cd74a1a043ea59186e7cc6af8af7d3724b0b6dc8f7aa7ba4023fb"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_20_20260913-mask-8810191ff4fb835c",
+      "dogId": "design-character_round_20_20260913-mask",
+      "title": "The Mask",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652.png",
+      "imageHash": "8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_20_20260913/characters/mask.js",
+      "sourceHash": "feac3b996129885912daa0a00e13059a10e4d84e5cdcf0a934603834e6f6726e",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_20_20260913/characters/mask.js",
+          "sha256": "feac3b996129885912daa0a00e13059a10e4d84e5cdcf0a934603834e6f6726e"
+        }
+      ],
+      "description": "The Mask: a green face beneath a broad yellow fedora, with a gold suit, pale lapels and dark shoes against violet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_20_20260913",
+      "slug": "mask",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_20_20260913/out/mask.json",
+          "sha256": "ea8974fa11d98aeb7189b32672fce93b678ceaeb1f0876881585cecee598d623"
+        },
+        "cast": {
+          "path": "../design/character_round_20_20260913/cast.json",
+          "sha256": "132a06ca6b991d9d3b8a6049129028eb7f2881fbf5356fb81488a05e789003bc"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_20_20260913/out/mask_wide_4000.png",
+          "sha256": "8562f9dae8c98432565ef9f887978dd015921cc6c2c09511fa12798861ee9e7e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_20_20260913/out/mask_square_2000.png",
+          "sha256": "5cae2046e0035e1f0ed5006690edff320ee68556aae9481cb8b45128de25f29d",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_20_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_20_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_20_20260913/work/mask/wide.json",
+          "sha256": "cb7086fad27628a19f415c68fdb397cf39871bb77206ca33f2f941cd94b45b25"
+        },
+        "wrapper": {
+          "path": "../design/character_round_20_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_20_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_20_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_20_20260913/fields.json",
+          "sha256": "37f21eba91be155c259f86b1f7138be945af5e55287b470b36540032ef4264a8"
+        },
+        "supports": {
+          "path": "../design/character_round_20_20260913/supports.json",
+          "sha256": "952214dab2c29d57b04f5ac8a57678d64da4089f4e8f3e856c77168164b305d5"
+        },
+        "lightContact": {
+          "path": "../design/character_round_20_20260913/light-contact.js",
+          "sha256": "72d0b7abf25ea26c8bbd6b0d9f4d0e09fa48823c2b5edca94d6e2fc24831ea71"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_20_20260913/work/mask/light_contact.json",
+          "sha256": "ef0b2af3d47b42d14bfdc61cd3b49fc24f8387ebaf3489fe7fe2440737c1c491"
+        }
+      }
     }
   ],
   "rounds": [

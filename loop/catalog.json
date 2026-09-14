@@ -1834,6 +1834,56 @@
       "batch": "character_round_19_20260913",
       "slug": "ruth",
       "image": "/collection/assets/candidate-ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177.png"
+    },
+    {
+      "id": "candidate-character_round_20_20260913-totoro-946611c179c0a1c5",
+      "title": "Totoro",
+      "kind": "candidate",
+      "imageHash": "946611c179c0a1c51a604ee81218e97188fb12b2c39b446d780bd5acf24f1803",
+      "description": "Totoro: a deep grey body with a broad cream belly, irregular chevrons, tall ears and a small leaf against warm red cotton.",
+      "batch": "character_round_20_20260913",
+      "slug": "totoro",
+      "image": "/collection/assets/candidate-946611c179c0a1c51a604ee81218e97188fb12b2c39b446d780bd5acf24f1803.png"
+    },
+    {
+      "id": "candidate-character_round_20_20260913-spock-232b3e8df3ed0457",
+      "title": "Spock",
+      "kind": "candidate",
+      "imageHash": "232b3e8df3ed0457618289154a08da6b2643e6f24abcdf481870810c9c895c5d",
+      "description": "Spock: pointed ears and a severe dark fringe above a blue uniform with dark collar and boots against wine-colored cotton.",
+      "batch": "character_round_20_20260913",
+      "slug": "spock",
+      "image": "/collection/assets/candidate-232b3e8df3ed0457618289154a08da6b2643e6f24abcdf481870810c9c895c5d.png"
+    },
+    {
+      "id": "candidate-character_round_20_20260913-edna-7523f39e72ccacaf",
+      "title": "Edna Mode",
+      "kind": "candidate",
+      "imageHash": "7523f39e72ccacaf8dc010e6283b357b1b327539ca3a20df47a2c5482134953f",
+      "description": "Edna Mode: a compact red coat beneath a heavy dark bob, oversized round glasses and small dark shoes against warm khaki cotton.",
+      "batch": "character_round_20_20260913",
+      "slug": "edna",
+      "image": "/collection/assets/candidate-7523f39e72ccacaf8dc010e6283b357b1b327539ca3a20df47a2c5482134953f.png"
+    },
+    {
+      "id": "candidate-character_round_20_20260913-spongebob-774ef0049f8dc354",
+      "title": "SpongeBob SquarePants",
+      "kind": "candidate",
+      "imageHash": "774ef0049f8dc354910e55f1eaf4598d7506c94845e9b0b48f1aecd6e2360f82",
+      "description": "SpongeBob SquarePants: a yellow dog with brown shorts, white collar, red tie and a floating pale bubble against deep teal cotton.",
+      "batch": "character_round_20_20260913",
+      "slug": "spongebob",
+      "image": "/collection/assets/candidate-774ef0049f8dc354910e55f1eaf4598d7506c94845e9b0b48f1aecd6e2360f82.png"
+    },
+    {
+      "id": "candidate-character_round_20_20260913-mask-8810191ff4fb835c",
+      "title": "The Mask",
+      "kind": "candidate",
+      "imageHash": "8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652",
+      "description": "The Mask: a green face beneath a broad yellow fedora, with a gold suit, pale lapels and dark shoes against violet cotton.",
+      "batch": "character_round_20_20260913",
+      "slug": "mask",
+      "image": "/collection/assets/candidate-8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652.png"
     }
   ],
   "references": [
@@ -2419,6 +2469,33 @@
           {
             "candidateId": "candidate-character_round_19_20260913-ruth-ea29254f239f7197",
             "imageHash": "ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177"
+          }
+        ]
+      },
+      {
+        "id": "round-20",
+        "title": "Round 20",
+        "frozenAt": "2026-09-14T05:35:27.678996+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_20_20260913-totoro-946611c179c0a1c5",
+            "imageHash": "946611c179c0a1c51a604ee81218e97188fb12b2c39b446d780bd5acf24f1803"
+          },
+          {
+            "candidateId": "candidate-character_round_20_20260913-spock-232b3e8df3ed0457",
+            "imageHash": "232b3e8df3ed0457618289154a08da6b2643e6f24abcdf481870810c9c895c5d"
+          },
+          {
+            "candidateId": "candidate-character_round_20_20260913-edna-7523f39e72ccacaf",
+            "imageHash": "7523f39e72ccacaf8dc010e6283b357b1b327539ca3a20df47a2c5482134953f"
+          },
+          {
+            "candidateId": "candidate-character_round_20_20260913-spongebob-774ef0049f8dc354",
+            "imageHash": "774ef0049f8dc354910e55f1eaf4598d7506c94845e9b0b48f1aecd6e2360f82"
+          },
+          {
+            "candidateId": "candidate-character_round_20_20260913-mask-8810191ff4fb835c",
+            "imageHash": "8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652"
           }
         ]
       }
