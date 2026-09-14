@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "parentId": "original-55-8cf3cdad8b603a03",
+      "parentHash": "8cf3cdad8b603a03d40ec9d235259e2e1d164d0f955d7ed110362747df3bc394",
+      "title": "Elizabeth",
+      "zombieId": "candidate-zombie_mutations_20260914-elizabeth-5b61d45b75a1fe89",
+      "imageHash": "5b61d45b75a1fe894756cce46790ef175c32ca60d771deba0832915ec833937b",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/bb5fb4834280d58d6c55450e77faac04d96c67a40175b6c5493d86dde14a7701.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "bb5fb4834280d58d6c55450e77faac04d96c67a40175b6c5493d86dde14a7701"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/955c28000c1ea4a9d3ce142b94794bd5c6d03d5aad6b3a506a402b1f8367ff24.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "955c28000c1ea4a9d3ce142b94794bd5c6d03d5aad6b3a506a402b1f8367ff24"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/499f1e81ff34d15e7fe04e4d4bc15842a9d55a3b216a31e4bbee6e6999065e39.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "499f1e81ff34d15e7fe04e4d4bc15842a9d55a3b216a31e4bbee6e6999065e39"
+      }
+    },
+    {
+      "parentId": "original-62-fb27c29277cc6593",
+      "parentHash": "fb27c29277cc65931edbfbfb65a3e8d6edef51ac1022edfa726b5e8620423444",
+      "title": "Barack",
+      "zombieId": "candidate-zombie_mutations_20260914-barack-1e6535cc74387de5",
+      "imageHash": "1e6535cc74387de59b088f1eb9d1d6a87266f6e10b481ebd2514670ea2a46400",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/6800e0879177f58cf1f11bf8a080dfbc55e0b45f7d6e26eeb76992aba6ef44c5.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "6800e0879177f58cf1f11bf8a080dfbc55e0b45f7d6e26eeb76992aba6ef44c5"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/3bad7a19d8d0239313eecbd1de73e7d4b7869a018b1e8472f8fb80bf8460cedb.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "3bad7a19d8d0239313eecbd1de73e7d4b7869a018b1e8472f8fb80bf8460cedb"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/44ef7fd2e2f533dcf04741ee1e211157462eee777cc345d3f62388dbf69103fb.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "44ef7fd2e2f533dcf04741ee1e211157462eee777cc345d3f62388dbf69103fb"
+      }
+    },
+    {
+      "parentId": "original-70-15217a88a113bca3",
+      "parentHash": "15217a88a113bca3e5b2e82c32a6c82cca5d4d1ca7d619a5a1f8dc34bc837705",
+      "title": "Batman",
+      "zombieId": "candidate-zombie_mutations_20260914-batman-7a4c46af7f957f93",
+      "imageHash": "7a4c46af7f957f9364a0cc84ca79ef42b5f57a16fec58c6c1643aacd5fa751ff",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c86cb214cdd035a6c9a2116080d5c7db98606b99ff472250094b00f037378aa9.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c86cb214cdd035a6c9a2116080d5c7db98606b99ff472250094b00f037378aa9"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1920d2d31aa0e5c9ce6769b121e80192413eedb06d68aff3d3746b97b3e20487.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "1920d2d31aa0e5c9ce6769b121e80192413eedb06d68aff3d3746b97b3e20487"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/2265be3cf259e96a02cc1a48421a6b2f527e1d97e10fdf751de69b7cdd777b76.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "2265be3cf259e96a02cc1a48421a6b2f527e1d97e10fdf751de69b7cdd777b76"
+      }
+    },
+    {
+      "parentId": "original-88-26bf0f0fdd814074",
+      "parentHash": "26bf0f0fdd814074d704e144d613d3f1954d76ae5da25266a63f982468679df2",
+      "title": "Judy",
+      "zombieId": "candidate-zombie_mutations_20260914-judy-2d4a962e5874ebb9",
+      "imageHash": "2d4a962e5874ebb9dc0c5b34d647889ea6067cb5ba71e281af48ce310a75f1cd",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/2c0b14ff33861ad15965ad9d5edf383506a729e5004d3df4462fb9f243229a26.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "2c0b14ff33861ad15965ad9d5edf383506a729e5004d3df4462fb9f243229a26"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/6765de35d4a163b8b1547b84754c635b177321f08c33d4ab561030f36d2c67d5.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "6765de35d4a163b8b1547b84754c635b177321f08c33d4ab561030f36d2c67d5"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/b4cb3f44b468c10152c065f13836b0554804f514541171446ca85ec98265c04c.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "b4cb3f44b468c10152c065f13836b0554804f514541171446ca85ec98265c04c"
+      }
+    },
+    {
+      "parentId": "original-60-3a5e5c7b7aee2a00",
+      "parentHash": "3a5e5c7b7aee2a0082dab43bc64c1f33c8d5c80a4ce8ae08625ad77a50c37155",
+      "title": "Marie",
+      "zombieId": "candidate-zombie_family_expansion_20260914-marie-57e182e10a06e21c",
+      "imageHash": "57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1f4b09ba2a85aca0c5bf935b308588056baa14725ad8291fbb08570060a45505.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "1f4b09ba2a85aca0c5bf935b308588056baa14725ad8291fbb08570060a45505"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/57224e58795bc707abab97bd6061eff1fef4d198d27701a3958e1d9033d80e6b.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "57224e58795bc707abab97bd6061eff1fef4d198d27701a3958e1d9033d80e6b"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/24d54f8475315695e21bd2f7518621230548fd3cc1d09c1f3e413e1dcedac279.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "24d54f8475315695e21bd2f7518621230548fd3cc1d09c1f3e413e1dcedac279"
+      }
+    },
+    {
+      "parentId": "original-38-8c1f9d085e1cbc56",
+      "parentHash": "8c1f9d085e1cbc56c7d3865edcd70d82222082edcb3d5075164de7a4e579aba0",
+      "title": "Hulk",
+      "zombieId": "candidate-zombie_family_expansion_20260914-hulk-6a6c10c7adea365b",
+      "imageHash": "6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ebf61eb1e3a130d3dc4b9f7858ba7b9c83c61b8ddf2220ff98c38b0b8b7a3a59.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "ebf61eb1e3a130d3dc4b9f7858ba7b9c83c61b8ddf2220ff98c38b0b8b7a3a59"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/d506d1f56aa6b2ffe78adbdb8daa4458d574ea14c7117667785308f9430d7a20.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "d506d1f56aa6b2ffe78adbdb8daa4458d574ea14c7117667785308f9430d7a20"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ca408674e35d0a85b99cc7f3f29606bc198f19e3ced1597dc43422c03dccf0b3.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "ca408674e35d0a85b99cc7f3f29606bc198f19e3ced1597dc43422c03dccf0b3"
+      }
+    },
+    {
+      "parentId": "original-41-1363fc8e91acf2b5",
+      "parentHash": "1363fc8e91acf2b5d70f1e31cee44a33903489eb92f2c7f356436549ad90ec66",
+      "title": "Virgil",
+      "zombieId": "candidate-zombie_family_expansion_20260914-virgil-e342f01bb3f6fc72",
+      "imageHash": "e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/3906a26c716c37bf35c5214874d1d203d1b0ca3db87a026cdfa943c3d3991b39.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "3906a26c716c37bf35c5214874d1d203d1b0ca3db87a026cdfa943c3d3991b39"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f33fd046e7081d01d5435f6fb8d210cea3da1ef60822234d718ebd51274bc4b6.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "f33fd046e7081d01d5435f6fb8d210cea3da1ef60822234d718ebd51274bc4b6"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/110c300287bbe4711c9fa1951acf1e0830853fae3b9eb3d97d18738f2b5cfc35.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "110c300287bbe4711c9fa1951acf1e0830853fae3b9eb3d97d18738f2b5cfc35"
+      }
+    },
+    {
+      "parentId": "original-63-55f1aca66b25a384",
+      "parentHash": "55f1aca66b25a384caefcbb8252535dd13167dcd32f0946ccef3ad12f264dbd5",
+      "title": "Donald",
+      "zombieId": "candidate-zombie_family_expansion_20260914-donald-ae5f6628e10e4869",
+      "imageHash": "ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/48f4bcccfb328dfd43ad765d90e621519c5f0add70c22b6d2ff081a281ee34cc.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "48f4bcccfb328dfd43ad765d90e621519c5f0add70c22b6d2ff081a281ee34cc"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/aa97fa7aafdfff26f7b39e9f39100ffdd38004a205ab7e9bfc5d25ac962378ba.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "aa97fa7aafdfff26f7b39e9f39100ffdd38004a205ab7e9bfc5d25ac962378ba"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/5b603601cbe78997b3262768152bd8af7639413f30b60eaedb2a67a54531323e.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "5b603601cbe78997b3262768152bd8af7639413f30b60eaedb2a67a54531323e"
+      }
+    },
+    {
+      "parentId": "original-131-83c5406c90d2d989",
+      "parentHash": "83c5406c90d2d98917104b6491d96408ce2dd69cd56129585f2f629aa87c0728",
+      "title": "Elliott",
+      "zombieId": "candidate-zombie_family_expansion_20260914-elliott-7e8ba5dd9a61126e",
+      "imageHash": "7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c7a6f38d5c02c4c02c2d024332a1061dd9c53209de89d4aaa2ad7ddb54c49c14.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c7a6f38d5c02c4c02c2d024332a1061dd9c53209de89d4aaa2ad7ddb54c49c14"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/0b0effcc06ad8a04d71095b24c04e90b4ba8f4d78145c03a85fa80a29f76a1af.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "0b0effcc06ad8a04d71095b24c04e90b4ba8f4d78145c03a85fa80a29f76a1af"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/5dd5677283086099338c7c19ea32ee77a559b2b426ed3ecd01e794e970add7e9.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "5dd5677283086099338c7c19ea32ee77a559b2b426ed3ecd01e794e970add7e9"
+      }
+    },
+    {
+      "parentId": "original-2-279c95ff78b23174",
+      "parentHash": "279c95ff78b23174378f9e24bda3658bf0debebdfd831ccde8f3b57a7348ec1e",
+      "title": "Elvis",
+      "zombieId": "candidate-zombie_structural_20260914-elvis-d28f69d2c4f04f8f",
+      "imageHash": "d28f69d2c4f04f8f931d2a48476391bb43515cdb8389264eb7781e0c1fdac5f6",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/313596c20688a95255fedd1febef5f89143c5e0a8d9884c7a397a0d392c74d36.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "313596c20688a95255fedd1febef5f89143c5e0a8d9884c7a397a0d392c74d36"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/b91535315abb92be761256c2cc6b5d8e674c2f3680acf9754c07f50b64031a2a.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "b91535315abb92be761256c2cc6b5d8e674c2f3680acf9754c07f50b64031a2a"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f94f14af9f08bdb5067f76e7a90d09411ff23f8925137dcdb3e3482c9167b5f8.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "f94f14af9f08bdb5067f76e7a90d09411ff23f8925137dcdb3e3482c9167b5f8"
+      }
+    }
+  ]
+}

@@ -87,7 +87,7 @@
     image.style.visibility = 'hidden';
     image.src = card.querySelector('.artwork').href;
     image.alt = card.querySelector('img').alt;
-    caption.textContent = card.querySelector('figcaption > span').textContent;
+    caption.textContent = card.querySelector('figcaption > span').textContent + (zombieStates.get(card)?.zombie ? ' · Zombie' : '');
     position.textContent = (index + 1) + ' / ' + cards.length;
     original.href = card.dataset.original;
     image.decode().then(() => {
@@ -96,7 +96,106 @@
       if (turn === ticket) { image.style.visibility = 'visible'; caption.textContent += ' · Open the original below'; }
     });
   }
-  function bindCard(card) { card.querySelector('.artwork').addEventListener('click', event => {
+  const zombieStates = new WeakMap();
+  let zombieItems = new Map();
+  let zombieRefresh = false;
+  function livingSnapshot(card) {
+    const img = card.querySelector('.artwork > img');
+    return {src:img.dataset.src || img.getAttribute('src'), srcset:img.dataset.srcset || img.getAttribute('srcset') || '',
+      width:img.width, height:img.height, alt:img.alt, href:card.querySelector('.artwork').href, original:card.dataset.original};
+  }
+  function paintSnapshot(state, spec) {
+    const {card} = state, img = card.querySelector('.artwork > img');
+    delete img.dataset.src; delete img.dataset.srcset;
+    img.sizes = imageSizes(); img.srcset = spec.srcset; img.src = spec.src;
+    img.width = spec.width; img.height = spec.height; img.alt = spec.alt;
+    img.classList.remove('image-error'); img.classList.add('loaded');
+    card.querySelector('.artwork').href = spec.href;
+    card.querySelector('.artwork').setAttribute('aria-label', 'Enlarge ' + spec.alt);
+    card.dataset.original = spec.original;
+  }
+  function zombieButton(state) {
+    const item = zombieItems.get(state.card.id);
+    state.button.disabled = !item;
+    state.button.textContent = state.intent ? 'Living' : 'Zombie';
+    state.button.setAttribute('aria-pressed', String(state.zombie));
+    state.button.setAttribute('aria-busy', String(state.pending));
+    state.button.setAttribute('aria-label', (state.intent ? 'Show living ' : 'Show zombie ') + state.title);
+    state.button.title = item ? '' : 'Zombie version not yet available';
+    state.message.textContent = state.pending ? 'Loading painting…' : (!item ? 'Not yet available' : state.error || '');
+  }
+  async function chooseZombie(state, desired) {
+    const token = ++state.ticket;
+    state.intent = desired; state.error = ''; state.pending = false;
+    if (!desired) {
+      paintSnapshot(state, state.living); state.zombie = false; zombieButton(state); return;
+    }
+    const item = zombieItems.get(state.card.id);
+    if (!item) { state.intent = state.zombie; zombieButton(state); return; }
+    const variants = item.variants;
+    const spec = {src:variants[0].src, srcset:variants.map(v => v.src + ' ' + v.width + 'w').join(', '),
+      width:variants[0].width, height:variants[0].height, alt:state.title + ' · Zombie',
+      href:variants.at(-1).src, original:item.square.src};
+    state.pending = true; zombieButton(state);
+    try {
+      const preview = new Image(); preview.sizes = imageSizes(); preview.srcset = spec.srcset; preview.src = spec.src;
+      await preview.decode();
+      if (token !== state.ticket || !state.card.isConnected) return;
+      paintSnapshot(state, spec); state.zombie = true; state.assetId = item.zombieId;
+      announce.textContent = state.title + ', zombie version.';
+    } catch (_) {
+      if (token !== state.ticket) return;
+      state.intent = state.zombie; state.error = 'Could not load. Try again.';
+    } finally {
+      if (token === state.ticket) {state.pending = false; zombieButton(state);}
+    }
+  }
+  function registerZombieCard(card) {
+    if (zombieStates.has(card)) return;
+    const controls = document.createElement('div'); controls.className = 'zombie-controls';
+    const button = document.createElement('button'); button.type = 'button'; button.className = 'zombie-toggle';
+    const message = document.createElement('span'); message.className = 'zombie-status'; message.setAttribute('aria-live', 'polite');
+    const state = {card, button, message, title:card.querySelector('figcaption > span').textContent,
+      living:livingSnapshot(card), zombie:false, intent:false, pending:false, ticket:0};
+    zombieStates.set(card, state); controls.append(button, message); card.append(controls);
+    button.addEventListener('click', () => chooseZombie(state, !state.intent)); zombieButton(state);
+  }
+  function validateZombies(data) {
+    if (data.version !== 1 || !Array.isArray(data.items) || data.items.length > 5000) throw Error('Invalid zombie list');
+    const result = new Map();
+    for (const item of data.items) {
+      for (const id of [item.parentId, item.zombieId]) if (typeof id !== 'string' || !/^[a-zA-Z0-9_-]{1,240}$/.test(id)) throw Error('Invalid zombie identity');
+      if (result.has(item.parentId) || !/^[a-f0-9]{64}$/.test(item.parentHash) || !/^[a-f0-9]{64}$/.test(item.imageHash)) throw Error('Invalid zombie mapping');
+      if (!Array.isArray(item.variants) || !item.variants.length || item.variants.length > 6) throw Error('Missing zombie painting');
+      const variants = item.variants.map(v => {
+        if (!Number.isInteger(v.width) || v.height * 2 !== v.width || v.width < 2000 || v.width > 16000) throw Error('Invalid zombie dimensions');
+        return {src:safeAsset(v.src), width:v.width, height:v.height};
+      }).sort((a,b) => a.width - b.width);
+      if (item.square?.width !== 2000 || item.square?.height !== 2000) throw Error('Missing zombie square');
+      result.set(item.parentId, {...item, variants, square:{src:safeAsset(item.square.src), width:2000, height:2000}});
+    }
+    return result;
+  }
+  async function refreshZombies() {
+    if (zombieRefresh || document.hidden) return;
+    zombieRefresh = true;
+    const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch('zombies.json', {signal:controller.signal, credentials:'omit', cache:'no-store'});
+      if (!response.ok) throw Error('Zombie paintings unavailable');
+      const next = validateZombies(await response.json()); zombieItems = next;
+      for (const card of cards) {
+        registerZombieCard(card); const state = zombieStates.get(card), item = next.get(card.id);
+        if (!item && (state.zombie || state.intent)) chooseZombie(state, false);
+        else if (state.zombie && state.assetId !== item.zombieId) chooseZombie(state, true);
+        zombieButton(state);
+      }
+    } catch (_) {
+      // Keep working mappings and the visible paintings during temporary failures.
+    } finally {clearTimeout(timeout); zombieRefresh = false;}
+  }
+
+  function bindCard(card) { registerZombieCard(card); card.querySelector('.artwork').addEventListener('click', event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();show(cards.indexOf(card));dialog.showModal();
   }); }
@@ -166,7 +265,10 @@
     } finally {clearTimeout(timeout);refreshing=false;}
   }
   refreshLoved();
+  refreshZombies();
   setInterval(refreshLoved, 60000);
+  setInterval(refreshZombies, 60000);
+  document.addEventListener('visibilitychange', refreshZombies);
   document.addEventListener('visibilitychange', refreshLoved);
   dialog.addEventListener('click', event => {
     if (event.target !== dialog) return;
