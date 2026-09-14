@@ -1684,6 +1684,56 @@
       "batch": "character_round_16_20260913",
       "slug": "asterix",
       "image": "/collection/assets/candidate-beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c.png"
+    },
+    {
+      "id": "candidate-character_round_17_20260913-tina-e68837c8a34a2c49",
+      "title": "Tina Turner",
+      "kind": "candidate",
+      "imageHash": "e68837c8a34a2c491fc3a639f8a1ad2bd7c6d36caa20b8e506937ddb220221af",
+      "description": "Tina Turner: a broad copper-brown mane streaked with gold, warm face and scarlet fringe dress, leaning toward a microphone against blue cotton.",
+      "batch": "character_round_17_20260913",
+      "slug": "tina",
+      "image": "/collection/assets/candidate-e68837c8a34a2c491fc3a639f8a1ad2bd7c6d36caa20b8e506937ddb220221af.png"
+    },
+    {
+      "id": "candidate-character_round_17_20260913-byrne-10023a223dc4258e",
+      "title": "David Byrne",
+      "kind": "candidate",
+      "imageHash": "10023a223dc4258ef978790a22d3dceb8e4fdf5f734daa4bb28df96fc7f2a6de",
+      "description": "David Byrne: a small peach face and swept dark hair above an oversized pale grey suit, with a microphone cable crossing the wine-colored ground.",
+      "batch": "character_round_17_20260913",
+      "slug": "byrne",
+      "image": "/collection/assets/candidate-10023a223dc4258ef978790a22d3dceb8e4fdf5f734daa4bb28df96fc7f2a6de.png"
+    },
+    {
+      "id": "candidate-character_round_17_20260913-hook-40453b5545f6ad9d",
+      "title": "Captain Hook",
+      "kind": "candidate",
+      "imageHash": "40453b5545f6ad9d1585bb51e623804d4b882940f39a871be54c3d6988490ce3",
+      "description": "Captain Hook: a crimson coat and feathered hat, warm face, cream neckcloth and an enlarged silver hook extending from the foreleg against teal cotton.",
+      "batch": "character_round_17_20260913",
+      "slug": "hook",
+      "image": "/collection/assets/candidate-40453b5545f6ad9d1585bb51e623804d4b882940f39a871be54c3d6988490ce3.png"
+    },
+    {
+      "id": "candidate-character_round_17_20260913-moon-010b47e140de29ac",
+      "title": "Sailor Moon",
+      "kind": "candidate",
+      "imageHash": "010b47e140de29aca48cb679c681b7959fda6c1718f4cabd2f2aa4cdcbeef40a",
+      "description": "Sailor Moon: yellow hair buns and tapered pigtails, a pale face, blue and white sailor costume and red boots against violet cotton.",
+      "batch": "character_round_17_20260913",
+      "slug": "moon",
+      "image": "/collection/assets/candidate-010b47e140de29aca48cb679c681b7959fda6c1718f4cabd2f2aa4cdcbeef40a.png"
+    },
+    {
+      "id": "candidate-character_round_17_20260913-skeletor-3c6b6f87b3bfdc96",
+      "title": "Skeletor",
+      "kind": "candidate",
+      "imageHash": "3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e",
+      "description": "Skeletor: a pale yellow face within a purple hood, blue body, crossed violet harness and dark boots against ochre cotton.",
+      "batch": "character_round_17_20260913",
+      "slug": "skeletor",
+      "image": "/collection/assets/candidate-3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e.png"
     }
   ],
   "references": [
@@ -2188,6 +2238,33 @@
           {
             "candidateId": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
             "imageHash": "beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c"
+          }
+        ]
+      },
+      {
+        "id": "round-17",
+        "title": "Round 17",
+        "frozenAt": "2026-09-14T00:45:41.887943+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_17_20260913-tina-e68837c8a34a2c49",
+            "imageHash": "e68837c8a34a2c491fc3a639f8a1ad2bd7c6d36caa20b8e506937ddb220221af"
+          },
+          {
+            "candidateId": "candidate-character_round_17_20260913-byrne-10023a223dc4258e",
+            "imageHash": "10023a223dc4258ef978790a22d3dceb8e4fdf5f734daa4bb28df96fc7f2a6de"
+          },
+          {
+            "candidateId": "candidate-character_round_17_20260913-hook-40453b5545f6ad9d",
+            "imageHash": "40453b5545f6ad9d1585bb51e623804d4b882940f39a871be54c3d6988490ce3"
+          },
+          {
+            "candidateId": "candidate-character_round_17_20260913-moon-010b47e140de29ac",
+            "imageHash": "010b47e140de29aca48cb679c681b7959fda6c1718f4cabd2f2aa4cdcbeef40a"
+          },
+          {
+            "candidateId": "candidate-character_round_17_20260913-skeletor-3c6b6f87b3bfdc96",
+            "imageHash": "3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e"
           }
         ]
       }

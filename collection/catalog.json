@@ -16561,6 +16561,496 @@
           "sha256": "8c93519938015ede617c72904f4e5939be5b5fadfc4dc1047dbb921d73af5743"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_17_20260913-tina-e68837c8a34a2c49",
+      "dogId": "design-character_round_17_20260913-tina",
+      "title": "Tina Turner",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e68837c8a34a2c491fc3a639f8a1ad2bd7c6d36caa20b8e506937ddb220221af.png",
+      "imageHash": "e68837c8a34a2c491fc3a639f8a1ad2bd7c6d36caa20b8e506937ddb220221af",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_17_20260913/characters/tina.js",
+      "sourceHash": "e353834005ff5e5671a14e7e689bcecfac8a5db909248803d000b15f70260193",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_17_20260913/characters/tina.js",
+          "sha256": "e353834005ff5e5671a14e7e689bcecfac8a5db909248803d000b15f70260193"
+        }
+      ],
+      "description": "Tina Turner: a broad copper-brown mane streaked with gold, warm face and scarlet fringe dress, leaning toward a microphone against blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_17_20260913",
+      "slug": "tina",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_17_20260913/out/tina.json",
+          "sha256": "2a0390a30888f20ed10a7fa019b3fde5c60b2007a8519abda8d06d62731d7d29"
+        },
+        "cast": {
+          "path": "../design/character_round_17_20260913/cast.json",
+          "sha256": "bce4d65ecb12161538516176e9a438cc2fa72e49fee7a4bdd02b53f5615b8dd2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_17_20260913/out/tina_wide_4000.png",
+          "sha256": "13ef50690fb71c8a78c8e0ef17f01901671f08f3649b9f02dac66f3ac76236a5",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_17_20260913/out/tina_square_2000.png",
+          "sha256": "32c40d8cc74ce0ec0e69086b1105ad23e3d4b2b3de2e06e5dd17198962f3326f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_17_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_17_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_17_20260913/work/tina/wide.json",
+          "sha256": "8d2d17ca28b8c81ca5d55d67940571b93b4cf5e40e1bd50340c2ca734220d1ee"
+        },
+        "wrapper": {
+          "path": "../design/character_round_17_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_17_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_17_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_17_20260913/fields.json",
+          "sha256": "5b75923b0e84e298b8b575ed46dc54819350403e3a998e74e18efc3aeaf24c27"
+        },
+        "supports": {
+          "path": "../design/character_round_17_20260913/supports.json",
+          "sha256": "16a354f4a7c63c5d8cbe4d27a2cf5dbe9bd66649e0469604cb48aa3fb835df44"
+        },
+        "lightContact": {
+          "path": "../design/character_round_17_20260913/light-contact.js",
+          "sha256": "38cabee304d632705bb8dc6195aced95afe499a233f98c3f8722662a8b15c0c5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_17_20260913/work/tina/light_contact.json",
+          "sha256": "ee818a1995d798ea6a460d685b776378f0a125074a16160688b76a8bc65b91b3"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_17_20260913-byrne-10023a223dc4258e",
+      "dogId": "design-character_round_17_20260913-byrne",
+      "title": "David Byrne",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-10023a223dc4258ef978790a22d3dceb8e4fdf5f734daa4bb28df96fc7f2a6de.png",
+      "imageHash": "10023a223dc4258ef978790a22d3dceb8e4fdf5f734daa4bb28df96fc7f2a6de",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_17_20260913/characters/byrne.js",
+      "sourceHash": "7c1ab41ad9c7168d97c9db6d55d1796d812df98e4ce055c024821df1a5670afa",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_17_20260913/characters/byrne.js",
+          "sha256": "7c1ab41ad9c7168d97c9db6d55d1796d812df98e4ce055c024821df1a5670afa"
+        }
+      ],
+      "description": "David Byrne: a small peach face and swept dark hair above an oversized pale grey suit, with a microphone cable crossing the wine-colored ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_17_20260913",
+      "slug": "byrne",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_17_20260913/out/byrne.json",
+          "sha256": "116e2fa80b88128d3e441d9de38209666e75927b03fe2447134674b90853c2bc"
+        },
+        "cast": {
+          "path": "../design/character_round_17_20260913/cast.json",
+          "sha256": "bce4d65ecb12161538516176e9a438cc2fa72e49fee7a4bdd02b53f5615b8dd2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_17_20260913/out/byrne_wide_4000.png",
+          "sha256": "953430a355e45e385689ea39ab34797133fc4e60c1e53567ef36e76973699271",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_17_20260913/out/byrne_square_2000.png",
+          "sha256": "18141fe4ec7e953e552f8090eff0ea821f8ca5640f171f9502ba2d9f4829bd21",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_17_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_17_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_17_20260913/work/byrne/wide.json",
+          "sha256": "81701b470ea1241a8b4c1fa909fa804623ef50795b2174a7ed1000c210b088aa"
+        },
+        "wrapper": {
+          "path": "../design/character_round_17_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_17_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_17_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_17_20260913/fields.json",
+          "sha256": "5b75923b0e84e298b8b575ed46dc54819350403e3a998e74e18efc3aeaf24c27"
+        },
+        "supports": {
+          "path": "../design/character_round_17_20260913/supports.json",
+          "sha256": "16a354f4a7c63c5d8cbe4d27a2cf5dbe9bd66649e0469604cb48aa3fb835df44"
+        },
+        "lightContact": {
+          "path": "../design/character_round_17_20260913/light-contact.js",
+          "sha256": "38cabee304d632705bb8dc6195aced95afe499a233f98c3f8722662a8b15c0c5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_17_20260913/work/byrne/light_contact.json",
+          "sha256": "7306ad6803d5c304b5ead256caf70daf09e46157e691a1bf3ef85c69bcaf7444"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_17_20260913-hook-40453b5545f6ad9d",
+      "dogId": "design-character_round_17_20260913-hook",
+      "title": "Captain Hook",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-40453b5545f6ad9d1585bb51e623804d4b882940f39a871be54c3d6988490ce3.png",
+      "imageHash": "40453b5545f6ad9d1585bb51e623804d4b882940f39a871be54c3d6988490ce3",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_17_20260913/characters/hook.js",
+      "sourceHash": "d11e9b0349e76ee341e4a4b840eaf3afd1d71ed1895fa3917022f976c4084ef4",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_17_20260913/characters/hook.js",
+          "sha256": "d11e9b0349e76ee341e4a4b840eaf3afd1d71ed1895fa3917022f976c4084ef4"
+        }
+      ],
+      "description": "Captain Hook: a crimson coat and feathered hat, warm face, cream neckcloth and an enlarged silver hook extending from the foreleg against teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_17_20260913",
+      "slug": "hook",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_17_20260913/out/hook.json",
+          "sha256": "8a3f75028c02ba4378da71a348f1deabbb047397b7851a1fc4632551f21aba43"
+        },
+        "cast": {
+          "path": "../design/character_round_17_20260913/cast.json",
+          "sha256": "bce4d65ecb12161538516176e9a438cc2fa72e49fee7a4bdd02b53f5615b8dd2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_17_20260913/out/hook_wide_4000.png",
+          "sha256": "7b9c85c2c82b92232f17bf4ed3669815458d2c7466e75ad425443cc53c74bbb2",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_17_20260913/out/hook_square_2000.png",
+          "sha256": "c679a44a36738826f0f85af73d2d474d9280f2958bbe8704fae405c5d13c3fad",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_17_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_17_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_17_20260913/work/hook/wide.json",
+          "sha256": "3ebb60846a0296d9b692377d368dc97d2d1ad77891a25a7931aeed0604d5dfff"
+        },
+        "wrapper": {
+          "path": "../design/character_round_17_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_17_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_17_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_17_20260913/fields.json",
+          "sha256": "5b75923b0e84e298b8b575ed46dc54819350403e3a998e74e18efc3aeaf24c27"
+        },
+        "supports": {
+          "path": "../design/character_round_17_20260913/supports.json",
+          "sha256": "16a354f4a7c63c5d8cbe4d27a2cf5dbe9bd66649e0469604cb48aa3fb835df44"
+        },
+        "lightContact": {
+          "path": "../design/character_round_17_20260913/light-contact.js",
+          "sha256": "38cabee304d632705bb8dc6195aced95afe499a233f98c3f8722662a8b15c0c5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_17_20260913/work/hook/light_contact.json",
+          "sha256": "79a741541d46a283eb69b4879df23065aa299f9f5d2404b04ce146a012ee6995"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_17_20260913-moon-010b47e140de29ac",
+      "dogId": "design-character_round_17_20260913-moon",
+      "title": "Sailor Moon",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-010b47e140de29aca48cb679c681b7959fda6c1718f4cabd2f2aa4cdcbeef40a.png",
+      "imageHash": "010b47e140de29aca48cb679c681b7959fda6c1718f4cabd2f2aa4cdcbeef40a",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_17_20260913/characters/moon.js",
+      "sourceHash": "5828eb7b4ed921eb2af11b44accb74620899482f5097390c52c2311e90f2a246",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_17_20260913/characters/moon.js",
+          "sha256": "5828eb7b4ed921eb2af11b44accb74620899482f5097390c52c2311e90f2a246"
+        }
+      ],
+      "description": "Sailor Moon: yellow hair buns and tapered pigtails, a pale face, blue and white sailor costume and red boots against violet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_17_20260913",
+      "slug": "moon",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_17_20260913/out/moon.json",
+          "sha256": "c5720a5bf4cc4f5a8020cc553c2b89791ec71f582d2543144a1c99460fa8c0b9"
+        },
+        "cast": {
+          "path": "../design/character_round_17_20260913/cast.json",
+          "sha256": "bce4d65ecb12161538516176e9a438cc2fa72e49fee7a4bdd02b53f5615b8dd2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_17_20260913/out/moon_wide_4000.png",
+          "sha256": "fe73a4aa249960e2baf313f9f9cb666b1bb0fe44ba937f66270268ed8c1a5f69",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_17_20260913/out/moon_square_2000.png",
+          "sha256": "a9a64998abdf642b0f8da5e5d0e53814f5fa56c5fb75450cb97f62546f2214c0",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_17_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_17_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_17_20260913/work/moon/wide.json",
+          "sha256": "ce91f0574c85af7740123392212513738d9b45555612fd4b48e0951b7f8a8c55"
+        },
+        "wrapper": {
+          "path": "../design/character_round_17_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_17_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_17_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_17_20260913/fields.json",
+          "sha256": "5b75923b0e84e298b8b575ed46dc54819350403e3a998e74e18efc3aeaf24c27"
+        },
+        "supports": {
+          "path": "../design/character_round_17_20260913/supports.json",
+          "sha256": "16a354f4a7c63c5d8cbe4d27a2cf5dbe9bd66649e0469604cb48aa3fb835df44"
+        },
+        "lightContact": {
+          "path": "../design/character_round_17_20260913/light-contact.js",
+          "sha256": "38cabee304d632705bb8dc6195aced95afe499a233f98c3f8722662a8b15c0c5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_17_20260913/work/moon/light_contact.json",
+          "sha256": "4d99205e5369262d3ea3a838676f81a26e4c16ec2a3f0d3d8288ee8eaef29208"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_17_20260913-skeletor-3c6b6f87b3bfdc96",
+      "dogId": "design-character_round_17_20260913-skeletor",
+      "title": "Skeletor",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e.png",
+      "imageHash": "3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e",
+      "parent": "original-70-15217a88a113bca3",
+      "nativeParentSeed": 70,
+      "source": "../design/character_round_17_20260913/characters/skeletor.js",
+      "sourceHash": "e068e593f792126221c9af6e51bdba87c452a30b5d6be78d77c1e824eb3d8f28",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_17_20260913/characters/skeletor.js",
+          "sha256": "e068e593f792126221c9af6e51bdba87c452a30b5d6be78d77c1e824eb3d8f28"
+        }
+      ],
+      "description": "Skeletor: a pale yellow face within a purple hood, blue body, crossed violet harness and dark boots against ochre cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_17_20260913",
+      "slug": "skeletor",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_17_20260913/out/skeletor.json",
+          "sha256": "5ee86b5a18f36c19a665e076517bf98feaa4e8a4bd481434e6b79f3ac0ce8fa4"
+        },
+        "cast": {
+          "path": "../design/character_round_17_20260913/cast.json",
+          "sha256": "bce4d65ecb12161538516176e9a438cc2fa72e49fee7a4bdd02b53f5615b8dd2"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_17_20260913/out/skeletor_wide_4000.png",
+          "sha256": "f27d6338892a9dc4ac8fb0ef2f3bd7105cf9dd8ec1d6a5b021558b6713bf05c1",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_17_20260913/out/skeletor_square_2000.png",
+          "sha256": "276c87a4d719aa63c56767bef5652b4c469909ef888b8fc900881291a4a62271",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_17_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_17_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_17_20260913/work/skeletor/wide.json",
+          "sha256": "d6084f2429816d213ca8dff4e25263298e91324aa55c39f66d3e04f5dfc13a7a"
+        },
+        "wrapper": {
+          "path": "../design/character_round_17_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_17_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_17_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_17_20260913/fields.json",
+          "sha256": "5b75923b0e84e298b8b575ed46dc54819350403e3a998e74e18efc3aeaf24c27"
+        },
+        "supports": {
+          "path": "../design/character_round_17_20260913/supports.json",
+          "sha256": "16a354f4a7c63c5d8cbe4d27a2cf5dbe9bd66649e0469604cb48aa3fb835df44"
+        },
+        "lightContact": {
+          "path": "../design/character_round_17_20260913/light-contact.js",
+          "sha256": "38cabee304d632705bb8dc6195aced95afe499a233f98c3f8722662a8b15c0c5"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_17_20260913/work/skeletor/light_contact.json",
+          "sha256": "b4485d762ef49c97cf575a6d70bd7bcc9393cba04098fd0ad9b4c7a247781ace"
+        }
+      }
     }
   ],
   "rounds": [
