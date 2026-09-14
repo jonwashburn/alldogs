@@ -17051,6 +17051,496 @@
           "sha256": "b4485d762ef49c97cf575a6d70bd7bcc9393cba04098fd0ad9b4c7a247781ace"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_18_20260913-wolverine-1a67e6ad56695d20",
+      "dogId": "design-character_round_18_20260913-wolverine",
+      "title": "Wolverine",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1a67e6ad56695d20fb199aab6e2d116df42b670a4f7a209977fefe62b223a516.png",
+      "imageHash": "1a67e6ad56695d20fb199aab6e2d116df42b670a4f7a209977fefe62b223a516",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/character_round_18_20260913/characters/wolverine.js",
+      "sourceHash": "5cc18197745c8f141b51d44d5169e0a97858fba39ae73e2a8d2c632b2cfad0d8",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_18_20260913/characters/wolverine.js",
+          "sha256": "5cc18197745c8f141b51d44d5169e0a97858fba39ae73e2a8d2c632b2cfad0d8"
+        }
+      ],
+      "description": "Wolverine: yellow coat and blue pointed cowl, a warm face and three silver claws extending from the forepaw against violet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_18_20260913",
+      "slug": "wolverine",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_18_20260913/out/wolverine.json",
+          "sha256": "cae402c35b979599920cb1ee7d4f4900ea4d9b988f5a7110929e589ffd4cb475"
+        },
+        "cast": {
+          "path": "../design/character_round_18_20260913/cast.json",
+          "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_18_20260913/out/wolverine_wide_4000.png",
+          "sha256": "11ed18976c447c25603ea97ab557e0666296c157bfecf244bb1d10fe55b07ae8",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_18_20260913/out/wolverine_square_2000.png",
+          "sha256": "722c42a3aa3f91e74017c2c0d4f78c4711c6d94a85ea79ef50d81a26d0b9997e",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_18_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_18_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_18_20260913/work/wolverine/wide.json",
+          "sha256": "a5ce1e208d0d7e0c983b9c6bd8d8b38a2ef94305852772903505f5f5794f6a4a"
+        },
+        "wrapper": {
+          "path": "../design/character_round_18_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_18_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_18_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_18_20260913/fields.json",
+          "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+        },
+        "supports": {
+          "path": "../design/character_round_18_20260913/supports.json",
+          "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+        },
+        "lightContact": {
+          "path": "../design/character_round_18_20260913/light-contact.js",
+          "sha256": "d8577edfa175160e0b664ca3cb10e94686c67b63c30d10b3ff87524a7fd2a81d"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_18_20260913/work/wolverine/light_contact.json",
+          "sha256": "8964a3174b248695f53d7287601c5826fb1cc9f1a600cbd28931f35006606c9f"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_18_20260913-cruella-dd734d4c69303c7f",
+      "dogId": "design-character_round_18_20260913-cruella",
+      "title": "Cruella de Vil",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-dd734d4c69303c7f89403b38d0a342ebe4a610f7578f5c3e5c44aef3b62543b3.png",
+      "imageHash": "dd734d4c69303c7f89403b38d0a342ebe4a610f7578f5c3e5c44aef3b62543b3",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_18_20260913/characters/cruella.js",
+      "sourceHash": "77bfc8877f71c964f3296b04b0fc663cd81b29dd590e9e8fee0dd45c8872e2ac",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_18_20260913/characters/cruella.js",
+          "sha256": "77bfc8877f71c964f3296b04b0fc663cd81b29dd590e9e8fee0dd45c8872e2ac"
+        }
+      ],
+      "description": "Cruella de Vil: divided ivory and black hair, a long red coat with pale lapels, small sly eyes and red shoes against teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_18_20260913",
+      "slug": "cruella",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_18_20260913/out/cruella.json",
+          "sha256": "4179d646cfeb5dcc6e75bb7f2248cafb62e77ee0f2d90e666839b139013c1af9"
+        },
+        "cast": {
+          "path": "../design/character_round_18_20260913/cast.json",
+          "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_18_20260913/out/cruella_wide_4000.png",
+          "sha256": "7eb4c01b02b7b0bc45d1db9cffb4a10dee00bd4f881df34a1ebb3249c0652ccf",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_18_20260913/out/cruella_square_2000.png",
+          "sha256": "5ac12e9fac9e500d1d96b0dc010c733871d3667ba18ae349626137055eaed7b6",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_18_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_18_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_18_20260913/work/cruella/wide.json",
+          "sha256": "35c3e80be4a285762436aee0f9fee3990997374086fac3ed7cb53b0c2e1b32b2"
+        },
+        "wrapper": {
+          "path": "../design/character_round_18_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_18_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_18_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_18_20260913/fields.json",
+          "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+        },
+        "supports": {
+          "path": "../design/character_round_18_20260913/supports.json",
+          "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+        },
+        "lightContact": {
+          "path": "../design/character_round_18_20260913/light-contact.js",
+          "sha256": "d8577edfa175160e0b664ca3cb10e94686c67b63c30d10b3ff87524a7fd2a81d"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_18_20260913/work/cruella/light_contact.json",
+          "sha256": "646f5f85c6a09650ce67cf49230b3ff9ec440923ede28eb305a7ffd5c72dd083"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_18_20260913-bernie-783a991734c49302",
+      "dogId": "design-character_round_18_20260913-bernie",
+      "title": "Bernie Sanders",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-783a991734c49302e49e15a7d98deab17d15d72c5d10fc395c7072dd37b8a026.png",
+      "imageHash": "783a991734c49302e49e15a7d98deab17d15d72c5d10fc395c7072dd37b8a026",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_18_20260913/characters/bernie.js",
+      "sourceHash": "0cf1cff0ea74642648cd17a1955ae6644a287a6e50d9936ef9f08bf48475d2cd",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_18_20260913/characters/bernie.js",
+          "sha256": "0cf1cff0ea74642648cd17a1955ae6644a287a6e50d9936ef9f08bf48475d2cd"
+        }
+      ],
+      "description": "Bernie Sanders: a warm bare forehead, sparse grey temples and thin glasses, a beige parka and patterned mitten against plum cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_18_20260913",
+      "slug": "bernie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_18_20260913/out/bernie.json",
+          "sha256": "bf3af8f4084c695ccbcb5a2e1e48b4a9d7f32887067892fea805a32a59638534"
+        },
+        "cast": {
+          "path": "../design/character_round_18_20260913/cast.json",
+          "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_18_20260913/out/bernie_wide_4000.png",
+          "sha256": "11548b20ac046bd4cdc6b344c890331e96ada036de5fc5cd7443e870b386281a",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_18_20260913/out/bernie_square_2000.png",
+          "sha256": "b68f341a65da591ad03a7f2b1816bf24273d7d5d92e5e4e1152e285a96dce43f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_18_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_18_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_18_20260913/work/bernie/wide.json",
+          "sha256": "6777cbc5381e7a742d94413c30c9085dbc5b704a65fe62bd6d140d457050e2ce"
+        },
+        "wrapper": {
+          "path": "../design/character_round_18_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_18_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_18_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_18_20260913/fields.json",
+          "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+        },
+        "supports": {
+          "path": "../design/character_round_18_20260913/supports.json",
+          "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+        },
+        "lightContact": {
+          "path": "../design/character_round_18_20260913/light-contact.js",
+          "sha256": "d8577edfa175160e0b664ca3cb10e94686c67b63c30d10b3ff87524a7fd2a81d"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_18_20260913/work/bernie/light_contact.json",
+          "sha256": "071d9ca30d772e4cecbcfa410bbe1718e3348a4f44a1520241e65354b835eca7"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+      "dogId": "design-character_round_18_20260913-leeloo",
+      "title": "Leeloo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6.png",
+      "imageHash": "3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_18_20260913/characters/leeloo.js",
+      "sourceHash": "4d2d9962792c3fe39887b93626cdbe22ab7ed1106575b588675322d915364e25",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_18_20260913/characters/leeloo.js",
+          "sha256": "4d2d9962792c3fe39887b93626cdbe22ab7ed1106575b588675322d915364e25"
+        }
+      ],
+      "description": "Leeloo: an orange bob, warm pale face with a small open mouth, ivory body bands and wrapped feet against deep teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_18_20260913",
+      "slug": "leeloo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_18_20260913/out/leeloo.json",
+          "sha256": "e67d01daa48f20117794d639180e817881107506c01412cf4d74b0e6cb133c03"
+        },
+        "cast": {
+          "path": "../design/character_round_18_20260913/cast.json",
+          "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_18_20260913/out/leeloo_wide_4000.png",
+          "sha256": "9363faed1fa4ac9db6ee18c8bd00a170d11956aa016c57cfbf914435f37e97ed",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_18_20260913/out/leeloo_square_2000.png",
+          "sha256": "3d4696fd5bbf58e3c28c1a69f86d7212b418f9f86c09523addd0792a87f76e24",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_18_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_18_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_18_20260913/work/leeloo/wide.json",
+          "sha256": "690703862d5b68713196ae15f0ad7dfa8353bfbb1e9365e31f0e2b503a2f6e24"
+        },
+        "wrapper": {
+          "path": "../design/character_round_18_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_18_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_18_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_18_20260913/fields.json",
+          "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+        },
+        "supports": {
+          "path": "../design/character_round_18_20260913/supports.json",
+          "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+        },
+        "lightContact": {
+          "path": "../design/character_round_18_20260913/light-contact.js",
+          "sha256": "d8577edfa175160e0b664ca3cb10e94686c67b63c30d10b3ff87524a7fd2a81d"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_18_20260913/work/leeloo/light_contact.json",
+          "sha256": "d876099bb79b8b34e8a6dc7d43ae46b80714bfb6fe124bfc64dd1b932543c1be"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_18_20260913-beetlejuice-db1f3ebb83ee09ff",
+      "dogId": "design-character_round_18_20260913-beetlejuice",
+      "title": "Beetlejuice",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1.png",
+      "imageHash": "db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1",
+      "parent": "original-131-83c5406c90d2d989",
+      "nativeParentSeed": 131,
+      "source": "../design/character_round_18_20260913/characters/beetlejuice.js",
+      "sourceHash": "9fbddae4e201401fe5bc977ad7ef8b9061ce12bdd1d88777f4f3c0d5eda534a2",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_18_20260913/characters/beetlejuice.js",
+          "sha256": "9fbddae4e201401fe5bc977ad7ef8b9061ce12bdd1d88777f4f3c0d5eda534a2"
+        }
+      ],
+      "description": "Beetlejuice: loose pale hair, lavender eye sockets, a pale green face and irregular dark suit stripes against olive cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_18_20260913",
+      "slug": "beetlejuice",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_18_20260913/out/beetlejuice.json",
+          "sha256": "d9375876a8104762b1a928b3868fb610e512a8a7758e17eddb6a792ebaeadbea"
+        },
+        "cast": {
+          "path": "../design/character_round_18_20260913/cast.json",
+          "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_18_20260913/out/beetlejuice_wide_4000.png",
+          "sha256": "5498912c5c80899599659129eb9f2708d7a350e859cf637589db379dc17265ad",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_18_20260913/out/beetlejuice_square_2000.png",
+          "sha256": "fb9a2e210379daffc7aaf358299319f8bacd8b003fb09aeb17ef5a4af8c8fb3b",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_18_20260913/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_18_20260913/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_18_20260913/work/beetlejuice/wide.json",
+          "sha256": "be62c64c00797c90825ef7fc3054238e3dae6224fbde17c36d4d05b07c611dbc"
+        },
+        "wrapper": {
+          "path": "../design/character_round_18_20260913/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_18_20260913/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_18_20260913/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_18_20260913/fields.json",
+          "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+        },
+        "supports": {
+          "path": "../design/character_round_18_20260913/supports.json",
+          "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+        },
+        "lightContact": {
+          "path": "../design/character_round_18_20260913/light-contact.js",
+          "sha256": "d8577edfa175160e0b664ca3cb10e94686c67b63c30d10b3ff87524a7fd2a81d"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_18_20260913/work/beetlejuice/light_contact.json",
+          "sha256": "c32e679685d0ac2179eddd94512a017314c64e01064689a525778375694f5bbc"
+        }
+      }
     }
   ],
   "rounds": [

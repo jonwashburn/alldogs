@@ -1734,6 +1734,56 @@
       "batch": "character_round_17_20260913",
       "slug": "skeletor",
       "image": "/collection/assets/candidate-3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e.png"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-wolverine-1a67e6ad56695d20",
+      "title": "Wolverine",
+      "kind": "candidate",
+      "imageHash": "1a67e6ad56695d20fb199aab6e2d116df42b670a4f7a209977fefe62b223a516",
+      "description": "Wolverine: yellow coat and blue pointed cowl, a warm face and three silver claws extending from the forepaw against violet cotton.",
+      "batch": "character_round_18_20260913",
+      "slug": "wolverine",
+      "image": "/collection/assets/candidate-1a67e6ad56695d20fb199aab6e2d116df42b670a4f7a209977fefe62b223a516.png"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-cruella-dd734d4c69303c7f",
+      "title": "Cruella de Vil",
+      "kind": "candidate",
+      "imageHash": "dd734d4c69303c7f89403b38d0a342ebe4a610f7578f5c3e5c44aef3b62543b3",
+      "description": "Cruella de Vil: divided ivory and black hair, a long red coat with pale lapels, small sly eyes and red shoes against teal cotton.",
+      "batch": "character_round_18_20260913",
+      "slug": "cruella",
+      "image": "/collection/assets/candidate-dd734d4c69303c7f89403b38d0a342ebe4a610f7578f5c3e5c44aef3b62543b3.png"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-bernie-783a991734c49302",
+      "title": "Bernie Sanders",
+      "kind": "candidate",
+      "imageHash": "783a991734c49302e49e15a7d98deab17d15d72c5d10fc395c7072dd37b8a026",
+      "description": "Bernie Sanders: a warm bare forehead, sparse grey temples and thin glasses, a beige parka and patterned mitten against plum cotton.",
+      "batch": "character_round_18_20260913",
+      "slug": "bernie",
+      "image": "/collection/assets/candidate-783a991734c49302e49e15a7d98deab17d15d72c5d10fc395c7072dd37b8a026.png"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+      "title": "Leeloo",
+      "kind": "candidate",
+      "imageHash": "3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6",
+      "description": "Leeloo: an orange bob, warm pale face with a small open mouth, ivory body bands and wrapped feet against deep teal cotton.",
+      "batch": "character_round_18_20260913",
+      "slug": "leeloo",
+      "image": "/collection/assets/candidate-3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6.png"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-beetlejuice-db1f3ebb83ee09ff",
+      "title": "Beetlejuice",
+      "kind": "candidate",
+      "imageHash": "db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1",
+      "description": "Beetlejuice: loose pale hair, lavender eye sockets, a pale green face and irregular dark suit stripes against olive cotton.",
+      "batch": "character_round_18_20260913",
+      "slug": "beetlejuice",
+      "image": "/collection/assets/candidate-db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1.png"
     }
   ],
   "references": [
@@ -2265,6 +2315,33 @@
           {
             "candidateId": "candidate-character_round_17_20260913-skeletor-3c6b6f87b3bfdc96",
             "imageHash": "3c6b6f87b3bfdc962b84e515996101410f4bc6cee9905acbd301eb4d1a320a9e"
+          }
+        ]
+      },
+      {
+        "id": "round-18",
+        "title": "Round 18",
+        "frozenAt": "2026-09-14T01:20:16.222257+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_18_20260913-wolverine-1a67e6ad56695d20",
+            "imageHash": "1a67e6ad56695d20fb199aab6e2d116df42b670a4f7a209977fefe62b223a516"
+          },
+          {
+            "candidateId": "candidate-character_round_18_20260913-cruella-dd734d4c69303c7f",
+            "imageHash": "dd734d4c69303c7f89403b38d0a342ebe4a610f7578f5c3e5c44aef3b62543b3"
+          },
+          {
+            "candidateId": "candidate-character_round_18_20260913-bernie-783a991734c49302",
+            "imageHash": "783a991734c49302e49e15a7d98deab17d15d72c5d10fc395c7072dd37b8a026"
+          },
+          {
+            "candidateId": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+            "imageHash": "3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6"
+          },
+          {
+            "candidateId": "candidate-character_round_18_20260913-beetlejuice-db1f3ebb83ee09ff",
+            "imageHash": "db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1"
           }
         ]
       }
