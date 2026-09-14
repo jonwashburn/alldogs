@@ -1784,6 +1784,56 @@
       "batch": "character_round_18_20260913",
       "slug": "beetlejuice",
       "image": "/collection/assets/candidate-db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1.png"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-snoop-a2bd9f26f1d883fe",
+      "title": "Snoop Dogg",
+      "kind": "candidate",
+      "imageHash": "a2bd9f26f1d883fe94442f4214c8987ae1e993ccfd97f30c5cf7fb1b0c68175b",
+      "description": "Snoop Dogg: a long blue tracksuit, thin braids, narrow goatee and cream shoes, with a warm brown face against yellow cotton.",
+      "batch": "character_round_19_20260913",
+      "slug": "snoop",
+      "image": "/collection/assets/candidate-a2bd9f26f1d883fe94442f4214c8987ae1e993ccfd97f30c5cf7fb1b0c68175b.png"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-popeye-0c8eee31f0ae9169",
+      "title": "Popeye",
+      "kind": "candidate",
+      "imageHash": "0c8eee31f0ae91697008e0696cf0ed83063898c5a1def7b47240ceb483d6247d",
+      "description": "Popeye: a cream sailor cap, navy coat and pale collar, red necktie and a small brown pipe at his mouth against teal cotton.",
+      "batch": "character_round_19_20260913",
+      "slug": "popeye",
+      "image": "/collection/assets/candidate-0c8eee31f0ae91697008e0696cf0ed83063898c5a1def7b47240ceb483d6247d.png"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-jessica-76137e7e6dbd2ef3",
+      "title": "Jessica Rabbit",
+      "kind": "candidate",
+      "imageHash": "76137e7e6dbd2ef35bd816ab449cd63ef2fb6ef389d987121ad5233306782a2f",
+      "description": "Jessica Rabbit: a tilted head, swept orange hair, red gown and purple gloves against blue cotton.",
+      "batch": "character_round_19_20260913",
+      "slug": "jessica",
+      "image": "/collection/assets/candidate-76137e7e6dbd2ef35bd816ab449cd63ef2fb6ef389d987121ad5233306782a2f.png"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-luffy-6b947eb6850f19f2",
+      "title": "Monkey D. Luffy",
+      "kind": "candidate",
+      "imageHash": "6b947eb6850f19f2ae0c5adc5f9801ae5c6681f6bd18c1abd295e866e9d2fc5d",
+      "description": "Monkey D. Luffy: a straw hat with a red band, red vest, blue breeches and a jaunty lifted posture against violet cotton.",
+      "batch": "character_round_19_20260913",
+      "slug": "luffy",
+      "image": "/collection/assets/candidate-6b947eb6850f19f2ae0c5adc5f9801ae5c6681f6bd18c1abd295e866e9d2fc5d.png"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-ruth-ea29254f239f7197",
+      "title": "Ruth Bader Ginsburg",
+      "kind": "candidate",
+      "imageHash": "ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177",
+      "description": "Ruth Bader Ginsburg: a compact dark robe, ivory collar, grey hair and thin asymmetric glasses against terracotta cotton.",
+      "batch": "character_round_19_20260913",
+      "slug": "ruth",
+      "image": "/collection/assets/candidate-ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177.png"
     }
   ],
   "references": [
@@ -2342,6 +2392,33 @@
           {
             "candidateId": "candidate-character_round_18_20260913-beetlejuice-db1f3ebb83ee09ff",
             "imageHash": "db1f3ebb83ee09ff1a03319381987ee1adddc4b9608769db1463e34a19d844d1"
+          }
+        ]
+      },
+      {
+        "id": "round-19",
+        "title": "Round 19",
+        "frozenAt": "2026-09-14T04:41:41.548056+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_19_20260913-snoop-a2bd9f26f1d883fe",
+            "imageHash": "a2bd9f26f1d883fe94442f4214c8987ae1e993ccfd97f30c5cf7fb1b0c68175b"
+          },
+          {
+            "candidateId": "candidate-character_round_19_20260913-popeye-0c8eee31f0ae9169",
+            "imageHash": "0c8eee31f0ae91697008e0696cf0ed83063898c5a1def7b47240ceb483d6247d"
+          },
+          {
+            "candidateId": "candidate-character_round_19_20260913-jessica-76137e7e6dbd2ef3",
+            "imageHash": "76137e7e6dbd2ef35bd816ab449cd63ef2fb6ef389d987121ad5233306782a2f"
+          },
+          {
+            "candidateId": "candidate-character_round_19_20260913-luffy-6b947eb6850f19f2",
+            "imageHash": "6b947eb6850f19f2ae0c5adc5f9801ae5c6681f6bd18c1abd295e866e9d2fc5d"
+          },
+          {
+            "candidateId": "candidate-character_round_19_20260913-ruth-ea29254f239f7197",
+            "imageHash": "ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177"
           }
         ]
       }
