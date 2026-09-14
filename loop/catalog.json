@@ -1884,6 +1884,332 @@
       "batch": "character_round_20_20260913",
       "slug": "mask",
       "image": "/collection/assets/candidate-8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652.png"
+    },
+    {
+      "id": "candidate-zombie_portrait_return_20260914-zombie-57d19bd7be1c63b2",
+      "title": "Zombie: Many Eyes",
+      "kind": "candidate",
+      "imageHash": "57d19bd7be1c63b20e7e118b226f698b0f6c7fcbb9775915814552089a3b3b49",
+      "description": "A green zombie dog with eleven irregular eyes, a spiral pupil and a crooked sawtooth grin. Strong black oil stick from the Kiss portrait work, a cleaner native canine silhouette and rose cotton. Wide master and earlier pilot preserved.",
+      "batch": "zombie_portrait_return_20260914",
+      "slug": "zombie",
+      "image": "/collection/assets/candidate-57d19bd7be1c63b20e7e118b226f698b0f6c7fcbb9775915814552089a3b3b49.png"
+    },
+    {
+      "id": "candidate-zombie_dob_push_20260914-zombie-b4d621f307daf3af",
+      "title": "Zombie: Big Grin",
+      "kind": "candidate",
+      "imageHash": "b4d621f307daf3af35300861c49a5932c037c373f87b068c9f435599c503251e",
+      "description": "A lime zombie dog with a round cream head, cobalt disk ears, eleven mismatched eyes and an enormous pink-rimmed pointed grin. Black oil stick from the Kiss portrait material.",
+      "batch": "zombie_dob_push_20260914",
+      "slug": "zombie",
+      "image": "/collection/assets/candidate-b4d621f307daf3af35300861c49a5932c037c373f87b068c9f435599c503251e.png"
+    },
+    {
+      "id": "candidate-zombie_eyes_unbound_20260914-zombie-87f4e50977f58f66",
+      "title": "Zombie: Eyes Unbound",
+      "kind": "candidate",
+      "imageHash": "87f4e50977f58f66974c02de0f507a301879d6ecfe35b239021397eb356aa3db",
+      "description": "A lime zombie dog with wildly scattered eyes, clashing gazes, spirals, slits, clusters and bent eye stalks. Cream face, cobalt ears, a crooked pink grin and heavy black Kiss portrait stick on rose cotton.",
+      "batch": "zombie_eyes_unbound_20260914",
+      "slug": "zombie",
+      "image": "/collection/assets/candidate-87f4e50977f58f66974c02de0f507a301879d6ecfe35b239021397eb356aa3db.png"
+    },
+    {
+      "id": "candidate-zombie_live_variations_20260914-elizabeth-d0b5f47898695165",
+      "title": "Elizabeth \u2014 Eyes Unbound",
+      "kind": "candidate",
+      "imageHash": "d0b5f4789869516528b6ec2f5cf0b79c0d2fcb8b2283791038914792a01ad45b",
+      "description": "Scattered-eye zombie study of the live Elizabeth dog, retaining its own costume, body and native head silhouette.",
+      "batch": "zombie_live_variations_20260914",
+      "slug": "elizabeth",
+      "image": "/collection/assets/candidate-d0b5f4789869516528b6ec2f5cf0b79c0d2fcb8b2283791038914792a01ad45b.png"
+    },
+    {
+      "id": "candidate-zombie_live_variations_20260914-barack-813bf077ef7a4feb",
+      "title": "Barack \u2014 Eyes Unbound",
+      "kind": "candidate",
+      "imageHash": "813bf077ef7a4feb89c98987ccccabc04f3b1bcc6ae16ac693d55f6b00c0f1b1",
+      "description": "Scattered-eye zombie study of the live Barack dog, retaining its own costume, body and native head silhouette.",
+      "batch": "zombie_live_variations_20260914",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-813bf077ef7a4feb89c98987ccccabc04f3b1bcc6ae16ac693d55f6b00c0f1b1.png"
+    },
+    {
+      "id": "candidate-zombie_live_variations_20260914-batman-e150c8147614a7d6",
+      "title": "Batman \u2014 Eyes Unbound",
+      "kind": "candidate",
+      "imageHash": "e150c8147614a7d6e151f46aac72c4d8fb1d6cca4a95bc59ef95396c4f511003",
+      "description": "Scattered-eye zombie study of the live Batman dog, retaining its own costume, body and native head silhouette.",
+      "batch": "zombie_live_variations_20260914",
+      "slug": "batman",
+      "image": "/collection/assets/candidate-e150c8147614a7d6e151f46aac72c4d8fb1d6cca4a95bc59ef95396c4f511003.png"
+    },
+    {
+      "id": "candidate-zombie_live_variations_20260914-judy-9a9f0b21793c57c6",
+      "title": "Judy \u2014 Eyes Unbound",
+      "kind": "candidate",
+      "imageHash": "9a9f0b21793c57c6dd42702381c2895a4614dd42fce35f41207c3118e746408d",
+      "description": "Scattered-eye zombie study of the live Judy dog, retaining its own costume, body and native head silhouette.",
+      "batch": "zombie_live_variations_20260914",
+      "slug": "judy",
+      "image": "/collection/assets/candidate-9a9f0b21793c57c6dd42702381c2895a4614dd42fce35f41207c3118e746408d.png"
+    },
+    {
+      "id": "candidate-zombie_mutations_20260914-elizabeth-5b61d45b75a1fe89",
+      "title": "Elizabeth \u2014 Pearl Swarm",
+      "kind": "candidate",
+      "imageHash": "5b61d45b75a1fe894756cce46790ef175c32ca60d771deba0832915ec833937b",
+      "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live elizabeth dog.",
+      "batch": "zombie_mutations_20260914",
+      "slug": "elizabeth",
+      "image": "/collection/assets/candidate-5b61d45b75a1fe894756cce46790ef175c32ca60d771deba0832915ec833937b.png"
+    },
+    {
+      "id": "candidate-zombie_mutations_20260914-barack-1e6535cc74387de5",
+      "title": "Barack \u2014 Split Jaw",
+      "kind": "candidate",
+      "imageHash": "1e6535cc74387de59b088f1eb9d1d6a87266f6e10b481ebd2514670ea2a46400",
+      "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live barack dog.",
+      "batch": "zombie_mutations_20260914",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-1e6535cc74387de59b088f1eb9d1d6a87266f6e10b481ebd2514670ea2a46400.png"
+    },
+    {
+      "id": "candidate-zombie_mutations_20260914-batman-7a4c46af7f957f93",
+      "title": "Batman \u2014 Night Vision",
+      "kind": "candidate",
+      "imageHash": "7a4c46af7f957f9364a0cc84ca79ef42b5f57a16fec58c6c1643aacd5fa751ff",
+      "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live batman dog.",
+      "batch": "zombie_mutations_20260914",
+      "slug": "batman",
+      "image": "/collection/assets/candidate-7a4c46af7f957f9364a0cc84ca79ef42b5f57a16fec58c6c1643aacd5fa751ff.png"
+    },
+    {
+      "id": "candidate-zombie_mutations_20260914-judy-2d4a962e5874ebb9",
+      "title": "Judy \u2014 Cyclops Bloom",
+      "kind": "candidate",
+      "imageHash": "2d4a962e5874ebb9dc0c5b34d647889ea6067cb5ba71e281af48ce310a75f1cd",
+      "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live judy dog.",
+      "batch": "zombie_mutations_20260914",
+      "slug": "judy",
+      "image": "/collection/assets/candidate-2d4a962e5874ebb9dc0c5b34d647889ea6067cb5ba71e281af48ce310a75f1cd.png"
+    },
+    {
+      "id": "candidate-zombie_family_expansion_20260914-marie-57e182e10a06e21c",
+      "title": "Marie \u2014 Porcelain Chorus",
+      "kind": "candidate",
+      "imageHash": "57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4",
+      "description": "Marie \u2014 Porcelain Chorus: a separately composed zombie mutation developed from its original character.",
+      "batch": "zombie_family_expansion_20260914",
+      "slug": "marie",
+      "image": "/collection/assets/candidate-57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4.png"
+    },
+    {
+      "id": "candidate-zombie_family_expansion_20260914-hulk-6a6c10c7adea365b",
+      "title": "Hulk \u2014 Jawbreaker",
+      "kind": "candidate",
+      "imageHash": "6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b",
+      "description": "Hulk \u2014 Jawbreaker: a separately composed zombie mutation developed from its original character.",
+      "batch": "zombie_family_expansion_20260914",
+      "slug": "hulk",
+      "image": "/collection/assets/candidate-6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b.png"
+    },
+    {
+      "id": "candidate-zombie_family_expansion_20260914-virgil-e342f01bb3f6fc72",
+      "title": "Virgil \u2014 After Hours",
+      "kind": "candidate",
+      "imageHash": "e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9",
+      "description": "Virgil \u2014 After Hours: a separately composed zombie mutation developed from its original character.",
+      "batch": "zombie_family_expansion_20260914",
+      "slug": "virgil",
+      "image": "/collection/assets/candidate-e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9.png"
+    },
+    {
+      "id": "candidate-zombie_family_expansion_20260914-donald-ae5f6628e10e4869",
+      "title": "Donald \u2014 Bitter Bite",
+      "kind": "candidate",
+      "imageHash": "ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295",
+      "description": "Donald \u2014 Bitter Bite: a separately composed zombie mutation developed from its original character.",
+      "batch": "zombie_family_expansion_20260914",
+      "slug": "donald",
+      "image": "/collection/assets/candidate-ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295.png"
+    },
+    {
+      "id": "candidate-zombie_family_expansion_20260914-elliott-7e8ba5dd9a61126e",
+      "title": "Elliott \u2014 Night Visitor",
+      "kind": "candidate",
+      "imageHash": "7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a",
+      "description": "Elliott \u2014 Night Visitor: a separately composed zombie mutation developed from its original character.",
+      "batch": "zombie_family_expansion_20260914",
+      "slug": "elliott",
+      "image": "/collection/assets/candidate-7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a.png"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-marie-876ecbce3320960e",
+      "title": "Marie",
+      "kind": "candidate",
+      "imageHash": "876ecbce3320960eca656455e3bd866e2d9b5a6406c4ced6bf24b63fe8e2fcae",
+      "description": "Marie transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "marie",
+      "image": "/collection/assets/candidate-876ecbce3320960eca656455e3bd866e2d9b5a6406c4ced6bf24b63fe8e2fcae.png",
+      "supersededBy": "candidate-zombie_family_expansion_20260914-marie-57e182e10a06e21c"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-hulk-5beff0a226d3a644",
+      "title": "Hulk",
+      "kind": "candidate",
+      "imageHash": "5beff0a226d3a644052adcee54f4aaaa9de5075f9c4c6132b44c3b591ecf39ed",
+      "description": "Hulk transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "hulk",
+      "image": "/collection/assets/candidate-5beff0a226d3a644052adcee54f4aaaa9de5075f9c4c6132b44c3b591ecf39ed.png"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-virgil-73f6f72244f262e8",
+      "title": "Virgil",
+      "kind": "candidate",
+      "imageHash": "73f6f72244f262e8e24788ac4366dd9c67348c5c8f84a72b146b17940eda5b44",
+      "description": "Virgil transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "virgil",
+      "image": "/collection/assets/candidate-73f6f72244f262e8e24788ac4366dd9c67348c5c8f84a72b146b17940eda5b44.png"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-judy-3a462dfd1886ca91",
+      "title": "Judy",
+      "kind": "candidate",
+      "imageHash": "3a462dfd1886ca91d91e94ed4ddad1726df4c995846ccf63dc0b8af17f55439f",
+      "description": "Judy transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "judy",
+      "image": "/collection/assets/candidate-3a462dfd1886ca91d91e94ed4ddad1726df4c995846ccf63dc0b8af17f55439f.png"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-elvis-d28f69d2c4f04f8f",
+      "title": "Elvis",
+      "kind": "candidate",
+      "imageHash": "d28f69d2c4f04f8f931d2a48476391bb43515cdb8389264eb7781e0c1fdac5f6",
+      "description": "Elvis transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "elvis",
+      "image": "/collection/assets/candidate-d28f69d2c4f04f8f931d2a48476391bb43515cdb8389264eb7781e0c1fdac5f6.png"
+    },
+    {
+      "id": "candidate-zombie_structural_20260914-ordinary-6c2c47b1679405a1",
+      "title": "Ordinary dog 1301",
+      "kind": "candidate",
+      "imageHash": "6c2c47b1679405a102b74b6788cda1dcb5612e2bfd19b9945124496295a08cb8",
+      "description": "Ordinary dog 1301 transformed by the shared structural zombie planner.",
+      "batch": "zombie_structural_20260914",
+      "slug": "ordinary",
+      "image": "/collection/assets/candidate-6c2c47b1679405a102b74b6788cda1dcb5612e2bfd19b9945124496295a08cb8.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-madonna_a-0be78b812bb387f4",
+      "title": "Madonna",
+      "kind": "candidate",
+      "imageHash": "0be78b812bb387f4b15f524aef74cccdec360d8367fb7911978faf9f4bf813de",
+      "description": "Madonna with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "madonna_a",
+      "image": "/collection/assets/candidate-0be78b812bb387f4b15f524aef74cccdec360d8367fb7911978faf9f4bf813de.png",
+      "supersededBy": "candidate-loved_zombies_round_01_20260914-madonna_b-f2531984611c5155"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-madonna_b-f2531984611c5155",
+      "title": "Madonna",
+      "kind": "candidate",
+      "imageHash": "f2531984611c515570abce6009293127912c93abaa81a52e43645bb8d8dab2fd",
+      "description": "Madonna with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "madonna_b",
+      "image": "/collection/assets/candidate-f2531984611c515570abce6009293127912c93abaa81a52e43645bb8d8dab2fd.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-ozzy_a-7ec13fbc142c5c89",
+      "title": "Ozzy",
+      "kind": "candidate",
+      "imageHash": "7ec13fbc142c5c89d2d78c4e9ce5e1f88cae393a84e5f0a503ce10880e921d01",
+      "description": "Ozzy with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "ozzy_a",
+      "image": "/collection/assets/candidate-7ec13fbc142c5c89d2d78c4e9ce5e1f88cae393a84e5f0a503ce10880e921d01.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-ozzy_b-647b52437c621d03",
+      "title": "Ozzy",
+      "kind": "candidate",
+      "imageHash": "647b52437c621d03fc298a8db4dd849d885e71f3c13bd2eb67579b39e4035983",
+      "description": "Ozzy with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "ozzy_b",
+      "image": "/collection/assets/candidate-647b52437c621d03fc298a8db4dd849d885e71f3c13bd2eb67579b39e4035983.png",
+      "supersededBy": "candidate-loved_zombies_round_01_20260914-ozzy_a-7ec13fbc142c5c89"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-george_a-b1464e90efec003b",
+      "title": "George",
+      "kind": "candidate",
+      "imageHash": "b1464e90efec003be5b8c6b15e822def637cf850f237600e000c5be61de8b58b",
+      "description": "George with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "george_a",
+      "image": "/collection/assets/candidate-b1464e90efec003be5b8c6b15e822def637cf850f237600e000c5be61de8b58b.png",
+      "supersededBy": "candidate-loved_zombies_round_01_20260914-george_b-277096fdd5b8e8a9"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-george_b-277096fdd5b8e8a9",
+      "title": "George",
+      "kind": "candidate",
+      "imageHash": "277096fdd5b8e8a9891de8775080bbf1f77f95b87d11ea554deb267e51282892",
+      "description": "George with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "george_b",
+      "image": "/collection/assets/candidate-277096fdd5b8e8a9891de8775080bbf1f77f95b87d11ea554deb267e51282892.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-napoleon_a-eac1374633c1a795",
+      "title": "Napoleon",
+      "kind": "candidate",
+      "imageHash": "eac1374633c1a7953a53c44f5a644bfe3c67b3bffd79331609598de3b5673ba3",
+      "description": "Napoleon with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "napoleon_a",
+      "image": "/collection/assets/candidate-eac1374633c1a7953a53c44f5a644bfe3c67b3bffd79331609598de3b5673ba3.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-napoleon_b-d37739d6d594c0fd",
+      "title": "Napoleon",
+      "kind": "candidate",
+      "imageHash": "d37739d6d594c0fdb03c68c3b3ec0d5e9f92f2bd67ece5a010b5f25f468e2abb",
+      "description": "Napoleon with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "napoleon_b",
+      "image": "/collection/assets/candidate-d37739d6d594c0fdb03c68c3b3ec0d5e9f92f2bd67ece5a010b5f25f468e2abb.png",
+      "supersededBy": "candidate-loved_zombies_round_01_20260914-napoleon_a-eac1374633c1a795"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-frida_a-20db98b492c9b5fd",
+      "title": "Frida",
+      "kind": "candidate",
+      "imageHash": "20db98b492c9b5fdfcb398b35e3756e3f5d06312a6359a0ddbce8a5433574aa1",
+      "description": "Frida with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "frida_a",
+      "image": "/collection/assets/candidate-20db98b492c9b5fdfcb398b35e3756e3f5d06312a6359a0ddbce8a5433574aa1.png",
+      "supersededBy": "candidate-loved_zombies_round_01_20260914-frida_b-8acd0c279fd4a761"
+    },
+    {
+      "id": "candidate-loved_zombies_round_01_20260914-frida_b-8acd0c279fd4a761",
+      "title": "Frida",
+      "kind": "candidate",
+      "imageHash": "8acd0c279fd4a761f9f8bd80213fa50a02ef4f55e14949017d8cfd03bb824656",
+      "description": "Frida with an independently generated zombie composition.",
+      "batch": "loved_zombies_round_01_20260914",
+      "slug": "frida_b",
+      "image": "/collection/assets/candidate-8acd0c279fd4a761f9f8bd80213fa50a02ef4f55e14949017d8cfd03bb824656.png"
     }
   ],
   "references": [
@@ -2496,6 +2822,33 @@
           {
             "candidateId": "candidate-character_round_20_20260913-mask-8810191ff4fb835c",
             "imageHash": "8810191ff4fb835c696ece82cd9412c6970d98eaaff1c60755c53a5b0b7c0652"
+          }
+        ]
+      },
+      {
+        "id": "round-21",
+        "title": "Round 21 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-14T21:20:59.364253+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_01_20260914-madonna_b-f2531984611c5155",
+            "imageHash": "f2531984611c515570abce6009293127912c93abaa81a52e43645bb8d8dab2fd"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_01_20260914-ozzy_a-7ec13fbc142c5c89",
+            "imageHash": "7ec13fbc142c5c89d2d78c4e9ce5e1f88cae393a84e5f0a503ce10880e921d01"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_01_20260914-george_b-277096fdd5b8e8a9",
+            "imageHash": "277096fdd5b8e8a9891de8775080bbf1f77f95b87d11ea554deb267e51282892"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_01_20260914-napoleon_a-eac1374633c1a795",
+            "imageHash": "eac1374633c1a7953a53c44f5a644bfe3c67b3bffd79331609598de3b5673ba3"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_01_20260914-frida_b-8acd0c279fd4a761",
+            "imageHash": "8acd0c279fd4a761f9f8bd80213fa50a02ef4f55e14949017d8cfd03bb824656"
           }
         ]
       }
