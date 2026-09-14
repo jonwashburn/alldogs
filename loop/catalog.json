@@ -2210,6 +2210,111 @@
       "batch": "loved_zombies_round_01_20260914",
       "slug": "frida_b",
       "image": "/collection/assets/candidate-8acd0c279fd4a761f9f8bd80213fa50a02ef4f55e14949017d8cfd03bb824656.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-gaga_a-919d5189821281e4",
+      "title": "Gaga",
+      "kind": "candidate",
+      "imageHash": "919d5189821281e4ea9eecaf30721c810273324ceee3ce7092eb4818031c926a",
+      "description": "Gaga with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "gaga_a",
+      "image": "/collection/assets/candidate-919d5189821281e4ea9eecaf30721c810273324ceee3ce7092eb4818031c926a.png",
+      "supersededBy": "candidate-loved_zombies_round_02_20260914-gaga_b-7aa7f4339148bf7b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-gaga_b-7aa7f4339148bf7b",
+      "title": "Gaga",
+      "kind": "candidate",
+      "imageHash": "7aa7f4339148bf7bf2ea887b278d14185d19e75a2ef235c594d48383042982b5",
+      "description": "Gaga with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "gaga_b",
+      "image": "/collection/assets/candidate-7aa7f4339148bf7bf2ea887b278d14185d19e75a2ef235c594d48383042982b5.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-amy_a-7c2c2f65e543d8e6",
+      "title": "Amy",
+      "kind": "candidate",
+      "imageHash": "7c2c2f65e543d8e6d0f32000a53c25fbcadb932d9a91d036048422c9834364ed",
+      "description": "Amy with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "amy_a",
+      "image": "/collection/assets/candidate-7c2c2f65e543d8e6d0f32000a53c25fbcadb932d9a91d036048422c9834364ed.png",
+      "supersededBy": "candidate-loved_zombies_round_02_20260914-amy_b-da4c82129faa5003"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-amy_b-da4c82129faa5003",
+      "title": "Amy",
+      "kind": "candidate",
+      "imageHash": "da4c82129faa5003da25443a1ed355f2b21b8712d24c68728ed14b2ff70304c9",
+      "description": "Amy with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "amy_b",
+      "image": "/collection/assets/candidate-da4c82129faa5003da25443a1ed355f2b21b8712d24c68728ed14b2ff70304c9.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-vincent_a-215a7944d86b0840",
+      "title": "Vincent",
+      "kind": "candidate",
+      "imageHash": "215a7944d86b0840f857fbdc4bac723eeaa21ba444e2f894ffaab23d5bb09d0a",
+      "description": "Vincent with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "vincent_a",
+      "image": "/collection/assets/candidate-215a7944d86b0840f857fbdc4bac723eeaa21ba444e2f894ffaab23d5bb09d0a.png",
+      "supersededBy": "candidate-loved_zombies_round_02_20260914-vincent_b-bb33b9b1982ac742"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-vincent_b-bb33b9b1982ac742",
+      "title": "Vincent",
+      "kind": "candidate",
+      "imageHash": "bb33b9b1982ac74294596e4f1dffd8ba4db5dd07f8fc2343fee69ddcf006f387",
+      "description": "Vincent with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "vincent_b",
+      "image": "/collection/assets/candidate-bb33b9b1982ac74294596e4f1dffd8ba4db5dd07f8fc2343fee69ddcf006f387.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-leia_a-2a6949c6370d9529",
+      "title": "Leia",
+      "kind": "candidate",
+      "imageHash": "2a6949c6370d95296b323c82c18d8e9a0c87f2e0e14ba5dbc19000a5e5fe4148",
+      "description": "Leia with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "leia_a",
+      "image": "/collection/assets/candidate-2a6949c6370d95296b323c82c18d8e9a0c87f2e0e14ba5dbc19000a5e5fe4148.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_20260914-leia_b-71c286b7db43848e",
+      "title": "Leia",
+      "kind": "candidate",
+      "imageHash": "71c286b7db43848e8a866ab8731ef6d24cf40d51957943621a887616bc242e43",
+      "description": "Leia with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_20260914",
+      "slug": "leia_b",
+      "image": "/collection/assets/candidate-71c286b7db43848e8a866ab8731ef6d24cf40d51957943621a887616bc242e43.png",
+      "supersededBy": "candidate-loved_zombies_round_02_20260914-leia_a-2a6949c6370d9529"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_elton_repair_20260914-elton_a-669cfe4146896b81",
+      "title": "Elton",
+      "kind": "candidate",
+      "imageHash": "669cfe4146896b812627d86a62184cc9606009545f06b580bbae9757d03e81ef",
+      "description": "Elton with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_elton_repair_20260914",
+      "slug": "elton_a",
+      "image": "/collection/assets/candidate-669cfe4146896b812627d86a62184cc9606009545f06b580bbae9757d03e81ef.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_02_elton_repair_20260914-elton_b-71f5385e72011fae",
+      "title": "Elton",
+      "kind": "candidate",
+      "imageHash": "71f5385e72011fae7a255520d5042c2cfee9c49c4bd4a6ba5d6f15c815ab3e47",
+      "description": "Elton with a structurally generated zombie composition, retaining native character details.",
+      "batch": "loved_zombies_round_02_elton_repair_20260914",
+      "slug": "elton_b",
+      "image": "/collection/assets/candidate-71f5385e72011fae7a255520d5042c2cfee9c49c4bd4a6ba5d6f15c815ab3e47.png",
+      "supersededBy": "candidate-loved_zombies_round_02_elton_repair_20260914-elton_a-669cfe4146896b81"
     }
   ],
   "references": [
@@ -2849,6 +2954,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_01_20260914-frida_b-8acd0c279fd4a761",
             "imageHash": "8acd0c279fd4a761f9f8bd80213fa50a02ef4f55e14949017d8cfd03bb824656"
+          }
+        ]
+      },
+      {
+        "id": "round-22",
+        "title": "Round 22 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-14T21:52:53.231670+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_02_20260914-gaga_b-7aa7f4339148bf7b",
+            "imageHash": "7aa7f4339148bf7bf2ea887b278d14185d19e75a2ef235c594d48383042982b5"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_02_elton_repair_20260914-elton_a-669cfe4146896b81",
+            "imageHash": "669cfe4146896b812627d86a62184cc9606009545f06b580bbae9757d03e81ef"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_02_20260914-amy_b-da4c82129faa5003",
+            "imageHash": "da4c82129faa5003da25443a1ed355f2b21b8712d24c68728ed14b2ff70304c9"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_02_20260914-vincent_b-bb33b9b1982ac742",
+            "imageHash": "bb33b9b1982ac74294596e4f1dffd8ba4db5dd07f8fc2343fee69ddcf006f387"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_02_20260914-leia_a-2a6949c6370d9529",
+            "imageHash": "2a6949c6370d95296b323c82c18d8e9a0c87f2e0e14ba5dbc19000a5e5fe4148"
           }
         ]
       }
