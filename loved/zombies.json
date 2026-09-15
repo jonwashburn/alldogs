@@ -1755,6 +1755,195 @@
         "height": 2000,
         "sha256": "50cdf09a136cdd702e899bc801eedad49fdb46e5115ce583569446ba6d54058f"
       }
+    },
+    {
+      "parentId": "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1",
+      "parentHash": "d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98",
+      "title": "Icarus, Into the Light",
+      "zombieId": "candidate-loved_zombies_round_11_20260914-icarus_b-dbd980659b99a772",
+      "imageHash": "dbd980659b99a772f3d251019d1a2dfd8242bdcc841b14a09508cb02ac23e471",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/43cd9197829a41bb8555b1725f8d118373268edf0b7396c90351306dbec41530.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "43cd9197829a41bb8555b1725f8d118373268edf0b7396c90351306dbec41530"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/5fcbcf2d68bd2fb11679451f770c13016b80da0b8b1c216dcb87a3acf5e1236d.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "5fcbcf2d68bd2fb11679451f770c13016b80da0b8b1c216dcb87a3acf5e1236d"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/4b867e54f40150f0f7818984099b0f0c6ebc06605213e9a617385b71349545f1.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "4b867e54f40150f0f7818984099b0f0c6ebc06605213e9a617385b71349545f1"
+      }
+    },
+    {
+      "parentId": "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172",
+      "parentHash": "fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095",
+      "title": "The Comet Courier",
+      "zombieId": "candidate-loved_zombies_round_11_20260914-courier_a-e4cebc97aa191341",
+      "imageHash": "e4cebc97aa191341ee8e9ca27dcf8575cefbc7a8fbf123cdbee69e2cf5a25c8b",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/09d58ac88bb30c86b7221d62c93f752649fa4ba7ef48d6e51701ba00e0632dfe.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "09d58ac88bb30c86b7221d62c93f752649fa4ba7ef48d6e51701ba00e0632dfe"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ccda8d500de9052f2449837758b92ccf7ab3755e93b20c3a4324c92239b783c5.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "ccda8d500de9052f2449837758b92ccf7ab3755e93b20c3a4324c92239b783c5"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/2dca4b4dae6f391c01a037427c0ec593f43599d1d1806f7da35404aa36a44286.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "2dca4b4dae6f391c01a037427c0ec593f43599d1d1806f7da35404aa36a44286"
+      }
+    },
+    {
+      "parentId": "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538",
+      "parentHash": "426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e",
+      "title": "A Little Further",
+      "zombieId": "candidate-loved_zombies_round_11_20260914-tightrope_a-a20e56f2270e0369",
+      "imageHash": "a20e56f2270e0369bd160664b425b6b30ede066b0cfe48e9e72b6239c2f3fef3",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ce2a4d4f7a8152869c382f1d513cc3dad0e33ced83958c15d90a5bccdf0f80ce.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "ce2a4d4f7a8152869c382f1d513cc3dad0e33ced83958c15d90a5bccdf0f80ce"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/368496ceb919f9e75941a56f00c8a440b9e367418f2a0c7dce47051cf9a5d0d0.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "368496ceb919f9e75941a56f00c8a440b9e367418f2a0c7dce47051cf9a5d0d0"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a93e5f6dfe558f5c12943cac01f5dc1ff8b0b8ecf0b56d5d62cd6a45acb02d09.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "a93e5f6dfe558f5c12943cac01f5dc1ff8b0b8ecf0b56d5d62cd6a45acb02d09"
+      }
+    },
+    {
+      "parentId": "candidate-loop_0017_joan_20260911-joan-a721d495791beb22",
+      "parentHash": "a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751",
+      "title": "Joan, Before Dawn",
+      "zombieId": "candidate-loved_zombies_round_11_20260914-joan_b-e27eec10bf87d8f1",
+      "imageHash": "e27eec10bf87d8f1c8ab320284bc9f72b4ae1b9c6024117463e5617e73982cb7",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a0f37cd10145306be33732cccd2f55dbf40ee5a0803bb4743db5b953c18808d3.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "a0f37cd10145306be33732cccd2f55dbf40ee5a0803bb4743db5b953c18808d3"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/5ee171994a1597d011e1759e8223758f9cdf3d8aa8fb28595cebbfd84f34922f.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "5ee171994a1597d011e1759e8223758f9cdf3d8aa8fb28595cebbfd84f34922f"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ffad8079663a14961765a56b9167c73d632229b453eced5db02704282e5d1f00.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "ffad8079663a14961765a56b9167c73d632229b453eced5db02704282e5d1f00"
+      }
+    },
+    {
+      "parentId": "candidate-loop_0023_amelia_20260912-amelia-28df015e0e0e9753",
+      "parentHash": "28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a",
+      "title": "Amelia, Into the Blue",
+      "zombieId": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22",
+      "imageHash": "7a0c7452f7831f22b8865dc0d1e3cd288d989d5dc2f5f4a87853f2408c7d4504",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ecc0af7a001999ff1a15d44d13c77e9b125438ffe49b92718e80981c71fbd2f1.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "ecc0af7a001999ff1a15d44d13c77e9b125438ffe49b92718e80981c71fbd2f1"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1d0cfa4c6cd2a3e5a6d30e7067d568ef5f8ef07c6c73568788ccf345ee3363b7.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "1d0cfa4c6cd2a3e5a6d30e7067d568ef5f8ef07c6c73568788ccf345ee3363b7"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/65aa4cc9ebd6ed4e9208ce91b3b9ef59ad2053944ded2f456fd2eb539fbe2da7.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "65aa4cc9ebd6ed4e9208ce91b3b9ef59ad2053944ded2f456fd2eb539fbe2da7"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-pan-a3a5ecf69b916a0d",
+      "parentHash": "a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e",
+      "title": "Pan, The Woods Are Listening",
+      "zombieId": "candidate-loved_zombies_round_13_20260914-pan_b-682deb805c91540d",
+      "imageHash": "682deb805c91540d03327f9319923beb5a161a8d7c4c2e38480f9653ae298898",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/16b004afd562abbbe2a585dc1401e05d61b3e4a35ca27717f57a13d8728fb2ec.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "16b004afd562abbbe2a585dc1401e05d61b3e4a35ca27717f57a13d8728fb2ec"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/05c8fa50ab086a02ea1360a6ccce50aa884d3a65aaf8df66d4000b24d057e0b5.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "05c8fa50ab086a02ea1360a6ccce50aa884d3a65aaf8df66d4000b24d057e0b5"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1e6ed0882e8364f18a76beecbd83cc5ab6933b4b5c8962998467ffbb520a8740.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "1e6ed0882e8364f18a76beecbd83cc5ab6933b4b5c8962998467ffbb520a8740"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-persephone-597fb2b60f9f8111",
+      "parentHash": "597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1",
+      "title": "Persephone, Back Again",
+      "zombieId": "candidate-loved_zombies_round_13_20260914-persephone_a-9d1956b98b4246a3",
+      "imageHash": "9d1956b98b4246a38d7440d0e13e3a3756accd4b6cc2c81267b82789eef4d813",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/6831cdad56ff9fe796ef51c5b5caeeb080fc78b4c58fb4f937085a87a129be77.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "6831cdad56ff9fe796ef51c5b5caeeb080fc78b4c58fb4f937085a87a129be77"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/bf8f25c567eb8a2c1d9b11f00db0c3e400bc4781f0ea66c3072647284b5aaed5.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "bf8f25c567eb8a2c1d9b11f00db0c3e400bc4781f0ea66c3072647284b5aaed5"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/7c1daf3c46ec1813c589232186b6dedbbbb2ca5ba82a4271f9b823b6fb4b3ebd.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "7c1daf3c46ec1813c589232186b6dedbbbb2ca5ba82a4271f9b823b6fb4b3ebd"
+      }
     }
   ]
 }

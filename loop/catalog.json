@@ -3337,6 +3337,164 @@
       "slug": "nyx_b",
       "image": "/collection/assets/candidate-6a804662215a2649f34a265be50e5bc15533e016b7f07ad09463d5a616134527.png",
       "supersededBy": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-icarus_a-2ad7bcf5d90c0d16",
+      "title": "Icarus, Into the Light",
+      "kind": "candidate",
+      "imageHash": "2ad7bcf5d90c0d16068e7f5aa17dd352cf5a6beef6b5f62ee9447c56e6cf5cd3",
+      "description": "Exact loved Icarus, Into the Light with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "icarus_a",
+      "image": "/collection/assets/candidate-2ad7bcf5d90c0d16068e7f5aa17dd352cf5a6beef6b5f62ee9447c56e6cf5cd3.png",
+      "supersededBy": "candidate-loved_zombies_round_11_20260914-icarus_b-dbd980659b99a772"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-icarus_b-dbd980659b99a772",
+      "title": "Icarus, Into the Light",
+      "kind": "candidate",
+      "imageHash": "dbd980659b99a772f3d251019d1a2dfd8242bdcc841b14a09508cb02ac23e471",
+      "description": "Exact loved Icarus, Into the Light with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "icarus_b",
+      "image": "/collection/assets/candidate-dbd980659b99a772f3d251019d1a2dfd8242bdcc841b14a09508cb02ac23e471.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-courier_a-e4cebc97aa191341",
+      "title": "The Comet Courier",
+      "kind": "candidate",
+      "imageHash": "e4cebc97aa191341ee8e9ca27dcf8575cefbc7a8fbf123cdbee69e2cf5a25c8b",
+      "description": "Exact loved The Comet Courier with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "courier_a",
+      "image": "/collection/assets/candidate-e4cebc97aa191341ee8e9ca27dcf8575cefbc7a8fbf123cdbee69e2cf5a25c8b.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-courier_b-d7766cc004119483",
+      "title": "The Comet Courier",
+      "kind": "candidate",
+      "imageHash": "d7766cc0041194831743cf591b5edc381f10386f2ae1b5b633021812db32b35d",
+      "description": "Exact loved The Comet Courier with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "courier_b",
+      "image": "/collection/assets/candidate-d7766cc0041194831743cf591b5edc381f10386f2ae1b5b633021812db32b35d.png",
+      "supersededBy": "candidate-loved_zombies_round_11_20260914-courier_a-e4cebc97aa191341"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-tightrope_a-a20e56f2270e0369",
+      "title": "A Little Further",
+      "kind": "candidate",
+      "imageHash": "a20e56f2270e0369bd160664b425b6b30ede066b0cfe48e9e72b6239c2f3fef3",
+      "description": "Exact loved A Little Further with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "tightrope_a",
+      "image": "/collection/assets/candidate-a20e56f2270e0369bd160664b425b6b30ede066b0cfe48e9e72b6239c2f3fef3.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-tightrope_b-8501f5a7e5b14356",
+      "title": "A Little Further",
+      "kind": "candidate",
+      "imageHash": "8501f5a7e5b14356712396d03fe7f648094aa30e65da47e0cef57adf01496e20",
+      "description": "Exact loved A Little Further with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "tightrope_b",
+      "image": "/collection/assets/candidate-8501f5a7e5b14356712396d03fe7f648094aa30e65da47e0cef57adf01496e20.png",
+      "supersededBy": "candidate-loved_zombies_round_11_20260914-tightrope_a-a20e56f2270e0369"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-joan_a-e20ce4c82324361c",
+      "title": "Joan, Before Dawn",
+      "kind": "candidate",
+      "imageHash": "e20ce4c82324361cad83b133f36a87b0deb8267963d6efa4a8b406a6be50d190",
+      "description": "Exact loved Joan, Before Dawn with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "joan_a",
+      "image": "/collection/assets/candidate-e20ce4c82324361cad83b133f36a87b0deb8267963d6efa4a8b406a6be50d190.png",
+      "supersededBy": "candidate-loved_zombies_round_11_20260914-joan_b-e27eec10bf87d8f1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-joan_b-e27eec10bf87d8f1",
+      "title": "Joan, Before Dawn",
+      "kind": "candidate",
+      "imageHash": "e27eec10bf87d8f1c8ab320284bc9f72b4ae1b9c6024117463e5617e73982cb7",
+      "description": "Exact loved Joan, Before Dawn with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "joan_b",
+      "image": "/collection/assets/candidate-e27eec10bf87d8f1c8ab320284bc9f72b4ae1b9c6024117463e5617e73982cb7.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-amelia_a-4a639d8032d3828f",
+      "title": "Amelia, Into the Blue",
+      "kind": "candidate",
+      "imageHash": "4a639d8032d3828ff599253554eae133759a34d062fd7b197372ac51d6b1080a",
+      "description": "Exact loved Amelia, Into the Blue with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "amelia_a",
+      "image": "/collection/assets/candidate-4a639d8032d3828ff599253554eae133759a34d062fd7b197372ac51d6b1080a.png",
+      "supersededBy": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_20260914-amelia_b-bd5e12513ed2fb5e",
+      "title": "Amelia, Into the Blue",
+      "kind": "candidate",
+      "imageHash": "bd5e12513ed2fb5e10a9cc29aa4ada645408c557150fa5e5f386f1fbee389cb0",
+      "description": "Exact loved Amelia, Into the Blue with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_11_20260914",
+      "slug": "amelia_b",
+      "image": "/collection/assets/candidate-bd5e12513ed2fb5e10a9cc29aa4ada645408c557150fa5e5f386f1fbee389cb0.png",
+      "supersededBy": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22"
+    },
+    {
+      "id": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22",
+      "title": "Amelia, Into the Blue",
+      "kind": "candidate",
+      "imageHash": "7a0c7452f7831f22b8865dc0d1e3cd288d989d5dc2f5f4a87853f2408c7d4504",
+      "description": "Exact loved Amelia, Into the Blue with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved. Selective repair: remove the four added crown eyes covering the original cap goggles; every other structural feature is retained.",
+      "batch": "loved_zombies_round_11_repairs_20260914",
+      "slug": "amelia_b",
+      "image": "/collection/assets/candidate-7a0c7452f7831f22b8865dc0d1e3cd288d989d5dc2f5f4a87853f2408c7d4504.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_13_20260914-pan_a-e6a4d88c828a20fe",
+      "title": "Pan, The Woods Are Listening",
+      "kind": "candidate",
+      "imageHash": "e6a4d88c828a20fe7b27782034e44085d84650b1fcb25186ee210fd1f4fb5027",
+      "description": "Exact loved Pan, The Woods Are Listening with varied structural zombie eyes and jaws; original authored action, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_13_20260914",
+      "slug": "pan_a",
+      "image": "/collection/assets/candidate-e6a4d88c828a20fe7b27782034e44085d84650b1fcb25186ee210fd1f4fb5027.png",
+      "supersededBy": "candidate-loved_zombies_round_13_20260914-pan_b-682deb805c91540d"
+    },
+    {
+      "id": "candidate-loved_zombies_round_13_20260914-pan_b-682deb805c91540d",
+      "title": "Pan, The Woods Are Listening",
+      "kind": "candidate",
+      "imageHash": "682deb805c91540d03327f9319923beb5a161a8d7c4c2e38480f9653ae298898",
+      "description": "Exact loved Pan, The Woods Are Listening with varied structural zombie eyes and jaws; original authored action, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_13_20260914",
+      "slug": "pan_b",
+      "image": "/collection/assets/candidate-682deb805c91540d03327f9319923beb5a161a8d7c4c2e38480f9653ae298898.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_13_20260914-persephone_a-9d1956b98b4246a3",
+      "title": "Persephone, Back Again",
+      "kind": "candidate",
+      "imageHash": "9d1956b98b4246a38d7440d0e13e3a3756accd4b6cc2c81267b82789eef4d813",
+      "description": "Exact loved Persephone, Back Again with varied structural zombie eyes and jaws; original authored action, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_13_20260914",
+      "slug": "persephone_a",
+      "image": "/collection/assets/candidate-9d1956b98b4246a38d7440d0e13e3a3756accd4b6cc2c81267b82789eef4d813.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_13_20260914-persephone_b-c801b096b6dea17c",
+      "title": "Persephone, Back Again",
+      "kind": "candidate",
+      "imageHash": "c801b096b6dea17cb5561d9fa575d87a2e1fdff98f3431e9486299c870e0c1e6",
+      "description": "Exact loved Persephone, Back Again with varied structural zombie eyes and jaws; original authored action, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_13_20260914",
+      "slug": "persephone_b",
+      "image": "/collection/assets/candidate-c801b096b6dea17cb5561d9fa575d87a2e1fdff98f3431e9486299c870e0c1e6.png",
+      "supersededBy": "candidate-loved_zombies_round_13_20260914-persephone_a-9d1956b98b4246a3"
     }
   ],
   "references": [
@@ -4246,6 +4404,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863",
             "imageHash": "45eb51c2efe5a863fe46d09ec325ef34aeda628d06302abd24f099010c19a412"
+          }
+        ]
+      },
+      {
+        "id": "round-32",
+        "title": "Round 32 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T04:38:23.441772+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_11_20260914-icarus_b-dbd980659b99a772",
+            "imageHash": "dbd980659b99a772f3d251019d1a2dfd8242bdcc841b14a09508cb02ac23e471"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_11_20260914-courier_a-e4cebc97aa191341",
+            "imageHash": "e4cebc97aa191341ee8e9ca27dcf8575cefbc7a8fbf123cdbee69e2cf5a25c8b"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_11_20260914-tightrope_a-a20e56f2270e0369",
+            "imageHash": "a20e56f2270e0369bd160664b425b6b30ede066b0cfe48e9e72b6239c2f3fef3"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_11_20260914-joan_b-e27eec10bf87d8f1",
+            "imageHash": "e27eec10bf87d8f1c8ab320284bc9f72b4ae1b9c6024117463e5617e73982cb7"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22",
+            "imageHash": "7a0c7452f7831f22b8865dc0d1e3cd288d989d5dc2f5f4a87853f2408c7d4504"
           }
         ]
       }
