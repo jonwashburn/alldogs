@@ -945,6 +945,141 @@
         "height": 2000,
         "sha256": "1a2203d59561de9951d7c6eeca5ee2ce5db5dea1369ccb1f8129d6e522313ee4"
       }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "parentHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+      "title": "Zeus, The Sky Answers",
+      "zombieId": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132",
+      "imageHash": "4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1384505d3a5f0a6b4840cc789e88e827d5204b8b67f59cec2512faef77701e93.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "1384505d3a5f0a6b4840cc789e88e827d5204b8b67f59cec2512faef77701e93"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/4d0814d7ab8d2acf0c7ac31b08dd3c96baf5026e2e875afeea409c5b0de567ac.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "4d0814d7ab8d2acf0c7ac31b08dd3c96baf5026e2e875afeea409c5b0de567ac"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/63d3bb1ccf5c14499e1584be1334f9b7f942f24daa8410379cc0f953b4297423.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "63d3bb1ccf5c14499e1584be1334f9b7f942f24daa8410379cc0f953b4297423"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "parentHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+      "title": "Athena, Before the Noise",
+      "zombieId": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158",
+      "imageHash": "17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/cd12812d6a95a39e34e2acbc3ce18a79b71eea4e9671d69d5b3d84ea86c23dcd.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "cd12812d6a95a39e34e2acbc3ce18a79b71eea4e9671d69d5b3d84ea86c23dcd"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/952c20d89e6d4899d8fcbf15ab8be18eac3a01b2fb373f9c06e51e95bb1940a6.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "952c20d89e6d4899d8fcbf15ab8be18eac3a01b2fb373f9c06e51e95bb1940a6"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/4257375c0b3d64ba8ed5fe6bc7724384422ae6107f4c86a30e94cd029d392459.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "4257375c0b3d64ba8ed5fe6bc7724384422ae6107f4c86a30e94cd029d392459"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "parentHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+      "title": "Poseidon, A Sea in His Wake",
+      "zombieId": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b",
+      "imageHash": "518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/7e4d324d702b3bb511819d98871f4de9fa6ee727b6aeae40ef699df87757830b.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "7e4d324d702b3bb511819d98871f4de9fa6ee727b6aeae40ef699df87757830b"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/bec27314fb93f7099ef9c0807cec7423e94d426f42684a63c6b78b269ef5b050.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "bec27314fb93f7099ef9c0807cec7423e94d426f42684a63c6b78b269ef5b050"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/7a2084ba3c1b1c29ddef10f1cb1aebe138e56f7fea97da59e5ce3d287cc9fb1f.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "7a2084ba3c1b1c29ddef10f1cb1aebe138e56f7fea97da59e5ce3d287cc9fb1f"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "parentHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+      "title": "Ares, A Flower After Battle",
+      "zombieId": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b",
+      "imageHash": "97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c6e72c4879b9657314a0e9b2c7eebdee5aaebfa728adb248bbf66a3e184f4bd7.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c6e72c4879b9657314a0e9b2c7eebdee5aaebfa728adb248bbf66a3e184f4bd7"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/63d3fa072b8709f82827dc97aa22a20bd678866c314a7d9ad43733afa8359ff4.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "63d3fa072b8709f82827dc97aa22a20bd678866c314a7d9ad43733afa8359ff4"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c5ddbf5abd93302fb0943b863758e977bf12a90d8a76fd084be52e137d9ab5c2.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "c5ddbf5abd93302fb0943b863758e977bf12a90d8a76fd084be52e137d9ab5c2"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "parentHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+      "title": "Apollo, Morning Rehearsal",
+      "zombieId": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960",
+      "imageHash": "0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/512ced1bdf4d799852f67fbdc8ec6aa99d5bfab7f0f6dd4b0868c7e49f4b053a.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "512ced1bdf4d799852f67fbdc8ec6aa99d5bfab7f0f6dd4b0868c7e49f4b053a"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/dc9af2becf87d9706e850eee1b44b4ce5ebddc7aa6df38d6f6aa321065da9362.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "dc9af2becf87d9706e850eee1b44b4ce5ebddc7aa6df38d6f6aa321065da9362"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/fe30f6f36b3471a3518fd134e362af453da2bcad60ce985ed7c9a0bd5a421611.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "fe30f6f36b3471a3518fd134e362af453da2bcad60ce985ed7c9a0bd5a421611"
+      }
     }
   ]
 }

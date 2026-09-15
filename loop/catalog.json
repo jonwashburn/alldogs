@@ -2652,6 +2652,166 @@
       "batch": "loved_zombies_round_05_repairs_20260914",
       "slug": "ruth_b",
       "image": "/collection/assets/candidate-5d6331cf9d4848039de247211668a0070335a2363fb4237285ebd15936c212ab.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-zeus_a-0fac82ac66aef95d",
+      "title": "Zeus, The Sky Answers",
+      "kind": "candidate",
+      "imageHash": "0fac82ac66aef95ddcedeaddf9ae68bd238cc65d1221bdfa4bb854bc76e573e1",
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "zeus_a",
+      "image": "/collection/assets/candidate-0fac82ac66aef95ddcedeaddf9ae68bd238cc65d1221bdfa4bb854bc76e573e1.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-zeus_b-f15e67ac5229e608",
+      "title": "Zeus, The Sky Answers",
+      "kind": "candidate",
+      "imageHash": "f15e67ac5229e608b25c335c948e06ea2bda1a31de2bfb98e6505f90e80bc3fd",
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "zeus_b",
+      "image": "/collection/assets/candidate-f15e67ac5229e608b25c335c948e06ea2bda1a31de2bfb98e6505f90e80bc3fd.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-athena_a-396619464b431d0b",
+      "title": "Athena, Before the Noise",
+      "kind": "candidate",
+      "imageHash": "396619464b431d0bb18065b1a78d51da93ee52ecac910ca0fb3fd4f39242cf77",
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "athena_a",
+      "image": "/collection/assets/candidate-396619464b431d0bb18065b1a78d51da93ee52ecac910ca0fb3fd4f39242cf77.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-athena_b-6a51d5410d1f352e",
+      "title": "Athena, Before the Noise",
+      "kind": "candidate",
+      "imageHash": "6a51d5410d1f352e20f83d77ecddafa90277b7753307b8afc19f5e75adcf7d1c",
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "athena_b",
+      "image": "/collection/assets/candidate-6a51d5410d1f352e20f83d77ecddafa90277b7753307b8afc19f5e75adcf7d1c.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-poseidon_a-d2b3378ca5e04c69",
+      "title": "Poseidon, A Sea in His Wake",
+      "kind": "candidate",
+      "imageHash": "d2b3378ca5e04c690017d7ff662c8971ec77868f930a3956ed7b7a0d1dc3a880",
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "poseidon_a",
+      "image": "/collection/assets/candidate-d2b3378ca5e04c690017d7ff662c8971ec77868f930a3956ed7b7a0d1dc3a880.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-poseidon_b-08f4ea2a6e48f061",
+      "title": "Poseidon, A Sea in His Wake",
+      "kind": "candidate",
+      "imageHash": "08f4ea2a6e48f061c608b41fded4fde6876f934bc5ef247039aa38bafc0df5ce",
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "poseidon_b",
+      "image": "/collection/assets/candidate-08f4ea2a6e48f061c608b41fded4fde6876f934bc5ef247039aa38bafc0df5ce.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-ares_a-9ce8736c9e1b4ff9",
+      "title": "Ares, A Flower After Battle",
+      "kind": "candidate",
+      "imageHash": "9ce8736c9e1b4ff98cb45e230dc95e2f50c43d4a3c11ac7100b9c334cbb81d87",
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "ares_a",
+      "image": "/collection/assets/candidate-9ce8736c9e1b4ff98cb45e230dc95e2f50c43d4a3c11ac7100b9c334cbb81d87.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-ares_b-257d7408cca3a62a",
+      "title": "Ares, A Flower After Battle",
+      "kind": "candidate",
+      "imageHash": "257d7408cca3a62ab91a553bf3b85fd11f6916142ea7936bc057b1e8b0fc0d1a",
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "ares_b",
+      "image": "/collection/assets/candidate-257d7408cca3a62ab91a553bf3b85fd11f6916142ea7936bc057b1e8b0fc0d1a.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-apollo_a-8e4b237f95cfa676",
+      "title": "Apollo, Morning Rehearsal",
+      "kind": "candidate",
+      "imageHash": "8e4b237f95cfa676efb939dd510e89fd3ca29fe46d6e1dcaa3d242c10141e443",
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "apollo_a",
+      "image": "/collection/assets/candidate-8e4b237f95cfa676efb939dd510e89fd3ca29fe46d6e1dcaa3d242c10141e443.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-apollo_b-a15e1ee82065ee67",
+      "title": "Apollo, Morning Rehearsal",
+      "kind": "candidate",
+      "imageHash": "a15e1ee82065ee67cbcba82f530be22b18d8c1fe44a97f1279c17279a7546b07",
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "apollo_b",
+      "image": "/collection/assets/candidate-a15e1ee82065ee67cbcba82f530be22b18d8c1fe44a97f1279c17279a7546b07.png",
+      "supersededBy": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132",
+      "title": "Zeus, The Sky Answers",
+      "kind": "candidate",
+      "imageHash": "4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e",
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "zeus_a",
+      "image": "/collection/assets/candidate-4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158",
+      "title": "Athena, Before the Noise",
+      "kind": "candidate",
+      "imageHash": "17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef",
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "athena_b",
+      "image": "/collection/assets/candidate-17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b",
+      "title": "Poseidon, A Sea in His Wake",
+      "kind": "candidate",
+      "imageHash": "518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996",
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "poseidon_b",
+      "image": "/collection/assets/candidate-518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b",
+      "title": "Ares, A Flower After Battle",
+      "kind": "candidate",
+      "imageHash": "97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6",
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "ares_b",
+      "image": "/collection/assets/candidate-97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960",
+      "title": "Apollo, Morning Rehearsal",
+      "kind": "candidate",
+      "imageHash": "0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764",
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "apollo_a",
+      "image": "/collection/assets/candidate-0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764.png"
     }
   ],
   "references": [
@@ -3399,6 +3559,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_05_20260914-snoop_a-becd4e029d86c962",
             "imageHash": "becd4e029d86c9624843535e5d9e8b22667900cbc995eb196cd6e311e7592e52"
+          }
+        ]
+      },
+      {
+        "id": "round-26",
+        "title": "Round 26 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T02:14:17.466671+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132",
+            "imageHash": "4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158",
+            "imageHash": "17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b",
+            "imageHash": "518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b",
+            "imageHash": "97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960",
+            "imageHash": "0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764"
           }
         ]
       }

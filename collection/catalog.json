@@ -28636,6 +28636,2586 @@
           "calls": 166
         }
       }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-zeus_a-0fac82ac66aef95d",
+      "dogId": "design-loved_zombies_round_06_20260914-zeus_a",
+      "title": "Zeus, The Sky Answers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-0fac82ac66aef95ddcedeaddf9ae68bd238cc65d1221bdfa4bb854bc76e573e1.png",
+      "imageHash": "0fac82ac66aef95ddcedeaddf9ae68bd238cc65d1221bdfa4bb854bc76e573e1",
+      "parent": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "nativeParentSeed": 70,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "zeus_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_a.json",
+          "sha256": "d6beb01309022880b0f9891061b8fd0a0a589bf60f428ce668ebeef4921a3df8"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_a_wide_4000.png",
+          "sha256": "19d262a8e754b26d9ca4f9350ede994a0f4389b43c8805818be703aaf14c798f",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_a_square_2000.png",
+          "sha256": "4c5308c5bc566202f55c45dd5d2d0936ebc842a71006cef4463e0f5eca9261fb",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/zeus_a/wide.json",
+          "sha256": "3b8162e2e46abf992a297aaad9259d16218f80e10855caa6d5854c776d6a59a5"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+          "imageHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/zeus.js": {
+              "path": "../design/greek_pantheon_20260912/characters/zeus.js",
+              "sha256": "0237853097ddbafd3c7e4059ef3a6abb092d11d3c339a1d06d9d23888d6f9405"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/zeus_a/structural.json",
+            "sha256": "4b447fe156ab5801726d7c04a3f6f3cd3b565b4d5ae7543f1fa7c9fcbae5e462"
+          },
+          "options": {
+            "variation": 7431,
+            "mode": "mask",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "mask"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/zeus_a/light_contact.json",
+          "sha256": "51944bdadaa444ddc39e509021b8831e8743b721dea788dfc7023ee2fff24c62"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/zeus_a/portrait_stick.json",
+            "sha256": "6b0acd22359f817a1f60a025eefd939df97cbc0eb1417870e2bd1e116d632b45"
+          },
+          "calls": 178
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-zeus_b-f15e67ac5229e608",
+      "dogId": "design-loved_zombies_round_06_20260914-zeus_b",
+      "title": "Zeus, The Sky Answers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-f15e67ac5229e608b25c335c948e06ea2bda1a31de2bfb98e6505f90e80bc3fd.png",
+      "imageHash": "f15e67ac5229e608b25c335c948e06ea2bda1a31de2bfb98e6505f90e80bc3fd",
+      "parent": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "nativeParentSeed": 70,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "zeus_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_b.json",
+          "sha256": "2370c352d1cf248012f02ffd939c10b0910a0a3b1160bb1b10ff8fd6df4a84b6"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_b_wide_4000.png",
+          "sha256": "4a20d2b359782571f7dc7c46fef4aa492b6c776939bcf10678f687d1f1b7dbf4",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/zeus_b_square_2000.png",
+          "sha256": "d486fae3033585ed6a8ad1674ed5f8af9a65bdf1c71d3c142978218db09bee1c",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/zeus_b/wide.json",
+          "sha256": "94896c3ef165f820bfac28c16ffd200f6d236c62f1eb8f9d1d4b27b44fead907"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+          "imageHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/zeus.js": {
+              "path": "../design/greek_pantheon_20260912/characters/zeus.js",
+              "sha256": "0237853097ddbafd3c7e4059ef3a6abb092d11d3c339a1d06d9d23888d6f9405"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/zeus_b/structural.json",
+            "sha256": "6a2be0fef7a487a40d0dbe1a0286b81f7348a5e8a63cc6743244d4a301f0eb38"
+          },
+          "options": {
+            "variation": 7582,
+            "mode": "bloom",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "bloom"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/zeus_b/light_contact.json",
+          "sha256": "845e15fbbbde28430f3a78c870117e953b131c0d32a0d57681820b5a9c46f015"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/zeus_b/portrait_stick.json",
+            "sha256": "a596caeb081060e971d4f5b810e71faaf56f6bfc92aa039cfc6efa3dc014619e"
+          },
+          "calls": 173
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-athena_a-396619464b431d0b",
+      "dogId": "design-loved_zombies_round_06_20260914-athena_a",
+      "title": "Athena, Before the Noise",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-396619464b431d0bb18065b1a78d51da93ee52ecac910ca0fb3fd4f39242cf77.png",
+      "imageHash": "396619464b431d0bb18065b1a78d51da93ee52ecac910ca0fb3fd4f39242cf77",
+      "parent": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "nativeParentSeed": 55,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "athena_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_a.json",
+          "sha256": "c38aa963ba9be60f310112d98a25bbc4cbb04b60672eb603aa4bea6228539827"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_a_wide_4000.png",
+          "sha256": "e2fb95ef0217f78d3d9611d7a5ef577a86d8387a2744391f81cc9112b7fb8d3b",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_a_square_2000.png",
+          "sha256": "5af92f2a2ad2d3d56fc681ba99122f3b7f71573ca31e00851d5f4dcceab04f9b",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/athena_a/wide.json",
+          "sha256": "0a053840f59b22908169abcdd8b46588a9d2ff298e9e7469d1b84632beea3d5c"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+          "imageHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/athena.js": {
+              "path": "../design/greek_pantheon_20260912/characters/athena.js",
+              "sha256": "d844cc043541159c98822ffb6d0a9f3b13083f0d5b3f823c6dabfd563b6ed171"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/athena_a/structural.json",
+            "sha256": "41f343f9adefa5801ef624773d4d964e741fceb7fa678a618b254042bcdd8f82"
+          },
+          "options": {
+            "variation": 7146,
+            "mode": "swarm",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "swarm"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/athena_a/light_contact.json",
+          "sha256": "43b47cc834de7e7c908f28a69040f67c1b05804f06f0409f1b3c504282823b0b"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/athena_a/portrait_stick.json",
+            "sha256": "c537dff6c1d4fdb1d231aa4b8d03fb05c93ca6b01650d7ad693d679b44999382"
+          },
+          "calls": 217
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-athena_b-6a51d5410d1f352e",
+      "dogId": "design-loved_zombies_round_06_20260914-athena_b",
+      "title": "Athena, Before the Noise",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-6a51d5410d1f352e20f83d77ecddafa90277b7753307b8afc19f5e75adcf7d1c.png",
+      "imageHash": "6a51d5410d1f352e20f83d77ecddafa90277b7753307b8afc19f5e75adcf7d1c",
+      "parent": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "nativeParentSeed": 55,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "athena_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_b.json",
+          "sha256": "29917c2d91dc5998a3d6adccc225baa5cfe8bd7d98af3d8ee4961084b382a726"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_b_wide_4000.png",
+          "sha256": "7f4052b5e527645a03952421d6c7bcb3aaed65e1080f3bd3f97af04f5a3f3502",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/athena_b_square_2000.png",
+          "sha256": "38101a27cae943f798dd0b6509f3d2a52c77cd84ddb0a7a1f0e5a3bee282a4bf",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/athena_b/wide.json",
+          "sha256": "148ce6db7c5352cb901a9aacd184b422ca995d612fcb7a31da240942b16e5d78"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+          "imageHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/athena.js": {
+              "path": "../design/greek_pantheon_20260912/characters/athena.js",
+              "sha256": "d844cc043541159c98822ffb6d0a9f3b13083f0d5b3f823c6dabfd563b6ed171"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/athena_b/structural.json",
+            "sha256": "3f17cbe7d5407da3eefe9d25bdb8f064fb959d9973a74d5d7144615c3011955a"
+          },
+          "options": {
+            "variation": 7297,
+            "mode": "bite",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/athena_b/light_contact.json",
+          "sha256": "02823eec8f19e7917b122f39a6882731164f6fdc44dbc120b2117a2244c71250"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/athena_b/portrait_stick.json",
+            "sha256": "965703ccb03592d7948f53341f062b3a61613e5646dc62160364096af1034111"
+          },
+          "calls": 192
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-poseidon_a-d2b3378ca5e04c69",
+      "dogId": "design-loved_zombies_round_06_20260914-poseidon_a",
+      "title": "Poseidon, A Sea in His Wake",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-d2b3378ca5e04c690017d7ff662c8971ec77868f930a3956ed7b7a0d1dc3a880.png",
+      "imageHash": "d2b3378ca5e04c690017d7ff662c8971ec77868f930a3956ed7b7a0d1dc3a880",
+      "parent": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "nativeParentSeed": 62,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "poseidon_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_a.json",
+          "sha256": "0865c3f22865c9a5271535c2664e65e14ec4a573911ce5cd7b74cc97c2ec430e"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_a_wide_4000.png",
+          "sha256": "c98d5f95105b098bd4a6e594b4ee22c5dce56d8f7792a79b3344214fc72655ae",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_a_square_2000.png",
+          "sha256": "45a8e1054e50234d9a860fe76b530292aa753cee0d564ec9a775d99cf0b17f9e",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/poseidon_a/wide.json",
+          "sha256": "8160a0767a2c758a39ca39afecb4048fde75f348804bdc4ce2e999d482a7aee8"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+          "imageHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/poseidon.js": {
+              "path": "../design/greek_pantheon_20260912/characters/poseidon.js",
+              "sha256": "5493f076587cdd3380e3d9e60cefe3b733fa0046d5f4d4605cd807ef5473ed59"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/poseidon_a/structural.json",
+            "sha256": "016274babad4a478bdda11ebaf9c5a6268b182c760ab2bfae8a3d8b19b67dcd4"
+          },
+          "options": {
+            "variation": 7279,
+            "mode": "bloom",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "bloom"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/poseidon_a/light_contact.json",
+          "sha256": "87f3eae5d39bc7f6a5346d91d2c4509a8d210c23525e5f46d977cdf70bcd368f"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/poseidon_a/portrait_stick.json",
+            "sha256": "483bab9f73128d999357e5554930cbc4e25cdddebc0a1124e7c05c113de5f682"
+          },
+          "calls": 157
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-poseidon_b-08f4ea2a6e48f061",
+      "dogId": "design-loved_zombies_round_06_20260914-poseidon_b",
+      "title": "Poseidon, A Sea in His Wake",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-08f4ea2a6e48f061c608b41fded4fde6876f934bc5ef247039aa38bafc0df5ce.png",
+      "imageHash": "08f4ea2a6e48f061c608b41fded4fde6876f934bc5ef247039aa38bafc0df5ce",
+      "parent": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "nativeParentSeed": 62,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "poseidon_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_b.json",
+          "sha256": "0f6144d8cf676531e42e91f4ddff2c480292feb4611fd9765989bbea4a4d5046"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_b_wide_4000.png",
+          "sha256": "eaed4a522778f049969ba21ef344f833fa44c7d71a1dda6e785350ad2d64d845",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/poseidon_b_square_2000.png",
+          "sha256": "5b61ad1e215c35390963055cd2b079ddeb09f92a48a6cc388f884da74825d257",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/poseidon_b/wide.json",
+          "sha256": "090a49b0cb1542b4a38e0318bb23129719800983839ba7437c12e2b8871db19b"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+          "imageHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/poseidon.js": {
+              "path": "../design/greek_pantheon_20260912/characters/poseidon.js",
+              "sha256": "5493f076587cdd3380e3d9e60cefe3b733fa0046d5f4d4605cd807ef5473ed59"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/poseidon_b/structural.json",
+            "sha256": "d43b704ba2faa260c06be6cc38867f7f4378b4855ab1fec2cd5002fe333033f6"
+          },
+          "options": {
+            "variation": 7430,
+            "mode": "split",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "split"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/poseidon_b/light_contact.json",
+          "sha256": "6edb5402cabc376b4a45784e8bc8739a8f0fcd0adf01809b7a7b4b5d4be7f7b9"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/poseidon_b/portrait_stick.json",
+            "sha256": "c7ed24428587c20fec243664f0baa23a337d401ff2cd73cfa47356ad56d32f88"
+          },
+          "calls": 168
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-ares_a-9ce8736c9e1b4ff9",
+      "dogId": "design-loved_zombies_round_06_20260914-ares_a",
+      "title": "Ares, A Flower After Battle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9ce8736c9e1b4ff98cb45e230dc95e2f50c43d4a3c11ac7100b9c334cbb81d87.png",
+      "imageHash": "9ce8736c9e1b4ff98cb45e230dc95e2f50c43d4a3c11ac7100b9c334cbb81d87",
+      "parent": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "nativeParentSeed": 131,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "ares_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_a.json",
+          "sha256": "85d327575dbd1e5fec6c2d756bc1d2341f0d040753ca5ccdaa32a73c30f7583e"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_a_wide_4000.png",
+          "sha256": "a82a9d2781c8619c826925324e711f12e5dc25273038059aaebfe3be424cf67e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_a_square_2000.png",
+          "sha256": "22f95a275f75aa7c20ad007419e0e5d08cb5eb2297e71eaf78903220e3223d54",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/ares_a/wide.json",
+          "sha256": "ad6e71d8dfab2cf244832ea8d71b88797f2e64b6877e7c2ef23a4e1ee6886e36"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+          "imageHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/ares.js": {
+              "path": "../design/greek_pantheon_20260912/characters/ares.js",
+              "sha256": "1042b4f66aedd866a4eeb0f4b76b8560e7ca367bf5ad3d280b80266f8bc1f6fb"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/ares_a/structural.json",
+            "sha256": "7257f6f90fb81f177c45cf90ddac0f07cf3788e6e0273d63f151ecdf429525e4"
+          },
+          "options": {
+            "variation": 8590,
+            "mode": "mask",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "mask"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/ares_a/light_contact.json",
+          "sha256": "767bd60ed0c0ec768a4797dc03e7692c50c55f87367103812f60e36055cb8ef6"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/ares_a/portrait_stick.json",
+            "sha256": "981ab2d751bb12330ba307609d9d2ef771a25563602f028331b51c7b763518c2"
+          },
+          "calls": 210
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-ares_b-257d7408cca3a62a",
+      "dogId": "design-loved_zombies_round_06_20260914-ares_b",
+      "title": "Ares, A Flower After Battle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-257d7408cca3a62ab91a553bf3b85fd11f6916142ea7936bc057b1e8b0fc0d1a.png",
+      "imageHash": "257d7408cca3a62ab91a553bf3b85fd11f6916142ea7936bc057b1e8b0fc0d1a",
+      "parent": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "nativeParentSeed": 131,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "ares_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_b.json",
+          "sha256": "24f0636ff30f8022e50d1cf81003ecba5651ccae6ca56aa9730c77d17e5faea9"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_b_wide_4000.png",
+          "sha256": "ed99380a24a031f97a3a2935bfad06db53948c855e16d0c61d047bf581430897",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/ares_b_square_2000.png",
+          "sha256": "c27924522a6de8601c4dc506d44e9741d1c0ac870935136e04374b1f19e67c7c",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/ares_b/wide.json",
+          "sha256": "454b2901b21d3ce411a8bf8d6c3b0b859edc47c0c8529e11b47fde06da045629"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+          "imageHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/ares.js": {
+              "path": "../design/greek_pantheon_20260912/characters/ares.js",
+              "sha256": "1042b4f66aedd866a4eeb0f4b76b8560e7ca367bf5ad3d280b80266f8bc1f6fb"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/ares_b/structural.json",
+            "sha256": "b47f8782e7114a98bd1b032bf460f6e3bee79ba9cd86d453eab890098b98bb9f"
+          },
+          "options": {
+            "variation": 8741,
+            "mode": "swarm",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "swarm"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/ares_b/light_contact.json",
+          "sha256": "58f60fb04af1cfad3e35129470e42a9f9295e30116f26a47b06d3bfb7f77c7bf"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/ares_b/portrait_stick.json",
+            "sha256": "456d32eb82da6c690fca5ede5fb0fbc3f633c17b09f0cef4f307992736cb7de2"
+          },
+          "calls": 229
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-apollo_a-8e4b237f95cfa676",
+      "dogId": "design-loved_zombies_round_06_20260914-apollo_a",
+      "title": "Apollo, Morning Rehearsal",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-8e4b237f95cfa676efb939dd510e89fd3ca29fe46d6e1dcaa3d242c10141e443.png",
+      "imageHash": "8e4b237f95cfa676efb939dd510e89fd3ca29fe46d6e1dcaa3d242c10141e443",
+      "parent": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "nativeParentSeed": 38,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "apollo_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_a.json",
+          "sha256": "5a003b727c2658e5d79b2098e236cb3bf84296e6f4926ede04d99ce625be4790"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_a_wide_4000.png",
+          "sha256": "e933c45552ea7fd994fa2459f98b8eca14ec9276d20d180692746a4e527beb8e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_a_square_2000.png",
+          "sha256": "5c7a2a09a35c927a34f64f48c57c18df7b15de045a7b62e9adee3475291242a6",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/apollo_a/wide.json",
+          "sha256": "7d5428712e3386c44b771c0fdfbc26de8892dba85db0495c301183f0034f8055"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+          "imageHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/apollo.js": {
+              "path": "../design/greek_pantheon_20260912/characters/apollo.js",
+              "sha256": "36f03931c4dd23e6ee44d713689a8dabe9c5980c07f66bfe99b8a5e705577154"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/apollo_a/structural.json",
+            "sha256": "c610074c317ebf865adb2a5725a9c2a61796aa922aa0606914d1b91bc325cc5c"
+          },
+          "options": {
+            "variation": 6823,
+            "mode": "bite",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/apollo_a/light_contact.json",
+          "sha256": "b8216f8041952f1bb308833590120a1834b046face9b6b77f2761f3ab14dfd6f"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/apollo_a/portrait_stick.json",
+            "sha256": "452731c11abfddd08aed8dfd17b4077de82f23958898efbbfcdeafdda081a6e7"
+          },
+          "calls": 211
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_20260914-apollo_b-a15e1ee82065ee67",
+      "dogId": "design-loved_zombies_round_06_20260914-apollo_b",
+      "title": "Apollo, Morning Rehearsal",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a15e1ee82065ee67cbcba82f530be22b18d8c1fe44a97f1279c17279a7546b07.png",
+      "imageHash": "a15e1ee82065ee67cbcba82f530be22b18d8c1fe44a97f1279c17279a7546b07",
+      "parent": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "nativeParentSeed": 38,
+      "source": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_20260914",
+      "slug": "apollo_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_b.json",
+          "sha256": "178e2853761868f04711769993613c1d27df6a914b17495b5ec559c1c45ae21b"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_20260914/cast.json",
+          "sha256": "001455118c2185a2c57dc913ad4c8ee930540dfbc4c1ef06b63c62b2c0410aad"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_b_wide_4000.png",
+          "sha256": "a990c6ff20f1199c562210459d398c24a13fa4a8f650a83d04a390e3ccc651df",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_20260914/out/apollo_b_square_2000.png",
+          "sha256": "127da28419973be99fb1a13eeaaea5f472b096c9d5289a0bf37a91ae47143fef",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_20260914/work/apollo_b/wide.json",
+          "sha256": "63b75d08d579d0b80e0b483569b90f2e5e0470243833a822f1cdcc574ca2c1a7"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+          "imageHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/apollo.js": {
+              "path": "../design/greek_pantheon_20260912/characters/apollo.js",
+              "sha256": "36f03931c4dd23e6ee44d713689a8dabe9c5980c07f66bfe99b8a5e705577154"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_20260914/install.js",
+            "sha256": "3eedc205181aaf09472cb2e7c59402da6eede619eaef916369b362fc2e34c083"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_20260914/work/apollo_b/structural.json",
+            "sha256": "5b2b68792deba7f5637355c9e351d3817110990d9b7709fe3745dc59e842fa26"
+          },
+          "options": {
+            "variation": 6974,
+            "mode": "split",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "split"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_20260914/fields.json",
+          "sha256": "714088ac993dc3f710bf19ae8be33a08943fb1f123a6a4e6ab9f514846724748"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_20260914/supports.json",
+          "sha256": "e0ab66ef162778a805901170c66caacecac29d80f8f241f7b1cc0ce212305206"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_20260914/work/apollo_b/light_contact.json",
+          "sha256": "1733f8d87aa2c46abb7a7f3ef709094f8a3d5f940720374330b79c399e12c1f4"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_20260914/work/apollo_b/portrait_stick.json",
+            "sha256": "d6b0b718a8b09e2d2f3d4f39b172cdfcce9b6daabf83f4d43b6dd378f95e8ec9"
+          },
+          "calls": 209
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-zeus_a-4ff8df1d96374132",
+      "dogId": "design-loved_zombies_round_06_repairs_20260914-zeus_a",
+      "title": "Zeus, The Sky Answers",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e.png",
+      "imageHash": "4ff8df1d96374132a2920df133258455907cef7ef5af741697cf14812d05b62e",
+      "parent": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "nativeParentSeed": 70,
+      "source": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Zeus, The Sky Answers with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "zeus_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/zeus_a.json",
+          "sha256": "20c070ac0251f6024c9e3c1c6f46f10ad46ae889b42591d4830940a4a239dbc2"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/cast.json",
+          "sha256": "97ee5c7dea0e0c61648f53e7df50888ec9d2f2061e88d06b2ae7085acaf135b3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/zeus_a_wide_4000.png",
+          "sha256": "36d43aa570438de87ded8ebabeaef9e2b91d1ecb99dae6f2ba568af7c8222943",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/zeus_a_square_2000.png",
+          "sha256": "63d3bb1ccf5c14499e1584be1334f9b7f942f24daa8410379cc0f953b4297423",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/zeus_a/wide.json",
+          "sha256": "9e0c69a7678ee5701c4818c13809cd3f417b4f148da587bad3abb959366aa621"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+          "imageHash": "ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/zeus.js": {
+              "path": "../design/greek_pantheon_20260912/characters/zeus.js",
+              "sha256": "0237853097ddbafd3c7e4059ef3a6abb092d11d3c339a1d06d9d23888d6f9405"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/zeus_a/structural.json",
+            "sha256": "b59e1f9efd0576570d1edf3688058fa6696b478bf3b60590ac0bf60bb09eac5b"
+          },
+          "options": {
+            "variation": 7431,
+            "mode": "mask",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "mask"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/fields.json",
+          "sha256": "e7c8e5dc0c3893d12d00f8a384e618eaf4d5ea246f3a496f88959a9c44b7e5b0"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/supports.json",
+          "sha256": "a61935bbdf2afe9cbb621a1faeb769bcafc5bdd382c572f4a1f2bffe60d9667f"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/zeus_a/light_contact.json",
+          "sha256": "51944bdadaa444ddc39e509021b8831e8743b721dea788dfc7023ee2fff24c62"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/zeus_a/portrait_stick.json",
+            "sha256": "6b0acd22359f817a1f60a025eefd939df97cbc0eb1417870e2bd1e116d632b45"
+          },
+          "calls": 178
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-athena_b-17d94b05d3641158",
+      "dogId": "design-loved_zombies_round_06_repairs_20260914-athena_b",
+      "title": "Athena, Before the Noise",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef.png",
+      "imageHash": "17d94b05d364115861fce1b8aa70a46c6a11c3ed125480bb1aa8a7973a555bef",
+      "parent": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "nativeParentSeed": 55,
+      "source": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Athena, Before the Noise with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "athena_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/athena_b.json",
+          "sha256": "4dc1c7b08d824c30fae7f70fa6c04db62feb9c58aec5a5f18686d82dffe3c169"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/cast.json",
+          "sha256": "97ee5c7dea0e0c61648f53e7df50888ec9d2f2061e88d06b2ae7085acaf135b3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/athena_b_wide_4000.png",
+          "sha256": "0a454eaa2aa23ddf739142c1c9429a74ed17bb35ce03ea50e30f5dde4e37d789",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/athena_b_square_2000.png",
+          "sha256": "4257375c0b3d64ba8ed5fe6bc7724384422ae6107f4c86a30e94cd029d392459",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/athena_b/wide.json",
+          "sha256": "cea6f312643fd5566179b2effc073f1ccd30de4bd9608b6e5544b0d466bbe3b7"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+          "imageHash": "3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/athena.js": {
+              "path": "../design/greek_pantheon_20260912/characters/athena.js",
+              "sha256": "d844cc043541159c98822ffb6d0a9f3b13083f0d5b3f823c6dabfd563b6ed171"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/athena_b/structural.json",
+            "sha256": "7657715ecc9531636480c7b0ec90d4ef0d466514d54afdb087ec022d04ec4a28"
+          },
+          "options": {
+            "variation": 7297,
+            "mode": "bite",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/fields.json",
+          "sha256": "e7c8e5dc0c3893d12d00f8a384e618eaf4d5ea246f3a496f88959a9c44b7e5b0"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/supports.json",
+          "sha256": "a61935bbdf2afe9cbb621a1faeb769bcafc5bdd382c572f4a1f2bffe60d9667f"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/athena_b/light_contact.json",
+          "sha256": "02823eec8f19e7917b122f39a6882731164f6fdc44dbc120b2117a2244c71250"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/athena_b/portrait_stick.json",
+            "sha256": "965703ccb03592d7948f53341f062b3a61613e5646dc62160364096af1034111"
+          },
+          "calls": 192
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-poseidon_b-518c1b12fcf43a8b",
+      "dogId": "design-loved_zombies_round_06_repairs_20260914-poseidon_b",
+      "title": "Poseidon, A Sea in His Wake",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996.png",
+      "imageHash": "518c1b12fcf43a8b9e7152be82bc7d3fb32b8b4b4d4ed7eedf5a344516cbb996",
+      "parent": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "nativeParentSeed": 62,
+      "source": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Poseidon, A Sea in His Wake with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "poseidon_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/poseidon_b.json",
+          "sha256": "bc3ebf08325ecd076524a4ae9271e965b07ce1c1c6045712ee08d7300aa39b8b"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/cast.json",
+          "sha256": "97ee5c7dea0e0c61648f53e7df50888ec9d2f2061e88d06b2ae7085acaf135b3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/poseidon_b_wide_4000.png",
+          "sha256": "29160825760d6c3db40216c1e962e310c2ca3780594a364cac8fea83fe29031d",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/poseidon_b_square_2000.png",
+          "sha256": "7a2084ba3c1b1c29ddef10f1cb1aebe138e56f7fea97da59e5ce3d287cc9fb1f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/poseidon_b/wide.json",
+          "sha256": "60d99fd307f778a33bc363ae63c6413bc420d6b0d7f9d880b758a8e313f54f26"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+          "imageHash": "a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/poseidon.js": {
+              "path": "../design/greek_pantheon_20260912/characters/poseidon.js",
+              "sha256": "5493f076587cdd3380e3d9e60cefe3b733fa0046d5f4d4605cd807ef5473ed59"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/poseidon_b/structural.json",
+            "sha256": "b6e8be3c930324c23f3afbddb9372272e207d7a0fb0c8251932ba7e374435d43"
+          },
+          "options": {
+            "variation": 7430,
+            "mode": "split",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "split"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/fields.json",
+          "sha256": "e7c8e5dc0c3893d12d00f8a384e618eaf4d5ea246f3a496f88959a9c44b7e5b0"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/supports.json",
+          "sha256": "a61935bbdf2afe9cbb621a1faeb769bcafc5bdd382c572f4a1f2bffe60d9667f"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/poseidon_b/light_contact.json",
+          "sha256": "6edb5402cabc376b4a45784e8bc8739a8f0fcd0adf01809b7a7b4b5d4be7f7b9"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/poseidon_b/portrait_stick.json",
+            "sha256": "c7ed24428587c20fec243664f0baa23a337d401ff2cd73cfa47356ad56d32f88"
+          },
+          "calls": 168
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-ares_b-97ad0a5dbe55e11b",
+      "dogId": "design-loved_zombies_round_06_repairs_20260914-ares_b",
+      "title": "Ares, A Flower After Battle",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6.png",
+      "imageHash": "97ad0a5dbe55e11b27f0c154e4cd195bf66b10bcc13f54815e35d11fc18c83f6",
+      "parent": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "nativeParentSeed": 131,
+      "source": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Ares, A Flower After Battle with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "ares_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/ares_b.json",
+          "sha256": "d4ba478c52ef8ab90dd414c7a8216f7c617776a2e3729de7c89889661a66e8b1"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/cast.json",
+          "sha256": "97ee5c7dea0e0c61648f53e7df50888ec9d2f2061e88d06b2ae7085acaf135b3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/ares_b_wide_4000.png",
+          "sha256": "a406ee8bd76388b8ea08a77b277233ca73191a76ba7711c5614a64659db3147a",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/ares_b_square_2000.png",
+          "sha256": "c5ddbf5abd93302fb0943b863758e977bf12a90d8a76fd084be52e137d9ab5c2",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/ares_b/wide.json",
+          "sha256": "03b5d3b779b27fe488732027c58b439c131993064f411d0370b8a195872b96db"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+          "imageHash": "811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/ares.js": {
+              "path": "../design/greek_pantheon_20260912/characters/ares.js",
+              "sha256": "1042b4f66aedd866a4eeb0f4b76b8560e7ca367bf5ad3d280b80266f8bc1f6fb"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/ares_b/structural.json",
+            "sha256": "8e5595cd5caa935722e30b695d8c07f3cc99cae3eaf718cae41934c1becefaff"
+          },
+          "options": {
+            "variation": 8741,
+            "mode": "swarm",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "swarm"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/fields.json",
+          "sha256": "e7c8e5dc0c3893d12d00f8a384e618eaf4d5ea246f3a496f88959a9c44b7e5b0"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/supports.json",
+          "sha256": "a61935bbdf2afe9cbb621a1faeb769bcafc5bdd382c572f4a1f2bffe60d9667f"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/ares_b/light_contact.json",
+          "sha256": "58f60fb04af1cfad3e35129470e42a9f9295e30116f26a47b06d3bfb7f77c7bf"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/ares_b/portrait_stick.json",
+            "sha256": "456d32eb82da6c690fca5ede5fb0fbc3f633c17b09f0cef4f307992736cb7de2"
+          },
+          "calls": 229
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960",
+      "dogId": "design-loved_zombies_round_06_repairs_20260914-apollo_a",
+      "title": "Apollo, Morning Rehearsal",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764.png",
+      "imageHash": "0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764",
+      "parent": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "nativeParentSeed": 38,
+      "source": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_06_repairs_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Apollo, Morning Rehearsal with varied structural zombie eyes and jaws; original authored character, pose, props and painted support preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_06_repairs_20260914",
+      "slug": "apollo_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/apollo_a.json",
+          "sha256": "e7fc05b19b5a1285e03cfd66f083716ef8f7c1832ae16b011dce6f932a4af876"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/cast.json",
+          "sha256": "97ee5c7dea0e0c61648f53e7df50888ec9d2f2061e88d06b2ae7085acaf135b3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/apollo_a_wide_4000.png",
+          "sha256": "96c526ccddec92d913a97139c1d4c2d49f07ff56c44e0f69ad53cbe570ae0a54",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/out/apollo_a_square_2000.png",
+          "sha256": "fe30f6f36b3471a3518fd134e362af453da2bcad60ce985ed7c9a0bd5a421611",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/apollo_a/wide.json",
+          "sha256": "a1536b9fa187ba1d4dd7dd056772f5f08da7a39b0f16f1d190495c4563883ed1"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+          "imageHash": "9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f",
+          "manifest": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/apollo.js": {
+              "path": "../design/greek_pantheon_20260912/characters/apollo.js",
+              "sha256": "36f03931c4dd23e6ee44d713689a8dabe9c5980c07f66bfe99b8a5e705577154"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/apollo_a/structural.json",
+            "sha256": "30a5dc9d7be0b862874e459dd0cc9018f2ea8d50b46e913987325d02eda3f316"
+          },
+          "options": {
+            "variation": 6823,
+            "mode": "bite",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/fields.json",
+          "sha256": "e7c8e5dc0c3893d12d00f8a384e618eaf4d5ea246f3a496f88959a9c44b7e5b0"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/supports.json",
+          "sha256": "a61935bbdf2afe9cbb621a1faeb769bcafc5bdd382c572f4a1f2bffe60d9667f"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_06_repairs_20260914/work/apollo_a/light_contact.json",
+          "sha256": "b8216f8041952f1bb308833590120a1834b046face9b6b77f2761f3ab14dfd6f"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_06_repairs_20260914/work/apollo_a/portrait_stick.json",
+            "sha256": "28bb2d685c67af6f4a60b704cb28ed4c86755a14d00a66f3a805dc6e4ae38665"
+          },
+          "calls": 211
+        }
+      }
     }
   ],
   "rounds": [
