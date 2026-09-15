@@ -1485,6 +1485,141 @@
         "height": 2000,
         "sha256": "a492ffc468971d97b1fda45cd5c18375d2fc77e8b9d2f1ce9283f6fae15e419e"
       }
+    },
+    {
+      "parentId": "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434",
+      "parentHash": "37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa",
+      "title": "The Apple Thief",
+      "zombieId": "candidate-loved_zombies_round_10_20260914-apple_thief_a-932b9d1a571991cd",
+      "imageHash": "932b9d1a571991cd09c15bb873ca0cd0bd6c791ce148cdae76232bbc3411e284",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c5463cbea7294760f00fbfe3e9bc04844b39e68f233606d6622783a1a45c2bc3.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c5463cbea7294760f00fbfe3e9bc04844b39e68f233606d6622783a1a45c2bc3"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/3afe3001d90de0ad6bc386cb4309e85ad1d69631344383a8493e78d7a9bdf05d.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "3afe3001d90de0ad6bc386cb4309e85ad1d69631344383a8493e78d7a9bdf05d"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/380ae221abb6fed3d709376e78df5ca922e21ed696016f6cc9289b4b1ea44a6f.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "380ae221abb6fed3d709376e78df5ca922e21ed696016f6cc9289b4b1ea44a6f"
+      }
+    },
+    {
+      "parentId": "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac",
+      "parentHash": "a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6",
+      "title": "The Bell Diver",
+      "zombieId": "candidate-loved_zombies_round_10_20260914-bell_diver_b-1074fdbe80db75b1",
+      "imageHash": "1074fdbe80db75b1e227ed5259f4366058874a9a782ab9ef633070083e996fc4",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/7d7785d02fadb9c2897ff3f4041370d99ecb02d2eb6757492cb16b69660faa84.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "7d7785d02fadb9c2897ff3f4041370d99ecb02d2eb6757492cb16b69660faa84"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/61140679996e0d7ecfab6cddb25ae919c1094cd2dc4aa0c4ca36c7116a6a95de.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "61140679996e0d7ecfab6cddb25ae919c1094cd2dc4aa0c4ca36c7116a6a95de"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/545f0509b29264ca5d4453b265fcc3db9159b473b62a3ae4f348e90f615ef399.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "545f0509b29264ca5d4453b265fcc3db9159b473b62a3ae4f348e90f615ef399"
+      }
+    },
+    {
+      "parentId": "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba",
+      "parentHash": "91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae",
+      "title": "The Mapmaker Who Got Lost",
+      "zombieId": "candidate-loved_zombies_round_10_20260914-mapmaker_a-2aa01c2f6cc47c4a",
+      "imageHash": "2aa01c2f6cc47c4abaf74b6d64ba8c52b9fe5daf5bbc90e9738165e4dbff177c",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c16f393628baa8cd2b206f0c7d8121d97c02caec267e9f50ed14e649a14a9cb9.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c16f393628baa8cd2b206f0c7d8121d97c02caec267e9f50ed14e649a14a9cb9"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/72623ee438cdd377da2fdd41da3b603a1b56ffe037796e52c19a202d1b92379f.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "72623ee438cdd377da2fdd41da3b603a1b56ffe037796e52c19a202d1b92379f"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/53d7f24ac1596d0f719762504026a4307498ab3775327ba5df1f1867856117f4.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "53d7f24ac1596d0f719762504026a4307498ab3775327ba5df1f1867856117f4"
+      }
+    },
+    {
+      "parentId": "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac",
+      "parentHash": "65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a",
+      "title": "Saint George, Almost Brave",
+      "zombieId": "candidate-loved_zombies_round_10_20260914-saint_george_b-e5e7182fe82d0025",
+      "imageHash": "e5e7182fe82d00253fcf0a2e13b43d7c438b51784f36b12d6b067a4b0f2d0fdf",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/859f7aefa75d63a215e63ffa7c5b47c82a22899bd106ff34a7d4254af835b161.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "859f7aefa75d63a215e63ffa7c5b47c82a22899bd106ff34a7d4254af835b161"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/25cf4043d37e488183d51d654da6065cb482d36d0479155cc42dec825178aafe.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "25cf4043d37e488183d51d654da6065cb482d36d0479155cc42dec825178aafe"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/00b7bf6ff4abeb961f4d16f982065b92fdb8f90af903d3f2346a3ebeabe91da6.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "00b7bf6ff4abeb961f4d16f982065b92fdb8f90af903d3f2346a3ebeabe91da6"
+      }
+    },
+    {
+      "parentId": "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5",
+      "parentHash": "8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d",
+      "title": "Hermes, Late Again",
+      "zombieId": "candidate-loved_zombies_round_10_20260914-hermes_b-04de070f55b5d4a4",
+      "imageHash": "04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/e00858617bc6c16408fd41d26ad2d159c01c205a4cfbc7b10d12395f366053e2.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "e00858617bc6c16408fd41d26ad2d159c01c205a4cfbc7b10d12395f366053e2"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f4464d24e5caf26f8c9c40a6b3aa36c4e1ac804510d19ee900a761f073633763.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "f4464d24e5caf26f8c9c40a6b3aa36c4e1ac804510d19ee900a761f073633763"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f88dd0bb03d7601d583de5f389cd703037fdf9ab91f91042ed48ff648b2014e4.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "f88dd0bb03d7601d583de5f389cd703037fdf9ab91f91042ed48ff648b2014e4"
+      }
     }
   ]
 }

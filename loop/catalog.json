@@ -3127,6 +3127,111 @@
       "slug": "tideheart_b",
       "image": "/collection/assets/candidate-ce1aa1baf040f4c2f234e3ed71d9bf5e539a546d290fb228a953cfeef8ad79a4.png",
       "supersededBy": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-apple_thief_a-932b9d1a571991cd",
+      "title": "The Apple Thief",
+      "kind": "candidate",
+      "imageHash": "932b9d1a571991cd09c15bb873ca0cd0bd6c791ce148cdae76232bbc3411e284",
+      "description": "Exact loved The Apple Thief with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "apple_thief_a",
+      "image": "/collection/assets/candidate-932b9d1a571991cd09c15bb873ca0cd0bd6c791ce148cdae76232bbc3411e284.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-apple_thief_b-36e1ba958d22fa48",
+      "title": "The Apple Thief",
+      "kind": "candidate",
+      "imageHash": "36e1ba958d22fa483c2edcebf56238c25e456b00dfd12352f908db30a56bdf51",
+      "description": "Exact loved The Apple Thief with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "apple_thief_b",
+      "image": "/collection/assets/candidate-36e1ba958d22fa483c2edcebf56238c25e456b00dfd12352f908db30a56bdf51.png",
+      "supersededBy": "candidate-loved_zombies_round_10_20260914-apple_thief_a-932b9d1a571991cd"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-bell_diver_a-fff2d7f81facc151",
+      "title": "The Bell Diver",
+      "kind": "candidate",
+      "imageHash": "fff2d7f81facc151198b0dd7bd20bc28509ec3fe99f0d4315e905aebb90595dc",
+      "description": "Exact loved The Bell Diver with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "bell_diver_a",
+      "image": "/collection/assets/candidate-fff2d7f81facc151198b0dd7bd20bc28509ec3fe99f0d4315e905aebb90595dc.png",
+      "supersededBy": "candidate-loved_zombies_round_10_20260914-bell_diver_b-1074fdbe80db75b1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-bell_diver_b-1074fdbe80db75b1",
+      "title": "The Bell Diver",
+      "kind": "candidate",
+      "imageHash": "1074fdbe80db75b1e227ed5259f4366058874a9a782ab9ef633070083e996fc4",
+      "description": "Exact loved The Bell Diver with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "bell_diver_b",
+      "image": "/collection/assets/candidate-1074fdbe80db75b1e227ed5259f4366058874a9a782ab9ef633070083e996fc4.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-mapmaker_a-2aa01c2f6cc47c4a",
+      "title": "The Mapmaker Who Got Lost",
+      "kind": "candidate",
+      "imageHash": "2aa01c2f6cc47c4abaf74b6d64ba8c52b9fe5daf5bbc90e9738165e4dbff177c",
+      "description": "Exact loved The Mapmaker Who Got Lost with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "mapmaker_a",
+      "image": "/collection/assets/candidate-2aa01c2f6cc47c4abaf74b6d64ba8c52b9fe5daf5bbc90e9738165e4dbff177c.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-mapmaker_b-eb8e748bc357022e",
+      "title": "The Mapmaker Who Got Lost",
+      "kind": "candidate",
+      "imageHash": "eb8e748bc357022ead875c265b81400d6fa36309b81de42170c16c99ae349607",
+      "description": "Exact loved The Mapmaker Who Got Lost with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "mapmaker_b",
+      "image": "/collection/assets/candidate-eb8e748bc357022ead875c265b81400d6fa36309b81de42170c16c99ae349607.png",
+      "supersededBy": "candidate-loved_zombies_round_10_20260914-mapmaker_a-2aa01c2f6cc47c4a"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-saint_george_a-794f51ecf608a6a0",
+      "title": "Saint George, Almost Brave",
+      "kind": "candidate",
+      "imageHash": "794f51ecf608a6a00aa9f68755d2f929018b8023f17cbe3362d468f394b5bb50",
+      "description": "Exact loved Saint George, Almost Brave with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "saint_george_a",
+      "image": "/collection/assets/candidate-794f51ecf608a6a00aa9f68755d2f929018b8023f17cbe3362d468f394b5bb50.png",
+      "supersededBy": "candidate-loved_zombies_round_10_20260914-saint_george_b-e5e7182fe82d0025"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-saint_george_b-e5e7182fe82d0025",
+      "title": "Saint George, Almost Brave",
+      "kind": "candidate",
+      "imageHash": "e5e7182fe82d00253fcf0a2e13b43d7c438b51784f36b12d6b067a4b0f2d0fdf",
+      "description": "Exact loved Saint George, Almost Brave with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "saint_george_b",
+      "image": "/collection/assets/candidate-e5e7182fe82d00253fcf0a2e13b43d7c438b51784f36b12d6b067a4b0f2d0fdf.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-hermes_a-2cb58a24b63b1e7f",
+      "title": "Hermes, Late Again",
+      "kind": "candidate",
+      "imageHash": "2cb58a24b63b1e7f176135be8e28f02aff5826fd6375f52deb0ae5702850c87d",
+      "description": "Exact loved Hermes, Late Again with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "hermes_a",
+      "image": "/collection/assets/candidate-2cb58a24b63b1e7f176135be8e28f02aff5826fd6375f52deb0ae5702850c87d.png",
+      "supersededBy": "candidate-loved_zombies_round_10_20260914-hermes_b-04de070f55b5d4a4"
+    },
+    {
+      "id": "candidate-loved_zombies_round_10_20260914-hermes_b-04de070f55b5d4a4",
+      "title": "Hermes, Late Again",
+      "kind": "candidate",
+      "imageHash": "04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57",
+      "description": "Exact loved Hermes, Late Again with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_10_20260914",
+      "slug": "hermes_b",
+      "image": "/collection/assets/candidate-04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57.png"
     }
   ],
   "references": [
@@ -3982,6 +4087,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045",
             "imageHash": "9111f5d1e55e3045ffe5496aae646957ea69e30b31af101d6c6d465c209165af"
+          }
+        ]
+      },
+      {
+        "id": "round-30",
+        "title": "Round 30 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T04:01:16.654581+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_10_20260914-apple_thief_a-932b9d1a571991cd",
+            "imageHash": "932b9d1a571991cd09c15bb873ca0cd0bd6c791ce148cdae76232bbc3411e284"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_10_20260914-bell_diver_b-1074fdbe80db75b1",
+            "imageHash": "1074fdbe80db75b1e227ed5259f4366058874a9a782ab9ef633070083e996fc4"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_10_20260914-mapmaker_a-2aa01c2f6cc47c4a",
+            "imageHash": "2aa01c2f6cc47c4abaf74b6d64ba8c52b9fe5daf5bbc90e9738165e4dbff177c"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_10_20260914-saint_george_b-e5e7182fe82d0025",
+            "imageHash": "e5e7182fe82d00253fcf0a2e13b43d7c438b51784f36b12d6b067a4b0f2d0fdf"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_10_20260914-hermes_b-04de070f55b5d4a4",
+            "imageHash": "04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57"
           }
         ]
       }
