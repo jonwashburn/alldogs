@@ -2525,6 +2525,133 @@
       "slug": "dracula_b",
       "image": "/collection/assets/candidate-9f1e931abce98a48b08fdefafbe10b6b284b6ec5c65973dabd29071c8700cb57.png",
       "supersededBy": "candidate-loved_zombies_authored_pilot_20260914-dracula_a-5adfbf82bd17735c"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-jessica_a-a8981e3fdfcc46a5",
+      "title": "Jessica Rabbit",
+      "kind": "candidate",
+      "imageHash": "a8981e3fdfcc46a59dfb53784712cf8f238384cbd236b9b7ea4ba23387c15cb0",
+      "description": "Exact loved Jessica Rabbit with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "jessica_a",
+      "image": "/collection/assets/candidate-a8981e3fdfcc46a59dfb53784712cf8f238384cbd236b9b7ea4ba23387c15cb0.png",
+      "supersededBy": "candidate-loved_zombies_round_05_20260914-jessica_b-c50c4fae8c7550ce"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-jessica_b-c50c4fae8c7550ce",
+      "title": "Jessica Rabbit",
+      "kind": "candidate",
+      "imageHash": "c50c4fae8c7550ce16e261ffbd66549bfc6b88ac03d80c89998cd70e25eec5e1",
+      "description": "Exact loved Jessica Rabbit with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "jessica_b",
+      "image": "/collection/assets/candidate-c50c4fae8c7550ce16e261ffbd66549bfc6b88ac03d80c89998cd70e25eec5e1.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-luffy_a-b19c46ba43db0811",
+      "title": "Monkey D. Luffy",
+      "kind": "candidate",
+      "imageHash": "b19c46ba43db0811e3625d88bf214ef1488822fec03655c2f12f396e3c6b6151",
+      "description": "Exact loved Monkey D. Luffy with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "luffy_a",
+      "image": "/collection/assets/candidate-b19c46ba43db0811e3625d88bf214ef1488822fec03655c2f12f396e3c6b6151.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-luffy_b-05da7d3b76d568d4",
+      "title": "Monkey D. Luffy",
+      "kind": "candidate",
+      "imageHash": "05da7d3b76d568d4eb863d132537ff67b4a2430d28cbce88e0fabb63bde4fe91",
+      "description": "Exact loved Monkey D. Luffy with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "luffy_b",
+      "image": "/collection/assets/candidate-05da7d3b76d568d4eb863d132537ff67b4a2430d28cbce88e0fabb63bde4fe91.png",
+      "supersededBy": "candidate-loved_zombies_round_05_20260914-luffy_a-b19c46ba43db0811"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-popeye_a-b5d8aab379affed4",
+      "title": "Popeye",
+      "kind": "candidate",
+      "imageHash": "b5d8aab379affed45202fe00bc2077201f32d114075fb5b713d6ef75181fd19e",
+      "description": "Exact loved Popeye with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "popeye_a",
+      "image": "/collection/assets/candidate-b5d8aab379affed45202fe00bc2077201f32d114075fb5b713d6ef75181fd19e.png",
+      "supersededBy": "candidate-loved_zombies_round_05_repairs_20260914-popeye_b-31166c8ddf21fb1f"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-popeye_b-83a8bc7118d3393a",
+      "title": "Popeye",
+      "kind": "candidate",
+      "imageHash": "83a8bc7118d3393a8941bf5d53c5fcd20435bb1badd28c7f7e51a00b9b00bda1",
+      "description": "Exact loved Popeye with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "popeye_b",
+      "image": "/collection/assets/candidate-83a8bc7118d3393a8941bf5d53c5fcd20435bb1badd28c7f7e51a00b9b00bda1.png",
+      "supersededBy": "candidate-loved_zombies_round_05_repairs_20260914-popeye_b-31166c8ddf21fb1f"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-ruth_a-02e59c7d2d0c9b24",
+      "title": "Ruth Bader Ginsburg",
+      "kind": "candidate",
+      "imageHash": "02e59c7d2d0c9b24de9ea0856d50caaf24fa5a58df991bdf5bec63b3ebafc1b6",
+      "description": "Exact loved Ruth Bader Ginsburg with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "ruth_a",
+      "image": "/collection/assets/candidate-02e59c7d2d0c9b24de9ea0856d50caaf24fa5a58df991bdf5bec63b3ebafc1b6.png",
+      "supersededBy": "candidate-loved_zombies_round_05_repairs_20260914-ruth_b-5d6331cf9d484803"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-ruth_b-49147af0731f934d",
+      "title": "Ruth Bader Ginsburg",
+      "kind": "candidate",
+      "imageHash": "49147af0731f934d7fb839e403d42f515364d8a93adf75f919b1050fa7a471cd",
+      "description": "Exact loved Ruth Bader Ginsburg with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "ruth_b",
+      "image": "/collection/assets/candidate-49147af0731f934d7fb839e403d42f515364d8a93adf75f919b1050fa7a471cd.png",
+      "supersededBy": "candidate-loved_zombies_round_05_repairs_20260914-ruth_b-5d6331cf9d484803"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-snoop_a-becd4e029d86c962",
+      "title": "Snoop Dogg",
+      "kind": "candidate",
+      "imageHash": "becd4e029d86c9624843535e5d9e8b22667900cbc995eb196cd6e311e7592e52",
+      "description": "Exact loved Snoop Dogg with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "snoop_a",
+      "image": "/collection/assets/candidate-becd4e029d86c9624843535e5d9e8b22667900cbc995eb196cd6e311e7592e52.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_20260914-snoop_b-534275b8d0732597",
+      "title": "Snoop Dogg",
+      "kind": "candidate",
+      "imageHash": "534275b8d073259770809df3ce5454cef328720a6225df3e3c8d08c23f0e3635",
+      "description": "Exact loved Snoop Dogg with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved.",
+      "batch": "loved_zombies_round_05_20260914",
+      "slug": "snoop_b",
+      "image": "/collection/assets/candidate-534275b8d073259770809df3ce5454cef328720a6225df3e3c8d08c23f0e3635.png",
+      "supersededBy": "candidate-loved_zombies_round_05_20260914-snoop_a-becd4e029d86c962"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_repairs_20260914-popeye_b-31166c8ddf21fb1f",
+      "title": "Popeye",
+      "kind": "candidate",
+      "imageHash": "31166c8ddf21fb1ffed1893849d924f89a57ef9dcdeca4c3b586d070e3b8d79a",
+      "description": "Exact loved Popeye with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved. Selective correction: close native head-transform scope; fit authored glasses to mutant eye centers for Ruth.",
+      "batch": "loved_zombies_round_05_repairs_20260914",
+      "slug": "popeye_b",
+      "image": "/collection/assets/candidate-31166c8ddf21fb1ffed1893849d924f89a57ef9dcdeca4c3b586d070e3b8d79a.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_05_repairs_20260914-ruth_b-5d6331cf9d484803",
+      "title": "Ruth Bader Ginsburg",
+      "kind": "candidate",
+      "imageHash": "5d6331cf9d4848039de247211668a0070335a2363fb4237285ebd15936c212ab",
+      "description": "Exact loved Ruth Bader Ginsburg with varied structural zombie eyes and jaws; original authored costume, pose, proportions, props and painted support preserved. Selective correction: close native head-transform scope; fit authored glasses to mutant eye centers for Ruth.",
+      "batch": "loved_zombies_round_05_repairs_20260914",
+      "slug": "ruth_b",
+      "image": "/collection/assets/candidate-5d6331cf9d4848039de247211668a0070335a2363fb4237285ebd15936c212ab.png"
     }
   ],
   "references": [
@@ -3245,6 +3372,33 @@
           {
             "candidateId": "candidate-loved_zombies_authored_pilot_20260914-dracula_a-5adfbf82bd17735c",
             "imageHash": "5adfbf82bd17735c7bc13b041c17026e8c0ee338e200e6c82d1f15bd9bec22f2"
+          }
+        ]
+      },
+      {
+        "id": "round-25",
+        "title": "Round 25 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T01:17:47.125475+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_05_20260914-jessica_b-c50c4fae8c7550ce",
+            "imageHash": "c50c4fae8c7550ce16e261ffbd66549bfc6b88ac03d80c89998cd70e25eec5e1"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_05_20260914-luffy_a-b19c46ba43db0811",
+            "imageHash": "b19c46ba43db0811e3625d88bf214ef1488822fec03655c2f12f396e3c6b6151"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_05_repairs_20260914-popeye_b-31166c8ddf21fb1f",
+            "imageHash": "31166c8ddf21fb1ffed1893849d924f89a57ef9dcdeca4c3b586d070e3b8d79a"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_05_repairs_20260914-ruth_b-5d6331cf9d484803",
+            "imageHash": "5d6331cf9d4848039de247211668a0070335a2363fb4237285ebd15936c212ab"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_05_20260914-snoop_a-becd4e029d86c962",
+            "imageHash": "becd4e029d86c9624843535e5d9e8b22667900cbc995eb196cd6e311e7592e52"
           }
         ]
       }

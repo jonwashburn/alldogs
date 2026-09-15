@@ -810,6 +810,141 @@
         "height": 2000,
         "sha256": "24ed2c3a241da8ae7da7cae9b52424734471b05c293383227b56ff509568e309"
       }
+    },
+    {
+      "parentId": "candidate-character_round_19_20260913-jessica-76137e7e6dbd2ef3",
+      "parentHash": "76137e7e6dbd2ef35bd816ab449cd63ef2fb6ef389d987121ad5233306782a2f",
+      "title": "Jessica Rabbit",
+      "zombieId": "candidate-loved_zombies_round_05_20260914-jessica_b-c50c4fae8c7550ce",
+      "imageHash": "c50c4fae8c7550ce16e261ffbd66549bfc6b88ac03d80c89998cd70e25eec5e1",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/aa0de3f9a7366bcc6b0d3a09c88768b7975187aebceedef1b0a5a702e9e874b5.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "aa0de3f9a7366bcc6b0d3a09c88768b7975187aebceedef1b0a5a702e9e874b5"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/20e59e6839849027b3637d59119122bf6c92c91c3fd75a0b9f73ee35bcad0bb3.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "20e59e6839849027b3637d59119122bf6c92c91c3fd75a0b9f73ee35bcad0bb3"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a59603ed6823b3347fd48baa35bfcc50c398ac4b93c29cf7a7e927cdd4402238.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "a59603ed6823b3347fd48baa35bfcc50c398ac4b93c29cf7a7e927cdd4402238"
+      }
+    },
+    {
+      "parentId": "candidate-character_round_19_20260913-luffy-6b947eb6850f19f2",
+      "parentHash": "6b947eb6850f19f2ae0c5adc5f9801ae5c6681f6bd18c1abd295e866e9d2fc5d",
+      "title": "Monkey D. Luffy",
+      "zombieId": "candidate-loved_zombies_round_05_20260914-luffy_a-b19c46ba43db0811",
+      "imageHash": "b19c46ba43db0811e3625d88bf214ef1488822fec03655c2f12f396e3c6b6151",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/6db1b58f20d8e1e9211f65b44d09d3f711fdad540171f6d9a7b4482bcd84a418.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "6db1b58f20d8e1e9211f65b44d09d3f711fdad540171f6d9a7b4482bcd84a418"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c5a365ebee41084930fc1d9c8d5702c06cb67c23c4b9aafa5075ce597ffd9985.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "c5a365ebee41084930fc1d9c8d5702c06cb67c23c4b9aafa5075ce597ffd9985"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/52b1f95e4d7a357f9c5aec0aa3d64738e320c160b36d6ec60c67b7384a351604.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "52b1f95e4d7a357f9c5aec0aa3d64738e320c160b36d6ec60c67b7384a351604"
+      }
+    },
+    {
+      "parentId": "candidate-character_round_19_20260913-popeye-0c8eee31f0ae9169",
+      "parentHash": "0c8eee31f0ae91697008e0696cf0ed83063898c5a1def7b47240ceb483d6247d",
+      "title": "Popeye",
+      "zombieId": "candidate-loved_zombies_round_05_repairs_20260914-popeye_b-31166c8ddf21fb1f",
+      "imageHash": "31166c8ddf21fb1ffed1893849d924f89a57ef9dcdeca4c3b586d070e3b8d79a",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ec489872d69d84d1c389f0c319a870a4aa15f6c8711a8f3d258b57039c3d6022.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "ec489872d69d84d1c389f0c319a870a4aa15f6c8711a8f3d258b57039c3d6022"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/0b209a458184c905ef28286c588b37a22fe88874a90d74d823d15f804d86901a.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "0b209a458184c905ef28286c588b37a22fe88874a90d74d823d15f804d86901a"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/ba5b7503cdb6df6d4c27b98836a27775f324626d6d54146920671bb38dfa4384.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "ba5b7503cdb6df6d4c27b98836a27775f324626d6d54146920671bb38dfa4384"
+      }
+    },
+    {
+      "parentId": "candidate-character_round_19_20260913-ruth-ea29254f239f7197",
+      "parentHash": "ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177",
+      "title": "Ruth Bader Ginsburg",
+      "zombieId": "candidate-loved_zombies_round_05_repairs_20260914-ruth_b-5d6331cf9d484803",
+      "imageHash": "5d6331cf9d4848039de247211668a0070335a2363fb4237285ebd15936c212ab",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/d0a8aa0c36b3ef06cd6c4e5cfbda7656b5e2461ee449269e580e7e0bd6fe00b1.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "d0a8aa0c36b3ef06cd6c4e5cfbda7656b5e2461ee449269e580e7e0bd6fe00b1"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/95a3de5465557102ee25d9f29bd0caeb71d48aa40a964160fed37a87f74a01ee.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "95a3de5465557102ee25d9f29bd0caeb71d48aa40a964160fed37a87f74a01ee"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/d75da816524712ec576b862a38c0b93528061748a894401501d0869fadf760d3.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "d75da816524712ec576b862a38c0b93528061748a894401501d0869fadf760d3"
+      }
+    },
+    {
+      "parentId": "candidate-character_round_19_20260913-snoop-a2bd9f26f1d883fe",
+      "parentHash": "a2bd9f26f1d883fe94442f4214c8987ae1e993ccfd97f30c5cf7fb1b0c68175b",
+      "title": "Snoop Dogg",
+      "zombieId": "candidate-loved_zombies_round_05_20260914-snoop_a-becd4e029d86c962",
+      "imageHash": "becd4e029d86c9624843535e5d9e8b22667900cbc995eb196cd6e311e7592e52",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f5dee054896a2e5060380a68f324c4f9e6059e40a41da179710442d408af2420.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "f5dee054896a2e5060380a68f324c4f9e6059e40a41da179710442d408af2420"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/26ad8cd3702a6e184b06a37f0d596695d64e824300ea55753633afeea2dffdb4.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "26ad8cd3702a6e184b06a37f0d596695d64e824300ea55753633afeea2dffdb4"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/1a2203d59561de9951d7c6eeca5ee2ce5db5dea1369ccb1f8129d6e522313ee4.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "1a2203d59561de9951d7c6eeca5ee2ce5db5dea1369ccb1f8129d6e522313ee4"
+      }
     }
   ]
 }
