@@ -3597,6 +3597,67 @@
       "batch": "angel_barack_c_20260915",
       "slug": "barack",
       "image": "/collection/assets/candidate-4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123.png"
+    },
+    {
+      "id": "candidate-character_round_34_20260915-devo-2bc39d154dd7cbf8",
+      "title": "Devo",
+      "kind": "candidate",
+      "imageHash": "2bc39d154dd7cbf88e043b326c7561c7547e32eded9a7804a12fff7b8f852c0f",
+      "description": "A compact mustard boiler-suit dog stands beneath a rust-red stepped energy dome. Short dark boots and a small native face interrupt the rigid hat and broad cloth; cool pale blue-green support keeps the muted warm silhouette distinct.",
+      "batch": "character_round_34_20260915",
+      "slug": "devo",
+      "image": "/collection/assets/candidate-2bc39d154dd7cbf88e043b326c7561c7547e32eded9a7804a12fff7b8f852c0f.png",
+      "supersededBy": "candidate-character_round_34_devo_b_20260915-devo-c34eca9fe470b1b8"
+    },
+    {
+      "id": "candidate-character_round_34_20260915-harpo-a2cc3f975383d862",
+      "title": "Harpo Marx",
+      "kind": "candidate",
+      "imageHash": "a2cc3f975383d86272026704c12a70621025f6207537e5c212dc14969f55501e",
+      "description": "A leaning silent-comedy dog in a loose pale overcoat, uneven blonde curls and a dented dark top hat. The battered crown counters the tilted head; ragged cloth hangs below the belly above staggered dark shoes on a dusty blue-gray support.",
+      "batch": "character_round_34_20260915",
+      "slug": "harpo",
+      "image": "/collection/assets/candidate-a2cc3f975383d86272026704c12a70621025f6207537e5c212dc14969f55501e.png"
+    },
+    {
+      "id": "candidate-character_round_34_20260915-bride-e05940f1e2f812dc",
+      "title": "Bride of Frankenstein",
+      "kind": "candidate",
+      "imageHash": "e05940f1e2f812dcc2577c1451f44537591ee323994ff8db840decba86b30e5a",
+      "description": "A long, still ivory-wrapped dog beneath a narrow black hair tower with two unequal chalk flashes; cool pale native face and small dark eyes against dusty dark plum.",
+      "batch": "character_round_34_20260915",
+      "slug": "bride",
+      "image": "/collection/assets/candidate-e05940f1e2f812dcc2577c1451f44537591ee323994ff8db840decba86b30e5a.png"
+    },
+    {
+      "id": "candidate-character_round_34_20260915-cyndi-2b12e4d558c9feb8",
+      "title": "Cyndi Lauper",
+      "kind": "candidate",
+      "imageHash": "2b12e4d558c9feb8db3df3862ad63371d5a5689e2bb6f27126d1ff79f8f168e5",
+      "description": "A walking dog with an uneven coral-orange hair upsweep, a short opposite side and an abbreviated side lock, broad blue-violet coat panels over a black vest and one coral foreleg against warm quiet cotton.",
+      "batch": "character_round_34_20260915",
+      "slug": "cyndi",
+      "image": "/collection/assets/candidate-2b12e4d558c9feb8db3df3862ad63371d5a5689e2bb6f27126d1ff79f8f168e5.png"
+    },
+    {
+      "id": "candidate-character_round_34_20260915-rambo-790b2e801b032d4d",
+      "title": "Rambo",
+      "kind": "candidate",
+      "imageHash": "790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b",
+      "description": "A low broad brown dog, ragged dark hair and a red headband whose two ends trail from one temple. A dark diagonal bandolier crosses the exposed chest; muted olive cloth only on the hindquarters and short boots retain canine legs. Cool blue-grey cotton sets off skin and red cloth.",
+      "batch": "character_round_34_20260915",
+      "slug": "rambo",
+      "image": "/collection/assets/candidate-790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b.png"
+    },
+    {
+      "id": "candidate-character_round_34_devo_b_20260915-devo-c34eca9fe470b1b8",
+      "title": "Devo",
+      "kind": "candidate",
+      "imageHash": "c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06",
+      "description": "A compact mustard boiler-suit dog beneath a rust-red energy dome built from four connected stepped tiers. Short dark boots and the small native face remain against cool pale blue-green cotton. The earlier dome painting is preserved separately.",
+      "batch": "character_round_34_devo_b_20260915",
+      "slug": "devo",
+      "image": "/collection/assets/candidate-c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06.png"
     }
   ],
   "references": [
@@ -4560,6 +4621,33 @@
           {
             "candidateId": "candidate-character_round_33_20260915-dame_edna-fcecff696ef374cf",
             "imageHash": "fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8"
+          }
+        ]
+      },
+      {
+        "id": "round-34",
+        "title": "Round 34",
+        "frozenAt": "2026-09-15T14:20:09.897319+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_34_devo_b_20260915-devo-c34eca9fe470b1b8",
+            "imageHash": "c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06"
+          },
+          {
+            "candidateId": "candidate-character_round_34_20260915-harpo-a2cc3f975383d862",
+            "imageHash": "a2cc3f975383d86272026704c12a70621025f6207537e5c212dc14969f55501e"
+          },
+          {
+            "candidateId": "candidate-character_round_34_20260915-bride-e05940f1e2f812dc",
+            "imageHash": "e05940f1e2f812dcc2577c1451f44537591ee323994ff8db840decba86b30e5a"
+          },
+          {
+            "candidateId": "candidate-character_round_34_20260915-cyndi-2b12e4d558c9feb8",
+            "imageHash": "2b12e4d558c9feb8db3df3862ad63371d5a5689e2bb6f27126d1ff79f8f168e5"
+          },
+          {
+            "candidateId": "candidate-character_round_34_20260915-rambo-790b2e801b032d4d",
+            "imageHash": "790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b"
           }
         ]
       }

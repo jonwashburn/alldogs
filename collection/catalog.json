@@ -43377,6 +43377,594 @@
           "sha256": "172293015591a9839eaed1004ef77a04cb56b1afd8211d69f7ee79a3e1fd0b08"
         }
       }
+    },
+    {
+      "id": "candidate-character_round_34_20260915-devo-2bc39d154dd7cbf8",
+      "dogId": "design-character_round_34_20260915-devo",
+      "title": "Devo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-2bc39d154dd7cbf88e043b326c7561c7547e32eded9a7804a12fff7b8f852c0f.png",
+      "imageHash": "2bc39d154dd7cbf88e043b326c7561c7547e32eded9a7804a12fff7b8f852c0f",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_34_20260915/characters/devo.js",
+      "sourceHash": "fef1f794311095ee0580a623e4c84d8eff8c0127c79f3277ca129bfbcf87e675",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_20260915/characters/devo.js",
+          "sha256": "fef1f794311095ee0580a623e4c84d8eff8c0127c79f3277ca129bfbcf87e675"
+        }
+      ],
+      "description": "A compact mustard boiler-suit dog stands beneath a rust-red stepped energy dome. Short dark boots and a small native face interrupt the rigid hat and broad cloth; cool pale blue-green support keeps the muted warm silhouette distinct.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_20260915",
+      "slug": "devo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_20260915/out/devo.json",
+          "sha256": "57bb0ca1c6ca655734609ed554ac80e7575683c4e5cdf067a43018b9830d2bfd"
+        },
+        "cast": {
+          "path": "../design/character_round_34_20260915/cast.json",
+          "sha256": "8ccf5c70b2d78d1981c1f8b90f1ebeb58abff49d341d6ad820738b49a34fff2b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_20260915/out/devo_wide_4000.png",
+          "sha256": "ce1de5fb24003ad550b4428eacc1e7b3bbad978c6e09ae923ac901bb0188801a",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_20260915/out/devo_square_2000.png",
+          "sha256": "593acc24cff84f4be64097c937cf1b4f277fdf5070312a1fd861966e507981e1",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_20260915/work/devo/wide.json",
+          "sha256": "34a2d2bd69d91ba49e96057c2e53dee18003e776a8702c8e969ecead5923e71e"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_round_34_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_20260915/work/devo/light_contact.json",
+          "sha256": "151e45ce61b11260140685c9a53a44fdd36f2d12dac64f6d1b04cbfe4e9a83d7"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_34_20260915-harpo-a2cc3f975383d862",
+      "dogId": "design-character_round_34_20260915-harpo",
+      "title": "Harpo Marx",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a2cc3f975383d86272026704c12a70621025f6207537e5c212dc14969f55501e.png",
+      "imageHash": "a2cc3f975383d86272026704c12a70621025f6207537e5c212dc14969f55501e",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_34_20260915/characters/harpo.js",
+      "sourceHash": "0f279f83f9c571a846e7656bd8c33809a586cafa715284198d8c2b22fae5c152",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_20260915/characters/harpo.js",
+          "sha256": "0f279f83f9c571a846e7656bd8c33809a586cafa715284198d8c2b22fae5c152"
+        }
+      ],
+      "description": "A leaning silent-comedy dog in a loose pale overcoat, uneven blonde curls and a dented dark top hat. The battered crown counters the tilted head; ragged cloth hangs below the belly above staggered dark shoes on a dusty blue-gray support.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_20260915",
+      "slug": "harpo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_20260915/out/harpo.json",
+          "sha256": "b8a7628bb89efe1d76ab6234f947b129e3c0fecab99d6ad9f918e0143808e8a6"
+        },
+        "cast": {
+          "path": "../design/character_round_34_20260915/cast.json",
+          "sha256": "8ccf5c70b2d78d1981c1f8b90f1ebeb58abff49d341d6ad820738b49a34fff2b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_20260915/out/harpo_wide_4000.png",
+          "sha256": "1fcdd63287f674fdeaac0c3e24af6737e2f3891178d8bd91aa890c013fda38aa",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_20260915/out/harpo_square_2000.png",
+          "sha256": "a6dee79283937c0c8a093d27443a8fb2837a63ba9d969bfed5bcfe9acb0c2ae9",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_20260915/work/harpo/wide.json",
+          "sha256": "1009d1196ef26679e0a6bf5b85336751d6ad7df62561f9076a48d46720be6efb"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_round_34_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_20260915/work/harpo/light_contact.json",
+          "sha256": "4c78136443b007d8a48d012b850b8f77e22604574aafa33dc450681cbafa38e8"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_34_20260915-bride-e05940f1e2f812dc",
+      "dogId": "design-character_round_34_20260915-bride",
+      "title": "Bride of Frankenstein",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e05940f1e2f812dcc2577c1451f44537591ee323994ff8db840decba86b30e5a.png",
+      "imageHash": "e05940f1e2f812dcc2577c1451f44537591ee323994ff8db840decba86b30e5a",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_34_20260915/characters/bride.js",
+      "sourceHash": "ef77db7631a7ecbc770b58f86352b79b3545d44092ab77aa8d93bac2d1dbfaa7",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_20260915/characters/bride.js",
+          "sha256": "ef77db7631a7ecbc770b58f86352b79b3545d44092ab77aa8d93bac2d1dbfaa7"
+        }
+      ],
+      "description": "A long, still ivory-wrapped dog beneath a narrow black hair tower with two unequal chalk flashes; cool pale native face and small dark eyes against dusty dark plum.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_20260915",
+      "slug": "bride",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_20260915/out/bride.json",
+          "sha256": "1c8f472f5fcde75092c9437cf1346c84d9748a89a76f11101f84618635fe8c09"
+        },
+        "cast": {
+          "path": "../design/character_round_34_20260915/cast.json",
+          "sha256": "8ccf5c70b2d78d1981c1f8b90f1ebeb58abff49d341d6ad820738b49a34fff2b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_20260915/out/bride_wide_4000.png",
+          "sha256": "adb1f0d78bfd0f3c017e7ef095752f9bf84844967634402d9ed36bf915b66fe7",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_20260915/out/bride_square_2000.png",
+          "sha256": "0df7b715ecf96d6640d0551027268643d87c2829b7980b7ebbad6484ebec8fb6",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_20260915/work/bride/wide.json",
+          "sha256": "eced63e032010203563c89ad4d38bff6b5b3befe2b3fb8d56ee13e225da9c2e5"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_round_34_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_20260915/work/bride/light_contact.json",
+          "sha256": "4049240e709e1c1b0b80056b73471d9491b85e425bc00f4ddd0ad63570ee0b3e"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_34_20260915-cyndi-2b12e4d558c9feb8",
+      "dogId": "design-character_round_34_20260915-cyndi",
+      "title": "Cyndi Lauper",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-2b12e4d558c9feb8db3df3862ad63371d5a5689e2bb6f27126d1ff79f8f168e5.png",
+      "imageHash": "2b12e4d558c9feb8db3df3862ad63371d5a5689e2bb6f27126d1ff79f8f168e5",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_34_20260915/characters/cyndi.js",
+      "sourceHash": "3f42bb974510283a144df417d2bb389547db0221c3b1c83e4a27332307b9f674",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_20260915/characters/cyndi.js",
+          "sha256": "3f42bb974510283a144df417d2bb389547db0221c3b1c83e4a27332307b9f674"
+        }
+      ],
+      "description": "A walking dog with an uneven coral-orange hair upsweep, a short opposite side and an abbreviated side lock, broad blue-violet coat panels over a black vest and one coral foreleg against warm quiet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_20260915",
+      "slug": "cyndi",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_20260915/out/cyndi.json",
+          "sha256": "bb34be9a44eb004ee5ecbc0e5a771f2c5dd41fc6da37052e007999ef0c20895a"
+        },
+        "cast": {
+          "path": "../design/character_round_34_20260915/cast.json",
+          "sha256": "8ccf5c70b2d78d1981c1f8b90f1ebeb58abff49d341d6ad820738b49a34fff2b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_20260915/out/cyndi_wide_4000.png",
+          "sha256": "0779b9c4bda565e00628400a46eab706827495fa27782ce740e2ba8c1da34b0a",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_20260915/out/cyndi_square_2000.png",
+          "sha256": "1ffaf74d7f3e7d871d9ba761b7581acd1b370368a05e30d13d38cefb6f98f5d4",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_20260915/work/cyndi/wide.json",
+          "sha256": "5ea55fd11e2a14300ea48cf91f48b2bfe3994c6641716688a96be5c254de412b"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_round_34_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_20260915/work/cyndi/light_contact.json",
+          "sha256": "f139c1f5fa790782e004f15292f000c6c6174d4f6987e0102a05435b7703cfb2"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_34_20260915-rambo-790b2e801b032d4d",
+      "dogId": "design-character_round_34_20260915-rambo",
+      "title": "Rambo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b.png",
+      "imageHash": "790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_34_20260915/characters/rambo.js",
+      "sourceHash": "2a117ce1d58df44c324808169091b46d322ec7c0449f925cb69570c96ab67340",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_20260915/characters/rambo.js",
+          "sha256": "2a117ce1d58df44c324808169091b46d322ec7c0449f925cb69570c96ab67340"
+        }
+      ],
+      "description": "A low broad brown dog, ragged dark hair and a red headband whose two ends trail from one temple. A dark diagonal bandolier crosses the exposed chest; muted olive cloth only on the hindquarters and short boots retain canine legs. Cool blue-grey cotton sets off skin and red cloth.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_20260915",
+      "slug": "rambo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_20260915/out/rambo.json",
+          "sha256": "60807cbfa01245020ec47fdd72a0db2f195649459c946544838bd0fdbc1f5065"
+        },
+        "cast": {
+          "path": "../design/character_round_34_20260915/cast.json",
+          "sha256": "8ccf5c70b2d78d1981c1f8b90f1ebeb58abff49d341d6ad820738b49a34fff2b"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_20260915/out/rambo_wide_4000.png",
+          "sha256": "ad0f57b4fe2362ebd3d742dc8c7a4cb4cbf101a5795aacca15be2159f2e0f3a4",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_20260915/out/rambo_square_2000.png",
+          "sha256": "35d5ce566e6983b7da500a0e0bb6a1c885f065881d7d546f8027d27e8293e19c",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_20260915/work/rambo/wide.json",
+          "sha256": "df72ba43eb7fe09e886ea45b432a40a691e418c67172c0ed229da3a98754aab4"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_round_34_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_20260915/work/rambo/light_contact.json",
+          "sha256": "9d74f1d3f3145c3337b511aecd52ff33e7e1b00a7a57560f78f88707d255f5eb"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_34_devo_b_20260915-devo-c34eca9fe470b1b8",
+      "dogId": "design-character_round_34_devo_b_20260915-devo",
+      "title": "Devo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06.png",
+      "imageHash": "c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_34_devo_b_20260915/characters/devo.js",
+      "sourceHash": "97e0ce744a66527d8d2a2b23aaa33b3a42a467a34164ee9d7f6a70eaef56ce51",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_34_devo_b_20260915/characters/devo.js",
+          "sha256": "97e0ce744a66527d8d2a2b23aaa33b3a42a467a34164ee9d7f6a70eaef56ce51"
+        }
+      ],
+      "description": "A compact mustard boiler-suit dog beneath a rust-red energy dome built from four connected stepped tiers. Short dark boots and the small native face remain against cool pale blue-green cotton. The earlier dome painting is preserved separately.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_34_devo_b_20260915",
+      "slug": "devo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_34_devo_b_20260915/out/devo.json",
+          "sha256": "c2f19f721002beb0cdfe17b0d6e7680baf6f0cd42d98c702d765f6633ab2b9cc"
+        },
+        "cast": {
+          "path": "../design/character_round_34_devo_b_20260915/cast.json",
+          "sha256": "a50d6a5de9db39c622cc26148a1bf40440a013000d0feb9611171b23f762217e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_34_devo_b_20260915/out/devo_wide_4000.png",
+          "sha256": "1cb21fd691143a53133adfafc8fefdfd25917aacca9244449ecce727ee17ca9d",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_34_devo_b_20260915/out/devo_square_2000.png",
+          "sha256": "b2d2346174a687fc6744b6357999a2bf888b1a672ada1352c72d1f99d66665b3",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_34_devo_b_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_34_devo_b_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_34_devo_b_20260915/work/devo/wide.json",
+          "sha256": "10459c42db0d285d3be8f457f3b89e0b6fc72d9f23d98551083004b5918da4f0"
+        },
+        "wrapper": {
+          "path": "../design/character_round_34_devo_b_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_34_devo_b_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_34_devo_b_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_34_devo_b_20260915/fields.json",
+          "sha256": "ba65b4fda226d179ce3be9e14d34909dcadaa98e091e0f7ec8c624a164562b77"
+        },
+        "supports": {
+          "path": "../design/character_round_34_devo_b_20260915/supports.json",
+          "sha256": "0bee05d70721b31b92e59dbfe35e19af53a81f830a947b1bdebe4e298dc16972"
+        },
+        "lightContact": {
+          "path": "../design/character_round_34_devo_b_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_34_devo_b_20260915/work/devo/light_contact.json",
+          "sha256": "7f6ae1c300b8b8469f306de56aec5b5a432fc65f015592c3c23f1d341760aae6"
+        }
+      }
     }
   ],
   "rounds": [
