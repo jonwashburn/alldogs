@@ -2812,6 +2812,111 @@
       "batch": "loved_zombies_round_06_repairs_20260914",
       "slug": "apollo_a",
       "image": "/collection/assets/candidate-0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hera_a-2f51609862351d9b",
+      "title": "Hera, Every Eye",
+      "kind": "candidate",
+      "imageHash": "2f51609862351d9bf8540ac0fb5b2f12adb90b2454ee87e1f3ce1f4bd4f61c43",
+      "description": "Exact loved Hera, Every Eye with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hera_a",
+      "image": "/collection/assets/candidate-2f51609862351d9bf8540ac0fb5b2f12adb90b2454ee87e1f3ce1f4bd4f61c43.png",
+      "supersededBy": "candidate-loved_zombies_round_07_20260914-hera_b-c28562f053ee9296"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hera_b-c28562f053ee9296",
+      "title": "Hera, Every Eye",
+      "kind": "candidate",
+      "imageHash": "c28562f053ee9296cd6f0cf0e659ed3474eae8d7c876c33c195b70879709ae0b",
+      "description": "Exact loved Hera, Every Eye with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hera_b",
+      "image": "/collection/assets/candidate-c28562f053ee9296cd6f0cf0e659ed3474eae8d7c876c33c195b70879709ae0b.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hestia_a-a64d791ee5487e0d",
+      "title": "Hestia, Come Inside",
+      "kind": "candidate",
+      "imageHash": "a64d791ee5487e0dcb03ae206a7da468b9ab615991a6c481fce6306d0198ec5a",
+      "description": "Exact loved Hestia, Come Inside with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hestia_a",
+      "image": "/collection/assets/candidate-a64d791ee5487e0dcb03ae206a7da468b9ab615991a6c481fce6306d0198ec5a.png",
+      "supersededBy": "candidate-loved_zombies_round_07_20260914-hestia_b-53e4569fce6b708f"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hestia_b-53e4569fce6b708f",
+      "title": "Hestia, Come Inside",
+      "kind": "candidate",
+      "imageHash": "53e4569fce6b708f99e20db90b011616081c2880f115d0875151d00b792dacf5",
+      "description": "Exact loved Hestia, Come Inside with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hestia_b",
+      "image": "/collection/assets/candidate-53e4569fce6b708f99e20db90b011616081c2880f115d0875151d00b792dacf5.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-aphrodite_a-e4ab03cde93aa3d1",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "kind": "candidate",
+      "imageHash": "e4ab03cde93aa3d178fe1f9ae836090902354b4b9a7b4fb634a200ae797fc3e7",
+      "description": "Exact loved Aphrodite, The Tide Brings Roses with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "aphrodite_a",
+      "image": "/collection/assets/candidate-e4ab03cde93aa3d178fe1f9ae836090902354b4b9a7b4fb634a200ae797fc3e7.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-aphrodite_b-8c6d050dc13e2418",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "kind": "candidate",
+      "imageHash": "8c6d050dc13e24180a3d313f47270a697dc4936accbc8001865a475049875f97",
+      "description": "Exact loved Aphrodite, The Tide Brings Roses with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "aphrodite_b",
+      "image": "/collection/assets/candidate-8c6d050dc13e24180a3d313f47270a697dc4936accbc8001865a475049875f97.png",
+      "supersededBy": "candidate-loved_zombies_round_07_20260914-aphrodite_a-e4ab03cde93aa3d1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-dionysus_a-1975d9992b6085f5",
+      "title": "Dionysus, The Party Is Still Here",
+      "kind": "candidate",
+      "imageHash": "1975d9992b6085f5000e1ebe9e1ec609a0b370f4659578d51b56270e57e2778a",
+      "description": "Exact loved Dionysus, The Party Is Still Here with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "dionysus_a",
+      "image": "/collection/assets/candidate-1975d9992b6085f5000e1ebe9e1ec609a0b370f4659578d51b56270e57e2778a.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-dionysus_b-c8a08e17ca0c1ab7",
+      "title": "Dionysus, The Party Is Still Here",
+      "kind": "candidate",
+      "imageHash": "c8a08e17ca0c1ab748e7bd38db4610063801743d208d94511745cd6c55a5efd0",
+      "description": "Exact loved Dionysus, The Party Is Still Here with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "dionysus_b",
+      "image": "/collection/assets/candidate-c8a08e17ca0c1ab748e7bd38db4610063801743d208d94511745cd6c55a5efd0.png",
+      "supersededBy": "candidate-loved_zombies_round_07_20260914-dionysus_a-1975d9992b6085f5"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hephaestus_a-e36e6f6f99b04faa",
+      "title": "Hephaestus, One More Spark",
+      "kind": "candidate",
+      "imageHash": "e36e6f6f99b04faa1068eb9a6c6f7a456053b530f6b97d32581d795a59d275d3",
+      "description": "Exact loved Hephaestus, One More Spark with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hephaestus_a",
+      "image": "/collection/assets/candidate-e36e6f6f99b04faa1068eb9a6c6f7a456053b530f6b97d32581d795a59d275d3.png",
+      "supersededBy": "candidate-loved_zombies_round_07_20260914-hephaestus_b-3a46c0aa0e5412bc"
+    },
+    {
+      "id": "candidate-loved_zombies_round_07_20260914-hephaestus_b-3a46c0aa0e5412bc",
+      "title": "Hephaestus, One More Spark",
+      "kind": "candidate",
+      "imageHash": "3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263",
+      "description": "Exact loved Hephaestus, One More Spark with varied structural zombie eyes and jaws; original authored construction and support preserved.",
+      "batch": "loved_zombies_round_07_20260914",
+      "slug": "hephaestus_b",
+      "image": "/collection/assets/candidate-3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263.png"
     }
   ],
   "references": [
@@ -3586,6 +3691,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_06_repairs_20260914-apollo_a-0f3b13100434b960",
             "imageHash": "0f3b13100434b960861db59c732b07368f417a867124b85c0c753802f80f7764"
+          }
+        ]
+      },
+      {
+        "id": "round-27",
+        "title": "Round 27 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T02:41:39.957567+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_07_20260914-hera_b-c28562f053ee9296",
+            "imageHash": "c28562f053ee9296cd6f0cf0e659ed3474eae8d7c876c33c195b70879709ae0b"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_07_20260914-hestia_b-53e4569fce6b708f",
+            "imageHash": "53e4569fce6b708f99e20db90b011616081c2880f115d0875151d00b792dacf5"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_07_20260914-aphrodite_a-e4ab03cde93aa3d1",
+            "imageHash": "e4ab03cde93aa3d178fe1f9ae836090902354b4b9a7b4fb634a200ae797fc3e7"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_07_20260914-dionysus_a-1975d9992b6085f5",
+            "imageHash": "1975d9992b6085f5000e1ebe9e1ec609a0b370f4659578d51b56270e57e2778a"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_07_20260914-hephaestus_b-3a46c0aa0e5412bc",
+            "imageHash": "3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263"
           }
         ]
       }

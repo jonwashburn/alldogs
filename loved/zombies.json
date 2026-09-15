@@ -1080,6 +1080,141 @@
         "height": 2000,
         "sha256": "fe30f6f36b3471a3518fd134e362af453da2bcad60ce985ed7c9a0bd5a421611"
       }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-hera-3571150f54a53e3c",
+      "parentHash": "3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e",
+      "title": "Hera, Every Eye",
+      "zombieId": "candidate-loved_zombies_round_07_20260914-hera_b-c28562f053ee9296",
+      "imageHash": "c28562f053ee9296cd6f0cf0e659ed3474eae8d7c876c33c195b70879709ae0b",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/26dc3427d2a0e8ebe372d726044f458a2bde445a377be2b5256dc8beb55d8164.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "26dc3427d2a0e8ebe372d726044f458a2bde445a377be2b5256dc8beb55d8164"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f3fdbaaa4490bf9d2f9b1b9551cb41a57c2ce48fcc0aad733473f1bbadd1b969.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "f3fdbaaa4490bf9d2f9b1b9551cb41a57c2ce48fcc0aad733473f1bbadd1b969"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/8a0581838878726e4a035f8f41ff3db900c54b1cf224d1b11d7f7a1dd6fc5dc5.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "8a0581838878726e4a035f8f41ff3db900c54b1cf224d1b11d7f7a1dd6fc5dc5"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-hestia-93363e971955d9c8",
+      "parentHash": "93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83",
+      "title": "Hestia, Come Inside",
+      "zombieId": "candidate-loved_zombies_round_07_20260914-hestia_b-53e4569fce6b708f",
+      "imageHash": "53e4569fce6b708f99e20db90b011616081c2880f115d0875151d00b792dacf5",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/8898efbe078a6782a9b67b809d77d6273edc509aedcedf60e3609b19e8c66195.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "8898efbe078a6782a9b67b809d77d6273edc509aedcedf60e3609b19e8c66195"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/06eea622fec3d46d603384f70013be46113cd3a0a199b171403333ed0b922691.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "06eea622fec3d46d603384f70013be46113cd3a0a199b171403333ed0b922691"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f376b9c12a76a15eea01baff4657fce86a71e629c91ddc0e8b8ba529ba08282b.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "f376b9c12a76a15eea01baff4657fce86a71e629c91ddc0e8b8ba529ba08282b"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-aphrodite-b05a96bcd23849d9",
+      "parentHash": "b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "zombieId": "candidate-loved_zombies_round_07_20260914-aphrodite_a-e4ab03cde93aa3d1",
+      "imageHash": "e4ab03cde93aa3d178fe1f9ae836090902354b4b9a7b4fb634a200ae797fc3e7",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/687226b266a0bd35c8e165a54d85e89a64bdef012ac617a1732a2552f8611cee.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "687226b266a0bd35c8e165a54d85e89a64bdef012ac617a1732a2552f8611cee"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/dd3b582c9ed60c1cd424d87b65429381b2c41d530a701dddb5699d4140124761.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "dd3b582c9ed60c1cd424d87b65429381b2c41d530a701dddb5699d4140124761"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/72dadef43be8e6e1bd3fe000688ab8537f96ac11dc7e23949eded8aaff5e89b6.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "72dadef43be8e6e1bd3fe000688ab8537f96ac11dc7e23949eded8aaff5e89b6"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-dionysus-4bbcd2786bbcc979",
+      "parentHash": "4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229",
+      "title": "Dionysus, The Party Is Still Here",
+      "zombieId": "candidate-loved_zombies_round_07_20260914-dionysus_a-1975d9992b6085f5",
+      "imageHash": "1975d9992b6085f5000e1ebe9e1ec609a0b370f4659578d51b56270e57e2778a",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/0f70c4cea5779ca53006f53aab43a193b3212386960065adaa52b1739cea446d.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "0f70c4cea5779ca53006f53aab43a193b3212386960065adaa52b1739cea446d"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/264de80e1a669b263c41f45586dcac5f44bbb930bfa414de8ea2d5c2d98983a1.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "264de80e1a669b263c41f45586dcac5f44bbb930bfa414de8ea2d5c2d98983a1"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/7d306adad6ea998db4924f6331e4974de32960c1ccc4ac5cd913067ddb702dfa.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "7d306adad6ea998db4924f6331e4974de32960c1ccc4ac5cd913067ddb702dfa"
+      }
+    },
+    {
+      "parentId": "candidate-greek_pantheon_20260912-hephaestus-f2061d10f1b55ee0",
+      "parentHash": "f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c",
+      "title": "Hephaestus, One More Spark",
+      "zombieId": "candidate-loved_zombies_round_07_20260914-hephaestus_b-3a46c0aa0e5412bc",
+      "imageHash": "3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a4a7a2714772c787f62a48f5b0ad7022271b041a8d6a73434166d9dc0235f5cb.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "a4a7a2714772c787f62a48f5b0ad7022271b041a8d6a73434166d9dc0235f5cb"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/40e7a0e2f9671830f1de86e803861948e5a60a8e92c891befbd077f5d4fdb6ed.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "40e7a0e2f9671830f1de86e803861948e5a60a8e92c891befbd077f5d4fdb6ed"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/88895d1250eca9412cab6fd31233473999d86971e282caa7797581f472cc4c01.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "88895d1250eca9412cab6fd31233473999d86971e282caa7797581f472cc4c01"
+      }
     }
   ]
 }
