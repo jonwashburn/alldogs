@@ -1350,6 +1350,141 @@
         "height": 2000,
         "sha256": "9cd040a45db9071d6d2bff4b93451789c3662c4fd97fe799e0572faae9f3ddaa"
       }
+    },
+    {
+      "parentId": "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51",
+      "parentHash": "090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339",
+      "title": "The River Bridge",
+      "zombieId": "candidate-loved_zombies_round_09_20260914-river_bridge_b-0bb49d342c89d797",
+      "imageHash": "0bb49d342c89d79717421c11ec00144ca39bf5be569e1c6cff1efb53eebc96a0",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a0e5919321c2594dc50f32fa9534faaa5b6ee472302d40c6446174b7e90f07b3.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "a0e5919321c2594dc50f32fa9534faaa5b6ee472302d40c6446174b7e90f07b3"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/da8dc6ad047ac1a7c21f2990f384426267b65bb1754842e4c8dc5c3831fd1c29.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "da8dc6ad047ac1a7c21f2990f384426267b65bb1754842e4c8dc5c3831fd1c29"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/6588dc18274e7c45940d545100c72644d8c45c2fbd9a9a08dd2f40158c45424e.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "6588dc18274e7c45940d545100c72644d8c45c2fbd9a9a08dd2f40158c45424e"
+      }
+    },
+    {
+      "parentId": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
+      "parentHash": "8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824",
+      "title": "The Star Catcher",
+      "zombieId": "candidate-loved_zombies_round_09_20260914-star_catcher_a-b8142b7b3925b039",
+      "imageHash": "b8142b7b3925b03966b2345a555f2e88d09a5ff632e040786fa07efd298b1157",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c457f33f039b3b4bdd1695ab04b49159978d51647ec1326e3517d2946affaa8f.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "c457f33f039b3b4bdd1695ab04b49159978d51647ec1326e3517d2946affaa8f"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/61336a5bc58cb77170ba1978abd439b682f19649e191979d62046312fc0b7e2d.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "61336a5bc58cb77170ba1978abd439b682f19649e191979d62046312fc0b7e2d"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/33bb92f075d74e0003d05b4188f986116c077eec0114a99dba1c449fc732cf8c.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "33bb92f075d74e0003d05b4188f986116c077eec0114a99dba1c449fc732cf8c"
+      }
+    },
+    {
+      "parentId": "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f",
+      "parentHash": "9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd",
+      "title": "Ash Runner",
+      "zombieId": "candidate-loved_zombies_round_09_20260914-ash_runner_b-3252737202c72ab1",
+      "imageHash": "3252737202c72ab1a369cdbca25d72e19c94c6c36e99d6b8efb726bd9f27b7f8",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/46051e6c2c2669cde444123c0c65e48b5abd51ea2eaa8e58af8bccc50a295ccc.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "46051e6c2c2669cde444123c0c65e48b5abd51ea2eaa8e58af8bccc50a295ccc"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/71fd5873eab853d29d2e84864303496a486f782e9d1004845331e40de6b92b3b.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "71fd5873eab853d29d2e84864303496a486f782e9d1004845331e40de6b92b3b"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/51306b1ab14ac887e20f249af6cb782c3447c1e55973cfd1878c0ad1b12327cd.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "51306b1ab14ac887e20f249af6cb782c3447c1e55973cfd1878c0ad1b12327cd"
+      }
+    },
+    {
+      "parentId": "candidate-hero_presence_round_06_20260912-afterburn-4310af1f34aad70d",
+      "parentHash": "4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97",
+      "title": "Afterburn",
+      "zombieId": "candidate-loved_zombies_round_09_20260914-afterburn_b-3052315904bc9ae3",
+      "imageHash": "3052315904bc9ae327dc0aa77270a875a2806c046ae9bdf4f620e6b1564ccba7",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/62326d8d5b3190912cb92e4f3a9662866a8beecf1f56e76aa189ab704b4d0139.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "62326d8d5b3190912cb92e4f3a9662866a8beecf1f56e76aa189ab704b4d0139"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/b5a62fc17a7d551349e7108dc00df9135c039e5f5f5c2b3233cc8fc66f72cb62.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "b5a62fc17a7d551349e7108dc00df9135c039e5f5f5c2b3233cc8fc66f72cb62"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/20960d901b1e5902185e5bb20282d55b0f876a8f15f98f58d04bb7c41e75633e.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "20960d901b1e5902185e5bb20282d55b0f876a8f15f98f58d04bb7c41e75633e"
+      }
+    },
+    {
+      "parentId": "candidate-hero_presence_round_06_20260912-tideheart-b41f5264524433ec",
+      "parentHash": "b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3",
+      "title": "Tideheart",
+      "zombieId": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045",
+      "imageHash": "9111f5d1e55e3045ffe5496aae646957ea69e30b31af101d6c6d465c209165af",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/2787a4b4dd5f844039c6e67b70cfd12ecd195644c469799b829fafb9c966883b.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "2787a4b4dd5f844039c6e67b70cfd12ecd195644c469799b829fafb9c966883b"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c3f36e3376ce80afeee7b75edb3bc37dc78098929400769d9876a9145e1f9ca4.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "c3f36e3376ce80afeee7b75edb3bc37dc78098929400769d9876a9145e1f9ca4"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/a492ffc468971d97b1fda45cd5c18375d2fc77e8b9d2f1ce9283f6fae15e419e.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "a492ffc468971d97b1fda45cd5c18375d2fc77e8b9d2f1ce9283f6fae15e419e"
+      }
     }
   ]
 }

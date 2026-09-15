@@ -3022,6 +3022,111 @@
       "slug": "undertow_b",
       "image": "/collection/assets/candidate-e29048eb2d3b32532ee219c01b5b0f06c85706390a6d71eb7085da1dc55fe62f.png",
       "supersededBy": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-river_bridge_a-407ac9945fbb0e7c",
+      "title": "The River Bridge",
+      "kind": "candidate",
+      "imageHash": "407ac9945fbb0e7c611bbc73baaa0641e7b2e77848bc25d22cd7b49a7a01285d",
+      "description": "Exact loved The River Bridge with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "river_bridge_a",
+      "image": "/collection/assets/candidate-407ac9945fbb0e7c611bbc73baaa0641e7b2e77848bc25d22cd7b49a7a01285d.png",
+      "supersededBy": "candidate-loved_zombies_round_09_20260914-river_bridge_b-0bb49d342c89d797"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-river_bridge_b-0bb49d342c89d797",
+      "title": "The River Bridge",
+      "kind": "candidate",
+      "imageHash": "0bb49d342c89d79717421c11ec00144ca39bf5be569e1c6cff1efb53eebc96a0",
+      "description": "Exact loved The River Bridge with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "river_bridge_b",
+      "image": "/collection/assets/candidate-0bb49d342c89d79717421c11ec00144ca39bf5be569e1c6cff1efb53eebc96a0.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-star_catcher_a-b8142b7b3925b039",
+      "title": "The Star Catcher",
+      "kind": "candidate",
+      "imageHash": "b8142b7b3925b03966b2345a555f2e88d09a5ff632e040786fa07efd298b1157",
+      "description": "Exact loved The Star Catcher with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "star_catcher_a",
+      "image": "/collection/assets/candidate-b8142b7b3925b03966b2345a555f2e88d09a5ff632e040786fa07efd298b1157.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-star_catcher_b-ee638dd0e99661e8",
+      "title": "The Star Catcher",
+      "kind": "candidate",
+      "imageHash": "ee638dd0e99661e8c96d91137ec638c17c3e1ba1b6682df41a154728b30af522",
+      "description": "Exact loved The Star Catcher with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "star_catcher_b",
+      "image": "/collection/assets/candidate-ee638dd0e99661e8c96d91137ec638c17c3e1ba1b6682df41a154728b30af522.png",
+      "supersededBy": "candidate-loved_zombies_round_09_20260914-star_catcher_a-b8142b7b3925b039"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-ash_runner_a-0e2362c77be149f1",
+      "title": "Ash Runner",
+      "kind": "candidate",
+      "imageHash": "0e2362c77be149f1f52eb3fcc2f375774a819d60c18b1298bf07c1d76292b138",
+      "description": "Exact loved Ash Runner with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "ash_runner_a",
+      "image": "/collection/assets/candidate-0e2362c77be149f1f52eb3fcc2f375774a819d60c18b1298bf07c1d76292b138.png",
+      "supersededBy": "candidate-loved_zombies_round_09_20260914-ash_runner_b-3252737202c72ab1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-ash_runner_b-3252737202c72ab1",
+      "title": "Ash Runner",
+      "kind": "candidate",
+      "imageHash": "3252737202c72ab1a369cdbca25d72e19c94c6c36e99d6b8efb726bd9f27b7f8",
+      "description": "Exact loved Ash Runner with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "ash_runner_b",
+      "image": "/collection/assets/candidate-3252737202c72ab1a369cdbca25d72e19c94c6c36e99d6b8efb726bd9f27b7f8.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-afterburn_a-06ad7fe342617893",
+      "title": "Afterburn",
+      "kind": "candidate",
+      "imageHash": "06ad7fe34261789319ce069d201faa37c3ed14e8993ffdbe456357f77e8513ce",
+      "description": "Exact loved Afterburn with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "afterburn_a",
+      "image": "/collection/assets/candidate-06ad7fe34261789319ce069d201faa37c3ed14e8993ffdbe456357f77e8513ce.png",
+      "supersededBy": "candidate-loved_zombies_round_09_20260914-afterburn_b-3052315904bc9ae3"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-afterburn_b-3052315904bc9ae3",
+      "title": "Afterburn",
+      "kind": "candidate",
+      "imageHash": "3052315904bc9ae327dc0aa77270a875a2806c046ae9bdf4f620e6b1564ccba7",
+      "description": "Exact loved Afterburn with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "afterburn_b",
+      "image": "/collection/assets/candidate-3052315904bc9ae327dc0aa77270a875a2806c046ae9bdf4f620e6b1564ccba7.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045",
+      "title": "Tideheart",
+      "kind": "candidate",
+      "imageHash": "9111f5d1e55e3045ffe5496aae646957ea69e30b31af101d6c6d465c209165af",
+      "description": "Exact loved Tideheart with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "tideheart_a",
+      "image": "/collection/assets/candidate-9111f5d1e55e3045ffe5496aae646957ea69e30b31af101d6c6d465c209165af.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_09_20260914-tideheart_b-ce1aa1baf040f4c2",
+      "title": "Tideheart",
+      "kind": "candidate",
+      "imageHash": "ce1aa1baf040f4c2f234e3ed71d9bf5e539a546d290fb228a953cfeef8ad79a4",
+      "description": "Exact loved Tideheart with varied structural zombie eyes and jaws; original authored action, proportions, flight, props and setting preserved.",
+      "batch": "loved_zombies_round_09_20260914",
+      "slug": "tideheart_b",
+      "image": "/collection/assets/candidate-ce1aa1baf040f4c2f234e3ed71d9bf5e539a546d290fb228a953cfeef8ad79a4.png",
+      "supersededBy": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045"
     }
   ],
   "references": [
@@ -3850,6 +3955,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116",
             "imageHash": "5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b"
+          }
+        ]
+      },
+      {
+        "id": "round-29",
+        "title": "Round 29 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T03:31:29.809723+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_09_20260914-river_bridge_b-0bb49d342c89d797",
+            "imageHash": "0bb49d342c89d79717421c11ec00144ca39bf5be569e1c6cff1efb53eebc96a0"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_09_20260914-star_catcher_a-b8142b7b3925b039",
+            "imageHash": "b8142b7b3925b03966b2345a555f2e88d09a5ff632e040786fa07efd298b1157"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_09_20260914-ash_runner_b-3252737202c72ab1",
+            "imageHash": "3252737202c72ab1a369cdbca25d72e19c94c6c36e99d6b8efb726bd9f27b7f8"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_09_20260914-afterburn_b-3052315904bc9ae3",
+            "imageHash": "3052315904bc9ae327dc0aa77270a875a2806c046ae9bdf4f620e6b1564ccba7"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_09_20260914-tideheart_a-9111f5d1e55e3045",
+            "imageHash": "9111f5d1e55e3045ffe5496aae646957ea69e30b31af101d6c6d465c209165af"
           }
         ]
       }
