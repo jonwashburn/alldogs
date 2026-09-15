@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Three angels</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eeeae2;color:#222;font:16px/1.5 system-ui,sans-serif}
+header,main{max-width:1600px;margin:auto;padding:20px}h1{font-size:clamp(24px,4vw,38px);margin:0 0 8px}
+p{margin:8px 0}nav,.formats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+button,a{font:inherit}button{border:1px solid #777;border-radius:6px;padding:10px 14px;background:#fff;color:#222;cursor:pointer;min-height:44px}
+button[aria-pressed=true]{background:#252525;color:white}button:focus-visible,a:focus-visible{outline:3px solid #ad3e21;outline-offset:3px}
+h2{font-size:22px;margin:0 0 8px}#open-source{display:block;margin:16px auto 0;width:100%;max-width:1000px;aspect-ratio:1;line-height:0}
+#open-source[data-mode=wide]{max-width:1600px;aspect-ratio:2}#painting{display:block;width:100%;height:100%;object-fit:contain}
+.source-label{display:inline-block;color:#333;text-underline-offset:3px}#status{min-height:24px;font-size:14px}
+@media(max-width:500px){header,main{padding:14px}button{padding:9px 11px}nav{gap:6px}}
+</style></head><body>
+<header><h1>Three angels</h1><p>Judy, Marie and Barack</p><nav aria-label="Choose a dog" id="dogs"></nav></header>
+<main><h2 id="title"></h2><div class="formats" role="group" aria-label="Artwork format">
+<button id="square" type="button" aria-pressed="true">Square</button>
+<button id="wide" type="button" aria-pressed="false">Full width</button></div>
+<a id="source-link" class="source-label" target="_blank" rel="noopener">Open full-resolution image ↗</a>
+<p><a id="rate-dog" class="source-label">Rate this dog</a></p>
+<p id="status" aria-live="polite"></p>
+<a id="open-source" target="_blank" rel="noopener" data-mode="square"><img id="painting" alt="" width="2000" height="2000"></a>
+</main><script>
+const selectedIds={"judy": "candidate-angel_loved_three_b_20260915-judy-88569fd0137e69d2", "marie": "candidate-angel_loved_three_b_20260915-marie-46f0c56bc4e06cc4", "barack": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497"};
+const cast=[["judy", "Judy, A Quiet Wing"], ["marie", "Marie, Folded Light"], ["barack", "Barack \u2014 Windborne Angel"]], nav=document.getElementById('dogs'), img=document.getElementById('painting');
+const artwork=document.getElementById('open-source'), source=document.getElementById('source-link');
+let current=cast[0], mode='square', ticket=0;
+for(const dog of cast){const b=document.createElement('button');b.type='button';b.id=dog[0];b.textContent=dog[1];b.onclick=()=>{current=dog;show()};nav.append(b)}
+for(const value of ['square','wide'])document.getElementById(value).onclick=()=>{mode=value;show()};
+async function show(){
+ const turn=++ticket, file='images/'+current[0]+(mode==='square'?'_square_2000.png':'_wide_4000.png');
+ document.getElementById('title').textContent=current[1];
+ document.getElementById('rate-dog').href='/loop/#dog='+encodeURIComponent(selectedIds[current[0]]);
+ for(const dog of cast)document.getElementById(dog[0]).setAttribute('aria-pressed',String(dog===current));
+ for(const value of ['square','wide'])document.getElementById(value).setAttribute('aria-pressed',String(value===mode));
+ artwork.dataset.mode=mode;artwork.href=file;source.href=file;artwork.setAttribute('aria-label','Open full-resolution '+current[1]);
+ img.alt=current[1]+' · '+(mode==='square'?'square':'full width');img.width=mode==='square'?2000:4000;img.height=2000;
+ img.dataset.ready='false';document.getElementById('status').textContent='Loading painting…';img.src=file;
+ try{await img.decode();if(turn!==ticket)return;img.dataset.ready='true';document.getElementById('status').textContent=img.naturalWidth+' × '+img.naturalHeight;}
+ catch(error){if(turn===ticket){document.getElementById('status').textContent='Image could not load. Open the source to inspect it.';img.dataset.ready='error';}}
+}
+show();
+</script></body></html>

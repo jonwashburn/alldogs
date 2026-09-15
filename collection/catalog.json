@@ -42887,6 +42887,496 @@
           "sha256": "640a7389f9cd41570afddc3af9dff08bba565899d0d4a2aa0c21b4d368d46da7"
         }
       }
+    },
+    {
+      "id": "candidate-angel_loved_three_20260915-barack-953090d6c89de3c1",
+      "dogId": "design-angel_loved_three_20260915-barack",
+      "title": "Barack — Windborne Angel",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-953090d6c89de3c1f7fc152c025c3de8cb21ee5ed156516bc541b393685af59b.png",
+      "imageHash": "953090d6c89de3c1f7fc152c025c3de8cb21ee5ed156516bc541b393685af59b",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/angel_loved_three_20260915/characters/barack.js",
+      "sourceHash": "4b8eab04ab01ef82d7f72a570f9ee0ba7a5d1bd141bd53d44bca9e70703392c7",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/angel_loved_three_20260915/characters/barack.js",
+          "sha256": "4b8eab04ab01ef82d7f72a570f9ee0ba7a5d1bd141bd53d44bca9e70703392c7"
+        }
+      ],
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against warm grey cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "angel_loved_three_20260915",
+      "slug": "barack",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/angel_loved_three_20260915/out/barack.json",
+          "sha256": "5e704100b821d5815eeac27e2bd864e8eda4a2157db756f252502dc06e0d4536"
+        },
+        "cast": {
+          "path": "../design/angel_loved_three_20260915/cast.json",
+          "sha256": "704eec118b38fffd0c4d4d7ee726e4bd43e23c9de4b1de23874f09293da0c635"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/angel_loved_three_20260915/out/barack_wide_4000.png",
+          "sha256": "7ac772eb91023ec4aa58f4bb69e1d7beb99a70579eb4e40b8bcd5e309a57c3e9",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/angel_loved_three_20260915/out/barack_square_2000.png",
+          "sha256": "e20354c90ec1454b53fafce6e9e9daa97b72f1ce511edf8da672fcd6c052a529",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/angel_loved_three_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/angel_loved_three_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/angel_loved_three_20260915/work/barack/wide.json",
+          "sha256": "991d29fbf0f0cab97b9414860f06552bdacc5f85877a9a853fcf4750b34682e4"
+        },
+        "wrapper": {
+          "path": "../design/angel_loved_three_20260915/painter.js",
+          "sha256": "e2ed48698f1c07ef6a0dc70eecd7309bbfd9998eee9ded2bd23c509a69a499b7"
+        },
+        "renderer": {
+          "path": "../design/angel_loved_three_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/angel_loved_three_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/angel_loved_three_20260915/fields.json",
+          "sha256": "640490004edd08855838224dcf145aac5bfbb383d5162b984a2c8f96efc28fbb"
+        },
+        "supports": {
+          "path": "../design/angel_loved_three_20260915/supports.json",
+          "sha256": "0710eda70e71c24ea825324580b4e9538c337883cd0092d073d6fd6145410df9"
+        },
+        "lightContact": {
+          "path": "../design/angel_loved_three_20260915/light-contact.js",
+          "sha256": "e4e29915f98f13032968e82c45c6e345fc637e6227db2e7025446ff1bc657321"
+        },
+        "lightContactReceipt": {
+          "path": "../design/angel_loved_three_20260915/work/barack/light_contact.json",
+          "sha256": "fcb6f5a0859e77834d073097a38b47b55128b392dde317d3cd0aa0285addc99c"
+        }
+      }
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-judy-88569fd0137e69d2",
+      "dogId": "design-angel_loved_three_b_20260915-judy",
+      "title": "Judy, A Quiet Wing",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-88569fd0137e69d2a23722af076736bf484095c6388c056ed13d7661595612c6.png",
+      "imageHash": "88569fd0137e69d2a23722af076736bf484095c6388c056ed13d7661595612c6",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/angel_loved_three_b_20260915/characters/judy.js",
+      "sourceHash": "b9c87b3cee5232cb000c3b76a9001be7b3ff447543d81acbbd2eb1d8580049c6",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/angel_loved_three_b_20260915/characters/judy.js",
+          "sha256": "b9c87b3cee5232cb000c3b76a9001be7b3ff447543d81acbbd2eb1d8580049c6"
+        }
+      ],
+      "description": "Judy's cream horizontal dog, original brown patches, liver ear and sparse face beneath one large irregular ivory wing leaning backward and upward from the shoulder. A smaller grey folded far wing and broken off-centre halo leave the face and body clear against quiet slate-blue cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "judy",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/angel_loved_three_b_20260915/out/judy.json",
+          "sha256": "85f54508661addb5b416971c9c2b2a568deb9050bc96dfaa4aaa9038ff83e09f"
+        },
+        "cast": {
+          "path": "../design/angel_loved_three_b_20260915/cast.json",
+          "sha256": "dd60856d0f16a2f77a368e94e5f00015ba5b158d222a45223f586f7f7cf043d3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/angel_loved_three_b_20260915/out/judy_wide_4000.png",
+          "sha256": "47e84917bac8a84cf820f93102375fad0615eb5fc7d9a5814f3d735c5fd78fab",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/angel_loved_three_b_20260915/out/judy_square_2000.png",
+          "sha256": "6e77b13da48ab5b8be8f3830d75fe660677138e8ae11c4094469b766bc7f8bdf",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/angel_loved_three_b_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/angel_loved_three_b_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/angel_loved_three_b_20260915/work/judy/wide.json",
+          "sha256": "882c2fc1fc2bcea2e24216e1add3d318e8d97548153fd454e293c6e7a3896c89"
+        },
+        "wrapper": {
+          "path": "../design/angel_loved_three_b_20260915/painter.js",
+          "sha256": "e2ed48698f1c07ef6a0dc70eecd7309bbfd9998eee9ded2bd23c509a69a499b7"
+        },
+        "renderer": {
+          "path": "../design/angel_loved_three_b_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/angel_loved_three_b_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/angel_loved_three_b_20260915/fields.json",
+          "sha256": "640490004edd08855838224dcf145aac5bfbb383d5162b984a2c8f96efc28fbb"
+        },
+        "supports": {
+          "path": "../design/angel_loved_three_b_20260915/supports.json",
+          "sha256": "197b91390efb21e835901f8932c5b50ac5014ecb721ddfc656946c85fe2f6984"
+        },
+        "lightContact": {
+          "path": "../design/angel_loved_three_b_20260915/light-contact.js",
+          "sha256": "8298b3cd40f07e680bbaa4c7b7a065b48b2b0c9fcf3d9c7cb8532892dc4b3f78"
+        },
+        "lightContactReceipt": {
+          "path": "../design/angel_loved_three_b_20260915/work/judy/light_contact.json",
+          "sha256": "4f7b93a0d81062f6b7965a6dce42e97fc888590a2608b5913a9998cebd6126b4"
+        }
+      }
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-marie-46f0c56bc4e06cc4",
+      "dogId": "design-angel_loved_three_b_20260915-marie",
+      "title": "Marie, Folded Light",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-46f0c56bc4e06cc430ac0d9c4f65e13390bf757dbd65439a71d4db10c0c4271d.png",
+      "imageHash": "46f0c56bc4e06cc430ac0d9c4f65e13390bf757dbd65439a71d4db10c0c4271d",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/angel_loved_three_b_20260915/characters/marie.js",
+      "sourceHash": "0de4d609a104b1874577f826cf6bdf4d99f3cce0cfcf2b6a71034bd8175f1f60",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/angel_loved_three_b_20260915/characters/marie.js",
+          "sha256": "0de4d609a104b1874577f826cf6bdf4d99f3cce0cfcf2b6a71034bd8175f1f60"
+        }
+      ],
+      "description": "Marie retains her tall powder wig, little ship, pink pannier dress and cake, with two low folded chalk wings and a broken small halo against muted plum-grey cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "marie",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/angel_loved_three_b_20260915/out/marie.json",
+          "sha256": "041b3cfdc14b7f361fbdf7d0d0233584fb338cc8985d76d506cda165e5a0bf32"
+        },
+        "cast": {
+          "path": "../design/angel_loved_three_b_20260915/cast.json",
+          "sha256": "dd60856d0f16a2f77a368e94e5f00015ba5b158d222a45223f586f7f7cf043d3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/angel_loved_three_b_20260915/out/marie_wide_4000.png",
+          "sha256": "3401edc656cf9caf1cad24b2cd6eaf0c9219d25d1e78b7ced4e3180b1a6003cc",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/angel_loved_three_b_20260915/out/marie_square_2000.png",
+          "sha256": "65f126fff02fecccdfdcd1a8e27cd037de3789c2d40ea5e98ac36bffc87a89b0",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/angel_loved_three_b_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/angel_loved_three_b_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/angel_loved_three_b_20260915/work/marie/wide.json",
+          "sha256": "ebb3b7dcbf6414c38d3fcd58dc97f039a1542af358b4f55b68025f26436df65f"
+        },
+        "wrapper": {
+          "path": "../design/angel_loved_three_b_20260915/painter.js",
+          "sha256": "e2ed48698f1c07ef6a0dc70eecd7309bbfd9998eee9ded2bd23c509a69a499b7"
+        },
+        "renderer": {
+          "path": "../design/angel_loved_three_b_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/angel_loved_three_b_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/angel_loved_three_b_20260915/fields.json",
+          "sha256": "640490004edd08855838224dcf145aac5bfbb383d5162b984a2c8f96efc28fbb"
+        },
+        "supports": {
+          "path": "../design/angel_loved_three_b_20260915/supports.json",
+          "sha256": "197b91390efb21e835901f8932c5b50ac5014ecb721ddfc656946c85fe2f6984"
+        },
+        "lightContact": {
+          "path": "../design/angel_loved_three_b_20260915/light-contact.js",
+          "sha256": "8298b3cd40f07e680bbaa4c7b7a065b48b2b0c9fcf3d9c7cb8532892dc4b3f78"
+        },
+        "lightContactReceipt": {
+          "path": "../design/angel_loved_three_b_20260915/work/marie/light_contact.json",
+          "sha256": "539f2ccb2309aa3e3f3854391b5f5c791f3a9cad9ac3711845b5579d84d81890"
+        }
+      }
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-barack-5abf6721b80f5af9",
+      "dogId": "design-angel_loved_three_b_20260915-barack",
+      "title": "Barack — Windborne Angel",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5abf6721b80f5af9b96715dc56f2b82037351cbbcd6b7475520bbff732ba7a81.png",
+      "imageHash": "5abf6721b80f5af9b96715dc56f2b82037351cbbcd6b7475520bbff732ba7a81",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/angel_loved_three_b_20260915/characters/barack.js",
+      "sourceHash": "ed6f028c57958aaf86e1c5200ba6984ddedeaa2dc7f044b72c609ef0df750cdc",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/angel_loved_three_b_20260915/characters/barack.js",
+          "sha256": "ed6f028c57958aaf86e1c5200ba6984ddedeaa2dc7f044b72c609ef0df750cdc"
+        }
+      ],
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "barack",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/angel_loved_three_b_20260915/out/barack.json",
+          "sha256": "6fbb1da211e9e67b6ac779b7a947d9dfaa906653cb9511325171da5cd7dc608e"
+        },
+        "cast": {
+          "path": "../design/angel_loved_three_b_20260915/cast.json",
+          "sha256": "dd60856d0f16a2f77a368e94e5f00015ba5b158d222a45223f586f7f7cf043d3"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/angel_loved_three_b_20260915/out/barack_wide_4000.png",
+          "sha256": "e197e7da9bdeefff63479af36cc53b47fca3e2efb4ff3cb3ce90b610202a1bb5",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/angel_loved_three_b_20260915/out/barack_square_2000.png",
+          "sha256": "e01289ff4b986484ff8a20ddc7d31371e2a0a32d691988382f5c338ee3581631",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/angel_loved_three_b_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/angel_loved_three_b_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/angel_loved_three_b_20260915/work/barack/wide.json",
+          "sha256": "7e41a4c8a51290c5f400c51e1554f0ef21194d009f3d67c9bd56d5d70e638c70"
+        },
+        "wrapper": {
+          "path": "../design/angel_loved_three_b_20260915/painter.js",
+          "sha256": "e2ed48698f1c07ef6a0dc70eecd7309bbfd9998eee9ded2bd23c509a69a499b7"
+        },
+        "renderer": {
+          "path": "../design/angel_loved_three_b_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/angel_loved_three_b_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/angel_loved_three_b_20260915/fields.json",
+          "sha256": "640490004edd08855838224dcf145aac5bfbb383d5162b984a2c8f96efc28fbb"
+        },
+        "supports": {
+          "path": "../design/angel_loved_three_b_20260915/supports.json",
+          "sha256": "197b91390efb21e835901f8932c5b50ac5014ecb721ddfc656946c85fe2f6984"
+        },
+        "lightContact": {
+          "path": "../design/angel_loved_three_b_20260915/light-contact.js",
+          "sha256": "8298b3cd40f07e680bbaa4c7b7a065b48b2b0c9fcf3d9c7cb8532892dc4b3f78"
+        },
+        "lightContactReceipt": {
+          "path": "../design/angel_loved_three_b_20260915/work/barack/light_contact.json",
+          "sha256": "684ee40b023163db99b42ea72fec59709b401771fb756ee27218d13e22c3f6d6"
+        }
+      }
+    },
+    {
+      "id": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497",
+      "dogId": "design-angel_barack_c_20260915-barack",
+      "title": "Barack — Windborne Angel",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123.png",
+      "imageHash": "4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123",
+      "parent": "original-62-fb27c29277cc6593",
+      "nativeParentSeed": 62,
+      "source": "../design/angel_barack_c_20260915/characters/barack.js",
+      "sourceHash": "021acab8dd1d7833d91152df28df2f5a8878adb2d36a2c23e8de90a39682fc4f",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/angel_barack_c_20260915/characters/barack.js",
+          "sha256": "021acab8dd1d7833d91152df28df2f5a8878adb2d36a2c23e8de90a39682fc4f"
+        }
+      ],
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "angel_barack_c_20260915",
+      "slug": "barack",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/angel_barack_c_20260915/out/barack.json",
+          "sha256": "ba65e2a78c34ff4a14f9758a1f97662a4a1688c30a6538f28b719863e042b3e9"
+        },
+        "cast": {
+          "path": "../design/angel_barack_c_20260915/cast.json",
+          "sha256": "bd031baa6b09fbbe40b845e9e502f0a9332e8279cb942ca24df1e9dfc2b4349a"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/angel_barack_c_20260915/out/barack_wide_4000.png",
+          "sha256": "df8b29b9b23f51e6879875dfb535a10d9cebbe9aa7dfe159e7007e6daf879970",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/angel_barack_c_20260915/out/barack_square_2000.png",
+          "sha256": "fe0daf1a60b4d991f0cc432a2e1d7612ffee9f5c7afbff1cb22bdfff88e77515",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/angel_barack_c_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/angel_barack_c_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/angel_barack_c_20260915/work/barack/wide.json",
+          "sha256": "ac3208a446d034cf7a69487ff67f28e98aca0c60040441f6fea3109bda59916f"
+        },
+        "wrapper": {
+          "path": "../design/angel_barack_c_20260915/painter.js",
+          "sha256": "e2ed48698f1c07ef6a0dc70eecd7309bbfd9998eee9ded2bd23c509a69a499b7"
+        },
+        "renderer": {
+          "path": "../design/angel_barack_c_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/angel_barack_c_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/angel_barack_c_20260915/fields.json",
+          "sha256": "b6301ccbf16f1bce801ca4ed91d4450fffc12fba6d57cb6b0a2a87f275161675"
+        },
+        "supports": {
+          "path": "../design/angel_barack_c_20260915/supports.json",
+          "sha256": "be8418c4a4ffd1af47e3f478d73dc15753e25f81a549a034e062d04170adfeaf"
+        },
+        "lightContact": {
+          "path": "../design/angel_barack_c_20260915/light-contact.js",
+          "sha256": "8298b3cd40f07e680bbaa4c7b7a065b48b2b0c9fcf3d9c7cb8532892dc4b3f78"
+        },
+        "lightContactReceipt": {
+          "path": "../design/angel_barack_c_20260915/work/barack/light_contact.json",
+          "sha256": "172293015591a9839eaed1004ef77a04cb56b1afd8211d69f7ee79a3e1fd0b08"
+        }
+      }
     }
   ],
   "rounds": [

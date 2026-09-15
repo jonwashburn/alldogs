@@ -3545,6 +3545,58 @@
       "batch": "character_round_33_20260915",
       "slug": "dame_edna",
       "image": "/collection/assets/candidate-fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8.png"
+    },
+    {
+      "id": "candidate-angel_loved_three_20260915-barack-953090d6c89de3c1",
+      "title": "Barack \u2014 Windborne Angel",
+      "kind": "candidate",
+      "imageHash": "953090d6c89de3c1f7fc152c025c3de8cb21ee5ed156516bc541b393685af59b",
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against warm grey cotton.",
+      "batch": "angel_loved_three_20260915",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-953090d6c89de3c1f7fc152c025c3de8cb21ee5ed156516bc541b393685af59b.png",
+      "supersededBy": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497"
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-judy-88569fd0137e69d2",
+      "title": "Judy, A Quiet Wing",
+      "kind": "candidate",
+      "imageHash": "88569fd0137e69d2a23722af076736bf484095c6388c056ed13d7661595612c6",
+      "description": "Judy's cream horizontal dog, original brown patches, liver ear and sparse face beneath one large irregular ivory wing leaning backward and upward from the shoulder. A smaller grey folded far wing and broken off-centre halo leave the face and body clear against quiet slate-blue cotton.",
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "judy",
+      "image": "/collection/assets/candidate-88569fd0137e69d2a23722af076736bf484095c6388c056ed13d7661595612c6.png"
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-marie-46f0c56bc4e06cc4",
+      "title": "Marie, Folded Light",
+      "kind": "candidate",
+      "imageHash": "46f0c56bc4e06cc430ac0d9c4f65e13390bf757dbd65439a71d4db10c0c4271d",
+      "description": "Marie retains her tall powder wig, little ship, pink pannier dress and cake, with two low folded chalk wings and a broken small halo against muted plum-grey cotton.",
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "marie",
+      "image": "/collection/assets/candidate-46f0c56bc4e06cc430ac0d9c4f65e13390bf757dbd65439a71d4db10c0c4271d.png"
+    },
+    {
+      "id": "candidate-angel_loved_three_b_20260915-barack-5abf6721b80f5af9",
+      "title": "Barack \u2014 Windborne Angel",
+      "kind": "candidate",
+      "imageHash": "5abf6721b80f5af9b96715dc56f2b82037351cbbcd6b7475520bbff732ba7a81",
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
+      "batch": "angel_loved_three_b_20260915",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-5abf6721b80f5af9b96715dc56f2b82037351cbbcd6b7475520bbff732ba7a81.png",
+      "supersededBy": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497"
+    },
+    {
+      "id": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497",
+      "title": "Barack \u2014 Windborne Angel",
+      "kind": "candidate",
+      "imageHash": "4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123",
+      "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
+      "batch": "angel_barack_c_20260915",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123.png"
     }
   ],
   "references": [
