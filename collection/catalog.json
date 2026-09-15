@@ -32936,6 +32936,1726 @@
           "calls": 197
         }
       }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-demeter_a-63a9daf61ddf159f",
+      "dogId": "design-loved_zombies_round_08_20260914-demeter_a",
+      "title": "Demeter, The Last Ear of Wheat",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-63a9daf61ddf159fa7be667d5bb9d5cf022126eac21ff9d2bb5f084953c2e38d.png",
+      "imageHash": "63a9daf61ddf159fa7be667d5bb9d5cf022126eac21ff9d2bb5f084953c2e38d",
+      "parent": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+      "nativeParentSeed": 88,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Demeter, The Last Ear of Wheat with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "demeter_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_a.json",
+          "sha256": "5a1559da30dd7415270400897884eaaf99ff7083e2a6df116d78babcee92813a"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_a_wide_4000.png",
+          "sha256": "cdaf0bc2e5e43c52641ccd9570e21d87f7bbece431329037b1579b0a765c42c9",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_a_square_2000.png",
+          "sha256": "f13a669492975e0739a596099d9fc5059ac7eba0ce58f5b551b26c81e8cce23f",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/demeter_a/wide.json",
+          "sha256": "4206eac68d6cb25c7fee207ec4c8ad2fee87418877a74abda5550bd718b13920"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+          "imageHash": "1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/demeter.js": {
+              "path": "../design/greek_pantheon_20260912/characters/demeter.js",
+              "sha256": "501226e4b251130d083d609bf6eee068377233939c6dd403396b1f38d55b82a6"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/demeter_a/structural.json",
+            "sha256": "192439e62fba5de867da8a1c0cc25b49b7996ee3a2e107cb0e296df8cade1401"
+          },
+          "options": {
+            "variation": 13255,
+            "mode": "bloom",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bloom"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/demeter_a/light_contact.json",
+          "sha256": "321b7fef4cfa0b9d71725f61228dce0b4d1461e8d370e8ccd9f15bd40e0244e3"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/demeter_a/portrait_stick.json",
+            "sha256": "26b1f82aee37a4ef9214e2e665d291a6f6e084cddbffd0ba49f1e473e13017df"
+          },
+          "calls": 177
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-demeter_b-e213ed29b608045e",
+      "dogId": "design-loved_zombies_round_08_20260914-demeter_b",
+      "title": "Demeter, The Last Ear of Wheat",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e213ed29b608045e379ebfd9b44f4680d54388d39a69ab7009e9f91c14429f13.png",
+      "imageHash": "e213ed29b608045e379ebfd9b44f4680d54388d39a69ab7009e9f91c14429f13",
+      "parent": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+      "nativeParentSeed": 88,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Demeter, The Last Ear of Wheat with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "demeter_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_b.json",
+          "sha256": "6609aa814f71ee68feffc7b84cb4ce0a07fbb071ee5e2eb254c6a012543ea916"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_b_wide_4000.png",
+          "sha256": "fcb6e9ed19db0155527113b108c8436fd209317af63be1b099cad92082fd2fa0",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/demeter_b_square_2000.png",
+          "sha256": "92efd1dd762104129989acce8a11732f498ad57003f6b09d12de45c982c8476b",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/demeter_b/wide.json",
+          "sha256": "db695136b0737bbb52d24b49c8ae09fd8652183bcb746166817299997d7fbfe0"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+          "imageHash": "1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/demeter.js": {
+              "path": "../design/greek_pantheon_20260912/characters/demeter.js",
+              "sha256": "501226e4b251130d083d609bf6eee068377233939c6dd403396b1f38d55b82a6"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/demeter_b/structural.json",
+            "sha256": "235fbba0e68578e9d7a1605bbb96bdb3c74874127716d0120f8993928ff18b57"
+          },
+          "options": {
+            "variation": 13428,
+            "mode": "bite",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/demeter_b/light_contact.json",
+          "sha256": "1f084719203ea470857162b4728515965bcfbbbdde844559976a3e2d9206a807"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/demeter_b/portrait_stick.json",
+            "sha256": "d2bf6c6ed2ab467072b3eefbd5aefefde9a74e66c7c33a3a5d128aa1d21d0401"
+          },
+          "calls": 186
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-hermes_a-431ee6dad16f9106",
+      "dogId": "design-loved_zombies_round_08_20260914-hermes_a",
+      "title": "Hermes, A Message for Tomorrow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-431ee6dad16f9106635990538e81b9e8ba277c321df20bdef7ead58bf1316d15.png",
+      "imageHash": "431ee6dad16f9106635990538e81b9e8ba277c321df20bdef7ead58bf1316d15",
+      "parent": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+      "nativeParentSeed": 63,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Hermes, A Message for Tomorrow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "hermes_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_a.json",
+          "sha256": "5b284a7c49cdffb7c75e0feb5044ced5394b8ac677ef7790a263f4f9167912c8"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_a_wide_4000.png",
+          "sha256": "4474145703a195de1e4721819267c76ce6cd564303f67984ce37042ab635ebe1",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_a_square_2000.png",
+          "sha256": "f82cb189072767ab16aca587d6d9e5b7937756b1e36b7cdfe856d0d542d49e85",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/hermes_a/wide.json",
+          "sha256": "b2ee9fba0f96f7f499c4866be29ea105f27276601417a5dbc02015e7ff977daa"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+          "imageHash": "a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/hermes.js": {
+              "path": "../design/greek_pantheon_20260912/characters/hermes.js",
+              "sha256": "91f269abff982f554337fff7c67f389b01b2b1c7e8b08452b772bfef83c8e6a6"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/hermes_a/structural.json",
+            "sha256": "3495aaed10703cab202fc59fb3e8815f2ec357266b1e36733b5bab5ee7d6a21e"
+          },
+          "options": {
+            "variation": 12753,
+            "mode": "swarm",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "swarm"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/hermes_a/light_contact.json",
+          "sha256": "6884a9af8f18e5941a160af57319174bff2400408ab4430c9a2b16d70f6f3d91"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/hermes_a/portrait_stick.json",
+            "sha256": "7d33e251d8a97b7c8d0491301f8dcf308501aaf330a07b6ed7a7bcd2c7a41048"
+          },
+          "calls": 223
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-hermes_b-1e9f9acf3e927f4f",
+      "dogId": "design-loved_zombies_round_08_20260914-hermes_b",
+      "title": "Hermes, A Message for Tomorrow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1e9f9acf3e927f4fd0029a4a4a5ff7d62b2ca0df83d4609f7d49fa9943c1e58d.png",
+      "imageHash": "1e9f9acf3e927f4fd0029a4a4a5ff7d62b2ca0df83d4609f7d49fa9943c1e58d",
+      "parent": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+      "nativeParentSeed": 63,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Hermes, A Message for Tomorrow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "hermes_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_b.json",
+          "sha256": "c444e6ffbe09edcf414fef078c4f1a82c921f48479695f75bda3e389f4d9c07f"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_b_wide_4000.png",
+          "sha256": "063911f021b3b464cad15d6f3ea0425e626dc789b1ec038934dc093db65540a3",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/hermes_b_square_2000.png",
+          "sha256": "ed385c48c5f467323b682c70ea2dc859761fe88204c51ccca01675180e53a99a",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/hermes_b/wide.json",
+          "sha256": "88432b2195aef6c4bfbc170049e1bc73c72a515eeb7ef357519487e61c139ae3"
+        },
+        "authoredParent": {
+          "id": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+          "imageHash": "a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/greek_pantheon_20260912/painter.js": {
+              "path": "../design/greek_pantheon_20260912/painter.js",
+              "sha256": "42c7513ff5adf39fca7d39f24caa5523a646b0f42c3b25a4d057a06c40b6efb8"
+            },
+            "design/greek_pantheon_20260912/render.js": {
+              "path": "../design/greek_pantheon_20260912/render.js",
+              "sha256": "f2c1095943059e24cc7eccf011b249cd144983e463c3ba465c6dec01ea190eed"
+            },
+            "design/greek_pantheon_20260912/cast.json": {
+              "path": "../design/greek_pantheon_20260912/cast.json",
+              "sha256": "64221f820c5e2eb59fbaa2f8addcb714e9d7cafdf10824e4f99624967b3aca3c"
+            },
+            "design/greek_pantheon_20260912/lettering.js": {
+              "path": "../design/greek_pantheon_20260912/lettering.js",
+              "sha256": "cbfdb1d4b29757d193269d7bb2964518ddf40b32b708d5008d1d618a0e9916a6"
+            },
+            "design/greek_pantheon_20260912/fields.json": {
+              "path": "../design/greek_pantheon_20260912/fields.json",
+              "sha256": "f9bc605b455fd92d04117ebbff155086aa37d544670f7470ac52ddf976e67b9c"
+            },
+            "design/greek_pantheon_20260912/supports.json": {
+              "path": "../design/greek_pantheon_20260912/supports.json",
+              "sha256": "51f17f293fa22ca2cb25c431213aca04f3b03943f89808fc8cb3a1653e492895"
+            },
+            "design/greek_pantheon_20260912/characters/hermes.js": {
+              "path": "../design/greek_pantheon_20260912/characters/hermes.js",
+              "sha256": "91f269abff982f554337fff7c67f389b01b2b1c7e8b08452b772bfef83c8e6a6"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/hermes_b/structural.json",
+            "sha256": "6937347c53826eec90b0fff87f0d33e55c0590ca5461f714c2edb2e493a25ce2"
+          },
+          "options": {
+            "variation": 12926,
+            "mode": "mask",
+            "stalks": false,
+            "secondaryMouth": true
+          },
+          "mode": "mask"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/hermes_b/light_contact.json",
+          "sha256": "dadf25d015d846f2e9378f2d35c974bf713b63ba86623b3a692747d8534dbaab"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/hermes_b/portrait_stick.json",
+            "sha256": "3cb0c75c1c527949e2c856547bbe02f6ea8aa38c21bac963ed8ad569d27acc19"
+          },
+          "calls": 212
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-leeloo_a-87440b2c2881398c",
+      "dogId": "design-loved_zombies_round_08_20260914-leeloo_a",
+      "title": "Leeloo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-87440b2c2881398c0d968d1bd54860d1305e866f3156a7e72f0bc8a1503d1218.png",
+      "imageHash": "87440b2c2881398c0d968d1bd54860d1305e866f3156a7e72f0bc8a1503d1218",
+      "parent": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+      "nativeParentSeed": 63,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Leeloo with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "leeloo_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_a.json",
+          "sha256": "3fcb00bc4f1b4d0245296520bfd328b7405771a29e1c12a4344402825937b0b5"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_a_wide_4000.png",
+          "sha256": "a6e9f5c3deaa264ad4c7c601db176345a67048c4f45f623b4b7416b2e92b6664",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_a_square_2000.png",
+          "sha256": "cf3d1dd6167abf62c1a489c4a20acb998fca623230df2653f50729c02f796e23",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/leeloo_a/wide.json",
+          "sha256": "3370b698e0dd19666d75f196a62b9b07c66350c53edd242c3732521bf60f896b"
+        },
+        "authoredParent": {
+          "id": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+          "imageHash": "3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/character_round_18_20260913/painter.js": {
+              "path": "../design/character_round_18_20260913/painter.js",
+              "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+            },
+            "design/character_round_18_20260913/render.js": {
+              "path": "../design/character_round_18_20260913/render.js",
+              "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+            },
+            "design/character_round_18_20260913/cast.json": {
+              "path": "../design/character_round_18_20260913/cast.json",
+              "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+            },
+            "design/character_round_18_20260913/lettering.js": {
+              "path": "../design/character_round_18_20260913/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/character_round_18_20260913/fields.json": {
+              "path": "../design/character_round_18_20260913/fields.json",
+              "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+            },
+            "design/character_round_18_20260913/supports.json": {
+              "path": "../design/character_round_18_20260913/supports.json",
+              "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+            },
+            "design/character_round_18_20260913/characters/leeloo.js": {
+              "path": "../design/character_round_18_20260913/characters/leeloo.js",
+              "sha256": "4d2d9962792c3fe39887b93626cdbe22ab7ed1106575b588675322d915364e25"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/leeloo_a/structural.json",
+            "sha256": "f65ac50d0a8d897735bd73cba7144225929537fb951638076e6318fbbc9aa9cd"
+          },
+          "options": {
+            "variation": 12976,
+            "mode": "split",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "split"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/leeloo_a/light_contact.json",
+          "sha256": "d57e2910c936e72ffab9acef7b86b6644340e55eb069cf8066777b3fb6e98556"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/leeloo_a/portrait_stick.json",
+            "sha256": "ccb68fa4b7cf91aeefad283c91b77aeae59739fd5d9dfb5e0015116e8fe8bbb2"
+          },
+          "calls": 234
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-leeloo_b-4ae6b33a140ac43d",
+      "dogId": "design-loved_zombies_round_08_20260914-leeloo_b",
+      "title": "Leeloo",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-4ae6b33a140ac43d6f4232927bf0cf4401933d66a6e5aefb1ec6a6b7c2590da5.png",
+      "imageHash": "4ae6b33a140ac43d6f4232927bf0cf4401933d66a6e5aefb1ec6a6b7c2590da5",
+      "parent": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+      "nativeParentSeed": 63,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Leeloo with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "leeloo_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_b.json",
+          "sha256": "64e2ee6f52ae46938fc317a1c33af9edda7751bdcded794ac6be6133afcaf8aa"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_b_wide_4000.png",
+          "sha256": "503321d79c614a4aa71d155d90fb2c719665082d01ef32f14b7454973f24e15e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/leeloo_b_square_2000.png",
+          "sha256": "80ee11d98766fddf647623128cda5095640c47ec4e5f3846ad872b72b65664db",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/leeloo_b/wide.json",
+          "sha256": "9c53ee66e1200a998f8b974cf8dad51984033d3b891688916a91d11fa9e43876"
+        },
+        "authoredParent": {
+          "id": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+          "imageHash": "3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/character_round_18_20260913/painter.js": {
+              "path": "../design/character_round_18_20260913/painter.js",
+              "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+            },
+            "design/character_round_18_20260913/render.js": {
+              "path": "../design/character_round_18_20260913/render.js",
+              "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+            },
+            "design/character_round_18_20260913/cast.json": {
+              "path": "../design/character_round_18_20260913/cast.json",
+              "sha256": "730cbee010cd8c3dea4a43c5786f2d0bcf8dda5f4000612f1c8ba5a94d913062"
+            },
+            "design/character_round_18_20260913/lettering.js": {
+              "path": "../design/character_round_18_20260913/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/character_round_18_20260913/fields.json": {
+              "path": "../design/character_round_18_20260913/fields.json",
+              "sha256": "afd70645172e626a5b8592a59cd894fa7a3e6af1ee64c145d884b7e2249835d6"
+            },
+            "design/character_round_18_20260913/supports.json": {
+              "path": "../design/character_round_18_20260913/supports.json",
+              "sha256": "362d5c5d7c348f54534792e49eca32b494ad37db09aa8bcda5465cea35288141"
+            },
+            "design/character_round_18_20260913/characters/leeloo.js": {
+              "path": "../design/character_round_18_20260913/characters/leeloo.js",
+              "sha256": "4d2d9962792c3fe39887b93626cdbe22ab7ed1106575b588675322d915364e25"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/leeloo_b/structural.json",
+            "sha256": "2365c9b7ea6067ca69d2b1680c7e53075786785d8c00fa8167431990c585d326"
+          },
+          "options": {
+            "variation": 13149,
+            "mode": "bite",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "bite"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/leeloo_b/light_contact.json",
+          "sha256": "055388fb08d482e77825b7c4f2e2e12857cbcc9896b2176b74e15f5123854628"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/leeloo_b/portrait_stick.json",
+            "sha256": "224384882cedb53cfb75ec602f7a82547d45894cfb4daae9f0f8079fd6c45417"
+          },
+          "calls": 229
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-ember_warden_a-a0f0f794ce381790",
+      "dogId": "design-loved_zombies_round_08_20260914-ember_warden_a",
+      "title": "Ember Warden",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a0f0f794ce3817900705b5e77a28ce74d53658690a5ab7c416712d06da3046a9.png",
+      "imageHash": "a0f0f794ce3817900705b5e77a28ce74d53658690a5ab7c416712d06da3046a9",
+      "parent": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+      "nativeParentSeed": 70,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Ember Warden with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "ember_warden_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_a.json",
+          "sha256": "c82aa96d9fee5fb12045fdefaf35fc953ed4e507515d5fa4d0fe43b92fddfee7"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_a_wide_4000.png",
+          "sha256": "1df4dd009aaa666a14ea1c289db01357ab200547b9f749572226a17fe8d5c69f",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_a_square_2000.png",
+          "sha256": "78b6f30fdeb8bca8546119eed33183abec12ed5b239c375226c9b4e2fdda9197",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_a/wide.json",
+          "sha256": "d439793f1f424b051f4560da3dd143e10810d03c8ae6bb9184642d3004c858ce"
+        },
+        "authoredParent": {
+          "id": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+          "imageHash": "de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/fable_wide_round_07_20260912/painter.js": {
+              "path": "../design/fable_wide_round_07_20260912/painter.js",
+              "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+            },
+            "design/fable_wide_round_07_20260912/render.js": {
+              "path": "../design/fable_wide_round_07_20260912/render.js",
+              "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+            },
+            "design/fable_wide_round_07_20260912/cast.json": {
+              "path": "../design/fable_wide_round_07_20260912/cast.json",
+              "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+            },
+            "design/fable_wide_round_07_20260912/lettering.js": {
+              "path": "../design/fable_wide_round_07_20260912/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/fable_wide_round_07_20260912/fields.json": {
+              "path": "../design/fable_wide_round_07_20260912/fields.json",
+              "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+            },
+            "design/fable_wide_round_07_20260912/supports.json": {
+              "path": "../design/fable_wide_round_07_20260912/supports.json",
+              "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+            },
+            "design/fable_wide_round_07_20260912/characters/ember_warden.js": {
+              "path": "../design/fable_wide_round_07_20260912/characters/ember_warden.js",
+              "sha256": "7bf7455ed539bb75ae1b6a7d3c57ea3f7779a1668fafd035eeeaf2b0a4f642fc"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_a/structural.json",
+            "sha256": "1107fca551929b422bf8b1c7154df26898b65dd8257452c110e7b620ea9d2321"
+          },
+          "options": {
+            "variation": 13402,
+            "mode": "bloom",
+            "stalks": true,
+            "secondaryMouth": false
+          },
+          "mode": "bloom"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_a/light_contact.json",
+          "sha256": "7b264ccae699a480e76eea2d1c21c97b0e37fc1d53472f427c6fb20190ec62f9"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_a/portrait_stick.json",
+            "sha256": "bfd2ef8243800dfa798de99fa6a2053f9140e688e6637d9971f2dc1f3d275ed7"
+          },
+          "calls": 309
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-ember_warden_b-37618174daed81c1",
+      "dogId": "design-loved_zombies_round_08_20260914-ember_warden_b",
+      "title": "Ember Warden",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-37618174daed81c11a7452dd5e2f2160a61140e8ca1ebde8a7c9474a12e5e61b.png",
+      "imageHash": "37618174daed81c11a7452dd5e2f2160a61140e8ca1ebde8a7c9474a12e5e61b",
+      "parent": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+      "nativeParentSeed": 70,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Ember Warden with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "ember_warden_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_b.json",
+          "sha256": "fd703cd1ff65f47174dd3110b06c60f92fc288c0c163320b2f0bb26c71e6450d"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_b_wide_4000.png",
+          "sha256": "14c38b74fa5c069848d4ef6b73e197032976989e485802369119fa9d80d3ef7c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/ember_warden_b_square_2000.png",
+          "sha256": "7afb8f7c1e2b0025ba007f3a8013e58a711b70d585bc15183eaa78206e1aebb0",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_b/wide.json",
+          "sha256": "40cea80eeac4082d98686808d9049377207fc10a9c32c8a2f554e0dd92ff49c5"
+        },
+        "authoredParent": {
+          "id": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+          "imageHash": "de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/fable_wide_round_07_20260912/painter.js": {
+              "path": "../design/fable_wide_round_07_20260912/painter.js",
+              "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+            },
+            "design/fable_wide_round_07_20260912/render.js": {
+              "path": "../design/fable_wide_round_07_20260912/render.js",
+              "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+            },
+            "design/fable_wide_round_07_20260912/cast.json": {
+              "path": "../design/fable_wide_round_07_20260912/cast.json",
+              "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+            },
+            "design/fable_wide_round_07_20260912/lettering.js": {
+              "path": "../design/fable_wide_round_07_20260912/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/fable_wide_round_07_20260912/fields.json": {
+              "path": "../design/fable_wide_round_07_20260912/fields.json",
+              "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+            },
+            "design/fable_wide_round_07_20260912/supports.json": {
+              "path": "../design/fable_wide_round_07_20260912/supports.json",
+              "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+            },
+            "design/fable_wide_round_07_20260912/characters/ember_warden.js": {
+              "path": "../design/fable_wide_round_07_20260912/characters/ember_warden.js",
+              "sha256": "7bf7455ed539bb75ae1b6a7d3c57ea3f7779a1668fafd035eeeaf2b0a4f642fc"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_b/structural.json",
+            "sha256": "4d21fe1b3a89e7c2a78f55152f865b863fc965143bab8942b42fa31a858cf2c2"
+          },
+          "options": {
+            "variation": 13575,
+            "mode": "swarm",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "swarm"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_b/light_contact.json",
+          "sha256": "21d3592f0301e88841a291ee3a98a3a87c891d5b2c940579363ed32bb122825c"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/ember_warden_b/portrait_stick.json",
+            "sha256": "88014759daf352e4f0c42f3c3fb2b8f9b4f81b04923b96ef1ea826ffbf1c1ac4"
+          },
+          "calls": 340
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116",
+      "dogId": "design-loved_zombies_round_08_20260914-undertow_a",
+      "title": "Undertow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b.png",
+      "imageHash": "5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b",
+      "parent": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+      "nativeParentSeed": 55,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Undertow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "undertow_a",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_a.json",
+          "sha256": "9f735e486e4b7f22da234b6490bf65297b28cc6dd7ad9ef64c3a73fbbb1816e9"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_a_wide_4000.png",
+          "sha256": "a6cbd1392b7b75cf84833229d11d09c327c70437b8b7b9a2fd9bb80d55584741",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_a_square_2000.png",
+          "sha256": "9cd040a45db9071d6d2bff4b93451789c3662c4fd97fe799e0572faae9f3ddaa",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/undertow_a/wide.json",
+          "sha256": "421680e5f17dcc8b43d3be785e7b3163b637c29ff3927ee672693fe0f8d58732"
+        },
+        "authoredParent": {
+          "id": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+          "imageHash": "64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/fable_wide_round_07_20260912/painter.js": {
+              "path": "../design/fable_wide_round_07_20260912/painter.js",
+              "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+            },
+            "design/fable_wide_round_07_20260912/render.js": {
+              "path": "../design/fable_wide_round_07_20260912/render.js",
+              "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+            },
+            "design/fable_wide_round_07_20260912/cast.json": {
+              "path": "../design/fable_wide_round_07_20260912/cast.json",
+              "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+            },
+            "design/fable_wide_round_07_20260912/lettering.js": {
+              "path": "../design/fable_wide_round_07_20260912/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/fable_wide_round_07_20260912/fields.json": {
+              "path": "../design/fable_wide_round_07_20260912/fields.json",
+              "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+            },
+            "design/fable_wide_round_07_20260912/supports.json": {
+              "path": "../design/fable_wide_round_07_20260912/supports.json",
+              "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+            },
+            "design/fable_wide_round_07_20260912/characters/undertow.js": {
+              "path": "../design/fable_wide_round_07_20260912/characters/undertow.js",
+              "sha256": "d5916b5d1ae2c1479950a5a29d013145b0c6aa4fda6689294f5fbf0b8c59bd16"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/undertow_a/structural.json",
+            "sha256": "088ad1b30d6f384a7fae3efdc45abc5758309e47658b83c6a76158f568de233f"
+          },
+          "options": {
+            "variation": 13190,
+            "mode": "mask",
+            "stalks": false,
+            "secondaryMouth": false
+          },
+          "mode": "mask"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/undertow_a/light_contact.json",
+          "sha256": "cb577269e32cbd30b872c5a76e6f69d3dc42ca817533eb7945765fae52342ef0"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/undertow_a/portrait_stick.json",
+            "sha256": "c3530c050d2eef0f18b90af127882ca524ef45df0aa5799bc5ff4efb70d79308"
+          },
+          "calls": 217
+        }
+      }
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-undertow_b-e29048eb2d3b3253",
+      "dogId": "design-loved_zombies_round_08_20260914-undertow_b",
+      "title": "Undertow",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-e29048eb2d3b32532ee219c01b5b0f06c85706390a6d71eb7085da1dc55fe62f.png",
+      "imageHash": "e29048eb2d3b32532ee219c01b5b0f06c85706390a6d71eb7085da1dc55fe62f",
+      "parent": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+      "nativeParentSeed": 55,
+      "source": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+      "sourceHash": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8",
+      "sources": [
+        {
+          "role": "structural_zombie_planner",
+          "path": "../design/loved_zombies_round_08_20260914/zombie-plan.js",
+          "sha256": "532ff45e5ba08f71f4d1d3d29931bd8bd33dcee90580d1ec63b1cf40af83cff8"
+        }
+      ],
+      "description": "Exact loved Undertow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "undertow_b",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_b.json",
+          "sha256": "bc52b6ada2eb32eca98f4bf7b80a947def5a0c0b1d18d5c4425534239bbdfb3d"
+        },
+        "cast": {
+          "path": "../design/loved_zombies_round_08_20260914/cast.json",
+          "sha256": "481bef5cd2c69c0fbbde10fde9aca8dfa597b19484593ebeb4ebd027571a1dcd"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_b_wide_4000.png",
+          "sha256": "bf857256681a170e549396fe2c98cbbdd94b8c873a16ab5ec821980cf8cc8206",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/loved_zombies_round_08_20260914/out/undertow_b_square_2000.png",
+          "sha256": "47f1c31cb110d439321257f78efedfee245b90db985a835bfe09524d2ce89cb7",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/loved_zombies_round_08_20260914/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/loved_zombies_round_08_20260914/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/loved_zombies_round_08_20260914/work/undertow_b/wide.json",
+          "sha256": "e7036bd89b750dbd71c3bc4fff28b7668b340bb4ee04137c6a37a1e50beea615"
+        },
+        "authoredParent": {
+          "id": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+          "imageHash": "64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827",
+          "manifest": {
+            "path": "../design/loved_zombies_round_08_20260914/PARENTS.json",
+            "sha256": "3a40e040aa4b68d96fec2f0e629db46cbda3567962cb5787ba7cb9dfb8646ae4"
+          },
+          "sources": {
+            "design/fable_wide_round_07_20260912/painter.js": {
+              "path": "../design/fable_wide_round_07_20260912/painter.js",
+              "sha256": "b033c08df801f7427a1746e0362700b31ad1a0f6d0224511b06822876631f5a2"
+            },
+            "design/fable_wide_round_07_20260912/render.js": {
+              "path": "../design/fable_wide_round_07_20260912/render.js",
+              "sha256": "9b618cda97ae1e859696bc73994b2a28a03e81d07ebb035737174287cd273bcb"
+            },
+            "design/fable_wide_round_07_20260912/cast.json": {
+              "path": "../design/fable_wide_round_07_20260912/cast.json",
+              "sha256": "d4bd316335b6e29f800dea4e0ceccdef6f42717ab18624e4753fa3ed910e23aa"
+            },
+            "design/fable_wide_round_07_20260912/lettering.js": {
+              "path": "../design/fable_wide_round_07_20260912/lettering.js",
+              "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+            },
+            "design/fable_wide_round_07_20260912/fields.json": {
+              "path": "../design/fable_wide_round_07_20260912/fields.json",
+              "sha256": "e7b11941d722362ddceb0e55821be96c5314130a8bb7964c331d77c998459f33"
+            },
+            "design/fable_wide_round_07_20260912/supports.json": {
+              "path": "../design/fable_wide_round_07_20260912/supports.json",
+              "sha256": "87ce2291354489349a81d104e3d3fb7ae71023a2a4d26afc1e231f8818425973"
+            },
+            "design/fable_wide_round_07_20260912/characters/undertow.js": {
+              "path": "../design/fable_wide_round_07_20260912/characters/undertow.js",
+              "sha256": "d5916b5d1ae2c1479950a5a29d013145b0c6aa4fda6689294f5fbf0b8c59bd16"
+            }
+          }
+        },
+        "structuralZombie": {
+          "installer": {
+            "path": "../design/loved_zombies_round_08_20260914/install.js",
+            "sha256": "4036907d134f50a917cebe94bdee1639c3e2e98bee35373d16a16a79ee423d9d"
+          },
+          "paintVocabulary": {
+            "path": "../design/loved_zombies_round_08_20260914/paint-vocabulary.js",
+            "sha256": "9c4ea67075ac13c2454799df2bd6d2a1c4e5f9aaa92885c1260a6c815e8cd84e"
+          },
+          "plan": {
+            "path": "../design/loved_zombies_round_08_20260914/work/undertow_b/structural.json",
+            "sha256": "98501bc3d94b09634a38ec2a67f5b46f2634f3a93dc36c0572b6691fd383e9da"
+          },
+          "options": {
+            "variation": 13363,
+            "mode": "split",
+            "stalks": true,
+            "secondaryMouth": true
+          },
+          "mode": "split"
+        },
+        "wrapper": {
+          "path": "../design/loved_zombies_round_08_20260914/painter.js",
+          "sha256": "2a7e7bb537841852caeb52b262ecc85a6c20bccdbbd75e44c1df18c11227d8cf"
+        },
+        "renderer": {
+          "path": "../design/loved_zombies_round_08_20260914/render.js",
+          "sha256": "60b3edf7849175b0a00d4f69c1ebca31f7d3aab3d4187ebd78e2ab6d97ce1de8"
+        },
+        "lettering": {
+          "path": "../design/loved_zombies_round_08_20260914/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/loved_zombies_round_08_20260914/fields.json",
+          "sha256": "521bf02eb88e59c17f99839e1dddb861c6cfa7082e4444ef8e3ba40777078237"
+        },
+        "supports": {
+          "path": "../design/loved_zombies_round_08_20260914/supports.json",
+          "sha256": "630e9def5b6d4f2280d663143df7464b3d9de205062de273b49a26cc1bceba93"
+        },
+        "lightContact": {
+          "path": "../design/loved_zombies_round_08_20260914/light-contact.js",
+          "sha256": "07161702e0568b91357dcd069fecce704a020c8d038ac982bae0c17e3149ab94"
+        },
+        "lightContactReceipt": {
+          "path": "../design/loved_zombies_round_08_20260914/work/undertow_b/light_contact.json",
+          "sha256": "a4a63353d39522ef5790f5dc72f60f388fbe9c3fc2f99dfc816af4c0d5452338"
+        },
+        "portraitStick": {
+          "adapter": {
+            "path": "../design/loved_zombies_round_08_20260914/portrait-stick.js",
+            "sha256": "640dd46dcfce9a52c6576a11f7fb93c163e30a5020bda1c16e596f3b05aa1906"
+          },
+          "material": {
+            "path": "../design/loved_zombies_round_08_20260914/materials/slickstick.js",
+            "sha256": "3f95cbb8c862fda293190f292f56de861b75c159e270f436634e5e64a0035f86"
+          },
+          "receipt": {
+            "path": "../design/loved_zombies_round_08_20260914/work/undertow_b/portrait_stick.json",
+            "sha256": "3ad71cb07d0053cfb832a400a43b49cd98f3e1964f04671840b902373cc7f476"
+          },
+          "calls": 213
+        }
+      }
     }
   ],
   "rounds": [

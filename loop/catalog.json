@@ -2917,6 +2917,111 @@
       "batch": "loved_zombies_round_07_20260914",
       "slug": "hephaestus_b",
       "image": "/collection/assets/candidate-3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-demeter_a-63a9daf61ddf159f",
+      "title": "Demeter, The Last Ear of Wheat",
+      "kind": "candidate",
+      "imageHash": "63a9daf61ddf159fa7be667d5bb9d5cf022126eac21ff9d2bb5f084953c2e38d",
+      "description": "Exact loved Demeter, The Last Ear of Wheat with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "demeter_a",
+      "image": "/collection/assets/candidate-63a9daf61ddf159fa7be667d5bb9d5cf022126eac21ff9d2bb5f084953c2e38d.png",
+      "supersededBy": "candidate-loved_zombies_round_08_20260914-demeter_b-e213ed29b608045e"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-demeter_b-e213ed29b608045e",
+      "title": "Demeter, The Last Ear of Wheat",
+      "kind": "candidate",
+      "imageHash": "e213ed29b608045e379ebfd9b44f4680d54388d39a69ab7009e9f91c14429f13",
+      "description": "Exact loved Demeter, The Last Ear of Wheat with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "demeter_b",
+      "image": "/collection/assets/candidate-e213ed29b608045e379ebfd9b44f4680d54388d39a69ab7009e9f91c14429f13.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-hermes_a-431ee6dad16f9106",
+      "title": "Hermes, A Message for Tomorrow",
+      "kind": "candidate",
+      "imageHash": "431ee6dad16f9106635990538e81b9e8ba277c321df20bdef7ead58bf1316d15",
+      "description": "Exact loved Hermes, A Message for Tomorrow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "hermes_a",
+      "image": "/collection/assets/candidate-431ee6dad16f9106635990538e81b9e8ba277c321df20bdef7ead58bf1316d15.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-hermes_b-1e9f9acf3e927f4f",
+      "title": "Hermes, A Message for Tomorrow",
+      "kind": "candidate",
+      "imageHash": "1e9f9acf3e927f4fd0029a4a4a5ff7d62b2ca0df83d4609f7d49fa9943c1e58d",
+      "description": "Exact loved Hermes, A Message for Tomorrow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "hermes_b",
+      "image": "/collection/assets/candidate-1e9f9acf3e927f4fd0029a4a4a5ff7d62b2ca0df83d4609f7d49fa9943c1e58d.png",
+      "supersededBy": "candidate-loved_zombies_round_08_20260914-hermes_a-431ee6dad16f9106"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-leeloo_a-87440b2c2881398c",
+      "title": "Leeloo",
+      "kind": "candidate",
+      "imageHash": "87440b2c2881398c0d968d1bd54860d1305e866f3156a7e72f0bc8a1503d1218",
+      "description": "Exact loved Leeloo with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "leeloo_a",
+      "image": "/collection/assets/candidate-87440b2c2881398c0d968d1bd54860d1305e866f3156a7e72f0bc8a1503d1218.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-leeloo_b-4ae6b33a140ac43d",
+      "title": "Leeloo",
+      "kind": "candidate",
+      "imageHash": "4ae6b33a140ac43d6f4232927bf0cf4401933d66a6e5aefb1ec6a6b7c2590da5",
+      "description": "Exact loved Leeloo with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "leeloo_b",
+      "image": "/collection/assets/candidate-4ae6b33a140ac43d6f4232927bf0cf4401933d66a6e5aefb1ec6a6b7c2590da5.png",
+      "supersededBy": "candidate-loved_zombies_round_08_20260914-leeloo_a-87440b2c2881398c"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-ember_warden_a-a0f0f794ce381790",
+      "title": "Ember Warden",
+      "kind": "candidate",
+      "imageHash": "a0f0f794ce3817900705b5e77a28ce74d53658690a5ab7c416712d06da3046a9",
+      "description": "Exact loved Ember Warden with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "ember_warden_a",
+      "image": "/collection/assets/candidate-a0f0f794ce3817900705b5e77a28ce74d53658690a5ab7c416712d06da3046a9.png",
+      "supersededBy": "candidate-loved_zombies_round_08_20260914-ember_warden_b-37618174daed81c1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-ember_warden_b-37618174daed81c1",
+      "title": "Ember Warden",
+      "kind": "candidate",
+      "imageHash": "37618174daed81c11a7452dd5e2f2160a61140e8ca1ebde8a7c9474a12e5e61b",
+      "description": "Exact loved Ember Warden with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "ember_warden_b",
+      "image": "/collection/assets/candidate-37618174daed81c11a7452dd5e2f2160a61140e8ca1ebde8a7c9474a12e5e61b.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116",
+      "title": "Undertow",
+      "kind": "candidate",
+      "imageHash": "5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b",
+      "description": "Exact loved Undertow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "undertow_a",
+      "image": "/collection/assets/candidate-5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_08_20260914-undertow_b-e29048eb2d3b3253",
+      "title": "Undertow",
+      "kind": "candidate",
+      "imageHash": "e29048eb2d3b32532ee219c01b5b0f06c85706390a6d71eb7085da1dc55fe62f",
+      "description": "Exact loved Undertow with varied structural zombie eyes and jaws; original authored construction, proportions, props and setting preserved.",
+      "batch": "loved_zombies_round_08_20260914",
+      "slug": "undertow_b",
+      "image": "/collection/assets/candidate-e29048eb2d3b32532ee219c01b5b0f06c85706390a6d71eb7085da1dc55fe62f.png",
+      "supersededBy": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116"
     }
   ],
   "references": [
@@ -3718,6 +3823,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_07_20260914-hephaestus_b-3a46c0aa0e5412bc",
             "imageHash": "3a46c0aa0e5412bc12b10114721a4057ca37055c4a425d481ed6482c37d01263"
+          }
+        ]
+      },
+      {
+        "id": "round-28",
+        "title": "Round 28 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T03:07:49.642779+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_08_20260914-demeter_b-e213ed29b608045e",
+            "imageHash": "e213ed29b608045e379ebfd9b44f4680d54388d39a69ab7009e9f91c14429f13"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_08_20260914-hermes_a-431ee6dad16f9106",
+            "imageHash": "431ee6dad16f9106635990538e81b9e8ba277c321df20bdef7ead58bf1316d15"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_08_20260914-leeloo_a-87440b2c2881398c",
+            "imageHash": "87440b2c2881398c0d968d1bd54860d1305e866f3156a7e72f0bc8a1503d1218"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_08_20260914-ember_warden_b-37618174daed81c1",
+            "imageHash": "37618174daed81c11a7452dd5e2f2160a61140e8ca1ebde8a7c9474a12e5e61b"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_08_20260914-undertow_a-5213e1e3de55b116",
+            "imageHash": "5213e1e3de55b116176d0766f9caec590072fedc69237e42f03d9c0706ade41b"
           }
         ]
       }
