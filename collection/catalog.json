@@ -43965,6 +43965,496 @@
           "sha256": "7f6ae1c300b8b8469f306de56aec5b5a432fc65f015592c3c23f1d341760aae6"
         }
       }
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-devo-1ebeb1d9176cf167",
+      "dogId": "design-character_glow_flight_20260915-devo",
+      "title": "Devo · Glow and Flight",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3.png",
+      "imageHash": "1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_glow_flight_20260915/characters/devo.js",
+      "sourceHash": "299a1e6def10888a84cd55fee78f08dd87cdeb1ceb302ddbf8f5437760d76511",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_glow_flight_20260915/characters/devo.js",
+          "sha256": "299a1e6def10888a84cd55fee78f08dd87cdeb1ceb302ddbf8f5437760d76511"
+        }
+      ],
+      "description": "The stepped rust energy dome lifts a compact mustard dog through a warm painted ivory light. Short tucked legs hover above a separate narrow ground trace; the dome, sparse face and complete boiler suit remain the approved painting's defining shapes.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_glow_flight_20260915",
+      "slug": "devo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_glow_flight_20260915/out/devo.json",
+          "sha256": "16d3056940f5e4377fff262e731c792033bfce519bd828f7e6b7262e7ea1b4ca"
+        },
+        "cast": {
+          "path": "../design/character_glow_flight_20260915/cast.json",
+          "sha256": "1460c5fda302931d4376d342435e2e71e4bb14624ae69887005e0075bfd22683"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_glow_flight_20260915/out/devo_wide_4000.png",
+          "sha256": "b83723c8d9ac671b862f6e21dcae70754df28561e37299933ef8e6224f527833",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_glow_flight_20260915/out/devo_square_2000.png",
+          "sha256": "f42e5d5d9985476a4415d0e92deea83132ec0fdcaa9b33310e127b3554ac5623",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_glow_flight_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_glow_flight_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_glow_flight_20260915/work/devo/wide.json",
+          "sha256": "5d5faaa717a8191435d2694735d652784a144e211034914430b62f33d0dbb286"
+        },
+        "wrapper": {
+          "path": "../design/character_glow_flight_20260915/painter.js",
+          "sha256": "5e6f7108c2c8ee8d792f4dc74689fa2bd4f20ba21448f05d80708557f73fa388"
+        },
+        "renderer": {
+          "path": "../design/character_glow_flight_20260915/render.js",
+          "sha256": "8f959ec267d4ad1b1e065b2496764f8ea6a0b11e79dfe69441af4989bda75f62"
+        },
+        "lettering": {
+          "path": "../design/character_glow_flight_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_glow_flight_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_glow_flight_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_glow_flight_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_glow_flight_20260915/work/devo/light_contact.json",
+          "sha256": "6add8f843dc10de423dd6d085788d06934312ecea0aef6df266b8e9a61efefcf"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-harpo-ac8efb45da0f4b40",
+      "dogId": "design-character_glow_flight_20260915-harpo",
+      "title": "Harpo Marx · Glow and Flight",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4.png",
+      "imageHash": "ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_glow_flight_20260915/characters/harpo.js",
+      "sourceHash": "273a5eab189a78d6a8d0900f9b1f005b460d6bfed0301550221a9d9599463ef8",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_glow_flight_20260915/characters/harpo.js",
+          "sha256": "273a5eab189a78d6a8d0900f9b1f005b460d6bfed0301550221a9d9599463ef8"
+        }
+      ],
+      "description": "Harpo drifts through an oblique patch of pale light, his battered top hat and uneven blonde curls still intact. The loose cream coat floats above staggered short legs and a small detached ground trace on blue-gray cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_glow_flight_20260915",
+      "slug": "harpo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_glow_flight_20260915/out/harpo.json",
+          "sha256": "c00fa8217e331ff677e1a4f0b7ffe49f9f9f3a407ecf4dca558d0652015ba1aa"
+        },
+        "cast": {
+          "path": "../design/character_glow_flight_20260915/cast.json",
+          "sha256": "1460c5fda302931d4376d342435e2e71e4bb14624ae69887005e0075bfd22683"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_glow_flight_20260915/out/harpo_wide_4000.png",
+          "sha256": "4838a02964e534db3c7fdba7d32666f650d07bba73bd8b735e055afa74f7af01",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_glow_flight_20260915/out/harpo_square_2000.png",
+          "sha256": "553ee789f697031a98390d205cd2c3e71776d679b4c7641b4bb7426787320dec",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_glow_flight_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_glow_flight_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_glow_flight_20260915/work/harpo/wide.json",
+          "sha256": "456528ffa2566085ceab01313ecdd227439d075f8eed2fd2e1897cb25c23e1e6"
+        },
+        "wrapper": {
+          "path": "../design/character_glow_flight_20260915/painter.js",
+          "sha256": "5e6f7108c2c8ee8d792f4dc74689fa2bd4f20ba21448f05d80708557f73fa388"
+        },
+        "renderer": {
+          "path": "../design/character_glow_flight_20260915/render.js",
+          "sha256": "8f959ec267d4ad1b1e065b2496764f8ea6a0b11e79dfe69441af4989bda75f62"
+        },
+        "lettering": {
+          "path": "../design/character_glow_flight_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_glow_flight_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_glow_flight_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_glow_flight_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_glow_flight_20260915/work/harpo/light_contact.json",
+          "sha256": "56d867a237336226b06aaf07e1f3a0a56fa2811e5f78915dc37e2f4898f86e41"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-bride-9fb539a9d8e712f4",
+      "dogId": "design-character_glow_flight_20260915-bride",
+      "title": "Bride of Frankenstein · Glow and Flight",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1.png",
+      "imageHash": "9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_glow_flight_20260915/characters/bride.js",
+      "sourceHash": "4627d16743bdc42b1d0a7c597d5e353ebd451843930a1694ae1b417463c3662f",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_glow_flight_20260915/characters/bride.js",
+          "sha256": "4627d16743bdc42b1d0a7c597d5e353ebd451843930a1694ae1b417463c3662f"
+        }
+      ],
+      "description": "The long ivory Bride levitates almost level above a separate plum ground shadow. Unequal pale electrical light frames the towering black hair while the small native face and broad wrapped body remain against dark plum.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_glow_flight_20260915",
+      "slug": "bride",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_glow_flight_20260915/out/bride.json",
+          "sha256": "fd572755640e8a547646af8b86d60c3836b7b7dce1a918086ae618445b33facc"
+        },
+        "cast": {
+          "path": "../design/character_glow_flight_20260915/cast.json",
+          "sha256": "1460c5fda302931d4376d342435e2e71e4bb14624ae69887005e0075bfd22683"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_glow_flight_20260915/out/bride_wide_4000.png",
+          "sha256": "40c54451faa367cb2d01cc62a0b9b33c0e329208abdedfaaecc492864bdee2a1",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_glow_flight_20260915/out/bride_square_2000.png",
+          "sha256": "3b7071363917bc9a1c098784faeef74262759042cd3f06b111552c997def6961",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_glow_flight_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_glow_flight_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_glow_flight_20260915/work/bride/wide.json",
+          "sha256": "494d4272613880dca760cb9cfd08b746ba7b29ee82956f1a46693c489c2ba4b4"
+        },
+        "wrapper": {
+          "path": "../design/character_glow_flight_20260915/painter.js",
+          "sha256": "5e6f7108c2c8ee8d792f4dc74689fa2bd4f20ba21448f05d80708557f73fa388"
+        },
+        "renderer": {
+          "path": "../design/character_glow_flight_20260915/render.js",
+          "sha256": "8f959ec267d4ad1b1e065b2496764f8ea6a0b11e79dfe69441af4989bda75f62"
+        },
+        "lettering": {
+          "path": "../design/character_glow_flight_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_glow_flight_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_glow_flight_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_glow_flight_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_glow_flight_20260915/work/bride/light_contact.json",
+          "sha256": "5ba5094ceb07e0f4db8ad9bb5ecd54dbbfbf7ebee3ab9fec84987d96955af255"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-cyndi-35bd31c93f173c31",
+      "dogId": "design-character_glow_flight_20260915-cyndi",
+      "title": "Cyndi Lauper · Glow and Flight",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb.png",
+      "imageHash": "35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_glow_flight_20260915/characters/cyndi.js",
+      "sourceHash": "194b6a62c8fe2c5d0d30f3d9355ee95e332190bf9e5b66a766f2e2a9d2c4b010",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_glow_flight_20260915/characters/cyndi.js",
+          "sha256": "194b6a62c8fe2c5d0d30f3d9355ee95e332190bf9e5b66a766f2e2a9d2c4b010"
+        }
+      ],
+      "description": "Cyndi rises diagonally toward the left, coral hair and blue-violet coat crossing a broken slant of pale gold and cool light. A reaching coral foreleg, tucked rear stance and detached ground shadow make the native dog airborne.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_glow_flight_20260915",
+      "slug": "cyndi",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_glow_flight_20260915/out/cyndi.json",
+          "sha256": "3c19c396f0accc25a163c2275e8d112380c2021f296f29338497fb1d9a139ed3"
+        },
+        "cast": {
+          "path": "../design/character_glow_flight_20260915/cast.json",
+          "sha256": "1460c5fda302931d4376d342435e2e71e4bb14624ae69887005e0075bfd22683"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_glow_flight_20260915/out/cyndi_wide_4000.png",
+          "sha256": "6a9910279716568bb7d988265f1bdf3948b4e6f1b3bfcc051b0ce100dca4c22b",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_glow_flight_20260915/out/cyndi_square_2000.png",
+          "sha256": "308674deec11a03fb87a5a22351e1bf05014c992da359cbf4db8b5696300e3ae",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_glow_flight_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_glow_flight_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_glow_flight_20260915/work/cyndi/wide.json",
+          "sha256": "2d389361c9985a7a7b8b8eaf8cbbb216b3fab5701410d38b30b15b4406b1d893"
+        },
+        "wrapper": {
+          "path": "../design/character_glow_flight_20260915/painter.js",
+          "sha256": "5e6f7108c2c8ee8d792f4dc74689fa2bd4f20ba21448f05d80708557f73fa388"
+        },
+        "renderer": {
+          "path": "../design/character_glow_flight_20260915/render.js",
+          "sha256": "8f959ec267d4ad1b1e065b2496764f8ea6a0b11e79dfe69441af4989bda75f62"
+        },
+        "lettering": {
+          "path": "../design/character_glow_flight_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_glow_flight_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_glow_flight_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_glow_flight_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_glow_flight_20260915/work/cyndi/light_contact.json",
+          "sha256": "e3e46e644a09d0198655bf57c61f7d91afa3d1197e15be38572b75abd1d39100"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-rambo-893acc021923b026",
+      "dogId": "design-character_glow_flight_20260915-rambo",
+      "title": "Rambo · Glow and Flight",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560.png",
+      "imageHash": "893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_glow_flight_20260915/characters/rambo.js",
+      "sourceHash": "be7700753b04eab1560dcf7f3ca385fd7eab9fc940828d8381d9d64272421604",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_glow_flight_20260915/characters/rambo.js",
+          "sha256": "be7700753b04eab1560dcf7f3ca385fd7eab9fc940828d8381d9d64272421604"
+        }
+      ],
+      "description": "Rambo floats forward with tucked legs. Warm ivory evening light shows around the ragged dark mane and catches two interrupted edges of his tan back; a short blue-grey shadow stays on the ground.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_glow_flight_20260915",
+      "slug": "rambo",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_glow_flight_20260915/out/rambo.json",
+          "sha256": "acacc391b4a77a8566317257f10efc4fa0ecd7dd266acd877457139c92d154e3"
+        },
+        "cast": {
+          "path": "../design/character_glow_flight_20260915/cast.json",
+          "sha256": "1460c5fda302931d4376d342435e2e71e4bb14624ae69887005e0075bfd22683"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_glow_flight_20260915/out/rambo_wide_4000.png",
+          "sha256": "628e678357e92fb8886c4401a36b702f05e289dbecaed076217af56752d3a10e",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_glow_flight_20260915/out/rambo_square_2000.png",
+          "sha256": "fcb941d7251dc90fd1079f634ae40d8e820ec36e9e1a2db68083b5c20467a745",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_glow_flight_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_glow_flight_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_glow_flight_20260915/work/rambo/wide.json",
+          "sha256": "c53c9881479064907085130616fdb1dd54db68156ebd251b3c991a236955b78e"
+        },
+        "wrapper": {
+          "path": "../design/character_glow_flight_20260915/painter.js",
+          "sha256": "5e6f7108c2c8ee8d792f4dc74689fa2bd4f20ba21448f05d80708557f73fa388"
+        },
+        "renderer": {
+          "path": "../design/character_glow_flight_20260915/render.js",
+          "sha256": "8f959ec267d4ad1b1e065b2496764f8ea6a0b11e79dfe69441af4989bda75f62"
+        },
+        "lettering": {
+          "path": "../design/character_glow_flight_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_glow_flight_20260915/fields.json",
+          "sha256": "22eb9021f93a8e60aa4b1c1d33d3c53f4329e12a8d03d5c7a0d5046b2fb61edd"
+        },
+        "supports": {
+          "path": "../design/character_glow_flight_20260915/supports.json",
+          "sha256": "4add3d6fec6668454439f28da42eacacff4c0c130b505e937e1ae0def7f75ca0"
+        },
+        "lightContact": {
+          "path": "../design/character_glow_flight_20260915/light-contact.js",
+          "sha256": "dad22847f07be83d62840937db95288f335f03b5574b20e3d66a91a81d37ddd0"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_glow_flight_20260915/work/rambo/light_contact.json",
+          "sha256": "2a70fec7c35bd5576c9a6aef343252f4760ce0dbcf34b8cde12f9e722bd52cf5"
+        }
+      }
     }
   ],
   "rounds": [

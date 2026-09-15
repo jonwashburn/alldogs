@@ -3658,6 +3658,56 @@
       "batch": "character_round_34_devo_b_20260915",
       "slug": "devo",
       "image": "/collection/assets/candidate-c34eca9fe470b1b83f9470885c3d15ebff125b399ad6841028e142d976dc7f06.png"
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-devo-1ebeb1d9176cf167",
+      "title": "Devo \u00b7 Glow and Flight",
+      "kind": "candidate",
+      "imageHash": "1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3",
+      "description": "The stepped rust energy dome lifts a compact mustard dog through a warm painted ivory light. Short tucked legs hover above a separate narrow ground trace; the dome, sparse face and complete boiler suit remain the approved painting's defining shapes.",
+      "batch": "character_glow_flight_20260915",
+      "slug": "devo",
+      "image": "/collection/assets/candidate-1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3.png"
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-harpo-ac8efb45da0f4b40",
+      "title": "Harpo Marx \u00b7 Glow and Flight",
+      "kind": "candidate",
+      "imageHash": "ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4",
+      "description": "Harpo drifts through an oblique patch of pale light, his battered top hat and uneven blonde curls still intact. The loose cream coat floats above staggered short legs and a small detached ground trace on blue-gray cotton.",
+      "batch": "character_glow_flight_20260915",
+      "slug": "harpo",
+      "image": "/collection/assets/candidate-ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4.png"
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-bride-9fb539a9d8e712f4",
+      "title": "Bride of Frankenstein \u00b7 Glow and Flight",
+      "kind": "candidate",
+      "imageHash": "9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1",
+      "description": "The long ivory Bride levitates almost level above a separate plum ground shadow. Unequal pale electrical light frames the towering black hair while the small native face and broad wrapped body remain against dark plum.",
+      "batch": "character_glow_flight_20260915",
+      "slug": "bride",
+      "image": "/collection/assets/candidate-9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1.png"
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-cyndi-35bd31c93f173c31",
+      "title": "Cyndi Lauper \u00b7 Glow and Flight",
+      "kind": "candidate",
+      "imageHash": "35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb",
+      "description": "Cyndi rises diagonally toward the left, coral hair and blue-violet coat crossing a broken slant of pale gold and cool light. A reaching coral foreleg, tucked rear stance and detached ground shadow make the native dog airborne.",
+      "batch": "character_glow_flight_20260915",
+      "slug": "cyndi",
+      "image": "/collection/assets/candidate-35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb.png"
+    },
+    {
+      "id": "candidate-character_glow_flight_20260915-rambo-893acc021923b026",
+      "title": "Rambo \u00b7 Glow and Flight",
+      "kind": "candidate",
+      "imageHash": "893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560",
+      "description": "Rambo floats forward with tucked legs. Warm ivory evening light shows around the ragged dark mane and catches two interrupted edges of his tan back; a short blue-grey shadow stays on the ground.",
+      "batch": "character_glow_flight_20260915",
+      "slug": "rambo",
+      "image": "/collection/assets/candidate-893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560.png"
     }
   ],
   "references": [
@@ -4648,6 +4698,33 @@
           {
             "candidateId": "candidate-character_round_34_20260915-rambo-790b2e801b032d4d",
             "imageHash": "790b2e801b032d4d43fd751cd4cc0aecbcbfb3f6e36599440ade9bb23c8ee39b"
+          }
+        ]
+      },
+      {
+        "id": "round-35",
+        "title": "Round 35: Glow & Flight",
+        "frozenAt": "2026-09-15T15:13:40.236349+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_glow_flight_20260915-devo-1ebeb1d9176cf167",
+            "imageHash": "1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3"
+          },
+          {
+            "candidateId": "candidate-character_glow_flight_20260915-harpo-ac8efb45da0f4b40",
+            "imageHash": "ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4"
+          },
+          {
+            "candidateId": "candidate-character_glow_flight_20260915-bride-9fb539a9d8e712f4",
+            "imageHash": "9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1"
+          },
+          {
+            "candidateId": "candidate-character_glow_flight_20260915-cyndi-35bd31c93f173c31",
+            "imageHash": "35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb"
+          },
+          {
+            "candidateId": "candidate-character_glow_flight_20260915-rambo-893acc021923b026",
+            "imageHash": "893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560"
           }
         ]
       }
