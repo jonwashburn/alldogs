@@ -3495,6 +3495,56 @@
       "slug": "persephone_b",
       "image": "/collection/assets/candidate-c801b096b6dea17cb5561d9fa575d87a2e1fdff98f3431e9486299c870e0c1e6.png",
       "supersededBy": "candidate-loved_zombies_round_13_20260914-persephone_a-9d1956b98b4246a3"
+    },
+    {
+      "id": "candidate-character_round_33_20260915-miss_piggy-529467c71daee4b8",
+      "title": "Miss Piggy",
+      "kind": "candidate",
+      "imageHash": "529467c71daee4b8838a061d8d06afb394aeccb7206c3987f5d9c525bb6b4999",
+      "description": "Miss Piggy: blonde waves, a pink face and fuchsia gown with a long violet glove against deep teal cotton.",
+      "batch": "character_round_33_20260915",
+      "slug": "miss_piggy",
+      "image": "/collection/assets/candidate-529467c71daee4b8838a061d8d06afb394aeccb7206c3987f5d9c525bb6b4999.png"
+    },
+    {
+      "id": "candidate-character_round_33_20260915-rodman-a7d5cef48da398c9",
+      "title": "Dennis Rodman",
+      "kind": "candidate",
+      "imageHash": "a7d5cef48da398c9fad95cc35b0e29d8b50731b705076df550e633ca8206bdbc",
+      "description": "Dennis Rodman: acid-green cropped hair, a red jersey and a long-legged stride against pale violet cotton.",
+      "batch": "character_round_33_20260915",
+      "slug": "rodman",
+      "image": "/collection/assets/candidate-a7d5cef48da398c9fad95cc35b0e29d8b50731b705076df550e633ca8206bdbc.png"
+    },
+    {
+      "id": "candidate-character_round_33_20260915-klaus_nomi-b453d8a3a59d36e2",
+      "title": "Klaus Nomi",
+      "kind": "candidate",
+      "imageHash": "b453d8a3a59d36e21993d2f1969ba6e48557c1f4c2d1f06243214d3721ccd123",
+      "description": "Klaus Nomi: a chalk face and breast beneath a low black crest, framed by angular black shoulders against acid-green cotton.",
+      "batch": "character_round_33_20260915",
+      "slug": "klaus_nomi",
+      "image": "/collection/assets/candidate-b453d8a3a59d36e21993d2f1969ba6e48557c1f4c2d1f06243214d3721ccd123.png"
+    },
+    {
+      "id": "candidate-character_round_33_20260915-eartha-920d3c6503638a8d",
+      "title": "Eartha Kitt, Catwoman",
+      "kind": "candidate",
+      "imageHash": "920d3c6503638a8d631da4542af91ea0efc62fd1ad4fee46693007f63623fb58",
+      "description": "Eartha Kitt as Catwoman: a warm brown face, small pointed black headpiece and a long dark suit with broken gold accents against coral cotton.",
+      "batch": "character_round_33_20260915",
+      "slug": "eartha",
+      "image": "/collection/assets/candidate-920d3c6503638a8d631da4542af91ea0efc62fd1ad4fee46693007f63623fb58.png"
+    },
+    {
+      "id": "candidate-character_round_33_20260915-dame_edna-fcecff696ef374cf",
+      "title": "Dame Edna",
+      "kind": "candidate",
+      "imageHash": "fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8",
+      "description": "Dame Edna: lilac bouffant, red winged glasses, a broad blue kaftan and a little coral flower detail against ochre cotton.",
+      "batch": "character_round_33_20260915",
+      "slug": "dame_edna",
+      "image": "/collection/assets/candidate-fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8.png"
     }
   ],
   "references": [
@@ -4431,6 +4481,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_11_repairs_20260914-amelia_b-7a0c7452f7831f22",
             "imageHash": "7a0c7452f7831f22b8865dc0d1e3cd288d989d5dc2f5f4a87853f2408c7d4504"
+          }
+        ]
+      },
+      {
+        "id": "round-33",
+        "title": "Round 33",
+        "frozenAt": "2026-09-15T12:33:52.280219+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-character_round_33_20260915-miss_piggy-529467c71daee4b8",
+            "imageHash": "529467c71daee4b8838a061d8d06afb394aeccb7206c3987f5d9c525bb6b4999"
+          },
+          {
+            "candidateId": "candidate-character_round_33_20260915-rodman-a7d5cef48da398c9",
+            "imageHash": "a7d5cef48da398c9fad95cc35b0e29d8b50731b705076df550e633ca8206bdbc"
+          },
+          {
+            "candidateId": "candidate-character_round_33_20260915-klaus_nomi-b453d8a3a59d36e2",
+            "imageHash": "b453d8a3a59d36e21993d2f1969ba6e48557c1f4c2d1f06243214d3721ccd123"
+          },
+          {
+            "candidateId": "candidate-character_round_33_20260915-eartha-920d3c6503638a8d",
+            "imageHash": "920d3c6503638a8d631da4542af91ea0efc62fd1ad4fee46693007f63623fb58"
+          },
+          {
+            "candidateId": "candidate-character_round_33_20260915-dame_edna-fcecff696ef374cf",
+            "imageHash": "fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8"
           }
         ]
       }

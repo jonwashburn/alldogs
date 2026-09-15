@@ -42397,6 +42397,496 @@
           "calls": 227
         }
       }
+    },
+    {
+      "id": "candidate-character_round_33_20260915-miss_piggy-529467c71daee4b8",
+      "dogId": "design-character_round_33_20260915-miss_piggy",
+      "title": "Miss Piggy",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-529467c71daee4b8838a061d8d06afb394aeccb7206c3987f5d9c525bb6b4999.png",
+      "imageHash": "529467c71daee4b8838a061d8d06afb394aeccb7206c3987f5d9c525bb6b4999",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/character_round_33_20260915/characters/miss_piggy.js",
+      "sourceHash": "ff2fc5d09e23805bbaf3cf9b1d050b57c0c4ed79ecb6c97d0324f0dc90972f83",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_33_20260915/characters/miss_piggy.js",
+          "sha256": "ff2fc5d09e23805bbaf3cf9b1d050b57c0c4ed79ecb6c97d0324f0dc90972f83"
+        }
+      ],
+      "description": "Miss Piggy: blonde waves, a pink face and fuchsia gown with a long violet glove against deep teal cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_33_20260915",
+      "slug": "miss_piggy",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_33_20260915/out/miss_piggy.json",
+          "sha256": "cf2e5a9e9d13acd46801b9431637c974c1ee045ecebd24946d88ccbd270a4829"
+        },
+        "cast": {
+          "path": "../design/character_round_33_20260915/cast.json",
+          "sha256": "d5cffdab6e91eaf24ce3ab0a704ec97c39434af71f157243b49a15dd1e3cab0e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_33_20260915/out/miss_piggy_wide_4000.png",
+          "sha256": "1767ede63da452f7789b8d410a2af569998ee14184902f030246dbeed70d9bb7",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_33_20260915/out/miss_piggy_square_2000.png",
+          "sha256": "49618e79ddf521d09a869559d4ab3bd06c1593dc238956c4ffac3f1887817a15",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_33_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_33_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_33_20260915/work/miss_piggy/wide.json",
+          "sha256": "afba5ed0fc011a0f83ad00c27b7470b9acb0a670c52a5113ab7610b832c4ec2d"
+        },
+        "wrapper": {
+          "path": "../design/character_round_33_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_33_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_33_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_33_20260915/fields.json",
+          "sha256": "41092b8c1d9dd2bd4da6d4572fae1aa70a2447ca53ba12552ea5afdee429ae54"
+        },
+        "supports": {
+          "path": "../design/character_round_33_20260915/supports.json",
+          "sha256": "9a293a7b32d30a2dd2eb4d8f2137e0945bae56b1e6ad769932e381039c2d4d73"
+        },
+        "lightContact": {
+          "path": "../design/character_round_33_20260915/light-contact.js",
+          "sha256": "b45e63d38da757bc6d97bd192984a2c5dc3757403ce890a4afe0b00d938056b1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_33_20260915/work/miss_piggy/light_contact.json",
+          "sha256": "aa4f71170b2dd7ac11ba28d82e2675e886aefd105c7e2702ff828ef06db410ad"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_33_20260915-rodman-a7d5cef48da398c9",
+      "dogId": "design-character_round_33_20260915-rodman",
+      "title": "Dennis Rodman",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-a7d5cef48da398c9fad95cc35b0e29d8b50731b705076df550e633ca8206bdbc.png",
+      "imageHash": "a7d5cef48da398c9fad95cc35b0e29d8b50731b705076df550e633ca8206bdbc",
+      "parent": "original-41-1363fc8e91acf2b5",
+      "nativeParentSeed": 41,
+      "source": "../design/character_round_33_20260915/characters/rodman.js",
+      "sourceHash": "b7016d212e1aba17086e478ae1c8340cd30dc0edf679966e7b7dd69200615ca4",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_33_20260915/characters/rodman.js",
+          "sha256": "b7016d212e1aba17086e478ae1c8340cd30dc0edf679966e7b7dd69200615ca4"
+        }
+      ],
+      "description": "Dennis Rodman: acid-green cropped hair, a red jersey and a long-legged stride against pale violet cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_33_20260915",
+      "slug": "rodman",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_33_20260915/out/rodman.json",
+          "sha256": "b63c651932aed61fca6c429d3769934e318fc8aa447ae0dd96d5ba8244d71a62"
+        },
+        "cast": {
+          "path": "../design/character_round_33_20260915/cast.json",
+          "sha256": "d5cffdab6e91eaf24ce3ab0a704ec97c39434af71f157243b49a15dd1e3cab0e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_33_20260915/out/rodman_wide_4000.png",
+          "sha256": "8375ab57d2ae38c53e7f9252649285d84de6a3564c605a66bc7c0c0d32a6bd89",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_33_20260915/out/rodman_square_2000.png",
+          "sha256": "19c1be94373ed4b0cea1e2009dbea6a095347af2dbc813d3252aa78835d4920b",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_33_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_33_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_33_20260915/work/rodman/wide.json",
+          "sha256": "f32871b60ac4391650218cf55aecef21eb828e75e2f5d346016e5bf2e54ae746"
+        },
+        "wrapper": {
+          "path": "../design/character_round_33_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_33_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_33_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_33_20260915/fields.json",
+          "sha256": "41092b8c1d9dd2bd4da6d4572fae1aa70a2447ca53ba12552ea5afdee429ae54"
+        },
+        "supports": {
+          "path": "../design/character_round_33_20260915/supports.json",
+          "sha256": "9a293a7b32d30a2dd2eb4d8f2137e0945bae56b1e6ad769932e381039c2d4d73"
+        },
+        "lightContact": {
+          "path": "../design/character_round_33_20260915/light-contact.js",
+          "sha256": "b45e63d38da757bc6d97bd192984a2c5dc3757403ce890a4afe0b00d938056b1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_33_20260915/work/rodman/light_contact.json",
+          "sha256": "e78d9ee9e5be5c7f3d304b1e0c2b7584f13a1e907b8d6ebf4ac1ea0eab87a89d"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_33_20260915-klaus_nomi-b453d8a3a59d36e2",
+      "dogId": "design-character_round_33_20260915-klaus_nomi",
+      "title": "Klaus Nomi",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-b453d8a3a59d36e21993d2f1969ba6e48557c1f4c2d1f06243214d3721ccd123.png",
+      "imageHash": "b453d8a3a59d36e21993d2f1969ba6e48557c1f4c2d1f06243214d3721ccd123",
+      "parent": "original-63-55f1aca66b25a384",
+      "nativeParentSeed": 63,
+      "source": "../design/character_round_33_20260915/characters/klaus_nomi.js",
+      "sourceHash": "9c8e682d786eab02b31f25fd5241cfd13e07ae3f31020f43a3cfe53f9c828671",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_33_20260915/characters/klaus_nomi.js",
+          "sha256": "9c8e682d786eab02b31f25fd5241cfd13e07ae3f31020f43a3cfe53f9c828671"
+        }
+      ],
+      "description": "Klaus Nomi: a chalk face and breast beneath a low black crest, framed by angular black shoulders against acid-green cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_33_20260915",
+      "slug": "klaus_nomi",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_33_20260915/out/klaus_nomi.json",
+          "sha256": "3266fd88750f24be0a07d37413c87732cc0022e50daada0526d3c1c26d9de453"
+        },
+        "cast": {
+          "path": "../design/character_round_33_20260915/cast.json",
+          "sha256": "d5cffdab6e91eaf24ce3ab0a704ec97c39434af71f157243b49a15dd1e3cab0e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_33_20260915/out/klaus_nomi_wide_4000.png",
+          "sha256": "ae7c5151e2cd64c0eb7a82df54ec119f306735af6df03c518479fcf02b27e89c",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_33_20260915/out/klaus_nomi_square_2000.png",
+          "sha256": "00eade0eaf469c766e0c5a77c367c8ed53f4bff696918e80cd28a93220d2f6b1",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_33_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_33_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_33_20260915/work/klaus_nomi/wide.json",
+          "sha256": "94ee64afcf2d700b5dd1443e67eb84486843c71eb9c748e063157ae1b5bf843d"
+        },
+        "wrapper": {
+          "path": "../design/character_round_33_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_33_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_33_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_33_20260915/fields.json",
+          "sha256": "41092b8c1d9dd2bd4da6d4572fae1aa70a2447ca53ba12552ea5afdee429ae54"
+        },
+        "supports": {
+          "path": "../design/character_round_33_20260915/supports.json",
+          "sha256": "9a293a7b32d30a2dd2eb4d8f2137e0945bae56b1e6ad769932e381039c2d4d73"
+        },
+        "lightContact": {
+          "path": "../design/character_round_33_20260915/light-contact.js",
+          "sha256": "b45e63d38da757bc6d97bd192984a2c5dc3757403ce890a4afe0b00d938056b1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_33_20260915/work/klaus_nomi/light_contact.json",
+          "sha256": "883401a4d9e6178776de67df892d0277f6101fa8cfa2659a272e7b6aa0b7747a"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_33_20260915-eartha-920d3c6503638a8d",
+      "dogId": "design-character_round_33_20260915-eartha",
+      "title": "Eartha Kitt, Catwoman",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-920d3c6503638a8d631da4542af91ea0efc62fd1ad4fee46693007f63623fb58.png",
+      "imageHash": "920d3c6503638a8d631da4542af91ea0efc62fd1ad4fee46693007f63623fb58",
+      "parent": "original-88-26bf0f0fdd814074",
+      "nativeParentSeed": 88,
+      "source": "../design/character_round_33_20260915/characters/eartha.js",
+      "sourceHash": "deca03f39e68357255f0cfb7ce12d845a49f5b3042343584fda389c436a2413f",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_33_20260915/characters/eartha.js",
+          "sha256": "deca03f39e68357255f0cfb7ce12d845a49f5b3042343584fda389c436a2413f"
+        }
+      ],
+      "description": "Eartha Kitt as Catwoman: a warm brown face, small pointed black headpiece and a long dark suit with broken gold accents against coral cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_33_20260915",
+      "slug": "eartha",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_33_20260915/out/eartha.json",
+          "sha256": "a128c6bc8b53a631a19d016eaf404af314b11cfdecfd384b505754c6e27f4c6c"
+        },
+        "cast": {
+          "path": "../design/character_round_33_20260915/cast.json",
+          "sha256": "d5cffdab6e91eaf24ce3ab0a704ec97c39434af71f157243b49a15dd1e3cab0e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_33_20260915/out/eartha_wide_4000.png",
+          "sha256": "08e988a60a7e70d6dc0e5cc34e9aa8a260c2b0c1c3c013af5474f9443f76e2a5",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_33_20260915/out/eartha_square_2000.png",
+          "sha256": "4141ab56c1a263073f9c335802f6926de3d787b0a5412fcd3d159b5b096974d8",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_33_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_33_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_33_20260915/work/eartha/wide.json",
+          "sha256": "c446e66b0355897756f0dde50d22be55235ea90a25f56a8a0b3579e2cccbe896"
+        },
+        "wrapper": {
+          "path": "../design/character_round_33_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_33_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_33_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_33_20260915/fields.json",
+          "sha256": "41092b8c1d9dd2bd4da6d4572fae1aa70a2447ca53ba12552ea5afdee429ae54"
+        },
+        "supports": {
+          "path": "../design/character_round_33_20260915/supports.json",
+          "sha256": "9a293a7b32d30a2dd2eb4d8f2137e0945bae56b1e6ad769932e381039c2d4d73"
+        },
+        "lightContact": {
+          "path": "../design/character_round_33_20260915/light-contact.js",
+          "sha256": "b45e63d38da757bc6d97bd192984a2c5dc3757403ce890a4afe0b00d938056b1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_33_20260915/work/eartha/light_contact.json",
+          "sha256": "433ce43b43b0bca141f784c2b0ac14ddb0db57190590d092097d1ed98c05ece6"
+        }
+      }
+    },
+    {
+      "id": "candidate-character_round_33_20260915-dame_edna-fcecff696ef374cf",
+      "dogId": "design-character_round_33_20260915-dame_edna",
+      "title": "Dame Edna",
+      "number": null,
+      "kind": "candidate",
+      "image": "assets/candidate-fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8.png",
+      "imageHash": "fcecff696ef374cf08554aca1991e882a0845abefb88ac7f0593f215d3b3b0e8",
+      "parent": "original-60-3a5e5c7b7aee2a00",
+      "nativeParentSeed": 60,
+      "source": "../design/character_round_33_20260915/characters/dame_edna.js",
+      "sourceHash": "6ed837e76f6908f9652e4df7379f488cb3ee1edb2ec52d513520911375339baa",
+      "sources": [
+        {
+          "role": "native_character",
+          "path": "../design/character_round_33_20260915/characters/dame_edna.js",
+          "sha256": "6ed837e76f6908f9652e4df7379f488cb3ee1edb2ec52d513520911375339baa"
+        }
+      ],
+      "description": "Dame Edna: lilac bouffant, red winged glasses, a broad blue kaftan and a little coral flower detail against ochre cotton.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Final saved native design; no mint number assigned.",
+      "prop": null,
+      "batch": "character_round_33_20260915",
+      "slug": "dame_edna",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/character_round_33_20260915/out/dame_edna.json",
+          "sha256": "428d24e6a1370c27f06266939149745aa80e15a67be5820fb7108e5173b7bcf3"
+        },
+        "cast": {
+          "path": "../design/character_round_33_20260915/cast.json",
+          "sha256": "d5cffdab6e91eaf24ce3ab0a704ec97c39434af71f157243b49a15dd1e3cab0e"
+        },
+        "nativeBaseline": {
+          "path": "../design/generative_foundation_20260909/painter_baseline.js",
+          "sha256": "958f95be73fd08b61f6deab503748ccada079af901f44f8ce5efeac8cecae12e"
+        },
+        "wideMaster": {
+          "path": "../design/character_round_33_20260915/out/dame_edna_wide_4000.png",
+          "sha256": "6f265197e4f8fe7f66cd4250ffbf605ffa0402d45306c5469395d6255355a1a8",
+          "width": 4000,
+          "height": 2000
+        },
+        "sellingCrop": {
+          "path": "../design/character_round_33_20260915/out/dame_edna_square_2000.png",
+          "sha256": "6f63f32f53a137ecd89135a236a43fc369551158a50c28fde765f6b1647d7603",
+          "width": 2000,
+          "height": 2000
+        },
+        "wideAdapter": {
+          "path": "../design/character_round_33_20260915/wide_adapter.js",
+          "sha256": "0568d5a5d5239a347ae3aa7cb699e6ea033d7a729c8b00839ce395059c22417a"
+        },
+        "cropSource": {
+          "path": "../design/character_round_33_20260915/crop_wide.py",
+          "sha256": "8a6feb5dcb4214b7f8cfb7b0adfe669da7d9669c711960d0b8740e2f4c4030e7"
+        },
+        "wideRecording": {
+          "path": "../design/character_round_33_20260915/work/dame_edna/wide.json",
+          "sha256": "b26c7930172e66c6de69229ddd77c83ee9f8b4ae7c43d155bc304594b11a6b04"
+        },
+        "wrapper": {
+          "path": "../design/character_round_33_20260915/painter.js",
+          "sha256": "da4fcd9a43d526029b871df76120d25bdbb89c37fd9cfe1704e2f77233443ca0"
+        },
+        "renderer": {
+          "path": "../design/character_round_33_20260915/render.js",
+          "sha256": "976bf6ed0c3157a8f251f27e8e3f483251eaa4d3cbb7ee1886dde009c9f97dc7"
+        },
+        "lettering": {
+          "path": "../design/character_round_33_20260915/lettering.js",
+          "sha256": "e1f692a960501e9eb44717fe03fce39c50fe6c06fc3303d4c9871feafbbf6e06"
+        },
+        "fields": {
+          "path": "../design/character_round_33_20260915/fields.json",
+          "sha256": "41092b8c1d9dd2bd4da6d4572fae1aa70a2447ca53ba12552ea5afdee429ae54"
+        },
+        "supports": {
+          "path": "../design/character_round_33_20260915/supports.json",
+          "sha256": "9a293a7b32d30a2dd2eb4d8f2137e0945bae56b1e6ad769932e381039c2d4d73"
+        },
+        "lightContact": {
+          "path": "../design/character_round_33_20260915/light-contact.js",
+          "sha256": "b45e63d38da757bc6d97bd192984a2c5dc3757403ce890a4afe0b00d938056b1"
+        },
+        "lightContactReceipt": {
+          "path": "../design/character_round_33_20260915/work/dame_edna/light_contact.json",
+          "sha256": "640a7389f9cd41570afddc3af9dff08bba565899d0d4a2aa0c21b4d368d46da7"
+        }
+      }
     }
   ],
   "rounds": [
