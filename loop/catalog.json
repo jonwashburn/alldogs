@@ -2420,6 +2420,111 @@
       "slug": "nipper_b",
       "image": "/collection/assets/candidate-19751987854af78a1852c6b96b5afda47e700c7bb952d76f9b5a2b79f037e166.png",
       "supersededBy": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-gustav_a-f6e6ff013e49d24a",
+      "title": "Gustav",
+      "kind": "candidate",
+      "imageHash": "f6e6ff013e49d24aefc6bc976d0bff0d19be5540e1928a2b55ec7394a75fadef",
+      "description": "Gustav with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "gustav_a",
+      "image": "/collection/assets/candidate-f6e6ff013e49d24aefc6bc976d0bff0d19be5540e1928a2b55ec7394a75fadef.png",
+      "supersededBy": "candidate-loved_zombies_round_04_20260914-gustav_b-b3dcffab1d59835e"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-gustav_b-b3dcffab1d59835e",
+      "title": "Gustav",
+      "kind": "candidate",
+      "imageHash": "b3dcffab1d59835e27cedcc25847e54e95f83f75f59f1faee5a5856b92875818",
+      "description": "Gustav with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "gustav_b",
+      "image": "/collection/assets/candidate-b3dcffab1d59835e27cedcc25847e54e95f83f75f59f1faee5a5856b92875818.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-rene_a-fdf043b44bb62329",
+      "title": "Rene",
+      "kind": "candidate",
+      "imageHash": "fdf043b44bb62329c8c32bcf7f8d3c8ad7cb8b0ea47c04d7d37438bea5107e09",
+      "description": "Rene with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "rene_a",
+      "image": "/collection/assets/candidate-fdf043b44bb62329c8c32bcf7f8d3c8ad7cb8b0ea47c04d7d37438bea5107e09.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-rene_b-354089f5b2f66686",
+      "title": "Rene",
+      "kind": "candidate",
+      "imageHash": "354089f5b2f6668612fc699e74002e0d7133aeb13776301a87fdf69611611345",
+      "description": "Rene with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "rene_b",
+      "image": "/collection/assets/candidate-354089f5b2f6668612fc699e74002e0d7133aeb13776301a87fdf69611611345.png",
+      "supersededBy": "candidate-loved_zombies_round_04_20260914-rene_a-fdf043b44bb62329"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-little_richard_a-f1e5d5f9dc0c9502",
+      "title": "Little Richard",
+      "kind": "candidate",
+      "imageHash": "f1e5d5f9dc0c95029ea27e4f7958c5f3e315a411292890b742e738cb5167af29",
+      "description": "Little Richard with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "little_richard_a",
+      "image": "/collection/assets/candidate-f1e5d5f9dc0c95029ea27e4f7958c5f3e315a411292890b742e738cb5167af29.png",
+      "supersededBy": "candidate-loved_zombies_round_04_20260914-little_richard_b-26f879d4112a98a1"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-little_richard_b-26f879d4112a98a1",
+      "title": "Little Richard",
+      "kind": "candidate",
+      "imageHash": "26f879d4112a98a1da4f2a62909f875941fa5ed659831f89b0036b703f598c4f",
+      "description": "Little Richard with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "little_richard_b",
+      "image": "/collection/assets/candidate-26f879d4112a98a1da4f2a62909f875941fa5ed659831f89b0036b703f598c4f.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-william_a-cc72d6244cc3ffe9",
+      "title": "William",
+      "kind": "candidate",
+      "imageHash": "cc72d6244cc3ffe9c88ae28acffce120449bff20143df579bf344f9cdbb8364c",
+      "description": "William with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "william_a",
+      "image": "/collection/assets/candidate-cc72d6244cc3ffe9c88ae28acffce120449bff20143df579bf344f9cdbb8364c.png",
+      "supersededBy": "candidate-loved_zombies_round_04_20260914-william_b-88e583c75b02f15b"
+    },
+    {
+      "id": "candidate-loved_zombies_round_04_20260914-william_b-88e583c75b02f15b",
+      "title": "William",
+      "kind": "candidate",
+      "imageHash": "88e583c75b02f15b9b20dada01bdd942a2d13617bd908a70d793634de6168576",
+      "description": "William with structural zombie eyes and mouth; native costume and props preserved.",
+      "batch": "loved_zombies_round_04_20260914",
+      "slug": "william_b",
+      "image": "/collection/assets/candidate-88e583c75b02f15b9b20dada01bdd942a2d13617bd908a70d793634de6168576.png"
+    },
+    {
+      "id": "candidate-loved_zombies_authored_pilot_20260914-dracula_a-5adfbf82bd17735c",
+      "title": "Dracula",
+      "kind": "candidate",
+      "imageHash": "5adfbf82bd17735c7bc13b041c17026e8c0ee338e200e6c82d1f15bd9bec22f2",
+      "description": "Exact loved Dracula with a structural zombie mutation; authored cape, pose, fangs and original background retained.",
+      "batch": "loved_zombies_authored_pilot_20260914",
+      "slug": "dracula_a",
+      "image": "/collection/assets/candidate-5adfbf82bd17735c7bc13b041c17026e8c0ee338e200e6c82d1f15bd9bec22f2.png"
+    },
+    {
+      "id": "candidate-loved_zombies_authored_pilot_20260914-dracula_b-9f1e931abce98a48",
+      "title": "Dracula",
+      "kind": "candidate",
+      "imageHash": "9f1e931abce98a48b08fdefafbe10b6b284b6ec5c65973dabd29071c8700cb57",
+      "description": "Exact loved Dracula with a structural zombie mutation; authored cape, pose, fangs and original background retained.",
+      "batch": "loved_zombies_authored_pilot_20260914",
+      "slug": "dracula_b",
+      "image": "/collection/assets/candidate-9f1e931abce98a48b08fdefafbe10b6b284b6ec5c65973dabd29071c8700cb57.png",
+      "supersededBy": "candidate-loved_zombies_authored_pilot_20260914-dracula_a-5adfbf82bd17735c"
     }
   ],
   "references": [
@@ -3113,6 +3218,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_03_20260914-nipper_a-75403ab52610023a",
             "imageHash": "75403ab52610023a754d3c241cfa10c0175722d60083f19728a2d7764c32c7db"
+          }
+        ]
+      },
+      {
+        "id": "round-24",
+        "title": "Round 24 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T00:13:20.217842+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_04_20260914-gustav_b-b3dcffab1d59835e",
+            "imageHash": "b3dcffab1d59835e27cedcc25847e54e95f83f75f59f1faee5a5856b92875818"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_04_20260914-rene_a-fdf043b44bb62329",
+            "imageHash": "fdf043b44bb62329c8c32bcf7f8d3c8ad7cb8b0ea47c04d7d37438bea5107e09"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_04_20260914-little_richard_b-26f879d4112a98a1",
+            "imageHash": "26f879d4112a98a1da4f2a62909f875941fa5ed659831f89b0036b703f598c4f"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_04_20260914-william_b-88e583c75b02f15b",
+            "imageHash": "88e583c75b02f15b9b20dada01bdd942a2d13617bd908a70d793634de6168576"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_authored_pilot_20260914-dracula_a-5adfbf82bd17735c",
+            "imageHash": "5adfbf82bd17735c7bc13b041c17026e8c0ee338e200e6c82d1f15bd9bec22f2"
           }
         ]
       }
