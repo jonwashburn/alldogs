@@ -1620,6 +1620,141 @@
         "height": 2000,
         "sha256": "f88dd0bb03d7601d583de5f389cd703037fdf9ab91f91042ed48ff648b2014e4"
       }
+    },
+    {
+      "parentId": "candidate-loop_0026_thor_light_20260912-thor-1fd02d5a38a899b3",
+      "parentHash": "1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f",
+      "title": "Thor, White Lightning",
+      "zombieId": "candidate-loved_zombies_round_12_20260914-thor_a-6548e70887dd977d",
+      "imageHash": "6548e70887dd977d3993e758320cb690fbb3dbb37772559c1f6e96ffba8b8d2a",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/11dc8a15cc4a04487b751aee6566619f35f5a74a47a327be8b6f1aa7cedb8a8b.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "11dc8a15cc4a04487b751aee6566619f35f5a74a47a327be8b6f1aa7cedb8a8b"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/cbd541cdc2c41c5ad3e586dd1e2c8ea5fb0dbfc9814fab265a7cb8f63b85fb11.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "cbd541cdc2c41c5ad3e586dd1e2c8ea5fb0dbfc9814fab265a7cb8f63b85fb11"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/c596202b84fe06052c0cfcf4cc8885103c52a652f526b8355e7722010a91f0f3.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "c596202b84fe06052c0cfcf4cc8885103c52a652f526b8355e7722010a91f0f3"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-charon-1a06dcb982cead54",
+      "parentHash": "1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d",
+      "title": "Charon, Last Boat Home",
+      "zombieId": "candidate-loved_zombies_round_12_20260914-charon_a-67d16aec6e52c571",
+      "imageHash": "67d16aec6e52c57196c904338899c2e5e51f09e3cb7d74635e16dc21bacf999f",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/160a13abfb52910144aea91b5b7f45c182e1e58bb9fbee815515ad73a1700add.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "160a13abfb52910144aea91b5b7f45c182e1e58bb9fbee815515ad73a1700add"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/17651aea3f5961dc3abad831a733ba91a6175ca94524d429d5f71259cd6a0a21.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "17651aea3f5961dc3abad831a733ba91a6175ca94524d429d5f71259cd6a0a21"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/cea8bd51329debbce80b712abbb86c6b8dc03ac1e67dbe280b491333c12e7c06.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "cea8bd51329debbce80b712abbb86c6b8dc03ac1e67dbe280b491333c12e7c06"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-helios-919f81a8e212273d",
+      "parentHash": "919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab",
+      "title": "Helios, No Brakes",
+      "zombieId": "candidate-loved_zombies_round_12_20260914-helios_b-b691991e5f8d02b0",
+      "imageHash": "b691991e5f8d02b09caf08d072668f2fb9b2519c318cf01a68937b1d3e23a2cb",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/d1e88af3966dee53c49c94dcd97f260505396272fa41126ebc942f7c6ae48653.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "d1e88af3966dee53c49c94dcd97f260505396272fa41126ebc942f7c6ae48653"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/cfc36305c1035405211afb2a866e36a8c9895b55df6e9102a7608551791ba18d.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "cfc36305c1035405211afb2a866e36a8c9895b55df6e9102a7608551791ba18d"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/820c232eb41d74e1fd190ca77a375573086f177e5f7a061c153a3e8a79fbed08.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "820c232eb41d74e1fd190ca77a375573086f177e5f7a061c153a3e8a79fbed08"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-hypnos-bb180999a33feffe",
+      "parentHash": "bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc",
+      "title": "Hypnos, Five More Minutes",
+      "zombieId": "candidate-loved_zombies_round_12_20260914-hypnos_b-13773d77cffd7fec",
+      "imageHash": "13773d77cffd7fec8b7dc77c688428860faba4939537ad29a9b38d28d64cb511",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/f073ede038eaa39a13e59e0cef77ac1565fbb55f561a69652a8e8b4381c28cea.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "f073ede038eaa39a13e59e0cef77ac1565fbb55f561a69652a8e8b4381c28cea"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/00c5b0cc01230b01ea908f0be7905ba1394e08eb851a88f21894db0ff8546694.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "00c5b0cc01230b01ea908f0be7905ba1394e08eb851a88f21894db0ff8546694"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/56b69d6cd3ec7b01be16a770e91e214ce4e46dc512fe6a34c86279ebfb7eaa42.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "56b69d6cd3ec7b01be16a770e91e214ce4e46dc512fe6a34c86279ebfb7eaa42"
+      }
+    },
+    {
+      "parentId": "candidate-mythic_liberties_six_20260912-nyx-ce97bc2df3e87453",
+      "parentHash": "ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f",
+      "title": "Nyx, The Moon on a String",
+      "zombieId": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863",
+      "imageHash": "45eb51c2efe5a863fe46d09ec325ef34aeda628d06302abd24f099010c19a412",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/670f8fe2dd3a5b03a9fa59e3279c50d2cd193c111cda3ed959aa97835ee87fd9.jpg",
+          "width": 2400,
+          "height": 1200,
+          "sha256": "670f8fe2dd3a5b03a9fa59e3279c50d2cd193c111cda3ed959aa97835ee87fd9"
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/9c7dfe734ca70e8348eb4ac59144f89fce7fe3b6f1d9e7adba10d426f264ed88.jpg",
+          "width": 4000,
+          "height": 2000,
+          "sha256": "9c7dfe734ca70e8348eb4ac59144f89fce7fe3b6f1d9e7adba10d426f264ed88"
+        }
+      ],
+      "square": {
+        "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_zombies/50cdf09a136cdd702e899bc801eedad49fdb46e5115ce583569446ba6d54058f.png",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "50cdf09a136cdd702e899bc801eedad49fdb46e5115ce583569446ba6d54058f"
+      }
     }
   ]
 }

@@ -3232,6 +3232,111 @@
       "batch": "loved_zombies_round_10_20260914",
       "slug": "hermes_b",
       "image": "/collection/assets/candidate-04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-thor_a-6548e70887dd977d",
+      "title": "Thor, White Lightning",
+      "kind": "candidate",
+      "imageHash": "6548e70887dd977d3993e758320cb690fbb3dbb37772559c1f6e96ffba8b8d2a",
+      "description": "Exact loved Thor, White Lightning with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "thor_a",
+      "image": "/collection/assets/candidate-6548e70887dd977d3993e758320cb690fbb3dbb37772559c1f6e96ffba8b8d2a.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-thor_b-bdaaa6ca52658a59",
+      "title": "Thor, White Lightning",
+      "kind": "candidate",
+      "imageHash": "bdaaa6ca52658a592686d6c39a2e4e7eaca1b5f764eea1d2f60268b4b2a8475e",
+      "description": "Exact loved Thor, White Lightning with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "thor_b",
+      "image": "/collection/assets/candidate-bdaaa6ca52658a592686d6c39a2e4e7eaca1b5f764eea1d2f60268b4b2a8475e.png",
+      "supersededBy": "candidate-loved_zombies_round_12_20260914-thor_a-6548e70887dd977d"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-charon_a-67d16aec6e52c571",
+      "title": "Charon, Last Boat Home",
+      "kind": "candidate",
+      "imageHash": "67d16aec6e52c57196c904338899c2e5e51f09e3cb7d74635e16dc21bacf999f",
+      "description": "Exact loved Charon, Last Boat Home with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "charon_a",
+      "image": "/collection/assets/candidate-67d16aec6e52c57196c904338899c2e5e51f09e3cb7d74635e16dc21bacf999f.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-charon_b-bd483e2a7551550a",
+      "title": "Charon, Last Boat Home",
+      "kind": "candidate",
+      "imageHash": "bd483e2a7551550a6b8ed820fb68b29db5c33b9be767aff92f4f958fc729a562",
+      "description": "Exact loved Charon, Last Boat Home with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "charon_b",
+      "image": "/collection/assets/candidate-bd483e2a7551550a6b8ed820fb68b29db5c33b9be767aff92f4f958fc729a562.png",
+      "supersededBy": "candidate-loved_zombies_round_12_20260914-charon_a-67d16aec6e52c571"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-helios_a-42f3d2803f7d1902",
+      "title": "Helios, No Brakes",
+      "kind": "candidate",
+      "imageHash": "42f3d2803f7d19020b0bb629d23d9321d27f9bd92ebc983034385ed7f1494142",
+      "description": "Exact loved Helios, No Brakes with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "helios_a",
+      "image": "/collection/assets/candidate-42f3d2803f7d19020b0bb629d23d9321d27f9bd92ebc983034385ed7f1494142.png",
+      "supersededBy": "candidate-loved_zombies_round_12_20260914-helios_b-b691991e5f8d02b0"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-helios_b-b691991e5f8d02b0",
+      "title": "Helios, No Brakes",
+      "kind": "candidate",
+      "imageHash": "b691991e5f8d02b09caf08d072668f2fb9b2519c318cf01a68937b1d3e23a2cb",
+      "description": "Exact loved Helios, No Brakes with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "helios_b",
+      "image": "/collection/assets/candidate-b691991e5f8d02b09caf08d072668f2fb9b2519c318cf01a68937b1d3e23a2cb.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-hypnos_a-5bf6020f6b57c64e",
+      "title": "Hypnos, Five More Minutes",
+      "kind": "candidate",
+      "imageHash": "5bf6020f6b57c64e76d9554f47cefd23bbda97fefa70ee00dcf60fcb9d498246",
+      "description": "Exact loved Hypnos, Five More Minutes with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "hypnos_a",
+      "image": "/collection/assets/candidate-5bf6020f6b57c64e76d9554f47cefd23bbda97fefa70ee00dcf60fcb9d498246.png",
+      "supersededBy": "candidate-loved_zombies_round_12_20260914-hypnos_b-13773d77cffd7fec"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-hypnos_b-13773d77cffd7fec",
+      "title": "Hypnos, Five More Minutes",
+      "kind": "candidate",
+      "imageHash": "13773d77cffd7fec8b7dc77c688428860faba4939537ad29a9b38d28d64cb511",
+      "description": "Exact loved Hypnos, Five More Minutes with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "hypnos_b",
+      "image": "/collection/assets/candidate-13773d77cffd7fec8b7dc77c688428860faba4939537ad29a9b38d28d64cb511.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863",
+      "title": "Nyx, The Moon on a String",
+      "kind": "candidate",
+      "imageHash": "45eb51c2efe5a863fe46d09ec325ef34aeda628d06302abd24f099010c19a412",
+      "description": "Exact loved Nyx, The Moon on a String with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "nyx_a",
+      "image": "/collection/assets/candidate-45eb51c2efe5a863fe46d09ec325ef34aeda628d06302abd24f099010c19a412.png"
+    },
+    {
+      "id": "candidate-loved_zombies_round_12_20260914-nyx_b-6a804662215a2649",
+      "title": "Nyx, The Moon on a String",
+      "kind": "candidate",
+      "imageHash": "6a804662215a2649f34a265be50e5bc15533e016b7f07ad09463d5a616134527",
+      "description": "Exact loved Nyx, The Moon on a String with distinct structural zombie eyes and jaw; authored pose, costume, props and setting preserved.",
+      "batch": "loved_zombies_round_12_20260914",
+      "slug": "nyx_b",
+      "image": "/collection/assets/candidate-6a804662215a2649f34a265be50e5bc15533e016b7f07ad09463d5a616134527.png",
+      "supersededBy": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863"
     }
   ],
   "references": [
@@ -4114,6 +4219,33 @@
           {
             "candidateId": "candidate-loved_zombies_round_10_20260914-hermes_b-04de070f55b5d4a4",
             "imageHash": "04de070f55b5d4a4b6ae6c85b1e89adaf9009d61c3aed612dd09ed82bd8d4d57"
+          }
+        ]
+      },
+      {
+        "id": "round-31",
+        "title": "Round 31 \u00b7 Loved Zombies",
+        "frozenAt": "2026-09-15T04:26:11.625923+00:00",
+        "members": [
+          {
+            "candidateId": "candidate-loved_zombies_round_12_20260914-thor_a-6548e70887dd977d",
+            "imageHash": "6548e70887dd977d3993e758320cb690fbb3dbb37772559c1f6e96ffba8b8d2a"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_12_20260914-charon_a-67d16aec6e52c571",
+            "imageHash": "67d16aec6e52c57196c904338899c2e5e51f09e3cb7d74635e16dc21bacf999f"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_12_20260914-helios_b-b691991e5f8d02b0",
+            "imageHash": "b691991e5f8d02b09caf08d072668f2fb9b2519c318cf01a68937b1d3e23a2cb"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_12_20260914-hypnos_b-13773d77cffd7fec",
+            "imageHash": "13773d77cffd7fec8b7dc77c688428860faba4939537ad29a9b38d28d64cb511"
+          },
+          {
+            "candidateId": "candidate-loved_zombies_round_12_20260914-nyx_a-45eb51c2efe5a863",
+            "imageHash": "45eb51c2efe5a863fe46d09ec325ef34aeda628d06302abd24f099010c19a412"
           }
         ]
       }
