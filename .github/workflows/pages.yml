@@ -23,6 +23,7 @@ jobs:
       - name: Check public JavaScript syntax
         run: |
           node --check dog-pound/adoption-form.js
+          node --check dog-pound/application-email.js
           node --check dog-pound/review/review.js
           node --check most-valuable/values.js
           node --check dog-pound/application/application.js
@@ -31,6 +32,7 @@ jobs:
           node --check dog-pound/review/viewings.js
           node .github/scripts/check-vouch.cjs
           node .github/scripts/check-account.cjs
+          node .github/scripts/check-email.cjs
       - name: Build the existing static site
         uses: actions/jekyll-build-pages@v1
         with:

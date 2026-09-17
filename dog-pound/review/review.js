@@ -22,6 +22,7 @@
         if(item.wallet){const copyWallet=text('button','Copy ETH address');copyWallet.type='button';copyWallet.className='text-link';copyWallet.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(item.wallet);copyWallet.textContent='Address copied';}catch(_){copyWallet.textContent='Select and copy the address above';}});card.append(copyWallet);}
         if(item.public_id){const publicLink=text('a','Open shareable application ↗');publicLink.href='/dog-pound/application/?id='+encodeURIComponent(item.public_id);publicLink.target='_blank';publicLink.rel='noopener noreferrer';const p=document.createElement('p');p.append(publicLink);card.append(p);}
         if(item.note) card.append(text('p',item.note));
+        if(item.email) card.append(text('p','Email: '+item.email),text('p','Invitation email requested. Other Wubbushi art: '+(item.art_updates?'opted in':'not requested')+'. '+(item.email_verified?'Address verified.':'Address not verified; email delivery is not connected.')));
         card.append(text('code',item.receipt));
         const copy=text('button','Copy receipt');copy.type='button';copy.className='text-link';
         copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(item.receipt);copy.textContent='Copied';}catch(_){copy.textContent='Select and copy the code above';}});

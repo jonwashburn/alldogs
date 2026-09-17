@@ -46,9 +46,11 @@
   function showReceipt(receipt, publicId, shortId) {
     $('receipt-code').textContent = receipt;
     $('receipt').hidden = false;
+    $('application-form').hidden = true;
     $('submit-application').hidden = true;
     $('form-status').textContent = '';
     for (const input of $('application-form').querySelectorAll('input, textarea, select')) input.disabled = true;
+    window.AllDogsApplicationEmail?.show(receipt, publicId);
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
     if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
       const url = validShortId(shortId) ? 'https://alldogs.wtf/vouch/' + Number(shortId) : 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
