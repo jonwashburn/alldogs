@@ -85,15 +85,17 @@ p{margin:20px 0 0}
 .reason:nth-child(even){grid-template-columns:1fr 1.15fr}
 .reason:nth-child(even) .print{grid-column:2}
 .reason:nth-child(even) h3,.reason:nth-child(even) .body{grid-column:1}
-.medium{padding-top:var(--section);padding-bottom:var(--section);display:grid;grid-template-columns:1.15fr 1fr;column-gap:8%}
-.medium>.eyebrow{grid-column:1}
-.medium>h2{grid-column:1}
+.medium{padding-top:var(--section);padding-bottom:var(--section)}
+.medium-heading{display:grid;grid-template-columns:1.15fr 1fr;column-gap:8%}
+.medium-heading>.eyebrow{grid-column:1}
+.medium-heading>h2{grid-column:1}
 .medium-intro{grid-column:2;grid-row:1 / span 2;margin:0}
-.paint-film{grid-column:1 / -1;display:grid;grid-template-columns:1.15fr 1fr;gap:8%;align-items:center;margin-top:56px}
-.paint-film video{display:block;width:100%;height:auto}
-.paint-film p{font-size:16px}
-.paint-film h3{font-size:27px;margin-top:32px}
-.paint-film a{display:inline-block;font-size:15px;margin-top:24px}
+.paint-film{margin:56px 0 0}
+.paint-film video{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain;background:#f0f0e9}
+.paint-film figcaption{display:flex;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px;font-size:12px;color:var(--muted)}
+.paint-film-notes{display:grid;grid-template-columns:1.15fr 1fr;gap:8%;margin-top:36px}
+.paint-film-notes p{font-size:16px;max-width:54ch}
+.paint-film-notes h3{font-size:27px}
 /* A contrasting final chapter makes the invitation easy to find. */
 .home-adopt{padding-top:var(--section);padding-bottom:var(--section);background:var(--ink);color:#fff}
 .home-adopt>.wrap{display:grid;grid-template-columns:1.1fr 1fr;column-gap:8%}
@@ -152,7 +154,7 @@ footer p{margin:0}
   .hero-preview .zombie-reveal{grid-column:1;grid-row:2;min-height:92px;padding:16px 18px}
   .hero-preview #preview-note{grid-column:1;max-width:none}
   .hero-preview .reveal-label{font-size:26px}
-  .hero-copy,.pack-mission,.story-rules,.home-angel,.game-split,.medium,.paint-film{grid-template-columns:1fr;gap:32px}
+  .hero-copy,.pack-mission,.story-rules,.home-angel,.game-split,.medium-heading,.paint-film-notes{grid-template-columns:1fr;gap:32px}
   .hero-copy{padding-top:42px}
   .hero-copy h1{font-size:clamp(50px,15.5vw,86px)}
   .hero-heading .eyebrow{margin-bottom:22px}
@@ -172,10 +174,11 @@ footer p{margin:0}
   .reason .print,.reason:nth-child(even) .print{grid-column:1;grid-row:auto;margin-bottom:28px}
   .reason h3,.reason .body,.reason:nth-child(even) h3,.reason:nth-child(even) .body{grid-column:1}
   .reason .body{font-size:16px;max-width:none}
-  .medium{gap:0}
+  .medium-heading{gap:0}
   .medium-intro{grid-column:1;grid-row:auto;margin-top:24px}
-  .paint-film{grid-column:1;margin-top:36px}
-  .paint-film h3{margin-top:28px}
+  .paint-film{margin-top:36px}
+  .paint-film figcaption{flex-direction:column;gap:4px}
+  .paint-film-notes{margin-top:24px}
   .home-adopt>.wrap{grid-template-columns:1fr}
   .adopt-intro{margin-top:28px;max-width:55ch}
   .adopt-steps{grid-template-columns:1fr;gap:30px;margin:40px 0}
