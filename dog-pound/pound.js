@@ -25,9 +25,9 @@
     const token = ++detailLoad;
     $('dialog-title').textContent = dog.title;
     $('dialog-position').textContent = position;
-    $('dialog-load-status').textContent = 'A preview, not a reservation.';
+    $('dialog-load-status').textContent = 'No dog is reserved by this preview.';
     $('dialog-image').src = $('spotlight-image').src;
-    $('dialog-image').alt = dog.title + ', full living dog painting';
+    $('dialog-image').alt = dog.title + ', full-size painting of a living dog';
     const full = asset(dog.variants.at(-1).src);
     $('full-painting').href = full;
     preload(full).then(image => {
@@ -47,7 +47,7 @@
       currentDog = dog;
       const position = String(dogIndex + 1).padStart(2, '0') + ' / ' + dogs.length;
       $('spotlight-image').src = image.src;
-      $('spotlight-image').alt = dog.title + ', a loved living dog painting';
+      $('spotlight-image').alt = dog.title + ', a living dog painting';
       $('spotlight-image').dataset.ready = 'true';
       $('spotlight-title').textContent = dog.title;
       $('spotlight-position').textContent = position;
@@ -61,7 +61,7 @@
       }
     } catch (_) {
       if (token === selection) {
-        const message = 'That painting could not load. Try another dog.';
+        const message = 'This painting could not load. Use an arrow to try another.';
         $('painting-status').textContent = message;
         if (dialog.open) $('dialog-load-status').textContent = message;
       }

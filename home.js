@@ -16,7 +16,7 @@
         button.setAttribute('aria-pressed', String(zombie));
         label.textContent = (zombie ? 'Back to living' : 'See the zombie') + (label === button ? ' ↗' : '');
         if (hint) hint.textContent = zombie ? 'Press to return' : 'Press to preview';
-      } catch (_) { label.textContent = 'Could not load. Try again'; }
+      } catch (_) { label.textContent = 'Preview could not load. Try again'; }
       finally { button.disabled = false; }
     });
   });
@@ -32,9 +32,9 @@
     preload.src = src;
     await preload.decode();
     img.src = preload.src;
-    img.alt = title + ', a loved living dog';
+    img.alt = title + ', a living dog painting';
     if (img.classList.contains('band-dog')) {
-      img.nextElementSibling.textContent = title + ' · from the loved collection';
+      img.nextElementSibling.textContent = title + ' · a painting from ALL DOGS';
       try { sessionStorage.setItem('alldogs-home-last-band', title); } catch (_) {}
     }
   }
