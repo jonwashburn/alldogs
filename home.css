@@ -2,6 +2,17 @@
 @media(max-width:750px){.hero-copy{padding-top:42px}.hero-copy h1{font-size:52px}.why{padding:48px 0}.whygrid,.game-split,.home-angel,.bredgrid,.adopt-steps{grid-template-columns:1fr;gap:35px}.home-game,.home-fates,.home-angel,.bred,.home-adopt{padding-top:48px;padding-bottom:48px}.home-game h2,.home-fates h2,.home-angel h2,.home-adopt h2{font-size:40px}.game-intro{font-size:16px}.home-cta>.button{font-size:14px}.paint-band{margin:0}.reason .body,.bred p{max-width:none}.adopt-steps{gap:20px}.life-preview figcaption{gap:8px}.home-fates .game-split>.life-preview{order:2}.mast nav>a:not(.button){display:none}}
 .medium{padding-top:75px;padding-bottom:75px;border-top:1px solid var(--line)}.medium-intro{max-width:78ch;margin:24px 0 32px}.paint-film{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}.paint-film video{display:block;width:100%;height:auto}.paint-film h3{font-size:25px}.paint-film p{font-size:15px}@media(max-width:750px){.paint-film{grid-template-columns:1fr;gap:30px}.medium{padding-top:45px;padding-bottom:45px}}
 .opening-painting{margin:0}.opening-painting>img{background:#f0f0e9}
+.adoption-is-open,.adoption-is-open body{overflow:hidden}
+.adoption-dialog{width:min(540px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:28px;border:1px solid var(--ink);overflow:auto;overscroll-behavior:contain}
+.adoption-dialog-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:28px}
+.adoption-dialog h2{font-size:clamp(28px,5vw,36px);letter-spacing:-1px;line-height:1.2}
+.adoption-close{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:28px;line-height:1;cursor:pointer}
+.adoption-close:hover{background:var(--ink);color:var(--paper)}
+.adoption-dialog input,.adoption-dialog #wallet{font-size:16px}
+.adoption-dialog form small,.adoption-dialog #receipt p{font-size:14px}
+.adoption-dialog .primary{width:100%;white-space:normal}
+.adoption-dialog .text-link{white-space:normal}
+@media(max-width:420px){.adoption-dialog{padding:20px}.adoption-dialog-heading{gap:12px;margin-bottom:24px}}
 /* A tactile invitation to try the living / zombie preview. */
 .hero-preview figcaption{display:grid;gap:15px;padding-top:16px;padding-bottom:30px;font-size:12px}
 .story-rules{padding-top:55px;padding-bottom:65px;border-top:1px solid var(--line)}.story-rules .game-intro,.story-rules .rule-list,.story-rules .quiet{max-width:78ch}.story-rules .game-intro{margin:24px 0 16px}.story-rules .rules-status{margin:0 0 30px;padding-left:16px;border-left:2px solid var(--blue)}
