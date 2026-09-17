@@ -2,10 +2,10 @@
 :root{--paper:#fff;--ink:#1b1d18;--muted:#64675f;--line:#daddd3;--yellow:#f3fa4e;--gutter:clamp(20px,4.5vw,72px);--section:clamp(64px,8vw,128px)}
 body{font-size:18px;line-height:1.65}
 .wrap{max-width:1536px;padding-left:var(--gutter);padding-right:var(--gutter)}
-h1,h2,h3{font-family:'Instrument Sans',sans-serif;font-weight:500;letter-spacing:-.055em;line-height:1.04;text-wrap:balance}
+h1,h2,h3{font-family:'Shantell Sans',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
 h1{font-size:clamp(64px,7.8vw,120px)}
 h2{font-size:clamp(40px,4.5vw,68px)}
-h3{font-size:27px;letter-spacing:-.035em;line-height:1.16}
+h3{font-size:27px;letter-spacing:-.02em;line-height:1.16}
 p{margin:20px 0 0}
 .eyebrow,.kicker{font:600 11px/1.5 'Instrument Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 24px}
 .quiet{font-size:13px;line-height:1.65}
@@ -73,7 +73,7 @@ p{margin:20px 0 0}
 .record dt{flex-shrink:0}
 .record dd{max-width:61%}
 .why{padding:var(--section) 0;background:#f4f4ef}
-.why h2{max-width:1000px;font:500 clamp(36px,4.5vw,68px)/1.12 'Shantell Sans',sans-serif;letter-spacing:-.055em}
+.why h2{max-width:1000px;font:700 clamp(36px,4.5vw,68px)/1.12 'Shantell Sans',sans-serif;letter-spacing:-.02em}
 .whygrid{display:grid;gap:80px;margin-top:64px}
 .reason{display:grid;grid-template-columns:1.15fr 1fr;column-gap:8%;align-content:center}
 .print{display:block;margin:0;grid-column:1;grid-row:1 / span 2;align-self:center;aspect-ratio:3/2;overflow:hidden}
