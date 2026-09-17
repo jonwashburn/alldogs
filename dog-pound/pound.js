@@ -29,7 +29,6 @@
     $('dialog-image').src = $('spotlight-image').src;
     $('dialog-image').alt = dog.title + ', full-size painting of a living dog';
     const full = asset(dog.variants.at(-1).src);
-    $('full-painting').href = full;
     preload(full).then(image => {
       if (token === detailLoad && dialog.open && currentDog === dog) $('dialog-image').src = image.src;
     }).catch(() => {}); // The decoded preview remains visible if the larger file is unavailable.
