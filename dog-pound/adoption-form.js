@@ -8,7 +8,7 @@
   choiceLabel.textContent = 'A wallet for your dog';
   const choice = document.createElement('select');
   choice.id = 'wallet-choice'; choice.name = 'walletChoice'; choice.required = true;
-  for (const [value, label] of [['', 'Choose an option'], ['existing', 'I have a wallet'], ['help', 'Help me with this'], ['new', 'I don’t have one yet']]) {
+  for (const [value, label] of [['', 'Choose an option'], ['existing', 'I have a wallet'], ['new', 'I don’t have a wallet'], ['later', 'I’ll provide my wallet later']]) {
     const option = document.createElement('option'); option.value = value; option.textContent = label;
     if (!value) { option.disabled = true; option.selected = true; }
     choice.append(option);
@@ -16,11 +16,12 @@
   choice.style.cssText = 'display:block;width:100%;font:inherit;padding:14px;margin-top:8px;background:white;color:inherit;border:1px solid currentColor;border-radius:0';
   choiceLabel.append(choice); walletLabel.before(choiceLabel);
   const help = document.createElement('p'); help.id = 'wallet-help'; help.hidden = true;
-  help.textContent = 'No wallet? No biggie. We’ve got you. Apply now. We’ll help you get a wallet ready before your dog comes home.';
+  choice.setAttribute('aria-describedby', 'wallet-help');
   help.setAttribute('role', 'status'); walletLabel.after(help);
   function walletChoiceChanged() {
     const existing = choice.value === 'existing';
     walletLabel.hidden = !existing; $('wallet').disabled = !existing; $('wallet').required = existing;
+    help.textContent = ({new: 'No worries, we’ll get you set up with one.', later: 'Got it. We’ll ask again on adoption day.'})[choice.value] || '';
     help.hidden = !choice.value || existing;
   }
   choice.addEventListener('change', walletChoiceChanged); walletChoiceChanged();

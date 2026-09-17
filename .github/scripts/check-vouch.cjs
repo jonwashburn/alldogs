@@ -65,13 +65,19 @@ function harness(file, path, search, stored = {}) {
     assert.equal(h.calls.length,storedId?0:1);
     tests++;
   }
-  for (const choice of ['existing','help','new']) {
+  for (const choice of ['existing','new','later']) {
     const h = harness('dog-pound/adoption-form.js','/','');
     assert.equal(h.element('wallet').disabled,true);
+    assert.equal(h.element('wallet-help').hidden,true);
+    assert.equal(JSON.stringify(h.element('wallet-choice').children.map(option=>[option.value,option.textContent])),JSON.stringify([
+      ['', 'Choose an option'], ['existing', 'I have a wallet'], ['new', 'I don’t have a wallet'], ['later', 'I’ll provide my wallet later']
+    ]));
     h.element('wallet-choice').value=choice;h.element('wallet-choice').events.change();
+    assert.equal(h.element('wallet').disabled,choice!=='existing');
     assert.equal(h.element('wallet').required,choice==='existing');
     assert.equal(h.element('wallet-label').hidden,choice!=='existing');
     assert.equal(h.element('wallet-help').hidden,choice==='existing');
+    assert.equal(h.element('wallet-help').textContent,({existing:'',new:'No worries, we’ll get you set up with one.',later:'Got it. We’ll ask again on adoption day.'})[choice]);
     h.element('handle').value='test_dog';h.element('wallet').value='0x'+'12'.repeat(20);h.element('website').value='';
     await h.element('application-form').events.submit({preventDefault(){}});
     assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
