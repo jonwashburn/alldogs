@@ -29,6 +29,7 @@ function harness(file, path, search, stored = {}) {
     window:{},URLSearchParams,AbortController,setTimeout,clearTimeout,TextEncoder,
     crypto:{randomUUID:()=> '12345678-1234-1234-1234-123456789012'},
     fetch:async (url, options)=>{calls.push({url,options});return {ok:true,json:async()=>url.includes('adoption-applications')?{...response,receipt}:response};}};
+  context.window.AllDogsAccount={request:async path=>{calls.push({url:path});return response;},session:async()=>({signedIn:false,capabilities:{xLogin:false}}),signIn:path=>path};
   vm.runInNewContext(fs.readFileSync(file,'utf8'),context,{filename:file});
   return {element,calls,storage,get replaced(){return replaced;},get copied(){return copied;}};
 }

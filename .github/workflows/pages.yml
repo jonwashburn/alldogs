@@ -26,7 +26,11 @@ jobs:
           node --check dog-pound/review/review.js
           node --check most-valuable/values.js
           node --check dog-pound/application/application.js
+          node --check account/account-api.js
+          node --check account/account.js
+          node --check dog-pound/review/viewings.js
           node .github/scripts/check-vouch.cjs
+          node .github/scripts/check-account.cjs
       - name: Build the existing static site
         uses: actions/jekyll-build-pages@v1
         with:
