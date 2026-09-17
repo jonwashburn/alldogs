@@ -104,14 +104,17 @@
       if (!response.ok) throw Error('Unavailable');
       const data = await response.json();
       if (data.version !== 1 || !Array.isArray(data.items)) throw Error('Unavailable');
-      dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved');
+      dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved').reverse();
       if (!dogs.length) throw Error('Unavailable');
       dogs.forEach(d => {
         if (!Array.isArray(d.variants) || !d.variants.length) throw Error('Invalid painting');
         d.variants.forEach(v => asset(v.src));
       });
-      const first = dogs.findIndex(d => d.id.startsWith('original-62-'));
-      if (first > 0) dogs.unshift(...dogs.splice(first, 1));
+      // Start at the old end, with the two homepage heroes halfway through the pack.
+      const middleIds = new Set(['candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11', 'original-62-fb27c29277cc6593']);
+      const middleDogs = dogs.filter(d => middleIds.has(d.id));
+      dogs = dogs.filter(d => !middleIds.has(d.id));
+      dogs.splice(Math.floor(dogs.length / 2), 0, ...middleDogs);
       for (const prefix of ['spotlight', 'dialog']) {
         $(prefix + '-prev').disabled = dogs.length < 2;
         $(prefix + '-next').disabled = dogs.length < 2;
