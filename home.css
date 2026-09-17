@@ -3,7 +3,7 @@
 body{font-size:18px;line-height:1.65}
 .wrap{max-width:1536px;padding-left:var(--gutter);padding-right:var(--gutter)}
 h1,h2,h3{font-family:'Shantell Sans',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
-h1{font-size:clamp(64px,7.8vw,120px)}
+h1{font-size:clamp(56px,6.7vw,104px)}
 h2{font-size:clamp(40px,4.5vw,68px)}
 h3{font-size:27px;letter-spacing:-.02em;line-height:1.16}
 p{margin:20px 0 0}
@@ -138,7 +138,7 @@ footer p{margin:0}
 @media(max-width:1000px){
   .mast nav{gap:20px}.mast nav>a[href="#why"]{display:none}
   .hero-copy{gap:6%;padding-top:64px}
-  h1{font-size:clamp(64px,8vw,88px)}
+  h1{font-size:clamp(48px,6.7vw,72px)}
   .hero-preview figcaption{grid-template-columns:1fr 1.25fr;gap:16px 30px}
   .hero-preview .reveal-label{font-size:24px}
   .adopt-steps{gap:28px}.adopt-steps h3{font-size:25px}
@@ -157,7 +157,7 @@ footer p{margin:0}
   .hero-preview .reveal-label{font-size:26px}
   .hero-copy,.pack-mission,.story-rules,.home-angel,.game-split,.medium-heading,.paint-film-notes{grid-template-columns:1fr;gap:32px}
   .hero-copy{padding-top:42px}
-  .hero-copy h1{font-size:clamp(50px,15.5vw,86px)}
+  .hero-copy h1{font-size:clamp(44px,14vw,76px)}
   .hero-heading .eyebrow{margin-bottom:22px}
   .hero-description>p{max-width:55ch}
   .home-cta{margin-top:26px}
