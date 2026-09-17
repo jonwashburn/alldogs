@@ -79,15 +79,23 @@
   });
   let submission = null;
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
-  function showReceipt(receipt) {
+  function showReceipt(receipt, publicId) {
     $('receipt-code').textContent = receipt;
     $('receipt').hidden = false;
     $('submit-application').hidden = true;
     $('form-status').textContent = '';
     for (const input of $('application-form').querySelectorAll('input, textarea')) input.disabled = true;
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
+    if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
+      const url = 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
+      $('share-application').hidden = false;
+      $('view-application').href = url;
+      $('share-on-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I’m hoping to bring an ALL DOGS dog home. I need an eligible dog owner to vouch for me. Could you be my person?') + '&url=' + encodeURIComponent(url);
+      $('copy-application').onclick = async () => {try {await navigator.clipboard.writeText(url); $('copy-application').textContent='Link copied';} catch (_) {$('copy-application').textContent='Copy the address from your application page';}};
+      try { sessionStorage.setItem('alldogs-application-public-id', publicId); } catch (_) {}
+    }
   }
-  try { const receipt = sessionStorage.getItem('alldogs-application-receipt'); if (/^DOG-[A-F0-9]{16}$/.test(receipt || '')) showReceipt(receipt); } catch (_) {}
+  try { const receipt = sessionStorage.getItem('alldogs-application-receipt'); if (/^DOG-[A-F0-9]{16}$/.test(receipt || '')) showReceipt(receipt, sessionStorage.getItem('alldogs-application-public-id')); } catch (_) {}
   $('copy-receipt').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText($('receipt-code').textContent); $('copy-receipt').textContent = 'Copied'; }
     catch (_) { $('copy-receipt').textContent = 'Select and copy the receipt above'; }
@@ -95,10 +103,9 @@
   $('application-form').addEventListener('submit', async event => {
     event.preventDefault();
     if (!$('application-form').reportValidity()) return;
-    const values = {handle: $('handle').value.trim(), voucher: $('voucher').value.trim(), note: $('note').value.trim(), consent: $('consent').checked, website: $('website').value};
-    const normalized = x => x.replace(/^@/, '').toLowerCase();
-    if (normalized(values.handle) === normalized(values.voucher)) {
-      $('form-status').className = 'error'; $('form-status').textContent = 'Your voucher must be another person.'; return;
+    const values = {handle: $('handle').value.trim(), wallet: $('wallet').value.trim(), note: $('note').value.trim(), consent: $('consent').checked, publicConsent: $('public-consent').checked, website: $('website').value};
+    if (/^0x0{40}$/i.test(values.wallet)) {
+      $('form-status').className = 'error'; $('form-status').textContent = 'Use your own Ethereum wallet, not the zero address.'; return;
     }
     const fingerprint = JSON.stringify(values);
     if (!submission || submission.fingerprint !== fingerprint) submission = {fingerprint, requestId: crypto.randomUUID()};
@@ -111,7 +118,8 @@
       const result = await response.json();
       if (!response.ok) throw Error(result.error || 'Could not save your application. Please try again.');
       if (!/^DOG-[A-F0-9]{16}$/.test(result.receipt || '')) throw Error('We could not confirm your receipt. Please try again.');
-      showReceipt(result.receipt);
+      if (!/^[A-Za-z0-9_-]{24}$/.test(result.publicId || '')) throw Error('We could not confirm your share link. Please retry the same application.');
+      showReceipt(result.receipt, result.publicId);
     } catch (error) {
       $('form-status').className = 'error';
       $('form-status').textContent = error.name === 'AbortError' || error instanceof TypeError ? 'We could not confirm your application. Please retry; the same request will not create a duplicate.' : error.message;
