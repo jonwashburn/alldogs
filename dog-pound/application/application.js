@@ -1,16 +1,18 @@
 (() => {
   'use strict';
   const $=id=>document.getElementById(id),base='https://api.alldogs.wtf/collection-api/';
-  const id=new URLSearchParams(location.search).get('id');
-  let wallet=null,busy=false;
+  const reference=location.pathname.match(/^\/vouch\/([1-9][0-9]{0,4})\/?$/)?.[1] || new URLSearchParams(location.search).get('id');
+  let id=null,wallet=null,busy=false;
   async function api(path,body) {
     const c=new AbortController(),t=setTimeout(()=>c.abort(),15000);
     try{const r=await fetch(base+path,{method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,credentials:'omit',cache:'no-store',signal:c.signal});const d=await r.json();if(!r.ok)throw Error(d.error||'We could not confirm the request. Refresh this page before trying again.');return d;}finally{clearTimeout(t);}
   }
   async function load(){
     try{
-      if(!/^[A-Za-z0-9_-]{24}$/.test(id||''))throw Error('This application link is incomplete. Ask the applicant to copy their link again.');
-      const d=await api('application?id='+encodeURIComponent(id));
+      if(!/^[A-Za-z0-9_-]{24}$/.test(reference||'') && !(/^[1-9][0-9]{0,4}$/.test(reference||'') && Number(reference)<=10000))throw Error('This application link is incomplete. Ask the applicant to copy their link again.');
+      const d=await api('application?id='+encodeURIComponent(reference));
+      if(!/^[A-Za-z0-9_-]{24}$/.test(d.publicId||''))throw Error('We could not confirm this application. Please refresh.');
+      id=d.publicId;
       $('public-application').hidden=false;$('applicant-handle').textContent='@'+d.handle;$('applicant-profile').href='https://x.com/'+encodeURIComponent(d.handle);
       $('application-status').textContent='Application by @'+d.handle;
       const labels={looking_for_vouch:'Looking for an eligible owner to vouch.',vouched:'Vouched for by @'+d.vouchedBy+'. Waiting for review by Wubbushi.',vouch_suspended:'The owner who vouched is no longer eligible. Wubbushi will review the application.',adopted:'This person has adopted their dog.'};
@@ -21,7 +23,9 @@
       $('withdraw-vouch').hidden=!wallet||!['vouched','vouch_suspended'].includes(d.status);
       $('connect-owner').hidden=!!wallet||d.status==='adopted';
       const shareText=d.status==='looking_for_vouch'?'@'+d.handle+' is hoping to adopt an ALL DOGS dog. Can an eligible owner vouch for them?':d.status==='adopted'?'@'+d.handle+' has adopted a dog from ALL DOGS.':'Follow the ALL DOGS adoption application from @'+d.handle+'.';
-      $('share-application-x').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(shareText)+'&url='+encodeURIComponent('https://alldogs.wtf/dog-pound/application/?id='+id);
+      const shortPath=Number.isInteger(d.shortId)&&d.shortId>0&&d.shortId<=10000?'/vouch/'+d.shortId:null;
+      $('share-application-x').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(shareText)+'&url='+encodeURIComponent('https://alldogs.wtf'+(shortPath||'/dog-pound/application/?id='+id));
+      if(shortPath && !location.pathname.startsWith('/vouch/')) history.replaceState(null,'',shortPath);
     }catch(e){$('public-application').hidden=true;$('application-status').textContent=e.name==='AbortError'?'The application took too long to load. Please refresh.':e.message;}
   }
   $('connect-owner').addEventListener('click',async()=>{
@@ -30,7 +34,7 @@
     catch(e){$('wallet-status').textContent=e.code===4001?'Wallet connection cancelled.':e.message;}finally{busy=false;$('connect-owner').disabled=false;}
   });
   async function sign(action){
-    if(busy||!wallet)return;busy=true;$('sign-vouch').disabled=true;$('withdraw-vouch').disabled=true;
+    if(busy||!wallet||!id)return;busy=true;$('sign-vouch').disabled=true;$('withdraw-vouch').disabled=true;
     try{
       const accounts=await window.ethereum.request({method:'eth_accounts'});
       if(!accounts[0]||accounts[0].toLowerCase()!==wallet.toLowerCase())throw Error('Your selected wallet changed. Refresh this page, then connect your owner wallet again.');

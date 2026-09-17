@@ -19,7 +19,8 @@
   }
   let submission = null;
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
-  function showReceipt(receipt, publicId) {
+  const validShortId = value => Number.isInteger(Number(value)) && Number(value) > 0 && Number(value) <= 10000;
+  function showReceipt(receipt, publicId, shortId) {
     $('receipt-code').textContent = receipt;
     $('receipt').hidden = false;
     $('submit-application').hidden = true;
@@ -27,15 +28,21 @@
     for (const input of $('application-form').querySelectorAll('input, textarea')) input.disabled = true;
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
     if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
-      const url = 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
+      const url = validShortId(shortId) ? 'https://alldogs.wtf/vouch/' + Number(shortId) : 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
       $('share-application').hidden = false;
       $('view-application').href = url;
       $('share-on-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I applied to adopt a dog from ALL DOGS. If you own one and are eligible to vouch, would you vouch for me?') + '&url=' + encodeURIComponent(url);
       $('copy-application').onclick = async () => {try {await navigator.clipboard.writeText(url); $('copy-application').textContent='Link copied';} catch (_) {$('copy-application').textContent='Copy the address from your application page';}};
-      try { sessionStorage.setItem('alldogs-application-public-id', publicId); } catch (_) {}
+      try { sessionStorage.setItem('alldogs-application-public-id', publicId); if (validShortId(shortId)) sessionStorage.setItem('alldogs-application-short-id', String(shortId)); } catch (_) {}
+      if (!validShortId(shortId)) {
+        fetch('https://api.alldogs.wtf/collection-api/application?id=' + encodeURIComponent(publicId), {credentials: 'omit', cache: 'no-store'})
+          .then(response => response.ok ? response.json() : null)
+          .then(result => { if (result?.publicId === publicId && validShortId(result.shortId)) showReceipt(receipt, publicId, result.shortId); })
+          .catch(() => {}); // The original link remains usable if the lookup is unavailable.
+      }
     }
   }
-  try { const receipt = sessionStorage.getItem('alldogs-application-receipt'); if (/^DOG-[A-F0-9]{16}$/.test(receipt || '')) showReceipt(receipt, sessionStorage.getItem('alldogs-application-public-id')); } catch (_) {}
+  try { const receipt = sessionStorage.getItem('alldogs-application-receipt'); if (/^DOG-[A-F0-9]{16}$/.test(receipt || '')) showReceipt(receipt, sessionStorage.getItem('alldogs-application-public-id'), sessionStorage.getItem('alldogs-application-short-id')); } catch (_) {}
   $('copy-receipt').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText($('receipt-code').textContent); $('copy-receipt').textContent = 'Private receipt copied'; }
     catch (_) { $('copy-receipt').textContent = 'Select and copy the receipt above'; }
@@ -60,7 +67,7 @@
       if (!response.ok) throw Error(result.error || 'Could not save your application. Please try again.');
       if (!/^DOG-[A-F0-9]{16}$/.test(result.receipt || '')) throw Error('We could not confirm your receipt. Please try again.');
       if (!/^[A-Za-z0-9_-]{24}$/.test(result.publicId || '')) throw Error('We could not confirm your application link. Submit the same details again.');
-      showReceipt(result.receipt, result.publicId);
+      showReceipt(result.receipt, result.publicId, result.shortId);
     } catch (error) {
       $('form-status').className = 'error';
       $('form-status').textContent = error.name === 'AbortError' || error instanceof TypeError ? 'We could not confirm whether your application was saved. Submit the same details again; this will not create a duplicate.' : error.message;
