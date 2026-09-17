@@ -150,7 +150,7 @@
   $('application-form').addEventListener('submit', async event => {
     event.preventDefault();
     if (!$('application-form').reportValidity()) return;
-    const values = {handle: $('handle').value.trim(), wallet: $('wallet').value.trim(), note: $('note').value.trim(), consent: $('consent').checked, publicConsent: $('public-consent').checked, website: $('website').value};
+    const values = {handle: $('handle').value.trim(), wallet: $('wallet').value.trim(), applicationFlow: 'share-page-v2', website: $('website').value};
     if (/^0x0{40}$/i.test(values.wallet)) {
       $('form-status').className = 'error'; $('form-status').textContent = 'Use your own Ethereum wallet, not the zero address.'; return;
     }
@@ -170,7 +170,7 @@
     } catch (error) {
       $('form-status').className = 'error';
       $('form-status').textContent = error.name === 'AbortError' || error instanceof TypeError ? 'We could not confirm your application. Please retry; the same request will not create a duplicate.' : error.message;
-    } finally { clearTimeout(timer); submit.disabled = false; submit.textContent = 'Join the adoption waitlist ↗'; }
+    } finally { clearTimeout(timer); submit.disabled = false; submit.textContent = 'Apply & create my shareable page ↗'; }
   });
   load();
 })();

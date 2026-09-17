@@ -8,7 +8,7 @@
   <meta property="og:title" content="The Dog Pound · ALL DOGS"><meta property="og:description" content="Find your dog. Give them a name. Become part of the pack.">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="pound.css?v=20260917-brand1"><link rel="stylesheet" href="gallery.css?v=20260917-gallery1"><script src="pound.js?v=20260917-reverse1" defer></script>
+  <link rel="stylesheet" href="pound.css?v=20260917-brand1"><link rel="stylesheet" href="gallery.css?v=20260917-gallery1"><script src="pound.js?v=20260917-simple1" defer></script>
 </head>
 <body>
 <a class="skip" href="#dogs">Skip to the dogs</a>
@@ -44,14 +44,10 @@
     <form id="application-form">
       <label>Your X / Twitter handle<input name="handle" id="handle" autocomplete="off" placeholder="@yourhandle" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required></label>
       <label>Your Ethereum wallet address<input name="wallet" id="wallet" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="0x…" pattern="0x[0-9a-fA-F]{40}" maxlength="42" required><small>Paste the Ethereum address you will adopt with, not an ENS name or an exchange deposit address. It stays private in application review. Never enter a private key or recovery phrase.</small></label>
-      <label>A little about you <span class="optional">(optional)</span><textarea name="note" id="note" rows="3" maxlength="600" placeholder="Tell us about the dog you still think about."></textarea></label>
       <div class="trap" aria-hidden="true"><label>Leave empty<input name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
-      <label class="consent"><input type="checkbox" id="consent" required><span>I understand this is an application, not an adoption. Jonathan may contact me on X about it.</span></label>
-      <label class="consent"><input type="checkbox" id="public-consent" required><span>Create my shareable application page showing my X handle and vouch status. My wallet, note and private receipt will not appear there. After adoption, my handle and dog's status will appear in the owners directory.</span></label>
-      <button class="button primary" type="submit" id="submit-application">Join the adoption waitlist ↗</button>
+      <button class="button primary" type="submit" id="submit-application">Apply &amp; create my shareable page ↗</button>
       <p id="form-status" role="status" aria-live="polite"></p>
       <div id="receipt" hidden><h3>Now find your person.</h3><div id="share-application" hidden><p>Share your application. An eligible owner can open it and vouch for you.</p><a class="button primary" id="share-on-x" target="_blank" rel="noopener noreferrer">Post your application on X ↗</a><p><button type="button" class="text-link" id="copy-application">Copy application link</button> · <a id="view-application">View your application</a></p></div><details><summary>Your private receipt. Do not post this.</summary><p>Jonathan will ask for this when he contacts your exact X account.</p><code id="receipt-code"></code><button type="button" class="text-link" id="copy-receipt">Copy private receipt</button></details><p>Your identity still needs to be checked. No money has been taken and no dog has been reserved.</p></div>
-      <p class="privacy">Your X handle and vouch status appear on your shareable page. Your wallet address and note are stored privately for adoption review; your private receipt is not public. Verified owner and voucher handles will appear on the collar after adoption. You can request correction or removal when speaking with Jonathan. Nothing is written on-chain by this form.</p>
     </form>
   </section>
 </main>
