@@ -13,7 +13,8 @@ def build(destination):
     assert 'src="/dog-pound/application/application.js?' in template
     assert 'href="/dog-pound/pound.css?' in template
     assert (root / 'og.png').is_file()
-    assert (root / 'CNAME').read_text().strip() == 'alldogs.wtf'
+    # The custom domain is configured in GitHub Pages settings, not a CNAME file.
+    assert (root / 'index.html').is_file()
     template = re.sub(r'<link\b[^>]*rel="canonical"[^>]*>', '', template)
     template = re.sub(r'<meta\b[^>]*property="og:url"[^>]*>', '', template)
     for number in range(1, SHORT_LINK_LIMIT + 1):
