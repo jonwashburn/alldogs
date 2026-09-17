@@ -11,4 +11,4 @@
 /* Keep the adoption rule below its heading, with room for natural line breaks. */
 .one-dog{display:block}
 .one-dog strong{display:block;white-space:normal}
-.one-dog span{display:block;max-width:90ch;margin-top:12px;text-wrap:pretty}
+.one-dog span{display:block;max-width:90ch;margin-top:12px;text-wrap:balance}
