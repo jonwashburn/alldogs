@@ -3,6 +3,7 @@
   const pairs = JSON.parse(document.getElementById('approved-pairs').textContent);
   document.querySelectorAll('.life-preview').forEach(figure => {
     const pair = pairs[Number(figure.dataset.pair)], button = figure.querySelector('button'), img = figure.querySelector('img');
+    const label = button.querySelector('.reveal-label') || button, hint = button.querySelector('.reveal-hint');
     let zombie = false;
     button.addEventListener('click', async () => {
       button.disabled = true;
@@ -12,8 +13,10 @@
         img.src = preload.src; zombie = next;
         img.alt = pair.title + (zombie ? ', zombie' : ', living');
         figure.querySelector('.state-label').textContent = zombie ? 'zombie' : 'living';
-        button.setAttribute('aria-pressed', String(zombie)); button.textContent = zombie ? 'Back to living ↗' : 'See the zombie ↗';
-      } catch (_) { button.textContent = 'Could not load. Try again'; }
+        button.setAttribute('aria-pressed', String(zombie));
+        label.textContent = (zombie ? 'Back to living' : 'See the zombie') + (label === button ? ' ↗' : '');
+        if (hint) hint.textContent = zombie ? 'Press to return' : 'Press to preview';
+      } catch (_) { label.textContent = 'Could not load. Try again'; }
       finally { button.disabled = false; }
     });
   });

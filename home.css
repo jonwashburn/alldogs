@@ -2,3 +2,17 @@
 @media(max-width:750px){.hero-art>img{aspect-ratio:1/1;object-fit:cover}.hero-tag{left:20px;top:20px;font-size:24px;padding:22px 18px 17px}.hero-copy{padding-top:42px}.hero-copy h1{font-size:52px}.why{padding:48px 0}.whygrid,.game-split,.home-angel,.bredgrid,.adopt-steps{grid-template-columns:1fr;gap:35px}.home-game,.home-fates,.home-angel,.bred,.home-adopt{padding-top:48px;padding-bottom:48px}.home-game h2,.home-fates h2,.home-angel h2,.home-adopt h2{font-size:40px}.game-intro{font-size:16px}.home-cta>.button{font-size:14px}.paint-band{margin:0}.paint-band img{aspect-ratio:1/1;object-fit:cover}.reason .body,.bred p{max-width:none}.adopt-steps{gap:20px}.life-preview figcaption{gap:8px}.home-fates .game-split>.life-preview{order:2}.mast nav>a:not(.button){display:none}}
 .medium{padding-top:75px;padding-bottom:75px;border-top:1px solid var(--line)}.medium-intro{max-width:78ch;margin:24px 0 32px}.paint-film{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}.paint-film video{display:block;width:100%;height:auto}.paint-film h3{font-size:25px}.paint-film p{font-size:15px}@media(max-width:750px){.paint-film{grid-template-columns:1fr;gap:30px}.medium{padding-top:45px;padding-bottom:45px}}
 .hero-art{background:#f0f0e9}#hero-dog{visibility:hidden}#hero-dog[data-ready=true]{visibility:visible}
+/* A tactile invitation to try the living / zombie preview. */
+#game .life-preview figcaption{display:grid;gap:15px;justify-content:stretch;margin-top:16px}
+#game .zombie-reveal{display:flex;align-items:center;gap:17px;width:100%;min-height:92px;padding:17px 22px;border:2px solid var(--ink);border-radius:12px;background:#f3fa4e;color:var(--ink);box-shadow:0 5px 0 var(--ink);text-align:left;transition:transform .16s,box-shadow .16s,background .16s}
+#game .zombie-reveal:hover{background:#f8ff79;transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
+#game .zombie-reveal:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+#game .press-icon{display:grid;place-items:center;flex:0 0 50px;height:50px;border:1px solid currentColor;border-radius:50%}
+#game .reveal-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+#game .reveal-label{font:700 25px/1.15 'Shantell Sans',sans-serif;letter-spacing:-.6px}
+#game .reveal-hint{font-size:11px;line-height:1.3;letter-spacing:.5px}
+#game .reveal-arrow{margin-left:auto;font-size:28px;line-height:1}
+#game .zombie-reveal[aria-pressed=true]{background:var(--ink);color:#f3fa4e}
+#game .zombie-reveal[aria-pressed=true]:hover{background:#30352a}
+#game .zombie-reveal:disabled{opacity:.7;cursor:wait}
+@media(max-width:750px){#game .zombie-reveal{padding:16px;gap:13px;min-height:88px}#game .reveal-label{font-size:22px}#game .press-icon{flex-basis:44px;height:44px}}
