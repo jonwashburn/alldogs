@@ -24,7 +24,7 @@
   const heroNames = new Set([
     'Tideheart', 'Afterburn', 'Snoop Dogg', 'Popeye', 'Hulk', 'Dracula', 'Leeloo',
     'Rene', 'Gustav', 'Elliott', 'Leia', 'Marty', 'Frida', 'Batman', 'Donald',
-    'Marie', 'Elizabeth', 'Napoleon', 'Amy', 'Ozzy'
+    'Elizabeth', 'Napoleon', 'Amy', 'Ozzy'
   ]);
   const slots = [...document.querySelectorAll('.band-dog')];
   async function reveal(img, src, title) {
@@ -39,7 +39,7 @@
     }
   }
   fetch('/dog-pound/dogs.json?v=20260916', {signal: AbortSignal.timeout(12000)}).then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); }).then(data => {
-    const dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved');
+    const dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved' && d.title !== 'Marie');
     if (!dogs.length) throw Error('Unavailable');
     for (let i=dogs.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [dogs[i],dogs[j]]=[dogs[j],dogs[i]]; }
     const heroDogs = dogs.filter(d => heroNames.has(d.title));
