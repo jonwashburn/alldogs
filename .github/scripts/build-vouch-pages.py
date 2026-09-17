@@ -9,10 +9,10 @@ SHORT_LINK_LIMIT = 10000  # Keep in sync with the application API's alias limit.
 def build(destination):
     root = Path(destination).resolve()
     template = (root / 'dog-pound/application/index.html').read_text()
-    assert 'https://alldogs.wtf/og.png' in template
+    assert 'https://alldogs.wtf/assets/all-dogs-social-barack-close-20260917.png' in template
     assert 'src="/dog-pound/application/application.js?' in template
     assert 'href="/dog-pound/pound.css?' in template
-    assert (root / 'og.png').is_file()
+    assert (root / 'assets/all-dogs-social-barack-close-20260917.png').is_file()
     # Pages settings retain the custom domain; Jekyll may omit CNAME from output.
     assert (root / 'index.html').is_file()
     template = re.sub(r'<link\b[^>]*rel="canonical"[^>]*>', '', template)

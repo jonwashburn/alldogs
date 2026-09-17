@@ -33,6 +33,7 @@ jobs:
           node .github/scripts/check-vouch.cjs
           node .github/scripts/check-account.cjs
           node .github/scripts/check-email.cjs
+          python3 .github/scripts/check-social.py
       - name: Build the existing static site
         uses: actions/jekyll-build-pages@v1
         with:
@@ -40,7 +41,9 @@ jobs:
           destination: ./_site
       - name: Add shareable short-link pages
         # The Jekyll container creates a root-owned output directory on the runner.
-        run: sudo python3 .github/scripts/build-vouch-pages.py _site
+        run: |
+          sudo python3 .github/scripts/build-vouch-pages.py _site
+          python3 .github/scripts/check-social.py _site --generated
       - uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
