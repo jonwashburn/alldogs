@@ -31,7 +31,8 @@ jobs:
           source: ./
           destination: ./_site
       - name: Add shareable short-link pages
-        run: python3 .github/scripts/build-vouch-pages.py _site
+        # The Jekyll container creates a root-owned output directory on the runner.
+        run: sudo python3 .github/scripts/build-vouch-pages.py _site
       - uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
