@@ -12,7 +12,7 @@ function harness(file, path, search, stored = {}) {
   let replaced, copied;
   const makeElement = () => {
     const node = {hidden:false,disabled:false,value:'',events:{},style:{},children:[],
-      addEventListener(name, fn) {this.events[name] = fn;},querySelectorAll:()=>[],reportValidity:()=>true,
+      addEventListener(name, fn) {this.events[name] = fn;},querySelector:()=>({after(){}}),querySelectorAll:()=>[],reportValidity:()=>true,
       append(...children) {this.children.push(...children);}, before() {}, after() {},
       closest() {return element(this.id+'-label');}, setAttribute(name,value) {this[name]=value;}};
     Object.defineProperty(node,'id',{get(){return this._id;},set(value){this._id=value;elements.set(value,this);}});
@@ -22,7 +22,7 @@ function harness(file, path, search, stored = {}) {
     if (!elements.has(id)) makeElement().id=id;
     return elements.get(id);
   };
-  const context = {document:{getElementById:id=>id==='adoption-dialog'?null:element(id),createElement:makeElement},
+  const context = {document:{getElementById:id=>id==='adoption-dialog'||(id==='wishlist-invitation'&&!elements.has(id))?null:element(id),createElement:makeElement},
     location:{pathname:path,search},history:{replaceState:(_,__,value)=>{replaced=value;}},
     sessionStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)},
     navigator:{clipboard:{writeText:async value=>{copied=value;}}},
@@ -58,6 +58,7 @@ function harness(file, path, search, stored = {}) {
     if (storedId) stored['alldogs-application-short-id'] = storedId;
     const h = harness('dog-pound/adoption-form.js','/','',stored);
     await settle();
+    assert.equal(h.element('wishlist-invitation').children[2].href,'/dog-pound/');
     assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
     assert.equal(new URL(h.element('share-on-x').href).searchParams.get('url'),'https://alldogs.wtf/vouch/2');
     await h.element('copy-application').onclick();

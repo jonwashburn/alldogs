@@ -11,6 +11,8 @@
       const response=await fetch('https://api.alldogs.wtf/collection-api/adoption-applications', {headers:{Authorization:'Bearer '+key},credentials:'omit',cache:'no-store',signal:controller.signal});
       if (!response.ok) throw Error(response.status===403?'The review key was not accepted.':'The application desk is temporarily unavailable.');
       const data=await response.json();
+      let titles = new Map();
+      try { const art = await fetch('/dog-pound/dogs.json', {cache:'no-cache'}).then(r => r.json()); titles = new Map(art.items.map(d => [d.id,d.title])); } catch (_) {}
       if (ticket!==sequence) return;
       if (!Array.isArray(data.applications)) throw Error('The application list could not be read.');
       const fragment=document.createDocumentFragment();
@@ -21,6 +23,7 @@
         const wallet=text('code',item.wallet||({'help':'Wallet help requested','new':'Needs a new wallet','later':'Will provide a wallet on adoption day'}[item.wallet_choice]||'Wallet not supplied on this legacy application'));wallet.className='private-wallet';card.append(wallet);
         if(item.wallet){const copyWallet=text('button','Copy ETH address');copyWallet.type='button';copyWallet.className='text-link';copyWallet.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(item.wallet);copyWallet.textContent='Address copied';}catch(_){copyWallet.textContent='Select and copy the address above';}});card.append(copyWallet);}
         if(item.public_id){const publicLink=text('a','Open shareable application ↗');publicLink.href='/dog-pound/application/?id='+encodeURIComponent(item.public_id);publicLink.target='_blank';publicLink.rel='noopener noreferrer';const p=document.createElement('p');p.append(publicLink);card.append(p);}
+        if(item.wishlist?.length) { const list=text('ol',''); for (const dog of item.wishlist) list.append(text('li',titles.get(dog)||dog)); card.append(text('h3','Wishlist, in order'),list); }
         if(item.note) card.append(text('p',item.note));
         if(item.email) card.append(text('p','Email: '+item.email),text('p','Invitation email requested. Other Wubbushi art: '+(item.art_updates?'opted in':'not requested')+'. '+(item.email_verified?'Address verified.':'Address not verified; email delivery is not connected.')));
         card.append(text('code',item.receipt));

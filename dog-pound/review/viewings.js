@@ -9,6 +9,7 @@
     if(!data.capabilities.xLogin)root.append(node('p','X sign-in is not connected. Applicants must sign in and link their application before they can receive a private viewing.'));
     if(!data.applications.length)root.append(node('p','No linked applications yet. Applications still awaiting sign-in are in the application desk.'));
     for(const app of data.applications){const card=node('section');card.className='account-card';card.append(node('h2','@'+app.currentHandle),node('p',app.status.replaceAll('_',' ')));
+      if(app.wishlist?.length){const wishes=node('ol');for(const id of app.wishlist)wishes.append(node('li',data.dogs.find(d=>d.id===id)?.title||id));card.append(node('h3','Their wishlist, in order'),wishes);}
       if(app.invitation&&app.invitation.status!=='revoked'){
         const inv=app.invitation;card.append(node('p',inv.status==='chosen'?'Saved choice: '+inv.dog_name:'Invitation open. No dog selected yet.'));
         const names=JSON.parse(inv.dogs).map(id=>data.dogs.find(d=>d.id===id)?.title||id);card.append(node('p',names.join(' · ')));

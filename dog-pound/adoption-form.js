@@ -40,6 +40,9 @@
       if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
     });
   }
+  if (dialog && location.hash === '#apply') {
+    dialog.showModal(); document.documentElement.classList.add('adoption-is-open');
+  }
   let submission = null;
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
   const validShortId = value => Number.isInteger(Number(value)) && Number(value) > 0 && Number(value) <= 10000;
@@ -54,6 +57,13 @@
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
     if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
       const url = validShortId(shortId) ? 'https://alldogs.wtf/vouch/' + Number(shortId) : 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
+      if (!$('wishlist-invitation')) {
+        const invite = document.createElement('section'); invite.id = 'wishlist-invitation'; invite.className = 'wishlist-invite';
+        const title = document.createElement('h4'); title.textContent = 'You’re on the list. Come meet the dogs.';
+        const copy = document.createElement('p'); copy.textContent = 'Choose up to three favourites in the Pound. Put them in order, change your mind, come back for another look.';
+        const enter = document.createElement('a'); enter.className = 'button primary'; enter.href = '/dog-pound/'; enter.textContent = 'Enter the Pound · make my wishlist ↗';
+        invite.append(title,copy,enter); $('receipt').querySelector('h3').after(invite);
+      }
       $('share-application').hidden = false;
       $('view-application').href = url;
       $('share-on-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I applied to adopt a dog from ALL DOGS. If you own one and are eligible to vouch, would you vouch for me?') + '&url=' + encodeURIComponent(url);

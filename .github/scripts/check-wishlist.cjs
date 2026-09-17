@@ -1,0 +1,21 @@
+// Pure ranking checks and static entry boundaries. No real users or network.
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const model=require('../../dog-pound/wishlist-model.js');
+let tests=0;
+assert.deepEqual(model.add([],'a'),['a']);tests++;
+assert.deepEqual(model.add(['a'],'a'),['a']);tests++;
+assert.throws(()=>model.add(['a','b','c'],'d'));tests++;
+assert.deepEqual(model.move(['a','b','c'],2,0),['c','a','b']);tests++;
+assert.deepEqual(model.move(['a','b','c'],0,2),['b','c','a']);tests++;
+assert.deepEqual(model.move(['a','b'],0,2),['b','a']);tests++;
+assert.deepEqual(model.move(['a'],0,-1),['a']);tests++;
+assert.deepEqual(model.remove(['a','b','c'],'b'),['a','c']);tests++;
+const original=['a','b','c'];model.move(original,0,2);model.remove(original,'a');assert.deepEqual(original,['a','b','c']);tests++;
+const home=fs.readFileSync('index.html','utf8'),pound=fs.readFileSync('dog-pound/index.html','utf8'),js=fs.readFileSync('dog-pound/wishlist.js','utf8');
+assert.doesNotMatch(home,/href="\/dog-pound\/(?:#apply)?"/);tests++;
+assert.match(pound,/id="pound-content" hidden/);assert.match(pound,/name="robots" content="noindex,nofollow"/);tests++;
+assert.doesNotMatch(pound,/<form id="application-form">/);assert.match(pound,/id="wish-holders"/);tests++;
+assert.match(js,/application-wishlist/);assert.doesNotMatch(js,/fetch\(['"]dogs.json/);assert.match(js,/credentials:'omit'/);assert.match(js,/cache:'no-store'/);tests++;
+assert.match(js,/pointerdown/);assert.match(js,/pointerup/);assert.match(js,/pointercancel/);assert.match(js,/Move .* earlier/);tests++;
+assert.match(js,/Reload your saved wishlist before continuing/);tests++;
+console.log(tests+' wishlist model and entry cases passed.');

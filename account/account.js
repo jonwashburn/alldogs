@@ -39,12 +39,12 @@
     const app=account.application;
     if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p',account.owner.dogName+' is in your account.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
     if(!app){const c=card('Already applied?');c.append(node('p','Link your application with its private receipt. Sign in with the same X account you used to apply.'));
-      const form=node('form'),label=node('label','Private application receipt'),input=node('input');input.name='receipt';input.placeholder='DOG-…';input.required=true;input.maxLength=20;input.autocomplete='off';input.value=sessionStorage.getItem('alldogs-application-receipt')||'';label.append(input);const submit=node('button','Link my application','button primary');submit.type='submit';form.append(label,submit);form.addEventListener('submit',event=>{event.preventDefault();change('claim',{receipt:input.value.trim().toUpperCase()},'Your application is linked.');});c.append(form,link('Not applied yet? Start here ↗','/dog-pound/#apply'));return;}
+      const form=node('form'),label=node('label','Private application receipt'),input=node('input');input.name='receipt';input.placeholder='DOG-…';input.required=true;input.maxLength=20;input.autocomplete='off';input.value=sessionStorage.getItem('alldogs-application-receipt')||'';label.append(input);const submit=node('button','Link my application','button primary');submit.type='submit';form.append(label,submit);form.addEventListener('submit',event=>{event.preventDefault();change('claim',{receipt:input.value.trim().toUpperCase()},'Your application is linked.');});c.append(form,link('Not applied yet? Start here ↗','/#apply'));return;}
     const c=card('Your application.');c.append(node('p',words[app.status]||'Under review','account-status'));
     if(app.vouchedBy)c.append(node('p','Vouched for by @'+app.vouchedBy+(app.expiresAt?'. Expires '+date(app.expiresAt)+'.':'.')));
     if(account.hasInvitation)c.append(link('Step into your private viewing ↗','/viewing-room/','button primary'));
     else c.append(node('p','Wubbushi reviews each application personally. Your invitation will appear here.'));
-    const links=node('div',undefined,'account-links');links.append(link('My shareable application ↗',share(app)));c.append(links);
+    const links=node('div',undefined,'account-links');links.append(link('My shareable application ↗',share(app)),link('My wishlist ↗','/dog-pound/'));c.append(links);
     const listed=card('Looking for someone to vouch?');listed.append(node('p','Put your X handle and application on the public waitlist so eligible owners can find you. Your wallet address and private receipt stay private.'));
     listed.append(button(app.listed?'Remove me from the waitlist':'Add me to the waitlist',()=>change('listing',{listed:!app.listed},app.listed?'You are no longer listed. Your application is still saved.':'You are on the public waitlist.'),'button primary'));
   }
@@ -63,7 +63,7 @@
     for(const app of data.applications){const li=node('li'),info=node('div');info.append(link('@'+app.handle,'https://x.com/'+encodeURIComponent(app.handle)),node('small',words[app.status]||'Awaiting review'));li.append(info);const actions=node('div',undefined,'account-links');actions.append(link('Meet the applicant ↗',share(app)));if(account?.owner?.vouch.eligible&&app.status==='looking_for_vouch'&&app.handle!==identity.handle)actions.append(link('Review & vouch ↗',share(app),'button'));li.append(actions);list.append(li);}c.append(list);
   }
   async function room() {
-    if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, three hand-picked dogs will be waiting here. Until then, you can look around the public Dog Pound.'),link('Preview the dogs ↗','/dog-pound/'));return;}
+    if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, three hand-picked dogs will be waiting here. After applying, you can make or revisit your wishlist in the Pound. Keep your private receipt handy.'),link('My wishlist ↗','/dog-pound/'));return;}
     const data=await api.request('club/room');
     if(data.dogs.length!==3)throw Error('Your viewing needs a little attention from Wubbushi. Your choice has not changed.');
     if(data.note)content.append(node('p',data.note,'intro account-message'));
