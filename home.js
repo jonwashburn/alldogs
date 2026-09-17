@@ -20,37 +20,23 @@
       finally { button.disabled = false; }
     });
   });
-  const rules = document.getElementById('game');
-  const openLinkedRules = () => { if (location.hash === '#game') rules.open = true; };
-  window.addEventListener('hashchange', openLinkedRules);
-  document.querySelectorAll('a[href="#game"]').forEach(link => link.addEventListener('click', () => { rules.open = true; }));
-  openLinkedRules();
-
-  // Keep Barack's zombie reveal fixed; rotate the other wide heroes once per visit.
+  // Barack's opening painting is static. Only the later painting rotates per visit.
   const heroNames = new Set([
     'Tideheart', 'Afterburn', 'Snoop Dogg', 'Popeye', 'Hulk', 'Dracula', 'Leeloo',
     'Rene', 'Gustav', 'Elliott', 'Leia', 'Marty', 'Frida', 'Batman', 'Donald',
     'Marie', 'Elizabeth', 'Napoleon', 'Amy', 'Ozzy'
   ]);
-  const hero = document.getElementById('hero-dog');
-  const slots = [hero, ...document.querySelectorAll('.band-dog')].filter(Boolean);
+  const slots = [...document.querySelectorAll('.band-dog')];
   async function reveal(img, src, title) {
     const preload = new Image();
-    if (img === hero) preload.fetchPriority = 'high';
     preload.src = src;
     await preload.decode();
     img.src = preload.src;
     img.alt = title + ', a loved living dog';
-    if (img === hero) {
-      document.getElementById('hero-caption').textContent = title + ' · one of the loved dogs';
-      img.dataset.ready = 'true';
-      try { sessionStorage.setItem('alldogs-home-last-hero', title); } catch (_) {}
+    if (img.classList.contains('band-dog')) {
+      img.nextElementSibling.textContent = title + ' · from the loved collection';
+      try { sessionStorage.setItem('alldogs-home-last-band', title); } catch (_) {}
     }
-    if (img.classList.contains('band-dog')) img.nextElementSibling.textContent = title;
-  }
-  async function fallbackHero() {
-    try { await reveal(hero, hero.dataset.fallback, 'Tideheart'); }
-    catch (_) { document.getElementById('hero-caption').textContent = 'The painting could not load. Visit the Dog Pound to try again.'; }
   }
   fetch('/dog-pound/dogs.json?v=20260916', {signal: AbortSignal.timeout(12000)}).then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); }).then(data => {
     const dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved');
@@ -59,17 +45,14 @@
     const heroDogs = dogs.filter(d => heroNames.has(d.title));
     if (!heroDogs.length) throw Error('Unavailable');
     try {
-      const last = sessionStorage.getItem('alldogs-home-last-hero');
+      const last = sessionStorage.getItem('alldogs-home-last-band');
       if (heroDogs.length > 1 && heroDogs[0].title === last) heroDogs.push(heroDogs.shift());
     } catch (_) {}
     slots.forEach((img,index) => {
       const dog=heroDogs[index]; if (!dog) return;
-      reveal(img, dog.variants[0].src, dog.title).catch(() => {
-        if (img === hero) fallbackHero();
-        else if (img.classList.contains('band-dog')) img.closest('.paint-band').hidden = true;
-      });
+      reveal(img, dog.variants[0].src, dog.title).catch(() => {});
     });
     const editorialDog = dogs.find(d => d.title !== 'Barack' && !heroDogs.slice(0, slots.length).includes(d));
     if (editorialDog) reveal(document.getElementById('whyDog'), editorialDog.variants[0].src, editorialDog.title).catch(() => {});
-  }).catch(() => { fallbackHero(); document.querySelectorAll('.band-dog').forEach(img => { img.closest('.paint-band').hidden = true; }); });
+  }).catch(() => {}); // The approved static paintings remain if the catalog is unavailable.
 })();
