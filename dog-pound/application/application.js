@@ -13,7 +13,7 @@
       const d=await api('application?id='+encodeURIComponent(id));
       $('public-application').hidden=false;$('applicant-handle').textContent='@'+d.handle;$('applicant-profile').href='https://x.com/'+encodeURIComponent(d.handle);
       $('application-status').textContent='Application by @'+d.handle;
-      const labels={looking_for_vouch:'Still looking for someone to vouch.',vouched:'Vouched for by @'+d.vouchedBy+'. Waiting for Jonathan’s review.',vouch_suspended:'The existing voucher is no longer eligible. Jonathan will review the application.',adopted:'This person has brought their dog home.'};
+      const labels={looking_for_vouch:'Still looking for someone to vouch.',vouched:'Vouched for by @'+d.vouchedBy+'. Waiting for Wubbushi’s review.',vouch_suspended:'The existing voucher is no longer eligible. Wubbushi will review the application.',adopted:'This person has brought their dog home.'};
       $('vouch-state').textContent=labels[d.status]||'Awaiting review.';
       $('sign-vouch').hidden=!wallet||d.status!=='looking_for_vouch';
       $('withdraw-vouch').hidden=!wallet||!['vouched','vouch_suspended'].includes(d.status);
