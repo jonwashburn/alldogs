@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Dog Pound · ALL DOGS</title>
+  <meta name="description" content="Good dogs looking for their people. Meet the loved paintings and apply to the invitation-only ALL DOGS adoption waitlist.">
+  <meta name="theme-color" content="#fdfdfb"><link rel="canonical" href="https://alldogs.wtf/dog-pound/">
+  <meta property="og:title" content="The Dog Pound · ALL DOGS"><meta property="og:description" content="Find your dog. Give them a name. Become part of the pack.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pound.css?v=20260916"><script src="pound.js?v=20260916" defer></script>
+</head>
+<body>
+<a class="skip" href="#dogs">Skip to the dogs</a>
+<header class="mast"><a class="brand" href="/">ALL DOGS<span>™</span></a><nav aria-label="Main navigation"><a href="/#game">Their story</a><a class="button small" href="#apply">Join the waitlist</a></nav></header>
+<main>
+  <section class="intro wrap">
+    <p class="eyebrow">The Dog Pound · invitation-only adoption</p>
+    <h1>Good dogs.<br>Looking for <span>their people.</span></h1>
+    <div class="intro-bottom"><p>Somebody lets you in. One of these dogs comes home with you.<br>You give them a name. What happens next becomes their story.</p><a class="text-link" href="#dogs">Meet the pack ↓</a></div>
+  </section>
+  <section class="spotlight" aria-label="A dog from the loved collection"><img id="spotlight-image" alt="" width="2400" height="1200" fetchpriority="high"><div class="spotlight-caption"><span id="spotlight-title">The loved collection</span><button id="spotlight-meet" type="button" hidden>Say hello ↗</button></div></section>
+  <section class="how wrap" id="how"><p class="eyebrow">How a dog finds a home</p><ol><li><span>01</span><h2>Someone vouches.</h2><p>Apply with your X handle and the dog owner who invited you. Jonathan welcomes the founding pack.</p></li><li><span>02</span><h2>A message, just for you.</h2><p>When your turn is ready, Jonathan gets in touch. Your identity and invitation are checked before payment.</p></li><li><span>03</span><h2>Then you choose.</h2><p>Pay for your adoption, enter the private Pound, pick your dog and give them their forever name.</p></li></ol><p class="quiet">Applications are open. Paid adoption and private selection are not open yet. The paintings below are a preview, not an availability or reservation list.</p></section>
+  <section class="pack wrap" id="dogs">
+    <div class="section-heading"><div><p class="eyebrow">Only the ones we love</p><h2>Who feels like yours?</h2></div><p id="dog-count" role="status">Loading the loved dogs…</p></div>
+    <div class="toolbar"><label class="search">Find a familiar face<input type="search" id="search" placeholder="A name, a character, a feeling…" autocomplete="off"></label><div class="view-toggle" role="group" aria-label="Painting view"><button type="button" data-view="square" aria-pressed="true">Portraits</button><button type="button" data-view="wide" aria-pressed="false">Full paintings</button></div></div>
+    <div class="gallery" id="gallery" data-view="square"></div>
+    <p id="empty" hidden>No dogs found. Try another name.</p>
+    <noscript><p>The interactive Pound needs JavaScript. You can still <a href="/loved/">view the loved collection</a>. To apply, please enable JavaScript and return to this page.</p></noscript>
+    <p class="quiet">These are artwork reference names, not names you have to keep. Your dog gets the name you choose.</p>
+  </section>
+  <section class="collar-section wrap"><div><p class="eyebrow">A little tag. A whole life.</p><h2>More than<br>a famous name.</h2><p>The painting remembers where it began. The collar remembers who loved it.</p><p>Your chosen name, verified X handle, the owner who vouched for you, and your adoption day become part of the dog's record. Every change of state records how long they lived and what happened.</p></div><div class="collar-example" aria-label="Illustrative collar, not an adopted dog"><p class="eyebrow">A collar could look like this</p><h3>Mr. Pickles</h3><dl><div><dt>Loved by</dt><dd>@yourhandle</dd></div><div><dt>Vouched for by</dt><dd>@yourfriend</dd></div><div><dt>Originally painted as</dt><dd>Barack</dd></div><div><dt>Favourite treat</dt><dd>The last bit of toast</dd></div><div><dt>Bedtime ritual</dt><dd>Three circles. Then a sigh.</dd></div></dl><p class="quiet">Illustration only. Treats and rituals are proposed optional details.</p></div></section>
+  <section class="application wrap" id="apply">
+    <div class="application-intro"><p class="eyebrow">One dog. One person. A friend of a friend.</p><h2>Make room<br>for a good dog.</h2><p>Leave your handle and tell us who sent you. Jonathan will message you personally when your turn is ready.</p><p>No payment or wallet connection here. Applying does not guarantee an invitation, reserve a painting, or verify your identity.</p><details><summary>Don't know an owner yet?</summary><p>The first owners are invited by Jonathan, starting with his collectors. Ask the person who sent you here to introduce you. The wider pack grows through existing owners.</p></details><details><summary>How will you know it is really me?</summary><p>We contact the exact X account in your application. Reply from that account with your application receipt. We separately check your invitation with the person who vouched for you. A typed handle alone is never verification.</p></details><details><summary>Will I put down a deposit?</summary><p>No money is collected for this waitlist. Payment opens only with a confirmed invitation, a stated price and clear terms. Never send money or a seed phrase in a DM.</p></details></div>
+    <form id="application-form">
+      <label>Your X / Twitter handle<input name="handle" id="handle" autocomplete="off" placeholder="@yourhandle" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required></label>
+      <label>Vouched for by<input name="voucher" id="voucher" autocomplete="off" placeholder="@thepersonwhosentyou" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required><small>The existing owner's handle, or Jonathan's for a founding invitation. We confirm every vouch.</small></label>
+      <label>A little about you <span class="optional">(optional)</span><textarea name="note" id="note" rows="3" maxlength="600" placeholder="Tell us about the dog you still think about."></textarea></label>
+      <div class="trap" aria-hidden="true"><label>Leave empty<input name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
+      <label class="consent"><input type="checkbox" id="consent" required><span>I understand this is an application, not an adoption. Jonathan may contact me on X about it.</span></label>
+      <button class="button primary" type="submit" id="submit-application">Join the adoption waitlist ↗</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <div id="receipt" hidden><h3>Your application is saved.</h3><p>Keep this receipt private. Jonathan will ask for it when he contacts your account.</p><code id="receipt-code"></code><button type="button" class="text-link" id="copy-receipt">Copy receipt</button><p>Your vouch and identity still need to be checked. No money has been taken and no dog has been reserved.</p></div>
+      <p class="privacy">Your application is stored privately for adoption review. Your note is not public. No email or wallet is collected. Verified owner and voucher handles are intended to appear on the collar only after adoption. You can request correction or removal when speaking with Jonathan; nothing is written on-chain by this form.</p>
+    </form>
+  </section>
+</main>
+<footer class="wrap"><a class="brand" href="/">ALL DOGS</a><p>Jonathan Washburn · 2026<br>The artist paints the dogs. The owners write the story.</p><a href="/#game">Read the collection rules ↗</a></footer>
+<dialog id="dog-dialog" aria-labelledby="dialog-title"><button type="button" class="close" id="close-dialog" aria-label="Close dog preview">×</button><div class="dialog-layout"><div class="dialog-art"><img id="dialog-image" alt="" width="2000" height="2000"></div><div class="dialog-info"><p class="eyebrow">Living · loved · one of one</p><h2 id="dialog-title"></h2><p id="reference-name"></p><label>What would you call them?<input id="dog-name" maxlength="32" placeholder="Try a name…" autocomplete="off"></label><p id="name-preview" aria-live="polite"></p><p class="quiet">A little daydream, not a reservation. You'll confirm their name after your invitation and adoption payment.</p><a class="button primary" href="#apply" id="dialog-apply">Join the waitlist ↗</a><a id="full-painting" class="text-link" target="_blank" rel="noopener">Open the full painting ↗</a></div></div></dialog>
+</body></html>

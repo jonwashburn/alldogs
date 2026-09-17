@@ -1,0 +1,1519 @@
+{
+  "version": 1,
+  "curatedAt": "2026-09-16",
+  "items": [
+    {
+      "id": "candidate-hero_gestures_round_04_20260912-ash_runner-9b708dee97597a4f",
+      "title": "Ash Runner",
+      "original": "/collection/assets/candidate-9b708dee97597a4f02c08a079aefe7ace436513bcc92b1ac975b9afdae5baccd.png",
+      "variants": [
+        {
+          "src": "/wide/ash_runner-41289df560c93af5-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/ash_runner-41289df560c93af5-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-star_catcher-8b48be81b251acf2",
+      "title": "The Star Catcher",
+      "original": "/collection/assets/candidate-8b48be81b251acf2cdfa1e1c5d1586d3e89380f0f699a23b65068a476dba4824.png",
+      "variants": [
+        {
+          "src": "/wide/star_catcher-88d63685116cff04-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/star_catcher-88d63685116cff04-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-hero_actions_round_03_20260912-river_bridge-090a93907f26ec51",
+      "title": "The River Bridge",
+      "original": "/collection/assets/candidate-090a93907f26ec51b6897fe98cbcb9a0db816a9f27fabf79a7481274cd443339.png",
+      "variants": [
+        {
+          "src": "/wide/river_bridge-d808b645fd39b91d-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/river_bridge-d808b645fd39b91d-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-mapmaker-91bc5498dd956bba",
+      "title": "The Mapmaker Who Got Lost",
+      "original": "/collection/assets/candidate-91bc5498dd956bba10a3a88ce915c4fb11dd860d34933680b0840a06ee81e9ae.png",
+      "variants": [
+        {
+          "src": "/wide/mapmaker-499d16df317cc71d-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/mapmaker-499d16df317cc71d-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-apple_thief-37e9658f8463c434",
+      "title": "The Apple Thief",
+      "original": "/collection/assets/candidate-37e9658f8463c43489b3053258c7f2ebf7c0e67b6830e90cb1670fe96ac72efa.png",
+      "variants": [
+        {
+          "src": "/wide/apple_thief-f1ba69a45daa3f28-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/apple_thief-f1ba69a45daa3f28-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-saint_george-65fea96a68c556ac",
+      "title": "Saint George, Almost Brave",
+      "original": "/collection/assets/candidate-65fea96a68c556acab483dbbd6afe7237a4973c201823da37e883a88ba4dee9a.png",
+      "variants": [
+        {
+          "src": "/wide/saint_george-5e7e03a4e4427271-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/saint_george-5e7e03a4e4427271-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-judged_round_01_20260912-bell_diver-a3e0d1828d8b98ac",
+      "title": "The Bell Diver",
+      "original": "/collection/assets/candidate-a3e0d1828d8b98ac2f62ffe69223bb33bbdfb926ea9295718002e421f41c95c6.png",
+      "variants": [
+        {
+          "src": "/wide/bell_diver-8b9bc875ff5ceccb-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/bell_diver-8b9bc875ff5ceccb-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-pan-a3a5ecf69b916a0d",
+      "title": "Pan, The Woods Are Listening",
+      "original": "/collection/assets/candidate-a3a5ecf69b916a0d9d73569da1d796b2eb6a026775abb3a7d0e9686a90ff874e.png",
+      "variants": [
+        {
+          "src": "/wide/pan-42e09a97d83f1561-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/pan-42e09a97d83f1561-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-charon-1a06dcb982cead54",
+      "title": "Charon, Last Boat Home",
+      "original": "/collection/assets/candidate-1a06dcb982cead54d4b00a99e5d7c4b386ace4026ba8ba421981c926f301492d.png",
+      "variants": [
+        {
+          "src": "/wide/charon-6298f40206495066-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/charon-6298f40206495066-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-hypnos-bb180999a33feffe",
+      "title": "Hypnos, Five More Minutes",
+      "original": "/collection/assets/candidate-bb180999a33feffe6e4a66c5800ad99dfe9dd3094c99e4572b48e0cd43d59ecc.png",
+      "variants": [
+        {
+          "src": "/wide/hypnos-33ab9d4d1ebfec7d-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hypnos-33ab9d4d1ebfec7d-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-persephone-597fb2b60f9f8111",
+      "title": "Persephone, Back Again",
+      "original": "/collection/assets/candidate-597fb2b60f9f8111735ef8995e1fdbfbaaa48aa95253f7098c6ff0bd5dcc87d1.png",
+      "variants": [
+        {
+          "src": "/wide/persephone-758eaca8d5fdeb71-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/persephone-758eaca8d5fdeb71-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-helios-919f81a8e212273d",
+      "title": "Helios, No Brakes",
+      "original": "/collection/assets/candidate-919f81a8e212273d27fa1cd42d017c8c58476238eb310383ad8262a397c558ab.png",
+      "variants": [
+        {
+          "src": "/wide/helios-ee98af6508a5bf79-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/helios-ee98af6508a5bf79-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-mythic_liberties_six_20260912-nyx-ce97bc2df3e87453",
+      "title": "Nyx, The Moon on a String",
+      "original": "/collection/assets/candidate-ce97bc2df3e874530dea4d4e0150f5c8b9579193bead9c62a62509075418855f.png",
+      "variants": [
+        {
+          "src": "/wide/nyx-76c4d9e0955ac5b5-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/nyx-76c4d9e0955ac5b5-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hestia-93363e971955d9c8",
+      "title": "Hestia, Come Inside",
+      "original": "/collection/assets/candidate-93363e971955d9c804ebc614c347295a9d4f416443d0b085416c7fb39158af83.png",
+      "variants": [
+        {
+          "src": "/wide/hestia-a5c841660372eacc-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hestia-a5c841660372eacc-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-dionysus-4bbcd2786bbcc979",
+      "title": "Dionysus, The Party Is Still Here",
+      "original": "/collection/assets/candidate-4bbcd2786bbcc979c92d417fcc870b935bb01c621df21f0d1564cab25972d229.png",
+      "variants": [
+        {
+          "src": "/wide/dionysus-0c832dc5b05db2ac-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/dionysus-0c832dc5b05db2ac-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hermes-a4de10083b95ca3c",
+      "title": "Hermes, A Message for Tomorrow",
+      "original": "/collection/assets/candidate-a4de10083b95ca3cc0ea7b7485f80dbaba701d9183ced192426a8e5c449526b5.png",
+      "variants": [
+        {
+          "src": "/wide/hermes-525fc3afa721bfee-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hermes-525fc3afa721bfee-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hephaestus-f2061d10f1b55ee0",
+      "title": "Hephaestus, One More Spark",
+      "original": "/collection/assets/candidate-f2061d10f1b55ee0282cdac98cef3e0521411db5d237da8e8778240cafcb015c.png",
+      "variants": [
+        {
+          "src": "/wide/hephaestus-1f0aa1b8fa2e31f6-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hephaestus-1f0aa1b8fa2e31f6-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-aphrodite-b05a96bcd23849d9",
+      "title": "Aphrodite, The Tide Brings Roses",
+      "original": "/collection/assets/candidate-b05a96bcd23849d9c11ddb53f68feb13d90c37776d2550cc5da1d24b73034afc.png",
+      "variants": [
+        {
+          "src": "/wide/aphrodite-779e065ccb6fb423-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/aphrodite-779e065ccb6fb423-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-ares-811bb5496b851d3c",
+      "title": "Ares, A Flower After Battle",
+      "original": "/collection/assets/candidate-811bb5496b851d3c737a8f455ca956415fde5ae2daedc7cc5f7c3a41550c8abe.png",
+      "variants": [
+        {
+          "src": "/wide/ares-d4c8ccce156332f1-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/ares-d4c8ccce156332f1-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-apollo-9a6197d72b773178",
+      "title": "Apollo, Morning Rehearsal",
+      "original": "/collection/assets/candidate-9a6197d72b77317838f00952d7ca63c729552bf2a84c5aa65bfe3d6765c64b1f.png",
+      "variants": [
+        {
+          "src": "/wide/apollo-d70ad0d6162a25fa-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/apollo-d70ad0d6162a25fa-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-athena-3ddc4b5225170304",
+      "title": "Athena, Before the Noise",
+      "original": "/collection/assets/candidate-3ddc4b5225170304a661bd67afddf5f91ce75f29b96d50262464c0064f04fd62.png",
+      "variants": [
+        {
+          "src": "/wide/athena-21d23a0a3c70e635-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/athena-21d23a0a3c70e635-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-demeter-1a0b2a37de048d98",
+      "title": "Demeter, The Last Ear of Wheat",
+      "original": "/collection/assets/candidate-1a0b2a37de048d988f1af79d190d451c6b50e623f1da93d94da8ee67ecf7922c.png",
+      "variants": [
+        {
+          "src": "/wide/demeter-aea4114084293632-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/demeter-aea4114084293632-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-poseidon-a79919956e293384",
+      "title": "Poseidon, A Sea in His Wake",
+      "original": "/collection/assets/candidate-a79919956e293384e31c95499aaaa495ef27dec2b0139d40f808d9d81e24be4e.png",
+      "variants": [
+        {
+          "src": "/wide/poseidon-9d29c7c34335ff99-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/poseidon-9d29c7c34335ff99-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-hera-3571150f54a53e3c",
+      "title": "Hera, Every Eye",
+      "original": "/collection/assets/candidate-3571150f54a53e3cc2b4cfdb039be9ef3f6a6e752942a5d5f0e0d7e4b0197a7e.png",
+      "variants": [
+        {
+          "src": "/wide/hera-7b18bbeba1117a96-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hera-7b18bbeba1117a96-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0026_thor_light_20260912-thor-1fd02d5a38a899b3",
+      "title": "Thor, White Lightning",
+      "original": "/collection/assets/candidate-1fd02d5a38a899b329fc4ffb87b850b7fc32a85e4fda58c68456642145bf205f.png",
+      "variants": [
+        {
+          "src": "/wide/thor-8c23a1ff303c7e46-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/thor-8c23a1ff303c7e46-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0023_amelia_20260912-amelia-28df015e0e0e9753",
+      "title": "Amelia, Into the Blue",
+      "original": "/collection/assets/candidate-28df015e0e0e9753d3b254c4068f53275072f896a460b309d761b1132a9ed22a.png",
+      "variants": [
+        {
+          "src": "/wide/amelia-a93c682280d2f346-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/amelia-a93c682280d2f346-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-greek_pantheon_20260912-zeus-ecbc8f6e9c8429df",
+      "title": "Zeus, The Sky Answers",
+      "original": "/collection/assets/candidate-ecbc8f6e9c8429df342ceeabae4aef74dc35471e40ef3fb6324f42398066f00c.png",
+      "variants": [
+        {
+          "src": "/wide/zeus-f78ac6f6b451360f-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/zeus-f78ac6f6b451360f-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0017_joan_20260911-joan-a721d495791beb22",
+      "title": "Joan, Before Dawn",
+      "original": "/collection/assets/candidate-a721d495791beb22ffb766c1a1fcea71693b6f4d6a741fd8d68008cd3898d751.png",
+      "variants": [
+        {
+          "src": "/wide/joan-cc8450a314db074c-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/joan-cc8450a314db074c-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0001_hermes_20260911-hermes-8c4b0884df2420f5",
+      "title": "Hermes, Late Again",
+      "original": "/collection/assets/candidate-8c4b0884df2420f50fc224ee36c274fc42d1e41175bd517d274a5e50e2bff50d.png",
+      "variants": [
+        {
+          "src": "/wide/hermes-51638080701f58ca-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/hermes-51638080701f58ca-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0014_tightrope_20260911-tightrope-426f81f83ff10538",
+      "title": "A Little Further",
+      "original": "/collection/assets/candidate-426f81f83ff105386abf0bfce0340e2b4ced8426cb421423654950e918f5260e.png",
+      "variants": [
+        {
+          "src": "/wide/tightrope-c6b2cb20cbf2208f-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/tightrope-c6b2cb20cbf2208f-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0012_courier_20260911-courier-fd84e79ea1c42172",
+      "title": "The Comet Courier",
+      "original": "/collection/assets/candidate-fd84e79ea1c42172a163a3d3d33aec91a8d1ab7169c0090bf75f99b3ff160095.png",
+      "variants": [
+        {
+          "src": "/wide/courier-9dc11919286d4206-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/courier-9dc11919286d4206-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-loop_0006_icarus_backlight_20260911-icarus-d0c61580416f4bf1",
+      "title": "Icarus, Into the Light",
+      "original": "/collection/assets/candidate-d0c61580416f4bf1875bf2fb7c9ec0193efefdfdb46c32a439162338d9d73f98.png",
+      "variants": [
+        {
+          "src": "/wide/icarus-03544ba6738312b1-2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "/wide/icarus-03544ba6738312b1-4000.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-2-279c95ff78b23174",
+      "title": "Elvis",
+      "original": "/collection/assets/dog-2-279c95ff78b23174.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_2_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_2_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_2_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-34-fabe479938bae359",
+      "title": "Madonna",
+      "original": "/collection/assets/dog-34-fabe479938bae359.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_34_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_34_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_34_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-35-a3ebd83425da90bf",
+      "title": "Gaga",
+      "original": "/collection/assets/dog-35-a3ebd83425da90bf.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_35_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_35_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_35_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-36-09cf7bae29dd5246",
+      "title": "Elton",
+      "original": "/collection/assets/dog-36-09cf7bae29dd5246.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_36_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_36_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_36_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-38-8c1f9d085e1cbc56",
+      "title": "Hulk",
+      "original": "/collection/assets/dog-38-8c1f9d085e1cbc56.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_38_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_38_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_38_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-40-7347a3a49fb99b61",
+      "title": "Ozzy",
+      "original": "/collection/assets/dog-40-7347a3a49fb99b61.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_40_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_40_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_40_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-41-1363fc8e91acf2b5",
+      "title": "Virgil",
+      "original": "/collection/assets/dog-41-1363fc8e91acf2b5.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_41_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_41_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_41_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-43-51536fb2ea896ed0",
+      "title": "Fred",
+      "original": "/collection/assets/dog-43-51536fb2ea896ed0.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_43_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_43_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_43_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-44-9031e3254780003a",
+      "title": "Little Richard",
+      "original": "/collection/assets/dog-44-9031e3254780003a.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_44_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_44_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_44_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-46-1fd6e9caa6e08dae",
+      "title": "Amy",
+      "original": "/collection/assets/dog-46-1fd6e9caa6e08dae.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_46_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_46_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_46_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-50-9881611ca2df5e7b",
+      "title": "George",
+      "original": "/collection/assets/dog-50-9881611ca2df5e7b.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_50_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_50_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_50_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-51-1796bda50755534a",
+      "title": "Napoleon",
+      "original": "/collection/assets/dog-51-1796bda50755534a.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_51_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_51_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_51_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-55-8cf3cdad8b603a03",
+      "title": "Elizabeth",
+      "original": "/collection/assets/dog-55-8cf3cdad8b603a03.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_55_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_55_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_55_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-60-3a5e5c7b7aee2a00",
+      "title": "Marie",
+      "original": "/collection/assets/dog-60-3a5e5c7b7aee2a00.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_60_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_60_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_60_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-61-d8c7d837ca0e0aaf",
+      "title": "William",
+      "original": "/collection/assets/dog-61-d8c7d837ca0e0aaf.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_61_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_61_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_61_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-62-fb27c29277cc6593",
+      "title": "Barack",
+      "original": "/collection/assets/dog-62-fb27c29277cc6593.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-63-55f1aca66b25a384",
+      "title": "Donald",
+      "original": "/collection/assets/dog-63-55f1aca66b25a384.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_63_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_63_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_63_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-67-b274e6c6f4c593d7",
+      "title": "Wednesday",
+      "original": "/collection/assets/dog-67-b274e6c6f4c593d7.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_67_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_67_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_67_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-70-15217a88a113bca3",
+      "title": "Batman",
+      "original": "/collection/assets/dog-70-15217a88a113bca3.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_70_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_70_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_grounds/hero_faithful_70_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-74-43ad85561fe4caa5",
+      "title": "Maverick",
+      "original": "/collection/assets/dog-74-43ad85561fe4caa5.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_74_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_74_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_74_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-79-bde61b8a0259824e",
+      "title": "Nipper",
+      "original": "/collection/assets/dog-79-bde61b8a0259824e.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_79_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_79_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_79_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-88-26bf0f0fdd814074",
+      "title": "Judy",
+      "original": "/collection/assets/dog-88-26bf0f0fdd814074.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_88_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_88_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_88_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-101-2d6658eb30b9627c",
+      "title": "Vincent",
+      "original": "/collection/assets/dog-101-2d6658eb30b9627c.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_101_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_101_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_101_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-102-740f0ee3c80ab095",
+      "title": "Frida",
+      "original": "/collection/assets/dog-102-740f0ee3c80ab095.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_102_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_102_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_102_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-117-34aa2133dcd107a3",
+      "title": "Marty",
+      "original": "/collection/assets/dog-117-34aa2133dcd107a3.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_117_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_117_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_117_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-129-979b06df17a93815",
+      "title": "Leia",
+      "original": "/collection/assets/dog-129-979b06df17a93815.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_129_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_129_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_129_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-131-83c5406c90d2d989",
+      "title": "Elliott",
+      "original": "/collection/assets/dog-131-83c5406c90d2d989.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_131_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_131_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_all/hero_faithful_131_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-148-7852aa2296e4960e",
+      "title": "Gustav",
+      "original": "/collection/assets/dog-148-7852aa2296e4960e.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_148_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_148_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists/hero_faithful_148_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "original-151-3cf9b3cff290171d",
+      "title": "Rene",
+      "original": "/collection/assets/dog-151-3cf9b3cff290171d.jpg",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/hero_faithful_151_2400.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/hero_faithful_151_3600.jpg",
+          "width": 3600,
+          "height": 1800
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/stills/r1388ones_artists_r3/hero_faithful_151_5120.jpg",
+          "width": 5120,
+          "height": 2560
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_11_20260913-dracula-abfc0e5072c8be1b",
+      "title": "Dracula",
+      "original": "/collection/assets/candidate-abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/c4276d62633308ed37c6ddb3bd1eaceda353ce2eeba06a2ff738c532ba435c73.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/2f8c449642d4b50affd059d8c25981720bdc93735892109edf9550b9449d042f.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_18_20260913-leeloo-3205fe7673d079e9",
+      "title": "Leeloo",
+      "original": "/collection/assets/candidate-3205fe7673d079e90ddf9dce5c76dbbde410d17fc58beb330bcb18861c5921e6.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/e331c2d30fac40db32411c73cb12c4895162cf4d1166a9b2cd919bec7c4b960f.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/46c283b3dbe23c939c23317afa3a00e3010acb6356b7784c9c855ebe038f5c40.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-jessica-76137e7e6dbd2ef3",
+      "title": "Jessica Rabbit",
+      "original": "/collection/assets/candidate-76137e7e6dbd2ef35bd816ab449cd63ef2fb6ef389d987121ad5233306782a2f.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/10e93fbfae93d8f943704d34e3c8b62df5c3209d42cd18a8cd8b6ef04944524e.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/fc549477cb57fd6bcb90c2b0552e15c2f39d2efbfca255394453fa030a634d4f.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-luffy-6b947eb6850f19f2",
+      "title": "Monkey D. Luffy",
+      "original": "/collection/assets/candidate-6b947eb6850f19f2ae0c5adc5f9801ae5c6681f6bd18c1abd295e866e9d2fc5d.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/aaf5fb0735c8f864b23589011a892d07dfc6237de133514c6ad3f555a46994c0.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/2bf8e0eaf9e4f3a753f4a0dc2fc724ac4e0b63f32f00821d7e8cff322354cfab.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-popeye-0c8eee31f0ae9169",
+      "title": "Popeye",
+      "original": "/collection/assets/candidate-0c8eee31f0ae91697008e0696cf0ed83063898c5a1def7b47240ceb483d6247d.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/4ea150412a116aa9ce0b01f58d91c7501d1de3cc15179da92bece1781e316910.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/443bfe2acd37027eab491791e08aa15eb67ec479d45f0ba6a70264acce67aa4f.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-ruth-ea29254f239f7197",
+      "title": "Ruth Bader Ginsburg",
+      "original": "/collection/assets/candidate-ea29254f239f71972fb143fb93d0eabcc588916514e20a9cf72d07ac017fa177.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/be59db05cfd99c0cb830ed055726172631cdfdd0880ec5fdbda050b0b9f11d52.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/7bdcc53744c3125e7090b08e168e058ae0de138bf944cc5164f6fe907d27db49.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-character_round_19_20260913-snoop-a2bd9f26f1d883fe",
+      "title": "Snoop Dogg",
+      "original": "/collection/assets/candidate-a2bd9f26f1d883fe94442f4214c8987ae1e993ccfd97f30c5cf7fb1b0c68175b.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/a1619c2f8aa5dea4be77caec23bf32d31c9c3cb8f300cb8941246bc68d7e661c.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/0e87566d800d03642cb87dcddbec170317284f40c27a336193faff2a1847ac71.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-ember_warden-de925db5c0814444",
+      "title": "Ember Warden",
+      "original": "/collection/assets/candidate-de925db5c0814444ac5787aee1ee115cfa63c03018c1e8da080b271ae23d294c.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/83bdb3e046a5e64365b49dbbb703e8ec4be1ded6a8270fd83b0cbf6b9d9cd79e.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/27494fcbaf2f6f35e27ff73500d2a40eb14fd1813b6920d030d04eb919b25f60.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11",
+      "title": "Undertow",
+      "original": "/collection/assets/candidate-64a222b20f6a9c11612ed848761c46267976c008bd3b02782a266bf9494df827.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/c18b3f6b2a107b5e99681731d1a24b544096d90990124d489d390b85047c94f3.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/2fb37fef234f83afe9e6977b2c360c25e587000c88b6aefa0f943aafc844584c.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-afterburn-4310af1f34aad70d",
+      "title": "Afterburn",
+      "original": "/collection/assets/candidate-4310af1f34aad70d7bac55ed9245ea891ab7dd0868d3f65e7176adcff900ef97.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/b55e43406f264d00fbee9048b72a48f6e145ae6074265754d53b19b38c0997c2.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/67f525b3107646f601538e4f0ef125c8a9f2014a4c132f034f0fca536d2d6df7.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    },
+    {
+      "id": "candidate-hero_presence_round_06_20260912-tideheart-b41f5264524433ec",
+      "title": "Tideheart",
+      "original": "/collection/assets/candidate-b41f5264524433ec9e29a7edc601333ce4b27e516f91ff60e150a16cfc0a86e3.png",
+      "variants": [
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/4f092f0443195981ff9c4ad24fa9043bd342783872cd2e3f309f1c8661e37a7d.jpg",
+          "width": 2400,
+          "height": 1200
+        },
+        {
+          "src": "https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_auto_loved/f29dda66ea64068bc92b30ff204bdea2677c41ebb3a3f66ad508a6709d71c7ff.jpg",
+          "width": 4000,
+          "height": 2000
+        }
+      ],
+      "state": "living",
+      "curation": "loved"
+    }
+  ]
+}
