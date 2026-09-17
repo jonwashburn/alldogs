@@ -10,12 +10,19 @@ const settle = () => new Promise(resolve => setImmediate(resolve));
 function harness(file, path, search, stored = {}) {
   const elements = new Map(), calls = [], storage = new Map(Object.entries(stored));
   let replaced, copied;
+  const makeElement = () => {
+    const node = {hidden:false,disabled:false,value:'',events:{},style:{},children:[],
+      addEventListener(name, fn) {this.events[name] = fn;},querySelectorAll:()=>[],reportValidity:()=>true,
+      append(...children) {this.children.push(...children);}, before() {}, after() {},
+      closest() {return element(this.id+'-label');}, setAttribute(name,value) {this[name]=value;}};
+    Object.defineProperty(node,'id',{get(){return this._id;},set(value){this._id=value;elements.set(value,this);}});
+    return node;
+  };
   const element = id => {
-    if (!elements.has(id)) elements.set(id, {hidden:false,disabled:false,events:{},
-      addEventListener(name, fn) {this.events[name] = fn;},querySelectorAll:()=>[],reportValidity:()=>true});
+    if (!elements.has(id)) makeElement().id=id;
     return elements.get(id);
   };
-  const context = {document:{getElementById:id=>id==='adoption-dialog'?null:element(id)},
+  const context = {document:{getElementById:id=>id==='adoption-dialog'?null:element(id),createElement:makeElement},
     location:{pathname:path,search},history:{replaceState:(_,__,value)=>{replaced=value;}},
     sessionStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)},
     navigator:{clipboard:{writeText:async value=>{copied=value;}}},
@@ -57,12 +64,21 @@ function harness(file, path, search, stored = {}) {
     assert.equal(h.calls.length,storedId?0:1);
     tests++;
   }
-  const h = harness('dog-pound/adoption-form.js','/','');
-  h.element('handle').value='test_dog';h.element('wallet').value='0x'+'12'.repeat(20);h.element('website').value='';
-  await h.element('application-form').events.submit({preventDefault(){}});
-  assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
-  assert.equal(h.calls.length,1);
-  assert.equal(JSON.parse(h.calls[0].options.body).applicationFlow,'share-page-v2');
-  tests++;
-  console.log(`${tests} isolated frontend short-link cases passed.`);
+  for (const choice of ['existing','help','new']) {
+    const h = harness('dog-pound/adoption-form.js','/','');
+    assert.equal(h.element('wallet').disabled,true);
+    h.element('wallet-choice').value=choice;h.element('wallet-choice').events.change();
+    assert.equal(h.element('wallet').required,choice==='existing');
+    assert.equal(h.element('wallet-label').hidden,choice!=='existing');
+    assert.equal(h.element('wallet-help').hidden,choice==='existing');
+    h.element('handle').value='test_dog';h.element('wallet').value='0x'+'12'.repeat(20);h.element('website').value='';
+    await h.element('application-form').events.submit({preventDefault(){}});
+    assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
+    assert.equal(h.calls.length,1);
+    const payload=JSON.parse(h.calls[0].options.body);
+    assert.equal(payload.applicationFlow,'wallet-help-v3');assert.equal(payload.walletChoice,choice);
+    assert.equal(payload.wallet,choice==='existing'?'0x'+'12'.repeat(20):'');
+    tests++;
+  }
+  console.log(`${tests} isolated frontend short-link and wallet-help cases passed.`);
 })().catch(error=>{console.error(error);process.exitCode=1;});

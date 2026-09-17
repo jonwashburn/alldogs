@@ -18,7 +18,7 @@
         const card=document.createElement('article');card.className='application-card';
         const heading=document.createElement('h2'),link=text('a','@'+item.handle);link.href='https://x.com/'+encodeURIComponent(item.handle);link.target='_blank';link.rel='noopener noreferrer';heading.append(link);
         card.append(heading,text('p',item.voucher?(item.public_id?'Vouch recorded from @':'Legacy, unverified voucher claim: @')+item.voucher:'No vouch yet'),text('p',new Date(item.created_at*1000).toLocaleString()+' · '+item.status));
-        const wallet=text('code',item.wallet||'Wallet not supplied on this legacy application');wallet.className='private-wallet';card.append(wallet);
+        const wallet=text('code',item.wallet||({'help':'Wallet help requested','new':'Needs a new wallet'}[item.wallet_choice]||'Wallet not supplied on this legacy application'));wallet.className='private-wallet';card.append(wallet);
         if(item.wallet){const copyWallet=text('button','Copy ETH address');copyWallet.type='button';copyWallet.className='text-link';copyWallet.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(item.wallet);copyWallet.textContent='Address copied';}catch(_){copyWallet.textContent='Select and copy the address above';}});card.append(copyWallet);}
         if(item.public_id){const publicLink=text('a','Open shareable application ↗');publicLink.href='/dog-pound/application/?id='+encodeURIComponent(item.public_id);publicLink.target='_blank';publicLink.rel='noopener noreferrer';const p=document.createElement('p');p.append(publicLink);card.append(p);}
         if(item.note) card.append(text('p',item.note));

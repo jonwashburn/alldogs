@@ -2,6 +2,28 @@
   'use strict';
   const $ = id => document.getElementById(id);
   if (!$('application-form')) return;
+  // Shared by the homepage dialog and the Pound. No wallet connection or keys.
+  const walletLabel = $('wallet').closest('label');
+  const choiceLabel = document.createElement('label');
+  choiceLabel.textContent = 'A wallet for your dog';
+  const choice = document.createElement('select');
+  choice.id = 'wallet-choice'; choice.name = 'walletChoice'; choice.required = true;
+  for (const [value, label] of [['', 'Choose an option'], ['existing', 'I have a wallet'], ['help', 'Help me with this'], ['new', 'I don’t have one yet']]) {
+    const option = document.createElement('option'); option.value = value; option.textContent = label;
+    if (!value) { option.disabled = true; option.selected = true; }
+    choice.append(option);
+  }
+  choice.style.cssText = 'display:block;width:100%;font:inherit;padding:14px;margin-top:8px;background:white;color:inherit;border:1px solid currentColor;border-radius:0';
+  choiceLabel.append(choice); walletLabel.before(choiceLabel);
+  const help = document.createElement('p'); help.id = 'wallet-help'; help.hidden = true;
+  help.textContent = 'No wallet? No biggie. We’ve got you. Apply now. We’ll help you get a wallet ready before your dog comes home.';
+  help.setAttribute('role', 'status'); walletLabel.after(help);
+  function walletChoiceChanged() {
+    const existing = choice.value === 'existing';
+    walletLabel.hidden = !existing; $('wallet').disabled = !existing; $('wallet').required = existing;
+    help.hidden = !choice.value || existing;
+  }
+  choice.addEventListener('change', walletChoiceChanged); walletChoiceChanged();
   const dialog = $('adoption-dialog');
   if (dialog) {
     document.querySelectorAll('[data-open-adoption]').forEach(button => {
@@ -25,7 +47,7 @@
     $('receipt').hidden = false;
     $('submit-application').hidden = true;
     $('form-status').textContent = '';
-    for (const input of $('application-form').querySelectorAll('input, textarea')) input.disabled = true;
+    for (const input of $('application-form').querySelectorAll('input, textarea, select')) input.disabled = true;
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
     if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
       const url = validShortId(shortId) ? 'https://alldogs.wtf/vouch/' + Number(shortId) : 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
@@ -51,7 +73,7 @@
     event.preventDefault();
     if ($('submit-application').disabled || $('submit-application').hidden) return;
     if (!$('application-form').reportValidity()) return;
-    const values = {handle: $('handle').value.trim(), wallet: $('wallet').value.trim(), applicationFlow: 'share-page-v2', website: $('website').value};
+    const values = {handle: $('handle').value.trim(), wallet: choice.value === 'existing' ? $('wallet').value.trim() : '', walletChoice: choice.value, applicationFlow: 'wallet-help-v3', website: $('website').value};
     if (/^0x0{40}$/i.test(values.wallet)) {
       $('form-status').className = 'error'; $('form-status').textContent = 'Enter your own Ethereum wallet address. The all-zero address is not accepted.'; return;
     }
