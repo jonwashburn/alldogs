@@ -8,7 +8,7 @@
   <meta property="og:title" content="The Dog Pound · ALL DOGS"><meta property="og:description" content="Find your dog. Give them a name. Become part of the pack.">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="pound.css?v=20260917"><script src="pound.js?v=20260917" defer></script>
+  <link rel="stylesheet" href="pound.css?v=20260917"><link rel="stylesheet" href="gallery.css?v=20260917-gallery1"><script src="pound.js?v=20260917-gallery1" defer></script>
 </head>
 <body>
 <a class="skip" href="#dogs">Skip to the dogs</a>
@@ -16,20 +16,28 @@
 <aside class="one-dog"><strong><mark>ONE DIRECT ADOPTION. EVER.</mark></strong><span>One person, one dog adopted directly, for life. More dogs will join the collection. Your allowance never resets, even if your dog is sold or changes state.</span></aside>
 <main>
   <section class="intro wrap">
-    <p class="eyebrow">The Dog Pound · invitation-only adoption</p>
+    <p class="eyebrow">The Dog Pound · a public preview</p>
     <h1>Good dogs.<br>Looking for <span>their people.</span></h1>
-    <div class="intro-bottom"><p>Apply. Share your application. Find someone to vouch for you.<br>One of these dogs could come home with you.</p><a class="text-link" href="#dogs">Meet the pack ↓</a></div>
+    <div class="intro-bottom"><p>A first hello, one painting at a time.<br>When your application is accepted, Jonathan will invite you to a private viewing to meet your dog.</p><a class="text-link" href="#dogs">Take a look ↓</a></div>
   </section>
-  <section class="spotlight" aria-label="A dog from the loved collection"><img id="spotlight-image" alt="" width="2400" height="1200" fetchpriority="high"><div class="spotlight-caption"><span id="spotlight-title">The loved collection</span><button id="spotlight-meet" type="button" hidden>Say hello ↗</button></div></section>
-  <section class="how wrap" id="how"><p class="eyebrow">How a dog finds a home</p><ol><li><span>01</span><h2>Put yourself out there.</h2><p>Apply with your X handle and Ethereum address. You get a public application link to share. No voucher needed to apply.</p></li><li><span>02</span><h2>Someone says yes.</h2><p>An eligible owner opens your link and signs a no-payment wallet message to vouch. Jonathan welcomes the founding pack and messages you when your turn is ready.</p></li><li><span>03</span><h2>Then you choose.</h2><p>Once your identity and vouch are checked, pay for your adoption, enter the private Pound, pick your dog and give them their forever name.</p></li></ol><p>The collection keeps growing as Jonathan paints more dogs. It is not a fixed-size edition. You still only get one direct adoption, ever.</p><p class="quiet">Applications are open. Paid adoption and private selection are not open yet. The paintings below are a preview, not an availability or reservation list.</p><p><a href="/dog-pound/owners/">Meet the owners and see who can vouch ↗</a></p></section>
-  <section class="pack wrap" id="dogs">
-    <div class="section-heading"><div><p class="eyebrow">Only the ones we love</p><h2>Who feels like yours?</h2></div><p id="dog-count" role="status">Loading the loved dogs…</p></div>
-    <div class="toolbar"><label class="search">Find a familiar face<input type="search" id="search" placeholder="A name, a character, a feeling…" autocomplete="off"></label><div class="view-toggle" role="group" aria-label="Painting view"><button type="button" data-view="square" aria-pressed="true">Portraits</button><button type="button" data-view="wide" aria-pressed="false">Full paintings</button></div></div>
-    <div class="gallery" id="gallery" data-view="square"></div>
-    <p id="empty" hidden>No dogs found. Try another name.</p>
-    <noscript><p>The interactive Pound needs JavaScript. You can still <a href="/loved/">view the loved collection</a>. To apply, please enable JavaScript and return to this page.</p></noscript>
-    <p class="quiet">These are artwork reference names, not names you have to keep. Your dog gets the name you choose.</p>
+  <section class="spotlight" id="dogs" aria-label="Loved dog paintings" aria-roledescription="carousel">
+    <button id="spotlight-open" class="painting-open" type="button" aria-label="Open painting in full-screen preview" disabled>
+      <img id="spotlight-image" alt="" width="2400" height="1200" fetchpriority="high">
+      <span class="enlarge-hint" aria-hidden="true">Look closer ↗</span>
+    </button>
+    <div class="spotlight-caption">
+      <div class="painting-label"><p class="eyebrow">Living · loved · one of one</p><h2 id="spotlight-title">The loved collection</h2></div>
+      <div class="painting-controls" role="group" aria-label="Browse paintings">
+        <button id="spotlight-prev" class="painting-arrow" type="button" aria-label="Previous dog" disabled>←</button>
+        <span id="spotlight-position" class="painting-position">— / —</span>
+        <button id="spotlight-next" class="painting-arrow" type="button" aria-label="Next dog" disabled>→</button>
+      </div>
+    </div>
+    <p id="painting-status" class="quiet" role="status" aria-live="polite">Loading the paintings…</p>
+    <div class="preview-note"><p><strong>Just a preview. Your meeting comes later.</strong> These paintings are a glimpse of the collection, not a list of available dogs. Accepted applicants will be invited to a private viewing room.</p><p class="quiet">The names are starting points. When you adopt, you choose the name that feels like home. Use the arrows to wander, or open a painting to spend a little longer.</p></div>
+    <noscript><p>Please enable JavaScript to browse the paintings and apply to adopt.</p></noscript>
   </section>
+  <section class="how wrap" id="how"><p class="eyebrow">How a dog finds a home</p><ol><li><span>01</span><h2>Put yourself out there.</h2><p>Apply with your X handle and Ethereum address. You get a public application link to share. No voucher needed to apply.</p></li><li><span>02</span><h2>Someone says yes.</h2><p>An eligible owner opens your link and signs a no-payment wallet message to vouch. Jonathan welcomes the founding pack and messages you when your turn is ready.</p></li><li><span>03</span><h2>Then you choose.</h2><p>When your application is accepted, Jonathan will invite you to a private viewing room. Once your adoption payment is complete, you will meet the dogs, choose yours and give them their forever name.</p></li></ol><p>The collection keeps growing as Jonathan paints more dogs. It is not a fixed-size edition. You still only get one direct adoption, ever.</p><p class="quiet">Applications are open. Paid adoption and private selection are not open yet. This public Pound is a preview, not an availability or reservation list.</p><p><a href="/dog-pound/owners/">Meet the owners and see who can vouch ↗</a></p></section>
   <section class="collar-section wrap"><div><p class="eyebrow">A little tag. A whole life.</p><h2>More than<br>a famous name.</h2><p>The painting remembers where it began. The collar remembers who loved it.</p><p>Your chosen name, verified X handle, the owner who vouched for you, and your adoption day become part of the dog's record. Every change of state records how long they lived and what happened.</p></div><div class="collar-example" aria-label="Illustrative collar, not an adopted dog"><p class="eyebrow">A collar could look like this</p><h3>Mr. Pickles</h3><dl><div><dt>Loved by</dt><dd>@yourhandle</dd></div><div><dt>Vouched for by</dt><dd>@yourfriend</dd></div><div><dt>Originally painted as</dt><dd>Barack</dd></div><div><dt>Favourite treat</dt><dd>The last bit of toast</dd></div><div><dt>Bedtime ritual</dt><dd>Three circles. Then a sigh.</dd></div></dl><p class="quiet">Illustration only. Treats and rituals are proposed optional details.</p></div></section>
   <section class="application wrap" id="apply">
     <div class="application-intro"><p class="eyebrow">One dog. One person. A friend of a friend.</p><h2>Make room<br>for a good dog.</h2><p>Leave your X handle and Ethereum address, then share your application to find someone who will vouch for you. Jonathan will message you personally when your turn is ready.</p><p>No payment or wallet connection here. Your address is collected for allowlist review, not verified by typing it. Applying does not reserve a painting.</p><details><summary>Don't know an owner yet?</summary><p>That is what your application link is for. Share it on X and introduce yourself. Any eligible dog owner can open it and vouch for you. Jonathan invites the founding owners.</p></details><details><summary>Who is eligible to vouch?</summary><p>An owner who has never sold their dog, and whose direct invitees have never sold theirs. Unlimited people over time, but only three outstanding vouches at once. An adoption or a withdrawn vouch frees a slot. Natural death and infection are not sales. A sale by an invitee's invitee does not count against you.</p></details><details><summary>How will you know it is really me?</summary><p>We contact the exact X account in your application and ask for your private receipt. A typed handle or address is not verification. Owners prove their vouch with a wallet signature; buyers will prove control of their submitted wallet at checkout.</p></details><details><summary>Will I put down a deposit?</summary><p>No money is collected for this waitlist. Payment opens only with a confirmed invitation, a stated price and clear terms. Never send money or a seed phrase in a DM.</p></details></div>
@@ -48,5 +56,15 @@
   </section>
 </main>
 <footer class="wrap"><a class="brand" href="/">ALL DOGS</a><p>Jonathan Washburn · 2026<br>The artist paints the dogs. The owners write the story.</p><a href="/#game">Read the collection rules ↗</a></footer>
-<dialog id="dog-dialog" aria-labelledby="dialog-title"><button type="button" class="close" id="close-dialog" aria-label="Close dog preview">×</button><div class="dialog-layout"><div class="dialog-art"><img id="dialog-image" alt="" width="2000" height="2000"></div><div class="dialog-info"><p class="eyebrow">Living · loved · one of one</p><h2 id="dialog-title"></h2><p id="reference-name"></p><label>What would you call them?<input id="dog-name" maxlength="32" placeholder="Try a name…" autocomplete="off"></label><p id="name-preview" aria-live="polite"></p><p class="quiet">A little daydream, not a reservation. You'll confirm their name after your invitation and adoption payment.</p><a class="button primary" href="#apply" id="dialog-apply">Join the waitlist ↗</a><a id="full-painting" class="text-link" target="_blank" rel="noopener">Open the full painting ↗</a></div></div></dialog>
+<dialog id="dog-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-preview-note">
+  <div class="viewing-room">
+    <header class="viewing-header"><div><p class="eyebrow">The Dog Pound · public preview</p><h2 id="dialog-title"></h2></div><button type="button" id="close-dialog" class="painting-arrow" aria-label="Close dog preview" autofocus>×</button></header>
+    <div class="viewing-art"><img id="dialog-image" alt="" width="4000" height="2000"></div>
+    <footer class="viewing-footer">
+      <div class="painting-controls" role="group" aria-label="Browse full-screen paintings"><button id="dialog-prev" class="painting-arrow" type="button" aria-label="Previous dog">←</button><span id="dialog-position" class="painting-position" role="status" aria-live="polite"></span><button id="dialog-next" class="painting-arrow" type="button" aria-label="Next dog">→</button></div>
+      <p id="dialog-preview-note"><span id="dialog-load-status" role="status" aria-live="polite">A preview, not a reservation.</span><br>Your private meeting follows an accepted application.</p>
+      <div class="viewing-links"><a class="text-link" id="full-painting" target="_blank" rel="noopener">Full-resolution painting ↗</a><a class="text-link" href="#apply" id="dialog-apply">Apply to adopt ↗</a></div>
+    </footer>
+  </div>
+</dialog>
 </body></html>

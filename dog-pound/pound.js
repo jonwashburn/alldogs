@@ -1,82 +1,126 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  let dogs = [], view = 'square', currentDog = null;
+  let dogs = [], currentDog = null, requestedIndex = 0, selection = 0, detailLoad = 0;
   const dialog = $('dog-dialog');
+  const imageCache = new Map();
   function asset(value) {
     const u = new URL(value, location.origin);
     if (u.protocol !== 'https:' || !['alldogs.wtf', 'www.alldogs.wtf', 'recognitionphysics-public.t3.tigrisfiles.io'].includes(u.hostname)) throw Error('Invalid artwork URL');
     return u.href;
   }
-  function showDog(dog) {
-    currentDog = dog;
+  function preload(src) {
+    if (!imageCache.has(src)) {
+      const image = new Image();
+      image.src = src;
+      const ready = image.decode().then(() => image);
+      imageCache.set(src, ready);
+      ready.catch(() => imageCache.delete(src));
+      // Keep only a few paintings in memory, not the whole collection.
+      if (imageCache.size > 6) imageCache.delete(imageCache.keys().next().value);
+    }
+    return imageCache.get(src);
+  }
+  function updateDialog(dog, position) {
+    const token = ++detailLoad;
     $('dialog-title').textContent = dog.title;
-    $('reference-name').textContent = 'Originally painted as ' + dog.title + '. You can keep the name, or make it your own.';
-    $('dialog-image').src = asset(dog.original);
-    $('dialog-image').alt = dog.title + ', living dog painting';
-    $('full-painting').href = asset(dog.variants.at(-1).src);
-    $('dog-name').value = '';
-    $('name-preview').textContent = 'A name only you would choose.';
-    dialog.showModal();
+    $('dialog-position').textContent = position;
+    $('dialog-load-status').textContent = 'A preview, not a reservation.';
+    $('dialog-image').src = $('spotlight-image').src;
+    $('dialog-image').alt = dog.title + ', full living dog painting';
+    const full = asset(dog.variants.at(-1).src);
+    $('full-painting').href = full;
+    preload(full).then(image => {
+      if (token === detailLoad && dialog.open && currentDog === dog) $('dialog-image').src = image.src;
+    }).catch(() => {}); // The decoded preview remains visible if the larger file is unavailable.
   }
-  function render() {
-    const term = $('search').value.trim().toLowerCase();
-    const found = dogs.filter(dog => dog.title.toLowerCase().includes(term));
-    const fragment = document.createDocumentFragment();
-    for (const dog of found) {
-      const card = document.createElement('article'); card.className = 'dog';
-      const button = document.createElement('button'); button.type = 'button'; button.setAttribute('aria-label', 'Meet ' + dog.title);
-      const frame = document.createElement('span'); frame.className = 'image-wrap';
-      const img = document.createElement('img'); img.src = asset(dog.variants[0].src); img.width = 2400; img.height = 1200; img.alt = dog.title + ', living'; img.loading = 'lazy'; img.decoding = 'async';
-      const caption = document.createElement('span'); caption.className = 'caption';
-      const name = document.createElement('span'); name.textContent = dog.title;
-      const hello = document.createElement('span'); hello.className = 'hello'; hello.textContent = 'Say hello ↗';
-      frame.append(img); caption.append(name, hello); button.append(frame, caption); card.append(button); fragment.append(card);
-      button.addEventListener('click', () => showDog(dog));
-    }
-    $('gallery').replaceChildren(fragment);
-    $('gallery').dataset.view = view;
-    $('dog-count').textContent = found.length + (term ? ' of ' + dogs.length : '') + ' loved dogs';
-    $('empty').hidden = found.length !== 0;
-  }
-  async function load() {
+  async function selectDog(index) {
+    if (!dogs.length) return;
+    requestedIndex = (index + dogs.length) % dogs.length;
+    const dogIndex = requestedIndex, dog = dogs[dogIndex], token = ++selection;
+    $('spotlight-open').setAttribute('aria-busy', 'true');
+    $('painting-status').textContent = 'Loading ' + dog.title + '…';
+    if (dialog.open) $('dialog-load-status').textContent = 'Loading ' + dog.title + '…';
     try {
-      const response = await fetch('dogs.json?v=20260916');
-      if (!response.ok) throw Error('Unavailable');
-      const data = await response.json();
-      if (data.version !== 1 || !Array.isArray(data.items) || !data.items.length) throw Error('Unavailable');
-      dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved');
-      dogs.forEach(d => { asset(d.original); d.variants.forEach(v => asset(v.src)); });
-      render();
-      const feature = dogs.find(d => d.id.startsWith('original-62-')) || dogs[0];
-      $('spotlight-image').src = asset(feature.variants[0].src);
-      $('spotlight-image').alt = feature.title + ', a loved living dog';
-      $('spotlight-title').textContent = feature.title + ' · a reference name, until you choose your own';
-      $('spotlight-meet').hidden = false;
-      $('spotlight-meet').addEventListener('click', () => showDog(feature));
+      const image = await preload(asset(dog.variants[0].src));
+      if (token !== selection) return;
+      currentDog = dog;
+      const position = String(dogIndex + 1).padStart(2, '0') + ' / ' + dogs.length;
+      $('spotlight-image').src = image.src;
+      $('spotlight-image').alt = dog.title + ', a loved living dog painting';
+      $('spotlight-image').dataset.ready = 'true';
+      $('spotlight-title').textContent = dog.title;
+      $('spotlight-position').textContent = position;
+      $('spotlight-open').disabled = false;
+      $('spotlight-open').setAttribute('aria-label', 'Look closer at ' + dog.title);
+      $('painting-status').textContent = dog.title + '. Painting ' + (dogIndex + 1) + ' of ' + dogs.length + '.';
+      if (dialog.open) updateDialog(dog, position);
+      for (const offset of [-1, 1]) {
+        const neighbor = dogs[(dogIndex + offset + dogs.length) % dogs.length];
+        preload(asset(neighbor.variants[0].src)).catch(() => {});
+      }
     } catch (_) {
-      $('dog-count').textContent = 'The paintings could not load. Please refresh to try again.';
+      if (token === selection) {
+        const message = 'That painting could not load. Try another dog.';
+        $('painting-status').textContent = message;
+        if (dialog.open) $('dialog-load-status').textContent = message;
+      }
+    } finally {
+      if (token === selection) $('spotlight-open').setAttribute('aria-busy', 'false');
     }
   }
-  $('search').addEventListener('input', render);
-  document.querySelectorAll('[data-view]').forEach(button => {
-    if (button.tagName !== 'BUTTON') return;
-    button.addEventListener('click', () => {
-      view = button.dataset.view;
-      $('gallery').dataset.view = view;
-      document.querySelectorAll('.view-toggle button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-    });
-  });
-  $('dog-name').addEventListener('input', () => {
-    const name = $('dog-name').value.trim();
-    $('name-preview').textContent = name ? 'Hello, ' + name + '.' : 'A name only you would choose.';
+  function move(direction) { selectDog(requestedIndex + direction); }
+  for (const prefix of ['spotlight', 'dialog']) {
+    $(prefix + '-prev').addEventListener('click', () => move(-1));
+    $(prefix + '-next').addEventListener('click', () => move(1));
+  }
+  $('spotlight-open').addEventListener('click', () => {
+    if (!currentDog) return;
+    updateDialog(currentDog, $('spotlight-position').textContent);
+    dialog.showModal();
+    document.documentElement.classList.add('painting-is-open');
   });
   $('close-dialog').addEventListener('click', () => dialog.close());
   $('dialog-apply').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', e => {
-    const r = dialog.getBoundingClientRect();
-    if (e.target === dialog && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) dialog.close();
+  dialog.addEventListener('close', () => {
+    ++detailLoad;
+    document.documentElement.classList.remove('painting-is-open');
   });
+  dialog.addEventListener('click', event => {
+    const r = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) dialog.close();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.target.closest('input, textarea, select, [contenteditable]')) return;
+    if (!dialog.open && !$('dogs').contains(event.target)) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      move(event.key === 'ArrowLeft' ? -1 : 1);
+    }
+  });
+  async function load() {
+    try {
+      const response = await fetch('dogs.json?v=20260916', {signal: AbortSignal.timeout(12000)});
+      if (!response.ok) throw Error('Unavailable');
+      const data = await response.json();
+      if (data.version !== 1 || !Array.isArray(data.items)) throw Error('Unavailable');
+      dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved');
+      if (!dogs.length) throw Error('Unavailable');
+      dogs.forEach(d => {
+        if (!Array.isArray(d.variants) || !d.variants.length) throw Error('Invalid painting');
+        d.variants.forEach(v => asset(v.src));
+      });
+      const first = dogs.findIndex(d => d.id.startsWith('original-62-'));
+      if (first > 0) dogs.unshift(...dogs.splice(first, 1));
+      for (const prefix of ['spotlight', 'dialog']) {
+        $(prefix + '-prev').disabled = dogs.length < 2;
+        $(prefix + '-next').disabled = dogs.length < 2;
+      }
+      await selectDog(0);
+    } catch (_) {
+      $('painting-status').textContent = 'The paintings could not load. Please refresh to try again.';
+    }
+  }
   let submission = null;
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
   function showReceipt(receipt, publicId) {
