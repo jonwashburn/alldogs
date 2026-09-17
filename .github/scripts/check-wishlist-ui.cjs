@@ -29,7 +29,7 @@ function harness(stored=false){
         if(state.failAfterSave){state.failAfterSave=false;throw Error('Reply lost');}
       }
       return{ok:true,json:async()=>({dogIds:state.ids.slice(),revision:state.revision,handle:'fixture',publicId:'a'.repeat(24),shortId:1,
-        items:['a','b','c','d'].map(id=>({id,title:'Dog '+id,state:'living',curation:'loved',variants:[{src:'/wide/'+id+'.jpg'}]}))})};
+        items:['a','b','c','d'].map(id=>({id,title:'Dog '+id,state:'living',curation:'loved',original:'/collection/assets/'+id+'.jpg',variants:[{src:'/wide/'+id+'.jpg'}]}))})};
     }};
   vm.runInNewContext(fs.readFileSync('dog-pound/wishlist.js','utf8'),context);
   const slots=()=>get('wish-holders').children;
@@ -43,11 +43,13 @@ function harness(stored=false){
   assert.equal(h.get('pound-content').hidden,false);assert.equal(h.slots().length,3);assert.equal(h.get('spotlight-title').textContent,'Dog d');tests++;
   for(let i=0;i<3;i++){h.get('add-wish').events.click();await settle();if(i<2){h.get('spotlight-next').events.click();await settle();}}
   assert.deepEqual(h.state.ids,['d','c','b']);assert.equal(h.get('add-wish').disabled,true);assert.equal(h.slots().every(n=>n.all().some(x=>x.tagName==='img')),true);tests++;
-  const root=h.get('wish-holders'),handle=h.control(2,'↕');
+  for(let i=0;i<3;i++)assert.equal(h.slots()[i].all().find(n=>n.tagName==='img').src,'https://alldogs.wtf/collection/assets/'+h.state.ids[i]+'.jpg');
+  assert.equal(h.get('spotlight-image').src,'https://alldogs.wtf/wide/b.jpg');tests++;
+  const root=h.get('wish-holders'),handle=h.control(2,'Drag');
   root.events.pointerdown({target:handle,button:0,pointerId:1,preventDefault(){}});
   h.point(h.slots()[0]);root.events.pointermove({pointerId:1,clientX:1,clientY:1});root.events.pointerup({pointerId:1,type:'pointerup'});await settle();
   assert.deepEqual(h.state.ids,['b','d','c']);tests++;
-  root.events.pointerdown({target:h.control(0,'↕'),button:0,pointerId:2,preventDefault(){}});
+  root.events.pointerdown({target:h.control(0,'Drag'),button:0,pointerId:2,preventDefault(){}});
   h.point(h.slots()[2]);root.events.pointermove({pointerId:2,clientX:2,clientY:2});root.events.pointercancel({pointerId:2,type:'pointercancel'});await settle();
   assert.deepEqual(h.state.ids,['b','d','c']);tests++;
   h.control(0,'→').events.click();await settle();assert.deepEqual(h.state.ids,['d','b','c']);tests++;

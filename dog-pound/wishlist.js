@@ -86,7 +86,8 @@
       slot.append(element('span', ['1st favourite','2nd favourite','3rd favourite'][position], 'wish-rank'));
       const frame = element('div', '', 'wish-frame' + (id ? '' : ' wish-empty'));
       if (dog) {
-        const image = document.createElement('img'); image.src = asset(dog.variants[0].src); image.alt = dog.title; image.loading = 'lazy';
+        const image = document.createElement('img'); image.src = asset(dog.original); image.alt = dog.title; image.loading = 'lazy';
+        image.width = 1000; image.height = 1000;
         frame.append(image);
       } else if (id) frame.append(element('span','No longer in the Pound'));
       else frame.append(element('span','+'),element('span','A place for a good dog'));
@@ -95,7 +96,7 @@
         const title = dog?.title || 'Unavailable painting';
         slot.append(element('h3',title,'wish-title'));
         const controls = element('div','','wish-actions');
-        const handle = button('↕', 'Drag ' + title + ' to change its rank', () => {});
+        const handle = button('Drag', 'Drag ' + title + ' to change its rank', () => {});
         handle.className = 'wish-drag'; handle.dataset.drag = String(position);
         controls.append(handle,
           button('←','Move ' + title + ' earlier',() => save(model.move(ids,position,position-1), title + ' moved earlier.'), position === 0),
@@ -133,7 +134,7 @@
     try {
       const result = await request('get');
       dogs = result.items.filter(d => d.state === 'living' && d.curation === 'loved').reverse();
-      dogs.forEach(d => d.variants.forEach(v => asset(v.src)));
+      dogs.forEach(d => { asset(d.original); d.variants.forEach(v => asset(v.src)); });
       const middle = new Set(['candidate-fable_wide_round_07_20260912-undertow-64a222b20f6a9c11','original-62-fb27c29277cc6593']);
       const featured = dogs.filter(d => middle.has(d.id)); dogs = dogs.filter(d => !middle.has(d.id));
       dogs.splice(Math.floor(dogs.length/2),0,...featured);
