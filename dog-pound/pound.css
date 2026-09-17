@@ -8,3 +8,7 @@
 /* Keep the mobile masthead on one line without shrinking its tap targets. */
 @media(max-width:420px){.mast nav>a:not(.button){display:none}}
 @media(max-width:380px){.mast{padding-right:16px;padding-left:16px;gap:12px}.mast .brand img{width:132px}}
+/* Keep the adoption rule below its heading, with room for natural line breaks. */
+.one-dog{display:block}
+.one-dog strong{display:block;white-space:normal}
+.one-dog span{display:block;max-width:90ch;margin-top:12px;text-wrap:pretty}
