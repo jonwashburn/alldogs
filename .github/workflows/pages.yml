@@ -23,6 +23,8 @@ jobs:
       - name: Check public JavaScript syntax
         run: |
           node --check home.js
+          node --check home-rotation.js
+          node .github/scripts/check-home-rotation.cjs
           python3 .github/scripts/check-home.py
           node --check dog-pound/wishlist.js
           node --check dog-pound/wishlist-model.js

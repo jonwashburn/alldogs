@@ -23,7 +23,7 @@
       const mine=account?.vouches.find(v=>v.publicId===id&&v.status==='active');
       $('sign-vouch').hidden=!account?.owner?.vouch.eligible||d.status!=='looking_for_vouch'||d.handle===identity.handle;
       $('withdraw-vouch').hidden=!mine||['adopted','invited'].includes(d.status);
-      if(!identity.signedIn)$('wallet-status').textContent=identity.capabilities.xLogin?'Sign in with X to vouch. No wallet connection.':'X sign-in is being connected. You can share this application now; vouching will open here when it is ready.';
+      if(!identity.signedIn)$('wallet-status').textContent=identity.capabilities.xLogin?'Sign in with X to vouch. No wallet connection.':'Sign-in could not be started. Please try again. You can still share this application.';
       else if(!account.owner)$('wallet-status').textContent='Signed in as @'+identity.handle+'. Only confirmed dog owners can vouch.';
       else $('wallet-status').textContent='Signed in as @'+identity.handle+'. '+account.owner.vouch.slots+' of 3 vouches available.';
     }catch(e){if(!id)$('public-application').hidden=true;$('application-status').textContent=e.message;}

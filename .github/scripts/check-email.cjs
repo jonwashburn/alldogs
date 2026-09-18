@@ -43,7 +43,7 @@ function harness(contact=null){
     const endMain=html.indexOf('</form>',mainForm),emailForm=html.indexOf('<form id="application-email-form">');
     assert.ok(endMain<emailForm);assert.ok(html.indexOf('application-email.js')<html.indexOf('adoption-form.js'));
     assert.match(html,/<input id="art-updates"[^>]*>/);assert.doesNotMatch(html.match(/<input id="art-updates"[^>]*>/)[0],/checked/);
-    assert.ok(html.includes('Email invitations are not sending yet.'));tests++;
+    assert.ok(html.includes('Wubbushi can contact you on X.'));tests++;
   }
   console.log(`${tests} isolated frontend email preference cases passed.`);
 })().catch(error=>{console.error(error);process.exitCode=1;});

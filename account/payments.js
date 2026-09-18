@@ -46,7 +46,7 @@
             });card.append(form);
           } else card.append(node('p','New card checkouts close 30 minutes before your deadline so they can expire within the seven-day window.'));
           card.append(node('p','Card details go directly to Stripe. Card processing starts at $0.50; there is no set price for the artwork.','account-note'));
-        } else card.append(node('p','Card payments are being connected. Please check back here.'));
+        } else card.append(node('p','Please contact Wubbushi to arrange your payment.'));
         rails.append(card);
         const cryptoPanel=node('section');cryptoPanel.append(node('h3','Crypto'));
         if(data.cryptoReady&&data.crypto){const coin=data.crypto;
@@ -57,9 +57,9 @@
           const details=node('details'),summary=node('summary','Already sent it? Check a transfer.');details.append(summary);
           const form=node('form'),txLabel=node('label','Transaction hash'),tx=node('input');tx.required=true;tx.maxLength=66;tx.placeholder='0x…';txLabel.append(tx);const check=node('button','Check transfer','button');check.type='submit';form.append(txLabel,check);
           form.addEventListener('submit',async event=>{event.preventDefault();check.disabled=true;try{await api.request('club/payment-crypto',{transaction:tx.value.trim()});await render();message.textContent='Transfer confirmed. Your dog’s recorded value is updated.';}catch(e){message.textContent=e.message;check.disabled=false;}});details.append(form);cryptoPanel.append(details);
-        }else cryptoPanel.append(node('p','Crypto payments are being connected. The verified address and network will appear here when automatic recording is ready.'));
+        }else cryptoPanel.append(node('p','Please contact Wubbushi for payment instructions. Do not send funds to an unverified address.'));
         rails.append(cryptoPanel);
-        host.append(node('p','These values are recorded in the ALL DOGS website register. Writing them into the NFT’s permanent metadata is not connected yet.','account-note'));
+        host.append(node('p','These values are recorded in the ALL DOGS website register.','account-note'));
         host.append(button('Refresh payment status',render,'text-link'));
         if(new URLSearchParams(location.search).get('payment')==='return')message.textContent='Welcome back. A checkout return is not a payment receipt; your value appears once payment is confirmed.';
       }catch(error){message.textContent=error.message;host.append(button('Try again',render,'text-link'));}

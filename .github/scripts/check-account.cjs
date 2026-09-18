@@ -22,7 +22,7 @@ function ui(page, signedIn, account={}, extra={}){
 (async()=>{
   let tests=0;
   for(const page of ['lounge','my-dog','viewing-room','waitlist']){
-    const h=ui(page,false);await settle();assert.equal(h.get('account-gate').hidden,false);assert.equal(h.get('account-login').hidden,true);assert.match(h.get('gate-copy').textContent,/not connected/);assert.ok(!h.calls.some(c=>c.path==='club/account'));tests++;
+    const h=ui(page,false);await settle();assert.equal(h.get('account-gate').hidden,false);assert.equal(h.get('account-login').hidden,true);assert.match(h.get('gate-copy').textContent,/Sign-in could not be started/);assert.ok(!h.calls.some(c=>c.path==='club/account'));tests++;
   }
   const claim=ui('lounge',true);await settle();assert.match(claim.text(),/private receipt/);const form=claim.get('account-content').querySelectorAll('form')[0];form.querySelectorAll('input')[0].value='DOG-1234567890ABCDEF';await form.events.submit({preventDefault(){}});await settle();assert.equal(claim.calls.find(c=>c.path==='club/claim').body.receipt,'DOG-1234567890ABCDEF');tests++;
   const emptyDog=ui('my-dog',true);await settle();assert.match(emptyDog.text(),/Your dog will be here/);assert.equal(emptyDog.get('account-content').querySelectorAll('img').length,0);tests++;
