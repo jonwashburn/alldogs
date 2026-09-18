@@ -6,7 +6,7 @@ import sys
 
 IMAGE = 'assets/all-dogs-social-barack-close-20260917.png'
 URL = 'https://alldogs.wtf/' + IMAGE
-PAGES = ('index.html', 'dog-pound/index.html', 'dog-pound/application/index.html')
+PAGES = ('index.html', 'welcome/index.html', 'dog-pound/index.html', 'dog-pound/application/index.html')
 
 
 class Head(HTMLParser):

@@ -11,7 +11,7 @@ assert.deepEqual(model.move(['a','b'],0,2),['b','a']);tests++;
 assert.deepEqual(model.move(['a'],0,-1),['a']);tests++;
 assert.deepEqual(model.remove(['a','b','c'],'b'),['a','c']);tests++;
 const original=['a','b','c'];model.move(original,0,2);model.remove(original,'a');assert.deepEqual(original,['a','b','c']);tests++;
-const home=fs.readFileSync('index.html','utf8'),pound=fs.readFileSync('dog-pound/index.html','utf8'),js=fs.readFileSync('dog-pound/wishlist.js','utf8');
+const home=fs.readFileSync('welcome/index.html','utf8'),pound=fs.readFileSync('dog-pound/index.html','utf8'),js=fs.readFileSync('dog-pound/wishlist.js','utf8');
 assert.doesNotMatch(home,/href="\/dog-pound\/(?:#apply)?"/);tests++;
 assert.match(pound,/id="pound-content" hidden/);assert.match(pound,/name="robots" content="noindex,nofollow"/);tests++;
 assert.doesNotMatch(pound,/<form id="application-form">/);assert.match(pound,/id="wish-holders"/);tests++;

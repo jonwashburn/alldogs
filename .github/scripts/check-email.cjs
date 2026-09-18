@@ -38,7 +38,7 @@ function harness(contact=null){
   await failure.element('application-email-form').events.submit({preventDefault(){}});
   assert.equal(failure.element('email-status').className,'error');assert.equal(failure.element('save-email').disabled,false);
   assert.equal(failure.element('notification-email').value,'collector@example.com');assert.doesNotMatch(failure.element('email-status').textContent,/Email saved/);tests++;
-  for(const file of ['index.html']){
+  for(const file of ['welcome/index.html']){
     const html=fs.readFileSync(file,'utf8');const mainForm=html.indexOf('<form id="application-form">');
     const endMain=html.indexOf('</form>',mainForm),emailForm=html.indexOf('<form id="application-email-form">');
     assert.ok(endMain<emailForm);assert.ok(html.indexOf('application-email.js')<html.indexOf('adoption-form.js'));

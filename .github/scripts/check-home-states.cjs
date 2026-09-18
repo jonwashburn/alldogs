@@ -2,7 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const html = fs.readFileSync('index.html', 'utf8');
+const html = fs.readFileSync('welcome/index.html', 'utf8');
 const data = html.match(/<script type="application\/json" id="approved-pairs">(.*?)<\/script>/)[1];
 const pair = JSON.parse(data)[0];
 assert.equal(pair.title, 'Barack');

@@ -33,7 +33,7 @@ class Page(HTMLParser):
         assert self.stack and self.stack[-1] == tag, (self.path, 'Bad closing tag', tag, self.stack[-4:])
         self.stack.pop()
 
-pages = {name: Page(name) for name in ('index.html', 'about/index.html', 'adoption/index.html')}
+pages = {name: Page(name) for name in ('welcome/index.html', 'about/index.html', 'adoption/index.html')}
 for name, page in pages.items():
     assert sum(tag == 'h1' for tag, _ in page.tags) == 1, name
     navigation = re.search(r'<nav aria-label="Main navigation">(.*?)</nav>', (ROOT / name).read_text()).group(1)
@@ -51,22 +51,22 @@ for name, page in pages.items():
         if tag == 'script' and 'src' in attrs:
             assert (ROOT / attrs['src'].split('?')[0].lstrip('/')).is_file(), (name, attrs['src'])
 
-home = (ROOT / 'index.html').read_text()
+home = (ROOT / 'welcome/index.html').read_text()
 guide = (ROOT / 'adoption/index.html').read_text()
 about = (ROOT / 'about/index.html').read_text()
 script = (ROOT / 'home.js').read_text()
-assert [attrs['data-art-name'] for tag, attrs in pages['index.html'].tags if 'data-art-name' in attrs] == ['Barack', 'Hulk', 'Leeloo']
-assert sum('data-rotating-painting' in attrs for _, attrs in pages['index.html'].tags) == 2
-assert sum('data-next-painting' in attrs and 'hidden' in attrs for _, attrs in pages['index.html'].tags) == 2
+assert [attrs['data-art-name'] for tag, attrs in pages['welcome/index.html'].tags if 'data-art-name' in attrs] == ['Barack', 'Hulk', 'Leeloo']
+assert sum('data-rotating-painting' in attrs for _, attrs in pages['welcome/index.html'].tags) == 2
+assert sum('data-next-painting' in attrs and 'hidden' in attrs for _, attrs in pages['welcome/index.html'].tags) == 2
 assert 'AllDogsRotation?.mount(document, storage)' in script
 assert home.index('home-rotation.js') < home.index('/home.js')
-for tag, attrs in pages['index.html'].tags:
+for tag, attrs in pages['welcome/index.html'].tags:
     for field in ('src', 'data-art-full'):
         url = attrs.get(field, '')
         if url.startswith('/assets/'):
             assert (ROOT / url.lstrip('/')).is_file(), url
-assert sum(tag in ('h1', 'h2', 'h3') for tag, _ in pages['index.html'].tags) == 5  # Main three + application heading + receipt heading.
-assert not any(tag == 'video' for tag, _ in pages['index.html'].tags)
+assert sum(tag in ('h1', 'h2', 'h3') for tag, _ in pages['welcome/index.html'].tags) == 5  # Main three + application heading + receipt heading.
+assert not any(tag == 'video' for tag, _ in pages['welcome/index.html'].tags)
 assert 'Math.random' not in script and 'fetch(' not in script and 'setInterval' not in script
 assert 'setInterval' not in (ROOT / 'home-rotation.js').read_text()
 assert 'zombie apocalypse' in home and 'you have to kill it' in home
@@ -74,11 +74,11 @@ assert '1 in 20' not in home and '50%' in home and 'every dog it reaches' in hom
 assert 'You adopt a dog.' not in home and 'sees a profit.' not in home
 assert 'Holding on cannot prevent infection or natural death.' not in home
 assert 'Preview only. No record is changed.' in home
-state_links = [attrs for tag, attrs in pages['index.html'].tags if 'data-art-state' in attrs]
+state_links = [attrs for tag, attrs in pages['welcome/index.html'].tags if 'data-art-state' in attrs]
 assert [attrs['data-art-state'] for attrs in state_links] == ['living', 'zombie', 'angel']
 assert [attrs['aria-pressed'] for attrs in state_links] == ['true', 'false', 'false']
 assert all(attrs['aria-controls'] == 'barack-dog' for attrs in state_links)
-assert 'application-terms' in pages['index.html'].ids
+assert 'application-terms' in pages['welcome/index.html'].ids
 adoption_note = re.search(r'<section class="adoption-note".*?</section>', home).group(0)
 for phrase in ('A dog of your own.', 'Join the waitlist and then set your wishlist', 'All Dogs is limited to one direct adoption per verified person, ever.', 'Invitation only.'):
     assert phrase in adoption_note, phrase
@@ -87,7 +87,7 @@ assert 'data-open-adoption' in adoption_note and 'aria-controls="adoption-dialog
 assert 'seven days' not in adoption_note and 'What would you' not in adoption_note
 for phrase in ('seven days', 'One direct adoption per person, ever.', 'does not reserve a dog'):
     assert phrase in home, phrase
-for path in ('index.html', 'adoption/index.html', 'dog-pound/application/index.html', 'dog-pound/application/application.js', 'account/account.js', 'account/payments.js'):
+for path in ('welcome/index.html', 'adoption/index.html', 'dog-pound/application/index.html', 'dog-pound/application/application.js', 'account/account.js', 'account/payments.js'):
     copy = (ROOT / path).read_text().lower()
     for outdated in ('not open yet', 'being connected', 'not connected yet', 'not sending yet', 'when adoption opens', 'will open here when', 'getting the lounge ready'):
         assert outdated not in copy, (path, outdated)
@@ -100,5 +100,5 @@ for fragment in ('game', 'fates', 'why', 'medium'):
     assert fragment in pages[target].ids
     assert "'#" + fragment + "'" in script
 for field in ('application-form', 'wallet', 'handle', 'website', 'submit-application', 'form-status', 'receipt', 'receipt-code', 'application-email-form', 'notification-email', 'art-updates', 'share-application', 'copy-receipt'):
-    assert field in pages['index.html'].ids, field
+    assert field in pages['welcome/index.html'].ids, field
 print('Art-first release checks passed: HTML nesting, unique IDs, references, fixed hero and two curated rotating paintings, relocated rules, legacy anchors, modal and preserved form hooks.')
