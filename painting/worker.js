@@ -1,5 +1,5 @@
 'use strict';
-importScripts('paintkit.js','hand.js','scene.js');
+importScripts('paintkit.js','hand.js','scene.js?v=20260918-waitlist1');
 PK.setCanvasLib({createCanvas:(w,h)=>new OffscreenCanvas(w,h)});
 self.onmessage = ({data}) => {
   try {

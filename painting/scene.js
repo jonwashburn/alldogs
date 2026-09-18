@@ -10,6 +10,7 @@
     invitation: ['AN INVITATION', 500, 75, 43, '#695a48'],
     work: ['THE WORK', 300, 68, 38, ink],
     personal: ['YOUR INVITATION', 495, 68, 38, ink],
+    waitlist: ['JOIN WAITLIST', 495, 68, 38, ink],
     note: ['A NOTE FROM WUBBUSHI', 640, 68, 37, ink],
     only: ['INVITATION ONLY.', 470, 68, 35, '#5a6056'],
     journal: ['THE JOURNAL', 385, 68, 38, ink],
