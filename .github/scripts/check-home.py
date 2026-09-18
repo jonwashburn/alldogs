@@ -36,6 +36,10 @@ class Page(HTMLParser):
 pages = {name: Page(name) for name in ('index.html', 'about/index.html', 'adoption/index.html')}
 for name, page in pages.items():
     assert sum(tag == 'h1' for tag, _ in page.tags) == 1, name
+    navigation = re.search(r'<nav aria-label="Main navigation">(.*?)</nav>', (ROOT / name).read_text()).group(1)
+    assert re.search(r'<a href="/about/"[^>]*>The work</a>', navigation), name
+    assert re.search(r'<a href="/adoption/"[^>]*>The rules</a>', navigation), name
+    assert 'Join the waitlist' in navigation, name
     assert not any(attrs.get('href') == '/dog-pound/' for _, attrs in page.tags), (name, 'Keep Pound entry behind application')
     for tag, attrs in page.tags:
         for attr in ('aria-labelledby', 'aria-describedby', 'aria-controls'):
