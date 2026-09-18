@@ -103,8 +103,6 @@ function openLetter(name) {
   const copy = document.getElementById('copy-' + name);
   if (!copy) return;
   document.getElementById('reading-body').replaceChildren(copy.content.cloneNode(true));
-  const recordName = reading.querySelector('[data-record-name]');
-  if (recordName) recordName.textContent = dogs[currentDog].title;
   if (!reading.open) reading.showModal();
   reading.scrollTop = 0;
   document.body.classList.add('modal-open');
