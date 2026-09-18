@@ -73,7 +73,7 @@ a{text-underline-offset:4px}
 .button:hover{background:var(--ink);color:white}
 .button.primary{background:var(--ink);color:white;border-color:var(--ink)}
 .button.primary:hover{background:#484b42;border-color:#484b42}
-.adoption-note{background:var(--paper);padding-block:50px}
+.adoption-note{background:#e5e9ce;padding-block:50px}
 .cardboard-painting{background:var(--paper);padding-top:24px}
 .cardboard-painting .artwork-open{width:min(1100px,88%);margin:0 auto 34px;transform:rotate(-.65deg);box-shadow:1px 8px 13px -7px #30281e4d,0 1px 2px #30281e24}
 .cardboard-painting .artwork-open img{aspect-ratio:3/2}
