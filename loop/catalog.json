@@ -3758,6 +3758,16 @@
       "batch": "barack_white_zombie_v1_20260918",
       "slug": "barack",
       "image": "/collection/assets/candidate-07e7d2418a5812f3e64e79f32f4ddef8b5620e39e099e1a149dc1a255fb726bf.png"
+    },
+    {
+      "id": "candidate-hulk_scissor_cardboard_20260918-hulk-8723ccdf8f5c4050",
+      "title": "Hulk — Scissor-cut Cardboard",
+      "kind": "candidate",
+      "imageHash": "8723ccdf8f5c40507f735bb9171a45e96b8e3756a32840340bb61ca37b8dcc17",
+      "description": "Hulk on hand-cut kraft cardboard, preserving his original native figure with exactly two small dry paint scuffs.",
+      "batch": "hulk_scissor_cardboard_20260918",
+      "slug": "hulk",
+      "image": "/collection/assets/candidate-8723ccdf8f5c40507f735bb9171a45e96b8e3756a32840340bb61ca37b8dcc17.png"
     }
   ],
   "references": [
