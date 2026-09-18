@@ -26,7 +26,6 @@ function returnToGate() {
   enter.focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
-document.getElementById('return').addEventListener('click', returnToGate);
 document.getElementById('close-viewing').addEventListener('click', returnToGate);
 
 // These are the existing public wide paintings, in the artist's selection.
@@ -35,11 +34,17 @@ const dogImage = document.getElementById('dog-image');
 const dogName = document.getElementById('dog-name');
 const dogPainting = document.getElementById('dog-painting');
 const galleryStatus = document.getElementById('gallery-status');
+const dogPosition = document.getElementById('dog-position');
 const enlarge = document.getElementById('enlarge');
 const closeView = document.getElementById('close-view');
 const dogs = [{title: 'Barack', src: dogImage.src, alt: dogImage.alt},
   ...(window.AllDogsRotation?.dogs || []).filter(dog => !dog.cardboard)];
 let currentDog = 0, requestedDog = 0, imageRequest = 0;
+function showPosition() {
+  dogPosition.textContent = String(currentDog + 1).padStart(2, '0') + ' / ' + String(dogs.length).padStart(2, '0');
+}
+showPosition();
+galleryStatus.textContent = dogs[0].title + ' · 1 of ' + dogs.length;
 function describeDog(dog) {
   return dog.alt || dog.title + ', an original wide dog painting by Wubbushi.';
 }
@@ -49,6 +54,7 @@ async function changeDog(direction) {
   const dog = dogs[index];
   const request = ++imageRequest;
   dogPainting.setAttribute('aria-busy', 'true');
+  galleryStatus.classList.remove('has-error');
   galleryStatus.textContent = 'Meeting ' + dog.title + '…';
   let timeout;
   try {
@@ -64,10 +70,14 @@ async function changeDog(direction) {
     dogImage.width = next.naturalWidth;
     dogImage.height = next.naturalHeight;
     dogName.textContent = dog.title;
+    showPosition();
     enlarge.setAttribute('aria-label', 'Look closely at ' + dog.title);
     galleryStatus.textContent = dog.title + ' · ' + (index + 1) + ' of ' + dogs.length;
   } catch (_) {
-    if (request === imageRequest) galleryStatus.textContent = 'That painting couldn’t load. Try another dog.';
+    if (request === imageRequest) {
+      galleryStatus.classList.add('has-error');
+      galleryStatus.textContent = 'That painting couldn’t load. Try another dog.';
+    }
   } finally {
     clearTimeout(timeout);
     if (request === imageRequest) dogPainting.setAttribute('aria-busy', 'false');
