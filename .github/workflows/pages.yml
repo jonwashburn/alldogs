@@ -23,6 +23,7 @@ jobs:
       - name: Check public JavaScript syntax
         run: |
           node --check gate.js
+          node --check adoption/adoption.js
           node --check painting/scene.js
           node --check painting/hand.js
           node --check painting/worker.js

@@ -37,9 +37,13 @@ pages = {name: Page(name) for name in ('welcome/index.html', 'about/index.html',
 for name, page in pages.items():
     assert sum(tag == 'h1' for tag, _ in page.tags) == 1, name
     navigation = re.search(r'<nav aria-label="Main navigation">(.*?)</nav>', (ROOT / name).read_text()).group(1)
-    assert re.search(r'<a href="/about/"[^>]*>The work</a>', navigation), name
-    assert re.search(r'<a href="/adoption/"[^>]*>The rules</a>', navigation), name
-    assert 'Join the waitlist' in navigation, name
+    if name == 'adoption/index.html':
+        assert 'href="/#why"' in navigation and 'alt="The work"' in navigation
+        assert any(attrs.get('href') == '/#apply' for _, attrs in page.tags)
+    else:
+        assert re.search(r'<a href="/about/"[^>]*>The work</a>', navigation), name
+        assert re.search(r'<a href="/adoption/"[^>]*>The rules</a>', navigation), name
+        assert 'Join the waitlist' in navigation, name
     assert not any(attrs.get('href') == '/dog-pound/' for _, attrs in page.tags), (name, 'Keep Pound entry behind application')
     for tag, attrs in page.tags:
         for attr in ('aria-labelledby', 'aria-describedby', 'aria-controls'):
@@ -91,7 +95,7 @@ for path in ('welcome/index.html', 'adoption/index.html', 'dog-pound/application
     copy = (ROOT / path).read_text().lower()
     for outdated in ('not open yet', 'being connected', 'not connected yet', 'not sending yet', 'when adoption opens', 'will open here when', 'getting the lounge ready'):
         assert outdated not in copy, (path, outdated)
-for phrase in ('first resale only', '1 in 20', '50%', 'generation two', 'permanently recorded', 'infection-created', 'cannot be rescued', 'five powers', '1 in 1,600', '0.0625%', 'five days', 'three can be pending', 'successful mint timestamp', 'lifespan and cause of death'):
+for phrase in ('first resale only', '1 in 20', '50%', 'each generation of infection', 'permanently recorded', 'infection-created', 'cannot be rescued', 'five powers', '1 in 1,600', '0.0625%', 'successful mint timestamp', 'lifespan and cause of death'):
     assert phrase in guide, phrase
 for phrase in ('marie-painting-flow-4k.mp4', 'preload="none"', 'Nobody has a picture.', 'paint-kit', 'exaltedlove.com'):
     assert phrase in about, phrase

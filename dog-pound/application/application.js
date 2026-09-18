@@ -9,7 +9,7 @@
       const d=await api.request('application?id='+encodeURIComponent(reference));
       if(!/^[A-Za-z0-9_-]{24}$/.test(d.publicId||''))throw Error('We could not confirm this application. Please refresh.');
       id=d.publicId;$('public-application').hidden=false;$('applicant-handle').textContent='@'+d.handle;$('applicant-profile').href='https://x.com/'+encodeURIComponent(d.handle);$('application-status').textContent='Application by @'+d.handle;
-      const labels={looking_for_vouch:'Looking for an eligible owner to vouch.',vouched:'Vouched for by @'+d.vouchedBy+'. Waiting for review by Wubbushi.',invited:'Invited to a private viewing.',vouch_suspended:'The owner who vouched is no longer eligible. Wubbushi will review the application.',adopted:'This person has adopted their dog.'};
+      const labels={looking_for_vouch:'Looking for an eligible owner to vouch.',vouched:'Vouched for by @'+d.vouchedBy+'. Waiting for review by Wubbushi.',invited:'Invited into Wubbushi’s garden.',vouch_suspended:'The owner who vouched is no longer eligible. Wubbushi will review the application.',adopted:'This person has adopted their dog.'};
       $('vouch-state').textContent=labels[d.status]||'Awaiting review.';
       $('application-title').textContent=d.status==='looking_for_vouch'?'Will you vouch for me?':d.status==='adopted'?'Adoption complete.':'A step closer to a dog.';
       const shortPath=Number.isInteger(d.shortId)&&d.shortId>0&&d.shortId<=10000?'/vouch/'+d.shortId:null;

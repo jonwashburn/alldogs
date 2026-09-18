@@ -1,0 +1,34 @@
+/* The same painted paper and hand as the gate, with room to read. */
+.adoption-page{min-height:100svh;display:flex;flex-direction:column;background:#eeeadd;color:#303c43;isolation:isolate}
+.adoption-ground{position:fixed;inset:0;z-index:-1;width:100%;height:100lvh;object-fit:fill;pointer-events:none}
+.adoption-mast{width:calc(100% - 88px);max-width:1320px;min-height:96px;margin:auto;display:flex;align-items:center;gap:26px}
+.adoption-mast a{display:flex;align-items:center;min-height:44px}
+.adoption-mast img{display:block;height:auto}
+.adoption-mast .wordmark img{width:128px}
+.adoption-artist{width:169px;margin-right:auto}
+.adoption-mast nav{margin-left:auto}
+.adoption-mast nav img{width:72px}
+.adoption-letter{width:min(650px,calc(100% - 48px));margin:42px auto 68px;padding:0}
+.adoption-letter .eyebrow{font:10px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.12em;margin-bottom:18px;color:#526257}
+.adoption-letter h1{font-size:clamp(40px,6vw,62px);margin:0 0 25px}
+.adoption-letter p{font:19px/1.65 var(--serif);margin:0 0 22px}
+.adoption-letter .invitation-copy{font-size:clamp(23px,3vw,28px);line-height:1.45;max-width:31ch}
+.adoption-letter h2{font:400 28px/1.25 var(--serif);letter-spacing:-.025em;max-width:25ch;margin:35px 0 15px}
+.adoption-join{display:inline-flex;align-items:center;min-height:44px;margin-top:2px}
+.adoption-join img{display:block;width:135px;height:auto}
+.adoption-letter .quiet{font:12px/1.6 Arial,Helvetica,sans-serif;color:#526257;margin:8px 0 34px}
+.adoption-rules{border-top:1px solid #52634b45}
+.adoption-rules details{border-bottom:1px solid #52634b45;scroll-margin-top:24px}
+.adoption-rules summary{display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none;cursor:pointer;min-height:61px;padding:16px 0;font:19px/1.4 var(--serif)}
+.adoption-rules summary::-webkit-details-marker{display:none}
+.adoption-rules summary::after{content:'+';font:20px/1 Arial,sans-serif;color:#526257}
+.adoption-rules details[open]>summary::after{content:'−'}
+.adoption-rules details>div{padding:0 0 6px}
+.adoption-rules details p{font-size:17px;line-height:1.65;margin:0 0 18px}
+.adoption-page .adoption-footer{width:calc(100% - 88px);max-width:1320px;min-height:80px;margin:auto auto 0;padding:18px 0 24px;display:flex;justify-content:space-between;align-items:center;border:0}
+.adoption-footer img{display:block;height:auto;width:106px}
+.adoption-footer a{display:flex;align-items:center;min-height:44px}
+.adoption-footer a img{width:144px}
+.adoption-page a:focus-visible,.adoption-page summary:focus-visible{outline:2px solid #557064;outline-offset:5px}
+.skip{position:absolute;top:-100px;left:20px;padding:10px;background:#eeeadd;z-index:2}.skip:focus{top:10px}
+@media(max-width:700px){.adoption-mast{width:calc(100% - 40px);min-height:83px}.adoption-mast .wordmark img{width:106px}.adoption-mast .adoption-artist{display:none}.adoption-mast nav img{width:60px}.adoption-letter{margin-top:26px;margin-bottom:40px}.adoption-letter h2{font-size:25px;margin-top:29px}.adoption-letter p{font-size:18px}.adoption-letter .invitation-copy{font-size:24px}.adoption-page .adoption-footer{width:calc(100% - 40px);flex-wrap:nowrap;gap:20px}.adoption-rules summary{font-size:18px}}

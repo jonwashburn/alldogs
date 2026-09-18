@@ -45,7 +45,7 @@
   const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
   const save=node('button',undefined,'garden-save');save.type='submit';save.disabled=true;save.append(word('gardenChoose','This is my dog'));
   const note=node('p','Save your choice and name. Nothing is due now.','account-note');
-  const details=node('details');details.append(node('summary','About taking your dog home'),node('p','This saves your choice and name. It does not mint or transfer the artwork.'),node('p','Participation in ALL DOGS, a conceptual artwork by Wubbushi. You receive your dog first, then decide what the experience is worth to you. You have seven days from adoption to pay Wubbushi the amount you choose. Your valuation becomes part of the artwork. Nothing is due now.'));
+  const details=node('details');details.append(node('summary','About taking your dog home'),node('p','This saves your choice and name. It does not mint or transfer the artwork.'),node('p','After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
   const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
   form.append(heading,label,save,note,details,status);content.append(form);
   const mats=await subjects();

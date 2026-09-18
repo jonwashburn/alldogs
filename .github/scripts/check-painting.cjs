@@ -7,6 +7,6 @@ assert.equal(hash('painting/paintkit.js'),'555d6d735595c30921f1c283874135d361c62
 for(const file of manifest.files)assert.equal(hash('painting/'+file.path),file.sha256,file.path+' must match the rendered release.');
 const html=fs.readFileSync('index.html','utf8');
 for(const match of html.matchAll(/data-paint="([A-Za-z]+)"/g))assert(fs.existsSync('painting/'+match[1]+'.webp'),'Missing first frame: '+match[1]);
-for(const phrase of ['This is a journal for me.','as a gift from me.'])assert(html.includes(phrase));
+for(const phrase of ['This is a journal for me.','I want to make little paintings for the people who become part of my life.'])assert(html.includes(phrase));
 assert(!/fetch\(|localStorage|sessionStorage/.test(fs.readFileSync('painting/page.js','utf8')),'Painting must not access accounts or stored visitor data.');
 console.log('Painting verified: original brush bundle, matching composition and first frames, journal copy and public-only rendering.');
