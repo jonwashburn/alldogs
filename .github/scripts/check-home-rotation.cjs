@@ -6,6 +6,12 @@ const approved = ['Tideheart', 'Afterburn', 'Snoop Dogg', 'Popeye', 'Hulk', 'Dra
 assert.deepEqual(dogs.map(d => d.title).sort(), approved.slice().sort());
 const catalog = JSON.parse(fs.readFileSync('dog-pound/dogs.json', 'utf8')).items;
 for (const dog of dogs) {
+  if (dog.title === 'Hulk') {
+    assert.equal(dog.src, '/assets/hulk-scissor-cardboard-1800.png');
+    assert.equal(dog.full, '/assets/hulk-scissor-cardboard-3000.png');
+    assert.ok(fs.existsSync(dog.src.slice(1)) && fs.existsSync(dog.full.slice(1)));
+    continue;
+  }
   const source = catalog.find(d => d.title === dog.title && d.state === 'living' && d.curation === 'loved');
   assert.ok(source, dog.title);
   const wide = source.variants.find(v => v.width === 2400 && v.height === 1200);
@@ -34,7 +40,7 @@ function fixture(withControls = false) {
     const img = {}, name = {};
     const button = {dataset: {}, setAttribute(k, v) { this[k] = v; }, querySelector(q) { assert.equal(q, 'img'); return img; }};
     const next = withControls ? {hidden: true, disabled: false, addEventListener(event, handler) { assert.equal(event, 'click'); this.click = handler; }} : null;
-    return {img, name, button, next, querySelector(q) { return q === '.artwork-open' ? button : q === '[data-next-painting]' ? next : name; }};
+    return {img, name, button, next, classList: {toggle(k, value) { assert.equal(k, 'cardboard-painting'); this.cardboard = value; }}, querySelector(q) { return q === '.artwork-open' ? button : q === '[data-next-painting]' ? next : name; }};
   });
   const doc = {querySelectorAll(q) { assert.equal(q, '[data-rotating-painting]'); return slots; }};
   return {slots, doc};
@@ -51,6 +57,9 @@ for (const stored of ['[]', '["Amy","Afterburn"]', 'null', '{}', 'bad JSON']) {
     assert.equal(slot.button.dataset.artName, dog.title);
     assert.equal(slot.button.dataset.artFull, dog.full);
     assert.equal(slot.img.src, dog.src);
+    assert.equal(slot.img.width, dog.width || 2400);
+    assert.equal(slot.img.height, dog.height || 1200);
+    assert.equal(slot.classList.cardboard, Boolean(dog.cardboard));
     assert.match(slot.img.alt, /living dog painting by Wubbushi/);
     assert.equal(slot.button['aria-label'], 'Take a closer look at ' + dog.title);
   });

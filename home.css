@@ -57,8 +57,9 @@ a{text-underline-offset:4px}
 .opening-note h1{font-size:clamp(42px,6.2vw,100px);line-height:1.12;letter-spacing:-.015em;text-wrap:initial;margin:0 0 54px}
 .opening-note h1 span{display:block;color:inherit}
 .opening-note h1 span:last-child{text-align:right}
-.aftermath{display:grid;grid-template-columns:1fr 1fr;gap:12%;align-items:start;max-width:1130px;margin-left:auto}
-.premise{font:500 clamp(24px,2.7vw,40px)/1.5 var(--hand);transform:rotate(-2deg);padding-top:8px}
+.aftermath .reading{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(32px,6vw,100px);max-width:none;font-size:clamp(19px,1.65vw,25px);line-height:1.6}
+.aftermath .reading>p{margin:0}
+.aftermath .inline-link{grid-column:1 / -1;justify-self:start}
 .reading{max-width:54ch}
 .reading>p:last-child{margin-bottom:0}
 .small-note{font-size:14px;line-height:1.6;color:var(--muted)}
@@ -69,9 +70,11 @@ a{text-underline-offset:4px}
 .artist-note>.hand-note{text-align:right;margin:0 0 32px}
 .artist-note h2{font-size:clamp(46px,7vw,106px);line-height:1.08;letter-spacing:-.015em;text-align:center;margin:0 auto 45px}
 .artist-note h2 span{color:var(--red)}
-.artist-words{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:12%;max-width:960px;margin:auto}
-.artist-words p{margin:0}
-.artist-words>div{display:flex;flex-direction:column;align-items:flex-start}
+.artist-words{max-width:900px;margin:auto}
+.artist-copy{font-size:clamp(18px,1.5vw,22px)}
+.artist-copy .artist-lead{font-size:clamp(22px,2.1vw,30px);line-height:1.55;margin-bottom:24px}
+.artist-copy p:last-child{margin-bottom:0}
+.artist-signoff{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:32px}
 .signature{font:500 36px/1.5 var(--hand);transform:rotate(-5deg);margin-bottom:12px}
 .button{min-height:46px;padding:11px 19px;font-size:14px;font-weight:500;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 .button:hover{background:var(--ink);color:white}
@@ -187,10 +190,10 @@ a{text-underline-offset:4px}
  .opening-note{padding-block:40px 50px}
  .opening-note h1{font-size:6.4vw;margin-bottom:30px;line-height:1.12}
  .hand-note{font-size:18px;margin-bottom:22px}
- .aftermath{gap:8%;grid-template-columns:.8fr 1.2fr}
- .premise{font-size:25px}.aftermath .reading{font-size:17px}
+ .aftermath .reading{display:block;font-size:19px}
+ .aftermath .reading>p{margin-bottom:20px}
  .artist-note{padding-block:36px 50px}.artist-note h2{font-size:6.8vw;margin-bottom:30px}
- .artist-words{gap:8%}.signature{font-size:29px}
+ .signature{font-size:29px}
  .adoption-note{padding-block:35px}
  .site-footer.wrap{display:block}.site-footer nav{justify-content:flex-start;margin-top:14px;column-gap:20px}
  .adoption-dialog{padding:24px}.adoption-dialog h2{font-size:27px}
@@ -225,12 +228,10 @@ a{text-underline-offset:4px}
  .opening-note h1{font-size:clamp(40px,10.5vw,56px);line-height:1.08;text-align:left}
  .opening-note h1 span{display:inline}.opening-note h1 span:last-child{text-align:left}
  .opening-note h1 span:first-child:after{content:' '}
- .aftermath{display:block}.premise{font-size:24px;line-height:1.4;margin-bottom:28px}
- .premise br{display:none}.premise{max-width:18ch}
- .aftermath .reading{font-size:18px}.aftermath .small-note{font-size:13px}
+ .aftermath .reading{font-size:18px}
  .artist-note>.hand-note{text-align:left;font-size:15px;margin-bottom:20px}
  .artist-note h2{font-size:clamp(40px,10.5vw,56px);text-align:left;line-height:1.08;letter-spacing:-.015em}
- .artist-words{display:block}.artist-words>div{margin-top:25px}.signature{margin-bottom:7px}
+ .artist-signoff{flex-direction:column;align-items:flex-start;gap:0;margin-top:25px}.signature{margin-bottom:7px}
  .adoption-note h2{font-size:clamp(38px,10vw,52px)}
  .brand.type-name{font-size:13px}.reading-page h1{font-size:clamp(28px,6.4vw,36px)}
 }

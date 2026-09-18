@@ -29,6 +29,14 @@
     ['Afterburn', 'b55e43406f264d00fbee9048b72a48f6e145ae6074265754d53b19b38c0997c2', '67f525b3107646f601538e4f0ef125c8a9f2014a4c132f034f0fca536d2d6df7'],
     ['Tideheart', '4f092f0443195981ff9c4ad24fa9043bd342783872cd2e3f309f1c8661e37a7d', 'f29dda66ea64068bc92b30ff204bdea2677c41ebb3a3f66ad508a6709d71c7ff']
   ].map(([title, src, full]) => ({title, src: base + `alldogs_auto_loved/${src}.jpg`, full: base + `alldogs_auto_loved/${full}.jpg`}));
+  const hulk = native.find(dog => dog.title === 'Hulk');
+  Object.assign(hulk, {
+    src: '/assets/hulk-scissor-cardboard-1800.png',
+    full: '/assets/hulk-scissor-cardboard-3000.png',
+    width: 1800,
+    height: 1200,
+    cardboard: true
+  });
   const dogs = native.concat(gestures);
   function select(previous = [], random = Math.random) {
     const last = new Set(Array.isArray(previous) ? previous : []);
@@ -60,6 +68,9 @@
     button.setAttribute('aria-label', 'Take a closer look at ' + dog.title);
     img.alt = dog.title + ', a living dog painting by Wubbushi';
     img.src = dog.src;
+    img.width = dog.width || 2400;
+    img.height = dog.height || 1200;
+    figure.classList.toggle('cardboard-painting', Boolean(dog.cardboard));
     figure.querySelector('.painting-name').textContent = dog.title;
   }
   function mount(doc, storage, load = loadPainting) {
