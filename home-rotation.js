@@ -40,28 +40,72 @@
     }
     return pool.slice(0, 2);
   }
-  function mount(doc, storage) {
+  function selectNext(visible, seen, random = Math.random) {
+    const available = dogs.filter(dog => !visible.includes(dog.title));
+    const unseen = available.filter(dog => !seen.has(dog.title));
+    const pool = unseen.length ? unseen : available;
+    return pool[Math.floor(random() * pool.length)];
+  }
+  function loadPainting(src) {
+    const image = new root.Image();
+    image.src = src;
+    return image.decode();
+  }
+  function paint(figure, dog) {
+    const button = figure.querySelector('.artwork-open');
+    const img = button.querySelector('img');
+    // Keep the caption, accessible name and full-resolution view in sync.
+    button.dataset.artName = dog.title;
+    button.dataset.artFull = dog.full;
+    button.setAttribute('aria-label', 'Take a closer look at ' + dog.title);
+    img.alt = dog.title + ', a living dog painting by Wubbushi';
+    img.src = dog.src;
+    figure.querySelector('.painting-name').textContent = dog.title;
+  }
+  function mount(doc, storage, load = loadPainting) {
     const slots = [...doc.querySelectorAll('[data-rotating-painting]')];
     if (!slots.length) return;
     let previous = [];
     try { previous = JSON.parse(storage.getItem('alldogs-home-last-pair') || '[]'); } catch (_) {}
     const selected = select(previous);
+    const seen = new Set(selected.map(dog => dog.title));
+    const pending = new Set();
+    const remember = () => {
+      try { storage.setItem('alldogs-home-last-pair', JSON.stringify(selected.map(dog => dog.title))); } catch (_) {}
+    };
     slots.forEach((figure, index) => {
       const dog = selected[index];
       if (!dog) return;
-      const button = figure.querySelector('.artwork-open');
-      const img = button.querySelector('img');
-      // All three identities change together, including the full-resolution view.
-      button.dataset.artName = dog.title;
-      button.dataset.artFull = dog.full;
-      button.setAttribute('aria-label', 'Take a closer look at ' + dog.title);
-      img.alt = dog.title + ', a living dog painting by Wubbushi';
-      img.src = dog.src;
-      figure.querySelector('.painting-name').textContent = dog.title;
+      paint(figure, dog);
+      const next = figure.querySelector('[data-next-painting]');
+      if (!next) return;
+      next.hidden = false;
+      next.addEventListener('click', async () => {
+        if (next.disabled) return;
+        const candidate = selectNext(selected.map(dog => dog.title).concat([...pending]), seen);
+        if (!candidate) return;
+        pending.add(candidate.title);
+        next.disabled = true;
+        next.textContent = 'Meeting another dog…';
+        try {
+          // Leave the current painting visible until its replacement is decoded.
+          await load(candidate.src);
+          paint(figure, candidate);
+          selected[index] = candidate;
+          seen.add(candidate.title);
+          remember();
+          next.textContent = 'Meet another dog ↻';
+        } catch (_) {
+          next.textContent = 'Could not load. Try another ↻';
+        } finally {
+          pending.delete(candidate.title);
+          next.disabled = false;
+        }
+      });
     });
-    try { storage.setItem('alldogs-home-last-pair', JSON.stringify(selected.map(dog => dog.title))); } catch (_) {}
+    remember();
   }
-  const api = {dogs, select, mount};
+  const api = {dogs, select, selectNext, mount};
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.AllDogsRotation = api;
 })(typeof globalThis === 'object' ? globalThis : this);
