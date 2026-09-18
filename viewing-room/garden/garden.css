@@ -1,18 +1,19 @@
 /* The account lives inside the invitation. The painting remains the room. */
 body{background:#eeeadd;color:#323d31;overflow-x:clip}
-.garden-main{overflow:hidden}
-.garden-mast{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:100px;margin:0 5.5vw}
+.garden-main{position:relative;overflow:hidden}
+.garden-mast{position:absolute;inset:0 0 auto;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:80px;margin:0 5.5vw}
 .garden-mast img{display:block;width:100%;height:auto}.garden-exit{width:137px;transform:rotate(1deg)}
-.garden-heading{text-align:center;margin:20px auto -25px;position:relative;z-index:2;pointer-events:none}
+.garden-heading{text-align:center;margin:0;position:absolute;top:88px;left:0;right:0;z-index:4;pointer-events:none}
 .garden-eyebrow{font:11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.09em;margin:0 0 6px;color:#57624e}
-.garden-heading h1{width:min(650px,85vw);margin:0 auto}.garden-heading h1 img{width:100%;height:auto;display:block}
+.garden-heading h1{width:min(560px,85vw);margin:0 auto}.garden-heading h1 img{width:100%;height:auto;display:block}
 .garden-stage{position:relative;width:min(1600px,100%);aspect-ratio:1.6;margin:0 auto;isolation:isolate}
 .garden-layer{position:absolute;inset:0;pointer-events:none}.garden-layer>img,.garden-layer>canvas{display:block;width:100%;height:100%}
 .garden-layer>canvas{position:absolute;inset:0;opacity:0}.garden-layer[data-painted="true"]>canvas{opacity:1}.garden-layer[data-painted="true"]>img{visibility:hidden}
 .garden-foreground{z-index:3}
-.garden-dog{position:absolute;z-index:2;left:50%;bottom:19%;width:var(--dog-width,43%);padding:0;border:0;background:none;transform:translateX(-50%);cursor:zoom-in;aspect-ratio:var(--dog-ratio,1.4);transition:opacity .22s}
+/* In the 8:5 scene, the paw baseline is 50.625% of the width; keep the title clear. */
+.garden-dog{position:absolute;z-index:2;left:50%;bottom:19%;width:min(var(--dog-width,43%),calc((50.625% - 190px) * var(--dog-ratio,1.4)));padding:0;border:0;background:none;transform:translateX(-50%);cursor:zoom-in;aspect-ratio:var(--dog-ratio,1.4);transition:opacity .22s}
 .garden-dog img{position:absolute;display:block;max-width:none;mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat}
-.garden-dog[data-presentation="original"]{width:40%;aspect-ratio:1;background:#eeeadd;padding:8px}
+.garden-dog[data-presentation="original"]{width:min(40%,calc(50.625% - 190px));aspect-ratio:1;background:#eeeadd;padding:8px}
 .garden-dog[data-presentation="original"] img{position:static;width:100%!important;height:auto!important;mask-image:none!important;-webkit-mask-image:none!important}
 .garden-welcome{position:absolute;left:50%;top:56%;width:min(440px,48%);transform:translate(-50%,-50%);z-index:4;text-align:center}
 .garden-welcome img{display:block;width:100%;height:auto}.garden-welcome a{font:13px/1.5 var(--serif);color:#4d5d44}
@@ -37,11 +38,12 @@ body{background:#eeeadd;color:#323d31;overflow-x:clip}
 .garden-footer nav{display:flex;justify-content:center;gap:16px 26px;flex-wrap:wrap}.garden-footer a{font:12px/1.5 Arial,sans-serif;color:#56634e}.garden-footer>p{width:125px;margin:25px auto 0}.garden-footer>p img{width:100%;height:auto;display:block}
 .garden-lightbox{width:min(1440px,calc(100vw - 24px));max-height:calc(100svh - 24px);padding:15px;background:#eeeadd}.garden-lightbox>button{display:block;margin-left:auto}.garden-lightbox>img{width:100%;height:auto;max-height:calc(100svh - 145px);object-fit:contain;display:block}.garden-lightbox>p{font:12px/1.5 Arial,sans-serif;text-align:center;margin:12px auto}
 @media(max-width:700px){
- .garden-mast{margin:0 22px;min-height:85px}.garden-mast .wordmark{width:115px}.garden-exit{width:114px}
- .garden-heading{margin:16px auto 0}.garden-heading h1{width:94vw}.garden-eyebrow{font-size:10px}
- .garden-stage{width:155%;max-width:none;margin-left:-27.5%}
+ .garden-mast{margin:0 22px;min-height:64px}.garden-mast .wordmark{width:115px}.garden-exit{width:114px}
+ .garden-heading{top:70px}.garden-heading h1{width:min(500px,90vw)}.garden-eyebrow{font-size:10px}
+ .garden-stage{width:max(100%,640px);max-width:none;margin:0;left:50%;transform:translateX(-50%)}
  .garden-layer{top:0;bottom:0}.garden-layer>img,.garden-layer>canvas{object-fit:fill}
- .garden-dog{bottom:20%;width:var(--dog-mobile-width,43%)}
+ .garden-dog{bottom:20%;width:min(var(--dog-mobile-width,43%),calc((50% - 165px) * var(--dog-ratio,1.4)))}
+ .garden-dog[data-presentation="original"]{width:min(40%,calc(50% - 165px))}
  .garden-welcome{width:41%;top:53%}.garden-welcome a{font-size:12px}
  .garden-letter{margin:-12px auto 36px}.account-gate,.account-card,.room-form{padding:24px 23px 28px}
  .room-controls{gap:10px;grid-template-columns:44px minmax(0,1fr) 44px}.room-controls button img{width:42px}
