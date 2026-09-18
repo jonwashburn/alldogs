@@ -21,7 +21,7 @@ a{text-underline-offset:4px}
 .mast nav>a[aria-current=page]{text-decoration-thickness:2px}
 .nav-apply{padding:10px 0;min-height:44px;border:0;color:var(--ink);background:none;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
 .brand.type-name{font:400 19px/1 var(--display);letter-spacing:-.04em}
-.home-mast{display:block;padding:8px var(--gutter) 25px}
+.home-mast{display:block;padding:8px var(--gutter) 10px}
 .mast-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
 .mast-top .artist-credit{display:block;white-space:nowrap}
 .home-mast .big-name{display:block;width:max-content;max-width:100%;margin:5px auto 10px;font:400 12.4vw/1.07 var(--display);letter-spacing:-.015em;white-space:nowrap}
@@ -73,10 +73,7 @@ a{text-underline-offset:4px}
 .button:hover{background:var(--ink);color:white}
 .button.primary{background:var(--ink);color:white;border-color:var(--ink)}
 .button.primary:hover{background:#484b42;border-color:#484b42}
-.adoption-note{background:#e5e9ce;padding-block:50px}
-.cardboard-painting{background:var(--paper);padding-top:24px}
-.cardboard-painting .artwork-open{width:min(1100px,88%);margin:0 auto 34px;transform:rotate(-.65deg);box-shadow:1px 8px 13px -7px #30281e4d,0 1px 2px #30281e24}
-.cardboard-painting .artwork-open img{aspect-ratio:3/2}
+.adoption-note{background:var(--paper);padding-block:50px}
 .adoption-note h2{font-size:clamp(36px,5vw,72px);line-height:1.2;margin-bottom:18px;text-wrap:initial}
 .adoption-ticket{display:inline-block;max-width:100%;min-height:44px;padding:8px 0;border:0;background:none;color:var(--ink);font:500 clamp(17px,1.7vw,24px)/1.5 var(--hand);text-align:left;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
 .adoption-ticket:hover{text-decoration-thickness:2px}
@@ -179,7 +176,7 @@ a{text-underline-offset:4px}
  .opening-painting .painting-caption{align-items:center;min-height:104px;padding-block:21px}
  .painting-label{font-size:25px}.preview-controls{gap:10px}
  #preview-note{font-size:10px}
- .home-mast{min-height:0;padding:4px var(--gutter) 18px}
+ .home-mast{min-height:0;padding:4px var(--gutter) 8px}
  .home-mast .big-name{font-size:12vw;margin-block:10px 15px}
  .mast-top{gap:10px}.mast-top .artist-credit{font-size:12px}.mast-top nav{gap:18px}
  .mast-bottom{font-size:15px}.mast-bottom>span{font-size:12px}
