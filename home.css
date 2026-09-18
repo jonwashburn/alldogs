@@ -1,9 +1,9 @@
 /* All Dogs: affection, ownership, consequences. The paintings stay untouched. */
-:root{--paper:#fff;--ink:#30281e;--muted:#645b4f;--line:#cfc8b8;--yellow:#f1f648;--red:#9c2924;--pink:#f3d4cf;--gutter:clamp(22px,4.5vw,80px);--display:'Oi',Georgia,serif;--hand:'Shantell Sans',sans-serif}
+:root{--paper:#fff;--ink:#30281e;--muted:#645b4f;--line:#cfc8b8;--yellow:#f1f648;--red:#9c2924;--pink:#f3d4cf;--gutter:clamp(22px,4.5vw,80px);--display:'Instrument Serif',Georgia,serif;--hand:'Shantell Sans',sans-serif}
 html{scroll-padding-top:24px}
 body{font-family:Georgia,'Times New Roman',serif;font-size:18px;line-height:1.6}
 .wrap{max-width:1536px;margin-inline:auto;padding-inline:var(--gutter)}
-h1,h2{font-family:var(--display);font-weight:400;letter-spacing:-.025em;line-height:1.15;text-wrap:balance}
+h1,h2{font-family:var(--display);font-weight:400;letter-spacing:-.015em;line-height:1.08;text-wrap:balance}
 h1{font-size:clamp(30px,3.1vw,44px)}
 h2{font-size:clamp(25px,2.4vw,34px)}
 h3{font-family:var(--hand);font-weight:500;letter-spacing:-.025em;line-height:1.22;text-wrap:balance}
@@ -24,7 +24,7 @@ a{text-underline-offset:4px}
 .home-mast{display:block;padding:8px var(--gutter) 10px}
 .mast-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
 .mast-top .artist-credit{display:block;white-space:nowrap}
-.home-mast .big-name{display:block;width:max-content;max-width:100%;margin:5px auto 10px;font:400 12.4vw/1.07 var(--display);letter-spacing:-.015em;white-space:nowrap}
+.home-mast .big-name{display:block;width:max-content;max-width:100%;margin:24px auto 22px;font:400 13vw/.98 var(--display);letter-spacing:.035em;white-space:nowrap}
 .mast-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--hand);font-size:clamp(13px,1.3vw,20px)}
 .mast-bottom p{margin:0}
 .mast-bottom>span{font-size:14px;white-space:nowrap}
@@ -33,6 +33,10 @@ a{text-underline-offset:4px}
 .artwork-open{display:block;width:100%;padding:0;border:0;background:var(--paper);cursor:zoom-in}
 .artwork-open img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
 .artwork-open:focus-visible{outline-offset:-5px}
+.cardboard-painting{padding-top:34px}
+.cardboard-painting .artwork-open{width:88%;max-width:1100px;margin-inline:auto;background:transparent;transform:rotate(-.65deg)}
+.cardboard-painting .artwork-open img{aspect-ratio:3/2;filter:drop-shadow(0 3px 3px rgba(49,31,17,.16))}
+@media(max-width:600px){.cardboard-painting{padding-top:20px}.cardboard-painting .artwork-open{width:94%}}
 .painting-caption{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:78px;padding-block:18px;font:500 22px/1.4 var(--hand)}
 .caption-state,.caption-medium{color:var(--muted);font:400 13px/1.5 Georgia,serif}
 .caption-state{margin-left:10px;white-space:nowrap}
@@ -50,7 +54,7 @@ a{text-underline-offset:4px}
 .opening-note{background:var(--paper);color:var(--red);padding-block:58px 80px}
 .hand-note{font:500 clamp(17px,1.7vw,25px)/1.4 var(--hand);margin:0 0 32px}
 .opening-note>.wrap>.hand-note{transform:rotate(-3deg);transform-origin:left center;margin-left:2vw}
-.opening-note h1{font-size:clamp(32px,5.6vw,96px);line-height:1.4;letter-spacing:0;text-wrap:initial;margin:0 0 54px}
+.opening-note h1{font-size:clamp(42px,6.2vw,100px);line-height:1.12;letter-spacing:-.015em;text-wrap:initial;margin:0 0 54px}
 .opening-note h1 span{display:block;color:inherit}
 .opening-note h1 span:last-child{text-align:right}
 .aftermath{display:grid;grid-template-columns:1fr 1fr;gap:12%;align-items:start;max-width:1130px;margin-left:auto}
@@ -63,7 +67,7 @@ a{text-underline-offset:4px}
 .inline-link{display:inline-flex;align-items:center;min-height:44px;font:500 15px/1.5 var(--hand)}
 .artist-note{padding-block:65px 85px}
 .artist-note>.hand-note{text-align:right;margin:0 0 32px}
-.artist-note h2{font-size:clamp(42px,7vw,106px);line-height:1.3;letter-spacing:-.015em;text-align:center;margin:0 auto 45px}
+.artist-note h2{font-size:clamp(46px,7vw,106px);line-height:1.08;letter-spacing:-.015em;text-align:center;margin:0 auto 45px}
 .artist-note h2 span{color:var(--red)}
 .artist-words{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:12%;max-width:960px;margin:auto}
 .artist-words p{margin:0}
@@ -177,11 +181,11 @@ a{text-underline-offset:4px}
  .painting-label{font-size:25px}.preview-controls{gap:10px}
  #preview-note{font-size:10px}
  .home-mast{min-height:0;padding:4px var(--gutter) 8px}
- .home-mast .big-name{font-size:12vw;margin-block:10px 15px}
+ .home-mast .big-name{font-size:14vw;margin-block:20px 22px}
  .mast-top{gap:10px}.mast-top .artist-credit{font-size:12px}.mast-top nav{gap:18px}
  .mast-bottom{font-size:15px}.mast-bottom>span{font-size:12px}
  .opening-note{padding-block:40px 50px}
- .opening-note h1{font-size:5.9vw;margin-bottom:30px;line-height:1.5}
+ .opening-note h1{font-size:6.4vw;margin-bottom:30px;line-height:1.12}
  .hand-note{font-size:18px;margin-bottom:22px}
  .aftermath{gap:8%;grid-template-columns:.8fr 1.2fr}
  .premise{font-size:25px}.aftermath .reading{font-size:17px}
@@ -211,23 +215,23 @@ a{text-underline-offset:4px}
 @media(max-width:600px){
  .painting-caption{flex-wrap:wrap;row-gap:4px;font-size:22px}.meet-another{font-size:13px;min-width:0;margin-left:auto}
  .mast-top .artist-credit{font-size:11px}.mast-top .artist-credit a{display:block;min-height:44px;font:500 14px/44px var(--hand)}
- .home-mast .big-name{font-size:12.2vw;margin-block:4px 14px}
+ .home-mast .big-name{font-size:14.4vw;margin-block:16px 20px}
  .mast-top nav{gap:16px}.mast-top nav,.mast-top .nav-apply{font-size:13px}
  .mast-bottom{font-size:14px;line-height:1.4}.mast-bottom>span{font-size:11px}.mobile-break{display:block}
  .opening-painting .painting-caption{display:grid;grid-template-columns:1fr;gap:5px;padding-block:17px 20px}
  .painting-label{display:flex;align-items:center;justify-content:space-between}
  .preview-controls{align-items:flex-start;gap:3px}.painting-states{gap:28px}
  #preview-note{text-align:left}
- .opening-note h1{font-size:clamp(30px,8vw,48px);line-height:1.35;text-align:left}
+ .opening-note h1{font-size:clamp(40px,10.5vw,56px);line-height:1.08;text-align:left}
  .opening-note h1 span{display:inline}.opening-note h1 span:last-child{text-align:left}
  .opening-note h1 span:first-child:after{content:' '}
  .aftermath{display:block}.premise{font-size:24px;line-height:1.4;margin-bottom:28px}
  .premise br{display:none}.premise{max-width:18ch}
  .aftermath .reading{font-size:18px}.aftermath .small-note{font-size:13px}
  .artist-note>.hand-note{text-align:left;font-size:15px;margin-bottom:20px}
- .artist-note h2{font-size:clamp(28px,6.6vw,39px);text-align:left;line-height:1.3;letter-spacing:-.04em}
+ .artist-note h2{font-size:clamp(40px,10.5vw,56px);text-align:left;line-height:1.08;letter-spacing:-.015em}
  .artist-words{display:block}.artist-words>div{margin-top:25px}.signature{margin-bottom:7px}
- .adoption-note h2{font-size:clamp(32px,8vw,45px)}
+ .adoption-note h2{font-size:clamp(38px,10vw,52px)}
  .brand.type-name{font-size:13px}.reading-page h1{font-size:clamp(28px,6.4vw,36px)}
 }
 @media(max-width:380px){
