@@ -15,23 +15,23 @@
     },
     {
       "path": "scene.js",
-      "bytes": 10347,
-      "sha256": "7067604e0e45ce2cb616288fd6a55a6e0a5e3c40a01c7a0ca657696dfb222ad4"
+      "bytes": 10579,
+      "sha256": "0f5139390291fbab849b547c7ac2602655964a49e804500de05ec78c200c4007"
     },
     {
       "path": "worker.js",
-      "bytes": 545,
-      "sha256": "678a0ae368c1caaa1ed1e506a9d506ffba4b00dd68ce4ca0b24f653a687e0225"
+      "bytes": 548,
+      "sha256": "06102e2cf1b9abec7026a56798d8ccc0eb296d6a4ed48c8b1e6febb5338e576c"
     },
     {
       "path": "page.js",
-      "bytes": 1585,
-      "sha256": "cd5a073c3792404adea2aad655abeb3e799da279845d5cd478ef3f7bd8bab73d"
+      "bytes": 1588,
+      "sha256": "f84d8145e64067ec2ed31ca4f14ffbee0c09afe92a11714974ea9a5e5ea5fdf7"
     },
     {
       "path": "painted.css",
-      "bytes": 11596,
-      "sha256": "96000c730f4c5bb71e5bc937057b1029d16303e79ec02ea93bd585a3ee73a0b7"
+      "bytes": 11153,
+      "sha256": "449fda57a7f4c71bc23bae62c4c967923523ab6a38e00f915b79ea2a9fa4a95f"
     },
     {
       "path": "quote.webp",
@@ -140,8 +140,8 @@
     },
     {
       "path": "viewingTitle.webp",
-      "bytes": 22986,
-      "sha256": "c54de525c112368cae705a202956799eaf0927e2e6a79d592fe81d169f8efa62"
+      "bytes": 18268,
+      "sha256": "60c33c2235aac98e53add67f3d6c92be1d0cafd2bbc5e51eea547754dbcae44f"
     },
     {
       "path": "waitlist.webp",

@@ -19,7 +19,7 @@
     quote: ['YOU MAKE THE RECORD ANYWAY.', 900, 80, 42, '#5a6056'],
     artist: ['PAINTINGS BY WUBBUSHI', 680, 68, 35, '#5a6056'],
     signature: ['WUBBUSHI', 440, 110, 58, '#51657d'],
-    viewingTitle: ["HE THINKS HE'S YOUR DOG.", 1200, 150, 78, ink],
+    viewingTitle: ['DISPLAY ONLY. NOT AVAILABLE FOR ADOPTION.', 900, 185, 60, ink],
     collection: ['FROM THE COLLECTION', 680, 75, 35, '#5a6056'],
     record: ["THE DOG'S RECORD", 580, 75, 37, ink],
     life: ['A LIFE TOGETHER', 535, 75, 37, ink],
@@ -73,7 +73,10 @@
     };
     if (words[key]) {
       const [text, w, h, letterHeight, color] = words[key];
-      write(text, 17, h * .78, letterHeight, color, {angle: -.008, wMul: key === 'adopt' || key === 'close' ? .16 : key === 'heading' || key === 'viewingTitle' ? .072 : .095});
+      if (key === 'viewingTitle') {
+        write('DISPLAY ONLY.', 17, 78, 60, color, {angle: -.008, wMul: .072});
+        write('NOT AVAILABLE FOR ADOPTION.', 17, 146, 38, color, {angle: -.008, wMul: .072});
+      } else write(text, 17, h * .78, letterHeight, color, {angle: -.008, wMul: key === 'adopt' || key === 'close' ? .16 : key === 'heading' || key === 'viewingTitle' ? .072 : .095});
     } else if (key === 'previous' || key === 'next') {
       const points = key === 'next' ? [[24,23],[65,44],[23,70]] : [[73,22],[32,45],[75,69]];
       stick(points, '#111111', 10, {tooth: .28, press: .85, dbl: .08});

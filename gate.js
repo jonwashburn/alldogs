@@ -85,10 +85,6 @@ async function changeDog(direction) {
 }
 document.getElementById('previous-dog').addEventListener('click', () => changeDog(-1));
 document.getElementById('next-dog').addEventListener('click', () => changeDog(1));
-document.getElementById('adopt-dog').addEventListener('click', event => {
-  event.preventDefault();
-  document.querySelector('[data-open-adoption]').click();
-});
 document.addEventListener('keydown', event => {
   if (viewing.hidden || document.querySelector('dialog[open]') ||
       event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||

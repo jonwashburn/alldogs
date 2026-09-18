@@ -12,7 +12,7 @@
   <script src="/dog-pound/application-email.js?v=20260917-email1" defer></script>
   <script src="/dog-pound/adoption-form.js?v=20260918-wish1" defer></script>
   <script src="/home-rotation.js?v=20260918-wide1" defer></script>
-  <script src="/gate.js?v=20260918-edit1" defer></script>
+  <script src="/gate.js?v=20260918-display1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
 <meta property="og:title" content="ALL DOGS · Wubbushi">
 <meta property="og:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
@@ -27,8 +27,8 @@
 <meta name="twitter:image:alt" content="A close view of Barack, a painted ALL DOGS dog, with the ALL DOGS wordmark.">
 <meta name="twitter:title" content="ALL DOGS · Wubbushi">
 <meta name="twitter:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
-  <link rel="stylesheet" href="/painting/painted.css?v=20260918-edit1">
-  <script src="/painting/page.js?v=20260918-wide1" defer></script>
+  <link rel="stylesheet" href="/painting/painted.css?v=20260918-display1">
+  <script src="/painting/page.js?v=20260918-display1" defer></script>
 </head>
 <body class="invitation-page">
   <div class="painted painted-ground" data-paint="ground" aria-hidden="true"><img src="/painting/ground.webp" alt=""><canvas></canvas></div>
@@ -55,7 +55,7 @@
 
     <section class="viewing" id="viewing" aria-labelledby="viewing-title" hidden>
       <div class="viewing-heading">
-        <div class="viewing-head"><p class="eyebrow">From the collection</p><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">He thinks he's your dog.</span></span></h1></div>
+        <div class="viewing-head"><p class="eyebrow">From the collection</p><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp?v=20260918-display1" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Display only. Not available for adoption.</span></span></h1></div>
         <button type="button" class="text-button" id="close-viewing" aria-label="Close and return to the gate"><span class="painted" data-paint="close"><img src="/painting/close.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Close</span></span></button>
       </div>
       <div class="dog-gallery" role="region" aria-label="Browse the paintings" aria-roledescription="carousel">
@@ -68,7 +68,6 @@
               <span id="dog-position" aria-hidden="true">01 / 19</span>
               <button type="button" class="text-button cycle-dog" id="next-dog" aria-label="Next dog" aria-controls="dog-painting"><span class="painted" data-paint="next"><img src="/painting/next.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Next dog</span></span></button>
             </div>
-            <a class="adopt-dog" id="adopt-dog" href="#apply" aria-haspopup="dialog" aria-controls="adoption-dialog"><span class="painted" data-paint="adopt"><img src="/painting/adopt.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Adopt Me</span></span></a>
           </figcaption>
         </figure>
         <p class="gallery-status" id="gallery-status" role="status" aria-live="polite" aria-atomic="true"></p>
