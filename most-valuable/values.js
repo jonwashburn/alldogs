@@ -10,7 +10,7 @@
     const timer = setTimeout(() => controller.abort(), 15000);
     $('value-list').replaceChildren(); $('value-empty').hidden = true;
     $('value-error').hidden = true; $('value-retry').hidden = true; $('value-status').textContent = 'Loading the register…';
-    $('value-explanation').textContent = kind === 'initial' ? 'What adopters chose to pay for the art in the seven days after receiving their dogs, highest first. Confirmed payments make up each dog’s recorded valuation.' : 'Each dog’s highest confirmed secondary sale. Gifts, listings and offers do not appear here.';
+    $('value-explanation').textContent = kind === 'initial' ? 'What adopters chose to pay for their participation in the seven days after receiving their dogs, highest first. Confirmed payments make up each dog’s recorded valuation.' : 'Each dog’s highest confirmed secondary sale. Gifts, listings and offers do not appear here.';
     try {
       const response = await fetch('https://api.alldogs.wtf/collection-api/valuations?kind=' + kind + '&currency=' + currency, {credentials: 'omit', cache: 'no-store', signal: controller.signal});
       if (!response.ok) throw Error('The value register is temporarily unavailable. Please try again.');

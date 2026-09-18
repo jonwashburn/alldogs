@@ -15,9 +15,9 @@
         const data=await api.request('club/payment');
         host.replaceChildren(title,message);message.textContent='';
         const deadline=new Date(data.deadline*1000).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
-        host.append(node('p','The painting. The idea behind it. What it means to you.'));
-        host.append(node('p','You’ve already received your dog. Now you have seven days from adoption to pay Wubbushi what you believe the work is worth. The amount becomes part of your dog’s record.'));
-        host.append(node('p','Your valuation is part of the artwork.'));
+        host.append(node('p','Participation in ALL DOGS, a conceptual artwork by Wubbushi.'));
+        host.append(node('p','You’ve received your dog. Now decide what the experience is worth to you. You have seven days from adoption to pay Wubbushi the amount you choose.'));
+        host.append(node('p','Your valuation becomes part of the artwork. The amount is recorded on your dog’s profile.'));
         host.append(node('p',(data.windowOpen?'Your valuation window closes ':'Your valuation window closed ')+deadline+'.','account-note'));
         const record=node('div',undefined,'payment-record');
         record.append(node('h3','Your dog’s recorded value'));
