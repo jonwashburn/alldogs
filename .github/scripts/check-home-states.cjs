@@ -7,7 +7,20 @@ const data = html.match(/<script type="application\/json" id="approved-pairs">(.
 const pair = JSON.parse(data)[0];
 assert.equal(pair.title, 'Barack');
 assert.ok(pair.living && pair.zombie && pair.angel && pair.angelFull && pair.livingFull);
-for (const key of ['living', 'livingFull', 'angel', 'angelFull']) assert.ok(fs.existsSync('.' + pair[key]));
+for (const key of ['living', 'livingFull', 'zombie', 'zombieFull', 'angel', 'angelFull']) {
+  if (!pair[key]) continue;
+  if (pair[key].startsWith('/')) {
+    assert.ok(fs.existsSync('.' + pair[key]), 'Missing local painting: ' + key);
+  } else {
+    const source = new URL(pair[key]);
+    assert.equal(source.protocol, 'https:');
+    assert.equal(source.hostname, 'recognitionphysics-public.t3.tigrisfiles.io');
+    assert.match(source.pathname, /^\/share\/alldogs_(design_live|zombies)\/.+\.(jpg|png)$/);
+  }
+}
+// The restored living work must use the existing curated original, not a study.
+const original = JSON.parse(fs.readFileSync('dog-pound/dogs.json', 'utf8')).dogs.find(d => d.title === 'Barack');
+for (const key of ['living', 'livingFull']) assert.ok(original.variants.some(v => v.src === pair[key]), key);
 assert.deepEqual([...html.matchAll(/data-art-state="([^"]+)"/g)].map(m => m[1]), ['living', 'zombie', 'angel']);
 const controls = ['living', 'zombie', 'angel'].map(state => ({
   dataset: {artState: state}, textContent: state[0].toUpperCase() + state.slice(1),
