@@ -41,19 +41,35 @@
   const art = document.getElementById('art-dialog-image');
   const title = document.getElementById('art-dialog-title');
   let opener = null;
+  let viewing = 0;
   document.querySelectorAll('.artwork-open').forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
       opener = button;
+      const thisView = ++viewing;
       const source = button.querySelector('img');
-      art.src = button.dataset.artFull || source.src;
+      // Show the already-loaded painting while its larger derivative decodes.
+      art.width = source.naturalWidth || source.width;
+      art.height = source.naturalHeight || source.height;
+      art.src = source.currentSrc || source.src;
       art.alt = source.alt;
       title.textContent = source.alt;
       dialog.showModal();
       document.documentElement.classList.add('art-is-open');
+      if (button.dataset.artFull) {
+        const full = new Image();
+        full.src = button.dataset.artFull;
+        try {
+          await full.decode();
+          if (dialog.open && viewing === thisView) art.src = full.src;
+        } catch (_) {
+          // Keep the loaded painting if the larger file is unavailable.
+        }
+      }
     });
   });
   dialog.querySelector('.art-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
+    viewing++;
     document.documentElement.classList.remove('art-is-open');
     art.removeAttribute('src');
     opener?.focus({preventScroll:true});
