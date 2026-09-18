@@ -73,3 +73,28 @@ article p{color:#343e3a}
 .viewing-head .eyebrow{width:190px;margin:12px auto 20px}.viewing-head h1{width:min(580px,88vw);margin:auto;max-width:none}.viewing-links [data-paint="record"]{width:143px}.viewing-links [data-paint="life"]{width:138px}.viewing-note [data-paint="visit"]{width:114px;margin:10px auto}.return [data-paint="return"]{width:139px}
 
 .paint-film{margin:36px 0 0}.paint-film video{display:block;width:100%;height:auto;aspect-ratio:2/1;background:#dfe5dc}.paint-film figcaption{display:flex;flex-direction:column;gap:4px;font:12px/1.5 Arial,Helvetica,sans-serif;color:var(--muted);margin-top:12px}.inline-letter{padding:0;border:0;background:none;font:inherit;text-decoration:underline;text-underline-offset:5px}
+
+/* The wide original keeps the former 492px desktop painting height. */
+.viewing-toolbar{max-width:1140px;margin:0 auto;display:flex;justify-content:flex-end}
+.viewing-toolbar [data-paint="close"]{width:66px}
+.dog-gallery{display:grid;grid-template-columns:50px minmax(0,1012px) 50px;gap:14px;align-items:center;width:min(1140px,100%);margin:28px auto 0}
+.dog-gallery .painting{grid-column:2;grid-row:1;width:100%;margin:0}
+.dog-gallery .painting img{aspect-ratio:2/1;object-fit:contain}
+.cycle-dog{width:50px;height:64px;padding:0;justify-content:center}
+.cycle-dog .painted{width:48px}
+.previous-dog{grid-column:1;grid-row:1}.next-dog{grid-column:3;grid-row:1}
+.adopt-dog{grid-column:2;grid-row:2;justify-self:center;display:flex;align-items:center;min-height:48px;padding:4px;text-decoration:none;transform:rotate(-2deg);transition:transform .2s}
+.adopt-dog:hover{transform:rotate(1deg)}.adopt-dog [data-paint="adopt"]{width:184px}
+.gallery-status{font-size:11px;color:#475347;min-height:18px;margin:2px auto 0}
+.viewing-links{gap:20px}.viewing-links .text-button{min-width:0}
+#close-view{width:min(1440px,calc(100vw - 28px))}
+#close-view img{max-height:calc(100svh - 120px);object-fit:contain}
+@media(max-width:700px){
+ .dog-gallery{grid-template-columns:44px minmax(0,1fr) 44px;gap:12px 4px;margin-top:25px}
+ .dog-gallery .painting{grid-column:1/-1;grid-row:1}
+ .previous-dog,.next-dog{grid-row:2}.cycle-dog{width:44px;height:48px}
+ .cycle-dog .painted{width:42px}.adopt-dog [data-paint="adopt"]{width:158px}
+ .viewing-toolbar [data-paint="close"]{width:59px}
+ .viewing-head .eyebrow{margin-top:3px}
+ .viewing-links{max-width:100%}
+}

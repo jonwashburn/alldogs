@@ -11,6 +11,8 @@
     work: ['THE WORK', 300, 68, 38, ink],
     personal: ['YOUR INVITATION', 495, 68, 38, ink],
     waitlist: ['JOIN WAITLIST', 495, 68, 38, ink],
+    adopt: ['ADOPT ME', 430, 106, 59, '#111111'],
+    close: ['CLOSE', 250, 78, 42, '#111111'],
     note: ['A NOTE FROM WUBBUSHI', 640, 68, 37, ink],
     only: ['INVITATION ONLY.', 470, 68, 35, '#5a6056'],
     journal: ['THE JOURNAL', 385, 68, 38, ink],
@@ -31,6 +33,8 @@
       leafLeft: {w: 550, h: 610, transparent: true},
       leafRight: {w: 550, h: 610, transparent: true},
       card: {w: 410, h: 370, transparent: true},
+      previous: {w: 100, h: 90, transparent: true},
+      next: {w: 100, h: 90, transparent: true},
       page: {w: 900, h: 1200}
     }[key];
   }
@@ -69,7 +73,10 @@
     };
     if (words[key]) {
       const [text, w, h, letterHeight, color] = words[key];
-      write(text, 17, h * .78, letterHeight, color, {angle: -.008, wMul: key === 'heading' || key === 'viewingTitle' ? .072 : .095});
+      write(text, 17, h * .78, letterHeight, color, {angle: -.008, wMul: key === 'adopt' || key === 'close' ? .16 : key === 'heading' || key === 'viewingTitle' ? .072 : .095});
+    } else if (key === 'previous' || key === 'next') {
+      const points = key === 'next' ? [[24,23],[65,44],[23,70]] : [[73,22],[32,45],[75,69]];
+      stick(points, '#111111', 10, {tooth: .28, press: .85, dbl: .08});
     } else if (key === 'ground') {
       // The entire sheet is a painting. Broad quiet strokes surround an open
       // cream centre, where the invitation and the words can be read.
@@ -174,5 +181,5 @@
     PK.reset();
     return receipt;
   }
-  root.InvitationPainting={spec,paint,keys:['ground','leafLeft','leafRight','card',...Object.keys(words),'page']};
+  root.InvitationPainting={spec,paint,keys:['ground','leafLeft','leafRight','card','previous','next',...Object.keys(words),'page']};
 })(typeof self==='undefined'?globalThis:self);

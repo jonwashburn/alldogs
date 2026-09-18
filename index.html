@@ -6,12 +6,13 @@
   <title>ALL DOGS · Wubbushi</title>
   <meta name="description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f3f0e8' d='M0 0h32v32H0z'/%3E%3Cpath fill='none' stroke='%233d5366' stroke-width='2' d='M5 28V14Q16-3 27 14v14M16 6v22M10 10v18M22 10v18M5 22h22'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/gate.css?v=20260918-waitlist1">
+  <link rel="stylesheet" href="/gate.css?v=20260918-wide1">
   <link rel="stylesheet" href="/dog-pound/application-email.css?v=20260917-email1">
-  <link rel="stylesheet" href="/painting/waitlist.css?v=20260918-waitlist1">
+  <link rel="stylesheet" href="/painting/waitlist.css?v=20260918-wide1">
   <script src="/dog-pound/application-email.js?v=20260917-email1" defer></script>
   <script src="/dog-pound/adoption-form.js?v=20260918-wish1" defer></script>
-  <script src="/gate.js?v=20260918-waitlist1" defer></script>
+  <script src="/home-rotation.js?v=20260918-wide1" defer></script>
+  <script src="/gate.js?v=20260918-wide1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
 <meta property="og:title" content="ALL DOGS · Wubbushi">
 <meta property="og:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
@@ -26,8 +27,8 @@
 <meta name="twitter:image:alt" content="A close view of Barack, a painted ALL DOGS dog, with the ALL DOGS wordmark.">
 <meta name="twitter:title" content="ALL DOGS · Wubbushi">
 <meta name="twitter:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
-  <link rel="stylesheet" href="/painting/painted.css?v=20260918-waitlist1">
-  <script src="/painting/page.js?v=20260918-waitlist1" defer></script>
+  <link rel="stylesheet" href="/painting/painted.css?v=20260918-wide1">
+  <script src="/painting/page.js?v=20260918-wide1" defer></script>
 </head>
 <body>
   <div class="painted painted-ground" data-paint="ground" aria-hidden="true"><img src="/painting/ground.webp" alt=""><canvas></canvas></div>
@@ -53,16 +54,23 @@
     </section>
 
     <section class="viewing" id="viewing" aria-labelledby="viewing-title" hidden>
+      <div class="viewing-toolbar"><button type="button" class="text-button" id="close-viewing" aria-label="Close and return to the gate"><span class="painted" data-paint="close"><img src="/painting/close.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Close</span></span></button></div>
       <div class="viewing-head"><p class="eyebrow"><span class="painted" data-paint="collection"><img src="/painting/collection.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">From the collection</span></span></p><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">He thinks he's your dog.</span></span></h1></div>
-      <figure class="painting">
-        <button id="enlarge" aria-label="Look closely at Barack"><img src="/collection/assets/dog-62-fb27c29277cc6593.jpg" alt="Barack, a blue-coated dog with flame wings, a small blue mask and a red tie, painted against a pale blue sky." width="1000" height="1000"></button>
-        <figcaption><span>Barack</span><span>Wubbushi</span></figcaption>
-      </figure>
+      <div class="dog-gallery" role="region" aria-label="Browse the paintings" aria-roledescription="carousel">
+        <figure class="painting" id="dog-painting" aria-busy="false">
+          <button type="button" id="enlarge" aria-label="Look closely at Barack"><img id="dog-image" src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg" alt="Barack, a blue-coated dog with flame wings, a small blue mask and a red tie, painted against a pale blue sky." width="2400" height="1200"></button>
+          <figcaption><span id="dog-name">Barack</span><span>Wubbushi</span></figcaption>
+        </figure>
+        <button type="button" class="text-button cycle-dog previous-dog" id="previous-dog" aria-label="Previous dog" aria-controls="dog-painting"><span class="painted" data-paint="previous"><img src="/painting/previous.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Previous dog</span></span></button>
+        <button type="button" class="text-button cycle-dog next-dog" id="next-dog" aria-label="Next dog" aria-controls="dog-painting"><span class="painted" data-paint="next"><img src="/painting/next.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Next dog</span></span></button>
+        <a class="adopt-dog" id="adopt-dog" href="#apply" aria-haspopup="dialog" aria-controls="adoption-dialog"><span class="painted" data-paint="adopt"><img src="/painting/adopt.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Adopt Me</span></span></a>
+      </div>
+      <p class="gallery-status" id="gallery-status" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="viewing-links"><button class="text-button" data-open="record"><span class="painted" data-paint="record"><img src="/painting/record.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The dog's record</span></span></button><button class="text-button" data-open="life"><span class="painted" data-paint="life"><img src="/painting/life.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">A life together</span></span></button></div>
       <p class="viewing-note"><a href="/viewing-room/">Open your personal invitation ↗</a><br><a href="/my-dog/"><span class="painted" data-paint="visit"><img src="/painting/visit.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Visit your dog</span></span></a></p>
       <button class="text-button return" id="return"><span class="painted" data-paint="return"><img src="/painting/return.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Back to the gate</span></span></button>
     </section>
-    <noscript><p class="noscript-note"><a href="/welcome/#apply">Join Waitlist</a>, <a href="/viewing-room/">Open your invitation</a> or <a href="/collection/assets/dog-62-fb27c29277cc6593.jpg">See the painting</a>.</p></noscript>
+    <noscript><p class="noscript-note"><a href="/welcome/#apply">Join Waitlist</a>, <a href="/viewing-room/">Open your invitation</a> or <a href="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg">See the painting</a>.</p></noscript>
   </main>
 
   <footer><span><span class="painted " data-paint="wordmark"><img src="/painting/wordmark.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS</span></span></span><p><span class="painted " data-paint="quote"><img src="/painting/quote.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">“You make the record anyway.”</span></span></p><button class="text-button" data-open="journal"><span class="painted " data-paint="journal"><img src="/painting/journal.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The journal</span></span></button></footer>
@@ -71,7 +79,7 @@
     <div class="dialog-top"><span>ALL DOGS</span><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button></div>
     <article id="reading-body"></article>
   </dialog>
-  <dialog id="close-view" aria-label="Barack, a closer look"><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button><img src="/collection/assets/dog-62-fb27c29277cc6593.jpg" width="1000" height="1000" alt="A closer view of the original Barack painting, including the dry paint, blue mask and flame wings."></dialog>
+  <dialog id="close-view" aria-label="Barack, a closer look"><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button><img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg" width="2400" height="1200" alt="A closer view of the original Barack painting, including the dry paint, blue mask and flame wings."></dialog>
 
 <dialog class="adoption-dialog" id="adoption-dialog" aria-labelledby="adoption-dialog-title">
   <div class="adoption-dialog-heading"><h2 id="adoption-dialog-title">Join the waitlist.</h2><button type="button" class="adoption-close" id="close-adoption" aria-label="Close application">×</button></div>
@@ -103,7 +111,7 @@
     <figcaption class="wrap" id="marie-film-caption"><span>Marie · paint in motion</span><span>2 minutes · 4K · original music. Full canvas, no zoom.</span></figcaption>
   </figure></template>
   <template id="copy-note"><p class="eyebrow">A note from Wubbushi</p><h2 id="reading-title">A dog for you.</h2><p>I want to make little paintings for the people who become part of my life. Something personal, as a gift from me.</p><p>ALL DOGS is a journal for me. Each dog is a chance to remember a person and the time when we got to know each other. I hope I'm still adding to it twenty years from now.</p><p>I built a paintbrush in code to make these dogs. The paint runs out as it moves, and the surface shows through. I want them to feel like the drawings someone made for you as a kid, the kind you put on the fridge.</p><p>When a dog goes home with you, your name goes on his collar. You give him a name too. That first entry stays with him as his story continues.</p><p>I hope you'll keep him. Years from now, I'd like to look through this collection and remember a friend with each dog.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p></template>
-  <template id="copy-record"><p class="eyebrow">The collar</p><h2 id="reading-title">A name tag with a memory.</h2><p>The collar records who adopted the dog and what happened to it. That history stays with the dog through every change: living, zombie, immortal or angel.</p><dl class="record"><div><dt>Original painting</dt><dd>Barack</dd></div><div><dt>Artist</dt><dd>Wubbushi</dd></div></dl><p><a href="/my-dog/">Visit your dog and its record ↗</a></p><p>A rescue adds a new entry; it never erases the infection. The dog's original artwork reference stays on record too, whatever name you choose.</p></template>
+  <template id="copy-record"><p class="eyebrow">The collar</p><h2 id="reading-title">A name tag with a memory.</h2><p>The collar records who adopted the dog and what happened to it. That history stays with the dog through every change: living, zombie, immortal or angel.</p><dl class="record"><div><dt>Original painting</dt><dd data-record-name>Barack</dd></div><div><dt>Artist</dt><dd>Wubbushi</dd></div></dl><p><a href="/my-dog/">Visit your dog and its record ↗</a></p><p>A rescue adds a new entry; it never erases the infection. The dog's original artwork reference stays on record too, whatever name you choose.</p></template>
   <template id="copy-life"><p class="eyebrow">A life together</p><h2 id="reading-title">Holding on.</h2><p>Living dogs can become angels.</p><img class="angel" src="/assets/barack-angel-blue-hour-wide-2400.jpg" alt="Barack as an angel with white wings and a fine golden halo against a blue evening ground." width="2400" height="1200"><p>If your dog lives his full natural life and goes to heaven, you win. He becomes an angel. You can keep him or trade him freely, with no guilt.</p><p>You were a good dog owner, for a good dog.</p><p>Every eligible living dog has a 1 in 1,600 chance of natural death each day (0.0625%). His lifespan and cause of death stay in the record. Natural death does not spread infection, and trading an angel does not start it.</p><h3>To sell your living dog, you have to kill it.</h3><p>Sell a living dog and it dies, coming back as a zombie. Each new zombie has a <strong>50% chance</strong> of killing someone else's dog and turning it into a zombie too. That dog gets the same chance. And so on.</p><p>You get the money. Another collector can lose the dog they loved. Your sale and your name stay on every dog it reaches.</p><p>On a living dog’s first resale, it has a 1 in 20 chance to resist and become immortal. Holding on cannot prevent infection or natural death.</p><p><a href="/adoption/">Read the collection rules ↗</a></p></template>
   <template id="copy-journal"><p class="eyebrow">The journal</p><h2 id="reading-title">You make the record anyway.</h2><p>This is a journal for me. A history of who I meet and make friends with, ideally for the rest of my life. A chance to make a little custom artwork for the people in my life, as a gift from me.</p><p>I hope I'm still adding to it twenty years from now.</p><div class="journal-entry"><span>From the artist's note</span><p>&ldquo;Years from now, I'd like to look through this collection and remember a friend with each dog.&rdquo;</p></div><p><button type="button" class="inline-letter" data-open="note">Read the artist's note ↗</button></p></template>
 </body>

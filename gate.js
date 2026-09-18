@@ -17,7 +17,7 @@ enter.addEventListener('click', () => {
   arrival.classList.add('opening');
   openingTimer = window.setTimeout(showDog, reducedMotion.matches ? 0 : 1100);
 });
-document.getElementById('return').addEventListener('click', () => {
+function returnToGate() {
   window.clearTimeout(openingTimer);
   viewing.hidden = true;
   arrival.hidden = false;
@@ -25,12 +25,76 @@ document.getElementById('return').addEventListener('click', () => {
   enter.disabled = false;
   enter.focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: 'instant' });
+}
+document.getElementById('return').addEventListener('click', returnToGate);
+document.getElementById('close-viewing').addEventListener('click', returnToGate);
+
+// These are the existing public wide paintings, in the artist's selection.
+// Leave a painting on the wall until the next one has finished loading.
+const dogImage = document.getElementById('dog-image');
+const dogName = document.getElementById('dog-name');
+const dogPainting = document.getElementById('dog-painting');
+const galleryStatus = document.getElementById('gallery-status');
+const enlarge = document.getElementById('enlarge');
+const closeView = document.getElementById('close-view');
+const dogs = [{title: 'Barack', src: dogImage.src, alt: dogImage.alt},
+  ...(window.AllDogsRotation?.dogs || []).filter(dog => !dog.cardboard)];
+let currentDog = 0, requestedDog = 0, imageRequest = 0;
+function describeDog(dog) {
+  return dog.alt || dog.title + ', an original wide dog painting by Wubbushi.';
+}
+async function changeDog(direction) {
+  requestedDog = (requestedDog + direction + dogs.length) % dogs.length;
+  const index = requestedDog;
+  const dog = dogs[index];
+  const request = ++imageRequest;
+  dogPainting.setAttribute('aria-busy', 'true');
+  galleryStatus.textContent = 'Meeting ' + dog.title + '…';
+  let timeout;
+  try {
+    const next = new Image();
+    next.src = dog.src;
+    await Promise.race([next.decode(), new Promise((_, reject) => {
+      timeout = setTimeout(() => reject(new Error('Painting timed out')), 15000);
+    })]);
+    if (request !== imageRequest) return;
+    currentDog = index;
+    dogImage.src = dog.src;
+    dogImage.alt = describeDog(dog);
+    dogImage.width = next.naturalWidth;
+    dogImage.height = next.naturalHeight;
+    dogName.textContent = dog.title;
+    enlarge.setAttribute('aria-label', 'Look closely at ' + dog.title);
+    galleryStatus.textContent = dog.title + ' · ' + (index + 1) + ' of ' + dogs.length;
+  } catch (_) {
+    if (request === imageRequest) galleryStatus.textContent = 'That painting couldn’t load. Try another dog.';
+  } finally {
+    clearTimeout(timeout);
+    if (request === imageRequest) dogPainting.setAttribute('aria-busy', 'false');
+  }
+}
+document.getElementById('previous-dog').addEventListener('click', () => changeDog(-1));
+document.getElementById('next-dog').addEventListener('click', () => changeDog(1));
+document.getElementById('adopt-dog').addEventListener('click', event => {
+  event.preventDefault();
+  document.querySelector('[data-open-adoption]').click();
+});
+document.addEventListener('keydown', event => {
+  if (viewing.hidden || document.querySelector('dialog[open]') ||
+      event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+      event.target.closest('input, textarea, select, [contenteditable]')) return;
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    changeDog(event.key === 'ArrowLeft' ? -1 : 1);
+  } else if (event.key === 'Escape') returnToGate();
 });
 const reading = document.getElementById('reading');
 function openLetter(name) {
   const copy = document.getElementById('copy-' + name);
   if (!copy) return;
   document.getElementById('reading-body').replaceChildren(copy.content.cloneNode(true));
+  const recordName = reading.querySelector('[data-record-name]');
+  if (recordName) recordName.textContent = dogs[currentDog].title;
   if (!reading.open) reading.showModal();
   reading.scrollTop = 0;
   document.body.classList.add('modal-open');
@@ -39,8 +103,15 @@ document.addEventListener('click', event => {
   const button = event.target.closest('[data-open]');
   if (button) openLetter(button.dataset.open);
 });
-document.getElementById('enlarge').addEventListener('click', () => {
-  document.getElementById('close-view').showModal();
+enlarge.addEventListener('click', () => {
+  const dog = dogs[currentDog];
+  const image = closeView.querySelector('img');
+  image.src = dog.src;
+  image.alt = describeDog(dog);
+  image.width = dogImage.width;
+  image.height = dogImage.height;
+  closeView.setAttribute('aria-label', dog.title + ', a closer look');
+  closeView.showModal();
   document.body.classList.add('modal-open');
 });
 document.querySelectorAll('#reading, #close-view').forEach(dialog => {

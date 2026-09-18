@@ -13,6 +13,10 @@ for (const route of ['/viewing-room/', '/my-dog/', '/adoption/']) {
 for (const match of html.matchAll(/(?:src|href)="(\/(?:assets|collection)\/[^"?]+)"/g)) assert.ok(fs.existsSync('.'+match[1]), match[1]);
 assert.ok(html.includes('id="viewing" aria-labelledby="viewing-title" hidden'));
 assert.ok(html.includes('aria-controls="viewing"'));
+for (const id of ['dog-image', 'dog-name', 'close-viewing', 'previous-dog', 'next-dog', 'adopt-dog', 'gallery-status']) assert.ok(html.includes('id="'+id+'"'), id);
+assert.ok(html.includes('hero_faithful_62_2400.jpg') && html.includes('width="2400" height="1200"'));
+assert.ok(html.includes('data-record-name') && script.includes('recordName.textContent = dogs[currentDog].title'));
+assert.ok(html.includes('/home-rotation.js?'), 'Use the existing curated public paintings');
 assert.ok(html.includes('rel="canonical" href="https://alldogs.wtf/"'));
 assert.ok(!/fetch\(|localStorage|sessionStorage|\.innerHTML\s*=/.test(script), 'Entrance must not fetch or store private data');
 assert.ok(html.includes('data-open-adoption'));
