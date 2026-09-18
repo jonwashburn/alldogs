@@ -19,7 +19,7 @@ for (const key of ['living', 'livingFull', 'zombie', 'zombieFull', 'angel', 'ang
   }
 }
 // The restored living work must use the existing curated original, not a study.
-const original = JSON.parse(fs.readFileSync('dog-pound/dogs.json', 'utf8')).dogs.find(d => d.title === 'Barack');
+const original = JSON.parse(fs.readFileSync('dog-pound/dogs.json', 'utf8')).items.find(d => d.title === 'Barack');
 for (const key of ['living', 'livingFull']) assert.ok(original.variants.some(v => v.src === pair[key]), key);
 assert.deepEqual([...html.matchAll(/data-art-state="([^"]+)"/g)].map(m => m[1]), ['living', 'zombie', 'angel']);
 const controls = ['living', 'zombie', 'angel'].map(state => ({
