@@ -16,7 +16,7 @@ function fixture(overrides={},options={}){
 }
 (async()=>{
   let tests=0;
-  let h=fixture();await h.ready;assert.match(h.host.text(),/Pay Wubbushi the value you believe your dog is worth/);assert.match(h.host.text(),/Card payments are being connected/);assert.equal(h.host.all('form').length,0);tests++;
+  let h=fixture();await h.ready;assert.match(h.host.text(),/The dog is yours\. The price is your call/);assert.match(h.host.text(),/The NFT is already in your wallet/);assert.match(h.host.text(),/This payment doesn’t unlock or deliver it/);assert.match(h.host.text(),/what to pay Wubbushi for the art/);assert.match(h.host.text(),/seven days from adoption/);assert.match(h.host.text(),/Card payments are being connected/);assert.equal(h.host.all('form').length,0);tests++;
   h=fixture({cardReady:true,cardOpen:true});await h.ready;let form=h.host.all('form')[0];form.all('input')[0].value='12.34';await form.events.submit({preventDefault(){}});assert.equal(h.calls[1].body.amount,'12.34');assert.equal(h.calls[1].body.requestId,'fixture-request-12345678');assert.equal(h.redirects.length,1);assert.equal(h.host.all('input').length,1);tests++;
   h=fixture({cardReady:true,cardOpen:true},{url:'https://evil.invalid/'});await h.ready;form=h.host.all('form')[0];form.all('input')[0].value='12';await form.events.submit({preventDefault(){}});assert.equal(h.redirects.length,0);assert.match(h.host.text(),/could not be verified/);tests++;
   h=fixture({cardReady:true,cardOpen:true},{error:'A network timeout. Refresh before retrying.'});await h.ready;form=h.host.all('form')[0];form.all('input')[0].value='12';await form.events.submit({preventDefault(){}});assert.equal(form.all('button')[0].disabled,false);assert.match(h.host.text(),/network timeout/);tests++;
