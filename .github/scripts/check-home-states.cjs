@@ -7,7 +7,7 @@ const data = html.match(/<script type="application\/json" id="approved-pairs">(.
 const pair = JSON.parse(data)[0];
 assert.equal(pair.title, 'Barack');
 assert.ok(pair.living && pair.zombie && pair.angel && pair.angelFull && pair.livingFull);
-for (const key of ['angel', 'angelFull']) assert.ok(fs.existsSync('.' + pair[key]));
+for (const key of ['living', 'livingFull', 'angel', 'angelFull']) assert.ok(fs.existsSync('.' + pair[key]));
 assert.deepEqual([...html.matchAll(/data-art-state="([^"]+)"/g)].map(m => m[1]), ['living', 'zombie', 'angel']);
 const controls = ['living', 'zombie', 'angel'].map(state => ({
   dataset: {artState: state}, textContent: state[0].toUpperCase() + state.slice(1),

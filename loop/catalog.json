@@ -3708,6 +3708,36 @@
       "batch": "character_glow_flight_20260915",
       "slug": "rambo",
       "image": "/collection/assets/candidate-893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560.png"
+    },
+    {
+      "id": "candidate-home_barack_tobacco_v1_20260918-barack-cb82373aee0d8073",
+      "title": "Barack \u2014 Tobacco Room",
+      "kind": "candidate",
+      "imageHash": "cb82373aee0d80730373549b6d9e3640787a26263c254e6cb1e936c64d9061e4",
+      "description": "A native living Barack study for the cream/oxblood homepage. Ochre patched cotton and low faded clay floor; brown face, cobalt band and navy suit retained. No wings, political poster, flames or red foreground obstruction. Approved physical brush and oil stick unchanged.",
+      "batch": "home_barack_tobacco_v1_20260918",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-cb82373aee0d80730373549b6d9e3640787a26263c254e6cb1e936c64d9061e4.png"
+    },
+    {
+      "id": "candidate-home_white_cardboard_v1_20260918-barack-1dc38cf7512e1c88",
+      "title": "Barack \u2014 Open Sky",
+      "kind": "candidate",
+      "imageHash": "1dc38cf7512e1c88c31caccf3ce50e83bf56ef5e44fac1cd5b591359a3382709",
+      "description": "Native Barack with the sky and poster removed. Original navy/red floor gestures retained on white, for a continuous transition from the white page. Original native painter, physical brush and oil stick preserved.",
+      "batch": "home_white_cardboard_v1_20260918",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-1dc38cf7512e1c88c31caccf3ce50e83bf56ef5e44fac1cd5b591359a3382709.png"
+    },
+    {
+      "id": "candidate-home_white_cardboard_v1_20260918-hulk-cd8aef8d441304eb",
+      "title": "Hulk \u2014 Cardboard",
+      "kind": "candidate",
+      "imageHash": "cd8aef8d441304eb905c0fffa9ce64906a047f21a35a5f83b1fdee14b90a142b",
+      "description": "Native Hulk on actual kraft cardboard, retaining the yellow bandana, moustache and torn shirt. Presented as a loose painted object against white; no new accessories or substituted brush.",
+      "batch": "home_white_cardboard_v1_20260918",
+      "slug": "hulk",
+      "image": "/collection/assets/candidate-cd8aef8d441304eb905c0fffa9ce64906a047f21a35a5f83b1fdee14b90a142b.png"
     }
   ],
   "references": [

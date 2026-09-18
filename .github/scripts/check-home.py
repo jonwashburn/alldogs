@@ -55,9 +55,15 @@ home = (ROOT / 'index.html').read_text()
 guide = (ROOT / 'adoption/index.html').read_text()
 about = (ROOT / 'about/index.html').read_text()
 script = (ROOT / 'home.js').read_text()
-assert [attrs['data-art-name'] for tag, attrs in pages['index.html'].tags if 'data-art-name' in attrs] == ['Barack', 'Amy', 'Afterburn']
-assert sum('data-rotating-painting' in attrs for _, attrs in pages['index.html'].tags) == 2
-assert sum('data-next-painting' in attrs for _, attrs in pages['index.html'].tags) == 2
+assert [attrs['data-art-name'] for tag, attrs in pages['index.html'].tags if 'data-art-name' in attrs] == ['Barack', 'Hulk', 'Leeloo']
+assert not any('data-rotating-painting' in attrs or 'data-next-painting' in attrs for _, attrs in pages['index.html'].tags)
+assert 'AllDogsRotation' not in script
+assert 'home-rotation.js' not in home
+for tag, attrs in pages['index.html'].tags:
+    for field in ('src', 'data-art-full'):
+        url = attrs.get(field, '')
+        if url.startswith('/assets/'):
+            assert (ROOT / url.lstrip('/')).is_file(), url
 assert sum(tag in ('h1', 'h2', 'h3') for tag, _ in pages['index.html'].tags) == 5  # Main three + application heading + receipt heading.
 assert not any(tag == 'video' for tag, _ in pages['index.html'].tags)
 assert 'Math.random' not in script and 'fetch(' not in script and 'setInterval' not in script

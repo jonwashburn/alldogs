@@ -6,10 +6,7 @@
     const followOldLink = () => { const target = moved[location.hash]; if (target) location.replace(target); };
     followOldLink();
     window.addEventListener('hashchange', followOldLink);
-    // Vary the two lower paintings per visit, never the opening Barack.
-    let storage;
-    try { storage = window.sessionStorage; } catch (_) {}
-    window.AllDogsRotation?.mount(document, storage);
+    // The homepage is a fixed three-work hang, chosen for the adjoining colours.
   }
   const pairData = document.getElementById('approved-pairs');
   const pairs = pairData ? JSON.parse(pairData.textContent) : [];
