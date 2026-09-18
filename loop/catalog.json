@@ -3738,6 +3738,26 @@
       "batch": "home_white_cardboard_v1_20260918",
       "slug": "hulk",
       "image": "/collection/assets/candidate-cd8aef8d441304eb905c0fffa9ce64906a047f21a35a5f83b1fdee14b90a142b.png"
+    },
+    {
+      "id": "candidate-barack_white_angel_v1_20260918-barack-60dfbde59ef51e3b",
+      "title": "Barack \u2014 Angel, White Canvas",
+      "kind": "candidate",
+      "imageHash": "60dfbde59ef51e3be6a1e371c208b15245363dbd835075dad258f1fa11ea7aa2",
+      "description": "Native Barack62 brown face, cobalt eye band and navy suit, with a new unequal ivory wing pair, broken gold halo and single drifting feather over violet-blue patched cotton. No political text or scene; no prior Vincent art reused.",
+      "batch": "barack_white_angel_v1_20260918",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-60dfbde59ef51e3be6a1e371c208b15245363dbd835075dad258f1fa11ea7aa2.png"
+    },
+    {
+      "id": "candidate-barack_white_zombie_v1_20260918-barack-07e7d2418a5812f3",
+      "title": "Barack \u2014 Split Jaw, Open Sky",
+      "kind": "candidate",
+      "imageHash": "07e7d2418a5812f3e64e79f32f4ddef8b5620e39e099e1a149dc1a255fb726bf",
+      "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live barack dog.",
+      "batch": "barack_white_zombie_v1_20260918",
+      "slug": "barack",
+      "image": "/collection/assets/candidate-07e7d2418a5812f3e64e79f32f4ddef8b5620e39e099e1a149dc1a255fb726bf.png"
     }
   ],
   "references": [
