@@ -33,6 +33,8 @@ jobs:
           node --check dog-pound/application/application.js
           node --check account/account-api.js
           node --check account/account.js
+          node --check account/payments.js
+          node .github/scripts/check-payments.cjs
           node --check dog-pound/review/viewings.js
           node .github/scripts/check-vouch.cjs
           node .github/scripts/check-account.cjs

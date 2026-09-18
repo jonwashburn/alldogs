@@ -10,7 +10,7 @@
     const timer = setTimeout(() => controller.abort(), 15000);
     $('value-list').replaceChildren(); $('value-empty').hidden = true;
     $('value-error').hidden = true; $('value-retry').hidden = true; $('value-status').textContent = 'Loading the register…';
-    $('value-explanation').textContent = kind === 'initial' ? 'What adopters paid during their first seven days. Confirmed payments to the artist are added together for each dog.' : 'Each dog’s highest confirmed secondary sale. Gifts, listings and offers do not appear here.';
+    $('value-explanation').textContent = kind === 'initial' ? 'The amounts adopters paid Wubbushi in the seven days after adoption, highest first. Every confirmed payment adds to the dog’s value.' : 'Each dog’s highest confirmed secondary sale. Gifts, listings and offers do not appear here.';
     try {
       const response = await fetch('https://api.alldogs.wtf/collection-api/valuations?kind=' + kind + '&currency=' + currency, {credentials: 'omit', cache: 'no-store', signal: controller.signal});
       if (!response.ok) throw Error('The value register is temporarily unavailable. Please try again.');
@@ -24,9 +24,9 @@
         const row = document.createElement('article'); row.className = 'value-row';
         row.append(text('span', '#' + dog.rank));
         const art = items.find(item => item.id === dog.dogId);
-        const small = art?.variants?.find(item => item.width >= 600) || art?.variants?.[0];
+        const small = art?.original ? {src:art.original} : art?.variants?.find(item => item.width >= 600) || art?.variants?.[0];
         if (small && /^(https:\/\/|\/(?!\/))/.test(small.src)) {
-          const img = document.createElement('img'); img.src = small.src; img.alt = dog.dogName + ', original painting'; img.loading = 'lazy'; img.width = 180; img.height = 110; row.append(img);
+          const img = document.createElement('img'); img.src = small.src; img.alt = dog.dogName + ', original painting'; img.loading = 'lazy'; img.width = 180; img.height = 180; row.append(img);
         } else row.append(text('span', 'ALL DOGS'));
         const detail = document.createElement('div'); detail.className = 'value-detail';
         detail.append(text('h2', dog.dogName), text('p', dog.dogStatus + ' · ' + new Date(dog.paidAt * 1000).toLocaleDateString()));

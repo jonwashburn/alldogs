@@ -53,6 +53,7 @@
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Enter your private viewing ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
     const c=card(dog.dogName);if(dog.painting){const img=node('img');img.src=artSrc(dog.painting);img.alt=dog.dogName+', '+dog.dogStatus;img.className='account-dog';c.append(img);}
     c.append(node('p',dog.dogStatus,'account-status'),node('p','Adopted '+date(dog.adoptedAt)),node('p','First adopter: @'+dog.handle),node('p',dog.vouchedBy?'Vouched for by @'+dog.vouchedBy:'Founding adoption'),node('p',dog.soldAt?'Sale recorded '+date(dog.soldAt):'No sale recorded.'),node('p','These details come from the confirmed adoption register, maintained by Wubbushi.','account-note'));
+    if(window.AllDogsPayments){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
     vouchesCard();peopleCard();
   }
   async function waitlist() {
