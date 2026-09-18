@@ -1,4 +1,46 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>The private viewing · ALL DOGS</title><link rel="canonical" href="https://alldogs.wtf/viewing-room/"><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Shantell+Sans:wght@500;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dog-pound/pound.css?v=20260917-notice3"><link rel="stylesheet" href="/account/account.css?v=20260917-club1"><script src="/account/account-api.js?v=20260917-club1" defer></script><script src="/account/account.js?v=20260918-copy1" defer></script></head>
-<body data-account-page="viewing-room"><header class="mast"><a class="brand" href="/" aria-label="ALL DOGS home"><img src="/assets/all-dogs-wordmark.svg" width="177" height="32" alt="ALL DOGS"></a><a href="/">ALL DOGS ↗</a></header><div class="wrap"><nav class="account-nav" aria-label="Your ALL DOGS account"><a href="/lounge/" >Lounge</a><a href="/my-dog/" >My dog</a><a href="/waitlist/" >Waitlist</a><a href="/viewing-room/" aria-current="page">Private viewing</a></nav></div>
-<main class="wrap account-main"><p class="eyebrow">The private viewing</p><h1>A few dogs, chosen for you.</h1><p class="intro">Three paintings. A personal invitation. Take your time.</p><p id="account-message" class="account-message" role="status" aria-live="polite">Checking your account…</p><section id="account-gate" class="account-gate" hidden><h2 id="gate-title">Make yourself at home.</h2><p id="gate-copy"></p><a id="account-login" class="button primary" hidden>Sign in with X</a><p class="account-note">No wallet connection. Signing in cannot move your artwork or spend your money.</p></section><div id="account-content"></div><noscript><p>Enable JavaScript to use your account. You can still <a href="/">read about ALL DOGS</a>.</p></noscript></main><footer class="wrap account-footer"><a href="/dog-pound/owners/">The owners</a><a href="/most-valuable/">Most valuable dogs</a><a href="/#apply">Apply to adopt</a><button class="text-link" id="account-logout" type="button" hidden>Sign out</button></footer><dialog id="painting-lightbox" class="account-lightbox" aria-label="A closer look at your painting"><button type="button" id="close-painting" aria-label="Close painting">×</button><img id="large-painting" alt=""></dialog></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+  <title>In the garden · ALL DOGS</title><link rel="canonical" href="https://alldogs.wtf/viewing-room/">
+  <link rel="stylesheet" href="/gate.css?v=20260918-wide1">
+  <link rel="stylesheet" href="/painting/painted.css?v=20260918-wide1">
+  <link rel="stylesheet" href="/viewing-room/garden/garden.css?v=20260918-garden1">
+  <script src="/account/account-api.js?v=20260917-club1" defer></script>
+  <script src="/viewing-room/garden/garden.js?v=20260918-garden1" defer></script>
+  <script src="/account/account.js?v=20260918-garden1" defer></script>
+</head>
+<body data-account-page="viewing-room" data-garden-state="waiting">
+  <header class="garden-mast">
+    <a class="wordmark" href="/" aria-label="ALL DOGS home"><img src="/painting/wordmark.webp" alt="ALL DOGS" width="436" height="92"></a>
+    <a class="garden-exit" href="/"><img src="/painting/return.webp" alt="Back to the gate" width="510" height="61"></a>
+  </header>
+  <main class="garden-main">
+    <div class="garden-heading"><p class="garden-eyebrow">A private invitation from Wubbushi</p><h1><img src="/viewing-room/garden/gardenTitle.webp" width="1150" height="140" alt="Welcome to my garden."></h1></div>
+    <div class="garden-stage" id="garden-stage" role="region" aria-label="Wubbushi’s garden">
+      <div class="garden-layer garden-ground" data-garden-paint="ground" aria-hidden="true"><img src="/viewing-room/garden/ground.webp" width="1600" height="1000" alt=""><canvas></canvas></div>
+      <div class="garden-welcome" id="garden-welcome"><p><img src="/viewing-room/garden/gardenWaiting.webp" width="780" height="100" alt="A place for your dog."></p><a href="#account-gate">Open your invitation ↓</a></div>
+      <button class="garden-dog" id="garden-dog" type="button" hidden aria-label="See your original painting"><img id="garden-dog-image" alt=""></button>
+      <div class="garden-layer garden-foreground" data-garden-paint="foreground" aria-hidden="true"><img src="/viewing-room/garden/foreground.webp" width="1600" height="1000" alt=""><canvas></canvas></div>
+    </div>
+    <div class="garden-letter">
+      <p id="account-message" class="account-message" role="status" aria-live="polite">Opening your invitation…</p>
+      <section id="account-gate" class="account-gate" hidden aria-labelledby="gate-title">
+        <p class="garden-eyebrow"><img class="invitation-word" src="/viewing-room/garden/gardenInvitation.webp" width="570" height="86" alt="Your invitation"></p>
+        <h2 id="gate-title">Make yourself at home.</h2><p id="gate-copy"></p>
+        <a id="account-login" class="garden-login" hidden>Sign in with X ↗</a>
+        <p class="account-note">No wallet connection. Signing in cannot move your artwork or spend your money.</p>
+      </section>
+      <div id="account-content"></div>
+      <noscript><p>Turn on JavaScript to open your personal invitation. <a href="/">Return to the gate.</a></p></noscript>
+    </div>
+  </main>
+  <footer class="garden-footer">
+    <nav aria-label="Your ALL DOGS account"><a href="/lounge/">Your account</a><a href="/my-dog/">My dog</a><a href="/dog-pound/">My wishlist</a><a href="/waitlist/">The waitlist</a></nav>
+    <button class="text-button" id="account-logout" type="button" hidden>Sign out</button>
+    <p><img src="/painting/signature.webp" width="390" height="90" alt="Wubbushi"></p>
+  </footer>
+  <dialog id="painting-lightbox" class="garden-lightbox" aria-label="Your original painting"><button type="button" id="close-painting" class="text-button" aria-label="Close painting">Close ×</button><img id="large-painting" alt=""><p>The original painting.</p></dialog>
+</body>
+</html>

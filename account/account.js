@@ -67,6 +67,7 @@
     if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, three hand-picked dogs will be waiting here. After applying, you can make or revisit your wishlist in the Pound. Keep your private receipt handy.'),link('My wishlist ↗','/dog-pound/'));return;}
     const data=await api.request('club/room');
     if(data.dogs.length!==3)throw Error('Your viewing needs a little attention from Wubbushi. Your choice has not changed.');
+    if(window.AllDogsGarden)return window.AllDogsGarden.mount(content,data,change);
     if(data.note)content.append(node('p',data.note,'intro account-message'));
     let index=Math.max(0,data.dogs.findIndex(d=>d.id===data.selectedDog));
     const stage=node('div',undefined,'room-stage'),picture=button('',()=>{const d=data.dogs[index];$('large-painting').src=artSrc(d);$('large-painting').alt=d.title;$('painting-lightbox').showModal();},'room-picture'),img=node('img');picture.setAttribute('aria-label','Take a closer look at this painting');picture.append(img);stage.append(picture);content.append(stage);
@@ -76,12 +77,14 @@
     form.addEventListener('submit',event=>{event.preventDefault();change('choose',{dogId:data.dogs[index].id,name:name.value.trim()},'Your choice is saved. The artwork has not been minted or transferred.');});show(index);
   }
   async function loadContent() {
+    if(window.AllDogsGarden)window.AllDogsGarden.clear();
     content.replaceChildren();
     account=identity.signedIn?await api.request('club/account'):null;
     if(page==='waitlist')await waitlist();
     else if(identity.signedIn){if(page==='lounge')lounge();if(page==='my-dog')myDog();if(page==='viewing-room')await room();}
   }
   async function start() {
+    if(window.AllDogsGarden){window.AllDogsGarden.clear();content.replaceChildren();}
     try {
       identity=await api.session();
       $('account-gate').hidden=identity.signedIn;$('account-logout').hidden=!identity.signedIn;

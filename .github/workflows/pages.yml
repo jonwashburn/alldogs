@@ -44,6 +44,10 @@ jobs:
           node --check most-valuable/values.js
           node --check dog-pound/application/application.js
           node --check account/account-api.js
+          node --check viewing-room/garden/garden.js
+          node --check viewing-room/garden/scene.js
+          node --check viewing-room/garden/worker.js
+          node .github/scripts/check-garden.cjs
           node --check account/account.js
           node --check account/payments.js
           node .github/scripts/check-payments.cjs
