@@ -70,6 +70,12 @@ assert [attrs['data-art-state'] for attrs in state_links] == ['living', 'zombie'
 assert [attrs['aria-pressed'] for attrs in state_links] == ['true', 'false', 'false']
 assert all(attrs['aria-controls'] == 'barack-dog' for attrs in state_links)
 assert 'application-terms' in pages['index.html'].ids
+adoption_note = re.search(r'<section class="adoption-note".*?</section>', home).group(0)
+for phrase in ('A dog of your own.', 'Join the waitlist and then set your wishlist', 'All Dogs is limited to one direct adoption per verified person, ever.', 'Invitation only.'):
+    assert phrase in adoption_note, phrase
+assert adoption_note.count('<p ') == 2
+assert 'data-open-adoption' in adoption_note and 'aria-controls="adoption-dialog"' in adoption_note
+assert 'seven days' not in adoption_note and 'What would you' not in adoption_note
 for phrase in ('seven days', 'One direct adoption per person, ever.', 'does not reserve a dog'):
     assert phrase in home, phrase
 for path in ('index.html', 'adoption/index.html', 'dog-pound/application/index.html', 'dog-pound/application/application.js', 'account/account.js', 'account/payments.js'):
