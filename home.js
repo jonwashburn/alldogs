@@ -6,7 +6,10 @@
     const followOldLink = () => { const target = moved[location.hash]; if (target) location.replace(target); };
     followOldLink();
     window.addEventListener('hashchange', followOldLink);
-    // The homepage is a fixed three-work hang, chosen for the adjoining colours.
+    // Barack stays first; the other two paintings use the saved homepage selection.
+    let storage;
+    try { storage = window.sessionStorage; } catch (_) {}
+    window.AllDogsRotation?.mount(document, storage);
   }
   const pairData = document.getElementById('approved-pairs');
   const pairs = pairData ? JSON.parse(pairData.textContent) : [];

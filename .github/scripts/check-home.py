@@ -56,9 +56,10 @@ guide = (ROOT / 'adoption/index.html').read_text()
 about = (ROOT / 'about/index.html').read_text()
 script = (ROOT / 'home.js').read_text()
 assert [attrs['data-art-name'] for tag, attrs in pages['index.html'].tags if 'data-art-name' in attrs] == ['Barack', 'Hulk', 'Leeloo']
-assert not any('data-rotating-painting' in attrs or 'data-next-painting' in attrs for _, attrs in pages['index.html'].tags)
-assert 'AllDogsRotation' not in script
-assert 'home-rotation.js' not in home
+assert sum('data-rotating-painting' in attrs for _, attrs in pages['index.html'].tags) == 2
+assert sum('data-next-painting' in attrs and 'hidden' in attrs for _, attrs in pages['index.html'].tags) == 2
+assert 'AllDogsRotation?.mount(document, storage)' in script
+assert home.index('home-rotation.js') < home.index('/home.js')
 for tag, attrs in pages['index.html'].tags:
     for field in ('src', 'data-art-full'):
         url = attrs.get(field, '')
@@ -69,7 +70,9 @@ assert not any(tag == 'video' for tag, _ in pages['index.html'].tags)
 assert 'Math.random' not in script and 'fetch(' not in script and 'setInterval' not in script
 assert 'setInterval' not in (ROOT / 'home-rotation.js').read_text()
 assert 'zombie apocalypse' in home and 'you have to kill it' in home
-assert '1 in 20' in home and '50%' in home and 'every dog it reaches' in home
+assert '1 in 20' not in home and '50%' in home and 'every dog it reaches' in home
+assert 'You adopt a dog.' not in home and 'sees a profit.' not in home
+assert 'Holding on cannot prevent infection or natural death.' not in home
 assert 'Preview only. No record is changed.' in home
 state_links = [attrs for tag, attrs in pages['index.html'].tags if 'data-art-state' in attrs]
 assert [attrs['data-art-state'] for attrs in state_links] == ['living', 'zombie', 'angel']
@@ -98,4 +101,4 @@ for fragment in ('game', 'fates', 'why', 'medium'):
     assert "'#" + fragment + "'" in script
 for field in ('application-form', 'wallet', 'handle', 'website', 'submit-application', 'form-status', 'receipt', 'receipt-code', 'application-email-form', 'notification-email', 'art-updates', 'share-application', 'copy-receipt'):
     assert field in pages['index.html'].ids, field
-print('Art-first release checks passed: HTML nesting, unique IDs, references, three-work hang, relocated rules, legacy anchors, modal and preserved form hooks.')
+print('Art-first release checks passed: HTML nesting, unique IDs, references, fixed hero and two curated rotating paintings, relocated rules, legacy anchors, modal and preserved form hooks.')
