@@ -1,0 +1,147 @@
+{
+  "paintkitSha256": "555d6d735595c30921f1c283874135d361c62dfa38e1f48a4e9c1d9957d60a87",
+  "physicalBrushSha256": "07b0e6baa80c5a25b0c3e11d2d7cd79727862b00a494f4783567f9e8ae27d50b",
+  "firstFrames": "Rendered from scene.js with the same engine and seed as the browser worker. WebP transport; uncompressed reference pixels retained in artist archive.",
+  "files": [
+    {
+      "path": "paintkit.js",
+      "bytes": 1339189,
+      "sha256": "555d6d735595c30921f1c283874135d361c62dfa38e1f48a4e9c1d9957d60a87"
+    },
+    {
+      "path": "hand.js",
+      "bytes": 3782,
+      "sha256": "cfc8ee0d5a933b08d22657fef70aa3a362b84d9c7852556bec05dfad51d33218"
+    },
+    {
+      "path": "scene.js",
+      "bytes": 9819,
+      "sha256": "f6968bed06c498c140b7b9cec46a9eaaaa75516a6b8d2e206d1e134119a60ba6"
+    },
+    {
+      "path": "worker.js",
+      "bytes": 528,
+      "sha256": "0e45212ab354a91957845991f6b9a004634e79f9c3d29818d2cf68c7935811d1"
+    },
+    {
+      "path": "page.js",
+      "bytes": 1588,
+      "sha256": "af5e7fd1c8942adc9cd4f677fa9b4f8fc6cba4e705b1df6a5c3959a0db364204"
+    },
+    {
+      "path": "painted.css",
+      "bytes": 5356,
+      "sha256": "6407aa6b69d8469116091dd9dd88721089897ed14e3783925714674e9c818cd0"
+    },
+    {
+      "path": "quote.webp",
+      "bytes": 11460,
+      "sha256": "1e3e3e4b14b81990801e8c9dda77a63d365d793ee4bbac72f50302d440a72048"
+    },
+    {
+      "path": "journal.webp",
+      "bytes": 4816,
+      "sha256": "b885d4c6794284aa10c38969fdd390dbd9ed6e4e9038ff77639c701a23f1d06c"
+    },
+    {
+      "path": "visit.webp",
+      "bytes": 5386,
+      "sha256": "8f03d84e5fcaf8e8c1adb8b49dcdfd6d85516d3a5d0b69b47709a3c059602969"
+    },
+    {
+      "path": "invitation.webp",
+      "bytes": 6960,
+      "sha256": "514e552d5052f067ab98eb697af2883dc6db62ff09a58dfaa771892f22eaf508"
+    },
+    {
+      "path": "leafRight.webp",
+      "bytes": 57892,
+      "sha256": "cdb55c9d97ea541b93d2411adda3cf5aba592bbb4b2772bfcf3a3ba4897ad4ba"
+    },
+    {
+      "path": "artist.webp",
+      "bytes": 7534,
+      "sha256": "b74a5072f4118cb73fb3667d6610d0a3d528b3faa9dfac803a2aa1087689f771"
+    },
+    {
+      "path": "card.webp",
+      "bytes": 18370,
+      "sha256": "967d90f4090614d46eeaf8558113c4aba9a51c22c5891199d591edecefe82c41"
+    },
+    {
+      "path": "record.webp",
+      "bytes": 6648,
+      "sha256": "7cf48940f03222f8c019958c6152da692b6740837f353b789d59481603fd2c0b"
+    },
+    {
+      "path": "return.webp",
+      "bytes": 6168,
+      "sha256": "c3842d38e71b187b6aff7b93c98e3b677558a6ed96a8de2b803e8acb65180649"
+    },
+    {
+      "path": "note.webp",
+      "bytes": 8348,
+      "sha256": "cc12844ec577e1290e23a235fb1923637531e08e7c38f8aaa2f85fd8cde0a5ed"
+    },
+    {
+      "path": "life.webp",
+      "bytes": 5818,
+      "sha256": "652005fa9f2837eb3170994ff7167208db1a9c2bf97dac7eb7b96a719ffad2d0"
+    },
+    {
+      "path": "leafLeft.webp",
+      "bytes": 56378,
+      "sha256": "0f61ec82f243590557a056d5f9c43553be85a227cb4b45230d4bf09e202c1411"
+    },
+    {
+      "path": "collection.webp",
+      "bytes": 6382,
+      "sha256": "611a54fbe19c0803805ef024b7ab477cf12cc72ffe9f57c36fe30058e9d20aba"
+    },
+    {
+      "path": "heading.webp",
+      "bytes": 18232,
+      "sha256": "13e76c8bf2da692b04a3737bba7af2d0a92935940799343698cc1e81d4925f19"
+    },
+    {
+      "path": "personal.webp",
+      "bytes": 6170,
+      "sha256": "6a0e7cbc9cce7fa855fe5560543aaf54578ada7dcda15ab8f88c0ffed234f45d"
+    },
+    {
+      "path": "wordmark.webp",
+      "bytes": 7408,
+      "sha256": "08d89147dc2ebb51243e33426d3bbbeaf9600597d35f27569da6ca4ae41a9c87"
+    },
+    {
+      "path": "signature.webp",
+      "bytes": 7912,
+      "sha256": "91fdc39e92b1cbb3b6929dddf0682d4a94b75c098ee296228d18752f282694d3"
+    },
+    {
+      "path": "work.webp",
+      "bytes": 3952,
+      "sha256": "de1409acadae25b919c18188e4d69a1294821cccf0919c5a43f18b965a55e3b6"
+    },
+    {
+      "path": "only.webp",
+      "bytes": 5258,
+      "sha256": "5b7541a7556bb0493333d2463bcf861230ee2df01dd38c67cdced0ab9bbcaf84"
+    },
+    {
+      "path": "ground.webp",
+      "bytes": 165650,
+      "sha256": "f4e955a8c582fd82e9c648f22f69804cf24aaa0667faba1bcba5123ae7e71b1f"
+    },
+    {
+      "path": "page.webp",
+      "bytes": 54746,
+      "sha256": "2d5f73f009e3a90e70e9ff771d167d9ab98a14fe80381c3ae716900d64c163ef"
+    },
+    {
+      "path": "viewingTitle.webp",
+      "bytes": 22986,
+      "sha256": "c54de525c112368cae705a202956799eaf0927e2e6a79d592fe81d169f8efa62"
+    }
+  ]
+}

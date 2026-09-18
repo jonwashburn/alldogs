@@ -6,8 +6,8 @@
   <title>ALL DOGS · Wubbushi</title>
   <meta name="description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f3f0e8' d='M0 0h32v32H0z'/%3E%3Cpath fill='none' stroke='%233d5366' stroke-width='2' d='M5 28V14Q16-3 27 14v14M16 6v22M10 10v18M22 10v18M5 22h22'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/gate.css?v=20260918-gate1">
-  <script src="/gate.js?v=20260918-gate1" defer></script>
+  <link rel="stylesheet" href="/gate.css?v=20260918-painted1">
+  <script src="/gate.js?v=20260918-painted1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
 <meta property="og:title" content="ALL DOGS · Wubbushi">
 <meta property="og:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
@@ -22,51 +22,46 @@
 <meta name="twitter:image:alt" content="A close view of Barack, a painted ALL DOGS dog, with the ALL DOGS wordmark.">
 <meta name="twitter:title" content="ALL DOGS · Wubbushi">
 <meta name="twitter:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
+  <link rel="stylesheet" href="/painting/painted.css?v=20260918-painted1">
+  <script src="/painting/page.js?v=20260918-painted1" defer></script>
 </head>
 <body>
+  <div class="painted painted-ground" data-paint="ground" aria-hidden="true"><img src="/painting/ground.webp" alt=""><canvas></canvas></div>
   <header class="masthead">
-    <a class="wordmark" href="./" aria-label="ALL DOGS, return to the gate">ALL DOGS</a>
-    <span class="artist">Paintings by Wubbushi</span>
-    <nav class="gate-nav" aria-label="Main navigation"><button class="text-button" data-open="work">The work</button><a class="text-button" href="/viewing-room/">Your invitation</a></nav>
+    <a class="wordmark" href="./" aria-label="ALL DOGS, return to the gate"><span class="painted " data-paint="wordmark"><img src="/painting/wordmark.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS</span></span></a>
+    <span class="artist"><span class="painted " data-paint="artist"><img src="/painting/artist.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Paintings by Wubbushi</span></span></span>
+    <nav class="gate-nav" aria-label="Main navigation"><button class="text-button" data-open="work"><span class="painted " data-paint="work"><img src="/painting/work.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The work</span></span></button><a class="text-button" href="/viewing-room/"><span class="painted " data-paint="personal"><img src="/painting/personal.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Your invitation</span></span></a></nav>
   </header>
 
   <main>
     <section class="arrival" aria-labelledby="arrival-title">
-      <div class="arrival-copy"><p class="eyebrow">An invitation</p><h1 id="arrival-title">A dog of your own.</h1></div>
+      <div class="arrival-copy"><p class="eyebrow"><span class="painted " data-paint="invitation"><img src="/painting/invitation.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">An invitation</span></span></p><h1 id="arrival-title"><span class="painted " data-paint="heading"><img src="/painting/heading.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">A dog of your own.</span></span></h1></div>
       <div class="threshold" id="threshold">
-        <div class="gate-ground" aria-hidden="true"></div>
         <div class="gate" aria-hidden="true">
-          <div class="gate-leaf left-leaf">
-            <svg viewBox="0 0 320 390" preserveAspectRatio="none"><path class="gate-wash" d="M12 383L12 145Q123 34 312 26L312 383Z"/><g class="iron"><path d="M12 383V145Q123 34 312 26V383ZM12 151Q124 44 312 36M13 278H312M13 290H311M13 365H312M52 111V382M95 84V383M138 63V383M181 48V383M224 37V383M268 30V383"/><path d="M22 360L302 291M22 291L302 360"/></g><g class="hinge"><path d="M3 163H20M3 334H20"/></g><path class="latch" d="M297 229H316V237H297Z"/></svg>
-          </div>
-          <div class="gate-leaf right-leaf">
-            <svg viewBox="0 0 320 390" preserveAspectRatio="none"><path class="gate-wash" d="M8 26Q197 34 308 145L308 383H8Z"/><g class="iron"><path d="M8 383V26Q197 34 308 145V383ZM8 36Q196 44 308 151M8 278H307M9 290H307M8 365H307M52 30V383M96 37V383M139 48V383M182 63V383M225 84V383M268 111V382"/><path d="M18 360L298 291M18 291L298 360"/></g><g class="hinge"><path d="M300 163H317M300 334H317"/></g><path class="latch" d="M3 229H22V237H3Z"/></svg>
-          </div>
-          <span class="gate-post post-left"></span><span class="gate-post post-right"></span>
+          <div class="gate-leaf left-leaf"><span class="painted " data-paint="leafLeft"><img src="/painting/leafLeft.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only"></span></span></div>
+          <div class="gate-leaf right-leaf"><span class="painted " data-paint="leafRight"><img src="/painting/leafRight.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only"></span></span></div>
         </div>
-        <button class="invitation" id="enter" aria-controls="viewing">
-          <span class="invitation-small">ALL DOGS</span>
-          <span class="invitation-title">Come in.</span>
-          <span class="invitation-action">Open the gate <span aria-hidden="true">↗</span></span>
+        <button class="invitation" id="enter" aria-controls="viewing" aria-label="Come in. Open the gate">
+          <span class="painted " data-paint="card"><img src="/painting/card.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS. Come in. Open the gate</span></span>
         </button>
       </div>
-      <div class="arrival-foot"><p>Invitation only.</p><button class="text-button" data-open="note">A note from Wubbushi</button></div>
+      <div class="arrival-foot"><p><span class="painted " data-paint="only"><img src="/painting/only.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Invitation only.</span></span></p><button class="text-button" data-open="note"><span class="painted " data-paint="note"><img src="/painting/note.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">A note from Wubbushi</span></span></button></div>
     </section>
 
     <section class="viewing" id="viewing" aria-labelledby="viewing-title" hidden>
-      <div class="viewing-head"><p class="eyebrow">From the collection</p><h1 id="viewing-title" tabindex="-1">He thinks he's your dog.</h1></div>
+      <div class="viewing-head"><p class="eyebrow"><span class="painted" data-paint="collection"><img src="/painting/collection.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">From the collection</span></span></p><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">He thinks he's your dog.</span></span></h1></div>
       <figure class="painting">
         <button id="enlarge" aria-label="Look closely at Barack"><img src="/collection/assets/dog-62-fb27c29277cc6593.jpg" alt="Barack, a blue-coated dog with flame wings, a small blue mask and a red tie, painted against a pale blue sky." width="1000" height="1000"></button>
         <figcaption><span>Barack</span><span>Wubbushi</span></figcaption>
       </figure>
-      <div class="viewing-links"><button class="text-button" data-open="record">The dog's record</button><button class="text-button" data-open="life">A life together</button></div>
-      <p class="viewing-note"><a href="/viewing-room/">Open your personal invitation ↗</a><br><a href="/my-dog/">Visit your dog</a></p>
-      <button class="text-button return" id="return">Back to the gate</button>
+      <div class="viewing-links"><button class="text-button" data-open="record"><span class="painted" data-paint="record"><img src="/painting/record.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The dog's record</span></span></button><button class="text-button" data-open="life"><span class="painted" data-paint="life"><img src="/painting/life.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">A life together</span></span></button></div>
+      <p class="viewing-note"><a href="/viewing-room/">Open your personal invitation ↗</a><br><a href="/my-dog/"><span class="painted" data-paint="visit"><img src="/painting/visit.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Visit your dog</span></span></a></p>
+      <button class="text-button return" id="return"><span class="painted" data-paint="return"><img src="/painting/return.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Back to the gate</span></span></button>
     </section>
     <noscript><p class="noscript-note"><a href="/viewing-room/">Open your invitation</a> or <a href="/collection/assets/dog-62-fb27c29277cc6593.jpg">See the painting</a>.</p></noscript>
   </main>
 
-  <footer><span>ALL DOGS</span><p>“You make the record anyway.”</p><button class="text-button" data-open="journal">The journal</button></footer>
+  <footer><span><span class="painted " data-paint="wordmark"><img src="/painting/wordmark.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS</span></span></span><p><span class="painted " data-paint="quote"><img src="/painting/quote.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">“You make the record anyway.”</span></span></p><button class="text-button" data-open="journal"><span class="painted " data-paint="journal"><img src="/painting/journal.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The journal</span></span></button></footer>
 
   <dialog id="reading" aria-labelledby="reading-title">
     <div class="dialog-top"><span>ALL DOGS</span><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button></div>
@@ -74,10 +69,10 @@
   </dialog>
   <dialog id="close-view" aria-label="Barack, a closer look"><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button><img src="/collection/assets/dog-62-fb27c29277cc6593.jpg" width="1000" height="1000" alt="A closer view of the original Barack painting, including the dry paint, blue mask and flame wings."></dialog>
 
-  <template id="copy-work"><p class="eyebrow">The work</p><h2 id="reading-title">The drawings that would have been on the fridge.</h2><p>ALL DOGS comes from the same childhood as <a href="https://exaltedlove.com/" target="_blank" rel="noopener noreferrer">HOLY</a>, my collection about the photographs we lost. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong. These are the drawings that would have been on the fridge.</p><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog. Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.</p><h3>The paint is code.</h3><p>I've been building a brush in code. Each bristle carries a finite amount of paint, picks up what's still wet and leaves a mark where it touches the surface. Long strokes run dry. I write each dog's composition into the painter: its face, clothes, pose and the world around it.</p><p class="signature">Wubbushi</p><p><a href="/about/">The childhood and the brush ↗</a></p></template>
-  <template id="copy-note"><p class="eyebrow">A note from Wubbushi</p><h2 id="reading-title">I can still paint the dogs.</h2><p>ALL DOGS comes from the same childhood. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong. These are the drawings that would have been on the fridge, made now by a machine I spend my afternoons teaching.</p><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog. Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.</p><p class="signature">Wubbushi</p></template>
+  <template id="copy-work"><p class="eyebrow">The work</p><h2 id="reading-title">The drawings that would have been on the fridge.</h2><p>ALL DOGS comes from the same childhood as <a href="https://exaltedlove.com/" target="_blank" rel="noopener noreferrer">HOLY</a>, my collection about the photographs we lost. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong. These are the drawings that would have been on the fridge.</p><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog. Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.</p><h3>The paint is code.</h3><p>I've been building a brush in code. Each bristle carries a finite amount of paint, picks up what's still wet and leaves a mark where it touches the surface. Long strokes run dry. I write each dog's composition into the painter: its face, clothes, pose and the world around it.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p><p><a href="/about/">The childhood and the brush ↗</a></p></template>
+  <template id="copy-note"><p class="eyebrow">A note from Wubbushi</p><h2 id="reading-title">I can still paint the dogs.</h2><p>This is a journal for me. A history of who I meet and make friends with, ideally for the rest of my life. A chance to make a little custom artwork for the people in my life, as a gift from me.</p><p>ALL DOGS comes from the same childhood. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong. These are the drawings that would have been on the fridge, made now by a machine I spend my afternoons teaching.</p><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog. Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p></template>
   <template id="copy-record"><p class="eyebrow">The collar</p><h2 id="reading-title">A name tag with a memory.</h2><p>The collar records who adopted the dog and what happened to it. That history stays with the dog through every change: living, zombie, immortal or angel.</p><dl class="record"><div><dt>Original painting</dt><dd>Barack</dd></div><div><dt>Artist</dt><dd>Wubbushi</dd></div></dl><p><a href="/my-dog/">Visit your dog and its record ↗</a></p><p>A rescue adds a new entry; it never erases the infection. The dog's original artwork reference stays on record too, whatever name you choose.</p></template>
   <template id="copy-life"><p class="eyebrow">A life together</p><h2 id="reading-title">Holding on.</h2><p>Living dogs can become angels.</p><img class="angel" src="/assets/barack-angel-blue-hour-wide-2400.jpg" alt="Barack as an angel with white wings and a fine golden halo against a blue evening ground." width="2400" height="1200"><p>Every eligible living dog has a 1 in 1,600 chance of natural death each day (0.0625%). The dog becomes an angel, and you keep the artwork. Its lifespan and cause of death stay in the record.</p><p>Natural death does not spread infection. Holding on to your dog prevents a sale; it cannot guarantee a long life.</p><h3>To sell your dog, you have to kill it.</h3><p>Sell a living dog and it dies, coming back as a zombie. Each new zombie has a <strong>50% chance</strong> of killing someone else's dog and turning it into a zombie too. That dog gets the same chance. And so on.</p><p>You get the money. Another collector can lose the dog they loved. Your sale and your name stay on every dog it reaches.</p><p>On its first resale, a dog has a 1 in 20 chance to resist and become immortal. Holding on cannot prevent infection or natural death.</p><p><a href="/adoption/">Read the collection rules ↗</a></p></template>
-  <template id="copy-journal"><p class="eyebrow">The journal</p><h2 id="reading-title">You make the record anyway.</h2><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog.</p><div class="journal-entry"><span>From the artist's note</span><p>“Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.”</p></div><p><a href="/about/">Read the artist's note ↗</a></p></template>
+  <template id="copy-journal"><p class="eyebrow">The journal</p><h2 id="reading-title">You make the record anyway.</h2><p>This is a journal for me. A history of who I meet and make friends with, ideally for the rest of my life. A chance to make a little custom artwork for the people in my life, as a gift from me.</p><p>The albums would not have brought anyone back either. You make the record anyway. I can paint the dog.</p><div class="journal-entry"><span>From the artist's note</span><p>“Its collar records who held on to it: your handle from the first day, and whether you kept the dog or sold it.”</p></div><p><a href="/about/">Read the artist's note ↗</a></p></template>
 </body>
 </html>

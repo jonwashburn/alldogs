@@ -1,0 +1,12 @@
+'use strict';
+const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const manifest=JSON.parse(fs.readFileSync('painting/manifest.json','utf8'));
+assert(manifest.files.length>20,'A complete painted entrance must be present.');
+assert.equal(hash('painting/paintkit.js'),'555d6d735595c30921f1c283874135d361c62dfa38e1f48a4e9c1d9957d60a87','The approved physical brush bundle must remain unchanged.');
+for(const file of manifest.files)assert.equal(hash('painting/'+file.path),file.sha256,file.path+' must match the rendered release.');
+const html=fs.readFileSync('index.html','utf8');
+for(const match of html.matchAll(/data-paint="([A-Za-z]+)"/g))assert(fs.existsSync('painting/'+match[1]+'.webp'),'Missing first frame: '+match[1]);
+for(const phrase of ['This is a journal for me.','as a gift from me.'])assert(html.includes(phrase));
+assert(!/fetch\(|localStorage|sessionStorage/.test(fs.readFileSync('painting/page.js','utf8')),'Painting must not access accounts or stored visitor data.');
+console.log('Painting verified: original brush bundle, matching composition and first frames, journal copy and public-only rendering.');

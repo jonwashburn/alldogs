@@ -1,0 +1,73 @@
+/* The painting is the surface. HTML supplies names, focus and interaction. */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+body{background:#eeeadd;color:#303c43;isolation:isolate}
+.painted{position:relative;display:block;line-height:0;max-width:100%}
+.painted>img{display:block;width:100%;height:auto}
+.painted>canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}
+.painted[data-painted="true"]>canvas{opacity:1}
+.painted[data-painted="true"]>img{visibility:hidden}
+.painted-ground{position:fixed;inset:0;width:100%;height:100lvh;z-index:-1;pointer-events:none}
+.painted-ground>img,.painted-ground>canvas{width:100%;height:100%;object-fit:fill}
+.masthead{margin:0 5.5vw;min-height:110px;align-items:center;gap:30px}
+.wordmark{width:145px;flex-shrink:0;transform:rotate(-2deg)}
+.artist{width:186px;margin-right:auto;margin-left:0;transform:rotate(.5deg)}
+.gate-nav{gap:30px}
+.gate-nav [data-paint="work"]{width:82px}
+.gate-nav [data-paint="personal"]{width:136px}
+.text-button{min-height:44px;display:inline-flex;align-items:center;border:0;transition:transform .2s}
+.text-button:hover{border:0;transform:rotate(-1.5deg)}
+button:focus-visible,a:focus-visible{outline:2px dashed #a25b44;outline-offset:6px}
+.arrival{min-height:calc(100svh - 218px);justify-content:center;padding:10px 24px 28px}
+.arrival-copy{width:100%;display:flex;align-items:center;flex-direction:column}
+.arrival-copy .eyebrow{margin:0 0 14px;width:155px;transform:rotate(1.2deg)}
+.arrival-copy h1{width:min(650px,84vw);font-size:inherit;transform:rotate(-.6deg)}
+.threshold{width:min(860px,90vw);height:auto;aspect-ratio:1100/610;margin:4px auto 0;flex-shrink:0}
+.gate{inset:0;align-items:stretch}
+.gate-leaf{height:100%;width:50%}
+.gate-leaf>.painted{width:100%;height:100%}
+.gate-leaf img{width:100%;height:100%}
+.invitation{top:51%;left:50%;width:30%;min-height:0;padding:0;border:0;background:none;box-shadow:none;transform:translate(-50%,-28%) rotate(-5deg);display:block}
+.invitation>.painted{width:100%}
+.invitation:hover{transform:translate(-50%,-31%) rotate(-2deg)}
+.arrival-foot{width:min(750px,88vw);margin:3px auto 0;align-items:center}
+.arrival-foot p{margin:0;width:143px;transform:rotate(-1.5deg)}
+.arrival-foot [data-paint="note"]{width:203px;transform:rotate(1deg)}
+footer{border:0;margin:0 5.5vw;min-height:108px;gap:26px;padding:12px 0 24px}
+footer>span{width:106px;transform:rotate(1.5deg)}
+footer>p{margin:0;width:365px;max-width:45vw;transform:rotate(-1deg)}
+footer [data-paint="journal"]{width:123px;transform:rotate(1deg)}
+.viewing{min-height:calc(100svh - 218px)}
+.painting{padding:13px 14px 6px;background:#eeeadd url('/painting/page.webp') center/100% 100%;transform:rotate(-.7deg)}
+.painting figcaption{padding:4px 4px 7px;color:#475347}
+.viewing-links{padding:0 3px}
+.viewing-note,.return{color:#434e46}
+dialog{background:#eeeadd url('/painting/page.webp') center/100% 100%;outline:1px solid #b5b6a3;outline-offset:-4px}
+dialog::backdrop{background:#283b4e66;backdrop-filter:blur(3px)}
+.dialog-top{background:#eeeadd;border-bottom:1px solid #b8beac66;margin:7px 9px 0}
+article{position:relative}
+article .signature{width:150px;margin-top:28px!important}
+article p{color:#343e3a}
+.record>div,.journal-entry{border-color:#9ca89588}
+#close-view{background:#eeeadd url('/painting/page.webp') center/100% 100%}
+@media(min-height:950px) and (min-width:700px){.threshold{margin-top:10px}.arrival{padding-top:20px}}
+@media(max-width:700px){
+ .masthead{margin:0 20px;min-height:95px;gap:15px;flex-wrap:wrap}
+ .wordmark{width:114px}.artist{display:none}.gate-nav{margin-left:auto;gap:18px}
+ .gate-nav [data-paint="work"]{width:65px}.gate-nav [data-paint="personal"]{width:110px}
+ .arrival{min-height:calc(100svh - 211px);padding:25px 15px 35px;justify-content:center}
+ .arrival-copy .eyebrow{width:145px;margin-bottom:18px}
+ .arrival-copy h1{width:min(580px,91vw)}
+ .threshold{width:100%;aspect-ratio:1.57;margin-top:27px;margin-bottom:12px}
+ .invitation{width:39%;top:46%}
+ .arrival-foot{width:95%;margin-top:14px;gap:15px}
+ .arrival-foot p{width:115px;flex-shrink:0}
+ .arrival-foot [data-paint="note"]{width:176px}
+ footer{margin:0 22px;min-height:116px;gap:10px;flex-wrap:wrap;padding:12px 0 20px}
+ footer>span{width:95px}footer>p{order:3;width:305px;max-width:100%;margin:5px auto 0}
+ footer .text-button{margin-left:auto}footer [data-paint="journal"]{width:110px}
+ .painting{padding:9px 9px 4px}.viewing{min-height:calc(100svh - 211px)}
+}
+@media(max-width:359px){.masthead{margin:0 14px;gap:9px}.wordmark{width:91px}.gate-nav{gap:10px}.gate-nav [data-paint="work"]{width:57px}.gate-nav [data-paint="personal"]{width:95px}.arrival-foot p{width:99px}.arrival-foot [data-paint="note"]{width:157px}.invitation{width:42%}}
+@media(prefers-reduced-motion:reduce){.text-button{transition:none}.opening .gate-leaf{transform:none}}
+
+.viewing-head .eyebrow{width:190px;margin:12px auto 20px}.viewing-head h1{width:min(580px,88vw);margin:auto;max-width:none}.viewing-links [data-paint="record"]{width:143px}.viewing-links [data-paint="life"]{width:138px}.viewing-note [data-paint="visit"]{width:114px;margin:10px auto}.return [data-paint="return"]{width:139px}

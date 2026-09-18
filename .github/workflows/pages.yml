@@ -23,6 +23,11 @@ jobs:
       - name: Check public JavaScript syntax
         run: |
           node --check gate.js
+          node --check painting/scene.js
+          node --check painting/hand.js
+          node --check painting/worker.js
+          node --check painting/page.js
+          node .github/scripts/check-painting.cjs
           node .github/scripts/check-gate.cjs
           node --check home.js
           node .github/scripts/check-home-states.cjs
