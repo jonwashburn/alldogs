@@ -6,7 +6,7 @@
     const followOldLink = () => { const target = moved[location.hash]; if (target) location.replace(target); };
     followOldLink();
     window.addEventListener('hashchange', followOldLink);
-    // Vary the two lower paintings per visit, never the opening Barack pair.
+    // Vary the two lower paintings per visit, never the opening Barack.
     let storage;
     try { storage = window.sessionStorage; } catch (_) {}
     window.AllDogsRotation?.mount(document, storage);
@@ -15,30 +15,42 @@
   const pairs = pairData ? JSON.parse(pairData.textContent) : [];
   document.querySelectorAll('[data-pair]').forEach(figure => {
     const pair = pairs[Number(figure.dataset.pair)];
-    const button = figure.querySelector('.zombie-reveal');
+    const buttons = [...figure.querySelectorAll('[data-art-state]')];
     const img = figure.querySelector('img');
-    if (!pair || !button || !img) return;
-    const label = button.querySelector('.reveal-label');
-    let zombie = false;
-    button.addEventListener('click', async () => {
-      if (button.disabled) return;
-      button.disabled = true;
-      const next = !zombie, preload = new Image();
-      preload.src = next ? pair.zombie : pair.living;
+    const opener = figure.querySelector('.artwork-open');
+    const note = figure.querySelector('.preview-status');
+    if (!pair || !buttons.length || !img || !opener) return;
+    let current = 'living', request = 0;
+    buttons.forEach(button => button.addEventListener('click', async () => {
+      const next = button.dataset.artState;
+      if (!pair[next]) return;
+      const thisRequest = ++request;
+      if (next === current) {
+        figure.setAttribute('aria-busy', 'false');
+        note.textContent = '';
+        return;
+      }
+      const preload = new Image();
+      figure.setAttribute('aria-busy', 'true');
+      note.textContent = 'Loading ' + next + '…';
+      preload.src = pair[next];
       try {
         await preload.decode();
+        if (thisRequest !== request) return;
         img.src = preload.src;
-        zombie = next;
-        img.alt = pair.title + (zombie ? ', zombie' : ', living');
-        figure.querySelector('.state-label').textContent = zombie ? 'Zombie' : 'Living';
-        button.setAttribute('aria-pressed', String(zombie));
-        label.textContent = zombie ? 'Back to living' : 'See the zombie';
+        current = next;
+        img.alt = pair.title + ', ' + next;
+        figure.querySelector('.state-label').textContent = button.textContent;
+        opener.dataset.artFull = pair[next + 'Full'] || pair[next];
+        opener.setAttribute('aria-label', 'Take a closer look at ' + pair.title + ', ' + next);
+        buttons.forEach(control => control.setAttribute('aria-pressed', String(control === button)));
+        note.textContent = '';
       } catch (_) {
-        label.textContent = 'Could not load preview. Try again';
+        if (thisRequest === request) note.textContent = 'Could not load ' + next + '. Try again.';
       } finally {
-        button.disabled = false;
+        if (thisRequest === request) figure.setAttribute('aria-busy', 'false');
       }
-    });
+    }));
   });
   const dialog = document.getElementById('art-dialog');
   if (!dialog) return;

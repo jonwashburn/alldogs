@@ -65,6 +65,10 @@ assert 'setInterval' not in (ROOT / 'home-rotation.js').read_text()
 assert 'zombie apocalypse' in home and 'you have to kill it' in home
 assert '1 in 20' in home and '50%' in home and 'every dog it reaches' in home
 assert 'Preview only. No record is changed.' in home
+state_links = [attrs for tag, attrs in pages['index.html'].tags if 'data-art-state' in attrs]
+assert [attrs['data-art-state'] for attrs in state_links] == ['living', 'zombie', 'angel']
+assert [attrs['aria-pressed'] for attrs in state_links] == ['true', 'false', 'false']
+assert all(attrs['aria-controls'] == 'barack-dog' for attrs in state_links)
 assert 'application-terms' in pages['index.html'].ids
 for phrase in ('seven days', 'One direct adoption per person, ever.', 'does not reserve a dog'):
     assert phrase in home, phrase
