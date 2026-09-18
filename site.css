@@ -1,0 +1,288 @@
+/* Shared paper, type and controls. The original paintings remain the artwork. */
+:root{--paper:#eeeadd;--ink:#303c38;--blue:#465f54;--muted:#59675f;--line:#9da79766;--serif:StudySerif,'Palatino Linotype',Palatino,Georgia,serif}
+html{scroll-padding-top:24px}
+body{accent-color:var(--blue)}
+button,input,select,textarea{touch-action:manipulation}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #557064;outline-offset:4px}
+
+/* Supporting pages share the invitation's identity and reading scale. */
+.site-interior{background:var(--paper);color:var(--ink);font:15px/1.65 Arial,Helvetica,sans-serif;isolation:isolate;--display:var(--serif);--hand:var(--serif);--yellow:#dfe4d5;--gutter:32px}
+.site-interior::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:url('/painting/ground.webp') center/cover no-repeat;opacity:.32}
+.site-interior .wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:32px}
+.site-interior .mast{min-height:88px;max-width:1320px;margin:auto;padding:14px 32px;background:transparent;border:0;gap:24px}
+.site-interior .mast .brand img,.site-interior footer .brand img{width:128px;height:auto}
+.site-interior .mast .join-waitlist img{display:block;width:119px;height:auto}
+.site-interior .mast .button.small{min-height:44px}
+.site-interior .mast .artist-credit{font:12px/1.5 Arial,sans-serif;color:var(--muted)}
+.site-interior .mast nav{gap:24px;font:13px/1.4 Arial,sans-serif;flex-wrap:wrap}
+.site-interior .mast nav>a:not(.button){display:inline-flex;align-items:center;min-height:44px}
+.site-interior .mast>a:not(.brand){display:inline-flex;align-items:center;min-height:44px;font-size:12px}
+.site-interior .back-to-gate img{display:block;width:137px;height:auto}
+.site-interior h1,.site-interior h2,.site-interior h3{font-family:var(--serif);font-weight:400;letter-spacing:-.035em;line-height:1.12;overflow-wrap:break-word}
+.site-interior h1{font-size:clamp(36px,4.6vw,58px);max-width:17ch;margin:0 0 22px}
+.site-interior h2{font-size:30px}
+.site-interior h3{font-size:23px}
+.site-interior h1 span{color:inherit}
+.site-interior .eyebrow,.site-interior .kicker{font:11px/1.5 Arial,sans-serif;letter-spacing:.1em;color:var(--muted);margin:0 0 17px}
+.site-interior .intro,.site-interior .lede{font:20px/1.5 var(--serif);max-width:48ch}
+.site-interior .quiet,.site-interior .account-note{font:13px/1.65 Arial,sans-serif;color:var(--muted)}
+.site-interior .button{min-height:46px;padding:11px 18px;background:transparent;border:1px solid #6f827466;border-radius:0;box-shadow:none;color:var(--ink);font:500 14px/1.5 Arial,sans-serif;white-space:normal}
+.site-interior .button.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.site-interior .button:hover{background:#dce1d4;color:var(--ink)}
+.site-interior .button.primary:hover{background:#354d41;color:#fff}
+.site-interior .text-link{display:inline-flex;align-items:center;min-height:44px;font:14px/1.5 Arial,sans-serif;white-space:normal;box-shadow:none}
+.site-interior input,.site-interior select,.site-interior textarea{max-width:100%;min-height:46px;padding:11px 13px;border:1px solid #83917c99;border-radius:0;background:#fbfaf5;color:var(--ink);font:16px/1.5 Arial,sans-serif}
+.site-interior input[type=checkbox]{min-height:0}
+.site-interior summary{min-height:48px;padding-block:12px;font:19px/1.4 var(--serif);font-weight:400}
+.site-interior footer.wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding:24px 32px!important;border-color:var(--line);font:12px/1.5 Arial,sans-serif}
+.site-interior footer a{display:inline-flex;align-items:center;min-height:44px;font-size:12px}
+.site-interior .site-footer nav{gap:4px 22px;justify-content:flex-start}
+.site-interior .site-footer p{padding:0}
+
+/* Accounts and the registers read as pages, with fewer boxed regions. */
+.site-interior .account-nav{padding:0 0 8px;gap:8px 28px}
+.site-interior .account-nav a{display:inline-flex;align-items:center;min-height:44px;font:13px/1.4 Arial,sans-serif}
+.site-interior .account-main,.site-interior .directory,.site-interior .application-page,.site-interior .value-page,.site-interior .pound-gate{padding-top:42px;padding-bottom:60px}
+.site-interior .account-main{max-width:860px;min-height:0}
+.site-interior .account-main>.intro{font:20px/1.5 var(--serif);padding:0;margin-bottom:25px}
+.site-interior .account-gate,.site-interior .account-card{padding:28px 0;background:none;border:0;border-top:1px solid var(--line);margin:28px 0 0}
+.site-interior .account-gate h2,.site-interior .account-card h2{font-size:28px;margin:0 0 16px}
+.site-interior .account-gate{max-width:600px}
+.site-interior .account-gate p{max-width:48ch}
+.site-interior .account-gate .account-note{margin:20px 0 0}
+.site-interior .account-card label{font:14px/1.5 Arial,sans-serif}
+.site-interior .account-card input:not([type=checkbox]){font-size:16px}
+.site-interior .account-list li{padding:20px 0;gap:12px 24px}
+.site-interior .account-list strong{font:25px/1.2 var(--serif)}
+.site-interior .account-list small{font-size:12px;margin-top:6px}
+.site-interior .account-status,.site-interior .status-tag{font:12px/1.5 Arial,sans-serif;padding:4px 8px;background:#dfe5d7;border-radius:0}
+.site-interior .account-message{font-size:13px;overflow-wrap:anywhere}
+.site-interior .payment-record{padding:20px;background:#e0e5d866;border-top:1px solid var(--line)}
+.site-interior .payment-total{font:30px/1.2 var(--serif)}
+.site-interior .payment-options{gap:26px}
+.site-interior .payment-options p{overflow-wrap:anywhere}
+.site-interior .payment-options h3,.site-interior .payment-record h3{font:22px/1.25 var(--serif)}
+.site-interior .payment-options input[readonly]{font:14px/1.5 monospace}
+.site-interior .directory .lede{max-width:40ch;margin-bottom:28px}
+.site-interior .vouch-rules{max-width:none;margin:24px 0 30px;padding:0;border-block:1px solid var(--line)}
+.site-interior .vouch-rules>div{max-width:65ch;padding:0 0 12px}
+.site-interior .vouch-rules p{font-size:14px}
+.site-interior .toolbar{margin:24px 0;gap:12px 30px}
+.site-interior .directory #owners-status{padding:14px 0;background:none;font-size:13px}
+.site-interior .owner-grid{gap:0 28px}
+.site-interior .owner-card{padding:24px 0;border:0;border-top:1px solid var(--line)}
+.site-interior .owner-card h2{font-size:28px;margin:12px 0}
+.site-interior .owner-card p{margin:8px 0}
+.site-interior .value-page h1{max-width:none}
+.site-interior .value-controls{gap:22px 32px;margin-top:30px;padding:20px 0;border-color:var(--line)}
+.site-interior .views{gap:0;border-bottom:1px solid var(--line)}
+.site-interior .views .button{border:0;border-bottom:2px solid transparent;padding:10px 16px;background:none}
+.site-interior .views button[aria-pressed=true]{background:none;color:var(--blue);border-bottom-color:var(--blue);box-shadow:none}
+.site-interior .value-controls label{font:12px/1.5 Arial,sans-serif}
+.site-interior .value-row{grid-template-columns:28px 120px minmax(0,1fr) auto;gap:22px;padding:24px 0;border-color:var(--line)}
+.site-interior .value-row img{width:120px;height:120px;object-fit:contain}
+.site-interior .value-row h2{font-size:27px}
+.site-interior .value-row p{font-size:13px}
+.site-interior .value-row .value-amount{font:24px/1.3 var(--serif);min-width:0}
+.site-interior .empty{padding:30px 0;background:none}
+.site-interior .empty h2{font-size:27px}
+.site-interior .register-note{font-size:13px;line-height:1.65;margin-top:30px}
+.site-interior .share-card{border:0;background:none;gap:28px;align-items:center}
+.site-interior .share-card>div{padding:0}
+.site-interior .share-card h2{font-size:34px}
+
+/* The wishlist keeps each painting and its controls together. */
+.site-interior .wishlist-intro{padding-top:35px;padding-bottom:26px}
+.site-interior .wishlist-intro>p{font:18px/1.6 var(--serif)}
+.site-interior .spotlight-caption{max-width:1120px;margin:auto;padding:20px 32px;gap:20px}
+.site-interior .painting-label h2{font:28px/1.2 var(--serif)}
+.site-interior .painting-label .eyebrow{font-size:10px;letter-spacing:.08em}
+.site-interior .painting-arrow,.site-interior .spotlight-caption .painting-arrow{border:0;border-radius:0;min-width:44px;min-height:44px;background:none}
+.site-interior .painting-arrow:hover{background:#dce1d4;color:var(--ink)}
+.site-interior .wish-frame{background:#e8e8dd;border-color:var(--line)}
+.site-interior .wish-empty{background:transparent}
+.site-interior .wish-title{font:22px/1.25 var(--serif)}
+.site-interior .wish-actions button{min-height:44px;min-width:44px;flex:none;padding:9px 12px;border-color:var(--line);font:13px/1.5 Arial,sans-serif}
+.site-interior .wish-actions button:hover{background:#dce1d4}
+.site-interior .wishlist-heading h2{font-size:30px}
+.site-interior .wishlist-section>p{max-width:60ch;font-size:14px}
+.site-interior .wishlist-next{gap:28px}
+.site-interior .wishlist-next p{font-size:14px}
+.site-interior .pound-gate>p{font:20px/1.55 var(--serif)}
+.site-interior #returning-applicant{padding-top:15px;margin-top:25px;border-top:1px solid var(--line)}
+.site-interior #pound-entry{padding-top:12px}
+.site-interior .viewing-header h2{font:27px/1.2 var(--serif)}
+.site-interior .viewing-footer{font:13px/1.5 Arial,sans-serif}
+.site-interior .viewing-footer .button{font-size:14px}
+
+/* Reading pages use the same quiet text and real painted wordmark. */
+.site-interior .why{padding-block:38px 50px}
+.site-interior .why h1{max-width:23ch}
+.site-interior .whygrid{gap:50px;margin-top:34px}
+.site-interior .reason .body{font:18px/1.65 var(--serif)}
+.site-interior .reason h3{font:29px/1.2 var(--serif);margin-bottom:20px}
+.site-interior .medium{padding-top:36px;border-color:var(--line)}
+.site-interior .medium-intro,.site-interior .process-kit p{font:18px/1.65 var(--serif)}
+.site-interior .paint-film-notes{gap:50px}
+.site-interior .process-kit.wrap{padding-block:36px 60px}
+
+/* Entry and letters: generous controls, quieter paper, fewer competing edges. */
+.invitation-page .cycle-dog,.invitation-page #close-viewing{min-width:44px;min-height:44px}
+.invitation-page .masthead .wordmark{display:flex;align-items:center;min-height:44px}
+.invitation-page .masthead .wordmark>.painted{width:100%}
+.invitation-page .viewing-links a{min-height:44px}
+.invitation-page .viewing-links{border-bottom:1px solid #52634b35;padding-bottom:10px}
+.invitation-page .work-artist{font-size:11px;line-height:1.6}
+.invitation-page #dog-position{font-size:11px;min-width:44px}
+.invitation-page #close-viewing{display:flex;align-items:center;justify-content:center}
+.invitation-page #reading .close-dialog{min-width:60px;min-height:44px;display:flex;align-items:center;justify-content:flex-end}
+.invitation-page .adoption-dialog{padding:0;outline:0;border:1px solid #9ca89588;background:#eeeadd url('/painting/page.webp') center/cover}
+.invitation-page .adoption-dialog-heading{position:sticky;top:0;z-index:2;align-items:center;margin:0;padding:22px 28px 17px;background:#eeebdf;border-bottom:1px solid var(--line)}
+.invitation-page .adoption-dialog h2{font-size:31px}
+.invitation-page .application-body{padding:24px 28px 28px}
+.invitation-page .adoption-close{min-width:44px;min-height:44px;margin-right:-8px}
+.invitation-page .adoption-dialog input,.invitation-page .adoption-dialog select{font:16px/1.5 Arial,sans-serif;min-height:48px;border:1px solid #83917c99;background:#fbfaf5}
+.invitation-page .adoption-dialog input:focus-visible,.invitation-page .adoption-dialog select:focus-visible{outline:2px solid #557064;outline-offset:3px}
+.invitation-page .adoption-dialog .primary{background:var(--blue);border-color:var(--blue);font-weight:500}
+.invitation-page .adoption-dialog form>p:first-child{font:17px/1.55 var(--serif)}
+.invitation-page .adoption-dialog form>label{font-size:13px;font-weight:500}
+.invitation-page .adoption-dialog .application-terms{font-size:12px;line-height:1.65}
+.invitation-page .adoption-dialog #receipt code{font-size:13px}
+.garden-mast>a{display:flex;align-items:center;min-height:44px}
+.garden-welcome a,.garden-footer a,.room-form summary{display:inline-flex;align-items:center;min-height:44px}
+.garden-login{min-height:44px}
+.garden-footer{display:flex;flex-direction:column;align-items:center;gap:12px}
+.garden-footer nav{gap:4px 26px}
+.garden-footer>p{margin:12px auto 0}
+
+@media(max-width:700px){
+ .site-interior{--gutter:24px}
+ .site-interior .wrap{padding-inline:24px}
+ .site-interior .mast{min-height:76px;padding:12px 24px;gap:16px;flex-wrap:wrap}
+ .site-interior .mast .brand img,.site-interior footer .brand img{width:106px}
+ .site-interior .mast nav{gap:8px 20px;font-size:12px}
+ .site-interior .mast nav>a:not(.button){display:inline-flex}
+ .site-interior .mast .artist-credit{display:none}
+ .site-interior h1{font-size:38px;line-height:1.12;max-width:17ch}
+ .site-interior h2{font-size:27px}
+ .site-interior .account-main,.site-interior .directory,.site-interior .application-page,.site-interior .value-page,.site-interior .pound-gate{padding-top:30px;padding-bottom:38px}
+ .site-interior .account-nav{flex-wrap:nowrap;gap:0;justify-content:space-between;padding:0 0 8px}
+ .site-interior .account-nav a{font-size:12px}
+ .site-interior .account-main>.intro,.site-interior .lede,.site-interior .intro,.site-interior .pound-gate>p{font-size:18px}
+ .site-interior .account-gate,.site-interior .account-card{padding:24px 0;margin-top:24px}
+ .site-interior .account-card h2,.site-interior .account-gate h2{font-size:27px}
+ .site-interior .account-list .button{width:auto}
+ .site-interior .account-links{gap:6px 20px;margin:16px 0}
+ .site-interior .payment-record{padding:18px;margin-top:22px}
+ .site-interior .payment-options{grid-template-columns:1fr;gap:12px;margin-top:22px}
+ .site-interior .toolbar{display:flex;align-items:flex-start;flex-direction:column;gap:12px}
+ .site-interior .search{width:100%;max-width:none}
+ .site-interior .value-controls{gap:20px;align-items:center;justify-content:space-between}
+ .site-interior .views .button{font-size:13px;padding-inline:12px}
+ .site-interior .value-controls select{margin-top:6px;padding-right:25px}
+ .site-interior .value-row{grid-template-columns:22px 76px minmax(0,1fr);gap:4px 12px;padding:20px 0;align-items:center}
+ .site-interior .value-row>span:first-child{grid-row:1 / span 2;font-size:12px}
+ .site-interior .value-row img{grid-column:2;grid-row:1 / span 2;width:76px;height:76px;max-height:none}
+ .site-interior .value-detail{grid-column:3;grid-row:1}
+ .site-interior .value-row h2{font-size:22px;line-height:1.2}
+ .site-interior .value-row p{font-size:12px;margin:5px 0}
+ .site-interior .value-row .value-amount{grid-column:3;grid-row:2;text-align:left;font-size:20px;margin:0}
+ .site-interior .owner-grid{grid-template-columns:1fr}
+ .site-interior .owner-card{padding-block:20px}
+ .site-interior .share-card{gap:24px;grid-template-columns:1fr;margin:26px 0}
+ .site-interior .share-card img{max-height:none;object-fit:contain}
+ .site-interior .vouch-actions{gap:12px;align-items:flex-start}
+ .site-interior .vouch-actions .button{width:100%}
+ .site-interior .wishlist-intro{padding-top:28px;padding-bottom:24px}
+ .site-interior .wishlist-intro>p{margin:18px 0 0;font-size:17px}
+ .site-interior .spotlight-caption{padding:17px 24px;gap:14px 12px}
+ .site-interior .painting-label{min-width:0}
+ .site-interior .painting-label h2{font-size:25px}
+ .site-interior .painting-controls{gap:4px}
+ .site-interior .spotlight-caption>.button{width:100%;font-size:14px}
+ .site-interior .enlarge-hint{font-size:11px;padding:5px 8px}
+ .site-interior .wishlist-section{padding-top:26px}
+ .site-interior .wishlist-heading{align-items:center;gap:12px}
+ .site-interior .wishlist-heading h2{font-size:27px;max-width:12ch}
+ .site-interior .wish-holders{grid-template-columns:1fr;gap:0;margin-top:24px}
+ .site-interior .wish-slot{display:grid;grid-template-columns:88px minmax(0,1fr);gap:0 16px;padding:20px 0;border-top:1px solid var(--line);align-items:start}
+ .site-interior .wish-rank{grid-column:2;font:11px/1.5 Arial,sans-serif;margin:0 0 5px;color:var(--muted)}
+ .site-interior .wish-frame{grid-column:1;grid-row:1 / span 3;width:88px;aspect-ratio:1}
+ .site-interior .wish-title{grid-column:2;grid-row:2;font-size:22px;margin:0 0 12px;min-height:0}
+ .site-interior .wish-actions{grid-column:2;grid-row:3;gap:5px;flex-wrap:wrap}
+ .site-interior .wish-actions button{padding:8px;flex:none}
+ .site-interior .wish-actions .wish-release{flex-basis:auto;margin:0}
+ .site-interior .wish-slot:has(.wish-empty) .wish-rank{grid-column:1 / -1;margin-bottom:10px}
+ .site-interior .wish-empty{grid-column:1 / -1;grid-row:2;width:100%;min-height:64px;aspect-ratio:auto;flex-direction:row;gap:16px;padding:12px;font-size:13px}
+ .site-interior .wishlist-next{margin-top:22px;padding-top:18px}
+ .site-interior .viewing-room{padding:16px;gap:12px}
+ .site-interior .viewing-footer{display:grid;grid-template-columns:1fr;justify-items:center;gap:10px;padding:12px 0 0!important}
+ .site-interior .viewing-footer .button{width:100%}
+ .site-interior .viewing-footer p{margin:0}
+ .site-interior .why{padding-block:30px 38px}
+ .site-interior .whygrid{gap:36px;margin-top:28px}
+ .site-interior .reason .body{font-size:17px}
+ .site-interior .reason h3{font-size:27px}
+ .site-interior .medium-intro,.site-interior .process-kit p{font-size:17px}
+ .site-interior .paint-film-notes{gap:24px}
+ .site-interior footer.wrap{padding:18px 24px 26px!important;gap:4px 20px;justify-content:flex-start}
+ .site-interior .site-footer nav{gap:0 20px}
+ .site-interior .site-footer p{flex-basis:100%;margin-bottom:8px}
+ .invitation-page .painted-ground>img,.invitation-page .painted-ground>canvas,.adoption-ground{object-fit:cover}
+ .invitation-page .masthead{min-height:76px}
+ .invitation-page .arrival{min-height:calc(100svh - 183px)}
+ .invitation-page .viewing{margin-top:20px;width:calc(100% - 32px)}
+ .invitation-page .viewing-heading{margin-bottom:19px;padding-inline:4px;gap:8px}
+ .invitation-page .viewing-head h1{width:min(270px,calc(100vw - 100px))}
+ .invitation-page .viewer-caption{padding:14px 4px;min-height:76px}
+ .invitation-page .viewer-browse{gap:2px}
+ .invitation-page .dog-gallery .cycle-dog{width:44px;min-height:44px}
+ .invitation-page .viewing-links{padding:8px 4px;gap:0 14px}
+ .invitation-page .viewing-links a{font-size:14px}
+ .invitation-page>.site-footer{min-height:107px;padding-bottom:max(20px,env(safe-area-inset-bottom))}
+ .invitation-page #reading{width:calc(100% - 24px);max-height:calc(100dvh - 24px);outline:0;background-size:cover}
+ .invitation-page .dialog-top{margin:0;padding:14px 24px;background:#eeebdf}
+ .invitation-page #reading article{padding:30px 24px 36px}
+ .invitation-page #reading article h2{font-size:34px;line-height:1.12;margin-bottom:22px}
+ .invitation-page #reading article p{font-size:17px;line-height:1.65;margin-block:18px}
+ .invitation-page .adoption-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}
+ .invitation-page .adoption-dialog-heading{padding:17px 22px 14px}
+ .invitation-page .adoption-dialog h2{font-size:28px}
+ .invitation-page .application-body{padding:22px}
+ .adoption-letter{width:calc(100% - 48px);margin-top:23px;margin-bottom:35px}
+ .adoption-letter h1{font-size:38px;margin-bottom:22px}
+ .adoption-letter .invitation-copy{font-size:21px;line-height:1.5}
+ .adoption-letter h2{font-size:25px;margin-top:27px}
+ .adoption-letter p{font-size:17px;line-height:1.65}
+ .adoption-letter .quiet{font-size:12px;margin-bottom:28px}
+ .adoption-mast{min-height:76px}
+ .adoption-page .adoption-footer{padding-bottom:max(22px,env(safe-area-inset-bottom))}
+ .garden-letter{width:calc(100% - 40px)}
+ .garden-letter .account-gate,.garden-letter .room-form{padding:23px 24px 26px;margin-top:20px;background-size:cover}
+ .garden-letter .account-gate h2,.garden-letter .room-form h2{font-size:27px;margin-bottom:18px}
+ .garden-letter .account-gate p{font-size:17px;line-height:1.6}
+ .garden-letter .room-controls{margin-bottom:14px}
+ .garden-letter .garden-personal-note{font-size:18px;margin:22px auto}
+ .garden-footer{padding-bottom:max(28px,env(safe-area-inset-bottom));gap:6px}
+ .garden-footer nav{gap:0 20px}
+ .garden-footer a{font-size:12px}
+}
+@media(max-width:359px){
+ .site-interior .wrap,.site-interior .mast{padding-inline:20px}
+ .site-interior h1{font-size:34px}
+ .site-interior .mast nav{gap:4px 16px}
+ .site-interior .wish-slot{grid-template-columns:72px minmax(0,1fr);gap:0 12px}
+ .site-interior .wish-frame{width:72px}
+ .site-interior .wish-empty{width:100%}
+ .site-interior .value-row{grid-template-columns:18px 64px minmax(0,1fr);column-gap:10px}
+ .site-interior .value-row img{width:64px;height:64px}
+ .invitation-page .viewing-links{gap:0 10px}
+ .invitation-page .viewing-links a{font-size:13px}
+ .invitation-page .adoption-dialog-heading{padding-inline:18px}
+ .invitation-page .application-body{padding:20px 18px}
+ .invitation-page .adoption-dialog h2{font-size:26px}
+ .adoption-letter{width:calc(100% - 40px)}
+ .adoption-letter h1{font-size:35px}
+ .adoption-letter .invitation-copy{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
