@@ -1,58 +1,65 @@
 (() => {
   'use strict';
-  const pairs = JSON.parse(document.getElementById('approved-pairs').textContent);
+  // Preserve shared links to the information moved off the homepage.
+  if (document.body.dataset.page === 'home') {
+    const moved = {'#game':'/adoption/#game', '#fates':'/adoption/#fates', '#why':'/about/#why', '#medium':'/about/#medium'};
+    const followOldLink = () => { const target = moved[location.hash]; if (target) location.replace(target); };
+    followOldLink();
+    window.addEventListener('hashchange', followOldLink);
+  }
+  const pairData = document.getElementById('approved-pairs');
+  const pairs = pairData ? JSON.parse(pairData.textContent) : [];
   document.querySelectorAll('[data-pair]').forEach(figure => {
-    const pair = pairs[Number(figure.dataset.pair)], button = figure.querySelector('button'), img = figure.querySelector('img');
-    const label = button.querySelector('.reveal-label') || button, hint = button.querySelector('.reveal-hint');
+    const pair = pairs[Number(figure.dataset.pair)];
+    const button = figure.querySelector('.zombie-reveal');
+    const img = figure.querySelector('img');
+    if (!pair || !button || !img) return;
+    const label = button.querySelector('.reveal-label');
     let zombie = false;
     button.addEventListener('click', async () => {
+      if (button.disabled) return;
       button.disabled = true;
-      const next = !zombie, preload = new Image(); preload.src = next ? pair.zombie : pair.living;
+      const next = !zombie, preload = new Image();
+      preload.src = next ? pair.zombie : pair.living;
       try {
         await preload.decode();
-        img.src = preload.src; zombie = next;
+        img.src = preload.src;
+        zombie = next;
         img.alt = pair.title + (zombie ? ', zombie' : ', living');
-        figure.querySelector('.state-label').textContent = zombie ? 'zombie' : 'living';
+        figure.querySelector('.state-label').textContent = zombie ? 'Zombie' : 'Living';
         button.setAttribute('aria-pressed', String(zombie));
-        label.textContent = (zombie ? 'Back to living' : 'See the zombie') + (label === button ? ' ↗' : '');
-        if (hint) hint.textContent = zombie ? 'Press to return' : 'Press to preview';
-      } catch (_) { label.textContent = 'Preview could not load. Try again'; }
-      finally { button.disabled = false; }
+        label.textContent = zombie ? 'Back to living' : 'See the zombie';
+      } catch (_) {
+        label.textContent = 'Could not load preview. Try again';
+      } finally {
+        button.disabled = false;
+      }
     });
   });
-  // Barack's opening painting is static. Only the later painting rotates per visit.
-  const heroNames = new Set([
-    'Tideheart', 'Afterburn', 'Snoop Dogg', 'Popeye', 'Hulk', 'Dracula', 'Leeloo',
-    'Rene', 'Gustav', 'Elliott', 'Leia', 'Marty', 'Frida', 'Batman', 'Donald',
-    'Elizabeth', 'Napoleon', 'Amy', 'Ozzy'
-  ]);
-  const slots = [...document.querySelectorAll('.band-dog')];
-  async function reveal(img, src, title) {
-    const preload = new Image();
-    preload.src = src;
-    await preload.decode();
-    img.src = preload.src;
-    img.alt = title + ', a living dog painting';
-    if (img.classList.contains('band-dog')) {
-      img.nextElementSibling.textContent = title + ' · a painting from ALL DOGS';
-      try { sessionStorage.setItem('alldogs-home-last-band', title); } catch (_) {}
-    }
-  }
-  fetch('/dog-pound/dogs.json?v=20260916', {signal: AbortSignal.timeout(12000)}).then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); }).then(data => {
-    const dogs = data.items.filter(d => d.state === 'living' && d.curation === 'loved' && d.title !== 'Marie');
-    if (!dogs.length) throw Error('Unavailable');
-    for (let i=dogs.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [dogs[i],dogs[j]]=[dogs[j],dogs[i]]; }
-    const heroDogs = dogs.filter(d => heroNames.has(d.title));
-    if (!heroDogs.length) throw Error('Unavailable');
-    try {
-      const last = sessionStorage.getItem('alldogs-home-last-band');
-      if (heroDogs.length > 1 && heroDogs[0].title === last) heroDogs.push(heroDogs.shift());
-    } catch (_) {}
-    slots.forEach((img,index) => {
-      const dog=heroDogs[index]; if (!dog) return;
-      reveal(img, dog.variants[0].src, dog.title).catch(() => {});
+  const dialog = document.getElementById('art-dialog');
+  if (!dialog) return;
+  const art = document.getElementById('art-dialog-image');
+  const title = document.getElementById('art-dialog-title');
+  let opener = null;
+  document.querySelectorAll('.artwork-open').forEach(button => {
+    button.addEventListener('click', () => {
+      opener = button;
+      const source = button.querySelector('img');
+      art.src = button.dataset.artFull || source.src;
+      art.alt = source.alt;
+      title.textContent = source.alt;
+      dialog.showModal();
+      document.documentElement.classList.add('art-is-open');
     });
-    const editorialDog = dogs.find(d => d.title !== 'Barack' && !heroDogs.slice(0, slots.length).includes(d));
-    if (editorialDog) reveal(document.getElementById('whyDog'), editorialDog.variants[0].src, editorialDog.title).catch(() => {});
-  }).catch(() => {}); // The approved static paintings remain if the catalog is unavailable.
+  });
+  dialog.querySelector('.art-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => {
+    document.documentElement.classList.remove('art-is-open');
+    art.removeAttribute('src');
+    opener?.focus({preventScroll:true});
+  });
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
 })();
