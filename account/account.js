@@ -4,6 +4,19 @@
   const page = document.body.dataset.accountPage;
   const content = $('account-content');
   let identity, account, busy = false;
+  // The invitation proof survives only this tab's X sign-in round trip.
+  // It never appears in HTTP referrers, query strings, analytics, or the address bar after capture.
+  const inviteKey='alldogs-private-invitation';
+  let invitation;
+  try {
+    const supplied=new URLSearchParams((location.hash||'').slice(1)).get('invite');
+    if(supplied&&/^[A-Za-z0-9_-]{43}$/.test(supplied)){
+      sessionStorage.setItem(inviteKey,supplied);
+      history.replaceState(null,'',location.pathname+location.search);
+    }
+    invitation=sessionStorage.getItem(inviteKey);
+  } catch { message('Allow storage for this tab, then reopen your invitation link.'); }
+
   const words = {looking_for_vouch:'Looking for a vouch',vouched:'Vouched for. Waiting for Wubbushi.',vouch_suspended:'Vouch needs review',invited:'Your garden invitation is ready',adopted:'Adopted',active:'Open',expired:'Expired',cancelled:'Withdrawn'};
   const reason = {eligible:'You can vouch.',three_outstanding:'All three vouches are in use.',sold_own_dog:'You sold your dog, so you can no longer vouch.',invitee_sold:'Someone you vouched for sold their dog, so you can no longer vouch.'};
   function node(tag, text, cls) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (cls) n.className = cls; return n; }
@@ -18,10 +31,11 @@
   async function change(action, body, success) {
     if (busy) return;
     busy=true;
-    for(const b of content.querySelectorAll('button')) b.disabled=true;
+    const buttons=[...content.querySelectorAll('button')].map(b=>[b,b.disabled]);
+    for(const [b] of buttons) b.disabled=true;
     try { await api.request('club/'+action,body);await loadContent();message(success); }
     catch(error) {message(error.message);}
-    finally {busy=false;for(const b of content.querySelectorAll('button')) b.disabled=false;}
+    finally {busy=false;for(const [b,disabled] of buttons) if(b.isConnected)b.disabled=disabled;}
   }
   function vouchesCard() {
     if (!account.owner) return;
@@ -38,6 +52,10 @@
   }
   function lounge() {
     const app=account.application;
+    if(account.privateAdoption?.status==='accepted'){
+      const gift=account.privateAdoption,c=card(gift.dogName+' is home.');
+      c.append(node('p',gift.isTest?'Your test adoption is saved. Erin’s originals remain available.':'Your adoption is saved. NFT delivery will follow.'),link('Go to my dog ↗','/my-dog/','button primary'));return;
+    }
     if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p',account.owner.dogName+' is in your account.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
     if(account.hasInvitation&&!app){const c=card('Your invitation.');c.append(node('p','Wubbushi has chosen dogs for you.'),link('Come into the garden ↗','/viewing-room/','button primary'));return;}
     if(!app){const c=card('Already applied?');c.append(node('p','Link your application with its private receipt. Sign in with the same X account you used to apply.'));
@@ -51,6 +69,12 @@
     listed.append(button(app.listed?'Remove me from the waitlist':'Add me to the waitlist',()=>change('listing',{listed:!app.listed},app.listed?'You are no longer listed. Your application is still saved.':'You are on the public waitlist.'),'button primary'));
   }
   function myDog() {
+    const gift=account.privateAdoption;
+    if(gift?.status==='accepted'){
+      const dog=gift.dogs.find(d=>d.id===gift.selectedDog),c=card(gift.dogName);
+      if(dog){const img=node('img');img.src=dog.original;img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
+      c.append(node('p',gift.isTest?'Test adoption saved':'Adopted','account-status'),node('p','Chosen by @'+identity.handle+' · '+date(gift.acceptedAt)),node('p',gift.isTest?'This is your private test. Erin’s originals remain available.':'An artist gift from Wubbushi. No payment is due.'),node('p','NFT delivery is pending. No wallet is needed yet.','account-note'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
+    }
     const dog=account.owner;
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
     const c=card(dog.dogName);if(dog.painting){const img=node('img');img.src=artSrc(dog.painting);img.alt=dog.dogName+', '+dog.dogStatus;img.className='account-dog';c.append(img);}
@@ -97,6 +121,10 @@
         if(identity.capabilities.xLogin&&page==='waitlist'){$('gate-title').textContent='Own a dog?';$('gate-copy').textContent='Sign in to vouch for someone on the waitlist.';}
       }
       message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?'Signed in as @'+identity.handle+'.':'');
+      if(identity.signedIn&&invitation){
+        await api.request('club/gift-claim',{invitation});
+        sessionStorage.removeItem(inviteKey);invitation=null;
+      }
       await loadContent();
     }catch(error){message(error.message);}
   }

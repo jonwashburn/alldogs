@@ -71,24 +71,26 @@
    try{await change(action,body,message);}finally{committing=false;if(room===generation&&switcher)switcher.disabled=false;}
   }
   const closer=node('button',undefined,'garden-original');closer.type='button';closer.append(word('gardenOriginal','See the original'));closer.addEventListener('click',openOriginal);content.append(closer);
-  if(artistGift)content.append(node('p','Artist gift','garden-eyebrow'));
+  if(artistGift)content.append(node('p',data.isTest?'Your private test':'Artist gift','garden-eyebrow'));
+  if(data.isTest)content.append(node('p','Try the whole adoption. Erin’s originals stay available.','account-note'));
   if(data.note)content.append(node('p',data.note,'garden-personal-note'));
   const form=node('form',undefined,'room-form'),heading=node('h2','What would you call this dog?');
   const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
   const save=node('button',undefined,'garden-save');save.type='submit';save.disabled=true;save.append(word('gardenChoose','This is my dog'));
   const note=node('p','Save your choice and name. Nothing is due now.','account-note');
-  const details=node('details');details.append(node('summary','About taking your dog home'),node('p','This saves your choice and name. It does not mint or transfer the artwork.'),node('p',artistGift?'This artwork is an artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
+  const details=node('details');details.append(node('summary','About taking your dog home'),node('p',artistGift?'Choose a painting and a name, then bring your dog home. Your adoption will be saved to your X account. NFT delivery will follow; no wallet is needed yet.':'This saves your choice and name. It does not mint or transfer the artwork.'),node('p',artistGift?'This artwork is an artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
   const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
   form.append(heading,label,save,note,details,status);content.append(form);
   let accept;
   if(artistGift&&data.canAccept===true&&data.selectedDog&&!accepted){
    accept=node('button','Bring my dog home','button primary');accept.type='button';
-   accept.addEventListener('click',()=>{if(accept.disabled||room!==generation)return;if(name.value.trim()!==data.dogName){status.textContent='Save your updated name before bringing your dog home.';return;}accept.disabled=true;commit('accept-adoption',{},'Your adoption is accepted. Your NFT delivery is being prepared.').finally(()=>{if(room===generation)accept.disabled=false;});});
+   accept.addEventListener('click',()=>{if(accept.disabled||room!==generation)return;if(name.value.trim()!==data.dogName){status.textContent='Save your updated name before bringing your dog home.';return;}accept.disabled=true;commit('accept-adoption',{invitationId:data.invitationId,revision:data.revision,dogId:data.selectedDog,name:data.dogName},data.isTest?'Your test adoption is saved.':'Your dog is home. Your adoption is saved.').finally(()=>{if(room===generation)accept.disabled=false;});});
    form.append(accept);
   }
   if(accepted){
    save.hidden=true;name.readOnly=true;details.hidden=true;
-   content.append(node('p',data.status==='delivered'?'Your dog is home. The NFT delivery is confirmed.':'Your adoption is accepted. Your NFT delivery is being prepared.','garden-personal-note'));
+   const home=node('a','Visit my dog ↗','button primary');home.href='/my-dog/';content.append(home);
+   content.append(node('p',data.status==='delivered'?'Your dog is home. The NFT delivery is confirmed.':(data.isTest?'Your test adoption is saved. Erin’s originals remain available.':'Your dog is home. Your adoption is saved. NFT delivery will follow.'),'garden-personal-note'));
   }
   const mats=data.dogs.some(dog=>!customSubject(dog))?await subjects():null;
   async function show(i){
@@ -127,7 +129,7 @@
     options.forEach((input,j)=>{input.checked=j===candidate;});
     if(accept){accept.hidden=dog.id!==data.selectedDog;accept.disabled=name.value.trim()!==data.dogName;}
     heading.textContent=accepted?'Your dog.':data.selectedDog===dog.id?'Your dog has a name.':'What would you call this dog?';
-    note.textContent=data.selectedDog===dog.id?'Your choice is saved. You can revisit it here.':(artistGift?'An artist gift, chosen by you.':'Save your choice and name. Nothing is due now.');
+    note.textContent=accepted?'No wallet is needed yet.':data.selectedDog===dog.id?'Your choice is saved. Bring your dog home when you’re ready.':(artistGift?'An artist gift, chosen by you.':'Save your choice and name. Nothing is due now.');
     document.body.dataset.gardenState='invited';
     status.textContent=fallback?'Your original painting is here. The garden scene is temporarily unavailable.':useCustom||useMatte?'':'Your original painting is here.';save.disabled=accepted;
    }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted)save.disabled=false;if(accept)accept.disabled=name.value.trim()!==data.dogName;}}
@@ -137,7 +139,7 @@
   form.addEventListener('submit',event=>{
    event.preventDefault();if(accepted||index<0||save.disabled||room!==generation)return;
    const value=name.value.trim();if(!value){name.setCustomValidity('Give your dog a name.');name.reportValidity();return;}name.setCustomValidity('');
-   commit('choose',{dogId:data.dogs[index].id,name:value},'Your choice and name are saved. Nothing is due now.');
+   commit('choose',{dogId:data.dogs[index].id,name:value,...(artistGift?{invitationId:data.invitationId,revision:data.revision}:{})},'Your choice and name are saved.');
   });
   name.addEventListener('input',()=>{name.setCustomValidity('');if(accept)accept.disabled=name.value.trim()!==data.dogName;});
   controls.addEventListener('keydown',event=>{
