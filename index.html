@@ -12,7 +12,7 @@
   <script src="/dog-pound/application-email.js?v=20260917-email1" defer></script>
   <script src="/dog-pound/adoption-form.js?v=20260918-wish1" defer></script>
   <script src="/home-rotation.js?v=20260918-wide1" defer></script>
-  <script src="/gate.js?v=20260919-navigation1" defer></script>
+  <script src="/gate.js?v=20260919-inline1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
 <meta property="og:title" content="ALL DOGS · Wubbushi">
 <meta property="og:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
@@ -30,13 +30,14 @@
   <link rel="stylesheet" href="/painting/painted.css?v=20260918-display1">
   <script src="/painting/page.js?v=20260918-display1" defer></script>
 <link rel="stylesheet" href="/site.css?v=20260918-polish1">
+  <link rel="stylesheet" href="/letter.css?v=20260919-inline1">
 </head>
 <body class="invitation-page">
   <div class="painted painted-ground" data-paint="ground" aria-hidden="true"><img src="/painting/ground.webp" alt=""><canvas></canvas></div>
   <header class="masthead">
     <a class="wordmark" href="./" aria-label="ALL DOGS, return to the gate"><span class="painted " data-paint="wordmark"><img src="/painting/wordmark.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS</span></span></a>
     <span class="artist"><span class="painted " data-paint="artist"><img src="/painting/artist.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Paintings by Wubbushi</span></span></span>
-    <nav class="gate-nav" aria-label="Main navigation"><button class="text-button" data-open="work"><span class="painted " data-paint="work"><img src="/painting/work.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The work</span></span></button><button type="button" class="text-button" data-open-adoption aria-haspopup="dialog" aria-controls="adoption-dialog"><span class="painted " data-paint="waitlist"><img src="/painting/waitlist.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Join Waitlist</span></span></button></nav>
+    <nav class="gate-nav" aria-label="Main navigation"><a class="text-button" href="#why"><span class="painted " data-paint="work"><img src="/painting/work.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The work</span></span></a><button type="button" class="text-button" data-open-adoption aria-haspopup="dialog" aria-controls="adoption-dialog"><span class="painted " data-paint="waitlist"><img src="/painting/waitlist.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Join Waitlist</span></span></button></nav>
   </header>
 
   <main>
@@ -51,12 +52,12 @@
           <span class="painted " data-paint="card"><img src="/painting/card.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">ALL DOGS. Come in. Open the gate</span></span>
         </button>
       </div>
-      <div class="arrival-foot"><p><span class="painted " data-paint="only"><img src="/painting/only.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Invitation only.</span></span></p><button class="text-button" data-open="note"><span class="painted " data-paint="note"><img src="/painting/note.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">A note from Wubbushi</span></span></button></div>
+      <div class="arrival-foot"><p><span class="painted " data-paint="only"><img src="/painting/only.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Invitation only.</span></span></p></div>
     </section>
 
     <section class="viewing" id="viewing" aria-labelledby="viewing-title" hidden>
       <div class="viewing-heading">
-        <div class="viewing-head"><p class="eyebrow">From the collection</p><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp?v=20260918-display1" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Display only. Not available for adoption.</span></span></h1></div>
+        <div class="viewing-head"><h1 id="viewing-title" tabindex="-1"><span class="painted" data-paint="viewingTitle"><img src="/painting/viewingTitle.webp?v=20260918-display1" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Display only. Not available for adoption.</span></span></h1></div>
         <button type="button" class="text-button" id="close-viewing" aria-label="Close and return to the gate"><span class="painted" data-paint="close"><img src="/painting/close.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Close</span></span></button>
       </div>
       <div class="dog-gallery" role="region" aria-label="Browse the paintings" aria-roledescription="carousel">
@@ -79,15 +80,19 @@
         <a href="/my-dog/">Visit your dog</a>
       </nav>
     </section>
+    <section class="artist-letter" id="why" aria-labelledby="letter-title">
+      <header class="letter-heading" id="note"><p class="eyebrow">A note from Wubbushi</p><h2 id="letter-title" tabindex="-1">A dog for you.</h2></header>
+      <div class="letter-copy"><p>I want to make little paintings for the people who become part of my life.</p><p>This is a journal for me. Each dog is a chance to remember a person and the time when we got to know each other. I hope I'm still adding to it twenty years from now.</p><p>When a dog goes home with you, your name goes on his collar. You give him a name too. That first entry stays with him as his story continues.</p><p>I hope you'll keep him. Years from now, I'd like to look through this collection and remember a friend with each dog.</p><h3>The drawings that would have been on the fridge.</h3><p>ALL DOGS comes from the same childhood as <a href="https://exaltedlove.com/" target="_blank" rel="noopener noreferrer">HOLY</a>, my collection about the photographs we lost. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong.</p><h3>The paint is code.</h3><p>I've been building a brush in code. Each bristle carries a finite amount of paint, picks up what's still wet and leaves a mark where it touches the surface. Long strokes run dry. I write each dog's composition into the painter: its face, clothes, pose and the world around it.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p></div>
+      <figure class="paint-film" id="medium">
+    <video controls width="3840" height="1920" playsinline preload="none" poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_paint_film_20260917/marie-poster-3840.jpg" aria-label="Marie painted in two minutes, full canvas in 4K with instrumental music" aria-describedby="marie-film-caption"><source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_flow_film_20260917/marie-painting-flow-4k.mp4" type="video/mp4">Your browser cannot play this film. <a href="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_flow_film_20260917/marie-painting-flow-4k.mp4">Watch Marie being painted.</a></video>
+    <figcaption class="wrap" id="marie-film-caption"><span>Marie · paint in motion</span><span>2 minutes · 4K · original music. Full canvas, no zoom.</span></figcaption>
+  </figure>
+    </section>
     <noscript><p class="noscript-note">Turn on JavaScript to join the waitlist, <a href="/viewing-room/">Open your invitation</a> or <a href="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg">See the painting</a>.</p></noscript>
   </main>
 
-  <footer class="site-footer"><span><span class="painted" data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></span><p><span class="painted " data-paint="quote"><img src="/painting/quote.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">“You make the record anyway.”</span></span></p><button class="text-button" data-open="note"><span class="painted " data-paint="journal"><img src="/painting/journal.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">The journal</span></span></button></footer>
+<footer class="site-footer"><p><span class="painted" data-paint="quote"><img src="/painting/quote.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">“You make the record anyway.”</span></span></p></footer>
 
-  <dialog id="reading" aria-labelledby="reading-title">
-    <div class="dialog-top"><img class="reading-mark" src="/painting/wordmark.webp" alt="ALL DOGS" width="436" height="92"><button class="text-button close-dialog" aria-label="Close letter"><img src="/painting/close.webp" alt="Close" width="155" height="71"></button></div>
-    <article id="reading-body"></article>
-  </dialog>
   <dialog id="close-view" aria-label="Barack, a closer look"><button class="text-button close-dialog">Close <span aria-hidden="true">×</span></button><img src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/hero_r1388ones_cotton/hero_faithful_62_2400.jpg" width="2400" height="1200" alt="A closer view of the original Barack painting, including the dry paint, blue mask and flame wings."></dialog>
 
 <dialog class="adoption-dialog" id="adoption-dialog" aria-labelledby="adoption-dialog-title">
@@ -115,10 +120,5 @@
   </div>
 </dialog>
 
-  <template id="copy-work"><p class="eyebrow">The work</p><h2 id="reading-title">The drawings that would have been on the fridge.</h2><p>ALL DOGS comes from the same childhood as <a href="https://exaltedlove.com/" target="_blank" rel="noopener noreferrer">HOLY</a>, my collection about the photographs we lost. I wrote a program to paint the way a kid paints: a fat outline, paint running out mid-stroke, an eye a little wrong.</p><h3>The paint is code.</h3><p>I've been building a brush in code. Each bristle carries a finite amount of paint, picks up what's still wet and leaves a mark where it touches the surface. Long strokes run dry. I write each dog's composition into the painter: its face, clothes, pose and the world around it.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p><figure class="paint-film">
-    <video controls width="3840" height="1920" playsinline preload="none" poster="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_paint_film_20260917/marie-poster-3840.jpg" aria-label="Marie painted in two minutes, full canvas in 4K with instrumental music" aria-describedby="marie-film-caption"><source src="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_flow_film_20260917/marie-painting-flow-4k.mp4" type="video/mp4">Your browser cannot play this film. <a href="https://recognitionphysics-public.t3.tigrisfiles.io/share/alldogs_design_live/marie_flow_film_20260917/marie-painting-flow-4k.mp4">Watch Marie being painted.</a></video>
-    <figcaption class="wrap" id="marie-film-caption"><span>Marie · paint in motion</span><span>2 minutes · 4K · original music. Full canvas, no zoom.</span></figcaption>
-  </figure></template>
-  <template id="copy-note"><p class="eyebrow">A note from Wubbushi</p><h2 id="reading-title">A dog for you.</h2><p>I want to make little paintings for the people who become part of my life.</p><p>This is a journal for me. Each dog is a chance to remember a person and the time when we got to know each other. I hope I'm still adding to it twenty years from now.</p><p>When a dog goes home with you, your name goes on his collar. You give him a name too. That first entry stays with him as his story continues.</p><p>I hope you'll keep him. Years from now, I'd like to look through this collection and remember a friend with each dog.</p><p class="signature"><span class="painted " data-paint="signature"><img src="/painting/signature.webp" alt="" aria-hidden="true"><canvas aria-hidden="true"></canvas><span class="sr-only">Wubbushi</span></span></p></template>
 </body>
 </html>

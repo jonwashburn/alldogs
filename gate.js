@@ -6,6 +6,7 @@ const viewing = document.getElementById('viewing');
 const enter = document.getElementById('enter');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let openingTimer;
+let applicationReturnHash = '';
 function setRoute(hash) {
   if (location.hash !== hash) history.pushState(null, '', location.pathname + location.search + hash);
 }
@@ -91,7 +92,7 @@ async function changeDog(direction) {
 document.getElementById('previous-dog').addEventListener('click', () => changeDog(-1));
 document.getElementById('next-dog').addEventListener('click', () => changeDog(1));
 document.addEventListener('keydown', event => {
-  if (viewing.hidden || document.querySelector('dialog[open]') ||
+  if (viewing.hidden || viewing.getBoundingClientRect().bottom <= 0 || document.querySelector('dialog[open]') ||
       event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
       event.target.closest('input, textarea, select, [contenteditable]')) return;
   if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -99,22 +100,11 @@ document.addEventListener('keydown', event => {
     changeDog(event.key === 'ArrowLeft' ? -1 : 1);
   } else if (event.key === 'Escape') returnToGate();
 });
-const reading = document.getElementById('reading');
-function openLetter(name) {
-  const copy = document.getElementById('copy-' + name);
-  if (!copy) return;
-  document.getElementById('reading-body').replaceChildren(copy.content.cloneNode(true));
-  if (!reading.open) reading.showModal();
-  reading.scrollTop = 0;
-  document.body.classList.add('modal-open');
-}
 document.addEventListener('click', event => {
-  const button = event.target.closest('[data-open]');
-  if (button) {
-    setRoute(button.dataset.open === 'work' ? '#why' : '#note');
-    openLetter(button.dataset.open);
+  if (event.target.closest('[data-open-adoption]')) {
+    applicationReturnHash = ['#apply', '#drop'].includes(location.hash) ? (viewing.hidden ? '' : '#collection') : location.hash;
+    setRoute('#apply');
   }
-  if (event.target.closest('[data-open-adoption]')) setRoute('#apply');
 });
 enlarge.addEventListener('click', () => {
   const dog = dogs[currentDog];
@@ -127,14 +117,11 @@ enlarge.addEventListener('click', () => {
   closeView.showModal();
   document.body.classList.add('modal-open');
 });
-document.querySelectorAll('#reading, #close-view').forEach(dialog => {
+document.querySelectorAll('#close-view').forEach(dialog => {
   dialog.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
     dialog.querySelectorAll('video').forEach(video => video.pause());
     document.body.classList.remove('modal-open');
-    if (dialog === reading && ['#why', '#medium', '#note'].includes(location.hash)) {
-      history.replaceState(null, '', location.pathname + location.search + (viewing.hidden ? '' : '#collection'));
-    }
   });
   dialog.addEventListener('click', event => {
     const box = dialog.getBoundingClientRect();
@@ -142,11 +129,10 @@ document.querySelectorAll('#reading, #close-view').forEach(dialog => {
   });
 });
 
-// Existing shared links now open their matching panel on the painted page.
+// Existing letter links scroll to the copy in the page, without an overlay.
 const followOldLink = () => {
   window.clearTimeout(openingTimer);
   const application = document.getElementById('adoption-dialog');
-  if (reading.open && !['#why', '#medium', '#note'].includes(location.hash)) reading.close();
   if (application.open && !['#apply', '#drop'].includes(location.hash)) application.close();
   if (movedLinks[location.hash]) location.replace(movedLinks[location.hash]);
   else if (['#apply', '#drop'].includes(location.hash)) {
@@ -154,18 +140,17 @@ const followOldLink = () => {
     if (!dialog.open) document.querySelector('[data-open-adoption]').click();
   } else if (location.hash === '#collection') {
     showDog();
-  } else if (location.hash === '#note') {
-    openLetter('note');
-  } else if (['#why', '#medium'].includes(location.hash)) {
-    openLetter('work');
-    if (location.hash === '#medium') reading.querySelector('video').scrollIntoView();
+  } else if (['#why', '#medium', '#note'].includes(location.hash)) {
+    const target = document.getElementById(location.hash.slice(1));
+    target.scrollIntoView({ block: 'start' });
+    if (location.hash !== '#medium') document.getElementById('letter-title').focus({ preventScroll: true });
   } else if (!location.hash && (!viewing.hidden || arrival.classList.contains('opening'))) {
     returnToGate(false);
   }
 };
 document.getElementById('adoption-dialog').addEventListener('close', () => {
   if (['#apply', '#drop'].includes(location.hash)) {
-    history.replaceState(null, '', location.pathname + location.search + (viewing.hidden ? '' : '#collection'));
+    history.replaceState(null, '', location.pathname + location.search + applicationReturnHash);
   }
 });
 followOldLink();

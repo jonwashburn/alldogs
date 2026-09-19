@@ -1,0 +1,26 @@
+/* One continuous letter on the painted page. */
+.invitation-page .arrival-foot{justify-content:center}
+.artist-letter{width:min(984px,calc(100% - 88px));margin:64px auto 0;padding:64px 0 56px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:0 64px;scroll-margin-top:40px}
+.letter-heading{scroll-margin-top:40px}
+.letter-heading .eyebrow{font:10px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.12em;margin:0 0 18px;color:var(--muted)}
+.letter-heading h2{font:400 clamp(36px,4vw,49px)/1.12 var(--serif);letter-spacing:-.035em;margin:0;max-width:8ch}
+.letter-heading h2:focus{outline:none}
+.letter-copy p{font:19px/1.7 var(--serif);margin:0 0 23px;color:var(--ink)}
+.letter-copy h3{font:400 29px/1.2 var(--serif);letter-spacing:-.025em;margin:44px 0 20px;max-width:23ch}
+.letter-copy .signature{width:142px;margin:32px 0 0!important}
+.artist-letter .paint-film{grid-column:1/-1;margin:52px 0 0;scroll-margin-top:32px}
+.artist-letter .paint-film figcaption{flex-direction:row;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
+.invitation-page>.site-footer{justify-content:center;min-height:88px;padding:8px 0 36px}
+.invitation-page>.site-footer>p{margin:0;max-width:100%}
+@media(max-width:700px){
+ .artist-letter{width:calc(100% - 48px);margin-top:32px;padding:36px 0 32px;grid-template-columns:minmax(0,1fr);gap:26px;scroll-margin-top:24px}
+ .letter-heading{scroll-margin-top:24px}
+ .letter-heading .eyebrow{margin-bottom:13px}
+ .letter-heading h2{font-size:36px;max-width:none}
+ .letter-copy p{font-size:18px;line-height:1.65;margin-bottom:21px}
+ .letter-copy h3{font-size:27px;margin-top:36px}
+ .letter-copy .signature{width:127px;margin-top:28px!important}
+ .artist-letter .paint-film{margin-top:8px;scroll-margin-top:24px}
+ .artist-letter .paint-film figcaption{font-size:11px;line-height:1.6;gap:4px}
+ .invitation-page>.site-footer{min-height:80px;padding-top:8px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+}
