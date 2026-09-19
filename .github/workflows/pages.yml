@@ -49,6 +49,7 @@ jobs:
           node --check viewing-room/garden/scene.js
           node --check viewing-room/garden/worker.js
           node .github/scripts/check-garden.cjs
+          node --check admin/admin.js
           node --check account/account.js
           node --check account/payments.js
           node .github/scripts/check-payments.cjs

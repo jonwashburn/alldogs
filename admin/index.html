@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.alldogs.wtf; img-src 'self' https://alldogs.wtf; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>The invitation desk · ALL DOGS</title>
+<link rel="stylesheet" href="/admin/admin.css?v=20260919-1">
+<script src="/account/account-api.js?v=20260917-club1" defer></script>
+<script src="/admin/admin.js?v=20260919-1" defer></script>
+</head>
+<body>
+<header class="mast"><a href="/" aria-label="ALL DOGS home"><img src="/assets/all-dogs-wordmark.svg" width="177" height="32" alt="ALL DOGS"></a><span class="private-label">Wubbushi’s private desk</span><button id="close" hidden>Lock desk</button></header>
+<main>
+<div class="page-heading"><div><p class="eyebrow">A little closer to home</p><h1>The invitation desk.</h1><p class="lede">Good people. The right dogs. A personal invitation.</p></div><button id="refresh" hidden>Refresh ↻</button></div>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="login" class="login-card"><h2>Welcome back, Wubbushi.</h2><p>Open your private waitlist with your existing review key.</p><form id="key-form"><label for="key">Private review key</label><div class="key-row"><input id="key" type="password" required autocomplete="off" spellcheck="false"><button class="primary" type="submit">Open desk →</button></div></form><p class="muted">Your key stays in this tab’s memory and is cleared when you lock or close the desk.</p></section>
+<section id="workspace" hidden aria-label="Invitation management">
+<div id="stats" class="stats"></div>
+<div class="desk-layout"><aside class="people-pane" aria-label="Waitlist applicants"><div class="list-tools"><label for="search">Find a person or voucher</label><input id="search" type="search" placeholder="Search handle, email, or voucher…"><label class="sr-only" for="filter">Application filter</label><select id="filter"><option value="all">Everyone</option><option value="waiting">Waiting for an invitation</option><option value="vouched">Current vouch</option><option value="draft">Drafts</option><option value="invited">Invited</option><option value="attention">Email needs attention</option></select></div><p id="list-count" class="muted"></p><div id="people" class="people"></div></aside><section id="detail" class="detail" aria-label="Selected applicant"></section></div>
+</section>
+<noscript>Turn on JavaScript to use your private invitation desk.</noscript>
+</main>
+<dialog id="preview" aria-labelledby="preview-title"><div class="dialog-heading"><p class="eyebrow">One person. Their private viewing.</p><button id="preview-close" aria-label="Close invitation preview">×</button></div><h2 id="preview-title">Ready to invite them?</h2><div id="preview-body"></div><div class="dialog-actions"><button id="preview-back">Keep editing</button><button id="send" class="primary">Send invitation →</button></div><p id="send-message" role="status" aria-live="polite"></p></dialog>
+<footer>Private, by invitation. Painted by Wubbushi.</footer>
+</body></html>

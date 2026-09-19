@@ -7,11 +7,16 @@
   // The invitation proof survives only this tab's X sign-in round trip.
   // It never appears in HTTP referrers, query strings, analytics, or the address bar after capture.
   const inviteKey='alldogs-private-invitation';
-  let invitation;
+  let invitation, viewing;
+  const viewingKey='alldogs-curated-viewing';
   try {
+    const suppliedViewing=new URLSearchParams((location.hash||'').slice(1)).get('viewing');
+    if(suppliedViewing&&/^[A-Za-z0-9_-]{43}$/.test(suppliedViewing)){sessionStorage.setItem(viewingKey,suppliedViewing);sessionStorage.removeItem(inviteKey);history.replaceState(null,'',location.pathname+location.search);}
+    viewing=sessionStorage.getItem(viewingKey);
     const supplied=new URLSearchParams((location.hash||'').slice(1)).get('invite');
     if(supplied&&/^[A-Za-z0-9_-]{43}$/.test(supplied)){
       sessionStorage.setItem(inviteKey,supplied);
+      sessionStorage.removeItem(viewingKey);viewing=null;
       history.replaceState(null,'',location.pathname+location.search);
     }
     invitation=sessionStorage.getItem(inviteKey);
@@ -124,6 +129,10 @@
       if(identity.signedIn&&invitation){
         await api.request('club/gift-claim',{invitation});
         sessionStorage.removeItem(inviteKey);invitation=null;
+      }
+      if(identity.signedIn&&viewing){
+        await api.request('club/viewing-claim',{invitation:viewing});
+        sessionStorage.removeItem(viewingKey);viewing=null;
       }
       await loadContent();
     }catch(error){message(error.message);}
