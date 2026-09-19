@@ -32,7 +32,7 @@
   const date = seconds => new Date(seconds*1000).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
   const share = app => Number.isInteger(Number(app.shortId)) && Number(app.shortId)>0 && Number(app.shortId)<=10000
     ? '/vouch/'+Number(app.shortId) : '/dog-pound/application/?id='+encodeURIComponent(app.publicId);
-  const artSrc = dog => (dog.variants?.find(v=>v.width===4000)||dog.variants?.at(-1))?.src || dog.original;
+  const artSrc = dog => dog.variants?.reduce((best,v)=>!best||v.width>best.width?v:best,null)?.src || dog.artwork || dog.original;
   async function change(action, body, success) {
     if (busy) return;
     busy=true;
@@ -77,7 +77,7 @@
     const gift=account.privateAdoption;
     if(gift?.status==='accepted'){
       const dog=gift.dogs.find(d=>d.id===gift.selectedDog),c=card(gift.dogName);
-      if(dog){const img=node('img');img.src=dog.original;img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
+      if(dog){const img=node('img');img.src=artSrc(dog);img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
       c.append(node('p','Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),node('p','We hope you love '+gift.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
     }
     const dog=account.owner;

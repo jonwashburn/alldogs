@@ -5,7 +5,7 @@
  const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
  const word=(key,alt)=>{const img=node('img');img.src='/viewing-room/garden/'+key+'.webp';img.alt=alt;return img;};
  const original=dog=>dog.original||dog.variants?.at(-1)?.src;
- const full=dog=>dog.artwork||(dog.variants?.find(v=>v.width===4000)||dog.variants?.at(-1))?.src||original(dog);
+ const full=dog=>dog.variants?.reduce((best,v)=>!best||v.width>best.width?v:best,null)?.src||dog.artwork||original(dog);
  function customSubject(dog){
   const g=dog.garden;if(!g||g.original!==dog.original)return null;
   const {width,height,bounds}=g;

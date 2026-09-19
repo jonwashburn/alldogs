@@ -37,7 +37,7 @@ body{background:#eeeadd;color:#323d31;overflow-x:clip}
 .garden-letter .button.primary:hover:not(:disabled){background:#354831}.garden-letter .button.primary:focus-visible{outline:2px solid #354831;outline-offset:4px}.garden-letter .button.primary:disabled{opacity:.45;cursor:default}
 .garden-footer{width:min(900px,calc(100% - 44px));margin:0 auto;padding:20px 0 28px;text-align:center;border:0}
 .garden-footer nav{display:flex;justify-content:center;gap:16px 26px;flex-wrap:wrap}.garden-footer a{font:12px/1.5 Arial,sans-serif;color:#56634e}.garden-footer>p{width:125px;margin:25px auto 0}.garden-footer>p img{width:100%;height:auto;display:block}
-.garden-lightbox{width:min(1440px,calc(100vw - 24px));max-height:calc(100svh - 24px);padding:15px;background:#eeeadd}.garden-lightbox>button{display:block;margin-left:auto}.garden-lightbox>img{width:100%;height:auto;max-height:calc(100svh - 145px);object-fit:contain;display:block}.garden-lightbox>p{font:12px/1.5 Arial,sans-serif;text-align:center;margin:12px auto}
+.garden-lightbox{width:calc(100vw - 24px);max-width:calc(100vw - 24px);max-height:calc(100svh - 24px);padding:15px;background:#eeeadd}.garden-lightbox>button{position:sticky;top:0;display:block;margin-left:auto;background:#eeeadd}.garden-lightbox>img{width:100%;height:auto;display:block}.garden-lightbox>p{font:12px/1.5 Arial,sans-serif;text-align:center;margin:12px auto}
 @media(max-width:700px){
  .garden-mast{margin:0 22px;min-height:64px}.garden-mast .wordmark{width:115px}.garden-exit{width:114px}
  .garden-heading{top:70px}.garden-heading h1{width:min(500px,90vw)}.garden-eyebrow{font-size:10px}
