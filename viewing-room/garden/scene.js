@@ -3,6 +3,9 @@
 (function(root){
  'use strict';
  const words={
+  chooseSupa:['I CHOOSE SUPA',490,100,58],
+  chooseRep:['I CHOOSE ONE MORE REP',760,100,58],
+  chooseDog:['I CHOOSE THIS DOG',610,100,58],
   gardenTitle:['WELCOME TO MY GARDEN.',1150,140,75],
   gardenInvitation:['YOUR INVITATION',570,86,43],
   gardenChoose:['THIS IS MY DOG',560,100,53],

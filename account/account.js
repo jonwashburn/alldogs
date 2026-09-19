@@ -59,7 +59,7 @@
     const app=account.application;
     if(account.privateAdoption?.status==='accepted'){
       const gift=account.privateAdoption,c=card(gift.dogName+' is home.');
-      c.append(node('p',gift.isTest?'Your test adoption is saved. Erin’s originals remain available.':'Your adoption is saved. NFT delivery will follow.'),link('Go to my dog ↗','/my-dog/','button primary'));return;
+      c.append(node('p','We hope you love '+gift.dogName+'.'),link('Go to my dog ↗','/my-dog/','button primary'));return;
     }
     if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p',account.owner.dogName+' is in your account.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
     if(account.hasInvitation&&!app){const c=card('Your invitation.');c.append(node('p','Wubbushi has chosen dogs for you.'),link('Come into the garden ↗','/viewing-room/','button primary'));return;}
@@ -78,7 +78,7 @@
     if(gift?.status==='accepted'){
       const dog=gift.dogs.find(d=>d.id===gift.selectedDog),c=card(gift.dogName);
       if(dog){const img=node('img');img.src=dog.original;img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
-      c.append(node('p',gift.isTest?'Test adoption saved':'Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),node('p',gift.isTest?'This is your private test. Erin’s originals remain available.':'An artist gift from Wubbushi. No payment is due.'),node('p','NFT delivery is pending. No wallet is needed yet.','account-note'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
+      c.append(node('p','Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),node('p','We hope you love '+gift.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
     }
     const dog=account.owner;
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
@@ -105,7 +105,7 @@
     let index=Math.max(0,data.dogs.findIndex(d=>d.id===data.selectedDog));
     const stage=node('div',undefined,'room-stage'),picture=button('',()=>{const d=data.dogs[index];$('large-painting').src=artSrc(d);$('large-painting').alt=d.title;$('painting-lightbox').showModal();},'room-picture'),img=node('img');picture.setAttribute('aria-label','Take a closer look at this painting');picture.append(img);stage.append(picture);content.append(stage);
     const controls=node('div',undefined,'room-controls'),caption=node('div',undefined,'room-caption'),title=node('h2'),count=node('p');caption.append(title,count);const prev=button('←',()=>show((index+data.dogs.length-1)%data.dogs.length)),next=button('→',()=>show((index+1)%data.dogs.length));prev.setAttribute('aria-label','Previous dog');next.setAttribute('aria-label','Next dog');controls.append(prev,caption,next);content.append(controls);
-    const form=node('form',undefined,'room-form account-card'),heading=node('h2','Could this be your dog?'),label=node('label','What would you call them?'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);const save=node('button','Save this dog and name','button primary');save.type='submit';form.append(heading,label,save,node('p','This saves your choice and name. It does not mint or transfer the artwork.','account-note'),node('p',data.adoptionKind==='artist_gift'?'Artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.','account-note'));content.append(form);
+    const form=node('form',undefined,'room-form account-card'),heading=node('h2','Could this be your dog?'),label=node('label','What would you call them?'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);const save=node('button','Save this dog and name','button primary');save.type='submit';form.append(heading,label,save);content.append(form);
     function show(i){index=i;const d=data.dogs[i];img.src=artSrc(d);img.alt=d.title;title.textContent=d.title;count.textContent=`${i+1} of ${data.dogs.length} · Click the painting for a closer look`;name.value=data.selectedDog===d.id?data.dogName||'':'';heading.textContent=data.selectedDog===d.id?'Your saved choice.':'Could this be your dog?';}
     form.addEventListener('submit',event=>{event.preventDefault();change('choose',{dogId:data.dogs[index].id,name:name.value.trim()},'Your choice is saved. The artwork has not been minted or transferred.');});show(index);
   }
@@ -130,10 +130,10 @@
       identity=await api.session();
       $('account-gate').hidden=identity.signedIn;$('account-logout').hidden=!identity.signedIn;
       if(!identity.signedIn){$('account-login').hidden=!identity.capabilities.xLogin;$('account-login').href=api.signIn();$('gate-title').textContent=identity.capabilities.xLogin?'Come on in.':'Your account.';$('gate-copy').textContent=identity.capabilities.xLogin?'Sign in with the X account you used to apply. Your dog, invitations, and vouches stay together here.':'Sign-in could not be started. Please try again. Your application is safe, and you can still share its link.';
-        if(identity.capabilities.xLogin&&page==='viewing-room'){$('gate-title').textContent='Come into the garden.';$('gate-copy').textContent='Open the private link in your invitation email to meet your dogs. You can also sign in to your account below.';}
+        if(identity.capabilities.xLogin&&page==='viewing-room'){$('gate-title').textContent='Your invitation.';$('gate-copy').textContent='Open the private link in your invitation email to meet your dogs. You can also sign in to your account below.';}
         if(identity.capabilities.xLogin&&page==='waitlist'){$('gate-title').textContent='Own a dog?';$('gate-copy').textContent='Sign in to vouch for someone on the waitlist.';}
       }
-      message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?(identity.authMethod==='invitation'?'Your private garden.':'Signed in as @'+identity.handle+'.'):'');
+      message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?(page==='viewing-room'?'':identity.authMethod==='invitation'?'':'Signed in as @'+identity.handle+'.'):'');
       await loadContent();
     }catch(error){message(error.message);}
   }

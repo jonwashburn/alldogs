@@ -21,6 +21,7 @@
  function clear(){
   generation++;selected=null;delete document.body.dataset.customGarden;delete document.body.dataset.ceremony;delete document.body.dataset.ceremonyCanopy;picture.hidden=true;image.removeAttribute('src');image.alt='';
   document.body.dataset.gardenState='waiting';
+  $('garden-choice-below')?.remove();
   $('large-painting').removeAttribute('src');$('large-painting').alt='';
   if($('painting-lightbox').open)$('painting-lightbox').close();
  }
@@ -70,34 +71,38 @@
    if(committing||room!==generation)return;committing=true;if(switcher)switcher.disabled=true;
    try{await change(action,body,message);}finally{committing=false;if(room===generation&&switcher)switcher.disabled=false;}
   }
-  const closer=node('button',undefined,'garden-original');closer.type='button';closer.append(word('gardenOriginal','See the original'));closer.addEventListener('click',openOriginal);content.append(closer);
-  if(artistGift)content.append(node('p',data.isTest?'Your private test':'Artist gift','garden-eyebrow'));
-  if(data.isTest)content.append(node('p','Try the whole adoption. Erin’s originals stay available.','account-note'));
-  if(data.note)content.append(node('p',data.note,'garden-personal-note'));
-  const form=node('form',undefined,'room-form'),heading=node('h2','What would you call this dog?');
-  const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
-  const save=node('button',undefined,'garden-save');save.type='submit';save.disabled=true;save.append(word('gardenChoose','This is my dog'));
-  const note=node('p','Save your choice and name. Nothing is due now.','account-note');
-  const details=node('details');details.append(node('summary','About taking your dog home'),node('p',artistGift?'Choose a painting and a name, then bring your dog home. Your adoption will be saved to your private invitation. NFT delivery will follow; no wallet is needed yet.':'This saves your choice and name. It does not mint or transfer the artwork.'),node('p',artistGift?'This artwork is an artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
-  const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
-  form.append(heading,label,save,note,details,status);content.append(form);
-  let accept;
-  if(artistGift&&data.canAccept===true&&data.selectedDog&&!accepted){
-   accept=node('button','Bring my dog home','button primary');accept.type='button';
-   accept.addEventListener('click',()=>{if(accept.disabled||room!==generation)return;if(name.value.trim()!==data.dogName){status.textContent='Save your updated name before bringing your dog home.';return;}accept.disabled=true;commit('accept-adoption',{invitationId:data.invitationId,revision:data.revision,dogId:data.selectedDog,name:data.dogName},data.isTest?'Your test adoption is saved.':'Your dog is home. Your adoption is saved.').finally(()=>{if(room===generation)accept.disabled=false;});});
-   form.append(accept);
+  function choiceButton(cls){
+   const b=node('button',undefined,'garden-choice '+cls);b.type='button';b.disabled=true;
+   b.addEventListener('click',()=>{if(index<0||committing)return;form.hidden=false;name.focus({preventScroll:true});form.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});});return b;
   }
+  const topChoice=choiceButton('garden-choice-top'),belowChoice=choiceButton('garden-choice-below');belowChoice.id='garden-choice-below';
+  // Keep the same choice directly beneath the scene and beneath its toggle.
+  content.insertBefore(topChoice,controls);$('garden-stage').append(belowChoice);
+  const closer=node('button',undefined,'garden-original');closer.type='button';closer.append(word('gardenOriginal','See the original'));closer.addEventListener('click',openOriginal);content.append(closer);
+  if(data.note&&!data.isTest&&!accepted)content.append(node('p',data.note,'garden-personal-note'));
+  const form=node('form',undefined,'room-form'),heading=node('h2','What would you call your dog?');form.hidden=true;
+  const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
+  const save=node('button',artistGift?'Adopt my dog':'Save my choice','button primary');save.type='submit';save.disabled=true;
+  const cancel=node('button','Keep looking','text-button');cancel.type='button';cancel.addEventListener('click',()=>{form.hidden=true;topChoice.focus();});
+  form.append(heading,label,save,cancel);content.append(form);
+  const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');content.append(status);
   if(accepted){
-   save.hidden=true;name.readOnly=true;details.hidden=true;
+   topChoice.hidden=belowChoice.hidden=true;
    const home=node('a','Visit my dog ↗','button primary');home.href='/my-dog/';content.append(home);
-   content.append(node('p',data.status==='delivered'?'Your dog is home. The NFT delivery is confirmed.':(data.isTest?'Your test adoption is saved. Erin’s originals remain available.':'Your dog is home. Your adoption is saved. NFT delivery will follow.'),'garden-personal-note'));
+   content.append(node('p','We hope you love '+data.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.','garden-personal-note'));
+  }
+  function setChoice(button,dog){
+   const text='I choose '+dog.title;button.setAttribute('aria-label',text);button.replaceChildren();
+   const key=dog.id==='studio-7cd6a1127ac6d4b816a5'?'chooseSupa':dog.id==='studio-f7886d58c0adfd8bdf43'?'chooseRep':'chooseDog';
+   button.append(word(key,key==='chooseDog'?'I choose this dog':text));
+   if(key==='chooseSupa'){const star=node('span','⭐','choice-star');star.setAttribute('aria-hidden','true');button.append(star);}
   }
   const mats=data.dogs.some(dog=>!customSubject(dog))?await subjects():null;
   async function show(i){
    if(room!==generation||committing)return;
    if(index>=0)drafts.set(data.dogs[index].id,name.value);
    requested=(i+data.dogs.length)%data.dogs.length;const dog=data.dogs[requested],candidate=requested,serial=++request;
-   save.disabled=true;if(accept)accept.disabled=true;status.textContent='Meeting '+dog.title+'…';picture.setAttribute('aria-busy','true');
+   save.disabled=true;topChoice.disabled=belowChoice.disabled=true;status.textContent='Meeting '+dog.title+'…';picture.setAttribute('aria-busy','true');
    const custom=customSubject(dog),matte=mats?.dogs?.[dog.id];
    const mapped=custom||(matte&&matte.original===dog.original);
    const source=custom?.source||original(dog);
@@ -127,21 +132,25 @@
     selected=dog;index=candidate;name.value=drafts.get(dog.id)||'';title.textContent=dog.title;
     count.textContent=accepted?'Chosen by you':toggle?'Two paintings, one dog for you.':data.dogs.length===1?'Chosen for you':(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
     options.forEach((input,j)=>{input.checked=j===candidate;});
-    if(accept){accept.hidden=dog.id!==data.selectedDog;accept.disabled=name.value.trim()!==data.dogName;}
-    heading.textContent=accepted?'Your dog.':data.selectedDog===dog.id?'Your dog has a name.':'What would you call this dog?';
-    note.textContent=accepted?'No wallet is needed yet.':data.selectedDog===dog.id?'Your choice is saved. Bring your dog home when you’re ready.':(artistGift?'An artist gift, chosen by you.':'Save your choice and name. Nothing is due now.');
+    setChoice(topChoice,dog);setChoice(belowChoice,dog);
+    topChoice.disabled=belowChoice.disabled=accepted;form.hidden=true;
+    heading.textContent='What would you call your dog?';name.value=drafts.get(dog.id)||dog.title;
+    save.textContent=artistGift?'Adopt '+dog.title:'Save my choice';
+    if(accepted)title.textContent=data.dogName+' is home.';
+    document.body.style.setProperty('--scene-ratio',w/h);
     document.body.dataset.gardenState='invited';
     status.textContent=fallback?'Your original painting is here. The garden scene is temporarily unavailable.':useCustom||useMatte?'':'Your original painting is here.';save.disabled=accepted;
-   }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted)save.disabled=false;if(accept)accept.disabled=name.value.trim()!==data.dogName;}}
+   }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted)save.disabled=false;if(index>=0&&!accepted)topChoice.disabled=belowChoice.disabled=false;}}
    finally{if(room===generation&&serial===request)picture.setAttribute('aria-busy','false');}
   }
   previous.addEventListener('click',()=>show(requested-1));next.addEventListener('click',()=>show(requested+1));
   form.addEventListener('submit',event=>{
    event.preventDefault();if(accepted||index<0||save.disabled||room!==generation)return;
    const value=name.value.trim();if(!value){name.setCustomValidity('Give your dog a name.');name.reportValidity();return;}name.setCustomValidity('');
-   commit('choose',{dogId:data.dogs[index].id,name:value,...(artistGift?{invitationId:data.invitationId,revision:data.revision}:{})},'Your choice and name are saved.');
+   save.disabled=true;
+   commit(artistGift?'adopt':'choose',{dogId:data.dogs[index].id,name:value,...(artistGift?{invitationId:data.invitationId,revision:data.revision}:{})},artistGift?'': 'Your choice and name are saved.').finally(()=>{if(room===generation)save.disabled=false;});
   });
-  name.addEventListener('input',()=>{name.setCustomValidity('');if(accept)accept.disabled=name.value.trim()!==data.dogName;});
+  name.addEventListener('input',()=>name.setCustomValidity(''));
   controls.addEventListener('keydown',event=>{
    if(data.dogs.length===1||event.target.closest('input,textarea,select,details')||document.querySelector('dialog[open]')||event.altKey||event.ctrlKey||event.metaKey)return;
    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();show(requested+(event.key==='ArrowLeft'?-1:1));}

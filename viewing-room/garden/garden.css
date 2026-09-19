@@ -116,3 +116,42 @@ body[data-ceremony="true"] .garden-foreground{z-index:1}
 @media(min-width:1280px){
  body[data-ceremony-canopy="true"] .garden-dog{width:min(calc((max(800px,100svh)*.9)*var(--dog-ratio)),calc((89vw - 490px)*1.35),1200px)}
 }
+
+/* A single invitation: the painting, its choice, then a name. */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.garden-original{padding:14px 0;max-width:100%;min-height:58px}
+.garden-original img{width:min(290px,100%)}
+.garden-choice{border:0;background:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:14px 0;min-height:62px;cursor:pointer;color:#202821;max-width:100%}
+.garden-choice img{width:100%;max-width:355px;height:auto;min-width:0}
+.garden-choice .choice-star{font-size:clamp(24px,3vw,36px);line-height:1}
+.garden-choice:focus-visible{outline:2px solid #354a36;outline-offset:6px}
+.garden-choice:disabled{opacity:.5;cursor:wait}
+.garden-choice[hidden],.room-form[hidden]{display:none}
+.garden-choice-top{width:100%;margin:0 auto 10px}
+.garden-choice-below{position:absolute;z-index:4;bottom:12px;left:50%;transform:translateX(-50%);width:min(370px,85%);filter:drop-shadow(0 1px 1px #eeeadd)}
+.room-controls-toggle .room-caption h2{display:none}
+.room-controls-toggle .room-caption p{margin:0}.garden-options{margin-bottom:5px}
+.garden-letter{padding:28px}.garden-letter .room-form{margin-top:15px;padding-top:20px}
+.room-form .text-button{display:block;margin:8px 0;font:16px/1.5 var(--serif);cursor:pointer}
+body[data-ceremony="true"] .garden-dog{top:0;bottom:auto;height:calc(100% - 110px);width:auto;max-width:none;aspect-ratio:var(--dog-ratio)}
+@media(min-width:1000px){
+ body[data-garden-state="invited"] .garden-main{min-height:max(720px,100svh);padding-top:105px;padding-bottom:90px;align-items:start}
+ body[data-garden-state="invited"] .garden-letter{margin-top:15px}
+ .garden-choice-below{left:calc(47vw - 220px);bottom:24px;width:min(410px,calc(89vw - 500px))}
+ body[data-ceremony="true"] .garden-dog{top:0;bottom:auto;height:calc(100% - 125px);width:auto;max-width:none}
+}
+@media(max-width:999px){
+ body[data-ceremony="true"] .garden-stage{height:clamp(440px,85vw,700px)}
+ body[data-ceremony="true"] .garden-letter{margin:0 auto 24px}
+ .garden-choice-below{bottom:10px}
+}
+
+@media(max-width:999px){body[data-garden-state="invited"] .garden-main{min-height:0}}
+.choice-star{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+
+@media(min-width:1000px){
+ body[data-ceremony="true"] .garden-main{min-height:max(720px,min(100svh,calc((89vw - 500px)/var(--scene-ratio,1.1) + 125px)))}
+ body[data-ceremony="true"] .garden-stage{--paint-height:min(calc(100% - 125px),calc((89vw - 500px)/var(--scene-ratio,1.1)))}
+ body[data-ceremony="true"] .garden-dog{height:var(--paint-height)}
+ body[data-ceremony="true"] .garden-choice-below{top:calc(var(--paint-height) + 16px);bottom:auto}
+}
