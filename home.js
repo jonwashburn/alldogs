@@ -2,7 +2,7 @@
   'use strict';
   // Preserve shared links to the information moved off the homepage.
   if (document.body.dataset.page === 'home') {
-    const moved = {'#game':'/adoption/#game', '#fates':'/adoption/#fates', '#why':'/about/#why', '#medium':'/about/#medium'};
+    const moved = {'#game':'/adoption/#game', '#fates':'/adoption/#fates', '#why':'/#why', '#medium':'/#medium'};
     const followOldLink = () => { const target = moved[location.hash]; if (target) location.replace(target); };
     followOldLink();
     window.addEventListener('hashchange', followOldLink);

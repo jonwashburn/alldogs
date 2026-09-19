@@ -6,6 +6,9 @@ const viewing = document.getElementById('viewing');
 const enter = document.getElementById('enter');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let openingTimer;
+function setRoute(hash) {
+  if (location.hash !== hash) history.pushState(null, '', location.pathname + location.search + hash);
+}
 function showDog() {
   arrival.hidden = true;
   viewing.hidden = false;
@@ -13,11 +16,13 @@ function showDog() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 enter.addEventListener('click', () => {
+  setRoute('#collection');
   enter.disabled = true;
   arrival.classList.add('opening');
   openingTimer = window.setTimeout(showDog, reducedMotion.matches ? 0 : 1100);
 });
-function returnToGate() {
+function returnToGate(updateRoute = true) {
+  if (updateRoute) setRoute('');
   window.clearTimeout(openingTimer);
   viewing.hidden = true;
   arrival.hidden = false;
@@ -105,7 +110,11 @@ function openLetter(name) {
 }
 document.addEventListener('click', event => {
   const button = event.target.closest('[data-open]');
-  if (button) openLetter(button.dataset.open);
+  if (button) {
+    setRoute(button.dataset.open === 'work' ? '#why' : '#note');
+    openLetter(button.dataset.open);
+  }
+  if (event.target.closest('[data-open-adoption]')) setRoute('#apply');
 });
 enlarge.addEventListener('click', () => {
   const dog = dogs[currentDog];
@@ -123,6 +132,9 @@ document.querySelectorAll('#reading, #close-view').forEach(dialog => {
   dialog.addEventListener('close', () => {
     dialog.querySelectorAll('video').forEach(video => video.pause());
     document.body.classList.remove('modal-open');
+    if (dialog === reading && ['#why', '#medium', '#note'].includes(location.hash)) {
+      history.replaceState(null, '', location.pathname + location.search + (viewing.hidden ? '' : '#collection'));
+    }
   });
   dialog.addEventListener('click', event => {
     const box = dialog.getBoundingClientRect();
@@ -132,14 +144,29 @@ document.querySelectorAll('#reading, #close-view').forEach(dialog => {
 
 // Existing shared links now open their matching panel on the painted page.
 const followOldLink = () => {
+  window.clearTimeout(openingTimer);
+  const application = document.getElementById('adoption-dialog');
+  if (reading.open && !['#why', '#medium', '#note'].includes(location.hash)) reading.close();
+  if (application.open && !['#apply', '#drop'].includes(location.hash)) application.close();
   if (movedLinks[location.hash]) location.replace(movedLinks[location.hash]);
   else if (['#apply', '#drop'].includes(location.hash)) {
     const dialog = document.getElementById('adoption-dialog');
     if (!dialog.open) document.querySelector('[data-open-adoption]').click();
+  } else if (location.hash === '#collection') {
+    showDog();
+  } else if (location.hash === '#note') {
+    openLetter('note');
   } else if (['#why', '#medium'].includes(location.hash)) {
     openLetter('work');
     if (location.hash === '#medium') reading.querySelector('video').scrollIntoView();
+  } else if (!location.hash && (!viewing.hidden || arrival.classList.contains('opening'))) {
+    returnToGate(false);
   }
 };
+document.getElementById('adoption-dialog').addEventListener('close', () => {
+  if (['#apply', '#drop'].includes(location.hash)) {
+    history.replaceState(null, '', location.pathname + location.search + (viewing.hidden ? '' : '#collection'));
+  }
+});
 followOldLink();
 window.addEventListener('hashchange', followOldLink);

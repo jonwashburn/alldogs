@@ -41,7 +41,7 @@ for name, page in pages.items():
         assert 'href="/#why"' in navigation and 'alt="The work"' in navigation
         assert any(attrs.get('href') == '/#apply' for _, attrs in page.tags)
     else:
-        assert re.search(r'<a href="/about/"[^>]*>The work</a>', navigation), name
+        assert re.search(r'<a href="/#why"[^>]*>The work</a>', navigation), name
         assert re.search(r'<a href="/adoption/"[^>]*>The rules</a>', navigation), name
         assert 'Join the waitlist' in navigation, name
     assert not any(attrs.get('href') == '/dog-pound/' for _, attrs in page.tags), (name, 'Keep Pound entry behind application')

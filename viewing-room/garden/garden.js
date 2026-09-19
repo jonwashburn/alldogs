@@ -8,7 +8,7 @@
  const full=dog=>(dog.variants?.find(v=>v.width===4000)||dog.variants?.at(-1))?.src||original(dog);
  function clear(){
   generation++;selected=null;picture.hidden=true;image.removeAttribute('src');image.alt='';
-  $('garden-welcome').hidden=false;document.body.dataset.gardenState='waiting';
+  document.body.dataset.gardenState='waiting';
   $('large-painting').removeAttribute('src');$('large-painting').alt='';
   if($('painting-lightbox').open)$('painting-lightbox').close();
  }
@@ -74,7 +74,7 @@
     count.textContent=(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
     heading.textContent=data.selectedDog===dog.id?'Your dog has a name.':'What would you call this dog?';
     note.textContent=data.selectedDog===dog.id?'Your choice is saved. You can revisit it here.':'Save your choice and name. Nothing is due now.';
-    $('garden-welcome').hidden=true;document.body.dataset.gardenState='invited';
+    document.body.dataset.gardenState='invited';
     status.textContent=mapped?'':'Your original painting is here.';save.disabled=false;
    }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';if(index>=0)save.disabled=false;}}
    finally{if(room===generation&&serial===request)picture.setAttribute('aria-busy','false');}

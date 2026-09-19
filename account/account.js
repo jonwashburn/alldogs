@@ -12,7 +12,8 @@
   function card(title) { const n=node('section',undefined,'account-card');n.append(node('h2',title));content.append(n);return n; }
   function message(text) { $('account-message').textContent=text; }
   const date = seconds => new Date(seconds*1000).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
-  const share = app => '/vouch/'+app.shortId;
+  const share = app => Number.isInteger(Number(app.shortId)) && Number(app.shortId)>0 && Number(app.shortId)<=10000
+    ? '/vouch/'+Number(app.shortId) : '/dog-pound/application/?id='+encodeURIComponent(app.publicId);
   const artSrc = dog => (dog.variants?.find(v=>v.width===4000)||dog.variants?.at(-1))?.src || dog.original;
   async function change(action, body, success) {
     if (busy) return;
@@ -59,11 +60,13 @@
   async function waitlist() {
     const data=await api.request('club/waitlist');
     const c=card('Hoping to find their dog.');
-    if(!data.applications.length){c.append(node('p','No one has chosen to appear here yet. Applied already? Sign in to the lounge and add your application.'),link('Go to the lounge ↗','/lounge/'));return;}
+    if(!data.applications.length){c.append(node('p','No one has chosen to appear here yet. Applied already? Sign in to your account and add your application.'),link('Your account ↗','/lounge/'));return;}
     const list=node('ul',undefined,'account-list');
     for(const app of data.applications){const li=node('li'),info=node('div');info.append(link('@'+app.handle,'https://x.com/'+encodeURIComponent(app.handle)),node('small',words[app.status]||'Awaiting review'));li.append(info);const actions=node('div',undefined,'account-links');actions.append(link('Meet the applicant ↗',share(app)));if(account?.owner?.vouch.eligible&&app.status==='looking_for_vouch'&&app.handle!==identity.handle)actions.append(link('Review & vouch ↗',share(app),'button'));li.append(actions);list.append(li);}c.append(list);
   }
   async function room() {
+    if(account.owner){const c=card('Your dog is home.');c.append(node('p','Visit your dog to see his artwork and record.'),link('Go to my dog ↗','/my-dog/'));return;}
+    if(!account.application&&!account.hasInvitation){const c=card('Your invitation starts here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog.'),link('Join the waitlist ↗','/#apply'),link('Already applied? Link your application ↗','/lounge/'));return;}
     if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog. You can revisit your wishlist while you wait.'),link('My wishlist ↗','/dog-pound/'));return;}
     const data=await api.request('club/room');
     if(data.dogs.length!==3)throw Error('Your viewing needs a little attention from Wubbushi. Your choice has not changed.');
@@ -88,7 +91,10 @@
     try {
       identity=await api.session();
       $('account-gate').hidden=identity.signedIn;$('account-logout').hidden=!identity.signedIn;
-      if(!identity.signedIn){$('account-login').hidden=!identity.capabilities.xLogin;$('account-login').href=api.signIn();$('gate-title').textContent=identity.capabilities.xLogin?'Come on in.':'Your account.';$('gate-copy').textContent=identity.capabilities.xLogin?'Sign in with the X account you used to apply. Your dog, invitations, and vouches stay together here.':'Sign-in could not be started. Please try again. Your application is safe, and you can still share its link.';}
+      if(!identity.signedIn){$('account-login').hidden=!identity.capabilities.xLogin;$('account-login').href=api.signIn();$('gate-title').textContent=identity.capabilities.xLogin?'Come on in.':'Your account.';$('gate-copy').textContent=identity.capabilities.xLogin?'Sign in with the X account you used to apply. Your dog, invitations, and vouches stay together here.':'Sign-in could not be started. Please try again. Your application is safe, and you can still share its link.';
+        if(identity.capabilities.xLogin&&page==='viewing-room'){$('gate-title').textContent='Come into the garden.';$('gate-copy').textContent='Sign in with the X account on your invitation to meet the dogs Wubbushi chose for you.';}
+        if(identity.capabilities.xLogin&&page==='waitlist'){$('gate-title').textContent='Own a dog?';$('gate-copy').textContent='Sign in to vouch for someone on the waitlist.';}
+      }
       message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?'Signed in as @'+identity.handle+'.':'');
       await loadContent();
     }catch(error){message(error.message);}
