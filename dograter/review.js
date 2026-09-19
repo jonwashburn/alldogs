@@ -212,7 +212,7 @@ function askClear(target) {
   if (stopAdvance()) loadImages();
   clearTarget = target;
   $('clear-title').textContent = target === 'all' ? 'Clear all 20 props?' : `Clear ${label(target)}?`;
-  $('clear-description').textContent = 'This removes the selected preferences and notes from this browser. Export first if you want to keep them. Other ALL DOGS feedback is unaffected.';
+  $('clear-description').textContent = 'This removes the selected preferences and notes from this browser. Export first if you want to keep them. Other All Dogs feedback is unaffected.';
   $('clear-confirm').value = ''; $('clear-confirm-button').disabled = true;
   $('clear-dialog').returnValue = 'cancel';
   $('clear-dialog').showModal();
@@ -249,7 +249,7 @@ $('note').onblur = () => {
 $('undo').onclick = undo;
 $('export').onclick = download;
 $('copy').onclick = async () => {
-  const text = ['ALL DOGS / OBAMA PROPS / ASTRA + FABLE', ...feedback().props.map(r => `${r.label}: ${r.preference ? label(r.preference) : 'Unreviewed'}${r.note ? '\n  '+r.note : ''}`)].join('\n\n');
+  const text = ['All Dogs / OBAMA PROPS / ASTRA + FABLE', ...feedback().props.map(r => `${r.label}: ${r.preference ? label(r.preference) : 'Unreviewed'}${r.note ? '\n  '+r.note : ''}`)].join('\n\n');
   try { await navigator.clipboard.writeText(text); $('tools-status').textContent = 'Feedback copied. Paste it into your next message.'; }
   catch { $('tools-status').textContent = 'Clipboard unavailable. Use Export feedback to download your notes.'; }
 };

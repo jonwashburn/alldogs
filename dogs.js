@@ -1,4 +1,4 @@
-/* ALL DOGS generative portraits.
+/* All Dogs generative portraits.
    CONTRACT (frozen, the harness depends on it):
      drawDog(canvas, seed, state)
        canvas : a 2d-capable canvas (browser canvas or @napi-rs/canvas), square.

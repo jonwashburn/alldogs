@@ -2,7 +2,10 @@
   'use strict';
   const $ = id => document.getElementById(id);
   if (!$('application-form')) return;
-  // Shared by the homepage dialog and the Pound. No wallet connection or keys.
+  const api = window.AllDogsAccount;
+  let verifiedIdentity = null, opening = false;
+  $('application-form').hidden = true;
+  // X verification happens before the application or email form is shown.
   const walletLabel = $('wallet').closest('label');
   const choiceLabel = document.createElement('label');
   choiceLabel.textContent = 'A wallet for your dog';
@@ -26,22 +29,37 @@
   }
   choice.addEventListener('change', walletChoiceChanged); walletChoiceChanged();
   const dialog = $('adoption-dialog');
-  if (dialog) {
-    document.querySelectorAll('[data-open-adoption]').forEach(button => {
-      button.addEventListener('click', () => {
-        dialog.showModal();
-        document.documentElement.classList.add('adoption-is-open');
-      });
-    });
-    $('close-adoption').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('close', () => document.documentElement.classList.remove('adoption-is-open'));
-    dialog.addEventListener('click', event => {
-      const bounds = dialog.getBoundingClientRect();
-      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
-    });
+  const registrationStatus=document.createElement('p');registrationStatus.id='registration-status';registrationStatus.setAttribute('role','status');
+  $('application-form').before(registrationStatus);
+  async function openApplication(){
+    if(opening)return;opening=true;
+    registrationStatus.textContent='Opening your waitlist application…';
+    try {
+      verifiedIdentity=await api.session();
+      if(!verifiedIdentity.signedIn||verifiedIdentity.authMethod!=='x'){
+        if(!verifiedIdentity.capabilities.xLogin)throw Error('X sign-in is temporarily unavailable. Please try again shortly.');
+        location.assign(api.signIn('/?register=1'));return;
+      }
+      let state=await api.request('club/registration');
+      // Existing receipt holders can explicitly reconnect their own old application.
+      const oldReceipt=sessionStorage.getItem('alldogs-application-receipt');
+      if(!state.application&&/^DOG-[A-F0-9]{16}$/.test(oldReceipt||'')){
+        try{await api.request('club/claim',{receipt:oldReceipt});state=await api.request('club/registration');}catch{/* A different old browser receipt is not this account's application. */}
+      }
+      $('handle').value='@'+state.handle;$('handle').readOnly=true;
+      $('application-form').hidden=!!state.application;
+      if(state.application)showReceipt(state.application.receipt,state.application.publicId,state.application.shortId);
+      registrationStatus.textContent='X account confirmed: @'+state.handle+'.';
+      if(new URLSearchParams(location.search).has('register'))history.replaceState(null,'',location.pathname+'#apply');
+      if(dialog&&!dialog.open){dialog.showModal();document.documentElement.classList.add('adoption-is-open');}
+    }catch(error){registrationStatus.textContent=error.message;if(dialog&&!dialog.open)dialog.showModal();}
+    finally{opening=false;}
   }
-  if (dialog && location.hash === '#apply') {
-    dialog.showModal(); document.documentElement.classList.add('adoption-is-open');
+  if(dialog){
+    document.querySelectorAll('[data-open-adoption]').forEach(button=>button.addEventListener('click',openApplication));
+    $('close-adoption').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('close',()=>document.documentElement.classList.remove('adoption-is-open'));
+    dialog.addEventListener('click',event=>{const bounds=dialog.getBoundingClientRect();if(event.target===dialog&&(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom))dialog.close();});
   }
   let submission = null;
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
@@ -66,7 +84,7 @@
       }
       $('share-application').hidden = false;
       $('view-application').href = url;
-      $('share-on-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I applied to adopt a dog from ALL DOGS. If you own one and are eligible to vouch, would you vouch for me?') + '&url=' + encodeURIComponent(url);
+      $('share-on-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I applied to adopt a dog from All Dogs. If you own one and are eligible to vouch, would you vouch for me?') + '&url=' + encodeURIComponent(url);
       $('copy-application').onclick = async () => {try {await navigator.clipboard.writeText(url); $('copy-application').textContent='Link copied';} catch (_) {$('copy-application').textContent='Copy the address from your application page';}};
       try { sessionStorage.setItem('alldogs-application-public-id', publicId); if (validShortId(shortId)) sessionStorage.setItem('alldogs-application-short-id', String(shortId)); } catch (_) {}
       if (!validShortId(shortId)) {
@@ -77,7 +95,7 @@
       }
     }
   }
-  try { const receipt = sessionStorage.getItem('alldogs-application-receipt'); if (/^DOG-[A-F0-9]{16}$/.test(receipt || '')) showReceipt(receipt, sessionStorage.getItem('alldogs-application-public-id'), sessionStorage.getItem('alldogs-application-short-id')); } catch (_) {}
+
   $('copy-receipt').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText($('receipt-code').textContent); $('copy-receipt').textContent = 'Private receipt copied'; }
     catch (_) { $('copy-receipt').textContent = 'Select and copy the receipt above'; }
@@ -85,6 +103,7 @@
   $('application-form').addEventListener('submit', async event => {
     event.preventDefault();
     if ($('submit-application').disabled || $('submit-application').hidden) return;
+    if (!verifiedIdentity?.signedIn || verifiedIdentity.authMethod!=='x') {await openApplication();return;}
     if (!$('application-form').reportValidity()) return;
     const values = {handle: $('handle').value.trim(), wallet: choice.value === 'existing' ? $('wallet').value.trim() : '', walletChoice: choice.value, applicationFlow: 'wallet-help-v3', website: $('website').value};
     if (/^0x0{40}$/i.test(values.wallet)) {
@@ -95,17 +114,15 @@
     try { sessionStorage.setItem('alldogs-application-attempt', JSON.stringify(submission)); } catch (_) {}
     const submit = $('submit-application'); submit.disabled = true; submit.textContent = 'Saving your application…';
     $('form-status').className = ''; $('form-status').textContent = '';
-    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 15000);
     try {
-      const response = await fetch('https://api.alldogs.wtf/collection-api/adoption-applications', {method: 'POST', credentials: 'omit', headers: {'Content-Type': 'application/json'}, signal: controller.signal, body: JSON.stringify({...values, requestId: submission.requestId})});
-      const result = await response.json();
-      if (!response.ok) throw Error(result.error || 'Could not save your application. Please try again.');
+      const result = await api.request('club/register',{...values,requestId:submission.requestId});
       if (!/^DOG-[A-F0-9]{16}$/.test(result.receipt || '')) throw Error('We could not confirm your receipt. Please try again.');
       if (!/^[A-Za-z0-9_-]{24}$/.test(result.publicId || '')) throw Error('We could not confirm your application link. Submit the same details again.');
       showReceipt(result.receipt, result.publicId, result.shortId);
     } catch (error) {
       $('form-status').className = 'error';
       $('form-status').textContent = error.name === 'AbortError' || error instanceof TypeError ? 'We could not confirm whether your application was saved. Submit the same details again; this will not create a duplicate.' : error.message;
-    } finally { clearTimeout(timer); submit.disabled = false; submit.textContent = 'Submit application ↗'; }
+    } finally { submit.disabled = false; submit.textContent = 'Submit application ↗'; }
   });
+  if(!dialog||['#apply','#drop'].includes(location.hash)||new URLSearchParams(location.search).has('register'))openApplication();
 })();

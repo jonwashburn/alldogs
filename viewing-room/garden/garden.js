@@ -78,7 +78,7 @@
   const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
   const save=node('button',undefined,'garden-save');save.type='submit';save.disabled=true;save.append(word('gardenChoose','This is my dog'));
   const note=node('p','Save your choice and name. Nothing is due now.','account-note');
-  const details=node('details');details.append(node('summary','About taking your dog home'),node('p',artistGift?'Choose a painting and a name, then bring your dog home. Your adoption will be saved to your X account. NFT delivery will follow; no wallet is needed yet.':'This saves your choice and name. It does not mint or transfer the artwork.'),node('p',artistGift?'This artwork is an artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
+  const details=node('details');details.append(node('summary','About taking your dog home'),node('p',artistGift?'Choose a painting and a name, then bring your dog home. Your adoption will be saved to your private invitation. NFT delivery will follow; no wallet is needed yet.':'This saves your choice and name. It does not mint or transfer the artwork.'),node('p',artistGift?'This artwork is an artist gift. No payment is due.':'After adoption, you’ll be asked to pay Wubbushi the value you choose within seven days. Nothing is due now.'));
   const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
   form.append(heading,label,save,note,details,status);content.append(form);
   let accept;

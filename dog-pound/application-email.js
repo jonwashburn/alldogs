@@ -10,20 +10,9 @@
     for (const id of ['save-email', 'remove-email', 'notification-email', 'art-updates']) $(id).disabled = value;
   }
   async function request(action, values = {}) {
-    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 15000);
-    try {
-      const response = await fetch('https://api.alldogs.wtf/collection-api/application-contact', {
-        method: 'POST', credentials: 'omit', cache: 'no-store', headers: {'Content-Type': 'application/json'},
-        signal: controller.signal, body: JSON.stringify({...identity, action, ...values})
-      });
-      const result = await response.json();
-      if (!response.ok) throw Error(result.error || 'Could not save your email. Please try again.');
-      return result;
-    } catch (error) {
-      if (error.name === 'AbortError' || error instanceof TypeError) throw Error('We could not confirm the change. Your application is safe. Please try again.');
-      throw error;
-    } finally { clearTimeout(timer); }
+    return window.AllDogsAccount.request('club/contact',{...identity,action,...values});
   }
+
   function fill(contact) {
     $('notification-email').value = contact?.email || '';
     $('art-updates').checked = contact?.artUpdates === true;

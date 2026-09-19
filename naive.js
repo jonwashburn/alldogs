@@ -1,4 +1,4 @@
-/* ALL DOGS: naive generative dog portraits.
+/* All Dogs: naive generative dog portraits.
    JS port of design/naive_design.py (same PRNG, same geometry).
    Draws into a canvas at 1000x1000 logical units. */
 (function () {

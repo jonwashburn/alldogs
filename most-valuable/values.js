@@ -27,7 +27,7 @@
         const small = art?.original ? {src:art.original} : art?.variants?.find(item => item.width >= 600) || art?.variants?.[0];
         if (small && /^(https:\/\/|\/(?!\/))/.test(small.src)) {
           const img = document.createElement('img'); img.src = small.src; img.alt = dog.dogName + ', original painting'; img.loading = 'lazy'; img.width = 180; img.height = 180; row.append(img);
-        } else row.append(text('span', 'ALL DOGS'));
+        } else row.append(text('span', 'All Dogs'));
         const detail = document.createElement('div'); detail.className = 'value-detail';
         detail.append(text('h2', dog.dogName), text('p', dog.dogStatus + ' · ' + new Date(dog.paidAt * 1000).toLocaleDateString()));
         if (dog.windowOpen) detail.append(text('p', 'First seven days still open'));

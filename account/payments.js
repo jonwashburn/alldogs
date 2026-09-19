@@ -63,7 +63,7 @@
           form.addEventListener('submit',async event=>{event.preventDefault();check.disabled=true;try{await api.request('club/payment-crypto',{transaction:tx.value.trim()});await render();message.textContent='Transfer confirmed. Your dog’s recorded value is updated.';}catch(e){message.textContent=e.message;check.disabled=false;}});details.append(form);cryptoPanel.append(details);
         }else cryptoPanel.append(node('p','Please contact Wubbushi for payment instructions. Do not send funds to an unverified address.'));
         rails.append(cryptoPanel);
-        host.append(node('p','These values are recorded in the ALL DOGS website register.','account-note'));
+        host.append(node('p','These values are recorded in the All Dogs website register.','account-note'));
         host.append(button('Refresh payment status',render,'text-link'));
         if(new URLSearchParams(location.search).get('payment')==='return')message.textContent='Welcome back. A checkout return is not a payment receipt; your value appears once payment is confirmed.';
       }catch(error){message.textContent=error.message;host.append(button('Try again',render,'text-link'));}

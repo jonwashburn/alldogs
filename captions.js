@@ -1,4 +1,4 @@
-// ALL DOGS one of ones: [year, costume, first name]. First names or one-word names only, never a full name (Jon, 2026-09-04; site only, reversible).
+// All Dogs one of ones: [year, costume, first name]. First names or one-word names only, never a full name (Jon, 2026-09-04; site only, reversible).
 window.ALLDOGS_CAP = {
   1: [33, "White robe, red sash, tired kind eyes, a crown of thorns with thin lines of blood, a faint ring of light.", "Jesus"],
   2: [1972, "White rhinestone jumpsuit, pompadour, gold aviators, collar to the ears.", "Elvis"],

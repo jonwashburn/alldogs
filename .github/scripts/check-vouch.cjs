@@ -29,7 +29,7 @@ function harness(file, path, search, stored = {}) {
     window:{},URLSearchParams,AbortController,setTimeout,clearTimeout,TextEncoder,
     crypto:{randomUUID:()=> '12345678-1234-1234-1234-123456789012'},
     fetch:async (url, options)=>{calls.push({url,options});return {ok:true,json:async()=>url.includes('adoption-applications')?{...response,receipt}:response};}};
-  context.window.AllDogsAccount={request:async path=>{calls.push({url:path});return response;},session:async()=>({signedIn:false,capabilities:{xLogin:false}}),signIn:path=>path};
+  context.window.AllDogsAccount={request:async (path,body)=>{calls.push({url:path,options:{body:JSON.stringify(body)}});return path==='club/registration'?{handle:'test_dog',application:stored['alldogs-application-receipt']?{...response,receipt}:null}:path==='club/register'?{...response,receipt}:response;},session:async()=>({signedIn:file.includes('adoption-form'),authMethod:'x',capabilities:{xLogin:true}}),signIn:path=>path};
   vm.runInNewContext(fs.readFileSync(file,'utf8'),context,{filename:file});
   return {element,calls,storage,get replaced(){return replaced;},get copied(){return copied;}};
 }
@@ -63,11 +63,12 @@ function harness(file, path, search, stored = {}) {
     assert.equal(new URL(h.element('share-on-x').href).searchParams.get('url'),'https://alldogs.wtf/vouch/2');
     await h.element('copy-application').onclick();
     assert.equal(h.copied,'https://alldogs.wtf/vouch/2');
-    assert.equal(h.calls.length,storedId?0:1);
+    assert.equal(h.calls.length,1);assert.equal(h.calls[0].url,'club/registration');
     tests++;
   }
   for (const choice of ['existing','new','later']) {
     const h = harness('dog-pound/adoption-form.js','/','');
+    await settle();
     assert.equal(h.element('wallet').disabled,true);
     assert.equal(h.element('wallet-help').hidden,true);
     assert.equal(JSON.stringify(h.element('wallet-choice').children.map(option=>[option.value,option.textContent])),JSON.stringify([
@@ -82,8 +83,8 @@ function harness(file, path, search, stored = {}) {
     h.element('handle').value='test_dog';h.element('wallet').value='0x'+'12'.repeat(20);h.element('website').value='';
     await h.element('application-form').events.submit({preventDefault(){}});
     assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
-    assert.equal(h.calls.length,1);
-    const payload=JSON.parse(h.calls[0].options.body);
+    assert.equal(h.calls.length,2);assert.equal(h.calls[1].url,'club/register');
+    const payload=JSON.parse(h.calls[1].options.body);
     assert.equal(payload.applicationFlow,'wallet-help-v3');assert.equal(payload.walletChoice,choice);
     assert.equal(payload.wallet,choice==='existing'?'0x'+'12'.repeat(20):'');
     tests++;

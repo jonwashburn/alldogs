@@ -4,7 +4,7 @@
   const page = document.body.dataset.accountPage;
   const content = $('account-content');
   let identity, account, busy = false;
-  // The invitation proof survives only this tab's X sign-in round trip.
+  // Capture the email proof, exchange it for a scoped HttpOnly viewing cookie.
   // It never appears in HTTP referrers, query strings, analytics, or the address bar after capture.
   const inviteKey='alldogs-private-invitation';
   let invitation, viewing;
@@ -78,7 +78,7 @@
     if(gift?.status==='accepted'){
       const dog=gift.dogs.find(d=>d.id===gift.selectedDog),c=card(gift.dogName);
       if(dog){const img=node('img');img.src=dog.original;img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
-      c.append(node('p',gift.isTest?'Test adoption saved':'Adopted','account-status'),node('p','Chosen by @'+identity.handle+' · '+date(gift.acceptedAt)),node('p',gift.isTest?'This is your private test. Erin’s originals remain available.':'An artist gift from Wubbushi. No payment is due.'),node('p','NFT delivery is pending. No wallet is needed yet.','account-note'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
+      c.append(node('p',gift.isTest?'Test adoption saved':'Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),node('p',gift.isTest?'This is your private test. Erin’s originals remain available.':'An artist gift from Wubbushi. No payment is due.'),node('p','NFT delivery is pending. No wallet is needed yet.','account-note'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
     }
     const dog=account.owner;
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
@@ -119,21 +119,21 @@
   async function start() {
     if(window.AllDogsGarden){window.AllDogsGarden.clear();content.replaceChildren();}
     try {
+      if(invitation||viewing){
+        try {
+          await api.request('club/invitation-open',{kind:invitation?'gift':'viewing',invitation:invitation||viewing});
+        } finally {
+          // A withdrawn or expired email must not keep blocking other account pages.
+          sessionStorage.removeItem(inviteKey);sessionStorage.removeItem(viewingKey);invitation=null;viewing=null;
+        }
+      }
       identity=await api.session();
       $('account-gate').hidden=identity.signedIn;$('account-logout').hidden=!identity.signedIn;
       if(!identity.signedIn){$('account-login').hidden=!identity.capabilities.xLogin;$('account-login').href=api.signIn();$('gate-title').textContent=identity.capabilities.xLogin?'Come on in.':'Your account.';$('gate-copy').textContent=identity.capabilities.xLogin?'Sign in with the X account you used to apply. Your dog, invitations, and vouches stay together here.':'Sign-in could not be started. Please try again. Your application is safe, and you can still share its link.';
-        if(identity.capabilities.xLogin&&page==='viewing-room'){$('gate-title').textContent='Come into the garden.';$('gate-copy').textContent='Sign in with the X account on your invitation to meet the dogs Wubbushi chose for you.';}
+        if(identity.capabilities.xLogin&&page==='viewing-room'){$('gate-title').textContent='Come into the garden.';$('gate-copy').textContent='Open the private link in your invitation email to meet your dogs. You can also sign in to your account below.';}
         if(identity.capabilities.xLogin&&page==='waitlist'){$('gate-title').textContent='Own a dog?';$('gate-copy').textContent='Sign in to vouch for someone on the waitlist.';}
       }
-      message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?'Signed in as @'+identity.handle+'.':'');
-      if(identity.signedIn&&invitation){
-        await api.request('club/gift-claim',{invitation});
-        sessionStorage.removeItem(inviteKey);invitation=null;
-      }
-      if(identity.signedIn&&viewing){
-        await api.request('club/viewing-claim',{invitation:viewing});
-        sessionStorage.removeItem(viewingKey);viewing=null;
-      }
+      message(new URLSearchParams(location.search).has('signin')?'Sign-in did not finish. Please try again.':identity.signedIn?(identity.authMethod==='invitation'?'Your private garden.':'Signed in as @'+identity.handle+'.'):'');
       await loadContent();
     }catch(error){message(error.message);}
   }

@@ -13,7 +13,7 @@
       $('vouch-state').textContent=labels[d.status]||'Awaiting review.';
       $('application-title').textContent=d.status==='looking_for_vouch'?'Will you vouch for me?':d.status==='adopted'?'Adoption complete.':'A step closer to a dog.';
       const shortPath=Number.isInteger(d.shortId)&&d.shortId>0&&d.shortId<=10000?'/vouch/'+d.shortId:null;
-      const shareText='@'+d.handle+(d.status==='looking_for_vouch'?' is hoping to adopt an ALL DOGS dog. Can an eligible owner vouch for them?':' has an ALL DOGS adoption application.');
+      const shareText='@'+d.handle+(d.status==='looking_for_vouch'?' is hoping to adopt an All Dogs dog. Can an eligible owner vouch for them?':' has an All Dogs adoption application.');
       $('share-application-x').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(shareText)+'&url='+encodeURIComponent('https://alldogs.wtf'+(shortPath||'/dog-pound/application/?id='+id));
       if(shortPath&&!location.pathname.startsWith('/vouch/'))history.replaceState(null,'',shortPath);
       $('sign-vouch').hidden=true;$('withdraw-vouch').hidden=true;$('connect-owner').hidden=true;

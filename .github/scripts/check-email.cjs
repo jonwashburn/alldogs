@@ -5,13 +5,14 @@ function harness(contact=null){
   const elements=new Map(),calls=[];let failed=false,current=contact;
   const element=id=>{if(!elements.has(id))elements.set(id,{hidden:true,disabled:false,value:'',checked:false,events:{},reportValidity:()=>true,focus(){this.focused=true;},addEventListener(name,fn){this.events[name]=fn;}});return elements.get(id);};
   const context={window:{},document:{getElementById:element},AbortController,setTimeout,clearTimeout,
-    fetch:async(url,options)=>{const body=JSON.parse(options.body);calls.push({url,options,body});
+    fetch:async(url,options)=>{if(url.endsWith('/club/session'))return{ok:true,json:async()=>({signedIn:true,authMethod:'x',csrf:'verified-session-csrf'})};const body=JSON.parse(options.body);calls.push({url,options,body});
       if(failed)return{ok:false,json:async()=>({error:'Email storage unavailable. Your application is safe.'})};
       if(body.action==='save')current={email:body.email,artUpdates:body.artUpdates,verified:false};
       if(body.action==='remove')current=null;
       return{ok:true,json:async()=>({contact:current,deliveryReady:false})};}};
+  vm.runInNewContext(fs.readFileSync('account/account-api.js','utf8'),context);
   vm.runInNewContext(fs.readFileSync('dog-pound/application-email.js','utf8'),context);
-  return{element,calls,show:()=>context.window.AllDogsApplicationEmail.show(identity.receipt,identity.publicId),fail:()=>{failed=true;}};
+  return{element,calls,show:async()=>{await context.window.AllDogsAccount.session();return context.window.AllDogsApplicationEmail.show(identity.receipt,identity.publicId);},fail:()=>{failed=true;}};
 }
 (async()=>{
   let tests=0;
@@ -22,7 +23,7 @@ function harness(contact=null){
     await h.element('application-email-form').events.submit({preventDefault(){}});
     const saved=h.calls[1];assert.equal(saved.body.email,'collector@example.com');assert.equal(saved.body.artUpdates,art);
     assert.equal(saved.body.receipt,identity.receipt);assert.equal(saved.body.publicId,identity.publicId);
-    assert.equal(saved.body.consentVersion,'invitation-and-art-v1');assert.equal(saved.options.credentials,'omit');
+    assert.equal(saved.body.consentVersion,'invitation-and-art-v1');assert.equal(saved.options.credentials,'include');assert.equal(saved.options.headers['X-CSRF-Token'],'verified-session-csrf');assert.ok(saved.url.endsWith('/club/contact'));
     assert.equal(saved.options.cache,'no-store');assert.equal(new URL(saved.url).search,'');
     assert.match(h.element('email-status').textContent,art?/other Wubbushi art/:/invitation only/);tests++;
   }
@@ -39,7 +40,7 @@ function harness(contact=null){
   assert.equal(failure.element('email-status').className,'error');assert.equal(failure.element('save-email').disabled,false);
   assert.equal(failure.element('notification-email').value,'collector@example.com');assert.doesNotMatch(failure.element('email-status').textContent,/Email saved/);tests++;
   for(const file of ['welcome/index.html']){
-    const html=fs.readFileSync(file,'utf8');const mainForm=html.indexOf('<form id="application-form">');
+    const html=fs.readFileSync(file,'utf8');const mainForm=html.indexOf('<form id="application-form" hidden>');
     const endMain=html.indexOf('</form>',mainForm),emailForm=html.indexOf('<form id="application-email-form">');
     assert.ok(endMain<emailForm);assert.ok(html.indexOf('application-email.js')<html.indexOf('adoption-form.js'));
     assert.match(html,/<input id="art-updates"[^>]*>/);assert.doesNotMatch(html.match(/<input id="art-updates"[^>]*>/)[0],/checked/);
