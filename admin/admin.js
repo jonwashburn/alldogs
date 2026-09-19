@@ -14,9 +14,28 @@
     const img=el('img');img.alt=dog.title;
     const src=image(dog);
     if(!person()?.gift?.dogs.some(d=>d.id===dog.id)){img.src=src;return img;}
-    if(!/^https:\/\/api[.]alldogs[.]wtf\/collection-api\/club\/art\/[a-f0-9]{64}\/wide[.]png$/.test(src)){img.alt=dog.title+' — preview unavailable';return img;}
-    if(!privateImages.has(src)){const ticket=imageGeneration;privateImages.set(src,fetch(src,{headers:{Authorization:'Bearer '+key},credentials:'omit',cache:'no-store',redirect:'error'}).then(async response=>{if(!response.ok)throw Error('Preview unavailable');const blob=await response.blob();if(ticket!==imageGeneration)return null;return URL.createObjectURL(blob);}).catch(()=>null));}
-    const ticket=imageGeneration;privateImages.get(src).then(url=>{if(url&&ticket===imageGeneration)img.src=url;else img.alt=dog.title+' — preview unavailable';});return img;
+    const frame=el('div',undefined,'painting-preview'),message=el('span','Loading painting…','painting-message');
+    img.hidden=true;frame.append(img,message);frame.setAttribute('aria-busy','true');
+    const ticket=imageGeneration;
+    const failed=()=>{if(ticket!==imageGeneration)return;frame.setAttribute('aria-busy','false');img.hidden=true;message.replaceChildren(el('span','Painting couldn’t load.'),btn('Try again',()=>{privateImages.get(src)?.then(url=>{if(url)URL.revokeObjectURL(url);});privateImages.delete(src);loadPainting();}));};
+    img.onload=()=>{if(ticket!==imageGeneration)return;img.hidden=false;message.hidden=true;frame.setAttribute('aria-busy','false');};
+    img.onerror=failed;
+    function loadPainting(){
+      message.hidden=false;message.textContent='Loading painting…';frame.setAttribute('aria-busy','true');
+      if(!/^https:\/\/api[.]alldogs[.]wtf\/collection-api\/club\/art\/[a-f0-9]{64}\/wide[.]png$/.test(src)){failed();return;}
+      if(!privateImages.has(src)){
+        const options={headers:{Authorization:'Bearer '+key},credentials:'omit',cache:'no-store',redirect:'error'};
+        privateImages.set(src,fetch(src.replace('/wide.png','/preview.webp'),options).then(async response=>{
+          // Older gifts may not yet have a small preview. Their original stays available.
+          if([404,503].includes(response.status))response=await fetch(src,options);
+          if(!response.ok)throw Error('Preview unavailable');
+          const blob=await response.blob();if(ticket!==imageGeneration)return null;
+          return URL.createObjectURL(blob);
+        }).catch(()=>null));
+      }
+      privateImages.get(src).then(url=>{if(ticket!==imageGeneration)return;if(url)img.src=url;else failed();});
+    }
+    loadPainting();return frame;
   }
   const image=dog=>dog.variants?.[0]?.src||dog.original;
   const invited=a=>a.viewing&&['invited','claimed'].includes(a.viewing.status)||a.invitation&&a.invitation.status!=='revoked';

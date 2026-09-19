@@ -3,3 +3,5 @@
 button{overflow-wrap:anywhere}
 
 .gift-dogs{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.gift-dogs img{aspect-ratio:2;object-fit:contain;height:auto;display:block}.gift-dogs p{font-family:Georgia,serif;font-size:17px;margin:10px 0}.preview-letter:empty{display:none}#preview .gift-dogs{grid-template-columns:1fr}@media(max-width:720px){.gift-dogs{grid-template-columns:1fr}}
+
+.painting-preview{position:relative;aspect-ratio:2;background:#eeeee3;border-radius:4px;overflow:hidden}.painting-preview img{width:100%;height:100%;object-fit:contain}.painting-message{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--muted);font-size:13px}
