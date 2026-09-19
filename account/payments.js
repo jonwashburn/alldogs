@@ -7,13 +7,19 @@
   function link(text, href) {const a=node('a',text,'text-link');a.href=href;return a;}
   function checkoutURL(value) {try{const u=new URL(value);return u.protocol==='https:'&&u.hostname==='checkout.stripe.com'?u.href:null;}catch{return null;}}
   window.AllDogsPayments = {async mount(host) {
-    const title=node('h2','The dog is yours. The value is yours to decide.');
-    const message=node('p','Loading your payment details…','account-message');message.setAttribute('role','status');
+    const title=node('h2','Your artwork.');
+    const message=node('p','Opening your record…','account-message');message.setAttribute('role','status');
     host.append(title,message);
     async function render() {
       try {
         const data=await api.request('club/payment');
         host.replaceChildren(title,message);message.textContent='';
+        if(data.adoptionKind==='artist_gift'){
+          title.textContent='Artist gift';
+          host.append(node('p','An artwork from Wubbushi. No payment is due.'));
+          return;
+        }
+        title.textContent='The dog is yours. The value is yours to decide.';
         const deadline=new Date(data.deadline*1000).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
         host.append(node('p','You’ve received your dog. You have seven days from adoption to pay Wubbushi the amount you choose. Your valuation becomes part of the artwork.'));
         host.append(node('p',(data.windowOpen?'Your valuation window closes ':'Your valuation window closed ')+deadline+'.','account-note'));

@@ -74,3 +74,11 @@ body[data-garden-state="waiting"] .garden-letter{width:min(500px,100%);margin:0}
 @media(prefers-reduced-motion:reduce){.garden-dog{transition:none}}
 
 body:has(dialog[open]){overflow:hidden}
+
+/* A newly painted dog and its interacting props need room on a phone. */
+@media(max-width:700px){
+ body[data-custom-garden="true"]{--garden-mobile-height:clamp(470px,70svh,620px)}
+ body[data-custom-garden="true"] .garden-stage{height:var(--garden-mobile-height);aspect-ratio:auto}
+ body[data-custom-garden="true"] .garden-layer>img,body[data-custom-garden="true"] .garden-layer>canvas{object-fit:cover;object-position:center bottom}
+ body[data-custom-garden="true"] .garden-dog{width:min(58%,calc((var(--garden-mobile-height) * .8 - 150px) * var(--dog-ratio,1.4)))}
+}

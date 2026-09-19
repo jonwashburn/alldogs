@@ -25,5 +25,6 @@ function fixture(overrides={},options={}){
   h=fixture({cardReady:true,cardOpen:false});await h.ready;assert.match(h.host.text(),/30 minutes/);assert.equal(h.host.all('form').length,0);tests++;
   h=fixture({cardReady:true,cardOpen:true,pendingCheckout:{url:'https://checkout.stripe.com/c/pay/fixture',amount:'12.34'}});await h.ready;assert.equal(h.host.all('form').length,0);assert.match(h.host.text(),/Continue your 12.34 USD/);tests++;
   h=fixture({cryptoReady:true,crypto:{currency:'ETH',network:'Ethereum mainnet',address:'0x'+'ab'.repeat(20),fromAddress:'0x'+'11'.repeat(20)}});await h.ready;assert.match(h.host.text(),/original adoption wallet/);assert.match(h.host.text(),/Do not send from an exchange/);assert.equal(h.host.all('input')[0].readOnly,true);tests++;
+  h=fixture({adoptionKind:'artist_gift',cardReady:true,cardOpen:true,cryptoReady:true,windowOpen:true,pendingCheckout:{url:'https://checkout.stripe.com/c/pay/fixture',amount:'10.00'}});await h.ready;assert.match(h.host.text(),/Artist gift/);assert.match(h.host.text(),/No payment is due/);assert.doesNotMatch(h.host.text(),/seven days|Credit card|Crypto|confirmed payment|checkout|USD/);assert.equal(h.host.all('form').length,0);assert.equal(h.calls.length,1);tests++;
   console.log(tests+' payment UI cases passed.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
