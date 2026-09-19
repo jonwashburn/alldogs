@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>All Dogs</title>
+  <path fill="#eae4d2" d="M15 2 48 3Q61 3 61 16L62 47Q62 60 48 61L16 62Q3 61 3 48L2 17Q2 4 15 2Z"/>
+  <path fill="#45583b" d="M18 15Q7 16 7 33L9 45Q14 49 20 39L25 20ZM44 16Q56 15 58 30L56 45Q51 49 44 39L39 21Z"/>
+  <path fill="#f9f3df" stroke="#363b2e" stroke-width="2.5" stroke-linejoin="round" d="M20 17Q31 9 44 18L48 37Q49 51 34 55 20 55 17 43Z"/>
+  <path fill="#45583b" d="M20 20Q25 16 28 23L27 34Q23 39 19 33Z"/>
+  <path fill="#282d24" d="M22 28Q25 26 25 30 23 33 22 30ZM38 27Q42 25 42 29 40 32 38 29ZM27 37Q32 34 37 37L35 42Q31 44 28 41Z"/>
+  <path fill="none" stroke="#363b2e" stroke-width="2.3" stroke-linecap="round" d="m32 43-1 5m-7-2q6 6 14 0"/>
+</svg>
