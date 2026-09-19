@@ -15,11 +15,11 @@
   try{const url=new URL(g.cutout,location.href);
    if(url.protocol!=='https:'&&url.origin!==location.origin)return null;
    if(url.username||url.password)return null;
-   return {source:url.href,bounds,width,height};
+   return {source:url.href,bounds,width,height,ceremony:g.presentation==='ceremony',canopy:g.framing==='canopy'};
   }catch{return null;}
  }
  function clear(){
-  generation++;selected=null;delete document.body.dataset.customGarden;picture.hidden=true;image.removeAttribute('src');image.alt='';
+  generation++;selected=null;delete document.body.dataset.customGarden;delete document.body.dataset.ceremony;delete document.body.dataset.ceremonyCanopy;picture.hidden=true;image.removeAttribute('src');image.alt='';
   document.body.dataset.gardenState='waiting';
   $('large-painting').removeAttribute('src');$('large-painting').alt='';
   if($('painting-lightbox').open)$('painting-lightbox').close();
@@ -45,6 +45,7 @@
   const accepted=artistGift&&['accepted','delivered'].includes(data.status);
   if(accepted){const chosen=data.dogs.find(d=>d.id===data.selectedDog);if(!chosen)throw Error('Your saved dog could not be found. Please refresh.');data={...data,dogs:[chosen]};}
   const room=++generation;let index=-1,requested=Math.max(0,data.dogs.findIndex(d=>d.id===data.selectedDog)),request=0;
+  let committing=false;
   const drafts=new Map();if(data.selectedDog)drafts.set(data.selectedDog,data.dogName||'');
   const controls=node('div',undefined,'room-controls'),caption=node('div',undefined,'room-caption');
   const title=node('h2'),count=node('p');count.setAttribute('aria-live','polite');count.setAttribute('aria-atomic','true');caption.append(title,count);
@@ -53,7 +54,22 @@
    button.type='button';button.setAttribute('aria-label',label);button.setAttribute('aria-controls','garden-dog');
    const arrow=node('img');arrow.src='/painting/'+key+'.webp';arrow.alt='';button.append(arrow);
   }
-  controls.append(previous,caption,next);content.append(controls);previous.hidden=next.hidden=accepted;
+  const options=[],toggle=data.dogs.length===2;
+  let switcher;
+  if(toggle){
+   switcher=node('fieldset',undefined,'garden-options');switcher.append(node('legend','Choose your scene'));
+   data.dogs.forEach((dog,i)=>{
+    const label=node('label'),input=node('input'),text=node('span',dog.optionLabel||dog.title);
+    input.type='radio';input.name='garden-option';input.value=dog.id;input.setAttribute('aria-controls','garden-dog');
+    input.addEventListener('change',()=>{if(input.checked)show(i);});label.append(input,text);switcher.append(label);options.push(input);
+   });content.append(switcher);controls.classList.add('room-controls-toggle');
+  }
+  if(data.dogs.length===1)controls.classList.add('room-controls-single');
+  controls.append(previous,caption,next);content.append(controls);previous.hidden=next.hidden=data.dogs.length===1||toggle;
+  async function commit(action,body,message){
+   if(committing||room!==generation)return;committing=true;if(switcher)switcher.disabled=true;
+   try{await change(action,body,message);}finally{committing=false;if(room===generation&&switcher)switcher.disabled=false;}
+  }
   const closer=node('button',undefined,'garden-original');closer.type='button';closer.append(word('gardenOriginal','See the original'));closer.addEventListener('click',openOriginal);content.append(closer);
   if(artistGift)content.append(node('p','Artist gift','garden-eyebrow'));
   if(data.note)content.append(node('p',data.note,'garden-personal-note'));
@@ -67,56 +83,65 @@
   let accept;
   if(artistGift&&data.canAccept===true&&data.selectedDog&&!accepted){
    accept=node('button','Bring my dog home','button primary');accept.type='button';
-   accept.addEventListener('click',()=>{if(accept.disabled||room!==generation)return;if(name.value.trim()!==data.dogName){status.textContent='Save your updated name before bringing your dog home.';return;}accept.disabled=true;change('accept-adoption',{},'Your adoption is accepted. Your NFT delivery is being prepared.').finally(()=>{if(room===generation)accept.disabled=false;});});
+   accept.addEventListener('click',()=>{if(accept.disabled||room!==generation)return;if(name.value.trim()!==data.dogName){status.textContent='Save your updated name before bringing your dog home.';return;}accept.disabled=true;commit('accept-adoption',{},'Your adoption is accepted. Your NFT delivery is being prepared.').finally(()=>{if(room===generation)accept.disabled=false;});});
    form.append(accept);
   }
   if(accepted){
    save.hidden=true;name.readOnly=true;details.hidden=true;
    content.append(node('p',data.status==='delivered'?'Your dog is home. The NFT delivery is confirmed.':'Your adoption is accepted. Your NFT delivery is being prepared.','garden-personal-note'));
   }
-  const mats=await subjects();
+  const mats=data.dogs.some(dog=>!customSubject(dog))?await subjects():null;
   async function show(i){
-   if(room!==generation)return;
+   if(room!==generation||committing)return;
    if(index>=0)drafts.set(data.dogs[index].id,name.value);
    requested=(i+data.dogs.length)%data.dogs.length;const dog=data.dogs[requested],candidate=requested,serial=++request;
-   save.disabled=true;status.textContent='Meeting '+dog.title+'…';picture.setAttribute('aria-busy','true');
+   save.disabled=true;if(accept)accept.disabled=true;status.textContent='Meeting '+dog.title+'…';picture.setAttribute('aria-busy','true');
    const custom=customSubject(dog),matte=mats?.dogs?.[dog.id];
    const mapped=custom||(matte&&matte.original===dog.original);
    const source=custom?.source||original(dog);
+   let useCustom=Boolean(custom),useMatte=Boolean(mapped&&!custom),fallback=false;
    try{
-    await Promise.all([loadImage(source),...(mapped&&!custom?[loadImage(matte.mask)]:[])]);
+    try{await Promise.all([loadImage(source),...(useMatte?[loadImage(matte.mask)]:[])]);}
+    catch(error){
+     if(room!==generation||serial!==request)return;
+     if(!custom)throw error;
+     // A missing ceremony asset must never hide the recipient's official art.
+     await loadImage(original(dog));useCustom=false;useMatte=false;fallback=true;
+    }
     if(room!==generation||serial!==request)return;
-    const bounds=custom?.bounds||(mapped?matte.bounds:[0,0,1000,1000]),w=bounds[2]-bounds[0],h=bounds[3]-bounds[1];
-    image.src=source;image.alt=dog.title+', painted by Wubbushi, in the garden.';
-    if(mapped){
-     image.style.maskImage=image.style.webkitMaskImage=custom?'none':'url("'+matte.mask+'")';
+    const bounds=useCustom?custom.bounds:useMatte?matte.bounds:[0,0,1000,1000],w=bounds[2]-bounds[0],h=bounds[3]-bounds[1];
+    image.src=useCustom?source:original(dog);image.alt=dog.title+', painted by Wubbushi, in the garden.';
+    if(useCustom||useMatte){
+     image.style.maskImage=image.style.webkitMaskImage=useCustom?'none':'url("'+matte.mask+'")';
      image.style.width=(custom?.width||1000)*100/w+'%';image.style.height=(custom?.height||1000)*100/h+'%';image.style.left=-bounds[0]/w*100+'%';image.style.top=-bounds[1]/h*100+'%';
     }else{image.style.width=image.style.height='100%';image.style.maskImage=image.style.webkitMaskImage='none';image.style.left=image.style.top='0';image.alt=dog.title+', the original painting by Wubbushi.';}
-    document.body.dataset.customGarden=custom?'true':'false';
-    picture.dataset.presentation=mapped?'garden':'original';picture.style.setProperty('--dog-ratio',w/h);
+    document.body.dataset.customGarden=useCustom?'true':'false';
+    const ceremony=useCustom&&custom.ceremony;document.body.dataset.ceremony=ceremony?'true':'false';document.body.dataset.ceremonyCanopy=ceremony&&custom.canopy?'true':'false';
+    picture.dataset.presentation=ceremony?'ceremony':useCustom||useMatte?'garden':'original';picture.style.setProperty('--dog-ratio',w/h);
     // Fit tall characters as well as long dogs without stretching their drawing.
     picture.style.setProperty('--dog-width',Math.min(43,34*w/h)+'%');
     picture.style.setProperty('--dog-mobile-width',Math.min(43,40*w/h)+'%');
     picture.setAttribute('aria-label','See the original '+dog.title+' painting');picture.hidden=false;
     selected=dog;index=candidate;name.value=drafts.get(dog.id)||'';title.textContent=dog.title;
-    count.textContent=accepted?'Chosen by you':(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
-    if(accept)accept.hidden=dog.id!==data.selectedDog;
+    count.textContent=accepted?'Chosen by you':toggle?'Two paintings, one dog for you.':data.dogs.length===1?'Chosen for you':(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
+    options.forEach((input,j)=>{input.checked=j===candidate;});
+    if(accept){accept.hidden=dog.id!==data.selectedDog;accept.disabled=name.value.trim()!==data.dogName;}
     heading.textContent=accepted?'Your dog.':data.selectedDog===dog.id?'Your dog has a name.':'What would you call this dog?';
     note.textContent=data.selectedDog===dog.id?'Your choice is saved. You can revisit it here.':(artistGift?'An artist gift, chosen by you.':'Save your choice and name. Nothing is due now.');
     document.body.dataset.gardenState='invited';
-    status.textContent=mapped?'':'Your original painting is here.';save.disabled=accepted;
-   }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';if(index>=0&&!accepted)save.disabled=false;}}
+    status.textContent=fallback?'Your original painting is here. The garden scene is temporarily unavailable.':useCustom||useMatte?'':'Your original painting is here.';save.disabled=accepted;
+   }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted)save.disabled=false;if(accept)accept.disabled=name.value.trim()!==data.dogName;}}
    finally{if(room===generation&&serial===request)picture.setAttribute('aria-busy','false');}
   }
   previous.addEventListener('click',()=>show(requested-1));next.addEventListener('click',()=>show(requested+1));
   form.addEventListener('submit',event=>{
    event.preventDefault();if(accepted||index<0||save.disabled||room!==generation)return;
    const value=name.value.trim();if(!value){name.setCustomValidity('Give your dog a name.');name.reportValidity();return;}name.setCustomValidity('');
-   change('choose',{dogId:data.dogs[index].id,name:value},'Your choice and name are saved. Nothing is due now.');
+   commit('choose',{dogId:data.dogs[index].id,name:value},'Your choice and name are saved. Nothing is due now.');
   });
   name.addEventListener('input',()=>{name.setCustomValidity('');if(accept)accept.disabled=name.value.trim()!==data.dogName;});
   controls.addEventListener('keydown',event=>{
-   if(event.target.closest('input,textarea,select,details')||document.querySelector('dialog[open]')||event.altKey||event.ctrlKey||event.metaKey)return;
+   if(data.dogs.length===1||event.target.closest('input,textarea,select,details')||document.querySelector('dialog[open]')||event.altKey||event.ctrlKey||event.metaKey)return;
    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();show(requested+(event.key==='ArrowLeft'?-1:1));}
   });
   await show(requested);

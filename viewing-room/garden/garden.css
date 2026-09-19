@@ -82,3 +82,35 @@ body:has(dialog[open]){overflow:hidden}
  body[data-custom-garden="true"] .garden-layer>img,body[data-custom-garden="true"] .garden-layer>canvas{object-fit:cover;object-position:center bottom}
  body[data-custom-garden="true"] .garden-dog{width:min(58%,calc((var(--garden-mobile-height) * .8 - 150px) * var(--dog-ratio,1.4)))}
 }
+
+/* A scene is a private presentation of an immutable painting. */
+.garden-options{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:3px;margin:0 0 25px;border:1px solid #7e8c7266;border-radius:4px;text-align:center}
+.garden-options legend{padding:0 8px;font:11px/1.4 Arial,sans-serif;letter-spacing:.06em;color:#657159}
+.garden-options label{position:relative;display:grid;cursor:pointer;min-width:0}
+.garden-options input{position:absolute;width:1px;height:1px;opacity:0}
+.garden-options span{display:grid;place-items:center;min-height:46px;padding:8px;font:17px/1.3 var(--serif);border:1px solid transparent;border-radius:2px}
+.garden-options input:checked+span{background:#dce0cf;border-color:#87927766;color:#263424}
+.garden-options input:focus-visible+span{outline:2px solid #354a36;outline-offset:3px}
+.garden-options:disabled{opacity:.6;cursor:wait}
+.room-controls-toggle,.room-controls-single{display:block}.room-controls-toggle .room-caption h2{font-size:32px}
+body[data-ceremony="true"] .garden-heading h1{width:min(420px,75vw)}
+body[data-ceremony="true"] .garden-dog{overflow:visible;width:min(84%,calc((100% - 145px)*var(--dog-ratio)));bottom:8%}
+body[data-ceremony="true"] .garden-foreground{z-index:1}
+@media(min-width:1000px){
+ body[data-ceremony="true"] .garden-main{padding-top:120px}
+ body[data-ceremony="true"] .garden-heading{top:98px}
+ body[data-ceremony="true"] .garden-dog{bottom:10%;width:min(calc(89vw - 490px),calc((max(800px,100svh) - 205px)*var(--dog-ratio)),1060px)}
+}
+@media(max-width:999px){
+ body[data-ceremony="true"] .garden-stage{width:100%;left:0;transform:none;--scene-height:clamp(480px,80vw,760px);height:var(--scene-height);aspect-ratio:auto}
+ body[data-ceremony="true"] .garden-layer>img,body[data-ceremony="true"] .garden-layer>canvas{object-fit:cover;object-position:center bottom}
+ body[data-ceremony="true"] .garden-dog{width:min(96%,calc((var(--scene-height) - 145px)*var(--dog-ratio)));bottom:5%}
+ body[data-ceremony="true"] .garden-letter{margin:-5px auto 24px;width:min(540px,calc(100% - 32px))}
+}
+@media(prefers-reduced-motion:no-preference){
+ body[data-ceremony="true"] .garden-dog[aria-busy="true"]{opacity:.55}
+}
+
+@media(min-width:1280px){
+ body[data-ceremony-canopy="true"] .garden-dog{width:min(calc((max(800px,100svh)*.9)*var(--dog-ratio)),calc((89vw - 490px)*1.35),1200px)}
+}
