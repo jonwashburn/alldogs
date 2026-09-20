@@ -69,7 +69,7 @@
 
   function mount(host, initial, options={}) {
     let state=initial, provider=null, wallet='', epoch=0, disposed=false, busy=false, checking=false, timer, note='', amount='', storageError=false, readNumber=0;
-    let pending=null;
+    let pending=null,recoveryHash='';
     const expected={dogId:options.dogId||initial.delivery?.dogId||initial.approval?.dogId, dogName:options.dogName||initial.delivery?.dogName||initial.approval?.dogName};
     const key='alldogs-transaction:'+state.invitationId;
     const shell=node('section',undefined,'mint-card'),body=node('div'),status=node('p','','mint-status');
@@ -123,15 +123,40 @@
       await navigator.locks.request(key,{ifAvailable:true},async lock=>{
         check(ticket);if(!lock)throw Error('This invitation has a wallet request open in another tab.');
         loadPending();if(storageError)throw Error('Your saved transaction record could not be read. Check your wallet activity before continuing.');if(pending)throw Error('A transaction may already be on its way. Check its progress first.');
-        // Persist before opening the wallet; an ambiguous response is never retried automatically.
-        const record={kind,invitationId:state.invitationId,...extra,hash:null,createdAt:now()};savePending(record);
+        const nonce=await provider.request({method:'eth_getTransactionCount',params:[tx.from,'pending']});check(ticket);
+        if(typeof nonce!=='string'||!/^0x(?:0|[1-9a-f][0-9a-f]*)$/i.test(nonce)||BigInt(nonce)>=2n**256n)throw Error('The wallet transaction number could not be checked.');
+        await walletMatches(ticket,extra.wallet,extra.chainId);
+        // Persist the exact explicit nonce before opening the wallet. A lost
+        // response can then be matched without mistaking an older payment for it.
+        const record={kind,invitationId:state.invitationId,...extra,nonce:String(BigInt(nonce)),value:String(BigInt(tx.value)),hash:null,createdAt:now()};savePending(record);
         try{
-          const result=await provider.request({method:'eth_sendTransaction',params:[tx]});
+          const result=await provider.request({method:'eth_sendTransaction',params:[{...tx,nonce}]});
           if(!hash(result))throw Error('Check your wallet: it did not return a transaction reference.');
           // Preserve the result even if the user changed accounts while the wallet was open.
           savePending({...record,hash:result});
           check(ticket);note='Sent. We’re waiting for the confirmed record.';
         }catch(error){if(error?.code===4001)savePending(null);throw error;}
+      });
+    }
+    async function recover(ticket, reference){
+      if(!hash(reference))throw Error('Paste the transaction reference from your wallet activity.');
+      if(!navigator.locks?.request)throw Error('Use a current browser to check this transaction.');
+      await navigator.locks.request(key,{ifAvailable:true},async lock=>{
+        check(ticket);if(!lock)throw Error('Your wallet request is still open in another tab.');
+        loadPending();const record=pending;
+        if(!record||!uint(record.nonce)||!uint(record.value))throw Error('This older request needs its original transaction details. Keep it saved and contact Wubbushi.');
+        const result=await api.request('club/mint-transaction',{invitationId:state.invitationId,kind:record.kind,hash:reference,nonce:record.nonce,value:record.value,reservationId:record.reservationId});check(ticket);
+        if(!same(result.hash,reference)||!['unknown','pending','mined','finalized_failure','finalized_success','finalized_replacement'].includes(result.status))throw Error('The transaction record could not be verified.');
+        if(result.status==='unknown'){note='That transaction is not visible yet. Your saved request is still protected.';return;}
+        if(result.status==='finalized_failure'){
+          savePending(null);recoveryHash='';note='The confirmed transaction failed. No adoption or payment was recorded. You can try again.';
+        }else if(result.status==='finalized_replacement'){
+          savePending(null);recoveryHash='';await fresh(ticket);note='Your wallet replaced this request. Check its activity before choosing what to do next.';
+        }else{
+          savePending({...record,hash:reference});recoveryHash='';
+          note=result.status==='pending'?'Your wallet transaction is still pending.':'The transaction was mined. We’re waiting for its confirmed record.';
+          await fresh(ticket);
+        }
       });
     }
     function pendingView(){
@@ -140,15 +165,12 @@
       if(pending.hash)body.append(node('p','Transaction: '+pending.hash,'mint-address'));
       else body.append(node('p','The wallet did not return a transaction reference. Check its activity before doing anything else. Your request will not be sent again automatically.'));
       body.append(button('Check progress',ticket=>fresh(ticket)));
-      // A hash can be checked without trusting a success receipt as NFT delivery.
-      if(pending.hash && wallet)body.append(button('Check wallet transaction',async ticket=>{
-        await walletMatches(ticket,pending.wallet,pending.chainId);
-        const receipt=await provider.request({method:'eth_getTransactionReceipt',params:[pending.hash]});check(ticket);
-        if(receipt && same(receipt.transactionHash,pending.hash) && receipt.status==='0x0'){
-          savePending(null);note='The transaction failed. Your dog and its recorded value have not changed. You can try again.';
-        }else note=receipt?'The transaction was mined. We’re waiting for its confirmed record.':'Your wallet transaction is still pending.';
-      }));
-      if(!wallet)connectButtons(body);
+      if(uint(pending.nonce)&&uint(pending.value)){
+        if(pending.hash)body.append(button('Check wallet transaction',ticket=>recover(ticket,pending.hash)));
+        const details=node('details'),summary=node('summary',pending.hash?'Use an updated transaction reference':'Find your transaction');
+        const label=node('label','Transaction reference'),input=node('input');input.type='text';input.autocomplete='off';input.spellcheck=false;input.value=recoveryHash;input.placeholder='0x…';input.disabled=busy;input.addEventListener('input',()=>{recoveryHash=input.value;});label.append(input);
+        details.append(summary,node('p','Open your wallet’s activity and copy the transaction hash. Checking it here will not send anything.'),label,button('Check this transaction',ticket=>recover(ticket,recoveryHash.trim())));body.append(details);
+      }
     }
     function deliveredView(){
       const d=state.delivery,p=state.payment;
