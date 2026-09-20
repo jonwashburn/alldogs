@@ -15,6 +15,7 @@ function ui(page, signedIn, account={}, extra={}){
   const api={session:async()=>identity,signIn:()=>'/fixture-login',request:async(path,body)=>{
     calls.push({path,body});if(path==='club/account')return data;if(path==='club/waitlist')return extra.waitlist||{applications:[]};if(path==='club/room')return extra.room;return {ok:true};}};
   const context={document:{getElementById:get,createElement:tag=>new Node(tag),body:{dataset:{accountPage:page}}},window:{AllDogsAccount:api},sessionStorage:{getItem:()=>null},URLSearchParams,location:{search:'',pathname:'/'+page+'/'},Date};
+  if(extra.payments)context.window.AllDogsPayments={mount:host=>{calls.push({path:'fixture/payment',host});host.append(new Node('h2'));}};
   vm.runInNewContext(fs.readFileSync('account/account.js','utf8'),context);
   const text=n=>n.textContent+' '+n.children.map(x=>x instanceof Node?text(x):x).join(' ');
   return {get,calls,text:()=>text(get('account-content'))};
@@ -36,10 +37,10 @@ function ui(page, signedIn, account={}, extra={}){
     const h=ui('viewing-room',true,{hasInvitation:true},{room:{...roomData,dogs}});await settle();assert.match(h.get('account-message').textContent,/viewing needs a little attention/);assert.equal(h.get('account-content').querySelectorAll('img').length,0);tests++;
   }
   const personal=ui('lounge',true,{hasInvitation:true,application:null});await settle();assert.match(personal.text(),/Wubbushi has chosen dogs/);assert.doesNotMatch(personal.text(),/Link your application|Start here/);assert.ok(personal.get('account-content').querySelectorAll('a').some(a=>a.href==='/viewing-room/'));tests++;
-  const privateGift=ui('viewing-room',true,{hasInvitation:true},{room:{...roomData,adoptionKind:'artist_gift'}});await settle();assert.doesNotMatch(privateGift.text(),/payment|Nothing is due|wallet|NFT/i);assert.doesNotMatch(privateGift.text(),/seven days|pay Wubbushi/);tests++;
+  const privateGift=ui('viewing-room',true,{hasInvitation:true},{room:{...roomData,adoptionKind:'artist_gift'}});await settle();assert.doesNotMatch(privateGift.text(),/payment|Nothing is due|wallet|NFT/i);assert.doesNotMatch(privateGift.text(),/one day|seven days|pay Wubbushi/);tests++;
   const giftOwner=ui('viewing-room',true,{hasInvitation:true,owner:{dogName:'Milo',adoptionKind:'artist_gift'}},{room:{...roomData,adoptionKind:'artist_gift'}});await settle();assert.ok(giftOwner.calls.some(c=>c.path==='club/room'));tests++;
   const pending=ui('viewing-room',true);await settle();assert.match(pending.text(),/When Wubbushi invites/);assert.ok(!pending.calls.some(c=>c.path==='club/room'));tests++;
-  const home=ui('viewing-room',true,{owner:{dogName:'Milo'}});await settle();assert.match(home.text(),/Your dog is home/);assert.ok(home.get('account-content').querySelectorAll('a').some(a=>a.href==='/my-dog/'));assert.ok(!home.calls.some(c=>c.path==='club/room'));tests++;
+  const home=ui('viewing-room',true,{owner:{dogName:'Milo',handle:'fixture',adoptedAt:2000000,vouch:{reason:'eligible',slots:1,weeklyLimit:1}}},{payments:true});await settle();assert.match(home.text(),/Milo/);assert.match(home.text(),/1 of 1 vouches available this week/);assert.ok(home.get('account-content').children[0].className.includes('payment-card'));assert.equal(home.calls.find(c=>c.path==='fixture/payment').host,home.get('account-content').children[0]);assert.ok(!home.calls.some(c=>c.path==='club/room'));tests++;
   const publicId='a'.repeat(24);
   const oldApplication=ui('lounge',true,{application:{publicId,status:'looking_for_vouch'}});await settle();assert.ok(oldApplication.get('account-content').querySelectorAll('a').some(a=>a.href==='/dog-pound/application/?id='+publicId));assert.ok(!oldApplication.get('account-content').querySelectorAll('a').some(a=>a.href.includes('undefined')));tests++;
   const eligible=ui('waitlist',true,{owner:{vouch:{eligible:true,slots:3}}},{waitlist:{applications:[{handle:'person',shortId:2,status:'looking_for_vouch'}]}});await settle();assert.match(eligible.text(),/Review & vouch/);tests++;
