@@ -52,6 +52,7 @@ jobs:
           node --check admin/admin.js
           node --check account/account.js
           node --check account/payments.js
+          node --check account/mint.js
           node .github/scripts/check-payments.cjs
           node --check dog-pound/review/viewings.js
           node .github/scripts/check-vouch.cjs

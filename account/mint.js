@@ -175,8 +175,17 @@
     function deliveredView(){
       const d=state.delivery,p=state.payment;
       if(!address(d.wallet)||!address(d.collection)||!uint(d.chainId)||!uint(d.tokenId)||!uint(d.tipWei)||!Number.isSafeInteger(d.tipClosesAt))throw Error('The delivery record could not be verified.');
-      body.append(node('h2',d.dogName+' is yours.'),node('p','Delivered to '+short(d.wallet)+' on '+chainName(d.chainId)+'.'));
-      const detail=node('details'),summary=node('summary','Your NFT');detail.append(summary,node('p','Wallet: '+d.wallet,'mint-address'),node('p','Collection: '+d.collection,'mint-address'),node('p','Token '+d.tokenId));body.append(detail);
+      const holder=d.ownership;
+      const verified=holder?.status==='verified' && address(holder.currentWallet) && same(holder.originalWallet,d.wallet) && holder.tokenId===d.tokenId && uint(holder.saleCount) && Number.isSafeInteger(holder.asOfBlock) && holder.asOfBlock>=0 && Number.isSafeInteger(holder.checkedAt) && now()-holder.checkedAt>=0 && now()-holder.checkedAt<=300;
+      const atHome=verified && same(holder.currentWallet,d.wallet);
+      body.append(node('h2',atHome?d.dogName+' is yours.':'Your adoption of '+d.dogName+'.'),node('p','First delivered to '+short(d.wallet)+' on '+chainName(d.chainId)+'.'));
+      const ownership=node('div',undefined,'mint-ownership');
+      if(verified){
+        ownership.append(node('p',atHome?'Held in your adoption wallet.':'Now held in another wallet.'),node('p',holder.currentWallet,'mint-address'),node('p','Confirmed through block '+holder.asOfBlock+' · checked '+when(holder.checkedAt)+'.','mint-help'));
+        if(!atHome)ownership.append(node('p','Your place as the original adopter stays with this dog.'));
+      }else ownership.append(node('p','Checking the current holder. Your original adoption record is saved.'));
+      body.append(ownership);
+      const detail=node('details'),summary=node('summary','NFT record');detail.append(summary,node('p','Original adoption wallet: '+d.wallet,'mint-address'),node('p','Collection: '+d.collection,'mint-address'),node('p','Token '+d.tokenId));if(verified)detail.append(node('p','Recorded wallet moves: '+holder.saleCount));body.append(detail);
       if(d.artistGift){body.append(node('p','We hope you love '+d.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.'));return;}
       body.append(node('h3','A little something for the artist?'),node('p','Entirely up to you. Zero is welcome.'));
       body.append(node('p','Recorded value: '+weiText(d.tipWei)+' ETH','mint-value'));
@@ -242,8 +251,8 @@
     }
     async function refresh(){
       if(!live()||busy||checking||document.hidden)return;checking=true;const ticket=epoch;
-      try{const before=JSON.stringify(state);await fresh(ticket,true);if(!busy&&(before!==JSON.stringify(state)||state.approval?.deadline<=now()||state.delivery?.tipClosesAt<=now()))render();}
-      catch{if(live()){note='We could not check the latest record. Please try again.';state={...state,mintingReady:false,payment:state.payment?{...state.payment,available:false}:undefined};render();}}
+      try{const before=JSON.stringify(state);await fresh(ticket,true);if(!busy&&(before!==JSON.stringify(state)||state.approval?.deadline<=now()||state.delivery?.tipClosesAt<=now()||state.delivery?.ownership?.checkedAt<=now()-300))render();}
+      catch{if(live()){note='We could not check the latest record. Please try again.';state={...state,mintingReady:false,delivery:state.delivery?{...state.delivery,ownership:null}:undefined,payment:state.payment?{...state.payment,available:false}:undefined};render();}}
       finally{checking=false;}
     }
     function schedule(){clearTimeout(timer);if(!live())return;timer=setTimeout(async()=>{await refresh();schedule();},8000);}

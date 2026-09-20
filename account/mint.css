@@ -8,4 +8,5 @@
 .mint-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;box-sizing:border-box;margin:8px 8px 8px 0;padding:12px 20px;border:1px solid #465b3e;border-radius:3px;background:#465b3e;color:#fffdf3;font:18px/1.35 var(--serif,Georgia,serif);text-align:center;cursor:pointer}
 .mint-button:hover:not(:disabled){background:#354831}.mint-button:focus-visible{outline:2px solid #354831;outline-offset:4px}.mint-button:disabled{opacity:.5;cursor:default}
 .mint-status:empty,.mint-card[hidden]{display:none}.mint-wallets{display:flex;flex-wrap:wrap;gap:0 8px}
+.mint-ownership{border-left:2px solid #9da797;padding-left:16px;margin:20px 0}.mint-ownership p{margin:8px 0}
 @media(max-width:500px){.mint-button{width:100%;margin-right:0}.mint-wallets{display:block}}

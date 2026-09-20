@@ -61,7 +61,7 @@
       const gift=account.privateAdoption,c=card(gift.dogName+' is home.');
       c.append(node('p','We hope you love '+gift.dogName+'.'),link('Go to my dog ↗','/my-dog/','button primary'));return;
     }
-    if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p',account.owner.dogName+' is in your account.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
+    if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p','You adopted '+account.owner.dogName+'.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
     if(account.hasInvitation&&!app){const c=card('Your invitation.');c.append(node('p','Wubbushi has chosen dogs for you.'),link('Come into the garden ↗','/viewing-room/','button primary'));return;}
     if(!app){const c=card('Already applied?');c.append(node('p','Link your application with its private receipt. Sign in with the same X account you used to apply.'));
       const form=node('form'),label=node('label','Private application receipt'),input=node('input');input.name='receipt';input.placeholder='DOG-…';input.required=true;input.maxLength=20;input.autocomplete='off';input.value=sessionStorage.getItem('alldogs-application-receipt')||'';label.append(input);const submit=node('button','Link my application','button primary');submit.type='submit';form.append(label,submit);form.addEventListener('submit',event=>{event.preventDefault();change('claim',{receipt:input.value.trim().toUpperCase()},'Your application is linked.');});c.append(form,link('Not applied yet? Start here ↗','/#apply'));return;}

@@ -72,11 +72,23 @@
     if(!apps.length)$('people').append(el('p','No people match this view.','empty'));
   }
   function fact(title,text){const n=el('div',undefined,'fact');n.append(el('p',title,'eyebrow'),el('p',text));return n;}
+  function renderNFTDelivery(root,d){
+    if(!d)return;
+    const card=el('section',undefined,'nft-delivery');card.setAttribute('aria-label','NFT delivery');
+    card.append(el('h3','NFT delivered'),el('p',d.dogName+' · adopted '+date(d.adoptedAt)));
+    const facts=el('div',undefined,'facts');facts.append(fact('Original adoption wallet',d.wallet),fact('NFT',(({1:'Ethereum',11155111:'Ethereum Sepolia'})[d.chainId]||'Network '+d.chainId)+' · token '+d.tokenId),fact('Collection',d.collection));
+    const h=d.ownership,validAddress=v=>typeof v==='string'&&/^0x[0-9a-f]{40}$/i.test(v);
+    const verified=h?.status==='verified'&&validAddress(h.currentWallet)&&validAddress(h.originalWallet)&&h.originalWallet.toLowerCase()===d.wallet.toLowerCase()&&h.tokenId===d.tokenId&&Number.isSafeInteger(h.asOfBlock)&&h.asOfBlock>=0&&Number.isSafeInteger(h.checkedAt)&&Date.now()/1000-h.checkedAt>=0&&Date.now()/1000-h.checkedAt<=300;
+    if(verified){facts.append(fact('Confirmed holder',h.currentWallet));card.append(facts,el('p','Holder at finalized block '+h.asOfBlock+' · checked '+new Date(h.checkedAt*1000).toLocaleString()+'. Refresh the desk to check again.','muted'));}
+    else{facts.append(fact('Current holder','Checking the latest confirmed record.'));card.append(facts);}
+    card.append(el('p','The original adopter stays on the record when the dog moves to another wallet.','muted'));root.append(card);
+  }
   function renderDetail(){
     const root=$('detail'),a=person();root.replaceChildren();if(!a){root.append(el('p','The next good person will appear here.','empty'));return;}
     const header=el('div',undefined,'detail-header'),heading=el('div');heading.append(el('p','Application · '+date(a.createdAt),'eyebrow'),el('h2','@'+(a.currentHandle||a.handle)),el('p',a.identityVerified?'X account verified':'Awaiting X verification — details are self-reported.','muted'));header.append(heading,badge(label(a),a.vouch?.valid?'good':''));root.append(header);
     const facts=el('div',undefined,'facts');
-    facts.append(fact('Wallet preference', ({existing:'Existing wallet',new:'Needs a wallet',help:'Would like help',later:'Will provide later'})[a.walletChoice] || 'Not recorded'),fact('Wallet address',a.wallet ? a.wallet + ' · ownership not yet confirmed' : 'Not provided'),fact('Who vouched',a.vouch?'@'+a.vouch.handle+' · '+(a.vouch.valid?'Current vouch':a.vouch.status)+(a.vouch.expiresAt?' · '+(a.vouch.valid?'expires ':'expired ')+date(a.vouch.expiresAt):''):a.claimedVoucher?'@'+a.claimedVoucher+' was named by the applicant. No verified vouch is recorded.':'No verified vouch is recorded.'),fact('Their wishlist',a.wishlist.length?a.wishlist.map(id=>dogById(id)?.title||id).join(' · '):'They haven’t saved any favorites yet.'));root.append(facts);if(a.status==='awaiting_verification'){root.append(el('p','Their application is saved. They can confirm X from the waitlist form; invitation controls will appear afterward.','muted'));return;}
+    facts.append(fact('Wallet preference', ({existing:'Existing wallet',new:'Needs a wallet',help:'Would like help',later:'Will provide later'})[a.walletChoice] || 'Not recorded'),fact('Wallet supplied on application',a.wallet ? a.wallet + ' · self-reported' : 'Not provided'),fact('Who vouched',a.vouch?'@'+a.vouch.handle+' · '+(a.vouch.valid?'Current vouch':a.vouch.status)+(a.vouch.expiresAt?' · '+(a.vouch.valid?'expires ':'expired ')+date(a.vouch.expiresAt):''):a.claimedVoucher?'@'+a.claimedVoucher+' was named by the applicant. No verified vouch is recorded.':'No verified vouch is recorded.'),fact('Their wishlist',a.wishlist.length?a.wishlist.map(id=>dogById(id)?.title||id).join(' · '):'They haven’t saved any favorites yet.'));root.append(facts);if(a.status==='awaiting_verification'){root.append(el('p','Their application is saved. They can confirm X from the waitlist form; invitation controls will appear afterward.','muted'));return;}
+    renderNFTDelivery(root,a.delivery);
     if(a.note)root.append(el('p',a.note,'note'));
     if(a.publicId&&['awaiting_vouch','vouched'].includes(a.status)&&!a.vouch?.valid)root.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>controlVouches({publicId:a.publicId},'Your permanent vouch is recorded. You have unlimited vouches.'),'primary'));
 
