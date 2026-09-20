@@ -2,7 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   let owners = [], loaded = false;
-  const reasons = {eligible:'Eligible to vouch',weekly_limit:'Weekly allowance used',disabled_by_artist:'Vouching disabled by Wubbushi',sold_own_dog:'Not eligible: sold their dog',invitee_sold:'Not eligible: someone they directly vouched for sold their dog'};
+  const reasons = {eligible:'Eligible to vouch',weekly_limit:'Weekly allowance used',disabled_by_artist:'Vouching disabled by Wubbushi',sold_own_dog:'Not eligible: sold their dog',invitee_sold:'Not eligible: someone they directly vouched for sold their dog',chain_syncing:'Checking the latest dog transfers'};
   function text(tag,value) {const e=document.createElement(tag);e.textContent=value;return e;}
   function render() {
     if (!loaded) return;

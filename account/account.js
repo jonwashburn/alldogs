@@ -23,7 +23,7 @@
   } catch { message('Allow storage for this tab, then reopen your invitation link.'); }
 
   const words = {looking_for_vouch:'Looking for a vouch',vouched:'Vouched for. Waiting for Wubbushi.',vouch_suspended:'Vouch needs review',invited:'Your garden invitation is ready',adopted:'Adopted',active:'Open',expired:'Expired',cancelled:'Withdrawn'};
-  const reason = {eligible:'You can vouch.',weekly_limit:'Your weekly vouch allowance is in use.',disabled_by_artist:'Wubbushi has disabled new vouches for your account.',sold_own_dog:'You sold your dog, so you can no longer vouch.',invitee_sold:'Someone you vouched for sold their dog, so you can no longer vouch.'};
+  const reason = {eligible:'You can vouch.',weekly_limit:'Your weekly vouch allowance is in use.',disabled_by_artist:'Wubbushi has disabled new vouches for your account.',sold_own_dog:'You sold your dog, so you can no longer vouch.',invitee_sold:'Someone you vouched for sold their dog, so you can no longer vouch.',chain_syncing:'We’re checking the latest dog transfers. New vouches will be available when that finishes.'};
   function node(tag, text, cls) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (cls) n.className = cls; return n; }
   function link(text, href, cls='text-link') { const n=node('a',text,cls);n.href=href;return n; }
   function button(text, fn, cls='button') { const n=node('button',text,cls);n.type='button';n.addEventListener('click',fn);return n; }
