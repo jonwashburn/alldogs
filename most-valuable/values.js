@@ -10,7 +10,7 @@
     const timer = setTimeout(() => controller.abort(), 15000);
     $('value-list').replaceChildren(); $('value-empty').hidden = true;
     $('value-error').hidden = true; $('value-retry').hidden = true; $('value-status').textContent = 'Loading the register…';
-    $('value-explanation').textContent = kind === 'initial' ? 'What adopters chose to pay in the seven days after adoption, highest first.' : 'Each dog’s highest confirmed secondary sale. Only confirmed sales appear here.';
+    $('value-explanation').textContent = kind === 'initial' ? 'What adopters chose to pay in the one day after adoption, highest first.' : 'Each dog’s highest confirmed secondary sale. Only confirmed sales appear here.';
     try {
       const response = await fetch('https://api.alldogs.wtf/collection-api/valuations?kind=' + kind + '&currency=' + currency, {credentials: 'omit', cache: 'no-store', signal: controller.signal});
       if (!response.ok) throw Error('The value register is temporarily unavailable. Please try again.');
@@ -30,7 +30,7 @@
         } else row.append(text('span', 'All Dogs'));
         const detail = document.createElement('div'); detail.className = 'value-detail';
         detail.append(text('h2', dog.dogName), text('p', dog.dogStatus + ' · ' + new Date(dog.paidAt * 1000).toLocaleDateString()));
-        if (dog.windowOpen) detail.append(text('p', 'First seven days still open'));
+        if (dog.windowOpen) detail.append(text('p', 'First one day still open'));
         row.append(detail);
         const amount = text('p', dog.amount + ' ' + dog.currency); amount.className = 'value-amount'; row.append(amount); fragment.append(row);
       }

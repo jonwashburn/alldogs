@@ -44,12 +44,25 @@
   function field(labelText,input){const group=el('div',undefined,'form-section'),label=el('label',labelText);label.htmlFor=input.id;group.append(label,input);return group;}
   function badge(text,kind=''){return el('span',text,'badge '+kind);}
   function resetDraft(a){draft={publicId:a.publicId,dogIds:[...(a.viewing?.dogIds||[])],note:a.viewing?.note||'',email:a.viewing?.email||a.email||'',founding:a.viewing?.founding||false,revision:a.viewing?.revision||0};dirty=false;}
-  function lock(){generation++;clearImages();key='';data=null;selected=null;draft=null;dirty=false;$('people').replaceChildren();$('detail').replaceChildren();$('stats').replaceChildren();$('preview-body').replaceChildren();$('preview').close();$('workspace').hidden=true;$('login').hidden=false;$('close').hidden=true;$('refresh').hidden=true;$('key').value='';status('Desk locked.');$('key').focus();}
+  function lock(){generation++;clearImages();key='';data=null;selected=null;draft=null;dirty=false;$('people').replaceChildren();$('detail').replaceChildren();$('stats').replaceChildren();$('vouch-controls').replaceChildren();$('preview-body').replaceChildren();$('preview').close();$('workspace').hidden=true;$('login').hidden=false;$('close').hidden=true;$('refresh').hidden=true;$('key').value='';status('Desk locked.');$('key').focus();}
   async function load(){const ticket=++generation;const fresh=await api.request('club/desk',undefined,key);if(ticket!==generation)return;data=fresh;$('login').hidden=true;$('workspace').hidden=false;$('close').hidden=false;$('refresh').hidden=false;if(!person())selected=data.applications[0]?.publicId||data.applications[0]?.legacyId||null;if(person())resetDraft(person());render();}
   function render(){
     const counts=[['On the list',data.applications.length],['Current vouches',data.applications.filter(a=>a.vouch?.valid).length],['Drafts',data.applications.filter(a=>a.viewing?.status==='draft').length],['Invited',data.applications.filter(invited).length]];
     $('stats').replaceChildren(...counts.map(([label,n])=>{const div=el('div',undefined,'stat');div.append(el('strong',String(n)),el('span',label));return div;}));
-    renderPeople();renderDetail();
+    renderPeople();renderDetail();renderVouchControls();
+  }
+  async function controlVouches(body, message){
+    if(dirty){status('Save your invitation draft before changing vouching controls.',true);return;}
+    await run(async()=>{await api.request('club/admin-vouch',body,key);await load();status(message);});
+  }
+  function renderVouchControls(){
+    const root=$('vouch-controls');root.replaceChildren();
+    root.append(el('p','Your vouches are unlimited. Everyone else uses a rolling seven-day allowance. Issued vouches never expire.'));
+    const form=el('form'),label=el('label','Vouches per person per week'),input=el('input');input.type='number';input.min='1';input.max='1000';input.required=true;input.value=data.vouchPolicy.weeklyLimit;label.append(input);
+    const save=el('button','Save allowance');save.type='submit';form.append(label,save);form.onsubmit=event=>{event.preventDefault();controlVouches({weeklyLimit:Number(input.value)},'Weekly vouch allowance updated.');};root.append(form);
+    root.append(el('p','Disabling someone stops new vouches. Their existing vouches stay valid. Restoring access still applies the sale rules.','muted'));
+    for(const owner of data.vouchers){const row=el('div',undefined,'vouch-permission'),info=el('div');info.append(el('strong','@'+owner.handle),el('span',owner.disabled?'Disabled':owner.reason==='sold_own_dog'?'Unavailable: sold their dog':owner.reason==='invitee_sold'?'Unavailable: an invitee sold their dog':owner.slots+' available this week','muted'));row.append(info,btn(owner.disabled?'Restore vouching':'Disable vouching',()=>controlVouches({ownerId:owner.ownerId,disabled:!owner.disabled},'Vouching permission updated.')));root.append(row);}
+    if(!data.vouchers.length)root.append(el('p','Confirmed adopters will appear here.','muted'));
   }
   function renderPeople(){
     const q=$('search').value.trim().toLowerCase(),filter=$('filter').value;
@@ -65,6 +78,8 @@
     const facts=el('div',undefined,'facts');
     facts.append(fact('Who vouched',a.vouch?'@'+a.vouch.handle+' · '+(a.vouch.valid?'Current vouch':a.vouch.status)+(a.vouch.expiresAt?' · '+(a.vouch.valid?'expires ':'expired ')+date(a.vouch.expiresAt):''):a.claimedVoucher?'@'+a.claimedVoucher+' was named by the applicant. No verified vouch is recorded.':'No verified vouch is recorded.'),fact('Their wishlist',a.wishlist.length?a.wishlist.map(id=>dogById(id)?.title||id).join(' · '):'They haven’t saved any favorites yet.'));root.append(facts);
     if(a.note)root.append(el('p',a.note,'note'));
+    if(a.publicId&&['awaiting_vouch','vouched'].includes(a.status)&&!a.vouch?.valid)root.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>controlVouches({publicId:a.publicId},'Your permanent vouch is recorded. You have unlimited vouches.'),'primary'));
+
     if(!a.publicId||['adopted','rejected','withdrawn'].includes(a.status)){root.append(el('p',!a.publicId?'This older application needs a current application before a private viewing can be assigned.':'This application is closed.','muted'));return;}
     if(a.gift?.status==='accepted'){root.append(el('h3','Adopted'),dogPreview([a.gift.selectedDog]),fact('Her dog’s name',a.gift.dogName));return;}
     if(a.gift?.status==='revoked'){root.append(el('p','This artist gift has been withdrawn.','muted'));return;}

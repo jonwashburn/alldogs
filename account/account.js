@@ -23,7 +23,7 @@
   } catch { message('Allow storage for this tab, then reopen your invitation link.'); }
 
   const words = {looking_for_vouch:'Looking for a vouch',vouched:'Vouched for. Waiting for Wubbushi.',vouch_suspended:'Vouch needs review',invited:'Your garden invitation is ready',adopted:'Adopted',active:'Open',expired:'Expired',cancelled:'Withdrawn'};
-  const reason = {eligible:'You can vouch.',three_outstanding:'All three vouches are in use.',sold_own_dog:'You sold your dog, so you can no longer vouch.',invitee_sold:'Someone you vouched for sold their dog, so you can no longer vouch.'};
+  const reason = {eligible:'You can vouch.',weekly_limit:'Your weekly vouch allowance is in use.',disabled_by_artist:'Wubbushi has disabled new vouches for your account.',sold_own_dog:'You sold your dog, so you can no longer vouch.',invitee_sold:'Someone you vouched for sold their dog, so you can no longer vouch.'};
   function node(tag, text, cls) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (cls) n.className = cls; return n; }
   function link(text, href, cls='text-link') { const n=node('a',text,cls);n.href=href;return n; }
   function button(text, fn, cls='button') { const n=node('button',text,cls);n.type='button';n.addEventListener('click',fn);return n; }
@@ -45,9 +45,9 @@
   function vouchesCard() {
     if (!account.owner) return;
     const c=card('A place for your people.');
-    c.append(node('p',reason[account.owner.vouch.reason]||'Eligibility is being reviewed.'),node('p',`${account.owner.vouch.slots} of 3 vouches available.`));
-    c.append(node('p','A new vouch lasts five days. If Wubbushi invites the person within that time, it stays open until they adopt or the invitation is withdrawn. There is no lifetime limit.'),link('Meet the waitlist ↗','/waitlist/'));
-    if(account.vouches.length){const list=node('ul',undefined,'account-list');for(const v of account.vouches){const li=node('li'),info=node('div');info.append(link('@'+v.handle,share(v)),node('small',(words[v.status]||v.status)+(v.expiresAt?' · '+date(v.expiresAt):v.status==='active'?' · Invited to the garden':'')));li.append(info);if(v.status==='active'&&v.expiresAt)li.append(button('Withdraw vouch',()=>change('withdraw',{publicId:v.publicId},'Your vouch is withdrawn.')));list.append(li);}c.append(list);}
+    c.append(node('p',reason[account.owner.vouch.reason]||'Eligibility is being reviewed.'),node('p',`${account.owner.vouch.slots} of ${account.owner.vouch.weeklyLimit} vouches available this week.`));
+    c.append(node('p','Vouches are permanent. Your allowance renews on a rolling seven-day basis. There is no limit to how many people you can help over time.'),link('Meet the waitlist ↗','/waitlist/'));
+    if(account.vouches.length){const list=node('ul',undefined,'account-list');for(const v of account.vouches){const li=node('li'),info=node('div');info.append(link('@'+v.handle,share(v)),node('small',(words[v.status]||v.status)+(v.expiresAt?' · '+date(v.expiresAt):v.status==='active'?' · Permanent':'')));li.append(info);list.append(li);}c.append(list);}
   }
   function peopleCard() {
     const c=card('The dogs you helped home.');
@@ -82,9 +82,10 @@
     }
     const dog=account.owner;
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
+    if(window.AllDogsPayments){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
     const c=card(dog.dogName);if(dog.painting){const img=node('img');img.src=artSrc(dog.painting);img.alt=dog.dogName+', '+dog.dogStatus;img.className='account-dog';c.append(img);}
     c.append(node('p',dog.dogStatus,'account-status'),node('p','Adopted '+date(dog.adoptedAt)),node('p','First adopter: @'+dog.handle),node('p',dog.vouchedBy?'Vouched for by @'+dog.vouchedBy:'Founding adoption'),node('p',dog.soldAt?'Sale recorded '+date(dog.soldAt):'No sale recorded.'),node('p','These details come from the confirmed adoption register, maintained by Wubbushi.','account-note'));
-    if(window.AllDogsPayments){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
+
     vouchesCard();peopleCard();
   }
   async function waitlist() {
@@ -95,7 +96,7 @@
     for(const app of data.applications){const li=node('li'),info=node('div');info.append(link('@'+app.handle,'https://x.com/'+encodeURIComponent(app.handle)),node('small',words[app.status]||'Awaiting review'));li.append(info);const actions=node('div',undefined,'account-links');actions.append(link('Meet the applicant ↗',share(app)));if(account?.owner?.vouch.eligible&&app.status==='looking_for_vouch'&&app.handle!==identity.handle)actions.append(link('Review & vouch ↗',share(app),'button'));li.append(actions);list.append(li);}c.append(list);
   }
   async function room() {
-    if(account.owner&&!(account.owner.adoptionKind==='artist_gift'&&account.hasInvitation)){const c=card('Your dog is home.');c.append(node('p','Visit your dog to see his artwork and record.'),link('Go to my dog ↗','/my-dog/'));return;}
+    if(account.owner&&!(account.owner.adoptionKind==='artist_gift'&&account.hasInvitation)){myDog();return;}
     if(!account.application&&!account.hasInvitation){const c=card('Your invitation starts here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog.'),link('Join the waitlist ↗','/#apply'),link('Already applied? Link your application ↗','/lounge/'));return;}
     if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog. You can revisit your wishlist while you wait.'),link('My wishlist ↗','/dog-pound/'));return;}
     const data=await api.request('club/room');

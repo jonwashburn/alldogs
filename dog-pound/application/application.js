@@ -22,15 +22,15 @@
       $('connect-owner').hidden=identity.signedIn||!identity.capabilities.xLogin||['adopted','invited'].includes(d.status);
       const mine=account?.vouches.find(v=>v.publicId===id&&v.status==='active');
       $('sign-vouch').hidden=!account?.owner?.vouch.eligible||d.status!=='looking_for_vouch'||d.handle===identity.handle;
-      $('withdraw-vouch').hidden=!mine||['adopted','invited'].includes(d.status);
+      $('withdraw-vouch').hidden=true;
       if(!identity.signedIn)$('wallet-status').textContent=identity.capabilities.xLogin?'Sign in with X to vouch. No wallet connection.':'Sign-in could not be started. Please try again. You can still share this application.';
       else if(!account.owner)$('wallet-status').textContent='Signed in as @'+identity.handle+'. Only confirmed dog owners can vouch.';
-      else $('wallet-status').textContent='Signed in as @'+identity.handle+'. '+account.owner.vouch.slots+' of 3 vouches available.';
+      else $('wallet-status').textContent='Signed in as @'+identity.handle+'. '+account.owner.vouch.slots+' of '+account.owner.vouch.weeklyLimit+' vouches available this week.';
     }catch(e){if(!id)$('public-application').hidden=true;$('application-status').textContent=e.message;}
   }
   async function vouch(action){
     if(busy||!id)return;busy=true;$('sign-vouch').disabled=true;$('withdraw-vouch').disabled=true;
-    try{await api.request('club/'+action,{publicId:id});await load();$('wallet-status').textContent=action==='vouch'?'Your vouch is recorded for five days. Wubbushi will review the application.':'Your vouch is withdrawn.';}
+    try{await api.request('club/'+action,{publicId:id});await load();$('wallet-status').textContent=action==='vouch'?'Your permanent vouch is recorded. Wubbushi will review the application.':'Your vouch is withdrawn.';}
     catch(e){$('wallet-status').textContent=e.message;}
     finally{busy=false;$('sign-vouch').disabled=false;$('withdraw-vouch').disabled=false;}
   }

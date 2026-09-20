@@ -2,7 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   let owners = [], loaded = false;
-  const reasons = {eligible:'Eligible to vouch',three_outstanding:'Three vouches pending; no free slot',sold_own_dog:'Not eligible: sold their dog',invitee_sold:'Not eligible: someone they directly vouched for sold their dog'};
+  const reasons = {eligible:'Eligible to vouch',weekly_limit:'Weekly allowance used',disabled_by_artist:'Vouching disabled by Wubbushi',sold_own_dog:'Not eligible: sold their dog',invitee_sold:'Not eligible: someone they directly vouched for sold their dog'};
   function text(tag,value) {const e=document.createElement(tag);e.textContent=value;return e;}
   function render() {
     if (!loaded) return;
@@ -14,7 +14,7 @@
       const heading=text('h2',owner.dogName),person=text('a','@'+owner.handle);person.href='https://x.com/'+encodeURIComponent(owner.handle);person.target='_blank';person.rel='noopener noreferrer';
       const state=text('span',owner.dogStatus);state.className='status-tag';
       const eligibility=text('p',reasons[owner.vouch.reason]||'Eligibility unavailable');eligibility.className=owner.vouch.eligible?'eligibility yes':'eligibility';
-      card.append(state,heading,person,eligibility,text('p',owner.vouch.outstanding+' / 3 vouches pending · '+owner.vouch.slots+' slots available'));
+      card.append(state,heading,person,eligibility,text('p',owner.vouch.slots+' of '+owner.vouch.weeklyLimit+' vouches available this week · '+owner.vouch.outstanding+' permanent vouches pending'));
       card.append(text('p','Adopted '+new Date(owner.adoptedAt*1000).toLocaleDateString()));
       if(owner.vouchedBy)card.append(text('p','Vouched for by @'+owner.vouchedBy));
       if(owner.hasSold)card.append(text('p','Original adopter · dog has been sold'));
