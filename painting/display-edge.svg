@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" preserveAspectRatio="none">
+  <defs>
+    <filter id="brush-edge" x="0" y="0" width="1600" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".035 .085" numOctaves="3" seed="17" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="24" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect x="18" y="18" width="1564" height="764" rx="12" fill="white" filter="url(#brush-edge)"/>
+</svg>

@@ -30,8 +30,8 @@
     },
     {
       "path": "painted.css",
-      "bytes": 11153,
-      "sha256": "449fda57a7f4c71bc23bae62c4c967923523ab6a38e00f915b79ea2a9fa4a95f"
+      "bytes": 11399,
+      "sha256": "fee14c3e9068a7af8f376a39572e79c9da13baa4804d1a4b77c1ef788f738010"
     },
     {
       "path": "quote.webp",
@@ -172,6 +172,11 @@
       "path": "next.webp",
       "bytes": 1180,
       "sha256": "9df658c1c0c1353af919c70f9b9810fc56c20b1b424744504bff74f2bdb807c3"
+    },
+    {
+      "path": "display-edge.svg",
+      "bytes": 619,
+      "sha256": "73d0c5a0c5e21f02fb4fdf3409c8c1d1bea40aea1090719cc9896afc03a1c526"
     }
   ]
 }
