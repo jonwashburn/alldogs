@@ -41,10 +41,11 @@
    .then(response=>{if(!response.ok)throw Error('Garden unavailable');return response.json();}).catch(()=>null);
   return subjectsPromise;
  }
- async function mount(content,data,change){
+ async function mount(content,data,change,mintState=null){
   const artistGift=data.adoptionKind==='artist_gift';
   const accepted=artistGift&&['accepted','delivered'].includes(data.status);
-  if(accepted){const chosen=data.dogs.find(d=>d.id===data.selectedDog);if(!chosen)throw Error('Your saved dog could not be found. Please refresh.');data={...data,dogs:[chosen]};}
+  const delivered=data.nftDelivery==='delivered';let mintLocked=Boolean(mintState?.approval||mintState?.unavailable||delivered);
+  if(accepted||delivered){const chosen=data.dogs.find(d=>d.id===data.selectedDog);if(!chosen)throw Error('Your saved dog could not be found. Please refresh.');data={...data,dogs:[chosen]};}
   const room=++generation;let index=-1,requested=Math.max(0,data.dogs.findIndex(d=>d.id===data.selectedDog)),request=0;
   let committing=false;
   const drafts=new Map();if(data.selectedDog)drafts.set(data.selectedDog,data.dogName||'');
@@ -62,18 +63,18 @@
    data.dogs.forEach((dog,i)=>{
     const label=node('label'),input=node('input'),text=node('span',dog.optionLabel||dog.title);
     input.type='radio';input.name='garden-option';input.value=dog.id;input.setAttribute('aria-controls','garden-dog');
-    input.addEventListener('change',()=>{if(input.checked)show(i);});label.append(input,text);switcher.append(label);options.push(input);
+    input.addEventListener('change',()=>{if(input.checked&&!mintLocked)show(i);});label.append(input,text);switcher.append(label);options.push(input);
    });content.append(switcher);controls.classList.add('room-controls-toggle');
   }
   if(data.dogs.length===1)controls.classList.add('room-controls-single');
   controls.append(previous,caption,next);content.append(controls);previous.hidden=next.hidden=data.dogs.length===1||toggle;
   async function commit(action,body,message){
    if(committing||room!==generation)return;committing=true;if(switcher)switcher.disabled=true;
-   try{await change(action,body,message);}finally{committing=false;if(room===generation&&switcher)switcher.disabled=false;}
+   try{await change(action,body,message);}finally{committing=false;if(room===generation&&switcher)switcher.disabled=mintLocked;}
   }
   function choiceButton(cls){
    const b=node('button',undefined,'garden-choice '+cls);b.type='button';b.disabled=true;
-   b.addEventListener('click',()=>{if(index<0||committing)return;form.hidden=false;name.focus({preventScroll:true});form.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});});return b;
+   b.addEventListener('click',()=>{if(index<0||committing||mintLocked)return;form.hidden=false;name.focus({preventScroll:true});form.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});});return b;
   }
   const topChoice=choiceButton('garden-choice-top'),belowChoice=choiceButton('garden-choice-below');belowChoice.id='garden-choice-below';
   // Keep the same choice directly beneath the scene and beneath its toggle.
@@ -86,10 +87,10 @@
   const cancel=node('button','Keep looking','text-button');cancel.type='button';cancel.addEventListener('click',()=>{form.hidden=true;topChoice.focus();});
   form.append(heading,label,save,cancel);content.append(form);
   const status=node('p','', 'account-message');status.setAttribute('role','status');status.setAttribute('aria-live','polite');content.append(status);
-  if(accepted){
+  if(accepted||delivered){
    topChoice.hidden=belowChoice.hidden=true;
    const home=node('a','Visit my dog ↗','button primary');home.href='/my-dog/';content.append(home);
-   content.append(node('p','We hope you love '+data.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.','garden-personal-note'));
+   if(artistGift&&!mintState?.mintingReady&&!mintState?.delivery)content.append(node('p','We hope you love '+data.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.','garden-personal-note'));
   }
   function setChoice(button,dog){
    const text='I choose '+dog.title;button.setAttribute('aria-label',text);button.replaceChildren();
@@ -98,8 +99,8 @@
    if(key==='chooseSupa'){const star=node('span','⭐','choice-star');star.setAttribute('aria-hidden','true');button.append(star);}
   }
   const mats=data.dogs.some(dog=>!customSubject(dog))?await subjects():null;
-  async function show(i){
-   if(room!==generation||committing)return;
+  async function show(i,restoreChoice=false){
+   if(room!==generation||committing||(mintLocked&&!restoreChoice))return;
    if(index>=0)drafts.set(data.dogs[index].id,name.value);
    requested=(i+data.dogs.length)%data.dogs.length;const dog=data.dogs[requested],candidate=requested,serial=++request;
    save.disabled=true;topChoice.disabled=belowChoice.disabled=true;status.textContent='Meeting '+dog.title+'…';picture.setAttribute('aria-busy','true');
@@ -130,32 +131,39 @@
     picture.style.setProperty('--dog-mobile-width',Math.min(43,40*w/h)+'%');
     picture.setAttribute('aria-label','See the original '+dog.title+' painting');picture.hidden=false;
     selected=dog;index=candidate;name.value=drafts.get(dog.id)||'';title.textContent=dog.title;
-    count.textContent=accepted?'Chosen by you':toggle?'Two paintings, one dog for you.':data.dogs.length===1?'Chosen for you':(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
+    count.textContent=accepted||mintLocked?'Chosen by you':toggle?'Two paintings, one dog for you.':data.dogs.length===1?'Chosen for you':(candidate+1)+' of '+data.dogs.length+' · Chosen for you';
     options.forEach((input,j)=>{input.checked=j===candidate;});
     setChoice(topChoice,dog);setChoice(belowChoice,dog);
-    topChoice.disabled=belowChoice.disabled=accepted;form.hidden=true;
+    topChoice.disabled=belowChoice.disabled=accepted||mintLocked;topChoice.hidden=belowChoice.hidden=accepted||mintLocked;form.hidden=true;
     heading.textContent='What would you call your dog?';name.value=drafts.get(dog.id)||dog.title;
     save.textContent=artistGift?'Adopt '+dog.title:'Save my choice';
-    if(accepted)title.textContent=data.dogName+' is home.';
+    if(accepted||delivered)title.textContent=data.dogName+' is home.';
     document.body.style.setProperty('--scene-ratio',w/h);
     document.body.dataset.gardenState='invited';
-    status.textContent=fallback?'Your original painting is here. The garden scene is temporarily unavailable.':useCustom||useMatte?'':'Your original painting is here.';save.disabled=accepted;
-   }catch(error){if(room===generation&&serial===request){status.textContent='The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted)save.disabled=false;if(index>=0&&!accepted)topChoice.disabled=belowChoice.disabled=false;}}
+    status.textContent=fallback?'Your original painting is here. The garden scene is temporarily unavailable.':useCustom||useMatte?'':'Your original painting is here.';save.disabled=accepted||mintLocked;
+   }catch(error){if(room===generation&&serial===request){status.textContent=mintLocked?'The painting could not load. Refresh to try again.':'The painting could not load. Try another dog, or try again.';options.forEach((input,j)=>{input.checked=j===index;});if(index>=0&&!accepted&&!mintLocked)save.disabled=false;if(index>=0&&!accepted&&!mintLocked)topChoice.disabled=belowChoice.disabled=false;}}
    finally{if(room===generation&&serial===request)picture.setAttribute('aria-busy','false');}
   }
-  previous.addEventListener('click',()=>show(requested-1));next.addEventListener('click',()=>show(requested+1));
+  previous.addEventListener('click',()=>{if(!mintLocked)show(requested-1);});next.addEventListener('click',()=>{if(!mintLocked)show(requested+1);});
   form.addEventListener('submit',event=>{
-   event.preventDefault();if(accepted||index<0||save.disabled||room!==generation)return;
+   event.preventDefault();if(accepted||mintLocked||index<0||save.disabled||room!==generation)return;
    const value=name.value.trim();if(!value){name.setCustomValidity('Give your dog a name.');name.reportValidity();return;}name.setCustomValidity('');
    save.disabled=true;
-   commit(artistGift?'adopt':'choose',{dogId:data.dogs[index].id,name:value,...(artistGift?{invitationId:data.invitationId,revision:data.revision}:{})},artistGift?'': 'Your choice and name are saved.').finally(()=>{if(room===generation)save.disabled=false;});
+   commit(artistGift?'adopt':'choose',{dogId:data.dogs[index].id,name:value,...(artistGift?{invitationId:data.invitationId,revision:data.revision}:{})},artistGift?'': 'Your choice and name are saved.').finally(()=>{if(room===generation)save.disabled=accepted||mintLocked;});
   });
   name.addEventListener('input',()=>name.setCustomValidity(''));
   controls.addEventListener('keydown',event=>{
-   if(data.dogs.length===1||event.target.closest('input,textarea,select,details')||document.querySelector('dialog[open]')||event.altKey||event.ctrlKey||event.metaKey)return;
+   if(mintLocked||data.dogs.length===1||event.target.closest('input,textarea,select,details')||document.querySelector('dialog[open]')||event.altKey||event.ctrlKey||event.metaKey)return;
    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();show(requested+(event.key==='ArrowLeft'?-1:1));}
   });
-  await show(requested);
+  await show(requested,true);
+  function setMintLock(locked){
+   if(room!==generation)return;const becameLocked=locked&&!mintLocked;mintLocked=locked;
+   if(switcher)switcher.disabled=locked||committing;previous.disabled=next.disabled=locked||committing;
+   topChoice.hidden=belowChoice.hidden=accepted||locked;topChoice.disabled=belowChoice.disabled=accepted||locked;
+   save.disabled=accepted||locked||committing;name.disabled=locked;if(locked){form.hidden=true;const chosen=data.dogs.findIndex(d=>d.id===data.selectedDog);if(chosen>=0&&(becameLocked||index!==chosen))show(chosen,true);}
+  }
+  setMintLock(mintLocked);return {setMintLock};
  }
  window.AllDogsGarden={clear,mount};
 

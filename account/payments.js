@@ -21,7 +21,7 @@
         }
         title.textContent='The dog is yours. The value is yours to decide.';
         const deadline=new Date(data.deadline*1000).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
-        host.append(node('p','Your dog is home. If you’d like to pay Wubbushi, choose an amount below. You have one day from adoption, and the amount received becomes your dog’s recorded value.'));
+        host.append(node('p','Your dog is home. If you’d like to pay Wubbushi, choose an amount below. Payments received by the deadline shown become your dog’s recorded value.'));
         host.append(node('p',(data.windowOpen?'Your valuation window closes ':'Your valuation window closed ')+deadline+'.','account-note'));
         const record=node('div',undefined,'payment-record');
         record.append(node('h3','Your dog’s recorded value'));
@@ -54,7 +54,7 @@
         rails.append(card);
         const cryptoPanel=node('section');cryptoPanel.append(node('h3','Ethereum'));
         if(data.cryptoReady&&data.crypto){const coin=data.crypto;
-          cryptoPanel.append(node('p','Send '+coin.currency+' on '+coin.network+' within one day of adoption. Once confirmed, it automatically appears as your dog’s value.'));
+          cryptoPanel.append(node('p','Send '+coin.currency+' on '+coin.network+' by '+deadline+'. Once confirmed, it automatically appears as your dog’s value.'));
           const label=node('label','Pay Wubbushi at'),address=node('input');address.value=coin.address;address.readOnly=true;address.setAttribute('aria-label','Wubbushi payment address');label.append(address);cryptoPanel.append(label);
           cryptoPanel.append(button('Copy address',async()=>{try{await navigator.clipboard.writeText(coin.address);message.textContent='Address copied. Send ETH on Ethereum mainnet only.';}catch{address.select();message.textContent='Select and copy the address above.';}}));
           cryptoPanel.append(node('p','Send directly from your original adoption wallet: '+coin.fromAddress+'. Do not send from an exchange, a different wallet, another network, or as a token transfer. Those payments cannot be automatically matched to your dog.','account-note'));

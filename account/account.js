@@ -3,7 +3,7 @@
   const api = window.AllDogsAccount, $ = id => document.getElementById(id);
   const page = document.body.dataset.accountPage;
   const content = $('account-content');
-  let identity, account, busy = false;
+  let identity, account, busy = false, mintController=null;
   // Capture the email proof, exchange it for a scoped HttpOnly viewing cookie.
   // It never appears in HTTP referrers, query strings, analytics, or the address bar after capture.
   const inviteKey='alldogs-private-invitation';
@@ -73,17 +73,39 @@
     const listed=card('Looking for someone to vouch?');listed.append(node('p','Put your X handle and application on the public waitlist so eligible owners can find you. Your wallet address and private receipt stay private.'));
     listed.append(button(app.listed?'Remove me from the waitlist':'Add me to the waitlist',()=>change('listing',{listed:!app.listed},app.listed?'You are no longer listed. Your application is still saved.':'You are on the public waitlist.'),'button primary'));
   }
-  function myDog() {
+  async function mintState() {
+    if(!window.AllDogsMint)return null;
+    try{return await api.request('club/mint-state');}
+    catch{return {unavailable:true};}
+  }
+  function mountMint(host,state,dog,onLock) {
+    if(!state||state.legacyPayment===true||!window.AllDogsMint)return;
+    if(state.unavailable){
+      const section=node('section',undefined,'mint-card');
+      section.append(node('h2','Your dog is saved.'),node('p','Delivery details are temporarily unavailable. Refresh to check again.'),button('Refresh',()=>location.reload(),'mint-button'));
+      host.append(section);onLock?.(true);return;
+    }
+    mintController=window.AllDogsMint.mount(host,state,{dogId:dog?.selectedDog||dog?.dogId,dogName:dog?.dogName,onLock});
+  }
+  async function myDog() {
     const gift=account.privateAdoption;
-    if(gift?.status==='accepted'){
+    const state=gift||account.owner||account.hasInvitation?await mintState():null;
+    if(['accepted','delivered'].includes(gift?.status)){
       const dog=gift.dogs.find(d=>d.id===gift.selectedDog),c=card(gift.dogName);
       if(dog){const img=node('img');img.src=artSrc(dog);img.alt=gift.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}
-      c.append(node('p','Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),node('p','We hope you love '+gift.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.'),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));return;
+      c.append(node('p','Adopted','account-status'),node('p',(identity.authMethod==='invitation'?'Adopted':('Chosen by @'+identity.handle))+' · '+date(gift.acceptedAt)),link('Visit your dog in the garden ↗','/viewing-room/','button primary'));
+      if(!state?.delivery&&!state?.mintingReady)c.append(node('p','We hope you love '+gift.dogName+'. This is genuinely a gift from Wubbushi. No payment is due.'));
+      mountMint(c,state,gift);return;
     }
     const dog=account.owner;
+    if(!dog&&account.hasInvitation){
+      const room=await api.request('club/room');
+      if(room.selectedDog){const c=card(room.dogName),painting=room.dogs.find(d=>d.id===room.selectedDog);if(painting){const img=node('img');img.src=artSrc(painting);img.alt=room.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}mountMint(c,state,room);c.append(link('Visit your dog ↗','/viewing-room/'));return;}
+    }
     if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
-    if(window.AllDogsPayments){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
+    if(window.AllDogsPayments&&(!state||state.legacyPayment===true)){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
     const c=card(dog.dogName);if(dog.painting){const img=node('img');img.src=artSrc(dog.painting);img.alt=dog.dogName+', '+dog.dogStatus;img.className='account-dog';c.append(img);}
+    mountMint(c,state,dog);
     c.append(node('p',dog.dogStatus,'account-status'),node('p','Adopted '+date(dog.adoptedAt)),node('p','First adopter: @'+dog.handle),node('p',dog.vouchedBy?'Vouched for by @'+dog.vouchedBy:'Founding adoption'),node('p',dog.soldAt?'Sale recorded '+date(dog.soldAt):'No sale recorded.'),node('p','These details come from the confirmed adoption register, maintained by Wubbushi.','account-note'));
 
     vouchesCard();peopleCard();
@@ -96,12 +118,12 @@
     for(const app of data.applications){const li=node('li'),info=node('div');info.append(link('@'+app.handle,'https://x.com/'+encodeURIComponent(app.handle)),node('small',words[app.status]||'Awaiting review'));li.append(info);const actions=node('div',undefined,'account-links');actions.append(link('Meet the applicant ↗',share(app)));if(account?.owner?.vouch.eligible&&app.status==='looking_for_vouch'&&app.handle!==identity.handle)actions.append(link('Review & vouch ↗',share(app),'button'));li.append(actions);list.append(li);}c.append(list);
   }
   async function room() {
-    if(account.owner&&!(account.owner.adoptionKind==='artist_gift'&&account.hasInvitation)){myDog();return;}
-    if(!account.application&&!account.hasInvitation){const c=card('Your invitation starts here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog.'),link('Join the waitlist ↗','/#apply'),link('Already applied? Link your application ↗','/lounge/'));return;}
-    if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','When Wubbushi invites you, come into his garden to meet your new dog. You can revisit your wishlist while you wait.'),link('My wishlist ↗','/dog-pound/'));return;}
+    if(account.owner&&!(account.owner.adoptionKind==='artist_gift'&&account.hasInvitation))return myDog();
+    if(!account.application&&!account.hasInvitation){const c=card('Your invitation starts here.');c.append(node('p','Your invitation will introduce the dogs Wubbushi has chosen for you.'),link('Join the waitlist ↗','/#apply'),link('Already applied? Link your application ↗','/lounge/'));return;}
+    if(!account.hasInvitation){const c=card('Your invitation will appear here.');c.append(node('p','Your invitation will introduce the dogs Wubbushi has chosen for you. You can revisit your wishlist while you wait.'),link('My wishlist ↗','/dog-pound/'));return;}
     const data=await api.request('club/room');
     if(!Array.isArray(data.dogs)||data.dogs.length<1||data.dogs.length>3||data.dogs.some(d=>!d||typeof d.id!=='string'||!d.id)||new Set(data.dogs.map(d=>d.id)).size!==data.dogs.length)throw Error('Your viewing needs a little attention from Wubbushi. Your choice has not changed.');
-    if(window.AllDogsGarden)return window.AllDogsGarden.mount(content,data,change);
+    if(window.AllDogsGarden){const state=await mintState();const garden=await window.AllDogsGarden.mount(content,data,change,state);mountMint(content,state,data,garden?.setMintLock);return;}
     if(data.note)content.append(node('p',data.note,'intro account-message'));
     let index=Math.max(0,data.dogs.findIndex(d=>d.id===data.selectedDog));
     const stage=node('div',undefined,'room-stage'),picture=button('',()=>{const d=data.dogs[index];$('large-painting').src=artSrc(d);$('large-painting').alt=d.title;$('painting-lightbox').showModal();},'room-picture'),img=node('img');picture.setAttribute('aria-label','Take a closer look at this painting');picture.append(img);stage.append(picture);content.append(stage);
@@ -111,13 +133,15 @@
     form.addEventListener('submit',event=>{event.preventDefault();change('choose',{dogId:data.dogs[index].id,name:name.value.trim()},'Your choice is saved. The artwork has not been minted or transferred.');});show(index);
   }
   async function loadContent() {
+    mintController?.dispose();mintController=null;
     if(window.AllDogsGarden)window.AllDogsGarden.clear();
     content.replaceChildren();
     account=identity.signedIn?await api.request('club/account'):null;
     if(page==='waitlist')await waitlist();
-    else if(identity.signedIn){if(page==='lounge')lounge();if(page==='my-dog')myDog();if(page==='viewing-room')await room();}
+    else if(identity.signedIn){if(page==='lounge')lounge();if(page==='my-dog')await myDog();if(page==='viewing-room')await room();}
   }
   async function start() {
+    mintController?.dispose();mintController=null;
     if(window.AllDogsGarden){window.AllDogsGarden.clear();content.replaceChildren();}
     try {
       if(invitation||viewing){
@@ -138,7 +162,7 @@
       await loadContent();
     }catch(error){message(error.message);}
   }
-  $('account-logout').addEventListener('click',async()=>{try{await api.request('club/logout',{});await start();message('You’re signed out.');}catch(error){message(error.message);}});
+  $('account-logout').addEventListener('click',async()=>{mintController?.dispose();mintController=null;try{await api.request('club/logout',{});await start();message('You’re signed out.');}catch(error){message(error.message);}});
   $('close-painting').addEventListener('click',()=>$('painting-lightbox').close());
   start();
 })();

@@ -1,0 +1,11 @@
+.mint-card{border-top:1px solid #9da79766;margin:26px 0 0;padding:25px 0 0;text-align:left;color:#323d31;overflow-wrap:anywhere}
+.mint-card h2{font:400 29px/1.2 var(--serif,Georgia,serif);margin:0 0 18px;letter-spacing:-.025em}
+.mint-card h3{font:400 23px/1.3 var(--serif,Georgia,serif);margin:26px 0 12px}
+.mint-card p,.mint-card label,.mint-card details{font:17px/1.55 var(--serif,Georgia,serif);margin:12px 0}
+.mint-card .mint-address,.mint-card .mint-help,.mint-card .mint-status{font:13px/1.6 Arial,sans-serif;color:#52604c}
+.mint-card .mint-value{font-size:22px}.mint-card details{margin:18px 0}.mint-card summary{cursor:pointer;min-height:32px}
+.mint-card label{display:block}.mint-card input{display:block;width:100%;box-sizing:border-box;border:1px solid #8e997c;border-radius:3px;background:#fffefa;padding:12px;font:20px/1.4 var(--serif,Georgia,serif);color:#263424;margin:8px 0 15px}
+.mint-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;box-sizing:border-box;margin:8px 8px 8px 0;padding:12px 20px;border:1px solid #465b3e;border-radius:3px;background:#465b3e;color:#fffdf3;font:18px/1.35 var(--serif,Georgia,serif);text-align:center;cursor:pointer}
+.mint-button:hover:not(:disabled){background:#354831}.mint-button:focus-visible{outline:2px solid #354831;outline-offset:4px}.mint-button:disabled{opacity:.5;cursor:default}
+.mint-status:empty,.mint-card[hidden]{display:none}.mint-wallets{display:flex;flex-wrap:wrap;gap:0 8px}
+@media(max-width:500px){.mint-button{width:100%;margin-right:0}.mint-wallets{display:block}}
