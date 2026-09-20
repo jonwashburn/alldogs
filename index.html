@@ -7,10 +7,10 @@
   <meta name="description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
   <link rel="stylesheet" href="/gate.css?v=20260918-wide1">
   <link rel="stylesheet" href="/dog-pound/application-email.css?v=20260917-email1">
-  <link rel="stylesheet" href="/painting/waitlist.css?v=20260920-first1">
+  <link rel="stylesheet" href="/painting/waitlist.css?v=20260920-forms1">
   <script src="/account/account-api.js?v=20260919-direct1" defer></script>
-  <script src="/dog-pound/application-email.js?v=20260919-direct1" defer></script>
-  <script src="/dog-pound/adoption-form.js?v=20260920-first1" defer></script>
+  <script src="/dog-pound/application-email.js?v=20260920-forms1" defer></script>
+  <script src="/dog-pound/adoption-form.js?v=20260920-forms1" defer></script>
   <script src="/home-rotation.js?v=20260918-wide1" defer></script>
   <script src="/gate.js?v=20260919-inline1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
@@ -29,7 +29,7 @@
 <meta name="twitter:description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
   <link rel="stylesheet" href="/painting/painted.css?v=20260920-brush1">
   <script src="/painting/page.js?v=20260918-display1" defer></script>
-<link rel="stylesheet" href="/site.css?v=20260918-polish1">
+<link rel="stylesheet" href="/site.css?v=20260920-forms1">
   <link rel="stylesheet" href="/letter.css?v=20260920-columns1">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
@@ -105,7 +105,7 @@
     <label>Your X / Twitter handle<input name="handle" id="handle" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="@yourhandle" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required autofocus></label>
     <label>Your Ethereum wallet address<input name="wallet" id="wallet" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="0x…" pattern="0x[0-9a-fA-F]{40}" maxlength="42" required><small>Use the wallet address you plan to adopt with. No ENS names or exchange deposit addresses. Your address stays private for application review and later authorization; typing it does not prove you control it. Never enter a private key or recovery phrase.</small></label>
     <div class="trap" aria-hidden="true"><label>Leave empty<input name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
-    <div class="application-terms" id="application-terms"><p>Saving creates a private application. After you confirm your X account, your handle joins the public waitlist. Your email and wallet stay private. Applying is free and does not reserve a dog.</p><p>One direct adoption per person, ever. After adoption, you have one day from minting to pay Wubbushi the value you choose. Your valuation becomes part of the artwork.</p><p>Selling your living dog can kill it and spread the infection to other dogs. <a href="/adoption/" target="_blank" rel="noopener">Read the adoption guide and collection rules (new tab)</a>.</p></div>
+    <div class="application-terms" id="application-terms"><p>Saving creates a private application. After you confirm your X account, your handle joins the public waitlist. Your email and wallet stay private. Applying is free and does not reserve a dog.</p><details><summary>How adoption works</summary><p>One direct adoption per person, ever. After adoption, you have one day from minting to pay Wubbushi the value you choose. Your valuation becomes part of the artwork.</p><p>Selling your living dog can kill it and spread the infection to other dogs. <a href="/adoption/" target="_blank" rel="noopener">Read the adoption guide and collection rules ↗</a>.</p></details></div>
     <button class="button primary" type="submit" id="submit-application">Save my place →</button>
     <p id="form-status" role="status" aria-live="polite"></p>
     </form>
@@ -113,13 +113,13 @@
         <p class="application-step">3 of 3 · Your invitation</p><h4 id="email-title">Where should your invitation go?</h4>
         <p>You’re signed in with your verified X account. Add your email for your private invitation.</p>
         <form id="application-email-form">
-          <label>Email address <span class="optional">(optional)</span><input id="notification-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>
-          <label class="consent"><input id="art-updates" type="checkbox" name="artUpdates"><span>Keep me posted on other art by Wubbushi, too.</span></label>
+          <label>Email address <span class="optional">(optional)</span><input id="notification-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" aria-describedby="email-status" required></label>
+          <label class="consent"><input id="art-updates" type="checkbox" name="artUpdates" checked><span>Keep me posted on other art by Wubbushi, too.</span></label>
           <div class="email-actions"><button id="save-email" type="submit" class="button primary">Save email</button><button id="skip-email" type="button" class="text-link">Not now</button><button id="remove-email" type="button" class="text-link" hidden>Remove email</button></div>
         </form>
         <p id="email-status" role="status" aria-live="polite"></p>
         <p class="quiet">Wubbushi can contact you on X. You can change your email preferences here anytime.</p>
-      </section><button id="reopen-email" class="text-link" type="button" hidden>Add an email for your invitation</button><div id="share-application" hidden><p>Share this link to find an eligible owner to vouch for you. Your public page shows your X handle, application status and who vouches for you. Your wallet address and receipt stay private.</p><a class="button primary" id="share-on-x" target="_blank" rel="noopener noreferrer">Post your application on X ↗</a><p><button type="button" class="text-link" id="copy-application">Copy application link</button> · <a id="view-application">View your application</a></p></div><details><summary>Save your private receipt. Do not post it.</summary><p>Your X identity is confirmed. Keep this receipt as a private reference for your application.</p><code id="receipt-code"></code><button type="button" class="text-link" id="copy-receipt">Copy private receipt</button></details><p>Your X identity is confirmed. Your application is waiting for review. No money has been taken and no dog has been reserved.</p></div>
+      </section><button id="reopen-email" class="text-link" type="button" hidden>Add an email for your invitation</button><div id="share-application" hidden><p>Share this link to find an eligible owner to vouch for you. Your public page shows your X handle, application status and who vouches for you. Your wallet address and receipt stay private.</p><a class="button primary" id="share-on-x" target="_blank" rel="noopener noreferrer">Post your application on X ↗</a><p><button type="button" class="text-link" id="copy-application">Copy application link</button> · <a id="view-application">View your application</a></p></div><details><summary>Save your private receipt. Do not post it.</summary><p>Your X identity is confirmed. Keep this receipt as a private reference for your application.</p><code id="receipt-code"></code><button type="button" class="text-link" id="copy-receipt">Copy private receipt</button></details><p>Your application is waiting for review. No dog has been reserved.</p></div>
   </div>
 </dialog>
 

@@ -15,7 +15,7 @@
 
   function fill(contact) {
     $('notification-email').value = contact?.email || '';
-    $('art-updates').checked = contact?.artUpdates === true;
+    $('art-updates').checked = contact ? contact.artUpdates === true : true;
     $('remove-email').hidden = !contact;
     $('save-email').textContent = contact ? 'Update preferences' : 'Save email';
   }

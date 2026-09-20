@@ -62,12 +62,12 @@
       c.append(node('p','We hope you love '+gift.dogName+'.'),link('Go to my dog ↗','/my-dog/','button primary'));return;
     }
     if(account.owner){const c=card('Hello, @'+identity.handle+'.');c.append(node('p','You adopted '+account.owner.dogName+'.'),link('Go to my dog ↗','/my-dog/'));vouchesCard();return;}
-    if(account.hasInvitation&&!app){const c=card('Your invitation.');c.append(node('p','Wubbushi has chosen dogs for you.'),link('Come into the garden ↗','/viewing-room/','button primary'));return;}
+    if(account.hasInvitation&&!app){const c=card('Your invitation.');c.append(node('p','Wubbushi has chosen dogs for you.'),link('Meet your dogs ↗','/viewing-room/','button primary'));return;}
     if(!app){const c=card('Already applied?');c.append(node('p','Link your application with its private receipt. Sign in with the same X account you used to apply.'));
       const form=node('form'),label=node('label','Private application receipt'),input=node('input');input.name='receipt';input.placeholder='DOG-…';input.required=true;input.maxLength=20;input.autocomplete='off';input.value=sessionStorage.getItem('alldogs-application-receipt')||'';label.append(input);const submit=node('button','Link my application','button primary');submit.type='submit';form.append(label,submit);form.addEventListener('submit',event=>{event.preventDefault();change('claim',{receipt:input.value.trim().toUpperCase()},'Your application is linked.');});c.append(form,link('Not applied yet? Start here ↗','/#apply'));return;}
     const c=card('Your application.');c.append(node('p',words[app.status]||'Under review','account-status'));
     if(app.vouchedBy)c.append(node('p','Vouched for by @'+app.vouchedBy+(app.expiresAt?'. Expires '+date(app.expiresAt)+'.':'.')));
-    if(account.hasInvitation)c.append(link('Come into the garden ↗','/viewing-room/','button primary'));
+    if(account.hasInvitation)c.append(link('Meet your dogs ↗','/viewing-room/','button primary'));
     else c.append(node('p','Wubbushi reviews each application personally. Your invitation will appear here.'));
     const links=node('div',undefined,'account-links');links.append(link('My shareable application ↗',share(app)),link('My wishlist ↗','/dog-pound/'));c.append(links);
     const listed=card('Looking for someone to vouch?');listed.append(node('p','Put your X handle and application on the public waitlist so eligible owners can find you. Your wallet address and private receipt stay private.'));
@@ -102,7 +102,7 @@
       const room=await api.request('club/room');
       if(room.selectedDog){const c=card(room.dogName),painting=room.dogs.find(d=>d.id===room.selectedDog);if(painting){const img=node('img');img.src=artSrc(painting);img.alt=room.dogName+', the original painting by Wubbushi';img.className='account-dog';c.append(img);}mountMint(c,state,room);c.append(link('Visit your dog ↗','/viewing-room/'));return;}
     }
-    if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Come into the garden ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
+    if(!dog){const c=card('Your dog will be here.');c.append(node('p','Once your adoption is complete, this becomes your dog’s page: its name, status, and the people you helped into the pack.'),link(account.hasInvitation?'Meet your dogs ↗':'Check my application ↗',account.hasInvitation?'/viewing-room/':'/lounge/'));return;}
     if(window.AllDogsPayments&&(!state||state.legacyPayment===true)){const payment=card('');payment.className+=' payment-card';window.AllDogsPayments.mount(payment);}
     const c=card(dog.dogName);if(dog.painting){const img=node('img');img.src=artSrc(dog.painting);img.alt=dog.dogName+', '+dog.dogStatus;img.className='account-dog';c.append(img);}
     mountMint(c,state,dog);

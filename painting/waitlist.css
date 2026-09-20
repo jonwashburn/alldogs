@@ -1,54 +1,63 @@
-/* Existing waitlist form, on the invitation's painted paper. */
+/* One paper form, three clear steps. The painting stays with the introduction. */
 .adoption-is-open{overflow:hidden}
-.adoption-dialog{width:min(590px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:30px;overflow:auto;overscroll-behavior:contain}
-.adoption-dialog-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px}
-.adoption-dialog h2{font:400 34px/1.15 var(--serif);margin:0}
-.adoption-dialog form>p:first-child{font-size:15px;margin:0 0 24px}
-.adoption-close{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border:0;background:transparent;font-size:26px}
-.adoption-close:hover{background:#dfe2d677}
-.adoption-dialog form>label{display:block;margin-bottom:22px;font-size:14px;font-weight:600}
-.adoption-dialog input{display:block;width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid #bfc2b8;border-radius:0;padding:12px 14px;margin-top:8px}
-.adoption-dialog small{font-weight:400;font-size:13px;color:var(--muted);display:block;margin-top:8px}
-.adoption-dialog .optional{color:var(--muted);font-weight:400}
-.adoption-dialog .button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--blue);padding:14px 22px;text-decoration:none;font-weight:600;background:transparent}
-.adoption-dialog .primary{width:100%;white-space:normal;background:var(--blue);color:white}
-.adoption-dialog .primary:hover{background:#2e4555}
-.adoption-dialog .button:disabled{opacity:.6;cursor:wait}
-.adoption-dialog .text-link{background:none;border:0;padding:0;font-weight:600;text-decoration:underline;text-underline-offset:5px;white-space:normal;min-height:44px;font-size:13px}
-.adoption-dialog .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
-.adoption-dialog .application-terms{padding:18px 0 2px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.adoption-dialog .application-terms p{margin:0 0 14px}
-.adoption-dialog .application-terms a{color:var(--ink)}
-.adoption-dialog #form-status{font-size:14px}
-.adoption-dialog .error{color:#ad291e}
-.adoption-dialog #receipt{border-top:2px solid var(--blue);padding-top:20px}
-.adoption-dialog #receipt h3{font:400 28px/1.2 var(--serif);margin:0 0 18px}
-.adoption-dialog #receipt p{font-size:13px}
-.adoption-dialog #receipt code{display:block;padding:14px;background:#e2e7dd;overflow-wrap:anywhere;margin:16px 0}
-.adoption-dialog #receipt details{margin-top:24px}
-.adoption-dialog summary{cursor:pointer;font-weight:600}
-.adoption-dialog .consent{display:flex;align-items:start;gap:12px;font-weight:400;font-size:13px}
-.adoption-dialog .consent input{width:18px;height:18px;margin:3px 0 0;flex-shrink:0}
-.adoption-dialog .application-email h4{font:400 25px/1.2 var(--serif)}
-.adoption-dialog .wishlist-invite{padding:22px 0;margin:18px 0;border-block:1px solid var(--line)}
-.adoption-dialog .wishlist-invite h4{font:400 25px/1.2 var(--serif);margin:0}
-.adoption-dialog input:focus-visible,.adoption-dialog select:focus-visible{outline:2px dashed #a25b44;outline-offset:3px}
-@media(max-width:600px){.adoption-dialog{padding:24px}.adoption-dialog h2{font-size:30px}}
-@media(max-width:380px){.adoption-dialog{padding:20px}}
-/* A small painted introduction before the visit to X. */
-.adoption-dialog{background:#f7f4e9;color:#30382d;border:1px solid #cbcdbb;box-shadow:0 20px 90px #23331d44;border-radius:8px;max-width:620px}
+.adoption-dialog{--form-gutter:28px;box-sizing:border-box;width:min(590px,calc(100% - 32px));max-width:590px;max-height:calc(100dvh - 32px);padding:0;overflow:auto;overscroll-behavior:contain;background:#eeeadd url('/painting/page.webp') center/cover;color:#303c38;border:1px solid #9ca89588;border-radius:8px;box-shadow:0 20px 90px #23331d44}
+.adoption-dialog *{box-sizing:border-box}
 .adoption-dialog::backdrop{background:#263b2999;backdrop-filter:blur(5px)}
-.adoption-dialog-heading{margin-bottom:18px}.adoption-dialog-heading h2{font-family:Georgia,serif;letter-spacing:-.025em}
-.waitlist-art{margin:0 -30px 24px;overflow:hidden}.waitlist-art img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover}
-.adoption-dialog .application-step{font:600 11px/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#59694f;margin:0 0 14px}
-.adoption-dialog form>p{font-size:15px;line-height:1.6}.adoption-dialog #registration-status:empty{display:none}
-.adoption-dialog input,.adoption-dialog .wallet-choice{background:#fffdf6;border:1px solid #bfc5b3;border-radius:4px;padding:13px 14px;font:400 16px/1.4 Arial,sans-serif;color:inherit;width:100%;margin-top:8px;display:block}
-.adoption-dialog .primary{background:#405b38;border-color:#405b38;border-radius:4px;font-size:16px}.adoption-dialog .primary:hover{background:#31482b}
-.adoption-dialog #application-verification h3{font:400 33px/1.2 Georgia,serif;letter-spacing:-.02em;margin:0 0 16px}
-.adoption-dialog #application-verification p{font-size:15px;line-height:1.65}.adoption-dialog #verify-x{margin-top:10px}
-.adoption-dialog .verification-domain{text-align:center;color:#58624f;font-size:12px!important;margin:10px 0 24px}
-.adoption-dialog #application-verification details{padding:16px 0;border-block:1px solid #ccd0be;font-size:13px}.adoption-dialog #application-verification details p{font-size:13px}
-.adoption-dialog #verify-status{color:#994335}.adoption-dialog .verification-later{color:#64705b;font-size:12px!important}
-.adoption-dialog #receipt{border-color:#405b38}.adoption-dialog [hidden]{display:none!important}
-@media(max-width:600px){.waitlist-art{margin-inline:-24px}.adoption-dialog{max-height:calc(100dvh - 20px);width:calc(100% - 20px)}}
-@media(max-width:380px){.waitlist-art{margin-inline:-20px}}
+.adoption-dialog-heading{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0;padding:18px var(--form-gutter);background:#eeebdf;border-bottom:1px solid #9da79766}
+.adoption-dialog h2{font:400 31px/1.15 Georgia,serif;letter-spacing:-.025em;margin:0}
+.adoption-dialog h2:focus{outline:none}
+.adoption-close{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;border:0;border-radius:4px;background:transparent;color:inherit;font:28px/1 Arial,sans-serif;cursor:pointer}
+.adoption-close:hover{background:#dfe2d6}
+.adoption-dialog .application-body{padding:0 var(--form-gutter) 28px;min-width:0}
+.waitlist-art{margin:0 calc(-1 * var(--form-gutter)) 26px;overflow:hidden}
+.waitlist-art img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
+.adoption-dialog:has(#application-form[hidden]) .waitlist-art{display:none}
+.adoption-dialog:has(#application-form[hidden]) .application-body{padding-top:26px}
+.adoption-dialog p{font:14px/1.65 Arial,sans-serif;margin:0 0 20px}
+.adoption-dialog .application-step{font:600 11px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#59694f;margin:0 0 12px}
+.adoption-dialog form>label{display:block;margin:0 0 22px;font:500 14px/1.5 Arial,sans-serif}
+.adoption-dialog input:not([type=checkbox]),.adoption-dialog select{display:block;width:100%;min-height:48px;margin-top:8px;padding:12px 14px;border:1px solid #83917c99;border-radius:4px;background:#fbfaf5;color:inherit;font:400 16px/1.5 Arial,sans-serif}
+.adoption-dialog input::placeholder{color:#737e75;opacity:1}
+.adoption-dialog small{display:block;margin-top:8px;font:400 12px/1.6 Arial,sans-serif;color:#59675f}
+.adoption-dialog .optional{color:#59675f;font-weight:400}
+.adoption-dialog .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid #465f54;border-radius:4px;padding:12px 18px;text-decoration:none;font:500 16px/1.5 Arial,sans-serif;white-space:normal;text-align:center;cursor:pointer}
+.adoption-dialog .primary{width:100%;background:#465f54;color:white}
+.adoption-dialog .primary:hover{background:#354d41;color:white}
+.adoption-dialog button:disabled,.adoption-dialog input:disabled{opacity:.6;cursor:wait}
+.adoption-dialog .text-link{display:inline-flex;align-items:center;min-height:44px;border:0;background:none;padding:6px 0;color:inherit;font:500 14px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:4px;white-space:normal;cursor:pointer}
+.adoption-dialog .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.adoption-dialog .application-terms{padding:18px 0;margin:2px 0 20px;border-block:1px solid #9da79766;color:#59675f}
+.adoption-dialog .application-terms p{font-size:12px;margin:0 0 12px}
+.adoption-dialog .application-terms>p{margin-bottom:6px}
+.adoption-dialog .application-terms details{margin:0}
+.adoption-dialog .application-terms details p:first-of-type{margin-top:8px}
+.adoption-dialog .application-terms a{color:inherit}
+.adoption-dialog summary{min-height:44px;padding-block:10px;font:500 14px/1.6 Arial,sans-serif;cursor:pointer}
+.adoption-dialog #receipt{border:0;padding:0}
+.adoption-dialog #receipt>h3{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.adoption-dialog #receipt code{display:block;padding:14px;background:#e2e7dd;overflow-wrap:anywhere;margin:12px 0;font:13px/1.6 monospace}
+.adoption-dialog #receipt>details{margin:24px 0;border-block:1px solid #9da79766}
+.adoption-dialog #receipt>p{font-size:12px;color:#59675f;margin-bottom:0}
+.adoption-dialog .consent{display:flex;align-items:flex-start;gap:12px;min-height:44px;font-weight:400;cursor:pointer}
+.adoption-dialog .consent input[type=checkbox]{display:block;flex:0 0 20px;width:20px;height:20px;min-height:20px;margin:2px 0 0;padding:0;accent-color:#465f54}
+.adoption-dialog .consent span{min-width:0}
+.adoption-dialog .application-email{margin:0;padding:0;border:0;background:none}
+.adoption-dialog .application-email h4,.adoption-dialog .wishlist-invite h4{font:400 27px/1.2 Georgia,serif;letter-spacing:-.02em;margin:0 0 14px}
+.adoption-dialog .email-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
+.adoption-dialog .email-actions .primary{flex-basis:100%}
+.adoption-dialog .application-email .quiet{font-size:12px;line-height:1.6;margin:12px 0 0;color:#59675f}
+.adoption-dialog .wishlist-invite{margin:26px 0;padding:26px 0;border-block:1px solid #9da79766}
+.adoption-dialog #share-application .primary{background:transparent;color:#303c38;border-color:#83917c99}
+.adoption-dialog #application-verification h3{font:400 30px/1.2 Georgia,serif;letter-spacing:-.02em;margin:0 0 16px}
+.adoption-dialog .verification-domain{text-align:center;color:#59675f;font-size:12px;margin:10px 0 20px}
+.adoption-dialog #application-verification details{padding:6px 0;border-block:1px solid #9da79766}
+.adoption-dialog #application-verification details p{font-size:13px}
+.adoption-dialog .verification-later{color:#59675f;font-size:12px;margin:12px 0 0}
+.adoption-dialog #wallet-help{font-size:13px;color:#59675f;margin:-8px 0 22px}
+.adoption-dialog #registration-status{font-size:12px;color:#465f54;margin-bottom:18px}
+.adoption-dialog #form-status:not(:empty),.adoption-dialog #email-status:not(:empty),.adoption-dialog #verify-status:not(:empty){margin:16px 0 0;padding:12px 14px;background:#dfe5d780;border-left:3px solid #465f54;font:14px/1.6 Arial,sans-serif;overflow-wrap:anywhere}
+.adoption-dialog #form-status.error,.adoption-dialog #email-status.error,.adoption-dialog #verify-status:not(:empty){color:#8c352c;background:#f3e5dc;border-color:#a45034}
+.adoption-dialog #registration-status:empty,.adoption-dialog #form-status:empty,.adoption-dialog #email-status:empty,.adoption-dialog #verify-status:empty{display:none}
+.adoption-dialog :is(button,a,input,select,summary):focus-visible{outline:2px solid #557064;outline-offset:3px}
+.adoption-dialog [hidden]{display:none!important}
+@media(max-width:600px){.adoption-dialog{--form-gutter:22px;width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.adoption-dialog-heading{padding-block:14px}.adoption-dialog h2{font-size:28px}.adoption-dialog .application-body{padding-bottom:24px}.adoption-dialog .application-email h4,.adoption-dialog .wishlist-invite h4{font-size:25px}}

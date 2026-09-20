@@ -18,7 +18,7 @@ function harness(contact=null){
   let tests=0;
   for(const art of [false,true]){
     const h=harness();assert.equal(h.calls.length,0);await h.show();
-    assert.equal(h.element('application-email').hidden,false);assert.equal(h.element('art-updates').checked,false);
+    assert.equal(h.element('application-email').hidden,false);assert.equal(h.element('art-updates').checked,true);
     h.element('notification-email').value=' collector@example.com ';h.element('art-updates').checked=art;
     await h.element('application-email-form').events.submit({preventDefault(){}});
     const saved=h.calls[1];assert.equal(saved.body.email,'collector@example.com');assert.equal(saved.body.artUpdates,art);
@@ -30,20 +30,22 @@ function harness(contact=null){
   const restore=harness({email:'saved@example.com',artUpdates:true,verified:false});await restore.show();await restore.show();
   assert.equal(restore.calls.length,1);assert.equal(restore.element('notification-email').value,'saved@example.com');
   assert.equal(restore.element('art-updates').checked,true);assert.equal(restore.element('remove-email').hidden,false);tests++;
+  const optOut=harness({email:'saved@example.com',artUpdates:false});await optOut.show();
+  assert.equal(optOut.element('art-updates').checked,false);tests++;
   const skip=harness();await skip.show();skip.element('skip-email').events.click();assert.equal(skip.element('application-email').hidden,true);
   assert.equal(skip.calls.length,1);skip.element('reopen-email').events.click();assert.equal(skip.element('application-email').hidden,false);tests++;
   const remove=harness({email:'saved@example.com',artUpdates:true});await remove.show();await remove.element('remove-email').events.click();
   assert.equal(remove.calls[1].body.action,'remove');assert.equal(remove.element('notification-email').value,'');
-  assert.equal(remove.element('art-updates').checked,false);assert.equal(remove.element('remove-email').hidden,true);tests++;
+  assert.equal(remove.element('art-updates').checked,true);assert.equal(remove.element('remove-email').hidden,true);tests++;
   const failure=harness();await failure.show();failure.fail();failure.element('notification-email').value='collector@example.com';
   await failure.element('application-email-form').events.submit({preventDefault(){}});
   assert.equal(failure.element('email-status').className,'error');assert.equal(failure.element('save-email').disabled,false);
   assert.equal(failure.element('notification-email').value,'collector@example.com');assert.doesNotMatch(failure.element('email-status').textContent,/Email saved/);tests++;
-  for(const file of ['welcome/index.html']){
-    const html=fs.readFileSync(file,'utf8');const mainForm=html.indexOf('<form id="application-form" hidden>');
+  for(const file of ['index.html','welcome/index.html']){
+    const html=fs.readFileSync(file,'utf8');const mainForm=html.indexOf('<form id="application-form"');
     const endMain=html.indexOf('</form>',mainForm),emailForm=html.indexOf('<form id="application-email-form">');
-    assert.ok(endMain<emailForm);assert.ok(html.indexOf('application-email.js')<html.indexOf('adoption-form.js'));
-    assert.match(html,/<input id="art-updates"[^>]*>/);assert.doesNotMatch(html.match(/<input id="art-updates"[^>]*>/)[0],/checked/);
+    assert.ok(mainForm>=0 && endMain>mainForm && endMain<emailForm);assert.ok(html.indexOf('application-email.js')<html.indexOf('adoption-form.js'));
+    assert.match(html,/<input id="art-updates"[^>]*>/);assert.match(html.match(/<input id="art-updates"[^>]*>/)[0],/checked/);
     assert.ok(html.includes('Wubbushi can contact you on X.'));tests++;
   }
   console.log(`${tests} isolated frontend email preference cases passed.`);

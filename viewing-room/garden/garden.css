@@ -132,7 +132,7 @@ body[data-ceremony="true"] .garden-foreground{z-index:1}
 .room-controls-toggle .room-caption h2{display:none}
 .room-controls-toggle .room-caption p{margin:0}.garden-options{margin-bottom:5px}
 .garden-letter{padding:28px}.garden-letter .room-form{margin-top:15px;padding-top:20px}
-.room-form .text-button{display:block;margin:8px 0;font:16px/1.5 var(--serif);cursor:pointer}
+.room-form .text-button{display:block;min-height:44px;margin:8px 0;padding:8px 0;border:0;background:none;color:inherit;font:16px/1.5 var(--serif);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 body[data-ceremony="true"] .garden-dog{top:0;bottom:auto;height:calc(100% - 110px);width:auto;max-width:none;aspect-ratio:var(--dog-ratio)}
 @media(min-width:1000px){
  body[data-garden-state="invited"] .garden-main{min-height:max(720px,100svh);padding-top:105px;padding-bottom:90px;align-items:start}
@@ -155,3 +155,6 @@ body[data-ceremony="true"] .garden-dog{top:0;bottom:auto;height:calc(100% - 110p
  body[data-ceremony="true"] .garden-dog{height:var(--paint-height)}
  body[data-ceremony="true"] .garden-choice-below{top:calc(var(--paint-height) + 16px);bottom:auto}
 }
+
+.garden-letter .room-form input:focus-visible{outline:2px solid #557064;outline-offset:4px}
+@media(max-width:600px){.garden-letter .room-form .button.primary{width:100%}}

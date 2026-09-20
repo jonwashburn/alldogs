@@ -35,12 +35,18 @@
   const verification = document.createElement('section'); verification.id = 'application-verification'; verification.hidden = true;
   verification.innerHTML = `<p class="application-step">2 of 3 · Confirm your X account</p><h3>Your place is saved.</h3><p id="verify-copy"></p><p>One quick visit to X confirms that this handle belongs to you. Then you can add an email for your invitation.</p><button type="button" class="button primary" id="verify-x">Confirm with X ↗</button><p class="verification-domain">You’ll continue on <strong>x.com</strong>, then return here.</p><details><summary>What does All Dogs access?</summary><p>X asks for permission to read posts and account information. All Dogs only requests your account ID and handle to confirm your identity. We do not read your posts or messages, post for you, or retain your X access token.</p></details><p id="verify-status" role="status" aria-live="polite"></p><button type="button" class="text-link" id="edit-application">Correct my details</button><p class="verification-later">You can close this window and confirm later. Your application stays saved; reopen the waitlist in this browser tab to continue.</p>`;
   $('application-form').after(verification);
+  function focusStep() {
+    if (!dialog?.open) return;
+    const heading = $('adoption-dialog-title'); heading.tabIndex = -1;
+    heading.focus({preventScroll: true}); dialog.scrollTop = 0;
+  }
   function showVerification(message = '') {
     $('application-form').hidden = true; $('receipt').hidden = true; verification.hidden = false;
     $('adoption-dialog-title').textContent = 'A little introduction.';
     $('verify-copy').textContent = '@' + pending.handle + ' is on your application. Your wallet details are saved privately.';
     $('verify-status').textContent = message;
     registrationStatus.textContent = '';
+    focusStep();
   }
   async function finishVerification() {
     const result = await api.request('club/registration-verify', {receipt: pending.receipt, publicId: pending.publicId});
@@ -111,15 +117,16 @@
     $('form-status').textContent = '';
     for (const input of $('application-form').querySelectorAll('input, textarea, select')) input.disabled = true;
     window.AllDogsApplicationEmail?.show(receipt, publicId);
+    focusStep();
     try { sessionStorage.setItem('alldogs-application-receipt', receipt); } catch (_) {}
     if (/^[A-Za-z0-9_-]{24}$/.test(publicId || '')) {
       const url = validShortId(shortId) ? 'https://alldogs.wtf/vouch/' + Number(shortId) : 'https://alldogs.wtf/dog-pound/application/?id=' + publicId;
       if (!$('wishlist-invitation')) {
         const invite = document.createElement('section'); invite.id = 'wishlist-invitation'; invite.className = 'wishlist-invite';
-        const title = document.createElement('h4'); title.textContent = 'You’re on the list. Come meet the dogs.';
+        const title = document.createElement('h4'); title.textContent = 'Meet the dogs.';
         const copy = document.createElement('p'); copy.textContent = 'Choose up to three favourites in the Pound. Put them in order, change your mind, come back for another look.';
-        const enter = document.createElement('a'); enter.className = 'button primary'; enter.href = '/dog-pound/'; enter.textContent = 'Enter the Pound · make my wishlist ↗';
-        invite.append(title,copy,enter); $('receipt').querySelector('h3').after(invite);
+        const enter = document.createElement('a'); enter.className = 'button primary'; enter.href = '/dog-pound/'; enter.textContent = 'Make my wishlist ↗';
+        invite.append(title,copy,enter); $('reopen-email').after(invite);
       }
       $('share-application').hidden = false;
       $('view-application').href = url;

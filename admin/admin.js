@@ -5,7 +5,11 @@
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
   const btn=(text,fn,cls='')=>{const n=el('button',text,cls);n.type='button';n.onclick=fn;return n;};
   const date=n=>n?new Date(n*1000).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'}):'—';
-  const status=(text,error=false)=>{$('message').textContent=text;$('message').className=error?'error':'';};
+  function status(text,error=false){
+    $('message').textContent=text;$('message').className=error?'error':'';
+    const feedback=$('draft-message');if(feedback){feedback.textContent=text;feedback.className=error?'form-feedback error':'form-feedback';}
+    if(error&&!$('preview').open){const target=feedback||$('message');target.tabIndex=-1;target.focus({preventScroll:true});const box=target.getBoundingClientRect();if(box.top<0||box.bottom>innerHeight)target.scrollIntoView({block:'center',behavior:'smooth'});}
+  }
   const person=()=>data?.applications.find(a=>(a.publicId||a.legacyId)===selected);
   const dogById=id=>person()?.gift?.dogs.find(d=>d.id===id)||data.dogs.find(d=>d.id===id);
   const privateImages=new Map();let imageGeneration=0;
@@ -67,7 +71,7 @@
   function renderPeople(){
     const q=$('search').value.trim().toLowerCase(),filter=$('filter').value;
     const apps=data.applications.filter(a=>[a.handle,a.currentHandle,a.email,a.viewing?.email,a.claimedVoucher,a.vouch?.handle].filter(Boolean).join(' ').toLowerCase().includes(q)).filter(a=>filter==='all'||filter==='waiting'&&!invited(a)&&!['adopted','rejected','withdrawn'].includes(a.status)||filter==='vouched'&&a.vouch?.valid||filter==='draft'&&a.viewing?.status==='draft'||filter==='invited'&&invited(a)||filter==='attention'&&invited(a)&&['failed','unknown'].includes(a.mail?.status));
-    $('list-count').textContent=apps.length+' of '+data.applications.length+' people';
+    $('list-count').textContent=apps.length+' of '+data.applications.length+(data.applications.length===1?' person':' people');
     $('people').replaceChildren(...apps.map(a=>{const id=a.publicId||a.legacyId,b=btn('',()=>{if(busy)return;if(dirty&&!confirm('Leave these unsaved changes?'))return;selected=id;resetDraft(a);renderPeople();renderDetail();});b.className='person';b.setAttribute('aria-pressed',String(selected===id));b.append(el('strong','@'+(a.currentHandle||a.handle)),el('small',a.vouch?'Vouched by @'+a.vouch.handle+(a.vouch.valid?'':' · '+a.vouch.status):a.claimedVoucher?'Referral claimed: @'+a.claimedVoucher:'No verified vouch'),badge(label(a),a.vouch?.valid?'good':a.mail&&['unknown','failed'].includes(a.mail.status)?'warn':''));return b;}));
     if(!apps.length)$('people').append(el('p','No people match this view.','empty'));
   }
@@ -90,23 +94,37 @@
     facts.append(fact('Wallet preference', ({existing:'Existing wallet',new:'Needs a wallet',help:'Would like help',later:'Will provide later'})[a.walletChoice] || 'Not recorded'),fact('Wallet supplied on application',a.wallet ? a.wallet + ' · self-reported' : 'Not provided'),fact('Who vouched',a.vouch?'@'+a.vouch.handle+' · '+(a.vouch.valid?'Current vouch':a.vouch.status)+(a.vouch.expiresAt?' · '+(a.vouch.valid?'expires ':'expired ')+date(a.vouch.expiresAt):''):a.claimedVoucher?'@'+a.claimedVoucher+' was named by the applicant. No verified vouch is recorded.':'No verified vouch is recorded.'),fact('Their wishlist',a.wishlist.length?a.wishlist.map(id=>dogById(id)?.title||id).join(' · '):'They haven’t saved any favorites yet.'));root.append(facts);if(a.status==='awaiting_verification'){root.append(el('p','Their application is saved. They can confirm X from the waitlist form; invitation controls will appear afterward.','muted'));return;}
     renderNFTDelivery(root,a.delivery);
     if(a.note)root.append(el('p',a.note,'note'));
-    if(a.publicId&&['awaiting_vouch','vouched'].includes(a.status)&&!a.vouch?.valid)root.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>controlVouches({publicId:a.publicId},'Your permanent vouch is recorded. You have unlimited vouches.'),'primary'));
 
     if(!a.publicId||['adopted','rejected','withdrawn'].includes(a.status)){root.append(el('p',!a.publicId?'This older application needs a current application before a private viewing can be assigned.':'This application is closed.','muted'));return;}
     if(a.gift?.status==='accepted'){root.append(el('h3','Adopted'),dogPreview([a.gift.selectedDog]),fact('Her dog’s name',a.gift.dogName));return;}
     if(a.gift?.status==='revoked'){root.append(el('p','This artist gift has been withdrawn.','muted'));return;}
     if(invited(a)){renderSent(root,a);return;}
+    if(!a.gift){
+      const eligibility=el('section',undefined,'invitation-eligibility'),self=a.handle.toLowerCase()==='wubbushi';
+      eligibility.append(el('h3','Their invitation'));
+      if(a.vouch?.valid)eligibility.append(el('p','Vouched for by @'+a.vouch.handle+'. This vouch is permanent.'));
+      else if(self)eligibility.append(el('p','For your own dog, choose a founding invitation below and add a personal note. You don’t need to vouch for yourself.'));
+      else{
+        eligibility.append(el('p','You can vouch for this person. Your vouches are unlimited and never expire.'));
+        eligibility.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>run(async()=>{
+          await api.request('club/admin-vouch',{publicId:a.publicId},key);
+          const pending=dirty?{...draft,dogIds:[...draft.dogIds]}:null;await load();
+          if(pending){draft=pending;dirty=true;render();markDirty();}
+          status('You vouched for @'+(a.currentHandle||a.handle)+'. Their vouch is permanent.');
+        }),'primary'));
+      }
+      const override=el('label',undefined,'override'),check=el('input');check.type='checkbox';check.id='founding';check.checked=draft.founding;check.onchange=()=>{draft.founding=check.checked;markDirty();};
+      override.append(check,document.createTextNode(self?'Invite @wubbushi as a founding adopter.':'Founding invitation — invite directly without a vouch.'));
+      eligibility.append(override,el('p','For a founding invitation, include a personal note below.','muted'));root.append(eligibility);
+    }
     if(a.gift)root.append(el('h3','A personal gift for '+a.gift.greeting),el('p','Her paintings are reserved. The invitation opens her private viewing directly.','muted'));
     const email=el('input');email.type='email';email.id='recipient';email.autocomplete='off';email.placeholder='person@example.com';email.value=draft.email;email.maxLength=254;email.oninput=()=>{draft.email=email.value;markDirty();};const emailField=field('Invitation email',email);emailField.append(el('p',a.emailVerified?'Applicant-verified address.':a.email?'Provided by the applicant; address not verified.':'Add the recipient’s email address to send their invitation.','muted email-note'));root.append(emailField);
     const note=el('textarea');note.id='personal-note';note.rows=3;note.maxLength=1000;note.placeholder='A personal note from you…';note.value=draft.note;note.oninput=()=>{draft.note=note.value;markDirty();};root.append(field('A note from Wubbushi',note));
-    if(!a.gift){
-    const override=el('label',undefined,'override'),check=el('input');check.type='checkbox';check.id='founding';check.checked=draft.founding;check.onchange=()=>{draft.founding=check.checked;markDirty();};override.append(check,document.createTextNode('Founding invitation — invite directly without a vouch. Explain why in your personal note.'));root.append(override);
-    }
     if(a.gift){root.append(dogPreview(draft.dogIds));}else{
     const section=el('section',undefined,'form-section'),headingRow=el('div',undefined,'section-heading');headingRow.append(el('h3','Choose their dogs'),el('span','','selection-count'));headingRow.lastChild.id='selection-count';section.append(headingRow,el('p','Choose one, two, or three. Wishlist favorites appear first.','muted'));
     const search=el('input');search.type='search';search.id='dog-search';search.className='dog-search';search.placeholder='Find a painting…';search.setAttribute('aria-label','Find a painting');search.oninput=()=>renderDogs();const chips=el('div',undefined,'chosen-strip');chips.id='chosen';const grid=el('div',undefined,'dogs');grid.id='dogs';section.append(search,chips,grid);root.append(section);
     }
-    const actions=el('div',undefined,'actions');actions.append(btn('Save draft',()=>run(async()=>{await saveDraft();status('Draft saved. No email has been sent.');})),btn('Review invitation →',()=>run(async()=>{await saveDraft();openPreview();}),'primary'));root.append(actions);const hint=el('p',a.gift?'These paintings are reserved for her. Saving a draft does not send an email.':draft.revision?'Draft saved · dogs are reserved when you send.':'Dogs are reserved when you send. Saving a draft does not send an email.','draft-hint');hint.id='draft-hint';root.append(hint);
+    const actions=el('div',undefined,'actions');actions.append(btn('Save draft',()=>run(async()=>{await saveDraft();status('Draft saved. No email has been sent.');})),btn('Review invitation →',()=>run(async()=>{await saveDraft();openPreview();}),'primary'));root.append(actions);const feedback=el('p',undefined,'form-feedback');feedback.id='draft-message';feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');root.append(feedback);const hint=el('p',a.gift?'These paintings are reserved for her. Saving a draft does not send an email.':draft.revision?'Draft saved · dogs are reserved when you send.':'Dogs are reserved when you send. Saving a draft does not send an email.','draft-hint');hint.id='draft-hint';root.append(hint);
     if(!data.capabilities.email)root.append(el('p','Email sending is not configured yet. You can save drafts.','muted'));
     if(!a.gift)renderDogs();
   }
@@ -127,9 +145,32 @@
     root.append(btn('Withdraw invitation',()=>{if(confirm('Withdraw this invitation and release its dogs? Its private link will stop working. An email already sent cannot be recalled.'))run(async()=>{await api.request('club/admin-revoke',{publicId:a.publicId},key);await load();status('Invitation withdrawn. Its dogs are available again.');});},'danger'));
   }
   async function saveDraft(){if(!draft.dogIds.length)throw Error('Choose at least one dog.');const result=await api.request('club/admin-save',draft,key);draft.revision=result.revision;await load();}
-  function openPreview(){const a=person();if(!draft.email)throw Error('Add the recipient’s email address.');if(!a.gift&&!a.vouch?.valid&&!draft.founding)throw Error('A current vouch is needed, or choose a founding invitation with a personal note.');if(draft.founding&&!draft.note.trim())throw Error('Add a personal note explaining the founding invitation.');if(!data.capabilities.email)throw Error('Email sending is not configured yet. Your draft is saved.');const body=$('preview-body');body.replaceChildren(el('p','To: '+draft.email,'preview-to'),el('p','X account: @'+a.handle,'preview-to'),dogPreview(a.gift?[a.gift.coverDogId]:draft.dogIds));const letter=el('div',undefined,'preview-letter');letter.append(el('p','From Wubbushi <wubbushi@alldogs.wtf>','muted'),el('h2','A dog, just for you.'),el('p',(a.gift?.greeting||'@'+a.handle)+','),el('p',draft.note||'I chose '+draft.dogIds.length+' '+(draft.dogIds.length===1?'dog':'dogs')+' for you to meet.'),el('p',a.gift?'Love,\nWubbushi':'Wubbushi'),el('p','The private email link opens their viewing directly. They won’t need to sign in again.','muted'));body.append(letter);$('send-message').textContent='';$('send').textContent='Send to '+draft.email;$('preview').showModal();}
-  async function run(fn){if(busy)return;busy=true;$('detail').inert=true;$('detail').setAttribute('aria-busy','true');$('send').disabled=true;$('close').disabled=true;$('refresh').disabled=true;try{await fn();}catch(e){status(e.message,true);if($('preview').open)$('send-message').textContent=e.message;}finally{busy=false;$('detail').inert=false;$('detail').removeAttribute('aria-busy');$('send').disabled=false;$('close').disabled=false;$('refresh').disabled=false;}}
-  $('key-form').onsubmit=e=>{e.preventDefault();if(busy)return;key=$('key').value.trim();$('key').value='';run(async()=>{try{await load();status(data.applications.length+' people on your private waitlist.');}catch(e){key='';throw e;}});};
+  function sendBlocker(){
+    if(!draft||!person())return 'Choose an applicant first.';
+    if(!draft.email)return 'Add the recipient’s email address before sending.';
+    if(!data.capabilities.email)return 'Email sending is not configured yet. Your draft is saved.';
+    if(!person().gift){
+      if(draft.founding&&!draft.note.trim())return 'Add a personal note for this founding invitation.';
+      if(!draft.founding&&!person().vouch?.valid)return person().handle.toLowerCase()==='wubbushi'?'For your own dog, choose a founding invitation and add a personal note.':'Vouch for this person, or choose a founding invitation, before sending.';
+    }
+    return '';
+  }
+  function openPreview(){
+    const a=person(),body=$('preview-body');
+    body.replaceChildren(el('p','To: '+(draft.email||'Add an email before sending'),'preview-to'),el('p','X account: @'+a.handle,'preview-to'),dogPreview(a.gift?[a.gift.coverDogId]:draft.dogIds));
+    const letter=el('div',undefined,'preview-letter');letter.append(el('p','From Wubbushi <wubbushi@alldogs.wtf>','muted'),el('h2','A dog, just for you.'),el('p',(a.gift?.greeting||'@'+a.handle)+','),el('p',draft.note||'I chose '+draft.dogIds.length+' '+(draft.dogIds.length===1?'dog':'dogs')+' for you to meet.'),el('p',a.gift?'Love,\nWubbushi':'Wubbushi'),el('p','The private email link opens their viewing directly. They won’t need to sign in again.','muted'));body.append(letter);
+    const blocked=sendBlocker();
+    if(blocked){
+      const next=el('section',undefined,'preview-next');next.append(el('h3','Before you send'),el('p',blocked));
+      if(!a.gift&&!a.vouch?.valid&&!draft.founding&&a.handle.toLowerCase()!=='wubbushi')next.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>run(async()=>{await api.request('club/admin-vouch',{publicId:a.publicId},key);await load();openPreview();}),'primary'));
+      else next.append(btn('Finish the invitation',()=>{$('preview').close();const target=!draft.email?$('recipient'):!draft.founding?$('founding'):$('personal-note');target?.focus();target?.scrollIntoView({block:'center'});}));
+      body.prepend(next);
+    }
+    $('send-message').textContent='';$('send').textContent=draft.email?'Send to '+draft.email:'Send invitation';$('send').disabled=Boolean(blocked);$('preview-title').textContent='Your invitation.';
+    if(!$('preview').open)$('preview').showModal();
+  }
+  async function run(fn){if(busy)return;busy=true;$('detail').inert=true;$('detail').setAttribute('aria-busy','true');$('send').disabled=true;$('close').disabled=true;$('refresh').disabled=true;try{await fn();}catch(e){$('detail').inert=false;status(e.message,true);if($('preview').open)$('send-message').textContent=e.message;}finally{busy=false;$('detail').inert=false;$('detail').removeAttribute('aria-busy');$('send').disabled=Boolean(sendBlocker());$('close').disabled=false;$('refresh').disabled=false;}}
+  $('key-form').onsubmit=e=>{e.preventDefault();if(busy)return;key=$('key').value.trim();$('key').value='';run(async()=>{try{await load();status(data.applications.length+(data.applications.length===1?' person':' people')+' on your private waitlist.');}catch(e){key='';throw e;}});};
   $('search').oninput=renderPeople;$('filter').onchange=renderPeople;
   $('refresh').onclick=()=>{if(dirty&&!confirm('Refresh and discard unsaved changes?'))return;run(async()=>{await load();status('Waitlist refreshed.');});};
   $('close').onclick=()=>{if(dirty&&!confirm('Lock the desk and discard unsaved changes?'))return;lock();};

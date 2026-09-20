@@ -3,7 +3,7 @@
 html{scroll-padding-top:24px}
 body{accent-color:var(--blue)}
 button,input,select,textarea{touch-action:manipulation}
-button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #557064;outline-offset:4px}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #557064;outline-offset:4px}
 
 /* Supporting pages share the invitation's identity and reading scale. */
 .site-interior{background:var(--paper);color:var(--ink);font:15px/1.65 Arial,Helvetica,sans-serif;isolation:isolate;--display:var(--serif);--hand:var(--serif);--yellow:#dfe4d5;--gutter:32px}
@@ -136,18 +136,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 .invitation-page #dog-position{font-size:11px;min-width:44px}
 .invitation-page #close-viewing{display:flex;align-items:center;justify-content:center}
 .invitation-page #reading .close-dialog{min-width:60px;min-height:44px;display:flex;align-items:center;justify-content:flex-end}
-.invitation-page .adoption-dialog{padding:0;outline:0;border:1px solid #9ca89588;background:#eeeadd url('/painting/page.webp') center/cover}
-.invitation-page .adoption-dialog-heading{position:sticky;top:0;z-index:2;align-items:center;margin:0;padding:22px 28px 17px;background:#eeebdf;border-bottom:1px solid var(--line)}
-.invitation-page .adoption-dialog h2{font-size:31px}
-.invitation-page .application-body{padding:24px 28px 28px}
-.invitation-page .adoption-close{min-width:44px;min-height:44px;margin-right:-8px}
-.invitation-page .adoption-dialog input,.invitation-page .adoption-dialog select{font:16px/1.5 Arial,sans-serif;min-height:48px;border:1px solid #83917c99;background:#fbfaf5}
-.invitation-page .adoption-dialog input:focus-visible,.invitation-page .adoption-dialog select:focus-visible{outline:2px solid #557064;outline-offset:3px}
-.invitation-page .adoption-dialog .primary{background:var(--blue);border-color:var(--blue);font-weight:500}
-.invitation-page .adoption-dialog form>p:first-child{font:17px/1.55 var(--serif)}
-.invitation-page .adoption-dialog form>label{font-size:13px;font-weight:500}
-.invitation-page .adoption-dialog .application-terms{font-size:12px;line-height:1.65}
-.invitation-page .adoption-dialog #receipt code{font-size:13px}
 .garden-mast>a{display:flex;align-items:center;min-height:44px}
 .garden-welcome a,.garden-footer a,.room-form summary{display:inline-flex;align-items:center;min-height:44px}
 .garden-login{min-height:44px}
@@ -166,7 +154,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
  .site-interior h1{font-size:38px;line-height:1.12;max-width:17ch}
  .site-interior h2{font-size:27px}
  .site-interior .account-main,.site-interior .directory,.site-interior .application-page,.site-interior .value-page,.site-interior .pound-gate{padding-top:30px;padding-bottom:38px}
- .site-interior .account-nav{flex-wrap:nowrap;gap:0;justify-content:space-between;padding:0 0 8px}
+ .site-interior .account-nav{flex-wrap:wrap;gap:0 18px;justify-content:flex-start;padding:0 0 8px}
  .site-interior .account-nav a{font-size:12px}
  .site-interior .account-main>.intro,.site-interior .lede,.site-interior .intro,.site-interior .pound-gate>p{font-size:18px}
  .site-interior .account-gate,.site-interior .account-card{padding:24px 0;margin-top:24px}
@@ -245,10 +233,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
  .invitation-page #reading article{padding:30px 24px 36px}
  .invitation-page #reading article h2{font-size:34px;line-height:1.12;margin-bottom:22px}
  .invitation-page #reading article p{font-size:17px;line-height:1.65;margin-block:18px}
- .invitation-page .adoption-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}
- .invitation-page .adoption-dialog-heading{padding:17px 22px 14px}
- .invitation-page .adoption-dialog h2{font-size:28px}
- .invitation-page .application-body{padding:22px}
  .adoption-letter{width:calc(100% - 48px);margin-top:23px;margin-bottom:35px}
  .adoption-letter h1{font-size:38px;margin-bottom:22px}
  .adoption-letter .invitation-copy{font-size:21px;line-height:1.5}
@@ -278,11 +262,22 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
  .site-interior .value-row img{width:64px;height:64px}
  .invitation-page .viewing-links{gap:0 10px}
  .invitation-page .viewing-links a{font-size:13px}
- .invitation-page .adoption-dialog-heading{padding-inline:18px}
- .invitation-page .application-body{padding:20px 18px}
- .invitation-page .adoption-dialog h2{font-size:26px}
  .adoption-letter{width:calc(100% - 40px)}
  .adoption-letter h1{font-size:35px}
  .adoption-letter .invitation-copy{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Form rhythm across account, receipt, wishlist and application pages. */
+.site-interior form{min-width:0}
+.site-interior form>label{display:block;font:500 14px/1.5 Arial,sans-serif;margin:0 0 22px}
+.site-interior form>label>input,.site-interior form>label>select,.site-interior form>label>textarea{display:block;margin-top:8px;width:100%;border-radius:4px;background:#fbfaf5}
+.site-interior form>label>input[type=checkbox]{display:inline-block;width:20px;height:20px;min-height:0;padding:0;margin:0 10px 0 0;vertical-align:middle}
+.site-interior form input::placeholder{color:#737e75;opacity:1}
+.site-interior form .quiet{margin:10px 0 20px}
+.site-interior form .button{border-radius:4px}
+.site-interior .account-card form+.text-link{margin-top:12px}
+.site-interior .account-message:empty{display:none}
+.site-interior #entry-status{font:14px/1.6 Arial,sans-serif;overflow-wrap:anywhere}
+.site-interior .account-nav a{white-space:nowrap}
+@media(max-width:600px){.site-interior form>.button{width:100%}}
