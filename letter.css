@@ -1,6 +1,6 @@
 /* One continuous letter on the painted page. */
 .invitation-page .arrival-foot{justify-content:center}
-.artist-letter{width:min(984px,calc(100% - 88px));margin:64px auto 0;padding:64px 0 56px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:0 64px;scroll-margin-top:40px}
+.artist-letter{width:min(784px,calc(100% - 112px));margin:64px auto 0;padding:64px 0 56px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(160px,200px) minmax(0,1fr);gap:0 clamp(32px,4vw,48px);scroll-margin-top:40px}
 .letter-heading{scroll-margin-top:40px}
 .letter-heading .eyebrow{font:10px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.12em;margin:0 0 18px;color:var(--muted)}
 .letter-heading h2{font:400 clamp(36px,4vw,49px)/1.12 var(--serif);letter-spacing:-.035em;margin:0;max-width:8ch}
