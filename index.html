@@ -7,10 +7,10 @@
   <meta name="description" content="Paintings by Wubbushi. A dog of your own. Invitation only.">
   <link rel="stylesheet" href="/gate.css?v=20260918-wide1">
   <link rel="stylesheet" href="/dog-pound/application-email.css?v=20260917-email1">
-  <link rel="stylesheet" href="/painting/waitlist.css?v=20260918-wide1">
+  <link rel="stylesheet" href="/painting/waitlist.css?v=20260920-first1">
   <script src="/account/account-api.js?v=20260919-direct1" defer></script>
   <script src="/dog-pound/application-email.js?v=20260919-direct1" defer></script>
-  <script src="/dog-pound/adoption-form.js?v=20260919-direct1" defer></script>
+  <script src="/dog-pound/adoption-form.js?v=20260920-first1" defer></script>
   <script src="/home-rotation.js?v=20260918-wide1" defer></script>
   <script src="/gate.js?v=20260919-inline1" defer></script>
 <link rel="canonical" href="https://alldogs.wtf/">
@@ -100,17 +100,17 @@
 
 <dialog class="adoption-dialog" id="adoption-dialog" aria-labelledby="adoption-dialog-title">
   <div class="adoption-dialog-heading"><h2 id="adoption-dialog-title">Join the waitlist.</h2><button type="button" class="adoption-close" id="close-adoption" aria-label="Close application">×</button></div>
-  <div class="application-body"><form id="application-form" hidden>
-    <p>Your X account is confirmed. No wallet yet? We can help. You can find an owner to vouch for you afterward. There is nothing to pay now.</p>
-    <label>Your verified X / Twitter account<input name="handle" id="handle" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="@yourhandle" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required autofocus></label>
+  <div class="application-body"><div class="waitlist-art" aria-hidden="true"><img src="/assets/barack-open-sky-2400.jpg" alt="" width="2400" height="1200"></div><form id="application-form"><p class="application-step">1 of 3 · Your details</p>
+    <p>Tell us a little about yourself. We’ll save your application, then confirm your X account. No wallet yet? That’s fine.</p>
+    <label>Your X / Twitter handle<input name="handle" id="handle" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="@yourhandle" pattern="@?[A-Za-z0-9_]{1,15}" maxlength="16" required autofocus></label>
     <label>Your Ethereum wallet address<input name="wallet" id="wallet" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="0x…" pattern="0x[0-9a-fA-F]{40}" maxlength="42" required><small>Use the wallet address you plan to adopt with. No ENS names or exchange deposit addresses. Your address stays private for application review and later authorization; typing it does not prove you control it. Never enter a private key or recovery phrase.</small></label>
     <div class="trap" aria-hidden="true"><label>Leave empty<input name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
-    <div class="application-terms" id="application-terms"><p>Submitting joins the public waitlist with your verified X handle. Your email and wallet stay private. Applying is free and does not reserve a dog.</p><p>One direct adoption per person, ever. After adoption, you have one day from minting to pay Wubbushi the value you choose. Your valuation becomes part of the artwork.</p><p>Selling your living dog can kill it and spread the infection to other dogs. <a href="/adoption/" target="_blank" rel="noopener">Read the adoption guide and collection rules (new tab)</a>.</p></div>
-    <button class="button primary" type="submit" id="submit-application">Submit application ↗</button>
+    <div class="application-terms" id="application-terms"><p>Saving creates a private application. After you confirm your X account, your handle joins the public waitlist. Your email and wallet stay private. Applying is free and does not reserve a dog.</p><p>One direct adoption per person, ever. After adoption, you have one day from minting to pay Wubbushi the value you choose. Your valuation becomes part of the artwork.</p><p>Selling your living dog can kill it and spread the infection to other dogs. <a href="/adoption/" target="_blank" rel="noopener">Read the adoption guide and collection rules (new tab)</a>.</p></div>
+    <button class="button primary" type="submit" id="submit-application">Save my place →</button>
     <p id="form-status" role="status" aria-live="polite"></p>
     </form>
     <div id="receipt" hidden><h3>Your application is saved.</h3><section id="application-email" class="application-email" aria-labelledby="email-title" hidden>
-        <h4 id="email-title">Where should your invitation go?</h4>
+        <p class="application-step">3 of 3 · Your invitation</p><h4 id="email-title">Where should your invitation go?</h4>
         <p>You’re signed in with your verified X account. Add your email for your private invitation.</p>
         <form id="application-email-form">
           <label>Email address <span class="optional">(optional)</span><input id="notification-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>

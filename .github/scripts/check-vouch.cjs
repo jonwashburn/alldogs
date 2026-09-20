@@ -24,12 +24,12 @@ function harness(file, path, search, stored = {}) {
   };
   const context = {document:{getElementById:id=>id==='adoption-dialog'||(id==='wishlist-invitation'&&!elements.has(id))?null:element(id),createElement:makeElement},
     location:{pathname:path,search},history:{replaceState:(_,__,value)=>{replaced=value;}},
-    sessionStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)},
+    sessionStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)},
     navigator:{clipboard:{writeText:async value=>{copied=value;}}},
     window:{},URLSearchParams,AbortController,setTimeout,clearTimeout,TextEncoder,
     crypto:{randomUUID:()=> '12345678-1234-1234-1234-123456789012'},
     fetch:async (url, options)=>{calls.push({url,options});return {ok:true,json:async()=>url.includes('adoption-applications')?{...response,receipt}:response};}};
-  context.window.AllDogsAccount={request:async (path,body)=>{calls.push({url:path,options:{body:JSON.stringify(body)}});return path==='club/registration'?{handle:'test_dog',application:stored['alldogs-application-receipt']?{...response,receipt}:null}:path==='club/register'?{...response,receipt}:response;},session:async()=>({signedIn:file.includes('adoption-form'),authMethod:'x',capabilities:{xLogin:true}}),signIn:path=>path};
+  context.window.AllDogsAccount={request:async (path,body)=>{calls.push({url:path,options:{body:JSON.stringify(body)}});return path==='club/registration'?{handle:'test_dog',application:stored['alldogs-application-receipt']?{...response,receipt}:null}:path==='club/registration-draft'?{...response,receipt,status:'awaiting_verification',shortId:null}:path==='club/registration-verify'?{...response,receipt}:response;},session:async()=>({signedIn:file.includes('adoption-form'),authMethod:'x',handle:'test_dog',capabilities:{xLogin:true}}),signIn:path=>path};
   vm.runInNewContext(fs.readFileSync(file,'utf8'),context,{filename:file});
   return {element,calls,storage,get replaced(){return replaced;},get copied(){return copied;}};
 }
@@ -82,10 +82,10 @@ function harness(file, path, search, stored = {}) {
     assert.equal(h.element('wallet-help').textContent,({existing:'',new:'No worries, we’ll get you set up with one.',later:'Got it. We’ll ask again on adoption day.'})[choice]);
     h.element('handle').value='test_dog';h.element('wallet').value='0x'+'12'.repeat(20);h.element('website').value='';
     await h.element('application-form').events.submit({preventDefault(){}});
-    assert.equal(h.element('view-application').href,'https://alldogs.wtf/vouch/2');
-    assert.equal(h.calls.length,2);assert.equal(h.calls[1].url,'club/register');
+    assert.equal(h.element('application-verification').hidden,false);
+    assert.equal(h.calls.length,2);assert.equal(h.calls[1].url,'club/registration-draft');
     const payload=JSON.parse(h.calls[1].options.body);
-    assert.equal(payload.applicationFlow,'wallet-help-v3');assert.equal(payload.walletChoice,choice);
+    assert.equal(payload.applicationFlow,'waitlist-first-v4');assert.equal(payload.walletChoice,choice);
     assert.equal(payload.wallet,choice==='existing'?'0x'+'12'.repeat(20):'');
     tests++;
   }

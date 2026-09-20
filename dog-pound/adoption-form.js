@@ -3,9 +3,10 @@
   const $ = id => document.getElementById(id);
   if (!$('application-form')) return;
   const api = window.AllDogsAccount;
-  let verifiedIdentity = null, opening = false;
-  $('application-form').hidden = true;
-  // X verification happens before the application or email form is shown.
+  let verifiedIdentity = null, opening = false, pending = null;
+  try { pending = JSON.parse(sessionStorage.getItem('alldogs-pending-application')); } catch (_) {}
+  if (!pending || !/^[a-z0-9_]{1,15}$/.test(pending.handle || '') || !['existing','help','new','later'].includes(pending.walletChoice) || !/^DOG-[A-F0-9]{16}$/.test(pending.receipt || '') || !/^[A-Za-z0-9_-]{24}$/.test(pending.publicId || '')) pending = null;
+  $('application-form').hidden = false;
   const walletLabel = $('wallet').closest('label');
   const choiceLabel = document.createElement('label');
   choiceLabel.textContent = 'A wallet for your dog';
@@ -16,7 +17,7 @@
     if (!value) { option.disabled = true; option.selected = true; }
     choice.append(option);
   }
-  choice.style.cssText = 'display:block;width:100%;font:inherit;padding:14px;margin-top:8px;background:white;color:inherit;border:1px solid currentColor;border-radius:0';
+  choice.className = 'wallet-choice';
   choiceLabel.append(choice); walletLabel.before(choiceLabel);
   const help = document.createElement('p'); help.id = 'wallet-help'; help.hidden = true;
   choice.setAttribute('aria-describedby', 'wallet-help');
@@ -31,29 +32,66 @@
   const dialog = $('adoption-dialog');
   const registrationStatus=document.createElement('p');registrationStatus.id='registration-status';registrationStatus.setAttribute('role','status');
   $('application-form').before(registrationStatus);
+  const verification = document.createElement('section'); verification.id = 'application-verification'; verification.hidden = true;
+  verification.innerHTML = `<p class="application-step">2 of 3 · Confirm your X account</p><h3>Your place is saved.</h3><p id="verify-copy"></p><p>One quick visit to X confirms that this handle belongs to you. Then you can add an email for your invitation.</p><button type="button" class="button primary" id="verify-x">Confirm with X ↗</button><p class="verification-domain">You’ll continue on <strong>x.com</strong>, then return here.</p><details><summary>What does All Dogs access?</summary><p>X asks for permission to read posts and account information. All Dogs only requests your account ID and handle to confirm your identity. We do not read your posts or messages, post for you, or retain your X access token.</p></details><p id="verify-status" role="status" aria-live="polite"></p><button type="button" class="text-link" id="edit-application">Correct my details</button><p class="verification-later">You can close this window and confirm later. Your application stays saved; reopen the waitlist in this browser tab to continue.</p>`;
+  $('application-form').after(verification);
+  function showVerification(message = '') {
+    $('application-form').hidden = true; $('receipt').hidden = true; verification.hidden = false;
+    $('adoption-dialog-title').textContent = 'A little introduction.';
+    $('verify-copy').textContent = '@' + pending.handle + ' is on your application. Your wallet details are saved privately.';
+    $('verify-status').textContent = message;
+    registrationStatus.textContent = '';
+  }
+  async function finishVerification() {
+    const result = await api.request('club/registration-verify', {receipt: pending.receipt, publicId: pending.publicId});
+    pending = null; try { sessionStorage.removeItem('alldogs-pending-application'); } catch (_) {}
+    verification.hidden = true; showReceipt(result.receipt, result.publicId, result.shortId);
+    registrationStatus.textContent = 'X account confirmed: @' + verifiedIdentity.handle + '.';
+  }
+  $('verify-x').onclick = async () => {
+    const button = $('verify-x'); button.disabled = true; $('verify-status').textContent = '';
+    try {
+      // Refresh the session immediately before using its CSRF proof.
+      verifiedIdentity = await api.session();
+      if (verifiedIdentity.signedIn && verifiedIdentity.authMethod === 'x' && verifiedIdentity.handle.toLowerCase() === pending.handle) {
+        await finishVerification();
+      } else {
+        if (!verifiedIdentity.capabilities.xLogin) throw Error('X confirmation is temporarily unavailable. Your application is saved. Please try again later.');
+        location.assign(api.signIn('/?register=1'));
+      }
+    } catch (error) { $('verify-status').textContent = error.message; }
+    finally { button.disabled = false; }
+  };
+  $('edit-application').onclick = () => {
+    verification.hidden = true; $('application-form').hidden = false;
+    $('handle').readOnly = false; $('handle').value = '@' + pending.handle;
+    choice.value = pending.walletChoice; $('wallet').value = pending.wallet || ''; walletChoiceChanged();
+    $('adoption-dialog-title').textContent = 'Join the waitlist.';
+    $('handle').focus();
+  };
   async function openApplication(){
     if(opening)return;opening=true;
-    registrationStatus.textContent='Opening your waitlist application…';
+    // Keep the gate's hash router on the application while the X return resolves.
+    if(new URLSearchParams(location.search).has('register'))history.replaceState(null,'',location.pathname+location.search+'#apply');
+    if(dialog&&!dialog.open){dialog.showModal();document.documentElement.classList.add('adoption-is-open');}
+    $('application-form').hidden = !!pending; if(pending) showVerification();
     try {
       verifiedIdentity=await api.session();
-      if(!verifiedIdentity.signedIn||verifiedIdentity.authMethod!=='x'){
-        if(!verifiedIdentity.capabilities.xLogin)throw Error('X sign-in is temporarily unavailable. Please try again shortly.');
-        location.assign(api.signIn('/?register=1'));return;
+      if(verifiedIdentity.signedIn && verifiedIdentity.authMethod==='x'){
+        if(pending && new URLSearchParams(location.search).has('register')) {
+          try { await finishVerification(); } catch(error) { showVerification(error.message); }
+        } else if(!pending) {
+          const state=await api.request('club/registration');
+          if(state.application) showReceipt(state.application.receipt,state.application.publicId,state.application.shortId);
+          else { $('handle').value='@'+state.handle; $('handle').readOnly=false; }
+        }
       }
-      let state=await api.request('club/registration');
-      // Existing receipt holders can explicitly reconnect their own old application.
-      const oldReceipt=sessionStorage.getItem('alldogs-application-receipt');
-      if(!state.application&&/^DOG-[A-F0-9]{16}$/.test(oldReceipt||'')){
-        try{await api.request('club/claim',{receipt:oldReceipt});state=await api.request('club/registration');}catch{/* A different old browser receipt is not this account's application. */}
-      }
-      $('handle').value='@'+state.handle;$('handle').readOnly=true;
-      $('application-form').hidden=!!state.application;
-      if(state.application)showReceipt(state.application.receipt,state.application.publicId,state.application.shortId);
-      registrationStatus.textContent='X account confirmed: @'+state.handle+'.';
+      if(pending && new URLSearchParams(location.search).has('signin')) showVerification('Your application is saved. You can try X confirmation again whenever you’re ready.');
+    }catch(error){ registrationStatus.textContent='You can enter your details now. We’ll check the connection when you save.'; }
+    finally{
       if(new URLSearchParams(location.search).has('register'))history.replaceState(null,'',location.pathname+'#apply');
-      if(dialog&&!dialog.open){dialog.showModal();document.documentElement.classList.add('adoption-is-open');}
-    }catch(error){registrationStatus.textContent=error.message;if(dialog&&!dialog.open)dialog.showModal();}
-    finally{opening=false;}
+      opening=false;
+    }
   }
   if(dialog){
     document.querySelectorAll('[data-open-adoption]').forEach(button=>button.addEventListener('click',openApplication));
@@ -65,6 +103,7 @@
   try { submission = JSON.parse(sessionStorage.getItem('alldogs-application-attempt')); } catch (_) {}
   const validShortId = value => Number.isInteger(Number(value)) && Number(value) > 0 && Number(value) <= 10000;
   function showReceipt(receipt, publicId, shortId) {
+    verification.hidden = true; $('adoption-dialog-title').textContent = 'You’re on the list.';
     $('receipt-code').textContent = receipt;
     $('receipt').hidden = false;
     $('application-form').hidden = true;
@@ -103,9 +142,8 @@
   $('application-form').addEventListener('submit', async event => {
     event.preventDefault();
     if ($('submit-application').disabled || $('submit-application').hidden) return;
-    if (!verifiedIdentity?.signedIn || verifiedIdentity.authMethod!=='x') {await openApplication();return;}
     if (!$('application-form').reportValidity()) return;
-    const values = {handle: $('handle').value.trim(), wallet: choice.value === 'existing' ? $('wallet').value.trim() : '', walletChoice: choice.value, applicationFlow: 'wallet-help-v3', website: $('website').value};
+    const values = {handle: $('handle').value.trim(), wallet: choice.value === 'existing' ? $('wallet').value.trim() : '', walletChoice: choice.value, applicationFlow: 'waitlist-first-v4', website: $('website').value};
     if (/^0x0{40}$/i.test(values.wallet)) {
       $('form-status').className = 'error'; $('form-status').textContent = 'Enter your own Ethereum wallet address. The all-zero address is not accepted.'; return;
     }
@@ -115,14 +153,16 @@
     const submit = $('submit-application'); submit.disabled = true; submit.textContent = 'Saving your application…';
     $('form-status').className = ''; $('form-status').textContent = '';
     try {
-      const result = await api.request('club/register',{...values,requestId:submission.requestId});
+      const result = await api.request('club/registration-draft',{...values,requestId:submission.requestId,...(pending ? {amend:{receipt:pending.receipt,publicId:pending.publicId}} : {})});
       if (!/^DOG-[A-F0-9]{16}$/.test(result.receipt || '')) throw Error('We could not confirm your receipt. Please try again.');
       if (!/^[A-Za-z0-9_-]{24}$/.test(result.publicId || '')) throw Error('We could not confirm your application link. Submit the same details again.');
-      showReceipt(result.receipt, result.publicId, result.shortId);
+      pending = {...result, handle: values.handle.replace(/^@/, '').toLowerCase(), walletChoice: values.walletChoice, wallet: values.wallet};
+      try { sessionStorage.setItem('alldogs-pending-application', JSON.stringify(pending)); } catch (_) {}
+      showVerification();
     } catch (error) {
       $('form-status').className = 'error';
       $('form-status').textContent = error.name === 'AbortError' || error instanceof TypeError ? 'We could not confirm whether your application was saved. Submit the same details again; this will not create a duplicate.' : error.message;
-    } finally { submit.disabled = false; submit.textContent = 'Submit application ↗'; }
+    } finally { submit.disabled = false; submit.textContent = 'Save my place →'; }
   });
   if(!dialog||['#apply','#drop'].includes(location.hash)||new URLSearchParams(location.search).has('register'))openApplication();
 })();
