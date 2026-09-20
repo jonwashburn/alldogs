@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" preserveAspectRatio="none">
   <defs>
-    <filter id="brush-edge" x="0" y="0" width="1600" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency=".035 .085" numOctaves="3" seed="17" result="grain"/>
-      <feDisplacementMap in="SourceGraphic" in2="grain" scale="24" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="6"/>
+    <filter id="soft-edge" x="0" y="0" width="1600" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="9"/>
     </filter>
   </defs>
-  <rect x="18" y="18" width="1564" height="764" rx="12" fill="white" filter="url(#brush-edge)"/>
+  <path d="M44 28
+    C190 12 318 38 474 25 S730 38 884 23 S1160 14 1302 32 S1470 16 1550 30
+    C1575 32 1581 48 1577 72
+    C1567 186 1586 274 1575 390 S1582 604 1572 736
+    C1570 760 1559 777 1532 774
+    C1384 766 1242 784 1090 770 S832 781 686 769 S424 783 278 768 S124 781 51 773
+    C27 772 18 756 24 732
+    C36 616 17 510 29 394 S14 196 26 67
+    C29 42 25 31 44 28Z" fill="white" filter="url(#soft-edge)"/>
 </svg>
