@@ -4515,7 +4515,7 @@
           "sha256": "8aea01ca208113e66cd1b3e0326f3878bdd92123bb24af8d06ee876d2471fe43"
         }
       ],
-      "description": "A scrappy immortal flies out of yesterday\u2019s ashes.",
+      "description": "A scrappy immortal flies out of yesterday’s ashes.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -13641,7 +13641,7 @@
           "sha256": "ae9c2dd4017a68d4768b506cc55d8b8955ca4f05a27748123003089feed3b89e"
         }
       ],
-      "description": "Dracula: a pale dog with a black widow\u2019s peak, red standing collar and broad dark cape against muted green cotton.",
+      "description": "Dracula: a pale dog with a black widow’s peak, red standing collar and broad dark cape against muted green cotton.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -14327,7 +14327,7 @@
           "sha256": "d930aaa04dd71a47b23cf66ae0f19d107833db959ba5e1bbde879a3bf11ffab0"
         }
       ],
-      "description": "Frankenstein\u2019s creature: green skin, a squared black crown, silver bolts and a violet coat; a small flower beside the heavy boots.",
+      "description": "Frankenstein’s creature: green skin, a squared black crown, silver bolts and a violet coat; a small flower beside the heavy boots.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -15193,7 +15193,7 @@
     {
       "id": "candidate-character_round_14_20260913-bjork-de506c787bf4a156",
       "dogId": "design-character_round_14_20260913-bjork",
-      "title": "Bj\u00f6rk",
+      "title": "Björk",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0.png",
@@ -15209,7 +15209,7 @@
           "sha256": "2ea9f0a5fed88d273c75454fba4f6923c9f90c5c11a0240b02c501ba04a3054b"
         }
       ],
-      "description": "Bj\u00f6rk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
+      "description": "Björk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -16467,7 +16467,7 @@
     {
       "id": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
       "dogId": "design-character_round_16_20260913-asterix",
-      "title": "Ast\u00e9rix",
+      "title": "Astérix",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c.png",
@@ -16483,7 +16483,7 @@
           "sha256": "78c133fcd4ccaceead6306cb2f61b409c16dd8435e40fb07e9477b134b780784"
         }
       ],
-      "description": "Ast\u00e9rix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
+      "description": "Astérix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -18864,7 +18864,7 @@
     {
       "id": "candidate-zombie_live_variations_20260914-elizabeth-d0b5f47898695165",
       "dogId": "design-zombie_live_variations_20260914-elizabeth",
-      "title": "Elizabeth \u2014 Eyes Unbound",
+      "title": "Elizabeth — Eyes Unbound",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-d0b5f4789869516528b6ec2f5cf0b79c0d2fcb8b2283791038914792a01ad45b.png",
@@ -18977,7 +18977,7 @@
     {
       "id": "candidate-zombie_live_variations_20260914-barack-813bf077ef7a4feb",
       "dogId": "design-zombie_live_variations_20260914-barack",
-      "title": "Barack \u2014 Eyes Unbound",
+      "title": "Barack — Eyes Unbound",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-813bf077ef7a4feb89c98987ccccabc04f3b1bcc6ae16ac693d55f6b00c0f1b1.png",
@@ -19090,7 +19090,7 @@
     {
       "id": "candidate-zombie_live_variations_20260914-batman-e150c8147614a7d6",
       "dogId": "design-zombie_live_variations_20260914-batman",
-      "title": "Batman \u2014 Eyes Unbound",
+      "title": "Batman — Eyes Unbound",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-e150c8147614a7d6e151f46aac72c4d8fb1d6cca4a95bc59ef95396c4f511003.png",
@@ -19203,7 +19203,7 @@
     {
       "id": "candidate-zombie_live_variations_20260914-judy-9a9f0b21793c57c6",
       "dogId": "design-zombie_live_variations_20260914-judy",
-      "title": "Judy \u2014 Eyes Unbound",
+      "title": "Judy — Eyes Unbound",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-9a9f0b21793c57c6dd42702381c2895a4614dd42fce35f41207c3118e746408d.png",
@@ -19316,7 +19316,7 @@
     {
       "id": "candidate-zombie_mutations_20260914-elizabeth-5b61d45b75a1fe89",
       "dogId": "design-zombie_mutations_20260914-elizabeth",
-      "title": "Elizabeth \u2014 Pearl Swarm",
+      "title": "Elizabeth — Pearl Swarm",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-5b61d45b75a1fe894756cce46790ef175c32ca60d771deba0832915ec833937b.png",
@@ -19430,7 +19430,7 @@
     {
       "id": "candidate-zombie_mutations_20260914-barack-1e6535cc74387de5",
       "dogId": "design-zombie_mutations_20260914-barack",
-      "title": "Barack \u2014 Split Jaw",
+      "title": "Barack — Split Jaw",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-1e6535cc74387de59b088f1eb9d1d6a87266f6e10b481ebd2514670ea2a46400.png",
@@ -19544,7 +19544,7 @@
     {
       "id": "candidate-zombie_mutations_20260914-batman-7a4c46af7f957f93",
       "dogId": "design-zombie_mutations_20260914-batman",
-      "title": "Batman \u2014 Night Vision",
+      "title": "Batman — Night Vision",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-7a4c46af7f957f9364a0cc84ca79ef42b5f57a16fec58c6c1643aacd5fa751ff.png",
@@ -19658,7 +19658,7 @@
     {
       "id": "candidate-zombie_mutations_20260914-judy-2d4a962e5874ebb9",
       "dogId": "design-zombie_mutations_20260914-judy",
-      "title": "Judy \u2014 Cyclops Bloom",
+      "title": "Judy — Cyclops Bloom",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-2d4a962e5874ebb9dc0c5b34d647889ea6067cb5ba71e281af48ce310a75f1cd.png",
@@ -19772,7 +19772,7 @@
     {
       "id": "candidate-zombie_family_expansion_20260914-marie-57e182e10a06e21c",
       "dogId": "design-zombie_family_expansion_20260914-marie",
-      "title": "Marie \u2014 Porcelain Chorus",
+      "title": "Marie — Porcelain Chorus",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4.png",
@@ -19788,7 +19788,7 @@
           "sha256": "18adea5a6324589197d3fbf07ceb420d2728d9516902b4061711be0cffbd1677"
         }
       ],
-      "description": "Marie \u2014 Porcelain Chorus: a separately composed zombie mutation developed from its original character.",
+      "description": "Marie — Porcelain Chorus: a separately composed zombie mutation developed from its original character.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Preferred Marie restored by Wubbushi on 2026-09-14; exact original artwork retained.",
@@ -19886,7 +19886,7 @@
     {
       "id": "candidate-zombie_family_expansion_20260914-hulk-6a6c10c7adea365b",
       "dogId": "design-zombie_family_expansion_20260914-hulk",
-      "title": "Hulk \u2014 Jawbreaker",
+      "title": "Hulk — Jawbreaker",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b.png",
@@ -19902,7 +19902,7 @@
           "sha256": "28df621564b5fa18d1bdd6dc47754f7b3d5f8c75d62a544847f998c860f8c3cb"
         }
       ],
-      "description": "Hulk \u2014 Jawbreaker: a separately composed zombie mutation developed from its original character.",
+      "description": "Hulk — Jawbreaker: a separately composed zombie mutation developed from its original character.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -19999,7 +19999,7 @@
     {
       "id": "candidate-zombie_family_expansion_20260914-virgil-e342f01bb3f6fc72",
       "dogId": "design-zombie_family_expansion_20260914-virgil",
-      "title": "Virgil \u2014 After Hours",
+      "title": "Virgil — After Hours",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9.png",
@@ -20015,7 +20015,7 @@
           "sha256": "85b6cf18723265265898434b2f5b6f8513c5b78c1459ed98060c6cd915fac149"
         }
       ],
-      "description": "Virgil \u2014 After Hours: a separately composed zombie mutation developed from its original character.",
+      "description": "Virgil — After Hours: a separately composed zombie mutation developed from its original character.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -20112,7 +20112,7 @@
     {
       "id": "candidate-zombie_family_expansion_20260914-donald-ae5f6628e10e4869",
       "dogId": "design-zombie_family_expansion_20260914-donald",
-      "title": "Donald \u2014 Bitter Bite",
+      "title": "Donald — Bitter Bite",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295.png",
@@ -20128,7 +20128,7 @@
           "sha256": "a766653c11104dc4189cb0e517d2c32e09b5e1dc59dba645a319f6b38c7afe00"
         }
       ],
-      "description": "Donald \u2014 Bitter Bite: a separately composed zombie mutation developed from its original character.",
+      "description": "Donald — Bitter Bite: a separately composed zombie mutation developed from its original character.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -20225,7 +20225,7 @@
     {
       "id": "candidate-zombie_family_expansion_20260914-elliott-7e8ba5dd9a61126e",
       "dogId": "design-zombie_family_expansion_20260914-elliott",
-      "title": "Elliott \u2014 Night Visitor",
+      "title": "Elliott — Night Visitor",
       "number": null,
       "kind": "candidate",
       "image": "assets/candidate-7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a.png",
@@ -20241,7 +20241,7 @@
           "sha256": "1f9a3062d74ead89835208ebf79d22b90e2a13d31bc7c8b3b333efaa27c561af"
         }
       ],
-      "description": "Elliott \u2014 Night Visitor: a separately composed zombie mutation developed from its original character.",
+      "description": "Elliott — Night Visitor: a separately composed zombie mutation developed from its original character.",
       "selectedReference": false,
       "traitNotes": null,
       "versionNote": "Final saved native design; no mint number assigned.",
@@ -44455,6 +44455,43 @@
           "sha256": "2a70fec7c35bd5576c9a6aef343252f4760ce0dbcf34b8cde12f9e722bd52cf5"
         }
       }
+    },
+    {
+      "id": "candidate-matt_er_20260921-matt-ad403ab30e5fad23",
+      "dogId": "design-matt_er_20260921-matt",
+      "title": "Matt — On Call",
+      "number": null,
+      "kind": "candidate",
+      "image": "https://alldogs.wtf/matt/matt-on-call.jpg",
+      "imageHash": "ad403ab30e5fad23ffa43616d64f05603fab594a4ddaffad2d4fbebb828d71b0",
+      "parent": "original-55-8cf3cdad8b603a03",
+      "nativeParentSeed": 55,
+      "source": "../design/matt_er_20260921/character.js",
+      "sourceHash": "d1bfc5c517e027e03a471ca89c09a9e8af39b666fbd565c7623f5d94f66dd292",
+      "description": "A golden ER doctor dog in teal scrubs, with a stethoscope, a Matt badge, a night window, a glowing monitor and a coffee marked STAT.",
+      "selectedReference": false,
+      "traitNotes": null,
+      "versionNote": "Painting for Matt. No mint or adoption record assigned.",
+      "prop": "stethoscope and coffee",
+      "batch": "matt_er_20260921",
+      "slug": "matt",
+      "backing": "cotton",
+      "reviewStatus": {
+        "status": "awaiting_user_judgment",
+        "scope": "design_registration_metadata_not_a_rating_vote"
+      },
+      "reproduction": {
+        "receipt": {
+          "path": "../design/matt_er_20260921/out/receipt.json",
+          "sha256": "68126b3ca1a40c334e1f2360233180c2b0ecf9ff14151ffa32b70061ed3cf882"
+        },
+        "wideMaster": {
+          "path": "../design/matt_er_20260921/out/wide.png",
+          "sha256": "b46d9816c48bea4740771dcf2e779d5937e29d05dc9e30106f320c29ffe30b66",
+          "width": 4000,
+          "height": 2000
+        }
+      }
     }
   ],
   "rounds": [
@@ -44477,7 +44514,7 @@
           "left": "study-pocket_knife-cb7da6f62358a9d5",
           "right": "study-pocket_knife_loaded-3c7c395a2be3b112",
           "attribute": "surface",
-          "question": "Which treatment of the knife\u2019s painted surface do you prefer?"
+          "question": "Which treatment of the knife’s painted surface do you prefer?"
         },
         {
           "id": "collection-r1-q3-9911f3b664a8",
@@ -44485,7 +44522,7 @@
           "left": "original-38-8c1f9d085e1cbc56",
           "right": "original-70-15217a88a113bca3",
           "attribute": "clothing",
-          "question": "Which way of fitting the costume to the dog\u2019s body do you prefer?"
+          "question": "Which way of fitting the costume to the dog’s body do you prefer?"
         },
         {
           "id": "collection-r1-q4-2937c373db9d",
@@ -44533,7 +44570,7 @@
           "left": "original-1-bbc52cefbb802de5",
           "right": "original-129-979b06df17a93815",
           "attribute": "clothing",
-          "question": "Which way of painting pale clothing around the dog\u2019s body do you prefer?"
+          "question": "Which way of painting pale clothing around the dog’s body do you prefer?"
         },
         {
           "id": "collection-r1-q10-c9479f5e195e",
@@ -44541,7 +44578,7 @@
           "left": "study-guitar-c8a32853f860f15d",
           "right": "study-boombox-a1e695a0a6152e74",
           "attribute": "interaction",
-          "question": "Which musical prop works better with the dog\u2019s pose?"
+          "question": "Which musical prop works better with the dog’s pose?"
         },
         {
           "id": "collection-r1-q11-4aa4579a2057",

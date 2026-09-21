@@ -176,7 +176,7 @@
       "title": "Phoenix",
       "kind": "candidate",
       "imageHash": "25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b",
-      "description": "A scrappy immortal flies out of yesterday\u2019s ashes.",
+      "description": "A scrappy immortal flies out of yesterday’s ashes.",
       "batch": "heroes_immortals_five_20260911",
       "slug": "phoenix",
       "image": "/collection/assets/candidate-25031432e6bc9a0875285f9d3b3c5d8fba12e650fdd3561ded6b932e8615ef6b.png"
@@ -1390,7 +1390,7 @@
       "title": "Dracula",
       "kind": "candidate",
       "imageHash": "abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2",
-      "description": "Dracula: a pale dog with a black widow\u2019s peak, red standing collar and broad dark cape against muted green cotton.",
+      "description": "Dracula: a pale dog with a black widow’s peak, red standing collar and broad dark cape against muted green cotton.",
       "batch": "character_round_11_20260913",
       "slug": "dracula",
       "image": "/collection/assets/candidate-abfc0e5072c8be1b3c0524bfcba15fcc0b6af47e6d4039b557c14ac6c770b0c2.png"
@@ -1460,7 +1460,7 @@
       "title": "Frankenstein's creature",
       "kind": "candidate",
       "imageHash": "10ec658cd382d7803acd7858e42945163d3dee19f0368d4528a8f59a697fbb26",
-      "description": "Frankenstein\u2019s creature: green skin, a squared black crown, silver bolts and a violet coat; a small flower beside the heavy boots.",
+      "description": "Frankenstein’s creature: green skin, a squared black crown, silver bolts and a violet coat; a small flower beside the heavy boots.",
       "batch": "character_round_12_20260913",
       "slug": "frankenstein",
       "image": "/collection/assets/candidate-10ec658cd382d7803acd7858e42945163d3dee19f0368d4528a8f59a697fbb26.png"
@@ -1547,10 +1547,10 @@
     },
     {
       "id": "candidate-character_round_14_20260913-bjork-de506c787bf4a156",
-      "title": "Bj\u00f6rk",
+      "title": "Björk",
       "kind": "candidate",
       "imageHash": "de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0",
-      "description": "Bj\u00f6rk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
+      "description": "Björk: two dark hair knots and a warm face above a sculptural ivory swan dress, with an egg beside the paws on teal cotton.",
       "batch": "character_round_14_20260913",
       "slug": "bjork",
       "image": "/collection/assets/candidate-de506c787bf4a1568702201581e9aa525c4afa37b0bfc5c21d30f959bd9981b0.png"
@@ -1677,10 +1677,10 @@
     },
     {
       "id": "candidate-character_round_16_20260913-asterix-beef0e841c9df0b3",
-      "title": "Ast\u00e9rix",
+      "title": "Astérix",
       "kind": "candidate",
       "imageHash": "beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c",
-      "description": "Ast\u00e9rix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
+      "description": "Astérix: a winged steel-blue helmet, yellow moustache, dark shirt, red trousers and brown boots against blue cotton.",
       "batch": "character_round_16_20260913",
       "slug": "asterix",
       "image": "/collection/assets/candidate-beef0e841c9df0b36860ff5bd47f242611bf3509606090a17ea629aefd06010c.png"
@@ -1917,7 +1917,7 @@
     },
     {
       "id": "candidate-zombie_live_variations_20260914-elizabeth-d0b5f47898695165",
-      "title": "Elizabeth \u2014 Eyes Unbound",
+      "title": "Elizabeth — Eyes Unbound",
       "kind": "candidate",
       "imageHash": "d0b5f4789869516528b6ec2f5cf0b79c0d2fcb8b2283791038914792a01ad45b",
       "description": "Scattered-eye zombie study of the live Elizabeth dog, retaining its own costume, body and native head silhouette.",
@@ -1927,7 +1927,7 @@
     },
     {
       "id": "candidate-zombie_live_variations_20260914-barack-813bf077ef7a4feb",
-      "title": "Barack \u2014 Eyes Unbound",
+      "title": "Barack — Eyes Unbound",
       "kind": "candidate",
       "imageHash": "813bf077ef7a4feb89c98987ccccabc04f3b1bcc6ae16ac693d55f6b00c0f1b1",
       "description": "Scattered-eye zombie study of the live Barack dog, retaining its own costume, body and native head silhouette.",
@@ -1937,7 +1937,7 @@
     },
     {
       "id": "candidate-zombie_live_variations_20260914-batman-e150c8147614a7d6",
-      "title": "Batman \u2014 Eyes Unbound",
+      "title": "Batman — Eyes Unbound",
       "kind": "candidate",
       "imageHash": "e150c8147614a7d6e151f46aac72c4d8fb1d6cca4a95bc59ef95396c4f511003",
       "description": "Scattered-eye zombie study of the live Batman dog, retaining its own costume, body and native head silhouette.",
@@ -1947,7 +1947,7 @@
     },
     {
       "id": "candidate-zombie_live_variations_20260914-judy-9a9f0b21793c57c6",
-      "title": "Judy \u2014 Eyes Unbound",
+      "title": "Judy — Eyes Unbound",
       "kind": "candidate",
       "imageHash": "9a9f0b21793c57c6dd42702381c2895a4614dd42fce35f41207c3118e746408d",
       "description": "Scattered-eye zombie study of the live Judy dog, retaining its own costume, body and native head silhouette.",
@@ -1957,7 +1957,7 @@
     },
     {
       "id": "candidate-zombie_mutations_20260914-elizabeth-5b61d45b75a1fe89",
-      "title": "Elizabeth \u2014 Pearl Swarm",
+      "title": "Elizabeth — Pearl Swarm",
       "kind": "candidate",
       "imageHash": "5b61d45b75a1fe894756cce46790ef175c32ca60d771deba0832915ec833937b",
       "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live elizabeth dog.",
@@ -1967,7 +1967,7 @@
     },
     {
       "id": "candidate-zombie_mutations_20260914-barack-1e6535cc74387de5",
-      "title": "Barack \u2014 Split Jaw",
+      "title": "Barack — Split Jaw",
       "kind": "candidate",
       "imageHash": "1e6535cc74387de59b088f1eb9d1d6a87266f6e10b481ebd2514670ea2a46400",
       "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live barack dog.",
@@ -1977,7 +1977,7 @@
     },
     {
       "id": "candidate-zombie_mutations_20260914-batman-7a4c46af7f957f93",
-      "title": "Batman \u2014 Night Vision",
+      "title": "Batman — Night Vision",
       "kind": "candidate",
       "imageHash": "7a4c46af7f957f9364a0cc84ca79ef42b5f57a16fec58c6c1643aacd5fa751ff",
       "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live batman dog.",
@@ -1987,7 +1987,7 @@
     },
     {
       "id": "candidate-zombie_mutations_20260914-judy-2d4a962e5874ebb9",
-      "title": "Judy \u2014 Cyclops Bloom",
+      "title": "Judy — Cyclops Bloom",
       "kind": "candidate",
       "imageHash": "2d4a962e5874ebb9dc0c5b34d647889ea6067cb5ba71e281af48ce310a75f1cd",
       "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live judy dog.",
@@ -1997,50 +1997,50 @@
     },
     {
       "id": "candidate-zombie_family_expansion_20260914-marie-57e182e10a06e21c",
-      "title": "Marie \u2014 Porcelain Chorus",
+      "title": "Marie — Porcelain Chorus",
       "kind": "candidate",
       "imageHash": "57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4",
-      "description": "Marie \u2014 Porcelain Chorus: a separately composed zombie mutation developed from its original character.",
+      "description": "Marie — Porcelain Chorus: a separately composed zombie mutation developed from its original character.",
       "batch": "zombie_family_expansion_20260914",
       "slug": "marie",
       "image": "/collection/assets/candidate-57e182e10a06e21cc768d9f346808bab2bdf787fb3f2bfa859f5802f5dd2d3d4.png"
     },
     {
       "id": "candidate-zombie_family_expansion_20260914-hulk-6a6c10c7adea365b",
-      "title": "Hulk \u2014 Jawbreaker",
+      "title": "Hulk — Jawbreaker",
       "kind": "candidate",
       "imageHash": "6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b",
-      "description": "Hulk \u2014 Jawbreaker: a separately composed zombie mutation developed from its original character.",
+      "description": "Hulk — Jawbreaker: a separately composed zombie mutation developed from its original character.",
       "batch": "zombie_family_expansion_20260914",
       "slug": "hulk",
       "image": "/collection/assets/candidate-6a6c10c7adea365bf7024ba2a44d4b5a5e51534514419ec4e63b6a4e4bcb1a1b.png"
     },
     {
       "id": "candidate-zombie_family_expansion_20260914-virgil-e342f01bb3f6fc72",
-      "title": "Virgil \u2014 After Hours",
+      "title": "Virgil — After Hours",
       "kind": "candidate",
       "imageHash": "e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9",
-      "description": "Virgil \u2014 After Hours: a separately composed zombie mutation developed from its original character.",
+      "description": "Virgil — After Hours: a separately composed zombie mutation developed from its original character.",
       "batch": "zombie_family_expansion_20260914",
       "slug": "virgil",
       "image": "/collection/assets/candidate-e342f01bb3f6fc72175e14c3de0c33c8495f61cff4abdab8cd996fa25d5c55a9.png"
     },
     {
       "id": "candidate-zombie_family_expansion_20260914-donald-ae5f6628e10e4869",
-      "title": "Donald \u2014 Bitter Bite",
+      "title": "Donald — Bitter Bite",
       "kind": "candidate",
       "imageHash": "ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295",
-      "description": "Donald \u2014 Bitter Bite: a separately composed zombie mutation developed from its original character.",
+      "description": "Donald — Bitter Bite: a separately composed zombie mutation developed from its original character.",
       "batch": "zombie_family_expansion_20260914",
       "slug": "donald",
       "image": "/collection/assets/candidate-ae5f6628e10e48698ffa46b938574468dcef79d7ccee199be5c17e5f286d2295.png"
     },
     {
       "id": "candidate-zombie_family_expansion_20260914-elliott-7e8ba5dd9a61126e",
-      "title": "Elliott \u2014 Night Visitor",
+      "title": "Elliott — Night Visitor",
       "kind": "candidate",
       "imageHash": "7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a",
-      "description": "Elliott \u2014 Night Visitor: a separately composed zombie mutation developed from its original character.",
+      "description": "Elliott — Night Visitor: a separately composed zombie mutation developed from its original character.",
       "batch": "zombie_family_expansion_20260914",
       "slug": "elliott",
       "image": "/collection/assets/candidate-7e8ba5dd9a61126ed99432552147c84423589d3969f11022a11defaa62f9be5a.png"
@@ -3548,7 +3548,7 @@
     },
     {
       "id": "candidate-angel_loved_three_20260915-barack-953090d6c89de3c1",
-      "title": "Barack \u2014 Windborne Angel",
+      "title": "Barack — Windborne Angel",
       "kind": "candidate",
       "imageHash": "953090d6c89de3c1f7fc152c025c3de8cb21ee5ed156516bc541b393685af59b",
       "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against warm grey cotton.",
@@ -3579,7 +3579,7 @@
     },
     {
       "id": "candidate-angel_loved_three_b_20260915-barack-5abf6721b80f5af9",
-      "title": "Barack \u2014 Windborne Angel",
+      "title": "Barack — Windborne Angel",
       "kind": "candidate",
       "imageHash": "5abf6721b80f5af9b96715dc56f2b82037351cbbcd6b7475520bbff732ba7a81",
       "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
@@ -3590,7 +3590,7 @@
     },
     {
       "id": "candidate-angel_barack_c_20260915-barack-4cf8707566fbe497",
-      "title": "Barack \u2014 Windborne Angel",
+      "title": "Barack — Windborne Angel",
       "kind": "candidate",
       "imageHash": "4cf8707566fbe49707f20af5bbae2db855383b94eaf2b4012826cdd72583e123",
       "description": "Barack with an unequal pair of chalk-and-blue wings trailing from his shoulder, a broken slanted halo and his retained native suit and face against sage-grey cotton.",
@@ -3661,7 +3661,7 @@
     },
     {
       "id": "candidate-character_glow_flight_20260915-devo-1ebeb1d9176cf167",
-      "title": "Devo \u00b7 Glow and Flight",
+      "title": "Devo · Glow and Flight",
       "kind": "candidate",
       "imageHash": "1ebeb1d9176cf16758d470691371cd8f57be5a2b2b1aa113c04c15c91c06f1f3",
       "description": "The stepped rust energy dome lifts a compact mustard dog through a warm painted ivory light. Short tucked legs hover above a separate narrow ground trace; the dome, sparse face and complete boiler suit remain the approved painting's defining shapes.",
@@ -3671,7 +3671,7 @@
     },
     {
       "id": "candidate-character_glow_flight_20260915-harpo-ac8efb45da0f4b40",
-      "title": "Harpo Marx \u00b7 Glow and Flight",
+      "title": "Harpo Marx · Glow and Flight",
       "kind": "candidate",
       "imageHash": "ac8efb45da0f4b400d2552c5adf38be6baf3619fa29657d2fa781c2bc75d39a4",
       "description": "Harpo drifts through an oblique patch of pale light, his battered top hat and uneven blonde curls still intact. The loose cream coat floats above staggered short legs and a small detached ground trace on blue-gray cotton.",
@@ -3681,7 +3681,7 @@
     },
     {
       "id": "candidate-character_glow_flight_20260915-bride-9fb539a9d8e712f4",
-      "title": "Bride of Frankenstein \u00b7 Glow and Flight",
+      "title": "Bride of Frankenstein · Glow and Flight",
       "kind": "candidate",
       "imageHash": "9fb539a9d8e712f4955f4db436a44dbabe5b48fdd444f6ec0b3b4fee0657f9b1",
       "description": "The long ivory Bride levitates almost level above a separate plum ground shadow. Unequal pale electrical light frames the towering black hair while the small native face and broad wrapped body remain against dark plum.",
@@ -3691,7 +3691,7 @@
     },
     {
       "id": "candidate-character_glow_flight_20260915-cyndi-35bd31c93f173c31",
-      "title": "Cyndi Lauper \u00b7 Glow and Flight",
+      "title": "Cyndi Lauper · Glow and Flight",
       "kind": "candidate",
       "imageHash": "35bd31c93f173c31114c58469847f699ba914555f1128fb76b2cda65f5be5ffb",
       "description": "Cyndi rises diagonally toward the left, coral hair and blue-violet coat crossing a broken slant of pale gold and cool light. A reaching coral foreleg, tucked rear stance and detached ground shadow make the native dog airborne.",
@@ -3701,7 +3701,7 @@
     },
     {
       "id": "candidate-character_glow_flight_20260915-rambo-893acc021923b026",
-      "title": "Rambo \u00b7 Glow and Flight",
+      "title": "Rambo · Glow and Flight",
       "kind": "candidate",
       "imageHash": "893acc021923b026a9bf6f2e4d3bbe9af6fd368c6b29fbb25e378ea25b229560",
       "description": "Rambo floats forward with tucked legs. Warm ivory evening light shows around the ragged dark mane and catches two interrupted edges of his tan back; a short blue-grey shadow stays on the ground.",
@@ -3711,7 +3711,7 @@
     },
     {
       "id": "candidate-home_barack_tobacco_v1_20260918-barack-cb82373aee0d8073",
-      "title": "Barack \u2014 Tobacco Room",
+      "title": "Barack — Tobacco Room",
       "kind": "candidate",
       "imageHash": "cb82373aee0d80730373549b6d9e3640787a26263c254e6cb1e936c64d9061e4",
       "description": "A native living Barack study for the cream/oxblood homepage. Ochre patched cotton and low faded clay floor; brown face, cobalt band and navy suit retained. No wings, political poster, flames or red foreground obstruction. Approved physical brush and oil stick unchanged.",
@@ -3721,7 +3721,7 @@
     },
     {
       "id": "candidate-home_white_cardboard_v1_20260918-barack-1dc38cf7512e1c88",
-      "title": "Barack \u2014 Open Sky",
+      "title": "Barack — Open Sky",
       "kind": "candidate",
       "imageHash": "1dc38cf7512e1c88c31caccf3ce50e83bf56ef5e44fac1cd5b591359a3382709",
       "description": "Native Barack with the sky and poster removed. Original navy/red floor gestures retained on white, for a continuous transition from the white page. Original native painter, physical brush and oil stick preserved.",
@@ -3731,7 +3731,7 @@
     },
     {
       "id": "candidate-home_white_cardboard_v1_20260918-hulk-cd8aef8d441304eb",
-      "title": "Hulk \u2014 Cardboard",
+      "title": "Hulk — Cardboard",
       "kind": "candidate",
       "imageHash": "cd8aef8d441304eb905c0fffa9ce64906a047f21a35a5f83b1fdee14b90a142b",
       "description": "Native Hulk on actual kraft cardboard, retaining the yellow bandana, moustache and torn shirt. Presented as a loose painted object against white; no new accessories or substituted brush.",
@@ -3741,7 +3741,7 @@
     },
     {
       "id": "candidate-barack_white_angel_v1_20260918-barack-60dfbde59ef51e3b",
-      "title": "Barack \u2014 Angel, White Canvas",
+      "title": "Barack — Angel, White Canvas",
       "kind": "candidate",
       "imageHash": "60dfbde59ef51e3be6a1e371c208b15245363dbd835075dad258f1fa11ea7aa2",
       "description": "Native Barack62 brown face, cobalt eye band and navy suit, with a new unequal ivory wing pair, broken gold halo and single drifting feather over violet-blue patched cotton. No political text or scene; no prior Vincent art reused.",
@@ -3751,7 +3751,7 @@
     },
     {
       "id": "candidate-barack_white_zombie_v1_20260918-barack-07e7d2418a5812f3",
-      "title": "Barack \u2014 Split Jaw, Open Sky",
+      "title": "Barack — Split Jaw, Open Sky",
       "kind": "candidate",
       "imageHash": "07e7d2418a5812f3e64e79f32f4ddef8b5620e39e099e1a149dc1a255fb726bf",
       "description": "Distinct zombie mutation with its own eye hierarchy and jaw geometry, developed from the live barack dog.",
@@ -3768,6 +3768,16 @@
       "batch": "hulk_scissor_cardboard_20260918",
       "slug": "hulk",
       "image": "/collection/assets/candidate-8723ccdf8f5c40507f735bb9171a45e96b8e3756a32840340bb61ca37b8dcc17.png"
+    },
+    {
+      "id": "candidate-matt_er_20260921-matt-ad403ab30e5fad23",
+      "title": "Matt — On Call",
+      "kind": "candidate",
+      "imageHash": "ad403ab30e5fad23ffa43616d64f05603fab594a4ddaffad2d4fbebb828d71b0",
+      "description": "A golden ER doctor dog in teal scrubs, with a stethoscope, a Matt badge, a night window, a glowing monitor and a coffee marked STAT.",
+      "batch": "matt_er_20260921",
+      "slug": "matt",
+      "image": "https://alldogs.wtf/matt/matt-on-call.jpg"
     }
   ],
   "references": [
@@ -4385,7 +4395,7 @@
       },
       {
         "id": "round-21",
-        "title": "Round 21 \u00b7 Loved Zombies",
+        "title": "Round 21 · Loved Zombies",
         "frozenAt": "2026-09-14T21:20:59.364253+00:00",
         "members": [
           {
@@ -4412,7 +4422,7 @@
       },
       {
         "id": "round-22",
-        "title": "Round 22 \u00b7 Loved Zombies",
+        "title": "Round 22 · Loved Zombies",
         "frozenAt": "2026-09-14T21:52:53.231670+00:00",
         "members": [
           {
@@ -4439,7 +4449,7 @@
       },
       {
         "id": "round-23",
-        "title": "Round 23 \u00b7 Loved Zombies",
+        "title": "Round 23 · Loved Zombies",
         "frozenAt": "2026-09-14T22:36:15.415954+00:00",
         "members": [
           {
@@ -4466,7 +4476,7 @@
       },
       {
         "id": "round-24",
-        "title": "Round 24 \u00b7 Loved Zombies",
+        "title": "Round 24 · Loved Zombies",
         "frozenAt": "2026-09-15T00:13:20.217842+00:00",
         "members": [
           {
@@ -4493,7 +4503,7 @@
       },
       {
         "id": "round-25",
-        "title": "Round 25 \u00b7 Loved Zombies",
+        "title": "Round 25 · Loved Zombies",
         "frozenAt": "2026-09-15T01:17:47.125475+00:00",
         "members": [
           {
@@ -4520,7 +4530,7 @@
       },
       {
         "id": "round-26",
-        "title": "Round 26 \u00b7 Loved Zombies",
+        "title": "Round 26 · Loved Zombies",
         "frozenAt": "2026-09-15T02:14:17.466671+00:00",
         "members": [
           {
@@ -4547,7 +4557,7 @@
       },
       {
         "id": "round-27",
-        "title": "Round 27 \u00b7 Loved Zombies",
+        "title": "Round 27 · Loved Zombies",
         "frozenAt": "2026-09-15T02:41:39.957567+00:00",
         "members": [
           {
@@ -4574,7 +4584,7 @@
       },
       {
         "id": "round-28",
-        "title": "Round 28 \u00b7 Loved Zombies",
+        "title": "Round 28 · Loved Zombies",
         "frozenAt": "2026-09-15T03:07:49.642779+00:00",
         "members": [
           {
@@ -4601,7 +4611,7 @@
       },
       {
         "id": "round-29",
-        "title": "Round 29 \u00b7 Loved Zombies",
+        "title": "Round 29 · Loved Zombies",
         "frozenAt": "2026-09-15T03:31:29.809723+00:00",
         "members": [
           {
@@ -4628,7 +4638,7 @@
       },
       {
         "id": "round-30",
-        "title": "Round 30 \u00b7 Loved Zombies",
+        "title": "Round 30 · Loved Zombies",
         "frozenAt": "2026-09-15T04:01:16.654581+00:00",
         "members": [
           {
@@ -4655,7 +4665,7 @@
       },
       {
         "id": "round-31",
-        "title": "Round 31 \u00b7 Loved Zombies",
+        "title": "Round 31 · Loved Zombies",
         "frozenAt": "2026-09-15T04:26:11.625923+00:00",
         "members": [
           {
@@ -4682,7 +4692,7 @@
       },
       {
         "id": "round-32",
-        "title": "Round 32 \u00b7 Loved Zombies",
+        "title": "Round 32 · Loved Zombies",
         "frozenAt": "2026-09-15T04:38:23.441772+00:00",
         "members": [
           {
