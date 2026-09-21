@@ -43,8 +43,8 @@
   }
   const image=dog=>dog.variants?.[0]?.src||dog.original;
   const invited=a=>a.viewing&&['invited','claimed'].includes(a.viewing.status)||a.invitation&&a.invitation.status!=='revoked';
-  function label(a){if(a.status==='awaiting_verification')return 'Awaiting X verification';if(a.status==='adopted'||a.gift?.status==='accepted')return 'Adopted';if(['rejected','withdrawn'].includes(a.status))return a.status;if(a.mail&&['unknown','failed'].includes(a.mail.status)&&invited(a))return 'Email needs attention';if(invited(a))return a.invitation?.dogName?'Dog chosen':'Invited';if(a.viewing?.status==='draft')return 'Draft';return a.vouch?.valid?'Ready to invite':'Awaiting a vouch';}
-  function markDirty(){dirty=true;const hint=$('draft-hint');if(hint)hint.textContent=person()?.gift?'Unsaved changes · these paintings are reserved for this gift.':'Unsaved changes · dogs are reserved when you send.';}
+  function label(a){if(a.status==='awaiting_verification')return 'Awaiting X verification';if(a.status==='adopted'||a.gift?.status==='accepted')return 'Adopted';if(['rejected','withdrawn'].includes(a.status))return a.status;if(a.mail&&['unknown','failed'].includes(a.mail.status)&&invited(a))return 'Email needs attention';if(invited(a))return a.invitation?.dogName?'Dog chosen':a.mail?.status==='not_sent'?'Invite ready':'Invited';if(a.viewing?.status==='draft')return 'Draft';return a.vouch?.valid?'Ready to invite':'Awaiting a vouch';}
+  function markDirty(){dirty=true;const hint=$('draft-hint');if(hint)hint.textContent=person()?.gift?'Unsaved changes · these paintings are reserved for this gift.':'Unsaved changes · dogs are reserved when you create a link or send an email.';}
   function field(labelText,input){const group=el('div',undefined,'form-section'),label=el('label',labelText);label.htmlFor=input.id;group.append(label,input);return group;}
   function badge(text,kind=''){return el('span',text,'badge '+kind);}
   function resetDraft(a){draft={publicId:a.publicId,dogIds:[...(a.viewing?.dogIds||[])],note:a.viewing?.note||'',email:a.viewing?.email||a.email||'',founding:a.viewing?.founding||false,revision:a.viewing?.revision||0};dirty=false;}
@@ -118,14 +118,14 @@
       eligibility.append(override,el('p','For a founding invitation, include a personal note below.','muted'));root.append(eligibility);
     }
     if(a.gift)root.append(el('h3','A personal gift for '+a.gift.greeting),el('p','Her paintings are reserved. The invitation opens her private viewing directly.','muted'));
-    const email=el('input');email.type='email';email.id='recipient';email.autocomplete='off';email.placeholder='person@example.com';email.value=draft.email;email.maxLength=254;email.oninput=()=>{draft.email=email.value;markDirty();};const emailField=field('Invitation email',email);emailField.append(el('p',a.emailVerified?'Applicant-verified address.':a.email?'Provided by the applicant; address not verified.':'Add the recipient’s email address to send their invitation.','muted email-note'));root.append(emailField);
+    const email=el('input');email.type='email';email.id='recipient';email.autocomplete='off';email.placeholder='person@example.com';email.value=draft.email;email.maxLength=254;email.oninput=()=>{draft.email=email.value;markDirty();};const emailField=field('Invitation email (optional)',email);emailField.append(el('p',a.emailVerified?'Applicant-verified address.':a.email?'Provided by the applicant; address not verified.':'Leave blank to share their private invitation on X.','muted email-note'));root.append(emailField);
     const note=el('textarea');note.id='personal-note';note.rows=3;note.maxLength=1000;note.placeholder='A personal note from you…';note.value=draft.note;note.oninput=()=>{draft.note=note.value;markDirty();};root.append(field('A note from Wubbushi',note));
     if(a.gift){root.append(dogPreview(draft.dogIds));}else{
     const section=el('section',undefined,'form-section'),headingRow=el('div',undefined,'section-heading');headingRow.append(el('h3','Choose their dogs'),el('span','','selection-count'));headingRow.lastChild.id='selection-count';section.append(headingRow,el('p','Choose one, two, or three. Wishlist favorites appear first.','muted'));
     const search=el('input');search.type='search';search.id='dog-search';search.className='dog-search';search.placeholder='Find a painting…';search.setAttribute('aria-label','Find a painting');search.oninput=()=>renderDogs();const chips=el('div',undefined,'chosen-strip');chips.id='chosen';const grid=el('div',undefined,'dogs');grid.id='dogs';section.append(search,chips,grid);root.append(section);
     }
-    const actions=el('div',undefined,'actions');actions.append(btn('Save draft',()=>run(async()=>{await saveDraft();status('Draft saved. No email has been sent.');})),btn('Review invitation →',()=>run(async()=>{await saveDraft();openPreview();}),'primary'));root.append(actions);const feedback=el('p',undefined,'form-feedback');feedback.id='draft-message';feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');root.append(feedback);const hint=el('p',a.gift?'These paintings are reserved for her. Saving a draft does not send an email.':draft.revision?'Draft saved · dogs are reserved when you send.':'Dogs are reserved when you send. Saving a draft does not send an email.','draft-hint');hint.id='draft-hint';root.append(hint);
-    if(!data.capabilities.email)root.append(el('p','Email sending is not configured yet. You can save drafts.','muted'));
+    const actions=el('div',undefined,'actions');actions.append(btn('Save draft',()=>run(async()=>{await saveDraft();status('Draft saved. No email has been sent.');})),btn('Review invitation →',()=>run(async()=>{await saveDraft();openPreview();}),'primary'));root.append(actions);const feedback=el('p',undefined,'form-feedback');feedback.id='draft-message';feedback.setAttribute('role','status');feedback.setAttribute('aria-live','polite');root.append(feedback);const hint=el('p',a.gift?'These paintings are reserved for her. Saving a draft does not send an email.':draft.revision?'Draft saved · dogs are reserved when you create a link or send an email.':'Dogs are reserved when you create a link or send an email. Saving a draft does not send an email.','draft-hint');hint.id='draft-hint';root.append(hint);
+    if(!data.capabilities.email)root.append(el('p','Email sending is not configured yet. You can share private invitation links.','muted'));
     if(!a.gift)renderDogs();
   }
   function renderDogs(){
@@ -139,16 +139,42 @@
     root.append(el('h3','Their private viewing'),dogPreview(a.viewing?.dogIds||a.invitation?.dogIds||[]));if(a.viewing?.note)root.append(el('p',a.viewing.note,'note'));
     const choice=a.gift||a.invitation;if(choice?.dogName)root.append(fact('Their saved choice',choice.dogName+' · '+(dogById(choice.selectedDog)?.title||choice.selectedDog)));
     const delivery=el('div',undefined,'delivery'),mail=a.mail;
-    if(mail){delivery.append(el('h3',mail.status==='accepted'?'Invitation accepted by Resend':mail.status==='sending'?'Sending invitation…':'Invitation email needs attention'),el('p','To: '+mail.recipient));if(mail.status==='accepted')delivery.append(el('p','Sent '+date(mail.sent_at)+'. Inbox delivery is not confirmed here.'));if(mail.error)delivery.append(el('p',mail.error,'error'));if(mail.provider_id){const link=el('a','View this message in Resend ↗');link.href='https://resend.com/emails/'+encodeURIComponent(mail.provider_id);link.target='_blank';link.rel='noopener noreferrer';delivery.append(link);}if(mail.status!=='accepted')delivery.append(btn('Retry this email',()=>run(async()=>{const result=await api.request('club/admin-send',{publicId:a.publicId,revision:a.viewing.revision},key);await load();status(result.mail?.status==='accepted'?'Invitation accepted by Resend.':result.mail?.error||'This email is still being processed.',result.mail?.status==='failed'||result.mail?.status==='unknown');})));}
+    if(mail){
+      delivery.append(el('h3',mail.status==='accepted'?'Invitation accepted by Resend':mail.status==='sending'?'Sending invitation…':mail.status==='not_sent'?'Private invitation ready':'Invitation email needs attention'));
+      if(mail.recipient)delivery.append(el('p','Email: '+mail.recipient));
+      if(mail.status==='not_sent')delivery.append(el('p','No email has been sent. Copy the invitation below to send it yourself.'));
+      if(mail.status==='accepted')delivery.append(el('p','Sent '+date(mail.sent_at)+'. Inbox delivery is not confirmed here.'));
+      if(mail.error)delivery.append(el('p',mail.error,'error'));
+      if(mail.provider_id){const link=el('a','View this message in Resend ↗');link.href='https://resend.com/emails/'+encodeURIComponent(mail.provider_id);link.target='_blank';link.rel='noopener noreferrer';delivery.append(link);}
+      const actions=el('div',undefined,'actions');
+      if(a.viewing)actions.append(btn('Get private link',()=>prepareLink(),'primary'));
+      if(mail.recipient&&mail.status!=='accepted')actions.append(btn(mail.status==='not_sent'?'Send email too':'Retry this email',()=>run(async()=>{const result=await api.request('club/admin-send',{publicId:a.publicId,revision:a.viewing.revision},key);await load();status(result.mail?.status==='accepted'?'Invitation accepted by Resend.':result.mail?.error||'This email is still being processed.',result.mail?.status==='failed'||result.mail?.status==='unknown');})));
+      delivery.append(actions);
+    }
     else delivery.append(el('h3','Viewing exists · no email recorded'),el('p','This invitation was created in the old desk. Withdraw it below to prepare an email invitation.'));
-    root.append(delivery,el('p',a.viewing?.status==='claimed'?'They opened their private invitation.':a.identityVerified||a.gift?'Their email link opens the private viewing directly.':'The private email link opens only this viewing. This older application has not verified X.','muted'));
+    root.append(delivery,el('p',a.viewing?.status==='claimed'?'They opened their private invitation.':a.identityVerified||a.gift?'Their private link opens the viewing directly.':'The private link opens only this viewing. This older application has not verified X.','muted'));
     root.append(btn('Withdraw invitation',()=>{if(confirm('Withdraw this invitation and release its dogs? Its private link will stop working. An email already sent cannot be recalled.'))run(async()=>{await api.request('club/admin-revoke',{publicId:a.publicId},key);await load();status('Invitation withdrawn. Its dogs are available again.');});},'danger'));
   }
+  function showShare(result){
+    const card=el('section',undefined,'delivery');card.id='share-invitation';card.append(el('h3','Send their invitation'),el('p','Copy the message, then paste it into your conversation on X.'));
+    const message=el('textarea');message.id='invite-message';message.readOnly=true;message.rows=7;message.value=result.message;
+    const link=el('input');link.id='invite-link';link.readOnly=true;link.value=result.url;
+    card.append(field('Invitation message',message),field('Private invitation link',link));
+    const copy=async(input,label)=>{try{await navigator.clipboard.writeText(input.value);status(label+' copied.');}catch{input.focus();input.select();status('Select Copy to copy the highlighted '+label.toLowerCase()+'.');}};
+    const actions=el('div',undefined,'actions'),x=el('a','Message @'+result.handle+' on X ↗');x.href=result.xUrl;x.target='_blank';x.rel='noopener noreferrer';
+    actions.append(btn('Copy message',()=>copy(message,'Message')),btn('Copy link',()=>copy(link,'Link')),x);
+    card.append(actions,el('p','Share privately with @'+result.handle+'. Valid through '+date(result.expiresAt)+'.','muted'));
+    $('share-invitation')?.remove();$('detail').append(card);card.scrollIntoView({block:'nearest',behavior:'smooth'});
+  }
+  function prepareLink(){return run(async()=>{
+    const a=person(),result=await api.request('club/admin-send',{publicId:a.publicId,revision:draft.revision,delivery:'link'},key);
+    $('preview').close();await load();showShare(result);status('Private link ready. No new message was sent.');
+  });}
   async function saveDraft(){if(!draft.dogIds.length)throw Error('Choose at least one dog.');const result=await api.request('club/admin-save',draft,key);draft.revision=result.revision;await load();}
-  function sendBlocker(){
+  function sendBlocker(channel='email'){
     if(!draft||!person())return 'Choose an applicant first.';
-    if(!draft.email)return 'Add the recipient’s email address before sending.';
-    if(!data.capabilities.email)return 'Email sending is not configured yet. Your draft is saved.';
+    if(channel==='email'&&!draft.email)return 'Add the recipient’s email address before sending.';
+    if(channel==='email'&&!data.capabilities.email)return 'Email sending is not configured yet. Your draft is saved.';
     if(!person().gift){
       if(draft.founding&&!draft.note.trim())return 'Add a personal note for this founding invitation.';
       if(!draft.founding&&!person().vouch?.valid)return person().handle.toLowerCase()==='wubbushi'?'For your own dog, choose a founding invitation and add a personal note.':'Vouch for this person, or choose a founding invitation, before sending.';
@@ -157,25 +183,26 @@
   }
   function openPreview(){
     const a=person(),body=$('preview-body');
-    body.replaceChildren(el('p','To: '+(draft.email||'Add an email before sending'),'preview-to'),el('p','X account: @'+a.handle,'preview-to'),dogPreview(a.gift?[a.gift.coverDogId]:draft.dogIds));
-    const letter=el('div',undefined,'preview-letter');letter.append(el('p','From Wubbushi <wubbushi@alldogs.wtf>','muted'),el('h2','A dog, just for you.'),el('p',(a.gift?.greeting||'@'+a.handle)+','),el('p',draft.note||'I chose '+draft.dogIds.length+' '+(draft.dogIds.length===1?'dog':'dogs')+' for you to meet.'),el('p',a.gift?'Love,\nWubbushi':'Wubbushi'),el('p','The private email link opens their viewing directly. They won’t need to sign in again.','muted'));body.append(letter);
-    const blocked=sendBlocker();
+    body.replaceChildren(el('p',draft.email?'Email: '+draft.email:'Share their private invitation on X. No email is needed.','preview-to'),el('p','X account: @'+a.handle,'preview-to'),dogPreview(a.gift?[a.gift.coverDogId]:draft.dogIds));
+    const letter=el('div',undefined,'preview-letter');letter.append(el('p','From Wubbushi <wubbushi@alldogs.wtf>','muted'),el('h2','A dog, just for you.'),el('p',(a.gift?.greeting||'@'+a.handle)+','),el('p',draft.note||'I chose '+draft.dogIds.length+' '+(draft.dogIds.length===1?'dog':'dogs')+' for you to meet.'),el('p',a.gift?'Love,\nWubbushi':'Wubbushi'),el('p','The private link opens their viewing directly. They won’t need to sign in again.','muted'));body.append(letter);
+    const blocked=sendBlocker('link');
     if(blocked){
       const next=el('section',undefined,'preview-next');next.append(el('h3','Before you send'),el('p',blocked));
       if(!a.gift&&!a.vouch?.valid&&!draft.founding&&a.handle.toLowerCase()!=='wubbushi')next.append(btn('Vouch for @'+(a.currentHandle||a.handle),()=>run(async()=>{await api.request('club/admin-vouch',{publicId:a.publicId},key);await load();openPreview();}),'primary'));
-      else next.append(btn('Finish the invitation',()=>{$('preview').close();const target=!draft.email?$('recipient'):!draft.founding?$('founding'):$('personal-note');target?.focus();target?.scrollIntoView({block:'center'});}));
+      else next.append(btn('Finish the invitation',()=>{$('preview').close();const target=!draft.founding?$('founding'):$('personal-note');target?.focus();target?.scrollIntoView({block:'center'});}));
       body.prepend(next);
     }
-    $('send-message').textContent='';$('send').textContent=draft.email?'Send to '+draft.email:'Send invitation';$('send').disabled=Boolean(blocked);$('preview-title').textContent='Your invitation.';
+    $('send-message').textContent='';$('send').textContent=draft.email?'Email to '+draft.email:'Email invitation';$('send').hidden=!draft.email;$('send').disabled=Boolean(sendBlocker());$('create-link').disabled=Boolean(blocked);$('preview-title').textContent='Your invitation.';
     if(!$('preview').open)$('preview').showModal();
   }
-  async function run(fn){if(busy)return;busy=true;$('detail').inert=true;$('detail').setAttribute('aria-busy','true');$('send').disabled=true;$('close').disabled=true;$('refresh').disabled=true;try{await fn();}catch(e){$('detail').inert=false;status(e.message,true);if($('preview').open)$('send-message').textContent=e.message;}finally{busy=false;$('detail').inert=false;$('detail').removeAttribute('aria-busy');$('send').disabled=Boolean(sendBlocker());$('close').disabled=false;$('refresh').disabled=false;}}
+  async function run(fn){if(busy)return;busy=true;$('detail').inert=true;$('detail').setAttribute('aria-busy','true');$('send').disabled=true;$('create-link').disabled=true;$('close').disabled=true;$('refresh').disabled=true;try{await fn();}catch(e){$('detail').inert=false;status(e.message,true);if($('preview').open)$('send-message').textContent=e.message;}finally{busy=false;$('detail').inert=false;$('detail').removeAttribute('aria-busy');$('send').disabled=Boolean(sendBlocker());$('create-link').disabled=Boolean(sendBlocker('link'));$('close').disabled=false;$('refresh').disabled=false;}}
   $('key-form').onsubmit=e=>{e.preventDefault();if(busy)return;key=$('key').value.trim();$('key').value='';run(async()=>{try{await load();status(data.applications.length+(data.applications.length===1?' person':' people')+' on your private waitlist.');}catch(e){key='';throw e;}});};
   $('search').oninput=renderPeople;$('filter').onchange=renderPeople;
   $('refresh').onclick=()=>{if(dirty&&!confirm('Refresh and discard unsaved changes?'))return;run(async()=>{await load();status('Waitlist refreshed.');});};
   $('close').onclick=()=>{if(dirty&&!confirm('Lock the desk and discard unsaved changes?'))return;lock();};
   for(const id of ['preview-close','preview-back'])$(id).onclick=()=>{if(!busy)$('preview').close();};
   $('preview').addEventListener('cancel',event=>{if(busy)event.preventDefault();});
+  $('create-link').onclick=prepareLink;
   $('send').onclick=()=>run(async()=>{const a=person();$('send-message').textContent='Sending your invitation…';const result=await api.request('club/admin-send',{publicId:a.publicId,revision:draft.revision},key);$('preview').close();await load();status(result.mail?.status==='accepted'?'Invitation accepted by Resend. The viewing is ready.':result.mail?.error||'Sending is in progress. Refresh for the result.',result.mail?.status==='failed'||result.mail?.status==='unknown');});
   window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
   window.addEventListener('pagehide',lock);
