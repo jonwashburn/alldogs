@@ -53,6 +53,7 @@ jobs:
           node --check viewing-room/garden/worker.js
           node .github/scripts/check-garden.cjs
           node --check admin/admin.js
+          node --check admin/approve/approve.js
           node --check account/account.js
           node --check account/payments.js
           node --check account/mint.js

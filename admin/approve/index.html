@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.alldogs.wtf; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<title>Approve adoptions · All Dogs</title>
+<link rel="stylesheet" href="/admin/admin.css?v=20260920-forms1">
+<link rel="stylesheet" href="/admin/approve/approve.css?v=20260923-sign1">
+<script src="/account/account-api.js?v=20260917-club1" defer></script>
+<script src="/admin/approve/approve.js?v=20260923-sign1" defer></script>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+</head>
+<body>
+<header class="mast"><a href="/" aria-label="All Dogs home"><img src="/assets/all-dogs-wordmark.svg" width="177" height="32" alt="All Dogs"></a><span class="private-label">Wubbushi’s private desk</span><button id="close" hidden>Lock</button></header>
+<main>
+<div class="page-heading"><div><p class="eyebrow">Before a dog leaves home</p><h1>Approve adoptions.</h1><p class="lede">Each dog is sent only after you sign for it. Signing costs nothing; the relay pays the gas.</p></div><button id="refresh" hidden>Refresh ↻</button></div>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="login" class="login-card"><h2>Welcome back, Wubbushi.</h2><p>Open this page in your wallet app’s browser with your approval wallet selected.</p><form id="key-form"><label for="key">Password</label><div class="key-row"><input id="key" name="password" type="password" required autocomplete="current-password" spellcheck="false"><button class="primary" type="submit">Open →</button></div></form></section>
+<section id="queue" hidden aria-label="Adoptions waiting for approval"></section>
+<noscript>Turn on JavaScript to approve adoptions.</noscript>
+</main>
+<footer>Private, by invitation. Painted by Wubbushi.</footer>
+</body></html>

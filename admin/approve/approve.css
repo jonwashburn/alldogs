@@ -1,0 +1,8 @@
+#queue { display: grid; gap: 16px; max-width: 560px; }
+.approve-card { border: 2px solid currentColor; padding: 16px; display: grid; gap: 6px; }
+.approve-card h2 { margin: 0 0 6px; }
+.approve-card button { margin-top: 10px; min-height: 48px; }
+.approve-row { margin: 0; display: grid; grid-template-columns: 7.5em 1fr; gap: 8px; }
+.approve-label { opacity: .7; }
+.approve-value { overflow-wrap: anywhere; }
+.mono { font-family: ui-monospace, Menlo, monospace; font-size: .92em; }
