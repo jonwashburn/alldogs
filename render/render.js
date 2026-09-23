@@ -1,15 +1,15 @@
 'use strict';
-(()=>{const btn=document.getElementById('start'),again=document.getElementById('again'),note=document.getElementById('note');
-if(!window.Worker||!window.OffscreenCanvas){btn.disabled=true;note.textContent='This browser cannot run the painter. A recent Chrome, Edge, Firefox or Safari can.';return;}
-btn.addEventListener('click',()=>{btn.hidden=true;document.getElementById('stage').classList.add('running');begin();
-  const t=setInterval(()=>{if(window.__shown||window.__error){clearInterval(t);again.hidden=false;}},500);});
+(()=>{const again=document.getElementById('again'),note=document.getElementById('note');
+if(!window.Worker||!window.OffscreenCanvas){note.textContent='This browser cannot run the painter. A recent Chrome, Edge, Firefox or Safari can.';return;}
+document.getElementById('stage').classList.add('running');begin();
+const t=setInterval(()=>{if(window.__shown||window.__error){clearInterval(t);again.hidden=false;}},500);
 again.addEventListener('click',()=>location.reload());
 function begin(){
 
 
-const q=new URLSearchParams(location.search),scale=Math.max(1,Math.min(2,Number(q.get('scale')||1)));
+const q=new URLSearchParams(location.search),scale=Math.max(1,Math.min(2,Number(q.get('scale')||2)));
 const view=document.getElementById('v'),vctx=view.getContext('2d'),status=document.getElementById('s'),t0=performance.now();
-const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923a');
+const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923b');
 const queue=[];let cur=null,nextAt=0,done=null,finished=false,played=0;
 const lenOf=P=>{let L=0;for(let i=1;i<P.length;i++)L+=Math.hypot(P[i][0]-P[i-1][0],P[i][1]-P[i-1][1]);return L;};
 function durOf(p){
