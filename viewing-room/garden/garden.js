@@ -82,7 +82,7 @@
   const closer=node('button',undefined,'garden-original');closer.type='button';closer.append(word('gardenOriginal','See the original'));closer.addEventListener('click',openOriginal);content.append(closer);
   if(data.note&&!data.isTest&&!accepted)content.append(node('p',data.note,'garden-personal-note'));
   const form=node('form',undefined,'room-form'),heading=node('h2','What would you call your dog?');form.hidden=true;
-  const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=32;name.name='dog-name';name.autocomplete='off';label.append(name);
+  const label=node('label','A name from you.'),name=node('input');name.required=true;name.maxLength=16;name.pattern='[A-Za-z0-9](?:[A-Za-z0-9 .\\-]{0,14}[A-Za-z0-9.])?';name.title='Up to 16 letters, numbers, spaces, hyphens or periods.';name.name='dog-name';name.autocomplete='off';label.append(name,node('small','Up to 16 letters, numbers, spaces, hyphens or periods.'));
   const save=node('button',artistGift?'Adopt my dog':'Save my choice','button primary');save.type='submit';save.disabled=true;
   const cancel=node('button','Keep looking','text-button');cancel.type='button';cancel.addEventListener('click',()=>{form.hidden=true;topChoice.focus();});
   form.append(heading,label,save,cancel);content.append(form);
