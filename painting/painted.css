@@ -14,6 +14,7 @@ body{background:#eeeadd;color:#303c43;isolation:isolate}
 .gate-nav{gap:30px}
 .gate-nav [data-paint="work"]{width:82px}
 .gate-nav [data-paint="waitlist"]{width:136px}
+.gate-nav [data-paint="watch"]{width:150px}
 .text-button{min-height:44px;display:inline-flex;align-items:center;border:0;transition:transform .2s}
 .text-button:hover{border:0;transform:rotate(-1.5deg)}
 button:focus-visible,a:focus-visible{outline:2px dashed #a25b44;outline-offset:6px}
@@ -53,7 +54,7 @@ article p{color:#343e3a}
 @media(max-width:700px){
  .masthead{margin:0 20px;min-height:95px;gap:15px;flex-wrap:wrap}
  .wordmark{width:114px}.artist{display:none}.gate-nav{margin-left:auto;gap:18px}
- .gate-nav [data-paint="work"]{width:65px}.gate-nav [data-paint="waitlist"]{width:110px}
+ .gate-nav [data-paint="work"]{width:65px}.gate-nav [data-paint="waitlist"]{width:110px}.gate-nav [data-paint="watch"]{width:118px}
  .arrival{min-height:calc(100svh - 211px);padding:25px 15px 35px;justify-content:center}
  .arrival-copy .eyebrow{width:145px;margin-bottom:18px}
  .arrival-copy h1{width:min(580px,91vw)}
@@ -67,7 +68,7 @@ article p{color:#343e3a}
  footer .text-button{margin-left:auto}footer [data-paint="journal"]{width:110px}
 
 }
-@media(max-width:359px){.masthead{margin:0 14px;gap:9px}.wordmark{width:91px}.gate-nav{gap:10px}.gate-nav [data-paint="work"]{width:57px}.gate-nav [data-paint="waitlist"]{width:95px}.arrival-foot p{width:99px}.arrival-foot [data-paint="note"]{width:157px}.invitation{width:42%}}
+@media(max-width:359px){.masthead{margin:0 14px;gap:9px}.wordmark{width:91px}.gate-nav{gap:10px}.gate-nav [data-paint="work"]{width:57px}.gate-nav [data-paint="waitlist"]{width:95px}.gate-nav [data-paint="watch"]{width:102px}.arrival-foot p{width:99px}.arrival-foot [data-paint="note"]{width:157px}.invitation{width:42%}}
 @media(prefers-reduced-motion:reduce){.text-button{transition:none}.opening .gate-leaf{transform:none}}
 
 
@@ -83,6 +84,7 @@ article p{color:#343e3a}
 .invitation-page .artist{width:169px}
 .invitation-page .gate-nav{gap:27px}
 .invitation-page .gate-nav [data-paint="work"]{width:72px}
+.invitation-page .gate-nav [data-paint="watch"]{width:132px}
 .invitation-page .gate-nav [data-paint="waitlist"]{width:119px}
 .invitation-page .text-button:hover{transform:none}
 .invitation-page button:focus-visible,.invitation-page a:focus-visible{outline:2px solid #557064;outline-offset:5px}
@@ -124,7 +126,7 @@ article p{color:#343e3a}
 @media(max-width:700px){
  .invitation-page .masthead{width:calc(100% - 40px);min-height:83px;gap:16px;flex-wrap:nowrap}
  .invitation-page .wordmark{width:106px}.invitation-page .gate-nav{gap:18px}
- .invitation-page .gate-nav [data-paint="work"]{width:60px}.invitation-page .gate-nav [data-paint="waitlist"]{width:99px}
+ .invitation-page .gate-nav [data-paint="work"]{width:60px}.invitation-page .gate-nav [data-paint="waitlist"]{width:99px}.invitation-page .gate-nav [data-paint="watch"]{width:110px}
  .invitation-page .arrival{min-height:calc(100svh - 200px);padding:20px 16px 30px}
  .invitation-page .threshold{width:100%;margin-top:24px}
  .invitation-page>.site-footer{width:calc(100% - 40px);min-height:113px;gap:12px;padding:18px 0 23px}
@@ -142,7 +144,7 @@ article p{color:#343e3a}
 }
 @media(max-width:359px){
  .invitation-page .masthead{width:calc(100% - 32px);gap:10px}.invitation-page .wordmark{width:91px}
- .invitation-page .gate-nav{gap:12px}.invitation-page .gate-nav [data-paint="work"]{width:52px}.invitation-page .gate-nav [data-paint="waitlist"]{width:88px}
+ .invitation-page .gate-nav{gap:12px}.invitation-page .gate-nav [data-paint="work"]{width:52px}.invitation-page .gate-nav [data-paint="waitlist"]{width:88px}.invitation-page .gate-nav [data-paint="watch"]{width:95px}
  .viewing-links{column-gap:12px}.viewing-head h1{width:65vw}
 }
 
@@ -150,3 +152,4 @@ article p{color:#343e3a}
 .invitation-page #reading .reading-mark{display:block;width:90px;height:auto}
 .invitation-page #reading .close-dialog{padding:6px 0 6px 12px}
 .invitation-page #reading .close-dialog img{display:block;width:49px;height:auto}
+@media(max-width:560px){.invitation-page .masthead,html body .masthead{flex-wrap:wrap;row-gap:0}.invitation-page .gate-nav,html body .gate-nav{order:3;flex-basis:100%;margin-left:0;justify-content:space-between}}

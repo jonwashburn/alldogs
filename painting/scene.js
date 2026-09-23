@@ -11,6 +11,7 @@
     work: ['THE WORK', 300, 68, 38, ink],
     personal: ['YOUR INVITATION', 495, 68, 38, ink],
     waitlist: ['JOIN WAITLIST', 495, 68, 38, ink],
+    watch: ['WATCH A PAINTING', 580, 68, 38, ink],
     adopt: ['ADOPT ME', 430, 106, 59, '#111111'],
     close: ['CLOSE', 250, 78, 42, '#111111'],
     note: ['A NOTE FROM WUBBUSHI', 640, 68, 37, ink],

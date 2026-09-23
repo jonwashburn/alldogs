@@ -10,7 +10,7 @@
   let worker, timer;
   const stop = () => {clearTimeout(timer);worker?.terminate();};
   const start = () => {
-    try { worker = new Worker('/painting/worker.js?v=20260918-display1'); }
+    try { worker = new Worker('/painting/worker.js?v=20260923-watch1'); }
     catch { return; }
     const next = () => {
       clearTimeout(timer);
