@@ -28,6 +28,9 @@ jobs:
           node --check painting/hand.js
           node --check painting/worker.js
           node --check painting/page.js
+          node --check render/render.js
+          node --check render/recorder.js
+          node --check render/painter.js
           node .github/scripts/check-painting.cjs
           node .github/scripts/check-gate.cjs
           node --check home.js
