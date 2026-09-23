@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="/dog-pound/pound.css?v=20260917-notice3"><link rel="stylesheet" href="/home.css?v=20260918-boutique1"><script src="/home.js?v=20260919-navigation1" defer></script>
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
-.render-stage{position:relative;background:#e9e3d6;margin:1.5rem 0 .75rem;aspect-ratio:2/1;overflow:hidden}
+.render-stage{position:relative;background:#e9e3d6;margin:0 auto;width:min(100vw,calc((100svh - 6.5rem)*2));aspect-ratio:2/1;overflow:hidden}
+.render-bar{width:min(100vw,calc((100svh - 6.5rem)*2));margin:.5rem auto 2.5rem;padding:0 1rem;box-sizing:border-box}
 .render-stage canvas{display:block;width:100%;height:100%;opacity:0;transition:opacity .4s}
 .render-stage.running canvas{opacity:1}
 .render-stage .start{position:absolute;inset:0;margin:auto;width:max-content;height:max-content;padding:.9rem 1.6rem;font:inherit;font-size:1.05rem;letter-spacing:.02em;border:1.5px solid #1b1b1b;background:#fbf8f1;color:#1b1b1b;cursor:pointer}
@@ -20,15 +21,16 @@
   <div class="mast-identity"><a class="brand type-name" href="/" aria-label="All Dogs home"><img src="/painting/wordmark.webp" alt="All Dogs" width="436" height="92"></a><span class="artist-credit">Wubbushi</span></div>
   <nav aria-label="Main navigation"><a href="/#why">The work</a><a href="/adoption/">The rules</a><a class="nav-apply" href="/#apply">Join the waitlist</a></nav>
 </header>
-<main id="main"><section class="wrap reading">
+<main id="main">
+  <div class="render-stage" id="stage"><canvas id="v" width="2000" height="1000" aria-label="Elliot being painted"></canvas></div>
+  <div class="render-bar render-meta"><span id="s" aria-live="polite">Elliot · seed 131</span><button id="again" type="button" hidden>Paint again</button></div>
+  <section class="wrap reading">
   <p class="kicker">The medium</p>
   <h1>Watch Elliot get painted.</h1>
   <p>Every All Dogs painting is made by code. The painter first works out the dog: its face, clothes, pose and the world around it. Then a brush lays the paint. Each bristle carries a finite load, picks up colour that is still wet, and runs dry on a long stroke; the oil stick catches on the canvas weave.</p>
   <p>This page runs that same code in your browser, starting from Elliot's seed, and shows each stroke as the brush makes it. It is not a recording. The sky goes on first, then the moon and the houses, the bicycle, E.T., and Elliot himself.</p>
-  <div class="render-stage" id="stage"><canvas id="v" width="2000" height="1000" aria-label="Elliot being painted"></canvas></div>
-  <div class="render-meta"><span id="s" aria-live="polite">Elliot · seed 131</span><button id="again" type="button" hidden>Paint again</button></div>
   <p class="render-note" id="note">Painted at the full 4000 × 2000 resolution, which takes about four minutes on a laptop. The painter uses a lot of memory, so a phone may be slow or stop.</p>
 </section></main>
 <footer class="site-footer wrap"><p>All Dogs · Wubbushi, 2026</p><nav aria-label="Footer navigation"><a href="/#why">The work</a><a href="/adoption/">The rules</a><a href="/lounge/">Your account</a><a href="/waitlist/">Waitlist</a></nav></footer>
-<script src="/render/render.js?v=20260923b"></script>
+<script src="/render/render.js?v=20260923c"></script>
 </body></html>

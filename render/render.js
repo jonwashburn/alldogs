@@ -9,7 +9,7 @@ function begin(){
 
 const q=new URLSearchParams(location.search),scale=Math.max(1,Math.min(2,Number(q.get('scale')||2)));
 const view=document.getElementById('v'),vctx=view.getContext('2d'),status=document.getElementById('s'),t0=performance.now();
-const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923b');
+const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923c');
 const queue=[];let cur=null,nextAt=0,done=null,finished=false,played=0;
 const lenOf=P=>{let L=0;for(let i=1;i<P.length;i++)L+=Math.hypot(P[i][0]-P[i-1][0],P[i][1]-P[i-1][1]);return L;};
 function durOf(p){
