@@ -9,7 +9,7 @@ function begin(){
 
 const q=new URLSearchParams(location.search),scale=Math.max(1,Math.min(2,Number(q.get('scale')||2)));
 const view=document.getElementById('v'),vctx=view.getContext('2d'),status=document.getElementById('s'),t0=performance.now();
-const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923c');
+const worker=id=>new Worker('/render/'+(id==='rec-src'?'recorder':'painter')+'.js?v=20260923d');
 const queue=[];let cur=null,nextAt=0,done=null,finished=false,played=0;
 const lenOf=P=>{let L=0;for(let i=1;i<P.length;i++)L+=Math.hypot(P[i][0]-P[i-1][0],P[i][1]-P[i-1][1]);return L;};
 function durOf(p){
@@ -45,7 +45,7 @@ const rec=worker('rec-src'),paint=worker('paint-src');
 rec.onmessage=e=>{const m=e.data;if(m.type==='plan'){window.__plan=m.info;window.__wide=m.wide;paint.postMessage({wide:m.wide,scale});}
   else if(m.type==='error'){status.textContent='Drawing error: '+m.message.split('\n')[0];window.__error=m.message;}};
 paint.onmessage=e=>{const m=e.data;
-  if(m.type==='patch'){m.d=durOf(m);backlog+=m.d+gapOf(m);queue.push(m);}
+  if(m.type==='patch'||m.type==='batch'){for(const p of m.type==='batch'?m.items:[m]){p.d=durOf(p);backlog+=p.d+gapOf(p);queue.push(p);}}
   else if(m.type==='done'){const c=document.createElement('canvas');c.width=m.info.W;c.height=m.info.H;c.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(m.pixels),m.info.W,m.info.H),0,0);
     window.__final=c;window.__result=Object.assign({totalMs:Math.round(performance.now()-t0)},m.info);done=c;}
   else if(m.type==='error'){status.textContent='Painting error: '+m.message.split('\n')[0];window.__error=m.message;}};

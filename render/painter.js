@@ -10390,7 +10390,7 @@ onmessage=e=>{try{
   const rng=PK.makeRng(seed);
   req('native_stick')(PK);
   const KIT=PK.__litKit,ds=Math.round(W/2000);
-  let snapCol=null,snapHgt=null,pending=null,seq=0,group=0,patches=0,litMs=0,lastRecon=performance.now();
+  let batch=null,snapCol=null,snapHgt=null,pending=null,seq=0,group=0,patches=0,litMs=0,lastRecon=performance.now();
   // the exact lit colour PK.paintComposite gives device cells [X0,X1)x[Y0,Y1) of a dry photograph with the layer's own options
   function litRegion(L,X0,Y0,X1,Y1){
     const o=L.opts,Wd=L.w,Hd=L.h,LK=KIT.LK,w=X1-X0,h=Y1-Y0,out=new Uint8ClampedArray(w*h*4);
@@ -10443,10 +10443,10 @@ onmessage=e=>{try{
       for(let y=0;y<oh;y++)for(let x=0;x<ow;x++){let r=0,gg=0,b=0;for(let v=0;v<ds;v++)for(let u=0;u<ds;u++){const k=((y*ds+v)*w+x*ds+u)*4;r+=px[k];gg+=px[k+1];b+=px[k+2];}
         const k=(y*ow+x)*4;out[k]=r/n;out[k+1]=gg/n;out[k+2]=b/n;out[k+3]=255;}}
     litMs+=performance.now()-t;patches++;
-    postMessage({type:'patch',kind,group:g,seq:seq++,x:X0/ds,y:Y0/ds,w:ow,h:oh,buf:out.buffer,path,width},[out.buffer]);};
-  const reconcile=kind=>{const L=PK.kit.paint;if(!L)return;const T=Math.max(64,256*ds),g=++group;
+    const msg={type:'patch',kind,group:g,seq:seq++,x:X0/ds,y:Y0/ds,w:ow,h:oh,buf:out.buffer,path,width};if(batch)batch.push(msg);else postMessage(msg,[out.buffer]);};
+  const reconcile=kind=>{const L=PK.kit.paint;if(!L)return;const T=Math.max(64,256*ds),g=++group;batch=[];
     for(let ty=0;ty<L.h;ty+=T)for(let tx=0;tx<L.w;tx+=T){const bx=changedBox(L,tx,ty,Math.min(L.w,tx+T),Math.min(L.h,ty+T));if(bx)send(kind,L,bx,null,0,g);}
-    lastRecon=performance.now();};
+    const items=batch;batch=null;if(items.length)postMessage({type:'batch',items},items.map(m=>m.buf));lastRecon=performance.now();};
   const flush=()=>{if(!pending)return;const p=pending;pending=null;const L=PK.kit.paint;if(!L||!p.box)return;
     const s=L.w/2000,m=(p.width*0.9+14)*s;
     const X0=Math.max(0,Math.floor(p.box[0]*s-m)),Y0=Math.max(0,Math.floor(p.box[1]*s-m)),X1=Math.min(L.w,Math.ceil(p.box[2]*s+m)),Y1=Math.min(L.h,Math.ceil(p.box[3]*s+m));
