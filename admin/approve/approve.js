@@ -6,10 +6,21 @@
   let key='', busy=false;
   function status(text,error=false){$('message').textContent=text;$('message').className=error?'error':'';}
   function row(label,value,mono=false){const p=el('p',undefined,'approve-row');p.append(el('span',label,'approve-label'),el('span',value,mono?'approve-value mono':'approve-value'));return p;}
-  async function signer(chainId){
-    if(!window.ethereum)throw Error('No wallet found here. Use MetaMask on a computer, or open this page in your wallet app’s browser.');
-    const [account]=await window.ethereum.request({method:'eth_requestAccounts'});
-    const current=parseInt(await window.ethereum.request({method:'eth_chainId'}),16);
+  // Several wallet extensions can claim window.ethereum; ask each installed wallet to announce itself (EIP-6963)
+  // and prefer MetaMask, where the approval wallet lives.
+  function announced(){return new Promise(resolve=>{const found=[];
+    const on=event=>{const d=event.detail;if(d&&d.provider&&d.info&&!found.some(w=>w.info.uuid===d.info.uuid))found.push(d);};
+    window.addEventListener('eip6963:announceProvider',on);window.dispatchEvent(new Event('eip6963:requestProvider'));
+    setTimeout(()=>{window.removeEventListener('eip6963:announceProvider',on);resolve(found);},500);});}
+  async function wallet(){
+    const found=await announced(),metamask=found.find(w=>w.info.rdns==='io.metamask');
+    const chosen=metamask?metamask.provider:found.length===1?found[0].provider:window.ethereum;
+    if(!chosen)throw Error('No wallet found here. Use MetaMask on a computer, or open this page in your wallet app’s browser.');
+    return chosen;
+  }
+  async function signer(eth,chainId){
+    const [account]=await eth.request({method:'eth_requestAccounts'});
+    const current=parseInt(await eth.request({method:'eth_chainId'}),16);
     if(current!==chainId)throw Error('Switch your wallet to '+(chains[chainId]||'chain '+chainId)+', then try again.');
     return account;
   }
@@ -18,9 +29,9 @@
     try{
       const typed=JSON.parse(JSON.stringify(item.guardianTypedData));
       typed.domain.chainId=Number(typed.domain.chainId);
-      const account=await signer(typed.domain.chainId);
+      const eth=await wallet(),account=await signer(eth,typed.domain.chainId);
       status('Check the request in your wallet, then sign.');
-      const signature=await window.ethereum.request({method:'eth_signTypedData_v4',params:[account,JSON.stringify(typed)]});
+      const signature=await eth.request({method:'eth_signTypedData_v4',params:[account,JSON.stringify(typed)]});
       await api.request('club/admin-guardian-signature',{reservationId:item.reservationId,signature},key);
       status(item.dogName+' is approved. The relay sends it next.');
       await load();
