@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://ethereum-rpc.publicnode.com https://eth.drpc.org; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src blob:; frame-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Painted from Ethereum · All Dogs</title>
+<meta name="description" content="An All Dogs painting, painted in your browser from its code and record stored on Ethereum.">
+<link rel="stylesheet" href="/site.css?v=20260918-wide1">
+<link rel="stylesheet" href="/dog/dog.css?v=20260924-chain1">
+<script src="/dog/dog.js?v=20260924-chain1" defer></script>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+</head>
+<body>
+<header class="chain-mast"><a href="/" aria-label="All Dogs home"><img src="/assets/all-dogs-wordmark.svg" width="177" height="32" alt="All Dogs"></a></header>
+<main class="chain-main">
+<h1 id="name">Reading the collection…</h1>
+<p class="chain-lede">This painting is being made in your browser. The page asks the collection’s contract for the dog, reads the painting engine and the dog’s record from Ethereum, checks their fingerprints and runs the code. No server holds the picture.</p>
+<div class="chain-frame"><iframe id="art" title="The painting" sandbox="allow-scripts" hidden></iframe></div>
+<p id="note" class="chain-note" role="status" aria-live="polite"></p>
+<dl id="traits" class="chain-traits"></dl>
+</main>
+</body></html>
