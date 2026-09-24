@@ -7,7 +7,7 @@
   function status(text,error=false){$('message').textContent=text;$('message').className=error?'error':'';}
   function row(label,value,mono=false){const p=el('p',undefined,'approve-row');p.append(el('span',label,'approve-label'),el('span',value,mono?'approve-value mono':'approve-value'));return p;}
   async function signer(chainId){
-    if(!window.ethereum)throw Error('Open this page in your wallet app’s browser to sign.');
+    if(!window.ethereum)throw Error('No wallet found here. Use MetaMask on a computer, or open this page in your wallet app’s browser.');
     const [account]=await window.ethereum.request({method:'eth_requestAccounts'});
     const current=parseInt(await window.ethereum.request({method:'eth_chainId'}),16);
     if(current!==chainId)throw Error('Switch your wallet to '+(chains[chainId]||'chain '+chainId)+', then try again.');
@@ -47,7 +47,7 @@
     for(const item of data.approvals)q.append(card(item));
   }
   $('key-form').onsubmit=async event=>{event.preventDefault();key=$('key').value;$('key').value='';
-    try{status('');await load();}catch(error){key='';status(error.message||String(error),true);}};
+    try{status('');await load();}catch(error){key='';status(/review key|password/i.test(error.message||'')?'That password didn’t work. Use your desk password.':(error.message||String(error)),true);}};
   $('refresh').onclick=()=>load().catch(error=>status(error.message||String(error),true));
   $('close').onclick=()=>{key='';$('queue').replaceChildren();$('queue').hidden=true;$('login').hidden=false;$('close').hidden=true;$('refresh').hidden=true;status('');};
 })();
