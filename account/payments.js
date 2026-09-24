@@ -6,26 +6,19 @@
   function button(text, action, cls='button') { const b=node('button',text,cls);b.type='button';b.addEventListener('click',action);return b; }
   function link(text, href) {const a=node('a',text,'text-link');a.href=href;return a;}
   function checkoutURL(value) {try{const u=new URL(value);return u.protocol==='https:'&&u.hostname==='checkout.stripe.com'?u.href:null;}catch{return null;}}
-  window.AllDogsPayments = {mount(host) {
-    let disposed=false,read=0,timer;
-    const live=()=>!disposed&&host.isConnected;
-    function dispose(){disposed=true;read++;clearTimeout(timer);}
+  window.AllDogsPayments = {async mount(host) {
     const title=node('h2','Your artwork.');
     const message=node('p','Opening your record…','account-message');message.setAttribute('role','status');
     host.append(title,message);
     async function render() {
-      const ticket=++read;clearTimeout(timer);
       try {
         const data=await api.request('club/payment');
-        if(!live()||ticket!==read)return;
         host.replaceChildren(title,message);message.textContent='';
-        if(data.artistGift===true||data.adoptionKind==='artist_gift'){
+        if(data.adoptionKind==='artist_gift'){
           title.textContent='Artist gift';
-          host.append(node('p',data.message||'This is a gift from Wubbushi. No payment is due.'));
+          host.append(node('p','An artwork from Wubbushi. No payment is due.'));
           return;
         }
-        const next=Math.min(...[data.deadline, data.crypto?.validUntil, data.cardOpen?data.deadline-1800:null].filter(n=>Number.isSafeInteger(n)&&n>Date.now()/1000));
-        if(Number.isFinite(next))timer=setTimeout(render,Math.min(2147483647,Math.max(1,next*1000-Date.now())));
         title.textContent='The dog is yours. The value is yours to decide.';
         const deadline=new Date(data.deadline*1000).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
         host.append(node('p','Your dog is home. If you’d like to pay Wubbushi, choose an amount below. Payments received by the deadline shown become your dog’s recorded value.'));
@@ -36,7 +29,7 @@
         else record.append(node('p','No confirmed payment yet.'));
         record.append(node('p','Confirmed payments are added together. Refunds are deducted; disputed payments are excluded. Amounts are public. Card details and payment receipts stay private.','account-note'),link('Most valuable dogs ↗','/most-valuable/'));
         host.append(record);
-        if(!data.windowOpen){host.append(node('p','Payments received after this deadline cannot change the initial valuation.'),button('Refresh payment status',render,'text-link'));return;}
+        if(!data.windowOpen){host.append(node('p','Payments included after this deadline cannot change the initial valuation.'));return;}
         const rails=node('div',undefined,'payment-options');host.append(rails);
         const card=node('section');card.append(node('h3','Credit card'));
         if(data.cardReady){
@@ -52,7 +45,7 @@
             let lastAmount='',requestId='';
             form.addEventListener('submit',async event=>{event.preventDefault();if(submit.disabled)return;submit.disabled=true;message.textContent='Opening secure checkout…';
               try{const amount=input.value.trim();if(amount!==lastAmount){requestId=crypto.randomUUID();lastAmount=amount;}
-                const result=await api.request('club/payment-checkout',{amount,requestId});const url=checkoutURL(result.url);if(!url)throw Error('Checkout could not be verified. Please refresh.');if(live())location.assign(url);
+                const result=await api.request('club/payment-checkout',{amount,requestId});const url=checkoutURL(result.url);if(!url)throw Error('Checkout could not be verified. Please refresh.');location.assign(url);
               }catch(e){message.textContent=e.message;submit.disabled=false;}
             });card.append(form);
           } else card.append(node('p','New card checkouts close 30 minutes before your deadline so they can expire before your deadline.'));
@@ -64,18 +57,17 @@
           cryptoPanel.append(node('p','Send '+coin.currency+' on '+coin.network+' by '+deadline+'. Once confirmed, it automatically appears as your dog’s value.'));
           const label=node('label','Pay Wubbushi at'),address=node('input');address.value=coin.address;address.readOnly=true;address.setAttribute('aria-label','Wubbushi payment address');label.append(address);cryptoPanel.append(label);
           cryptoPanel.append(button('Copy address',async()=>{try{await navigator.clipboard.writeText(coin.address);message.textContent='Address copied. Send ETH on Ethereum mainnet only.';}catch{address.select();message.textContent='Select and copy the address above.';}}));
-          cryptoPanel.append(node('p','A direct ETH transfer from '+coin.fromAddress+' is matched automatically. If you send from a different wallet or an exchange, contact Wubbushi with the transaction hash so we can check it. Use Ethereum mainnet, and send ETH rather than a token.','account-note'));
+          cryptoPanel.append(node('p','Send directly from your original adoption wallet: '+coin.fromAddress+'. Do not send from an exchange, a different wallet, another network, or as a token transfer. Those payments cannot be automatically matched to your dog.','account-note'));
           const details=node('details'),summary=node('summary','Already sent it? Check a transfer.');details.append(summary);
           const form=node('form'),txLabel=node('label','Transaction hash'),tx=node('input');tx.required=true;tx.maxLength=66;tx.placeholder='0x…';txLabel.append(tx);const check=node('button','Check transfer','button');check.type='submit';form.append(txLabel,check);
-          form.addEventListener('submit',async event=>{event.preventDefault();check.disabled=true;try{const result=await api.request('club/payment-crypto',{transaction:tx.value.trim()});await render();if(!live())return;message.textContent=result.voided?'This receipt was removed from your dog’s value. Contact Wubbushi if you need help.':result.needsReview?'We found the transfer. Wubbushi needs to review it before it can count toward your dog’s value.':result.recorded?'Transfer confirmed. Your dog’s recorded value is updated.':'This transfer has not been added to your dog’s value.';}catch(e){message.textContent=e.message;check.disabled=false;}});details.append(form);cryptoPanel.append(details);
+          form.addEventListener('submit',async event=>{event.preventDefault();check.disabled=true;try{await api.request('club/payment-crypto',{transaction:tx.value.trim()});await render();message.textContent='Transfer confirmed. Your dog’s recorded value is updated.';}catch(e){message.textContent=e.message;check.disabled=false;}});details.append(form);cryptoPanel.append(details);
         }else cryptoPanel.append(node('p','Please contact Wubbushi for payment instructions. Do not send funds to an unverified address.'));
         rails.append(cryptoPanel);
         host.append(node('p','These values are recorded in the All Dogs website register.','account-note'));
         host.append(button('Refresh payment status',render,'text-link'));
-        if(new URLSearchParams(location.search).get('payment')==='return')message.textContent='Welcome back. Your dog’s value will update when the payment is confirmed.';
-      }catch(error){if(!live()||ticket!==read)return;message.textContent=error.message;host.replaceChildren(title,message,button('Try again',render,'text-link'));}
+        if(new URLSearchParams(location.search).get('payment')==='return')message.textContent='Welcome back. A checkout return is not a payment receipt; your value appears once payment is confirmed.';
+      }catch(error){message.textContent=error.message;host.append(button('Try again',render,'text-link'));}
     }
-    render();
-    return {dispose,refresh:render};
+    await render();
   }};
 })();
