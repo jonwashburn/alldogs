@@ -42,6 +42,7 @@
     loadPainting();return frame;
   }
   const image=dog=>dog.variants?.[0]?.src||dog.original;
+  const unverified=a=>a.status==='awaiting_verification',held=a=>a.identityVerified&&a.xAccountCreatedAt&&a.createdAt-a.xAccountCreatedAt<90*86400,real=a=>!unverified(a)&&!held(a);
   const invited=a=>a.viewing&&['invited','claimed'].includes(a.viewing.status)||a.invitation&&a.invitation.status!=='revoked';
   function label(a){if(a.status==='awaiting_verification')return 'Awaiting X verification';if(a.status==='adopted'||a.gift?.status==='accepted')return 'Adopted';if(['rejected','withdrawn'].includes(a.status))return a.status;if(a.mail&&['unknown','failed'].includes(a.mail.status)&&invited(a))return 'Email needs attention';if(invited(a))return a.invitation?.dogName?'Dog chosen':a.mail?.status==='not_sent'?'Invite ready':'Invited';if(a.viewing?.status==='draft')return 'Draft';return a.vouch?.valid?'Ready to invite':'Awaiting a vouch';}
   function markDirty(){dirty=true;const hint=$('draft-hint');if(hint)hint.textContent=person()?.gift?'Unsaved changes · these paintings are reserved for this gift.':'Unsaved changes · dogs are reserved when you create a link or send an email.';}
@@ -51,7 +52,7 @@
   function lock(){generation++;clearImages();key='';data=null;selected=null;draft=null;dirty=false;$('people').replaceChildren();$('detail').replaceChildren();$('stats').replaceChildren();$('vouch-controls').replaceChildren();$('preview-body').replaceChildren();$('preview').close();$('workspace').hidden=true;$('login').hidden=false;$('close').hidden=true;$('refresh').hidden=true;$('key').value='';status('Desk locked.');$('key').focus();}
   async function load(){const ticket=++generation;const fresh=await api.request('club/desk',undefined,key);if(ticket!==generation)return;data=fresh;$('login').hidden=true;$('workspace').hidden=false;$('close').hidden=false;$('refresh').hidden=false;if(!person())selected=data.applications[0]?.publicId||data.applications[0]?.legacyId||null;if(person())resetDraft(person());render();}
   function render(){
-    const counts=[['On the list',data.applications.length],['Current vouches',data.applications.filter(a=>a.vouch?.valid).length],['Drafts',data.applications.filter(a=>a.viewing?.status==='draft').length],['Invited',data.applications.filter(invited).length]];
+    const counts=[['On the list',data.applications.filter(real).length],['Unverified, private',data.applications.filter(unverified).length],['New X accounts, held',data.applications.filter(held).length],['Current vouches',data.applications.filter(a=>a.vouch?.valid).length],['Drafts',data.applications.filter(a=>a.viewing?.status==='draft').length],['Invited',data.applications.filter(invited).length]];
     $('stats').replaceChildren(...counts.map(([label,n])=>{const div=el('div',undefined,'stat');div.append(el('strong',String(n)),el('span',label));return div;}));
     renderPeople();renderDetail();renderVouchControls();
   }
@@ -70,8 +71,8 @@
   }
   function renderPeople(){
     const q=$('search').value.trim().toLowerCase(),filter=$('filter').value;
-    const apps=data.applications.filter(a=>[a.handle,a.currentHandle,a.email,a.viewing?.email,a.claimedVoucher,a.vouch?.handle].filter(Boolean).join(' ').toLowerCase().includes(q)).filter(a=>filter==='all'||filter==='waiting'&&!invited(a)&&!['adopted','rejected','withdrawn'].includes(a.status)||filter==='vouched'&&a.vouch?.valid||filter==='draft'&&a.viewing?.status==='draft'||filter==='invited'&&invited(a)||filter==='attention'&&invited(a)&&['failed','unknown'].includes(a.mail?.status));
-    $('list-count').textContent=apps.length+' of '+data.applications.length+(data.applications.length===1?' person':' people');
+    const apps=data.applications.filter(a=>[a.handle,a.currentHandle,a.email,a.viewing?.email,a.claimedVoucher,a.vouch?.handle].filter(Boolean).join(' ').toLowerCase().includes(q)).filter(a=>filter==='unverified'?unverified(a):filter==='held'?held(a):real(a)).filter(a=>['all','unverified','held'].includes(filter)||filter==='waiting'&&!invited(a)&&!['adopted','rejected','withdrawn'].includes(a.status)||filter==='vouched'&&a.vouch?.valid||filter==='draft'&&a.viewing?.status==='draft'||filter==='invited'&&invited(a)||filter==='attention'&&invited(a)&&['failed','unknown'].includes(a.mail?.status));
+    $('list-count').textContent=apps.length+' of '+data.applications.filter(filter==='unverified'?unverified:filter==='held'?held:real).length+(data.applications.length===1?' person':' people');
     $('people').replaceChildren(...apps.map(a=>{const id=a.publicId||a.legacyId,b=btn('',()=>{if(busy)return;if(dirty&&!confirm('Leave these unsaved changes?'))return;selected=id;resetDraft(a);renderPeople();renderDetail();});b.className='person';b.setAttribute('aria-pressed',String(selected===id));b.append(el('strong','@'+(a.currentHandle||a.handle)),el('small',a.vouch?'Vouched by @'+a.vouch.handle+(a.vouch.valid?'':' · '+a.vouch.status):a.claimedVoucher?'Referral claimed: @'+a.claimedVoucher:'No verified vouch'),badge(label(a),a.vouch?.valid?'good':a.mail&&['unknown','failed'].includes(a.mail.status)?'warn':''));return b;}));
     if(!apps.length)$('people').append(el('p','No people match this view.','empty'));
   }
