@@ -97,7 +97,7 @@ for path in ('welcome/index.html', 'adoption/index.html', 'dog-pound/application
         assert outdated not in copy, (path, outdated)
 for phrase in ('first resale only', '1 in 20', '50%', 'each generation of infection', 'permanently recorded', 'infection-created', 'cannot be rescued', 'five powers', '1 in 1,600', '0.0625%', 'successful mint timestamp', 'lifespan and cause of death'):
     assert phrase in guide, phrase
-for phrase in ('marie-painting-flow-4k.mp4', 'preload="none"', 'Nobody has a picture.', 'paint-kit', 'exaltedlove.com'):
+for phrase in ('STAY_rough_cut_1.mp4', 'preload="none"', 'Nobody has a picture.', 'paint-kit', 'exaltedlove.com'):
     assert phrase in about, phrase
 for fragment in ('game', 'fates', 'why', 'medium'):
     target = 'adoption/index.html' if fragment in ('game', 'fates') else 'about/index.html'
