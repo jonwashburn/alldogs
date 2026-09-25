@@ -1,7 +1,11 @@
 .chain-mast{padding:20px 24px}
 .chain-main{max-width:1040px;margin:0 auto;padding:0 24px 64px}
 .chain-main h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,46px);margin:8px 0 10px;color:var(--ink)}
+.chain-eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 0 0;min-height:1.2em}
+.chain-story{max-width:40em;color:var(--ink);font-size:clamp(17px,2.2vw,20px);margin:0 0 12px;line-height:1.45}
 .chain-lede{max-width:44em;color:var(--muted);margin:0 0 20px;line-height:1.5}
+.chain-links{margin:4px 0 0;display:flex;flex-wrap:wrap;gap:6px 20px}
+.chain-links a{color:var(--ink)}
 .chain-frame{border:2px solid var(--ink);background:#e9e3d6;container-type:inline-size}
 .chain-frame iframe{display:block;width:100%;height:calc(50cqw + 40px);border:0}
 .chain-note{color:var(--muted);min-height:1.4em}

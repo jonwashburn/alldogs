@@ -31,12 +31,18 @@
     const id = parseInt((location.hash.match(/\d+/) || ['1'])[0], 10);
     const uri = await metadata(id);
     const meta = JSON.parse(b64(uri.slice(uri.indexOf(',') + 1)));
-    document.title = meta.name + ' · painted from Ethereum · All Dogs';
+    document.title = meta.name + (id === 1 ? ' · the first All Dogs' : ' · painted from Ethereum · All Dogs');
+    $('eyebrow').textContent = id === 1 ? 'Token 1 · the first All Dogs' : 'Token ' + id + ' of All Dogs';
     $('name').textContent = meta.name;
+    if (meta.description) { $('story').textContent = meta.description; $('story').hidden = false; }
     const page = meta.animation_url || '';
     if (!page.startsWith('data:text/html;base64,')) throw Error('This dog does not have an on-chain painting yet.');
     const art = $('art'); art.srcdoc = b64(page.slice(page.indexOf(',') + 1)); art.hidden = false;
-    note('Token ' + id + ' of the All Dogs collection on Ethereum. The painting takes a few minutes to arrive stroke by stroke.');
+    note('The painting takes about three minutes on a computer and longer on a phone. Keep this tab open.');
+    const link = (href, text) => { const a = document.createElement('a'); a.href = href; a.textContent = text; a.rel = 'noopener'; a.target = '_blank'; $('links').append(a); };
+    link('https://etherscan.io/nft/' + COLLECTION + '/' + id, 'Token ' + id + ' on Etherscan');
+    if (typeof meta.image === 'string' && meta.image.startsWith('ipfs://')) link('https://gateway.pinata.cloud/ipfs/' + meta.image.slice(7), 'Full-size original');
+    $('links').hidden = false;
     for (const a of meta.attributes || []) {
       const d = document.createElement('div'), t = document.createElement('dt'), v = document.createElement('dd');
       t.textContent = a.trait_type; v.textContent = a.value; d.append(t, v); $('traits').append(d);

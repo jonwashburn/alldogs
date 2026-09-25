@@ -14,15 +14,16 @@
 <body>
 <header class="mast"><a href="/" aria-label="All Dogs home"><img src="/assets/all-dogs-wordmark.svg" width="177" height="32" alt="All Dogs"></a><span class="private-label">Wubbushi’s private desk</span></header>
 <main>
-<div class="page-heading"><div><p class="eyebrow">The collection’s own contract</p><h1>Let the dogs paint from Ethereum.</h1><p class="lede">Each recorded dog’s page will read its painting engine and its own record from the chain and paint in the viewer’s browser. The collection changes only after you schedule it and 48 hours pass; anyone can then switch it on.</p></div></div>
+<div class="page-heading"><div><p class="eyebrow">The collection’s own contract</p><h1>Let the dogs paint from Ethereum.</h1><p class="lede">One transaction from your artist wallet schedules the change. After a 48-hour notice period, anyone can switch it on with the same button. From then on, every dog with an on-chain record, starting with Supa, carries a live painting read straight from Ethereum; a dog without one keeps its current metadata. Marketplaces keep showing the 4000 × 2000 original as the picture.</p></div></div>
 <p id="message" role="status" aria-live="polite">Reading the collection’s state from Ethereum…</p>
 <section id="queue" aria-label="Renderer change">
 <div class="approve-card">
 <h2 id="step">Checking…</h2>
 <p class="approve-row"><span class="approve-label">Collection</span><span class="approve-value mono">0x52F8867A805ac921c5b5339D775f1eE823305DA2</span></p>
 <p class="approve-row"><span class="approve-label">New renderer</span><span class="approve-value mono">0xcfD9C964BC5639189A226c62f11E74e3a2ABeFFd</span></p>
-<p class="approve-row"><span class="approve-label">Timelock</span><span class="approve-value mono">0x72eC2Bc4331A595b31c3a4560D48ffC5a0A2d6Fb</span></p>
-<p class="approve-row"><span class="approve-label">Sign from</span><span class="approve-value mono">0x02B165144c45F30452CCBbdA356De42316B89626</span></p>
+<p class="approve-row"><span class="approve-label">Notice contract</span><span class="approve-value mono">0x72eC2Bc4331A595b31c3a4560D48ffC5a0A2d6Fb</span></p>
+<p class="approve-row"><span class="approve-label">Sign with</span><span class="approve-value mono">0x02B165144c45F30452CCBbdA356De42316B89626</span></p>
+<p class="approve-row"><span class="approve-label">Cost</span><span class="approve-value">A small gas fee, paid by this wallet. MetaMask shows it before you confirm.</span></p>
 <p class="approve-row"><span class="approve-label">Status</span><span class="approve-value" id="state">…</span></p>
 <p class="approve-row"><span class="approve-label">Watch</span><span class="approve-value"><a href="/dog/#1">Supa painting from Ethereum</a></span></p>
 <button class="primary" id="act" hidden></button>
