@@ -31,22 +31,45 @@
     const on = event => { const d = event.detail; if (d && d.provider && d.info && !found.some(w => w.info.uuid === d.info.uuid)) found.push(d); };
     window.addEventListener('eip6963:announceProvider', on); window.dispatchEvent(new Event('eip6963:requestProvider'));
     setTimeout(() => { window.removeEventListener('eip6963:announceProvider', on); resolve(found); }, 500); }); }
-  async function wallet() {
-    const found = await announced(), metamask = found.find(w => w.info.rdns === 'io.metamask');
-    const eth = metamask ? metamask.provider : found.length === 1 ? found[0].provider : window.ethereum;
+  const KNOWN = {
+    '0x02b165144c45f30452ccbbda356de42316b89626': 'your main wallet',
+    '0xf1d8e6a2dc1b5b697d82f66239d147cb0415aa4a': 'your phone approval wallet',
+    '0x4f349c4a9c65e4f36b918e081140c201b6757e89': 'the server’s gas wallet',
+  };
+  const short = a => a.slice(0, 6) + '…' + a.slice(-4);
+  const named = a => short(a) + (KNOWN[a] ? ' (' + KNOWN[a] + ')' : '');
+  function choose(found) {
+    return new Promise(resolve => {
+      const box = $('wallets'); box.replaceChildren(); box.hidden = false;
+      const label = document.createElement('p'); label.textContent = 'Which wallet holds 0x02B1…9626?'; box.append(label);
+      for (const w of found) {
+        const b = document.createElement('button'); b.type = 'button'; b.className = 'secondary'; b.textContent = w.info.name;
+        b.onclick = () => { box.hidden = true; resolve(w.provider); }; box.append(b, ' ');
+      }
+    });
+  }
+  async function wallet(needProposer) {
+    const found = await announced();
+    let eth = found.length === 1 ? found[0].provider : found.length === 0 ? window.ethereum : null;
+    if (!eth) { say('More than one wallet is installed in this browser. Pick the one to use.'); eth = await choose(found); }
     if (!eth) throw Error('No wallet found here. Use MetaMask on a computer, or open this page in your wallet app’s browser.');
-    const [account] = await eth.request({ method: 'eth_requestAccounts' });
+    // A site stays connected to whichever account approved it before, so ask the wallet to show its account picker.
+    try { await eth.request({ method: 'wallet_requestPermissions', params: [{ eth_accounts: {} }] }); } catch (e) { if (e && e.code === 4001) throw Error('The wallet request was cancelled.'); }
+    let accounts = (await eth.request({ method: 'eth_requestAccounts' })).map(a => a.toLowerCase());
+    const account = needProposer && accounts.includes(PROPOSER) ? PROPOSER : accounts[0];
+    if (needProposer && account !== PROPOSER) {
+      throw Error('The wallet connected ' + accounts.map(named).join(', ') + '. Only 0x02B1…9626 (your main wallet) can schedule this. Press the button again and tick that account in the wallet’s account list.');
+    }
     if (parseInt(await eth.request({ method: 'eth_chainId' }), 16) !== 1) {
       await eth.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x1' }] });
     }
-    return { eth, account: account.toLowerCase() };
+    return { eth, account };
   }
   async function send(data, needProposer) {
     if (busy) return; busy = true; $('act').disabled = true;
     try {
-      const { eth, account } = await wallet();
-      if (needProposer && account !== PROPOSER) throw Error('Switch MetaMask to your main wallet, 0x02B1…9626. Only it can schedule changes.');
-      say('Confirm the transaction in MetaMask.');
+      const { eth, account } = await wallet(needProposer);
+      say('Connected ' + named(account) + '. Confirm the transaction in your wallet.');
       const hash = await eth.request({ method: 'eth_sendTransaction', params: [{ from: account, to: TIMELOCK, data, value: '0x0' }] });
       say('Sent. Waiting for Ethereum to include it: ' + hash);
       for (let i = 0; i < 120; i++) {
