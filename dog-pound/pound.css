@@ -12,3 +12,5 @@
 .one-dog{display:block}
 .one-dog strong{display:block;white-space:normal}
 .one-dog span{display:block;max-width:90ch;margin-top:12px;text-wrap:balance}
+.vouch-panel{margin:26px 0 22px;padding-top:20px;border-top:1px solid var(--line)}.vouch-panel .vouch-state{margin:0 0 14px}.vouch-panel #wallet-status{margin:14px 0 0}.browser-help{margin:0 0 18px;padding:16px 18px;background:#fff4c2;border:1px solid #e3c85a;font-size:15px;line-height:1.5}.browser-help p{margin:0 0 12px}.browser-help .button{background:#fff}
+@media(max-width:700px){.site-interior .application-page .share-card img{max-height:260px;object-fit:cover}.site-interior .vouch-panel .text-link{width:100%;justify-content:center}.site-interior .browser-help .button{width:100%}}

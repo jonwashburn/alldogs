@@ -7,7 +7,7 @@ const receipt = 'DOG-1234567890ABCDEF';
 const response = {publicId,shortId:2,handle:'test_dog',status:'looking_for_vouch',vouchedBy:null};
 const settle = () => new Promise(resolve => setImmediate(resolve));
 
-function harness(file, path, search, stored = {}) {
+function harness(file, path, search, stored = {}, opts = {}) {
   const elements = new Map(), calls = [], storage = new Map(Object.entries(stored));
   let replaced, copied;
   const makeElement = () => {
@@ -25,11 +25,11 @@ function harness(file, path, search, stored = {}) {
   const context = {document:{getElementById:id=>id==='adoption-dialog'||(id==='wishlist-invitation'&&!elements.has(id))?null:element(id),createElement:makeElement},
     location:{pathname:path,search},history:{replaceState:(_,__,value)=>{replaced=value;}},
     sessionStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)},
-    navigator:{clipboard:{writeText:async value=>{copied=value;}}},
+    navigator:{userAgent:opts.ua||'',clipboard:{writeText:async value=>{copied=value;}}},
     window:{},URLSearchParams,AbortController,setTimeout,clearTimeout,TextEncoder,
     crypto:{randomUUID:()=> '12345678-1234-1234-1234-123456789012'},
     fetch:async (url, options)=>{calls.push({url,options});return {ok:true,json:async()=>url.includes('adoption-applications')?{...response,receipt}:response};}};
-  context.window.AllDogsAccount={request:async (path,body)=>{calls.push({url:path,options:{body:JSON.stringify(body)}});return path==='club/registration'?{handle:'test_dog',application:stored['alldogs-application-receipt']?{...response,receipt}:null}:path==='club/registration-draft'?{...response,receipt,status:'awaiting_verification',shortId:null}:path==='club/registration-verify'?{...response,receipt}:response;},session:async()=>({signedIn:file.includes('adoption-form'),authMethod:'x',handle:'test_dog',capabilities:{xLogin:true}}),signIn:path=>path};
+  context.window.AllDogsAccount={request:async (path,body)=>{calls.push({url:path,options:{body:JSON.stringify(body)}});return path==='club/account'&&opts.account?opts.account:path==='club/registration'?{handle:'test_dog',application:stored['alldogs-application-receipt']?{...response,receipt}:null}:path==='club/registration-draft'?{...response,receipt,status:'awaiting_verification',shortId:null}:path==='club/registration-verify'?{...response,receipt}:response;},session:async()=>opts.session||({signedIn:file.includes('adoption-form'),authMethod:'x',handle:'test_dog',capabilities:{xLogin:true}}),signIn:path=>path};
   vm.runInNewContext(fs.readFileSync(file,'utf8'),context,{filename:file});
   return {element,calls,storage,get replaced(){return replaced;},get copied(){return copied;}};
 }
@@ -51,6 +51,46 @@ function harness(file, path, search, stored = {}) {
     await settle();
     assert.equal(h.calls.length,0);
     assert.equal(h.element('public-application').hidden,true);
+    tests++;
+  }
+  {
+    const h = harness('dog-pound/application/application.js','/vouch/2','?signin=unavailable');
+    await settle();
+    assert.equal(h.element('browser-help').hidden,false);
+    assert.equal(h.element('connect-owner').hidden,false);
+    assert.equal(h.element('connect-owner').textContent,'Try signing in with X again');
+    assert.match(h.element('wallet-status').textContent,/did not finish/);
+    assert.equal(h.replaced,'/vouch/2');
+    await h.element('copy-vouch-link').events.click();
+    assert.equal(h.copied,'https://alldogs.wtf/vouch/2');
+    tests++;
+  }
+  for (const [ua,inApp] of [['Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Twitter for iPhone/11.0',true],
+    ['Mozilla/5.0 (Linux; Android 15; Pixel 9; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0 Mobile Safari/537.36 TwitterAndroid',true],
+    ['Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/604.1',false]]) {
+    const h = harness('dog-pound/application/application.js','/vouch/2','',{},{ua});
+    await settle();
+    assert.equal(h.element('browser-help').hidden,!inApp);
+    assert.equal(h.element('connect-owner').hidden,false);
+    tests++;
+  }
+  {
+    const vouch={eligible:true,reason:'eligible',slots:1,weeklyLimit:1,nextVouchAt:null};
+    const h = harness('dog-pound/application/application.js','/vouch/2','',{},{session:{signedIn:true,handle:'owner_dog',csrf:'x',capabilities:{xLogin:true}},account:{owner:{vouch},vouches:[]}});
+    await settle();
+    assert.equal(h.element('sign-vouch').hidden,false);
+    assert.equal(h.element('sign-vouch').textContent,'Vouch for @test_dog');
+    assert.equal(h.element('connect-owner').hidden,true);
+    assert.equal(h.element('browser-help').hidden,true);
+    assert.match(h.element('wallet-status').textContent,/1 of 1 vouch available/);
+    tests++;
+  }
+  {
+    const h = harness('dog-pound/application/application.js','/vouch/2','',{},{session:{signedIn:true,handle:'someone_else',csrf:'x',capabilities:{xLogin:true}},account:{owner:null,vouches:[]}});
+    await settle();
+    assert.equal(h.element('sign-vouch').hidden,true);
+    assert.equal(h.element('switch-account').hidden,false);
+    assert.match(h.element('wallet-status').textContent,/not on a confirmed adoption/);
     tests++;
   }
   for (const storedId of [undefined,'2']) {
