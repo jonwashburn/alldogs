@@ -59,7 +59,7 @@ function harness(file, path, search, stored = {}, opts = {}) {
     assert.equal(h.element('browser-help').hidden,false);
     assert.equal(h.element('connect-owner').hidden,false);
     assert.equal(h.element('connect-owner').textContent,'Try signing in with X again');
-    assert.match(h.element('wallet-status').textContent,/did not finish/);
+    assert.match(h.element('browser-help-text').textContent,/did not finish/);
     assert.equal(h.replaced,'/vouch/2');
     await h.element('copy-vouch-link').events.click();
     assert.equal(h.copied,'https://alldogs.wtf/vouch/2');

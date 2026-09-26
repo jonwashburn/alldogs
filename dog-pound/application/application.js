@@ -40,9 +40,9 @@
       if(!identity.signedIn){
         if(!open)say('');
         else if(!identity.capabilities.xLogin)say('Sign-in could not be started. Please try again. You can still share this application.');
-        else if(signinFailed)say('Sign-in with X did not finish in this browser, so you are not signed in yet.');
+        else if(signinFailed)say('You are not signed in yet.');
         else say('Own a dog? Sign in with the X account on your adoption to vouch. No wallet connection.');
-        if(open&&signinFailed)help(true,'This usually happens when the page was opened inside the X app, or X finished sign-in in a different browser. Copy the link, open it in Safari or Chrome, and sign in there.');
+        if(open&&signinFailed)help(true,'Sign-in with X did not finish. That usually happens when the page was opened inside the X app, or X finished sign-in in a different browser. Copy the link, open it in Safari or Chrome, and sign in there.');
         else if(open&&inApp)help(true,'This page is open inside another app’s browser, which cannot keep you signed in. Tap the ••• or share menu and choose Open in Safari (or Open in browser), or copy the link and paste it into Safari or Chrome.');
         else help(false);
       }else{
